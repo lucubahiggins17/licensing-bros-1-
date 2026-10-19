@@ -580,6 +580,101 @@ def ai_not_set_up(browser):
     check("no internet still says offline", page.get_by_text("You're offline").first.count() > 0)
     ctx.close()
 
+FAKE_TTS = """
+(() => {
+  const cfg = %s;
+  const log = [];
+  window.__tts = log;
+  try { delete window.webkitSpeechRecognition; delete window.SpeechRecognition; } catch (e) {}
+  window.webkitSpeechRecognition = undefined; window.SpeechRecognition = undefined;
+  if (cfg.mode === "none") { try { delete window.speechSynthesis; } catch (e) {} window.speechSynthesis = undefined; window.SpeechSynthesisUtterance = undefined; return; }
+  const voices = [
+    { name: "Google US English", lang: "en-US", voiceURI: "Google US English", localService: false, default: false },
+    { name: "Microsoft David", lang: "en-US", voiceURI: "Microsoft David", localService: true, default: true }
+  ];
+  let first = true;
+  const synth = {
+    speaking: false, pending: false, paused: false,
+    getVoices: () => voices, addEventListener() {}, removeEventListener() {},
+    speak(u) {
+      const v = u.voice ? u.voice.name : null;
+      log.push({ t: "speak", text: u.text, voice: v });
+      if (first && cfg.stuckFirst) { first = false; this.speaking = true; this.pending = true; return; }  // never finishes
+      first = false;
+      if (this.speaking) { this.pending = true; log.push({ t: "queued-behind-stuck", text: u.text }); return; }
+      const fail = cfg.mode === "allfail" || (cfg.mode === "brokenGoogle" && v && v.startsWith("Google"));
+      if (cfg.mode === "notallowed") { setTimeout(() => u.onerror && u.onerror({ error: "not-allowed" }), 10); return; }
+      if (fail) { setTimeout(() => u.onerror && u.onerror({ error: "synthesis-failed" }), 10); return; }
+      this.speaking = true;
+      setTimeout(() => u.onstart && u.onstart(), 10);
+      setTimeout(() => { this.speaking = false; if (u.text.trim()) log.push({ t: "spoke", text: u.text, voice: v }); u.onend && u.onend(); }, 40);
+    },
+    cancel() { log.push({ t: "cancel" }); this.speaking = false; this.pending = false; },
+    pause() {}, resume() {}
+  };
+  Object.defineProperty(window, "speechSynthesis", { value: synth, configurable: true });
+  window.SpeechSynthesisUtterance = function (text) { this.text = text; this.voice = null; this.lang = ""; this.rate = 1; this.volume = 1; };
+})();
+"""
+
+@scenario
+def voice_playback(browser):
+    def talk(cfg, question="How high is a guardrail?"):
+        fake = FakeBackend(user_id=FREE_ID)
+        ctx, page, errors = new_page(browser, fake)
+        ctx.add_init_script(FAKE_TTS % json.dumps(cfg))
+        goto(page, "/learn/#tutor")
+        page.get_by_role("button", name="Talk to Bro").first.click()
+        page.wait_for_timeout(600)
+        page.fill("#talk-typed", question)
+        page.locator("#talk-typed").press("Enter")
+        page.wait_for_timeout(4000)
+        log = page.evaluate("window.__tts || []")
+        return ctx, page, errors, log
+    spoke = lambda log: [e for e in log if e["t"] == "spoke"]
+    # A silent "unlock" utterance that never finishes used to block every answer behind it
+    ctx, page, errors, log = talk({"mode": "ok", "stuckFirst": True})
+    shot(page, "voice-talk")
+    check("Bro's answer is spoken even when the browser's speech queue is stuck", len(spoke(log)) >= 2, json.dumps(log)[:400])
+    check("Sources aren't read aloud", not any("osha.gov" in e["text"] or "Sources" in e["text"] for e in spoke(log)), json.dumps(spoke(log))[:300])
+    check("no voice error shown when speech works", page.get_by_text("couldn't play Bro's voice", exact=False).count() == 0)
+    ctx.close()
+    # An online voice that can't play: falls back to a voice that works
+    ctx, page, errors, log = talk({"mode": "brokenGoogle"})
+    check("a broken voice falls back to one that plays", len(spoke(log)) >= 2 and all(e["voice"] != "Google US English" for e in spoke(log)), json.dumps(log)[:400])
+    check("no error shown after the fallback works", page.get_by_text("couldn't play Bro's voice", exact=False).count() == 0)
+    ctx.close()
+    # Nothing can play: say so instead of going quiet
+    ctx, page, errors, log = talk({"mode": "allfail"})
+    shot(page, "voice-failed")
+    check("when no voice can play, the screen says so", page.get_by_text("Your browser couldn't play Bro's voice", exact=False).first.count() > 0)
+    check("the answer still shows as captions", page.get_by_text("42 inches", exact=False).first.count() > 0)
+    ctx.close()
+    # Browser refuses speech until a tap
+    ctx, page, errors, log = talk({"mode": "notallowed"})
+    check("a browser that wants a tap is explained", page.get_by_text("wants a tap", exact=False).first.count() > 0)
+    ctx.close()
+    # No speech engine at all
+    ctx, page, errors, log = talk({"mode": "none"})
+    check("a device with no voice says answers are captions", page.get_by_text("can't speak answers out loud", exact=False).first.count() > 0)
+    ctx.close()
+    # Tutor "Read aloud" also explains a failure
+    fake = FakeBackend(user_id=FREE_ID)
+    ctx, page, errors = new_page(browser, fake)
+    ctx.add_init_script(FAKE_TTS % json.dumps({"mode": "allfail"}))
+    goto(page, "/learn/#tutor")
+    page.locator("textarea#ask").fill("How high is a guardrail?")
+    page.locator("textarea#ask").press("Enter")
+    page.wait_for_timeout(2000)
+    btn = page.get_by_role("button", name="Read aloud").first
+    if btn.count():
+        btn.click(); page.wait_for_timeout(1500)
+        check("tutor Read aloud explains when it can't play", page.get_by_text("couldn't play Bro's voice", exact=False).first.count() > 0)
+    else:
+        check("tutor has a Read aloud button", False)
+    check("voice screens ran without errors", not errors, "; ".join(errors[:3]))
+    ctx.close()
+
 # ---------------------------------------------------------------------------------------------------------------------
 if __name__ == "__main__":
     httpd = serve()

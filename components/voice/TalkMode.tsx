@@ -11,8 +11,10 @@ import { TRADES, TradeKey } from "@/lib/data";
 import { onBackButton } from "@/lib/native";
 import {
   chooseVoice, currentVoiceId, forSpeech, Listening, ListenError, prefs, primeSpeech, RATES, say, Speaker,
-  startListening, takeSentences, voiceOptions, VoiceOption, voiceSupport
+  startListening, takeSentences, voiceErrorText, voiceOptions, VoiceOption, voiceSupport
 } from "./speech";
+
+const NO_VOICE = "This device can't speak answers out loud, so Bro's replies are shown as captions. On a computer or phone browser, Chrome, Edge and Safari can talk.";
 import s from "./TalkMode.module.css";
 
 export type TalkModeProps = {
@@ -108,7 +110,7 @@ export default function TalkMode({ open, onClose, context, title, initialQuestio
     if (!support.tts) return;
     const sp = new Speaker(support.tts, () => rateRef.current);
     sp.onIdle = () => { if (streamDone.current) afterSpeechRef.current(gen.current); };
-    sp.onError = () => setNotice("Your device couldn't play Bro's voice, so answers are shown as captions.");
+    sp.onError = (e) => setNotice(voiceErrorText(e, support.tts));
     speakerRef.current = sp;
     return () => { sp.cancel(); speakerRef.current = null; };
   }, [support.tts]);
@@ -203,6 +205,7 @@ export default function TalkMode({ open, onClose, context, title, initialQuestio
   function feed(text: string, final: boolean, g: number) {
     const sp = speakerRef.current;
     if (!sp) {
+      if (final && !support.tts) setNotice(NO_VOICE);
       if (text.trim() && phaseRef.current === "thinking") setPhase("speaking");
       if (final) { streamDone.current = true; afterSpeech(g); }
       return;
@@ -356,7 +359,7 @@ export default function TalkMode({ open, onClose, context, title, initialQuestio
                 {RATES.map((r) => <button key={r} type="button" aria-pressed={rate === r} onClick={() => setRate(r)}>{r}×</button>)}
               </div>
             </div>
-            <button type="button" className="btn sm" onClick={() => { primeSpeech(); say(support.tts, "Hey, I'm Bro. Let's get you licensed.", rateRef.current).catch(() => {}); }}>Test voice</button>
+            <button type="button" className="btn sm" onClick={() => { primeSpeech(); setNotice(""); say(support.tts, "Hey, I'm Bro. Let's get you licensed.", rateRef.current).catch((e) => setNotice(voiceErrorText(e, support.tts))); }}>Test voice</button>
           </div>
         )}
       </div>

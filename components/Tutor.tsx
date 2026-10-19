@@ -8,7 +8,7 @@ import { md, shrinkImage, splitSources, streamTutor, useAiUsage } from "@/lib/ai
 import { isApp, SpeechRecognition } from "@/lib/native";
 import { routes } from "@/lib/nav";
 import { askForTravelMode } from "@/components/shell/SessionGuard";
-import { forSpeech, prefs, primeSpeech, Speaker, takeSentences, voiceSupport } from "@/components/voice/speech";
+import { forSpeech, prefs, primeSpeech, Speaker, takeSentences, voiceErrorText, voiceSupport } from "@/components/voice/speech";
 import s from "./Study.module.css";
 
 type Msg = { role: "user" | "assistant"; content: string; error?: any };
@@ -55,10 +55,12 @@ export default function Tutor({ draft, clearDraft }: { draft: string; clearDraft
       if (!kind) { setStatus("This browser can't read answers aloud."); return; }
       speaker.current = new Speaker(kind, () => prefs.rate());
       speaker.current.onIdle = () => setReading(null);
+      speaker.current.onError = (e) => { setReading(null); setStatus(voiceErrorText(e, kind)); };
     }
     const sp = speaker.current;
     sp.cancel();
     if (i !== null && reading === i) { setReading(null); return; }
+    setStatus("");
     takeSentences(forSpeech(text), 0, true).chunks.forEach((c) => sp.push(c));
     setReading(i);
   }

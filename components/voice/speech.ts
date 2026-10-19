@@ -72,8 +72,10 @@ function rankVoice(v: { name: string; lang: string; localService?: boolean; defa
 
 let webVoice: SpeechSynthesisVoice | null = null;
 let webVoiceExplicit = false;
+/** Voices that failed to make a sound on this device this visit; skipped from then on. */
+const brokenVoices = new Set<string>();
 async function resolveWebVoice(): Promise<SpeechSynthesisVoice | null> {
-  const ranked = (await webVoices()).filter((v) => rankVoice(v) >= 0).sort((a, b) => rankVoice(b) - rankVoice(a));
+  const ranked = (await webVoices()).filter((v) => rankVoice(v) >= 0 && !brokenVoices.has(v.voiceURI)).sort((a, b) => rankVoice(b) - rankVoice(a));
   const saved = getPref(K.webVoice);
   const pick = ranked.find((v) => v.voiceURI === saved);
   webVoiceExplicit = !!pick;
@@ -128,44 +130,94 @@ let primed = false;
 export function primeSpeech() {
   if (primed || typeof window === "undefined" || isApp() || !("speechSynthesis" in window)) return;
   primed = true;
+  const synth = window.speechSynthesis;
   try {
     const u = new SpeechSynthesisUtterance(" ");
     u.volume = 0;
-    window.speechSynthesis.speak(u);
+    synth.speak(u);
+    // Some Chrome builds never finish a silent utterance, which would hold up every answer queued behind it
+    setTimeout(() => { if (!speaking && (synth.speaking || synth.pending)) { try { synth.cancel(); lastCancel = Date.now(); } catch { /* ignore */ } } }, 1500);
   } catch { /* ignore */ }
   resolveWebVoice();
 }
 
 // ---------------------------------------------------------------------------------------------
-// Text-to-speech: speaking. Each say() resolves when the sentence ends or is stopped.
+// Text-to-speech: speaking. Each say() resolves when the sentence ends or is stopped, and throws
+// SpeechError when the device can't make a sound (so the screen can say so instead of going quiet).
 // ---------------------------------------------------------------------------------------------
+/** "blocked": the browser wants a tap first. "failed": no voice on this device could play it. */
+export class SpeechError extends Error {
+  constructor(public reason: "blocked" | "failed") { super(reason === "blocked" ? "Speech needs a tap first" : "Speech failed"); }
+}
+
 let stopCurrent: (() => void) | null = null;
 let speaking: SpeechSynthesisUtterance | null = null; // held so Chrome doesn't garbage-collect it mid-sentence
+let lastCancel = 0;
+const sleep = (ms: number) => new Promise((r) => setTimeout(r, ms));
 
-function webSay(text: string, rate: number): Promise<void> {
-  return new Promise((resolve) => {
-    const synth = window.speechSynthesis;
+type Outcome = "ok" | "stopped" | "blocked" | "failed";
+
+async function webSayOnce(text: string, rate: number, voice: SpeechSynthesisVoice | null): Promise<Outcome> {
+  const synth = window.speechSynthesis;
+  // A stuck queue (Chrome's online voices sometimes never finish) silences everything after it: clear it first
+  if (!speaking && (synth.speaking || synth.pending)) {
+    try { synth.cancel(); } catch { /* ignore */ }
+    lastCancel = Date.now();
+  }
+  // Chrome drops an utterance that starts right after cancel()
+  const since = Date.now() - lastCancel;
+  if (since < 150) await sleep(150 - since);
+  return new Promise<Outcome>((resolve) => {
     const u = new SpeechSynthesisUtterance(text);
-    if (webVoice) { u.voice = webVoice; u.lang = webVoice.lang; } else u.lang = "en-US";
+    if (voice) { u.voice = voice; u.lang = voice.lang; } else u.lang = "en-US";
     u.rate = rate;
     let finished = false;
+    let started = false;
     // Watchdog: some browsers never fire onend (e.g. after a cancel or with a broken voice)
-    const watch = setTimeout(() => done(), Math.max(5000, (text.length * 95) / rate + 4000));
-    function done() {
+    const watch = setTimeout(() => done("ok"), Math.max(5000, (text.length * 95) / rate + 6000));
+    // Nothing started: the voice is broken or the queue is stuck. If the engine says it's talking, trust it.
+    const startWatch = setTimeout(() => {
+      if (started || finished) return;
+      if (synth.speaking && !synth.pending) return;
+      try { synth.cancel(); } catch { /* ignore */ }
+      lastCancel = Date.now();
+      done("failed");
+    }, 5000);
+    function done(o: Outcome) {
       if (finished) return;
       finished = true;
       clearTimeout(watch);
-      if (stopCurrent === done) stopCurrent = null;
+      clearTimeout(startWatch);
+      if (stopCurrent === stop) stopCurrent = null;
       if (speaking === u) speaking = null;
-      resolve();
+      resolve(o);
     }
-    u.onend = done;
-    u.onerror = done;
+    const stop = () => done("stopped");
+    u.onstart = () => { started = true; };
+    u.onboundary = () => { started = true; };
+    u.onend = () => done("ok");
+    u.onerror = (ev: any) => {
+      const e = ev?.error;
+      done(e === "interrupted" || e === "canceled" ? "stopped" : e === "not-allowed" ? "blocked" : "failed");
+    };
     speaking = u;
-    stopCurrent = done;
+    stopCurrent = stop;
     try { if (synth.paused) synth.resume(); } catch { /* ignore */ }
-    synth.speak(u);
+    try { synth.speak(u); } catch { done("failed"); }
   });
+}
+
+async function webSay(text: string, rate: number): Promise<void> {
+  const voice = webVoice;
+  let o = await webSayOnce(text, rate, voice);
+  if (o === "failed" && voice) {
+    // That voice can't play here (often an online voice): fall back to the browser's default voice for good
+    brokenVoices.add(voice.voiceURI);
+    if (webVoice === voice) webVoice = null;
+    o = await webSayOnce(text, rate, null);
+  }
+  if (o === "blocked") primed = false; // let the next tap unlock speech again
+  if (o === "blocked" || o === "failed") throw new SpeechError(o);
 }
 
 function nativeSay(text: string, rate: number): Promise<void> {
@@ -189,15 +241,46 @@ export async function say(kind: TtsKind, text: string, rate = 1): Promise<void> 
   if (!kind || !text.trim()) return;
   if (kind === "web") { if (!webVoice) await resolveWebVoice(); return webSay(text, rate); }
   if (nativeVoices === null) await resolveNativeVoice();
-  return nativeSay(text, rate);
+  try { return await nativeSay(text, rate); }
+  catch (e) {
+    // A saved voice that's no longer installed: try the phone's default voice once
+    if (nativeVoiceIndex !== undefined) {
+      nativeVoiceIndex = undefined;
+      try { return await nativeSay(text, rate); } catch { /* fall through */ }
+    }
+    throw new SpeechError("failed");
+  }
 }
 
 export function stopSpeaking(kind: TtsKind) {
   const s = stopCurrent;
   stopCurrent = null;
-  if (kind === "web") { try { window.speechSynthesis.cancel(); } catch { /* ignore */ } }
+  if (kind === "web") { try { window.speechSynthesis.cancel(); lastCancel = Date.now(); } catch { /* ignore */ } }
   if (kind === "native") TextToSpeech.stop().catch(() => {});
   s?.();
+}
+
+/** Plain-words explanation for a voice that couldn't play. */
+export function voiceErrorText(e: unknown, kind: TtsKind): string {
+  if (e instanceof SpeechError && e.reason === "blocked") return "Your browser wants a tap before Bro can talk. Tap the orb (or Test voice in the voice settings), then ask again.";
+  if (kind === "native") return "Your phone couldn't play Bro's voice, so answers are shown as captions. Turn up the media volume, and check that Speech Services by Google is installed and set under Settings → Accessibility → Text-to-speech.";
+  return "Your browser couldn't play Bro's voice, so answers are shown as captions. Check your volume (on iPhone, the silent switch mutes it), try another voice in the voice settings, or use Chrome, Edge or Safari.";
+}
+
+/** Breaks a long sentence at commas so no single utterance runs long (Chrome cuts off long ones). */
+function splitLong(text: string, max = 200): string[] {
+  if (text.length <= max) return [text];
+  const out: string[] = [];
+  let rest = text;
+  while (rest.length > max) {
+    const window_ = rest.slice(0, max);
+    const cut = Math.max(window_.lastIndexOf(", "), window_.lastIndexOf("; "), window_.lastIndexOf(": "), window_.lastIndexOf(" - "));
+    const at = cut > max * 0.4 ? cut + 1 : (window_.lastIndexOf(" ") > 0 ? window_.lastIndexOf(" ") : max);
+    out.push(rest.slice(0, at).trim());
+    rest = rest.slice(at).trim();
+  }
+  if (rest) out.push(rest);
+  return out;
 }
 
 /** Speaks queued sentences one after another. cancel() stops instantly and drops the queue. */
@@ -207,13 +290,14 @@ export class Speaker {
   busy = false;
   /** Called when the queue runs dry (not after cancel) */
   onIdle: () => void = () => {};
-  /** Called once if the voice engine fails */
-  onError: () => void = () => {};
-  private failed = false;
+  /** Called when the voice can't play; the rest of that answer is skipped (it's still on screen) */
+  onError: (e: unknown) => void = () => {};
+  /** After a failure, the rest of the current answer isn't attempted; cancel() (a new answer) tries again. */
+  private dead = false;
   constructor(private kind: TtsKind, private rate: () => number) {}
   push(text: string) {
-    if (!this.kind || !text.trim()) return;
-    this.q.push(text);
+    if (!this.kind || !text.trim() || this.dead) return;
+    this.q.push(...splitLong(text));
     if (!this.busy) this.run(this.gen);
   }
   private async run(g: number) {
@@ -221,7 +305,12 @@ export class Speaker {
     while (g === this.gen && this.q.length) {
       const t = this.q.shift() as string;
       try { await say(this.kind, t, this.rate()); }
-      catch { if (!this.failed) { this.failed = true; this.onError(); } }
+      catch (e) {
+        if (g !== this.gen) return;
+        this.q = [];
+        this.dead = true;
+        this.onError(e);
+      }
     }
     if (g !== this.gen) return;
     this.busy = false;
@@ -231,6 +320,7 @@ export class Speaker {
     this.gen++;
     this.q = [];
     this.busy = false;
+    this.dead = false;
     stopSpeaking(this.kind);
   }
 }

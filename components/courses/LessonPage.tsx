@@ -10,6 +10,7 @@ import {
 import AppShell from "@/components/shell/AppShell";
 import { askForTravelMode } from "@/components/shell/SessionGuard";
 import TalkMode from "@/components/voice/TalkMode";
+import { primeSpeech } from "@/components/voice/speech";
 import { useAuth } from "@/lib/auth";
 import { callFn } from "@/lib/api";
 import { claimSession, getSessionState, useSession, type LocationInfo } from "@/lib/session";
@@ -262,7 +263,7 @@ function LessonView({ id }: { id: string }) {
         </button>
       )}
       {payload && <button className="btn primary" onClick={() => setAskOpen(true)}><MessageCircle aria-hidden="true" /> Ask Bro</button>}
-      {payload && <button className="btn navy" onClick={() => setTalkOpen(true)}><Mic aria-hidden="true" /> Talk it through</button>}
+      {payload && <button className="btn navy" onClick={() => { primeSpeech(); setTalkOpen(true); }}><Mic aria-hidden="true" /> Talk it through</button>}
     </div>
   );
 
