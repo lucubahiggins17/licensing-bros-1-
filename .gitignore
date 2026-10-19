@@ -18,3 +18,4 @@ tests/e2e/__pycache__
 tests/node_modules
 # Copied from node_modules at build time (next.config.mjs)
 public/vendor/
+deno.lock
