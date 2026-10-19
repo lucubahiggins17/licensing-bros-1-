@@ -1,0 +1,63 @@
+{
+ "facts": [
+  {
+   "id": "SC92",
+   "action": "fix",
+   "reason": "Calls BC a 'commercial-only' license, but BC is the combined residential/commercial/industrial classification (see SC73). Board FAQ says BC and BC-B holders are not required to take RCE unless the license also carries a BC-A classification; also the requirement began with licenses expiring January 31, 2022.",
+   "fixed": {
+    "fact": "Tennessee residential contractors whose license carries a BC-A, BC-A/r or BC-A,b(sm) classification and was issued after January 1, 2009 must complete 8 hours of board-approved Residential Continuing Education within the two years before each renewal (required for renewals expiring January 31, 2022 and later). Only the qualifying agent can earn the hours for the license. Holders of BC (combined) or BC-B (commercial) licenses do not need RCE unless the license also includes a BC-A classification.",
+    "note": "https://www.tn.gov/commerce/regboards/contractors/license/rce-faqs.html"
+   }
+  },
+  {
+   "id": "SC19",
+   "action": "fix",
+   "reason": "Says Oklahoma electrical licenses 'renew every 36 months'. CIB rules say electrical (OAC 158:40-9-3) and mechanical (OAC 158:50-9-3) licenses expire on the last day of the licensee's birth month each year; only the CE requirement runs on a 36-month cycle.",
+   "fixed": {
+    "fact": "Oklahoma electrical, plumbing and mechanical licenses are renewed every year (they expire on the last day of the licensee's birth month), but continuing education is checked on a 36-month cycle: electrical journeymen and contractors need 12 hours within the 36 months before expiration (6 hours on codes adopted by the Oklahoma Uniform Building Code Commission plus 6 other approved hours), and plumbing and mechanical journeymen and contractors need 6 hours within the 36 months before expiration.",
+    "source": "Oklahoma CIB Electrical, Plumbing and Mechanical pages; OAC 158:40-9-3, 158:50-9-3",
+    "note": "https://oklahoma.gov/cib/your-industry/electrical.html ; https://oklahoma.gov/cib/your-industry/plumbing.html ; https://regulations.justia.com/states/oklahoma/title-158/chapter-40/subchapter-9/section-158-40-9-3"
+   }
+  },
+  {
+   "id": "SC4",
+   "action": "fix",
+   "reason": "PSI bulletin lists 50 scored questions with up to 5 unscored pretest items added on top (not 50 including the pretest items). Retake rule also confirmed.",
+   "fixed": {
+    "fact": "Ohio OCILB applicants must pass both a Business and Law exam and a trade exam, given by PSI. The Business and Law exam is open book (NASCLA Contractor's Guide to Business, Law and Project Management, Ohio 4th ed.), has 50 scored questions plus up to 5 unscored pretest questions, allows 2 hours and requires 70% to pass."
+   }
+  },
+  {
+   "id": "SC5",
+   "action": "fix",
+   "reason": "PSI bulletin lists 100 scored questions with up to 10 unscored pretest items in addition, not 100 including the pretest items.",
+   "fixed": {
+    "fact": "The Ohio electrical contractor trade exam is open book with 100 scored questions plus up to 10 unscored pretest questions, 4 hours and a 70% passing score; references include the 2023 NEC (or NEC Handbook) and Ugly's Electrical References 2023."
+   }
+  },
+  {
+   "id": "SC55",
+   "action": "fix",
+   "reason": "The 80-question / 56-correct / 5-hour figures in the 8/27/2026 PSI bulletin are for the Limited Building Contractor technical exam; the bulletin does not give those figures for the unlimited building exam, so 'the Building Contractor technical exam' overstates.",
+   "fixed": {
+    "fact": "South Carolina commercial contractor exams are given by PSI and are open book. The Business Management and Law exam has 50 questions, requires 35 correct and allows 125 minutes, using the NASCLA Contractors Guide to Business, Law and Project Management (SC Commercial 9th ed.). The Limited Building Contractor technical exam has 80 questions, 56 correct to pass, 5 hours (2021 IBC with SC modifications or the SC Building Code); the NASCLA accredited commercial general building exam (115 questions, 81 correct, 330 minutes) is also offered."
+   }
+  },
+  {
+   "id": "SC158",
+   "action": "unverify",
+   "reason": "Based on a PSI bulletin revised 10/5/2023 that lists 2015/2018 I-codes and NEC 2017/2020; three years later the question counts and especially the code editions may have been updated. The current bulletin could not be re-read in this review (PSI rate-limited the request)."
+  },
+  {
+   "id": "SC23",
+   "action": "fix",
+   "reason": "'There is no minimum dollar threshold' overstates it: ORS 701.010 exempts casual, minor or inconsequential (handyman) work priced under $1,000 total, as long as the person does not advertise as a contractor and the work is not structural or work that needs a separate trade license or permit. Everything else in the fact checks out against the CCB License page.",
+   "fixed": {
+    "fact": "Oregon requires anyone who bids, offers or works for compensation as a contractor on improvements to real property to hold a license from the Construction Contractors Board (CCB). The only small-job exception is the narrow 'handyman' exemption for casual, minor or inconsequential work under $1,000 total, which is lost if the person advertises as a contractor or the work is structural or needs a trade license or permit. The license must carry an endorsement matching the work, such as Residential General, Residential Specialty, Residential Limited, or Commercial General/Specialty Level 1 or 2.",
+    "source": "ORS 701.021, 701.010; Oregon Construction Contractors Board (CCB)",
+    "note": "https://www.oregon.gov/ccb/Pages/CCB%20License.aspx ; https://www.oregonlegislature.gov/bills_laws/ors/ors701.html (ORS 701.010 handyman exemption)"
+   }
+  }
+ ],
+ "questions": []
+}
