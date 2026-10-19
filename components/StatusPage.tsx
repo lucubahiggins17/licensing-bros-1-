@@ -144,7 +144,7 @@ export default function StatusPage() {
       } else if (r.ok) {
         const h = await r.json();
         push({ id: "fn", title: "Backend functions", level: "pass", detail: "Deployed and answering." });
-        push({ id: "ai", title: "AI tutor key", level: h.ai ? "pass" : "fail", detail: h.ai ? `Set (model ${h.model}).` : "ANTHROPIC_API_KEY isn't set, so the tutor and AI builders won't work.",
+        push({ id: "ai", title: "AI tutor key", level: h.ai ? "pass" : "fail", detail: h.ai ? `Set (model ${h.model}${h.fast_model ? `; quick answers and voice use ${h.fast_model}` : ""}).` : "ANTHROPIC_API_KEY isn't set, so the tutor and AI builders won't work.",
           fix: h.ai ? undefined : "Add the ANTHROPIC_API_KEY secret in GitHub and rerun Build Android app." });
         push({ id: "stripe", title: "Payments", level: h.stripe && h.stripe_webhook ? "pass" : "fail",
           detail: h.stripe && h.stripe_webhook ? `Stripe is connected in ${h.stripe_live ? "live mode: real payments" : "test mode: practice payments only"}.` : `Missing ${[!h.stripe && "STRIPE_SECRET_KEY", !h.stripe_webhook && "STRIPE_WEBHOOK_SECRET"].filter(Boolean).join(" and ")}.`,

@@ -443,14 +443,126 @@ export function needsStateCheck(question: string, facts: { state: string | null;
   return facts.some((f) => !!f.state || f.status === "unverified");
 }
 
-/** Anthropic server-side web search, localized to the student's state. */
+/**
+ * Study-card and Q&A sites written by the public. Their answers are often wrong (the knowledge base audit found
+ * 75 errors in popular flashcard sets), so the tutor never cites them.
+ */
+export const UNRELIABLE_DOMAINS = [
+  "quizlet.com", "brainscape.com", "cram.com", "studystack.com", "chegg.com", "coursehero.com", "studocu.com",
+  "brainly.com", "quora.com", "reddit.com", "answers.com", "scribd.com", "gauthmath.com", "numerade.com"
+];
+
+/** Anthropic server-side web search, localized to the student's state, skipping unreliable study sites. */
 export function webSearchTool(state: string) {
   return {
     type: "web_search_20250305" as const,
     name: "web_search" as const,
     max_uses: 3,
+    blocked_domains: UNRELIABLE_DOMAINS,
     user_location: { type: "approximate" as const, region: state, country: "US" }
   };
+}
+
+// ---------------------------------------------------------------------------------------------
+// Tutor: which model answers (fast for quick lookups and voice, strongest for reasoning)
+// ---------------------------------------------------------------------------------------------
+const REASONING = /\b(calculat\w*|comput\w*|how\s+(many|much|big|far|long|deep|wide)|size|sizing|sized|load\s+calc\w*|voltage\s+drop|ampacity|derat\w*|box\s+fill|conduit\s+fill|fill|btu\w*|cfm|gpm|psi|tonnage|percent|%|ratio|formula|solve|work\s+out|step[\s-]by[\s-]step|explain|why|compare|difference|versus|vs\.?|scenario|walk\s+me\s+through|break\s+down)\b/i;
+const MATHY = /\d+(\.\d+)?\s*(x|×|\*|\/|÷|\+|-)\s*\d|\d+(\.\d+)?\s*(v|volts?|amps?|a|w|watts?|kw|kva|hp|ft|feet|in|inches|sq\s*ft|cu\s*ft|yd|yards?|gal|gallons?|lbs?|btu|cfm|gpm|psi|%)\b/i;
+
+export type TutorRoute = "fast" | "main";
+
+/**
+ * Quick definitions and lookups go to the fast model; calculations, explanations, photos, follow-ups that build on
+ * a long conversation, and state-rule checks go to the strongest model. Voice uses the fast model unless the
+ * question needs real reasoning, so Bro starts talking quickly.
+ */
+export function routeTutor(o: { question: string; voice?: boolean; image?: boolean; webSearch?: boolean; turns?: number }): TutorRoute {
+  const q = (o.question || "").trim();
+  if (o.image || o.webSearch) return "main";
+  if (MATHY.test(q) || REASONING.test(q)) return "main";
+  if ((o.turns || 1) > 6) return "main";
+  if (o.voice) return "fast";
+  const words = q.split(/\s+/).filter(Boolean).length;
+  const sentences = q.split(/[.?!]+/).filter((s) => s.trim()).length;
+  return words <= 22 && sentences <= 2 ? "fast" : "main";
+}
+
+// ---------------------------------------------------------------------------------------------
+// Tutor: exact arithmetic. The model hands math to this calculator instead of doing it in its head.
+// ---------------------------------------------------------------------------------------------
+export const CALC_TOOL = {
+  name: "calculate",
+  description: "Exact calculator. Use it for every arithmetic step beyond the trivial (voltage drop, ampacity adjustments, box or conduit fill, load calcs, BTU/CFM/GPM, areas, volumes, slopes, percentages, offsets). Pass one expression per call. Supports + - * / ^ ( ), sqrt(), round(x, digits), ceil(), floor(), abs(), min(), max(), pi. Use plain numbers (no units or commas).",
+  input_schema: {
+    type: "object",
+    properties: {
+      expression: { type: "string", description: "e.g. (2 * 12.9 * 16 * 150) / 6530" },
+      label: { type: "string", description: "What this computes, e.g. 'voltage drop in volts'" }
+    },
+    required: ["expression"]
+  }
+} as const;
+
+const FUNCS: Record<string, (...a: number[]) => number> = {
+  sqrt: Math.sqrt, abs: Math.abs, ceil: Math.ceil, floor: Math.floor,
+  min: (...a) => Math.min(...a), max: (...a) => Math.max(...a),
+  round: (x, d = 0) => { const f = 10 ** Math.max(0, Math.min(10, Math.trunc(d))); return Math.round((x + Number.EPSILON) * f) / f; }
+};
+
+/** Safely evaluates an arithmetic expression (no code execution). Throws a plain-words Error when it can't. */
+export function evaluateExpression(input: string): number {
+  const src = String(input || "").replace(/×/g, "*").replace(/÷/g, "/").replace(/−/g, "-").trim();
+  if (!src) throw new Error("Empty expression");
+  if (src.length > 300) throw new Error("Expression too long");
+  const toks = src.match(/\d+(\.\d+)?(e[+-]?\d+)?|\.\d+|[a-z_]+|[-+*/^(),%]/gi);
+  if (!toks || toks.join("") !== src.replace(/\s+/g, "")) throw new Error("Only numbers, + - * / ^ ( ) and sqrt, round, ceil, floor, abs, min, max, pi are allowed");
+  let i = 0;
+  const peek = () => toks[i];
+  const take = (t?: string) => { const v = toks[i]; if (t && v !== t) throw new Error(`Expected "${t}"`); i++; return v; };
+  function expr(): number { let v = term(); while (peek() === "+" || peek() === "-") v = take() === "+" ? v + term() : v - term(); return v; }
+  function term(): number {
+    let v = unary();
+    while (peek() === "*" || peek() === "/" || peek() === "%") {
+      const op = take(), r = unary();
+      if (op === "*") v *= r;
+      else if (op === "%") v %= r;
+      else { if (r === 0) throw new Error("Division by zero"); v /= r; }
+    }
+    return v;
+  }
+  // Unary minus binds looser than ^ (so -3^2 = -9), and exponents may be negative (2^-1 = 0.5)
+  function unary(): number { if (peek() === "-") { take(); return -unary(); } if (peek() === "+") { take(); return unary(); } return power(); }
+  function power(): number { const b = atom(); if (peek() === "^") { take(); return b ** unary(); } return b; }
+  function atom(): number {
+    const t = take();
+    if (t === undefined) throw new Error("Unexpected end");
+    if (t === "(") { const v = expr(); take(")"); return v; }
+    if (/^(\d|\.)/.test(t)) return Number(t);
+    const name = t.toLowerCase();
+    if (name === "pi") return Math.PI;
+    const fn = FUNCS[name];
+    if (!fn) throw new Error(`Unknown name "${t}"`);
+    take("(");
+    const args = [expr()];
+    while (peek() === ",") { take(); args.push(expr()); }
+    take(")");
+    return fn(...args);
+  }
+  const v = expr();
+  if (i !== toks.length) throw new Error(`Unexpected "${toks[i]}"`);
+  if (!Number.isFinite(v)) throw new Error("Result isn't a finite number");
+  return v;
+}
+
+/** Runs the calculator for a tool call and returns the text handed back to the model. */
+export function runCalculator(input: { expression?: unknown; label?: unknown }): { text: string; isError: boolean } {
+  try {
+    const v = evaluateExpression(String(input?.expression ?? ""));
+    const exact = Number.isInteger(v) ? String(v) : String(Number(v.toPrecision(12)));
+    return { text: `${input?.label ? `${String(input.label).slice(0, 80)}: ` : ""}${exact}`, isError: false };
+  } catch (e) {
+    return { text: `Couldn't calculate: ${(e as Error).message}`, isError: true };
+  }
 }
 
 export type Source = { title: string; url: string };

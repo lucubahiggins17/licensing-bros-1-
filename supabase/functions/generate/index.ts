@@ -9,6 +9,7 @@ import {
   communitySystem,
   examPrompt,
   FAST_MODEL,
+  ROUTING_ON,
   handler,
   HttpError,
   isAdmin,
@@ -74,7 +75,8 @@ Deno.serve(handler(async (req) => {
       livekit: has("LIVEKIT_URL") && has("LIVEKIT_API_KEY") && has("LIVEKIT_API_SECRET"),
       ipinfo: has("IPINFO_TOKEN"),
       site_url: (Deno.env.get("SITE_URL") || "").replace(/\/+$/, "") || null,
-      model: MODEL()
+      model: MODEL(),
+      fast_model: ROUTING_ON() ? FAST_MODEL() : null
     });
   }
 

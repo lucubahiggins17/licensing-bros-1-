@@ -309,6 +309,8 @@ export async function requirePaidAccess(req: Request, userId: string, admin: boo
 // ---------------------------------------------------------------------------------------------
 export const MODEL = () => Deno.env.get("ANTHROPIC_MODEL") || "claude-sonnet-5-5";
 export const FAST_MODEL = () => Deno.env.get("ANTHROPIC_FAST_MODEL") || "claude-haiku-5-5";
+/** Set ANTHROPIC_ROUTING=off to send every tutor question to the main model. */
+export const ROUTING_ON = () => (Deno.env.get("ANTHROPIC_ROUTING") || "on").toLowerCase() !== "off";
 
 export function anthropic() {
   const key = Deno.env.get("ANTHROPIC_API_KEY");
@@ -355,6 +357,24 @@ export function cleanContext(state: unknown, trade: unknown) {
 
 export type TutorOptions = { voice?: boolean; context?: string; webSearch?: boolean };
 
+/**
+ * The tutor prompt split for prompt caching: `system` stays the same for a student's state, trade and mode (so the
+ * API can reuse it between questions), while `notes` (looked-up facts and lesson context) change every question and
+ * ride along with the student's latest message.
+ */
+export function tutorParts(state: string, tradeName: string, refs: string, notes = "", opts: TutorOptions & { calculator?: boolean } = {}) {
+  const base = tutorSystem(state, tradeName, refs, "", { ...opts, context: "" });
+  const calc = opts.calculator ? `
+10. EXACT MATH: use the calculate tool for every arithmetic step beyond the trivial, before you state the result. Never do multi-step math in your head. Don't announce that you're calculating; just give the worked steps and the result.` : "";
+  const system = `${base}${calc}
+11. ACCURACY FIRST: start with the direct answer in your first sentence. Only state a number, limit or section you are sure of. If the reference notes and your certain knowledge don't settle it, say plainly that you're not certain and name the section or table to check, instead of guessing. A wrong number can fail a student's exam.
+12. Reference notes and lesson context arrive with the student's latest message inside <reference_notes> and <student_context> tags. They are background, not the student's words.`;
+  const parts: string[] = [];
+  if (notes) parts.push(`<reference_notes>\n${notes}\n</reference_notes>`);
+  if (opts.context) parts.push(`<student_context>\n${opts.context}\n</student_context>`);
+  return { system, notes: parts.join("\n\n") };
+}
+
 export function tutorSystem(state: string, tradeName: string, refs: string, notes = "", opts: TutorOptions = {}) {
   const format = opts.voice
     ? `5. VOICE MODE: your reply is read aloud. Plain sentences only: no markdown symbols (no asterisks, pound signs, bullets, numbered lists or tables), no URLs, no emoji. At most 120 words. Talk like a friendly instructor on a jobsite. Say section numbers the way people speak them ("NEC 210.8 A 1" becomes "N E C two-ten point eight A one").
@@ -374,7 +394,7 @@ Rules:
 4. Show math step by step. Teach how to find the answer fast in the open book (which index word, which table).
 ${format}
 7. Stay on construction licensing, codes, safety, trade skills and contractor business topics. Politely decline unrelated requests.
-8. REFERENCE NOTES below come from the Licensing Bro's knowledge base, checked against the codes and regulations. When a note answers the question, build your answer on it and cite its source. Notes marked UNVERIFIED must be presented with a reminder to confirm in the reference book. If the notes don't cover the question, answer from the references above and follow rule 1. Never mention "notes" or "knowledge base" to the student; just teach.${stateCheck}${notes ? `
+8. REFERENCE NOTES (when provided) come from the Licensing Bro's knowledge base, checked against the codes and regulations. When a note answers the question, build your answer on it and cite its source. Notes marked UNVERIFIED must be presented with a reminder to confirm in the reference book. If the notes don't cover the question, answer from the references above and follow rule 1. Never mention "notes" or "knowledge base" to the student; just teach.${stateCheck}${notes ? `
 
 REFERENCE NOTES:
 ${notes}` : ""}${opts.context ? `

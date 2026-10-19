@@ -9,9 +9,14 @@ import {
   validatePairs,
   validateQuestions,
   validateQuiz,
-  webSearchTool
+  webSearchTool,
+  routeTutor,
+  evaluateExpression,
+  runCalculator,
+  CALC_TOOL,
+  UNRELIABLE_DOMAINS
 } from "../../supabase/functions/_shared/logic.ts";
-import { tutorSystem } from "../../supabase/functions/_shared/common.ts";
+import { tutorParts, tutorSystem } from "../../supabase/functions/_shared/common.ts";
 
 Deno.test("needsStateCheck: state-sensitive questions", () => {
   for (const q of [
@@ -45,11 +50,75 @@ Deno.test("needsStateCheck: state-specific or unverified facts trigger a search"
   assert.equal(needsStateCheck("explain retainage", [{ state: null, status: "verified" }]), false);
 });
 
-Deno.test("webSearchTool: localized to the student's state, 3 uses max", () => {
+Deno.test("webSearchTool: localized to the student's state, 3 uses max, skips study-card sites", () => {
   assert.deepEqual(webSearchTool("Tennessee"), {
     type: "web_search_20250305", name: "web_search", max_uses: 3,
+    blocked_domains: UNRELIABLE_DOMAINS,
     user_location: { type: "approximate", region: "Tennessee", country: "US" }
   });
+  assert.ok(UNRELIABLE_DOMAINS.includes("quizlet.com"));
+  for (const d of UNRELIABLE_DOMAINS) assert.ok(/^[a-z0-9.-]+\.[a-z]+$/.test(d), d); // bare domains only (API rule)
+});
+
+Deno.test("routeTutor: quick lookups and voice go fast; math, why, photos and state checks go to the main model", () => {
+  for (const q of ["What is a GFCI?", "Define retainage", "What does OSHA stand for?", "minimum trap seal depth"])
+    assert.equal(routeTutor({ question: q }), "fast", q);
+  assert.equal(routeTutor({ question: "What is a GFCI?", voice: true }), "fast");
+  for (const q of [
+    "Calculate the voltage drop for 150 ft of 12 AWG at 16 A",
+    "How many 12 AWG conductors fit in a 4x1-1/2 box?",
+    "Why do TXV systems charge by subcooling?",
+    "Explain the difference between a conditional and unconditional waiver",
+    "A 240 V 30 A load runs 3 hours, what size breaker",
+    "What's 15% of 2,400 sq ft?"
+  ]) assert.equal(routeTutor({ question: q, voice: true }), "main", q);
+  assert.equal(routeTutor({ question: "What is a GFCI?", image: true }), "main");
+  assert.equal(routeTutor({ question: "What is a GFCI?", webSearch: true }), "main");
+  assert.equal(routeTutor({ question: "and the next one?", turns: 9 }), "main");
+  assert.equal(routeTutor({ question: "I am studying for my exam next month and I keep getting confused by all the different rules in chapter three, can you help me get organized about it?" }), "main");
+});
+
+Deno.test("evaluateExpression: exact arithmetic with functions and precedence", () => {
+  assert.equal(evaluateExpression("2 + 3 * 4"), 14);
+  assert.equal(evaluateExpression("(2 + 3) * 4"), 20);
+  assert.equal(evaluateExpression("2 ^ 3 ^ 2"), 512);
+  assert.equal(evaluateExpression("-3^2"), -9);
+  assert.equal(evaluateExpression("2^-1"), 0.5);
+  assert.equal(evaluateExpression("(-3)^2"), 9);
+  assert.equal(evaluateExpression("sqrt(144) + abs(-2)"), 14);
+  assert.equal(evaluateExpression("round(2 * 12.9 * 16 * 150 / 6530, 2)"), 9.48);
+  assert.equal(evaluateExpression("ceil(14.7)"), 15);
+  assert.equal(evaluateExpression("max(3, 7, 5) - min(4, 2)"), 5);
+  assert.equal(evaluateExpression("1.08 × 1000 × 20"), 21600);
+  assert.equal(evaluateExpression("12000 ÷ 400"), 30);
+  assert.ok(Math.abs(evaluateExpression("pi * (0.5)^2") - 0.785398) < 1e-6);
+  assert.equal(evaluateExpression("1.732 * 480 * 100 / 1000"), 83.136);
+  for (const bad of ["", "alert(1)", "2 +", "1/0", "process.exit()", "constructor", "2 ** 3)", "x * 2", "a".repeat(400)])
+    assert.throws(() => evaluateExpression(bad), bad);
+});
+
+Deno.test("runCalculator: labels results and reports errors back to the model", () => {
+  assert.deepEqual(runCalculator({ expression: "0.433 * 50", label: "static pressure in psi" }), { text: "static pressure in psi: 21.65", isError: false });
+  assert.deepEqual(runCalculator({ expression: "0.1 + 0.2" }), { text: "0.3", isError: false });
+  const bad = runCalculator({ expression: "12 inches * 2" });
+  assert.equal(bad.isError, true);
+  assert.ok(bad.text.startsWith("Couldn't calculate"));
+  assert.equal(CALC_TOOL.name, "calculate");
+  assert.deepEqual(CALC_TOOL.input_schema.required, ["expression"]);
+});
+
+Deno.test("tutorParts: cacheable system prompt; facts and context travel with the question", () => {
+  const a = tutorParts("Tennessee", "Electrical", "NEC", "[E1] fact one", { context: "Lesson: Grounding", calculator: true });
+  const b = tutorParts("Tennessee", "Electrical", "NEC", "[E9] other fact", { context: "Lesson: Boxes", calculator: true });
+  assert.equal(a.system, b.system); // same prompt across questions, so the API can reuse it
+  assert.ok(a.system.includes("calculate tool"));
+  assert.ok(a.system.includes("ACCURACY FIRST"));
+  assert.ok(!a.system.includes("[E1]") && !a.system.includes("Lesson: Grounding"));
+  assert.ok(a.notes.includes("<reference_notes>\n[E1] fact one\n</reference_notes>"));
+  assert.ok(a.notes.includes("<student_context>\nLesson: Grounding\n</student_context>"));
+  assert.equal(tutorParts("Tennessee", "Electrical", "NEC", "", {}).notes, "");
+  assert.ok(!tutorParts("Tennessee", "Electrical", "NEC", "", {}).system.includes("calculate tool"));
+  assert.ok(tutorParts("Ohio", "Plumbing", "IPC", "", { voice: true }).system.includes("VOICE MODE"));
 });
 
 Deno.test("collectSources: cited pages first, deduped, max 5", () => {

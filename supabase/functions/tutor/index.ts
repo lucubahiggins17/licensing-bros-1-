@@ -1,12 +1,14 @@
 // AI tutor: streams the answer back as plain text.
-// Knowledge-base grounding, plan-based daily limits, optional context and voice mode, and a state
-// cross-check with Anthropic web search when the answer can differ by state (sources appended at the end).
+// Knowledge-base grounding, plan-based daily limits, optional context and voice mode, smart model routing (fast model
+// for quick lookups and voice, strongest model for reasoning), an exact calculator tool for code math, prompt caching,
+// and a state cross-check with Anthropic web search when the answer can differ by state (sources appended at the end).
 import {
   anthropic,
+  CALC_TOOL,
   cleanContext,
-  collectSources,
   cors,
   dedupeSources,
+  FAST_MODEL,
   formatSources,
   handler,
   HttpError,
@@ -17,15 +19,20 @@ import {
   readBody,
   requireActiveSession,
   requireUser,
+  routeTutor,
+  ROUTING_ON,
   type Source,
-  tutorSystem,
+  tutorParts,
   useAiCredit,
   webSearchTool
 } from "../_shared/common.ts";
 import { formatFacts, searchFacts } from "../_shared/kb.ts";
+import { searchLibrary } from "../_shared/library.ts";
+import { streamAnswer } from "../_shared/answer.ts";
 
 type Turn = { role: "user" | "assistant"; content: string };
 const INTERRUPTED = "\n\n[The answer was interrupted. Try again.]";
+const CACHE = { type: "ephemeral" } as const;
 
 Deno.serve(handler(async (req) => {
   const { user } = await requireUser(req);
@@ -40,33 +47,46 @@ Deno.serve(handler(async (req) => {
   while (turns.length && turns[0].role !== "user") turns.shift();
   if (!turns.length || turns[turns.length - 1].role !== "user") throw new HttpError(400, "bad_request", "Ask a question first.");
 
-  // Signed in on the current device (location is not checked for the tutor)
-  await requireActiveSession(req, user.id);
-  const [admin, limits] = await Promise.all([isAdmin(user.id), planLimits(user.id)]);
+  // Signed in on the current device (location is not checked for the tutor); checks run side by side
+  const [, admin, limits] = await Promise.all([requireActiveSession(req, user.id), isAdmin(user.id), planLimits(user.id)]);
   const client = anthropic(); // 503 before counting usage when the AI isn't configured
   await useAiCredit(user.id, limits, admin);
 
-  // deno-lint-ignore no-explicit-any
-  const messages: any[] = turns.map((t) => ({ role: t.role, content: t.content }));
-  const img = body.image;
-  if (img && typeof img.data === "string" && /^image\/(jpeg|png|webp|gif)$/.test(img.mediaType) && img.data.length < 6_000_000) {
-    const last = messages[messages.length - 1];
-    last.content = [
-      { type: "image", source: { type: "base64", media_type: img.mediaType, data: img.data } },
-      { type: "text", text: last.content }
-    ];
-  }
-
   const context = typeof body.context === "string" ? body.context.trim().slice(0, 6000) : "";
   const voice = body.voice === true;
+  const img = body.image;
+  const hasImage = !!(img && typeof img.data === "string" && /^image\/(jpeg|png|webp|gif)$/.test(img.mediaType) && img.data.length < 6_000_000);
 
-  // Checked facts for this question (plus the previous one, for follow-ups like "why?") and the context
+  // Checked facts for this question (plus the previous one, for follow-ups like "why?") and the context,
+  // plus passages from the site's own knowledge library (uploaded documents), when it has any
   const question = turns.filter((t) => t.role === "user").slice(-2).map((t) => t.content).join(" ");
-  const facts = searchFacts(`${question} ${context.slice(0, 1500)}`, { trade, state, limit: 10 });
+  const lookup = `${question} ${context.slice(0, 1500)}`;
+  const [facts, library] = await Promise.all([
+    Promise.resolve(searchFacts(lookup, { trade, state, limit: 12 })),
+    searchLibrary(lookup, { trade, state, limit: 6 }).catch(() => [])
+  ]);
   const webSearch = needsStateCheck(`${question} ${context}`, facts);
-  const system = tutorSystem(state, tradeName, refs, formatFacts(facts), { voice, context, webSearch });
-  const tools = webSearch ? [webSearchTool(state)] : null;
-  const maxTokens = voice ? 600 : webSearch ? 1800 : 1200;
+  const lastQuestion = turns[turns.length - 1].content;
+  const route = ROUTING_ON() ? routeTutor({ question: lastQuestion, voice, image: hasImage, webSearch, turns: turns.length }) : "main";
+  const notesText = [formatFacts(facts), library.map((p) => `[${p.ref}] ${p.text}`).join("\n")].filter(Boolean).join("\n");
+  const { system, notes } = tutorParts(state, tradeName, refs, notesText, { voice, context, webSearch, calculator: true });
+  const maxTokens = voice ? 600 : webSearch ? 1800 : 1400;
+
+  // Messages: earlier turns as-is (cached), the latest question carries the notes and any photo
+  // deno-lint-ignore no-explicit-any
+  const messages: any[] = turns.map((t) => ({ role: t.role, content: t.content }));
+  // deno-lint-ignore no-explicit-any
+  const lastContent: any[] = [];
+  if (hasImage) lastContent.push({ type: "image", source: { type: "base64", media_type: img.mediaType, data: img.data } });
+  if (notes) lastContent.push({ type: "text", text: notes });
+  lastContent.push({ type: "text", text: lastQuestion });
+  messages[messages.length - 1] = { role: "user", content: lastContent };
+  if (messages.length >= 3) {
+    // Cache the conversation so far, so follow-up questions start answering sooner
+    const prev = messages[messages.length - 2];
+    prev.content = [{ type: "text", text: prev.content, cache_control: CACHE }];
+  }
+  const systemBlocks = [{ type: "text", text: system, cache_control: CACHE }];
 
   const enc = new TextEncoder();
   let current: { abort(): void } | null = null;
@@ -81,37 +101,28 @@ Deno.serve(handler(async (req) => {
         controller.enqueue(enc.encode(t));
         emitted = true;
       };
-
-      // Streams one answer; continues when a server tool pauses the turn. Only text reaches the client.
-      const run = async (useTools: boolean) => {
-        let msgs = messages;
-        for (let round = 0; round < 3 && !cancelled; round++) {
-          const s = client.messages.stream({
-            model: MODEL(),
-            max_tokens: maxTokens,
-            system,
-            messages: msgs,
-            ...(useTools && tools ? { tools } : {})
-          });
-          current = s;
-          for await (const ev of s) {
-            if (ev.type === "content_block_delta" && ev.delta.type === "text_delta") send(ev.delta.text);
-          }
-          const final = await s.finalMessage();
-          sources.push(...collectSources(final.content as unknown[], 10));
-          if (final.stop_reason !== "pause_turn") break;
-          msgs = [...msgs, { role: "assistant", content: final.content }];
-        }
+      const run = async (model: string, useWeb: boolean) => {
+        const r = await streamAnswer({
+          client, model, maxTokens, send,
+          // deno-lint-ignore no-explicit-any
+          system: systemBlocks as any,
+          messages,
+          tools: [...(useWeb ? [webSearchTool(state)] : []), CALC_TOOL],
+          cancelled: () => cancelled,
+          onStream: (s) => { current = s; }
+        });
+        sources.push(...r.sources);
       };
 
+      const primary = route === "fast" ? FAST_MODEL() : MODEL();
       try {
-        await run(!!tools);
+        await run(primary, webSearch);
       } catch (e) {
         if (!cancelled) {
-          if (tools && !emitted) {
-            // e.g. web search not enabled for this API key: answer without it
-            console.warn("tutor: retrying without web search", (e as Error)?.message);
-            try { await run(false); } catch { send(INTERRUPTED); }
+          if (!emitted) {
+            // e.g. web search not enabled for this API key, or the fast model isn't available: answer without them
+            console.warn("tutor: retrying on the main model without web search", (e as Error)?.message);
+            try { await run(MODEL(), false); } catch { send(INTERRUPTED); }
           } else {
             console.error("tutor stream", (e as Error)?.message);
             send(INTERRUPTED);
@@ -128,5 +139,7 @@ Deno.serve(handler(async (req) => {
     }
   });
 
-  return new Response(out, { headers: { ...cors, "content-type": "text/plain; charset=utf-8", "cache-control": "no-store" } });
+  return new Response(out, {
+    headers: { ...cors, "content-type": "text/plain; charset=utf-8", "cache-control": "no-store", "x-tutor-route": route }
+  });
 }));

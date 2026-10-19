@@ -24,7 +24,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      # Unit tests (no network, no secrets). Copied to a clean folder so the repo's package.json
+      # Unit tests (no secrets; the only network use is a fake AI server on this machine). Copied to a clean folder so the repo's package.json
       # and node_modules don't change how Deno resolves the npm: imports.
       - uses: denoland/setup-deno@v2
         with:
@@ -38,7 +38,7 @@ jobs:
           echo '{}' > "$work/deno.json"
           cd "$work"
           deno check supabase/functions/*/index.ts
-          deno test --allow-env tests/functions/
+          deno test --allow-env --allow-net=127.0.0.1 --allow-read tests/functions/
 
       - name: Check settings
         id: check
