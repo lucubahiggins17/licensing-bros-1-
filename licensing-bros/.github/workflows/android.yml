@@ -1,0 +1,179 @@
+# Builds the Licensing Bro's Android app on GitHub's servers (free).
+#   1. Tests and deploys all backend functions to Supabase (tutor, sessions, lessons, live, Stripe) when the Supabase token is set
+#   2. Bundles the whole app and compiles the APK (plus a Play Store bundle once a signing key is added)
+# Runs on every push to main, from the Actions tab ("Run workflow"), and on version tags (v1.0.0),
+# which also publish the APK on the repo's Releases page.
+name: Build Android app
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    tags: ["v*"]
+
+permissions:
+  contents: write
+
+jobs:
+  backend:
+    name: Test and deploy Supabase functions
+    runs-on: ubuntu-latest
+    env:
+      SUPABASE_ACCESS_TOKEN: ${{ secrets.SUPABASE_ACCESS_TOKEN }}
+      PROJECT_REF: ${{ vars.SUPABASE_PROJECT_REF }}
+    steps:
+      - uses: actions/checkout@v4
+
+      # Unit tests (no network, no secrets). Copied to a clean folder so the repo's package.json
+      # and node_modules don't change how Deno resolves the npm: imports.
+      - uses: denoland/setup-deno@v2
+        with:
+          deno-version: v2.x
+      - name: Test functions
+        run: |
+          work="$RUNNER_TEMP/backend-check"
+          rm -rf "$work" && mkdir -p "$work/supabase" "$work/tests"
+          cp -r supabase/functions "$work/supabase/functions"
+          cp -r tests/functions "$work/tests/functions"
+          echo '{}' > "$work/deno.json"
+          cd "$work"
+          deno check supabase/functions/*/index.ts
+          deno test --allow-env tests/functions/
+
+      - name: Check settings
+        id: check
+        run: |
+          if [ -z "$SUPABASE_ACCESS_TOKEN" ] || [ -z "$PROJECT_REF" ]; then
+            echo "::warning::Skipping function deploy. Add the SUPABASE_ACCESS_TOKEN secret and SUPABASE_PROJECT_REF variable to deploy the functions automatically."
+            echo "run=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "run=true" >> "$GITHUB_OUTPUT"
+          fi
+      - uses: supabase/setup-cli@v1
+        if: steps.check.outputs.run == 'true'
+        with:
+          version: latest
+
+      # Only settings that have a value are sent, so an empty GitHub secret never wipes a key
+      # that was set by hand in the Supabase dashboard.
+      - name: Save function settings in Supabase
+        if: steps.check.outputs.run == 'true'
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          STRIPE_SECRET_KEY: ${{ secrets.STRIPE_SECRET_KEY }}
+          STRIPE_WEBHOOK_SECRET: ${{ secrets.STRIPE_WEBHOOK_SECRET }}
+          LIVEKIT_URL: ${{ secrets.LIVEKIT_URL }}
+          LIVEKIT_API_KEY: ${{ secrets.LIVEKIT_API_KEY }}
+          LIVEKIT_API_SECRET: ${{ secrets.LIVEKIT_API_SECRET }}
+          IPINFO_TOKEN: ${{ secrets.IPINFO_TOKEN }}
+          SITE_URL: ${{ secrets.SITE_URL || vars.SITE_URL }}
+          ANTHROPIC_MODEL: ${{ vars.ANTHROPIC_MODEL }}
+          ANTHROPIC_FAST_MODEL: ${{ vars.ANTHROPIC_FAST_MODEL }}
+          DAILY_AI_LIMIT: ${{ vars.DAILY_AI_LIMIT }}
+        run: |
+          args=()
+          for name in ANTHROPIC_API_KEY STRIPE_SECRET_KEY STRIPE_WEBHOOK_SECRET LIVEKIT_URL LIVEKIT_API_KEY LIVEKIT_API_SECRET IPINFO_TOKEN SITE_URL ANTHROPIC_MODEL ANTHROPIC_FAST_MODEL DAILY_AI_LIMIT; do
+            value="${!name}"
+            if [ -n "$value" ]; then
+              args+=("$name=$value")
+              echo "Setting $name"
+            fi
+          done
+          if [ ${#args[@]} -gt 0 ]; then
+            supabase secrets set --project-ref "$PROJECT_REF" "${args[@]}"
+          else
+            echo "No function settings to save."
+          fi
+
+      - name: Deploy functions
+        if: steps.check.outputs.run == 'true'
+        run: |
+          for fn in tutor generate session lesson live-token stripe-checkout; do
+            supabase functions deploy "$fn" --project-ref "$PROJECT_REF"
+          done
+          # Stripe signs its webhook calls; they carry no Supabase sign-in
+          supabase functions deploy stripe-webhook --no-verify-jwt --project-ref "$PROJECT_REF"
+
+  android:
+    name: Build APK
+    runs-on: ubuntu-latest
+    env:
+      NEXT_PUBLIC_TARGET: app
+      NEXT_PUBLIC_SUPABASE_URL: ${{ vars.SUPABASE_URL }}
+      NEXT_PUBLIC_SUPABASE_ANON_KEY: ${{ vars.SUPABASE_ANON_KEY }}
+      NEXT_PUBLIC_SITE_URL: ${{ vars.SITE_URL }}
+      NEXT_TELEMETRY_DISABLED: "1"
+      HAS_KEYSTORE: ${{ secrets.ANDROID_KEYSTORE_BASE64 != '' }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Check settings
+        run: |
+          if [ -z "$NEXT_PUBLIC_SUPABASE_URL" ] || [ -z "$NEXT_PUBLIC_SUPABASE_ANON_KEY" ]; then
+            echo "::error::Add repository variables SUPABASE_URL and SUPABASE_ANON_KEY (Settings > Secrets and variables > Actions > Variables). See README."
+            exit 1
+          fi
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: |
+            package-lock.json
+            mobile/package-lock.json
+
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "21"
+          cache: gradle
+
+      - name: Bundle the app
+        run: |
+          npm ci
+          npx next build
+
+      - name: Copy the bundle into the Android project
+        working-directory: mobile
+        run: |
+          npm ci
+          npx cap sync android
+
+      - name: Build APK
+        working-directory: mobile/android
+        run: |
+          chmod +x gradlew
+          ./gradlew assembleDebug -PversionCode=${{ github.run_number }} --no-daemon
+          mkdir -p ../../dist
+          cp app/build/outputs/apk/debug/app-debug.apk ../../dist/licensing-bros-${{ github.run_number }}.apk
+
+      - name: Restore signing key
+        if: env.HAS_KEYSTORE == 'true'
+        run: |
+          echo "${{ secrets.ANDROID_KEYSTORE_BASE64 }}" | base64 -d > "$RUNNER_TEMP/upload.jks"
+          echo "ANDROID_KEYSTORE_PATH=$RUNNER_TEMP/upload.jks" >> "$GITHUB_ENV"
+
+      - name: Build signed release APK and Play Store bundle
+        if: env.HAS_KEYSTORE == 'true'
+        working-directory: mobile/android
+        env:
+          ANDROID_KEYSTORE_PASSWORD: ${{ secrets.ANDROID_KEYSTORE_PASSWORD }}
+          ANDROID_KEY_ALIAS: ${{ secrets.ANDROID_KEY_ALIAS }}
+          ANDROID_KEY_PASSWORD: ${{ secrets.ANDROID_KEY_PASSWORD }}
+        run: |
+          ./gradlew assembleRelease bundleRelease -PversionCode=${{ github.run_number }} --no-daemon
+          cp app/build/outputs/apk/release/app-release.apk ../../dist/licensing-bros-${{ github.run_number }}-release.apk
+          cp app/build/outputs/bundle/release/app-release.aab ../../dist/licensing-bros-${{ github.run_number }}.aab
+
+      - name: Save the app files
+        uses: actions/upload-artifact@v4
+        with:
+          name: licensing-bros-android-${{ github.run_number }}
+          path: dist/*
+          if-no-files-found: error
+
+      - name: Publish on the Releases page (tags only)
+        if: startsWith(github.ref, 'refs/tags/v')
+        uses: softprops/action-gh-release@v2
+        with:
+          files: dist/*

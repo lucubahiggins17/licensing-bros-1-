@@ -1,0 +1,105 @@
+{
+  "questions": [
+    {
+      "i": 11,
+      "action": "fix",
+      "reason": "Baluster 19-in spacing is 1926.502(b)(2)(iii); (iv) covers other members/openings",
+      "fixed": {
+        "ref": "OSHA 29 CFR 1926.502(b)(2)(iii)"
+      }
+    },
+    {
+      "i": 40,
+      "action": "fix",
+      "reason": "IBC 1012.2 itself labels 1:12 as '8-percent slope'; explanation should match open-book code text",
+      "fixed": {
+        "why": "The maximum ramp slope is 1:12. The IBC text labels this an '8-percent slope', but 1 divided by 12 is about 8.33 percent, the closest choice. 5 percent (1:20) is the point above which a walking surface is treated as a ramp."
+      }
+    },
+    {
+      "i": 44,
+      "action": "fix",
+      "reason": "Explanation stated Walsh-Healey threshold as $15,000; FAR raised it to $20,000 on Oct 1, 2025. Inflation-indexed figures must be dated",
+      "fixed": {
+        "why": "Davis-Bacon covers federally funded or assisted construction, alteration and repair contracts over $2,000, a statutory figure that is not adjusted for inflation. $2,500 is the Service Contract Act threshold. $15,000 was the Walsh-Healey supply-contract threshold until an October 2025 FAR inflation adjustment raised it to $20,000, and $150,000 was the Miller Act bond threshold as of 2025."
+      }
+    }
+  ],
+  "facts": [
+    {
+      "id": "R2-021",
+      "action": "fix",
+      "reason": "Omitted personal fall arrest as an option for crawling boards (1926.451(g)(1)(iii)); bricklayer rule covers open sides and ends",
+      "fixed": {
+        "fact": "On scaffolds over 10 ft high, a worker on a crawling board (chicken ladder) must be protected by personal fall arrest, a guardrail, or a 3/4 in diameter grabline or equivalent handhold fastened beside the board. A walkway inside a scaffold needs a guardrail within 9-1/2 in of it along at least one side, and overhand bricklayers on supported scaffolds need guardrails or personal fall arrest on all open sides and ends except the side next to the wall being laid."
+      }
+    },
+    {
+      "id": "R2-025",
+      "action": "fix",
+      "reason": "Baluster spacing is in (b)(2)(iii); (b)(2)(iv) covers other members",
+      "fixed": {
+        "source": "OSHA 29 CFR 1926.502(b)(2)(iii)-(iv)"
+      }
+    },
+    {
+      "id": "R2-038",
+      "action": "fix",
+      "reason": "Design exception attached to the 2-story/30-ft decked floor or net rule; in 1926.754(b) it applies only to (b)(1) and (b)(2)",
+      "fixed": {
+        "fact": "In multi-story steel erection, unless the design itself maintains structural integrity, there may be no more than 8 stories between the erection floor and the uppermost permanent floor, and no more than 4 floors or 48 ft (whichever is less) of unfinished bolting or welding above the foundation or uppermost permanently secured floor. Separately, a fully planked or decked floor or nets must always be kept within 2 stories or 30 ft (whichever is less) directly below any erection work; that rule has no design exception."
+      }
+    },
+    {
+      "id": "R2-052",
+      "action": "fix",
+      "reason": "25 blows per layer applies to the 4-in mold only; the 6-in mold uses 56 blows",
+      "fixed": {
+        "fact": "The standard Proctor test (ASTM D698) compacts soil in a mold in 3 layers with a 5.5 lb rammer dropped 12 in, using 25 blows per layer in the 4 in mold (56 blows in the 6 in mold). The modified Proctor test (ASTM D1557) uses a 10 lb rammer dropped 18 in on 5 layers, which gives a higher compactive effort."
+      }
+    },
+    {
+      "id": "R2-088",
+      "action": "fix",
+      "reason": "Current ASTM A615 also includes the No. 20 [64] bar, so '11 sizes' is wrong for the cited standard",
+      "fixed": {
+        "fact": "ASTM A615 inch-pound bar designations run #3 through #11, plus #14, #18 and the less common #20, the largest bar in the specification. The soft-metric designations (#10, #13, #16, #19, #22, #25, #29, #32, #36, #43, #57, #64) give the approximate diameter in millimeters, so a #5 bar (5/8 in) is a metric #16."
+      }
+    },
+    {
+      "id": "R2-091",
+      "action": "fix",
+      "reason": "Claim that figure-eight tie is quicker but weaker than a saddle tie is unsupported; CRSI says it substitutes for saddle or wrap-and-snap ties and secures heavy mats",
+      "fixed": {
+        "fact": "The snap (single) tie is the simplest rebar tie and is used mainly on bars in flat horizontal work such as slabs. The wrap-and-snap tie is normally used on vertical wall reinforcement, saddle ties typically fasten column ties to corner bars and beam stirrups to corner bars, and the wrap-and-saddle tie (wire wrapped 1-1/2 times around the first bar) grips more firmly, as for heavy mats lifted by crane. The figure-eight tie may be used on walls in place of saddle or wrap-and-snap ties and also to secure heavy mats.",
+        "source": "CRSI Placing Reinforcing Bars; CRSI tie types"
+      }
+    },
+    {
+      "id": "R2-100",
+      "action": "fix",
+      "reason": "Conflated vapor retarder (diffusion control) with air barrier (air leakage control)",
+      "fixed": {
+        "fact": "A vapor retarder slows the diffusion of water vapor into an assembly (in cold climates, from the warm, humid interior) so it does not condense on cold surfaces inside the wall or roof. It is not the same as an air barrier, although a sealed sheet such as polyethylene can serve as both. Vapor resistance is rated in perms (1 perm = 1 grain of water vapor per sq ft per hour per inch of mercury vapor-pressure difference), and a lower perm rating means a better retarder."
+      }
+    },
+    {
+      "id": "R2-118",
+      "action": "fix",
+      "reason": "IBC 1012.2 itself writes '(8-percent slope)' for 1:12; note wrongly faults the card, and tutor should know both figures for open-book exams",
+      "fixed": {
+        "fact": "Means-of-egress ramps may have a running slope no steeper than 1 vertical in 12 horizontal. The IBC text labels this an '8-percent slope', although 1/12 works out to about 8.33 percent. A walking surface counts as a ramp once its running slope is steeper than 1:20 (5 percent).",
+        "note": "Card equates 1:12 with 8%. That is the IBC's own rounded label in 1012.2, so exam answers may show either 8% or 8.33%; the exact value of 1:12 is 8.33%."
+      }
+    },
+    {
+      "id": "R2-134",
+      "action": "fix",
+      "reason": "Walsh-Healey threshold is an inflation-adjusted FAR figure; raised from $15,000 to $20,000 effective Oct 1, 2025",
+      "fixed": {
+        "fact": "Other federal contract wage laws cover non-construction work. The Walsh-Healey Public Contracts Act applies to federal contracts to manufacture or furnish goods above an inflation-adjusted dollar threshold ($20,000 under FAR 22.602 since October 1, 2025, up from $15,000) and requires minimum wage, overtime after 40 hours a week, and child-labor and safety rules. The Service Contract Act requires prevailing wages and fringe benefits on federal service contracts over $2,500. Federal construction work falls under Davis-Bacon instead.",
+        "source": "Walsh-Healey Act, 41 U.S.C. 6502; FAR 22.602; Service Contract Act, 41 U.S.C. 6702"
+      }
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+/* Card */
+.card{display:flex;flex-direction:column;background:#fff;border:2px solid var(--navy);border-radius:10px;overflow:hidden;text-decoration:none;color:var(--ink);
+  box-shadow:4px 4px 0 var(--navy);transition:transform .12s ease,box-shadow .12s ease;min-width:0}
+.card:hover{transform:translate(-2px,-2px);box-shadow:6px 6px 0 var(--navy)}
+.card:hover .go{color:var(--orange-2)}
+.card:hover .go svg{transform:translateX(3px)}
+.card:active{transform:translate(1px,1px);box-shadow:2px 2px 0 var(--navy)}
+.cover{position:relative;aspect-ratio:16/9;background:var(--navy);border-bottom:2px solid var(--navy);overflow:hidden}
+.coverImg{display:block;width:100%;height:100%;object-fit:cover}
+.tradeBadge{position:absolute;left:10px;top:10px;display:inline-flex;align-items:center;gap:5px;background:#fff;color:var(--navy);border:1.5px solid var(--navy);
+  border-radius:4px;padding:3px 8px;font-family:var(--heading);font-weight:900;font-size:11px;letter-spacing:.08em;text-transform:uppercase}
+.tradeBadge svg{width:13px;height:13px;color:var(--orange)}
+.owned{position:absolute;right:10px;top:10px;display:inline-flex;align-items:center;gap:5px;background:var(--ok);color:#fff;border-radius:4px;padding:3px 8px;
+  font-family:var(--heading);font-weight:900;font-size:11px;letter-spacing:.08em;text-transform:uppercase;box-shadow:0 2px 0 rgba(0,0,0,.2)}
+.owned svg{width:13px;height:13px}
+.draft{position:absolute;left:10px;bottom:16px}
+.body{display:flex;flex-direction:column;gap:8px;padding:16px;flex:1}
+.title{font-family:var(--heading);font-weight:900;font-size:18px;line-height:1.2;letter-spacing:-.005em;overflow-wrap:anywhere}
+.sub{margin:0;color:var(--muted);font-size:14px;line-height:1.45;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.meta{list-style:none;margin:2px 0 0;padding:0;display:flex;flex-wrap:wrap;gap:6px 14px;font-size:13px;font-weight:600;color:var(--ink)}
+.meta li{display:inline-flex;align-items:center;gap:5px;min-width:0}
+.meta svg{width:15px;height:15px;color:var(--orange);flex:none}
+.tags{display:flex;flex-wrap:wrap;gap:6px}
+.tags svg{width:12px;height:12px}
+.foot{margin-top:auto;padding-top:12px;border-top:1.5px dashed var(--line);display:flex;align-items:center;justify-content:space-between;gap:10px}
+.price{font-family:var(--display);font-size:24px;line-height:1;color:var(--navy)}
+.free{color:var(--ok)}
+.go{display:inline-flex;align-items:center;gap:6px;font-family:var(--heading);font-weight:900;font-size:12.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--navy)}
+.go svg{width:16px;height:16px;transition:transform .12s ease}
+
+/* Branded cover art (no image) */
+.art{position:relative;width:100%;height:100%;min-height:120px;background-color:var(--navy);overflow:hidden;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;
+  background-image:linear-gradient(rgba(255,255,255,.07) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.07) 1px,transparent 1px),
+    linear-gradient(rgba(255,255,255,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.035) 1px,transparent 1px);
+  background-size:60px 60px,60px 60px,12px 12px,12px 12px;background-position:center}
+.artGhost{position:absolute;right:-6%;bottom:-18%;width:58%;height:auto;aspect-ratio:1;color:#fff;opacity:.06;stroke-width:1.5}
+.artIcon{position:relative;width:62px;height:62px;border-radius:12px;background:var(--orange);color:#fff;display:grid;place-items:center;border:3px solid #fff;box-shadow:4px 4px 0 rgba(0,0,0,.25)}
+.artIcon svg{width:32px;height:32px}
+.artLabel{position:relative;font-family:var(--heading);font-weight:900;color:#fff;font-size:13px;letter-spacing:.16em;text-transform:uppercase;text-align:center;padding:0 12px}
+.artTape{position:absolute;left:0;right:0;bottom:0;height:9px;background:repeating-linear-gradient(-45deg,var(--hazard) 0 10px,var(--navy) 10px 20px)}
+
+/* Loading skeleton */
+.skel{border:2px solid var(--line);border-radius:10px;background:#fff;overflow:hidden}
+.skelCover,.skelBody i{background:linear-gradient(90deg,var(--surface) 0%,var(--blueprint) 50%,var(--surface) 100%);background-size:200% 100%;animation:shimmer 1.3s ease-in-out infinite}
+.skelCover{aspect-ratio:16/9}
+.skelBody{padding:16px;display:flex;flex-direction:column;gap:10px}
+.skelBody i{display:block;height:14px;border-radius:4px}
+@keyframes shimmer{from{background-position:100% 0}to{background-position:-100% 0}}

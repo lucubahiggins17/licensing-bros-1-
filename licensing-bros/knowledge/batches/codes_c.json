@@ -1,0 +1,1625 @@
+{
+  "source": "NASCLA study guide (codes) cards 321-470",
+  "facts": [
+    {
+      "topic": "Roofing",
+      "trade": "gc",
+      "state": null,
+      "source": "IRC 2021 R905.7 / R905.8 (wood shingles and shakes)",
+      "fact": "Spaced (skip) sheathing, where boards are laid with gaps between them so the roofing can breathe and dry, is a permitted deck for wood shingle and wood shake roofs; most other roof coverings require solid sheathing.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["skip sheathing", "spaced sheathing", "wood shingles", "shakes", "roof deck", "cedar roof"]
+    },
+    {
+      "topic": "Roofing",
+      "trade": "gc",
+      "state": null,
+      "source": "Standard roofing/gutter practice",
+      "fact": "Gutter runs are commonly limited so that the high point is no more than roughly 25 to 40 ft from a downspout; longer runs get a downspout at each end with the gutter pitched toward both.",
+      "status": "unverified",
+      "note": "Card says 25 ft maximum from high point to downspout. This is a trade rule of thumb, not a code requirement, and published guidance varies (often 30-40 ft). Not exam-confirmed.",
+      "keywords": ["gutter", "downspout", "gutter slope", "gutter length", "drainage", "eaves"]
+    },
+    {
+      "topic": "Drywall & finishes",
+      "trade": "gc",
+      "state": null,
+      "source": "Standard finish carpentry practice (cabinet installation)",
+      "fact": "Face-frame wall and base cabinets are fastened to the wall by driving screws through the horizontal hanging (hang) rails at the back of the cabinet box into the wall studs.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["cabinet", "hanging rail", "hang rail", "face frame", "cabinet installation", "wall cabinet"]
+    },
+    {
+      "topic": "Residential code",
+      "trade": "gc",
+      "state": null,
+      "source": "IRC 2021 R502.8.1",
+      "fact": "In sawn-lumber floor joists, notches may not be placed in the middle one-third of the span; notches in the top or bottom edge elsewhere are limited to 1/6 of the joist depth and a length of 1/3 of the depth, and notches at the ends (bearing) are limited to 1/4 of the depth.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["joist notch", "notching", "middle third", "one sixth depth", "floor joist", "boring and notching"]
+    },
+    {
+      "topic": "Doors, windows & glazing",
+      "trade": "gc",
+      "state": null,
+      "source": "Standard practice; IRC 2021 R609.4 / R703.4 (install per manufacturer)",
+      "fact": "Rough-opening sizes and installation details for a manufactured window such as an aluminum-clad wood unit come from the manufacturer's published data and installation instructions, which the code also requires to be followed.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["rough opening", "window", "manufacturer data", "clad window", "installation instructions", "rough-in"]
+    },
+    {
+      "topic": "Steel & trusses",
+      "trade": "gc",
+      "state": null,
+      "source": "Cold-formed steel framing practice (AISI S240 / manufacturer details)",
+      "fact": "When cold-formed steel track must be spliced, a short piece of track or stud is nested inside and fastened so it laps each side of the joint; a minimum splice length of about 6 in is commonly cited.",
+      "status": "unverified",
+      "note": "Card says 6 in minimum track splice. Splice details depend on the AISI standard, manufacturer and engineer's details; could not confirm a single code minimum.",
+      "keywords": ["steel track", "track splice", "cold-formed steel", "metal stud", "joist track", "light gauge"]
+    },
+    {
+      "topic": "Doors, windows & glazing",
+      "trade": "gc",
+      "state": null,
+      "source": "Standard window terminology",
+      "fact": "A hopper window is hinged at the bottom and its top tilts inward into the room; the opposite type, hinged at the top with the bottom swinging outward, is an awning window.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["hopper window", "awning window", "window types", "inward opening", "bottom hinged", "casement"]
+    },
+    {
+      "topic": "Drywall & finishes",
+      "trade": "gc",
+      "state": null,
+      "source": "NWFA installation guidelines (wood flooring over wood subfloor)",
+      "fact": "Before nailing solid hardwood strip flooring such as oak over a clean wood subfloor, a common recommended step is to lay 15-lb asphalt-saturated felt (or an equivalent vapor retarder) with its seams overlapped.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["oak floor", "hardwood flooring", "15 lb felt", "building paper", "subfloor", "vapor retarder"]
+    },
+    {
+      "topic": "Site work & concrete",
+      "trade": "gc",
+      "state": null,
+      "source": "PCA / ACI 302.1R flatwork finishing sequence",
+      "fact": "Concrete flatwork is finished in this order: screed (strike off) to grade, bull float, wait for bleed water to leave, then edge and joint, float, and finally trowel.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["finishing concrete", "screeding", "floating", "edging", "troweling", "slab finishing order"]
+    },
+    {
+      "topic": "Wood framing",
+      "trade": "gc",
+      "state": null,
+      "source": "IRC 2021 R802.11",
+      "fact": "Where roof trusses or rafters bear on an exterior wall top plate, the connection must resist wind uplift (and lateral thrust); when calculated uplift exceeds what toenails provide, approved connectors such as hurricane ties are required.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["truss uplift", "toenail", "hurricane tie", "top plate", "wind uplift", "roof tie-down"]
+    },
+    {
+      "topic": "Building code (IBC)",
+      "trade": "gc",
+      "state": null,
+      "source": "NEC (NFPA 70) 2020 320.12, 344, 358.12, 352.12",
+      "fact": "Exposed wiring where physical damage is expected should be run in a raceway rated for it, such as rigid metal conduit, IMC, or Schedule 80 PVC; armored cable (Type AC, often called BX) is not permitted where subject to physical damage.",
+      "status": "corrected",
+      "note": "Card says BX (armored cable). NEC 320.12 prohibits Type AC cable where subject to physical damage; rigid/IMC conduit or Schedule 80 PVC is the correct choice (EMT is excluded only where damage is severe).",
+      "keywords": ["bx", "armored cable", "physical damage", "conduit", "rigid metal conduit", "exposed wiring"]
+    },
+    {
+      "topic": "Energy & environmental",
+      "trade": "gc",
+      "state": null,
+      "source": "NEC (NFPA 70) 2020 410.116(B)",
+      "fact": "Before insulating an attic or ceiling, check recessed light fixtures: unless a fixture is rated Type IC for insulation contact, insulation must be kept at least 3 in from it and not placed over it.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["recessed light", "can light", "ic rated", "insulation clearance", "3 inches", "attic insulation"]
+    },
+    {
+      "topic": "Site work & concrete",
+      "trade": "gc",
+      "state": null,
+      "source": "Standard construction practice; IRC 2021 R608 (ICF walls)",
+      "fact": "Insulating concrete forms (ICFs), hollow foam blocks or panels filled with reinforced concrete, are stay-in-place forms that remain as part of the finished wall and provide its insulation.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["icf", "insulating concrete forms", "stay-in-place forms", "permanent forms", "foam block", "concrete wall"]
+    },
+    {
+      "topic": "Doors, windows & glazing",
+      "trade": "gc",
+      "state": null,
+      "source": "Standard window installation practice (ASTM E2112)",
+      "fact": "A window should sit loosely in its rough opening, which is made slightly larger than the unit, so it can be shimmed plumb, level and square without being forced or racked.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["window installation", "rough opening", "shim", "plumb level square", "clearance", "fit"]
+    },
+    {
+      "topic": "Drywall & finishes",
+      "trade": "gc",
+      "state": null,
+      "source": "NWFA installation guidelines (jobsite conditions)",
+      "fact": "Wood flooring should be installed only after the building's HVAC is running and the space is held at normal living temperature and humidity, typically around 60-80 degrees F, so the wood is acclimated to in-service conditions.",
+      "status": "unverified",
+      "note": "Card says 70 degrees F. Industry guidance gives a range of normal living conditions (temperature plus relative humidity) rather than a single temperature; exact ranges vary by guideline and manufacturer.",
+      "keywords": ["wood floor", "acclimation", "temperature", "humidity", "hvac", "flooring installation"]
+    },
+    {
+      "topic": "Residential code",
+      "trade": "gc",
+      "state": null,
+      "source": "IRC 2021 R405.1",
+      "fact": "Foundation drains are typically perforated pipe laid with the holes facing down, surrounded by gravel or crushed stone that extends at least 1 ft beyond the footing and 6 in above its top, and wrapped or covered with a filter membrane.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["foundation drain", "perforated pipe", "drain tile", "footing drain", "gravel", "french drain"]
+    },
+    {
+      "topic": "Residential code",
+      "trade": "gc",
+      "state": null,
+      "source": "IRC 2021 R802.4.6",
+      "fact": "Collar ties connecting opposing rafters must be in the upper third of the attic space, at least 1x4 nominal, and spaced no more than 4 ft on center, which is every third rafter pair when rafters are 16 in on center.",
+      "status": "corrected",
+      "note": "Card says every fourth pair of rafters at 16 in o.c. That is 64 in apart; the IRC limits collar tie spacing to 4 ft o.c., i.e., every third pair at 16 in o.c.",
+      "keywords": ["collar tie", "rafter", "upper third", "4 feet on center", "roof framing", "rafter tie"]
+    },
+    {
+      "topic": "Energy & environmental",
+      "trade": "gc",
+      "state": null,
+      "source": "IRC 2021 R702.7 (vapor retarder classes)",
+      "fact": "The kraft paper facing on batt insulation serves as a vapor retarder (a Class II vapor retarder under the IRC) and is installed toward the warm-in-winter side of the wall.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["kraft facing", "batt insulation", "vapor retarder", "class ii", "vapor barrier", "faced insulation"]
+    },
+    {
+      "topic": "Roofing",
+      "trade": "gc",
+      "state": null,
+      "source": "Standard roofing/flashing practice",
+      "fact": "Counterflashing is fastened to or set into the wall and turned down over the top edge of the base flashing, shedding water past that edge while letting the roof and wall move independently.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["counterflashing", "base flashing", "cap flashing", "chimney flashing", "parapet", "roof to wall"]
+    },
+    {
+      "topic": "Estimating & bidding",
+      "trade": "law",
+      "state": null,
+      "source": "NASCLA Contractor's Guide topic: estimating",
+      "fact": "Material quantities for a bid are measured (taken off) from the construction drawings, with the specifications defining the required quality and type of each material.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["takeoff", "quantity", "plans", "drawings", "bid", "estimate"]
+    },
+    {
+      "topic": "Drywall & finishes",
+      "trade": "gc",
+      "state": null,
+      "source": "Standard material properties (medium-density fiberboard)",
+      "fact": "Medium-density fiberboard (MDF) has a dense, uniform, grain-free face, which makes it a good choice where a smooth painted finish is needed, such as cabinet panels, trim and shelving.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["mdf", "medium density fiberboard", "smooth finish", "paint grade", "panel", "trim"]
+    },
+    {
+      "topic": "Site work & concrete",
+      "trade": "gc",
+      "state": null,
+      "source": "ACI 318 shear reinforcement fundamentals",
+      "fact": "Shear in a concrete beam causes diagonal tension cracking, which usually starts near the supports at about 45 degrees; stirrups (shear reinforcement) are placed to resist it.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["stirrups", "diagonal tension", "shear", "beam", "45 degrees", "shear reinforcement"]
+    },
+    {
+      "topic": "Site work & concrete",
+      "trade": "gc",
+      "state": null,
+      "source": "ASTM A615 bar designation system",
+      "fact": "An inch-pound rebar number is its nominal diameter in eighths of an inch, so a #4 bar is 1/2 in (0.50 in) and a #6 bar is 3/4 in (0.75 in) in diameter.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["rebar size", "bar number", "#4 bar", "#6 bar", "diameter", "eighths of an inch"]
+    },
+    {
+      "topic": "Site work & concrete",
+      "trade": "gc",
+      "state": null,
+      "source": "ACI 117 (tolerances for concrete construction)",
+      "fact": "ACI 117 allows stirrup spacing to vary by about plus or minus 1 in, as long as the total number of stirrups is not reduced.",
+      "status": "unverified",
+      "note": "Card says 1 inch. I believe this matches ACI 117, but tolerance tables have changed between editions and I cannot confirm the current wording.",
+      "keywords": ["stirrup spacing", "tolerance", "aci 117", "rebar placement", "variation", "reinforcing"]
+    },
+    {
+      "topic": "Financial management",
+      "trade": "law",
+      "state": null,
+      "source": "NASCLA Contractor's Guide topic: cash flow / financial management",
+      "fact": "A cumulative cash flow (S) curve that rises steeply at the start shows a front-loaded project, where much of the cost or billing falls early; cash flow projections are built by tying the schedule of values to the construction schedule.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["cash flow", "front loaded", "s curve", "schedule of values", "construction schedule", "projection"]
+    },
+    {
+      "topic": "Project management",
+      "trade": "gc",
+      "state": null,
+      "source": "ASHRAE Standard 202 (commissioning), ASHRAE Standard 111 (TAB)",
+      "fact": "The American Society of Heating, Refrigerating and Air-Conditioning Engineers (ASHRAE) publishes the main industry standards for commissioning and for testing, adjusting and balancing HVAC systems.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["ashrae", "commissioning", "testing adjusting balancing", "tab", "hvac", "mechanical systems"]
+    },
+    {
+      "topic": "Financial management",
+      "trade": "law",
+      "state": null,
+      "source": "NASCLA Contractor's Guide topic: job cost accounting",
+      "fact": "Job cost documentation has two main purposes: to feed cost data into the company's accounting system and to build up information that lets managers control each project's costs.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["job costing", "cost documentation", "accounting system", "cost control", "job cost report", "project costs"]
+    },
+    {
+      "topic": "Project management",
+      "trade": "law",
+      "state": null,
+      "source": "NASCLA Contractor's Guide topic: project delivery methods",
+      "fact": "In agency construction management, the owner holds separate contracts with the designer, the contractor(s), and a construction manager who acts only as the owner's advisor and does not guarantee cost.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["agency cm", "construction manager", "project delivery", "separate contracts", "owner advisor", "cm agency"]
+    },
+    {
+      "topic": "Project management",
+      "trade": "law",
+      "state": null,
+      "source": "Project closeout practice",
+      "fact": "Final as-built records should include, along with marked-up as-built drawings, photographs of conditions, especially concealed work such as underground and in-wall utilities taken before cover-up.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["as-built", "record drawings", "photographs", "closeout", "documentation", "concealed work"]
+    },
+    {
+      "topic": "Site work & concrete",
+      "trade": "gc",
+      "state": null,
+      "source": "ASTM D2487 (Unified Soil Classification System)",
+      "fact": "Under the Unified Soil Classification System, sand is soil that passes the No. 4 sieve (4.75 mm) but is retained on the No. 200 sieve (0.075 mm); coarser is gravel and finer is silt or clay.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["sand", "sieve", "no 200", "no 4", "soil classification", "uscs"]
+    },
+    {
+      "topic": "Building code (IBC)",
+      "trade": "gc",
+      "state": null,
+      "source": "IBC 2021 Table 1806.2; IRC 2021 Table R401.4.1",
+      "fact": "Presumptive allowable foundation pressures without a soil report are 12,000 psf for crystalline bedrock, 4,000 psf for sedimentary/foliated rock, 3,000 psf for sandy gravel or gravel (GW, GP), 2,000 psf for sands and silty or clayey sands and gravels, and 1,500 psf for clays and silts.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["presumptive load bearing", "allowable bearing", "soil bearing", "psf", "gravel", "table 1806.2"]
+    },
+    {
+      "topic": "Site work & concrete",
+      "trade": "gc",
+      "state": null,
+      "source": "Principles and Practices of Commercial Construction (NASCLA reference text)",
+      "fact": "A NASCLA reference textbook is reported to list dense silt as suitable for roughly 3,000 psf (about 140 kPa) of estimated foundation bearing pressure, which differs from the IBC presumptive value for silts.",
+      "status": "unverified",
+      "note": "Cards 355 and 363 answer dense silt for 3,000 psf / 140 kPa. Under IBC/IRC presumptive values silts get only 1,500 psf and 3,000 psf is for gravel. The textbook table could not be confirmed; students should know both.",
+      "keywords": ["dense silt", "bearing pressure", "140 kpa", "3000 psf", "geotechnical report", "soil type"]
+    },
+    {
+      "topic": "Estimating",
+      "trade": "gc",
+      "state": null,
+      "source": "Equipment productivity rule of thumb (Peurifoy, Construction Planning, Equipment and Methods)",
+      "fact": "A naturally aspirated (non-turbocharged) engine loses roughly 3% of its rated power for every 1,000 ft of elevation above sea level, which reduces equipment output on high-altitude jobs.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["altitude", "engine power loss", "elevation", "equipment derating", "carburetor", "3 percent"]
+    },
+    {
+      "topic": "Site work & concrete",
+      "trade": "gc",
+      "state": null,
+      "source": "Geotechnical fundamentals; IBC 2021 1803.5.3",
+      "fact": "Expansive (clay) soils change volume with moisture, swelling when they get wet and shrinking as they dry, which can heave or crack foundations and slabs.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["expansive soil", "swelling", "shrinkage", "moisture", "clay", "heave"]
+    },
+    {
+      "topic": "Estimating",
+      "trade": "gc",
+      "state": null,
+      "source": "Earthwork swell/shrink factor tables",
+      "fact": "Excavated soil swells in volume: typical published swell from bank to loose condition is about 10-15% for sand and gravel, about 20-25% for loam or common earth, and about 25-40% for clay.",
+      "status": "unverified",
+      "note": "Cards say loam 20% and excavated clay 25%. Swell percentages vary by table and material condition; values are approximate and not code-based.",
+      "keywords": ["swell", "soil expansion", "loam", "clay", "bank yards", "loose yards"]
+    },
+    {
+      "topic": "Site work & concrete",
+      "trade": "gc",
+      "state": null,
+      "source": "Concrete sidewalk jointing practice",
+      "fact": "Where a sidewalk bears against a building or other fixed structure, isolation/expansion joints are provided there and at intervals along the walk, commonly cited as no more than about 30 ft apart.",
+      "status": "unverified",
+      "note": "Card says 30 ft maximum. This comes from a textbook or agency specification and varies by jurisdiction; not a model-code requirement.",
+      "keywords": ["sidewalk", "expansion joint", "isolation joint", "30 feet", "flatwork", "joint spacing"]
+    },
+    {
+      "topic": "Site work & concrete",
+      "trade": "gc",
+      "state": null,
+      "source": "Foundation engineering fundamentals",
+      "fact": "Sheet piles are interlocking sections driven to form a wall that resists lateral (horizontal) earth and water pressure, as in cofferdams and excavation support; they are not intended to carry vertical building loads.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["sheet pile", "lateral pressure", "retaining", "cofferdam", "shoring", "pile types"]
+    },
+    {
+      "topic": "Steel & trusses",
+      "trade": "gc",
+      "state": null,
+      "source": "Principles and Practices of Commercial Construction (metal panel systems)",
+      "fact": "Metal wall or roof panels designed as stressed-skin panels need no separate subframe and are attached directly to the building's structural frame, reportedly by clips.",
+      "status": "unverified",
+      "note": "Card says clips. Attachment method depends on the panel system (clips or through-fasteners); could not confirm the textbook source.",
+      "keywords": ["stressed skin", "metal panel", "clips", "subframe", "metal building", "cladding"]
+    },
+    {
+      "topic": "Steel & trusses",
+      "trade": "gc",
+      "state": null,
+      "source": "Metal building systems fundamentals (MBMA)",
+      "fact": "In a pre-engineered metal building, rigid frames give stability across the width (transverse), while diagonal rod or cable (X) bracing in the roof and sidewalls gives longitudinal stability.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["pre-engineered metal building", "rod bracing", "x bracing", "longitudinal stability", "rigid frame", "pemb"]
+    },
+    {
+      "topic": "Drywall & finishes",
+      "trade": "gc",
+      "state": null,
+      "source": "Gypsum/vermiculite plaster application guidance",
+      "fact": "For gypsum-based plasters such as vermiculite plaster, the space is commonly held at 55 degrees F or above for about a week before, during, and after application until the plaster sets and dries.",
+      "status": "unverified",
+      "note": "Card says 55 degrees F for a week before, during and after. This matches some manufacturer handbook guidance, but ASTM and other sources use different minimums (e.g., 40 degrees F); handbook-dependent.",
+      "keywords": ["vermiculite plaster", "plaster temperature", "55 degrees", "cold weather", "gypsum plaster", "curing"]
+    },
+    {
+      "topic": "Estimating",
+      "trade": "gc",
+      "state": null,
+      "source": "RSMeans square foot / assemblies cost data (area modifier method)",
+      "fact": "RSMeans square-foot costs are adjusted for building size by comparing the proposed area to the typical size for that building type; a project larger than typical gets a cost multiplier below 1.0 and a smaller one gets a multiplier above 1.0.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["rsmeans", "size adjustment", "area modifier", "square foot estimate", "cost multiplier", "economies of scale"]
+    },
+    {
+      "topic": "Project management",
+      "trade": "gc",
+      "state": null,
+      "source": "Value engineering fundamentals (SAVE International)",
+      "fact": "Value engineering seeks the required function and quality at the lowest life-cycle cost. It can happen at any stage, but the most savings come early in design, when changes are cheapest to make.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["value engineering", "ve", "early design", "life cycle cost", "cost savings", "value"]
+    },
+    {
+      "topic": "Estimating & bidding",
+      "trade": "law",
+      "state": null,
+      "source": "NASCLA Contractor's Guide topic: estimating (general conditions)",
+      "fact": "General conditions costs such as supervision, the field office, and temporary utilities depend on time and are usually spread evenly across the project duration.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["general conditions", "overhead", "time related costs", "supervision", "field office", "evenly distributed"]
+    },
+    {
+      "topic": "Project management",
+      "trade": "gc",
+      "state": null,
+      "source": "AIA A201-2017 3.12 (submittals)",
+      "fact": "Submittals (shop drawings, product data sheets, and samples) are sent by the contractor to the designer to confirm that the proposed materials and products meet the contract documents; product data sheets show manufacturer specifications.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["submittal", "shop drawings", "product data", "samples", "architect review", "specifications"]
+    },
+    {
+      "topic": "Estimating",
+      "trade": "gc",
+      "state": null,
+      "source": "NASCLA Contractor's Guide topic: labor estimating",
+      "fact": "Labor cost for a task is based on quantity, crew make-up and wage rates, and productivity (output per hour) under the job conditions; the logic links between activities affect the schedule, not the labor cost of the task.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["labor cost", "crew productivity", "crew duration", "production rate", "labor estimate", "crew size"]
+    },
+    {
+      "topic": "Site work & concrete",
+      "trade": "gc",
+      "state": null,
+      "source": "ACI 318-19 26.11.2 (removal of formwork and shoring)",
+      "fact": "Shoring may be removed only after the structure has enough strength to carry its loads, shown by tests of field-cured cylinders or another approved method of estimating in-place strength.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["shoring removal", "reshoring", "field cured cylinders", "formwork stripping", "concrete strength", "aci 318"]
+    },
+    {
+      "topic": "Site work & concrete",
+      "trade": "gc",
+      "state": null,
+      "source": "ACI 318-19 26.5.3.1",
+      "fact": "Concrete must be kept above 50 degrees F and moist for at least the first 7 days after placement, or at least the first 3 days for high-early-strength concrete, unless accelerated curing is used.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["curing", "high early strength", "3 days", "7 days", "50 degrees", "moist curing"]
+    },
+    {
+      "topic": "Site work & concrete",
+      "trade": "gc",
+      "state": null,
+      "source": "ACI 318-19 18.6.4.4 (special moment frame beams)",
+      "fact": "In beams of special (seismic) moment frames, hoops are required near each end of the beam, and the first hoop must be no more than 2 in from the face of the supporting column.",
+      "status": "corrected",
+      "note": "Card asks about a column connected to a wall. The 2-in first-hoop rule in ACI 318 applies to beams framing into a supporting column in special moment frames.",
+      "keywords": ["hoop", "first hoop", "2 inches", "special moment frame", "beam column joint", "seismic reinforcing"]
+    },
+    {
+      "topic": "Site work & concrete",
+      "trade": "gc",
+      "state": null,
+      "source": "ACI 318 footing design fundamentals",
+      "fact": "A typical square or rectangular spread footing is a slab of uniform thickness with its main reinforcing bars near the bottom (tension) face, running in both directions.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["spread footing", "footing reinforcement", "both directions", "bottom bars", "rebar mat", "isolated footing"]
+    },
+    {
+      "topic": "Site work & concrete",
+      "trade": "gc",
+      "state": null,
+      "source": "ACI 347R (Guide to Formwork for Concrete)",
+      "fact": "Formwork for an elevated slab is designed for the slab's dead load plus a construction live load of at least 50 psf (75 psf if motorized carts are used), and the combined design load must be at least 100 psf (125 psf with motorized carts).",
+      "status": "verified",
+      "note": "",
+      "keywords": ["formwork design", "construction live load", "50 psf", "elevated slab", "aci 347", "shoring load"]
+    },
+    {
+      "topic": "Site work & concrete",
+      "trade": "gc",
+      "state": null,
+      "source": "ASTM C143, C231/C173, C31/C39, C138",
+      "fact": "Field and lab quality-control tests on concrete follow ASTM standards: slump (C143), air content (C231 or C173), making and testing strength cylinders (C31 and C39), and unit weight and yield (C138).",
+      "status": "verified",
+      "note": "",
+      "keywords": ["astm", "slump test", "air content", "compressive strength", "yield", "concrete testing"]
+    },
+    {
+      "topic": "Site work & concrete",
+      "trade": "gc",
+      "state": null,
+      "source": "PCA Design and Control of Concrete Mixtures (air entrainment)",
+      "fact": "Entrained air improves freeze-thaw resistance, but too much air lowers compressive strength (roughly 5% per extra percentage point of air), so air content is held within the specified range.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["air entrainment", "excess air", "strength loss", "air content", "freeze thaw", "durability"]
+    },
+    {
+      "topic": "Site work & concrete",
+      "trade": "gc",
+      "state": null,
+      "source": "ACI 347R formwork practice",
+      "fact": "Camber is building formwork slightly upward so that when wet concrete loads it and the forms deflect, the finished member ends up at the intended elevation.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["camber", "formwork deflection", "crown", "elevated slab", "beam forms", "deflection"]
+    },
+    {
+      "topic": "Site work & concrete",
+      "trade": "gc",
+      "state": null,
+      "source": "Standard formwork practice",
+      "fact": "Duplex (double-headed) nails are used for temporary work such as form bracing because the upper head stays exposed and can be pulled easily when the forms are stripped.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["duplex nail", "double headed nail", "form nails", "stripping forms", "bracing", "temporary"]
+    },
+    {
+      "topic": "Site work & concrete",
+      "trade": "gc",
+      "state": null,
+      "source": "ACI 347R lateral pressure of concrete",
+      "fact": "Lateral pressure on wall and column forms goes up with faster placement, deeper lifts, cooler concrete and retarded mixes, so slowing the rate of placement is the main field method of reducing it.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["lateral pressure", "form pressure", "rate of placement", "wall forms", "pour rate", "formwork"]
+    },
+    {
+      "topic": "Site work & concrete",
+      "trade": "gc",
+      "state": null,
+      "source": "ACI 306R cold weather concreting; ACI 318 chloride limits",
+      "fact": "In cold weather an accelerating admixture is added to speed setting and early strength; calcium chloride is the traditional accelerator (generally no more than 2% by weight of cement), but it is limited or prohibited in reinforced, prestressed, or aluminum-embedded concrete because chlorides cause corrosion.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["cold weather concrete", "accelerator", "calcium chloride", "admixture", "non-chloride", "corrosion"]
+    },
+    {
+      "topic": "Site work & concrete",
+      "trade": "gc",
+      "state": null,
+      "source": "ACI 302.1R / ACI 305R subgrade preparation",
+      "fact": "Lightly dampening a dry subgrade before placing concrete stops it from quickly drawing mixing water out of the concrete; there should be no standing water or mud.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["subgrade", "dampen", "moisten", "water absorption", "slab on grade", "concrete placement"]
+    },
+    {
+      "topic": "Site work & concrete",
+      "trade": "gc",
+      "state": null,
+      "source": "ACI 305R hot weather concreting; ACI 232 fly ash",
+      "fact": "Replacing part of the cement with fly ash lowers and slows the heat of hydration, which helps in hot weather and mass pours; usual hot-weather measures also include retarders, chilled water or ice, and never adding water to the mix.",
+      "status": "corrected",
+      "note": "Card says fly ash is used to cool concrete that contains too much water. Fly ash reduces heat of hydration; it is not a remedy for excess water, which lowers strength and must be prevented.",
+      "keywords": ["fly ash", "hot weather concrete", "heat of hydration", "pozzolan", "retarder", "cooling concrete"]
+    },
+    {
+      "topic": "Site work & concrete",
+      "trade": "gc",
+      "state": null,
+      "source": "ASTM C494 Type B/D; ACI 305R",
+      "fact": "A set-retarding admixture slows setting so that hot concrete stays workable long enough to place and finish properly.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["retarder", "set retarding", "hot weather", "finishing time", "admixture", "workability"]
+    },
+    {
+      "topic": "Site work & concrete",
+      "trade": "gc",
+      "state": null,
+      "source": "ACI 212.3R (chemical admixtures)",
+      "fact": "Admixtures are used for things like controlling set time, reducing water, entraining air and improving workability and durability; they are used to decrease permeability, never to increase it.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["admixture purpose", "permeability", "water reducer", "air entraining", "durability", "concrete admixtures"]
+    },
+    {
+      "topic": "Site work & concrete",
+      "trade": "gc",
+      "state": null,
+      "source": "ACI 305R / ACI 302.1R (temperature effect on setting)",
+      "fact": "Higher concrete temperature shortens setting and finishing time sharply; one cited rule of thumb is that a 20 degree F increase cuts finishing time by about half.",
+      "status": "unverified",
+      "note": "Card says a 20 degree F increase reduces finishing time by 50%. Published rules of thumb vary (some say about one-third per 20 degrees F); could not confirm the exact ACI figure.",
+      "keywords": ["concrete temperature", "finishing time", "setting time", "hot weather", "20 degrees", "aci"]
+    },
+    {
+      "topic": "Site work & concrete",
+      "trade": "gc",
+      "state": null,
+      "source": "Fiber tube column form manufacturer guidance",
+      "fact": "Laminated fiber (cardboard tube) column forms need external bracing to stay plumb, with one cited threshold being forms taller than about 15 ft.",
+      "status": "unverified",
+      "note": "Card says brace if over 15 ft. Bracing requirements come from manufacturer instructions and vary by diameter and conditions.",
+      "keywords": ["fiber tube form", "sonotube", "column form", "bracing", "15 feet", "round column"]
+    },
+    {
+      "topic": "Site work & concrete",
+      "trade": "gc",
+      "state": null,
+      "source": "ASTM C494 Types F and G",
+      "fact": "High-range water-reducing admixtures (superplasticizers) greatly increase slump without extra water, or allow large water reductions for high-strength concrete.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["superplasticizer", "high range water reducer", "hrwr", "slump", "type f", "flowing concrete"]
+    },
+    {
+      "topic": "Site work & concrete",
+      "trade": "gc",
+      "state": null,
+      "source": "ACI 347R formwork systems",
+      "fact": "Gang forms are large panels assembled from smaller ones and moved by crane as a unit, which gives high reuse, covers large placements, and cuts erection time.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["gang forms", "formwork system", "reuse", "crane set forms", "large panels", "wall forms"]
+    },
+    {
+      "topic": "Site work & concrete",
+      "trade": "gc",
+      "state": null,
+      "source": "ACI 302.1R / PCA slab jointing",
+      "fact": "Contraction (control) joints in slabs on grade should be cut to at least one-quarter of the slab thickness, for example 1-1/4 in deep in a 5-in slab.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["control joint", "contraction joint", "joint depth", "one quarter", "saw cut", "slab on grade"]
+    },
+    {
+      "topic": "Steel & trusses",
+      "trade": "gc",
+      "state": null,
+      "source": "SDI / AWS D1.3 (welding sheet steel deck)",
+      "fact": "Weld washers are required when arc spot (puddle) welding steel deck thinner than 0.028 in (about 22 gauge), because thin sheet would otherwise burn through.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["weld washer", "metal deck", "puddle weld", "22 gauge", "0.028 in", "steel deck"]
+    },
+    {
+      "topic": "Steel & trusses",
+      "trade": "gc",
+      "state": null,
+      "source": "SDI construction load guidance",
+      "fact": "Steel floor deck used as a working platform during construction must be able to support specified construction loads, with one cited minimum of 50 psf uniform.",
+      "status": "unverified",
+      "note": "Card says 50 psf. SDI construction-load criteria (uniform and concentrated loads) vary by standard edition; could not confirm the exact figure.",
+      "keywords": ["metal deck", "working platform", "construction load", "50 psf", "floor deck", "sdi"]
+    },
+    {
+      "topic": "Bonds & insurance",
+      "trade": "law",
+      "state": null,
+      "source": "NASCLA Contractor's Guide topic: insurance",
+      "fact": "A business owner's policy (BOP) packages commercial property and general liability coverage into one policy, usually for smaller businesses.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["bop", "business owners policy", "package policy", "property", "general liability", "small business insurance"]
+    },
+    {
+      "topic": "Bonds & insurance",
+      "trade": "law",
+      "state": null,
+      "source": "NASCLA Contractor's Guide topic: insurance",
+      "fact": "Umbrella liability insurance pays claims above the limits of underlying policies such as general liability, auto liability and employer's liability.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["umbrella", "excess liability", "coverage limits", "general liability", "insurance", "catastrophic claims"]
+    },
+    {
+      "topic": "Estimating & bidding",
+      "trade": "law",
+      "state": null,
+      "source": "NASCLA Contractor's Guide topic: estimating methods",
+      "fact": "Estimating methods range from conceptual (cost per square foot or per unit from past projects) to detailed quantity take-off. The square-foot method multiplies building area by a unit cost per square foot, while take-off prices each material and labor item one by one and is the most accurate.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["quantity takeoff", "detailed estimate", "square foot method", "unit cost", "conceptual estimate", "estimating methods"]
+    },
+    {
+      "topic": "Contracts & liens",
+      "trade": "law",
+      "state": null,
+      "source": "AIA A201-2017 3.7.1",
+      "fact": "Under AIA A201, unless the contract documents say otherwise, the contractor obtains and pays for the building permit and other government permits, fees, licenses and inspections needed to complete the work.",
+      "status": "corrected",
+      "note": "Card says the owner is responsible for purchasing permits. Under the standard AIA A201 general conditions the contractor secures and pays for permits unless the contract assigns them elsewhere; responsibility is set by the contract.",
+      "keywords": ["building permit", "permits", "who pays", "aia a201", "contractor responsibility", "fees"]
+    },
+    {
+      "topic": "Contracts & liens",
+      "trade": "law",
+      "state": null,
+      "source": "Contract law fundamentals (material vs. minor breach)",
+      "fact": "A minor breach, such as a payment that is one day late, lets the injured party recover damages but not stop performing. Walking off the job for good in response is itself a material breach, and a contract should be terminated only for a material breach.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["material breach", "minor breach", "termination", "abandonment", "late payment", "contract law"]
+    },
+    {
+      "topic": "Project management",
+      "trade": "law",
+      "state": null,
+      "source": "NASCLA Contractor's Guide topic: project documentation",
+      "fact": "Daily logs (job diaries) record weather, crews, work done and delays each day, and are the main evidence supporting a claim for a time extension such as for rain days.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["daily log", "job diary", "daily report", "time extension", "weather delay", "claims"]
+    },
+    {
+      "topic": "Project management",
+      "trade": "law",
+      "state": null,
+      "source": "NASCLA Contractor's Guide topic: materials management",
+      "fact": "Just-in-time delivery schedules materials to arrive shortly before they are installed, which reduces the storage space needed on site and the risk of theft or damage.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["just in time", "jit", "material delivery", "storage", "procurement", "staging"]
+    },
+    {
+      "topic": "Labor law",
+      "trade": "law",
+      "state": null,
+      "source": "Personal Responsibility and Work Opportunity Reconciliation Act of 1996; 42 USC 653a",
+      "fact": "Employers must report newly hired employees to their state's new-hire registry, and the data goes into the National Directory of New Hires, which is used mainly to locate parents and enforce child support orders.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["new hire reporting", "national directory of new hires", "child support", "state registry", "ndnh", "employer reporting"]
+    },
+    {
+      "topic": "Project management",
+      "trade": "law",
+      "state": null,
+      "source": "NASCLA Contractor's Guide topic: scheduling (CPM)",
+      "fact": "Float (slack) is how long an activity can be delayed past its early start or finish without delaying the project completion date; critical-path activities have zero float.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["float", "slack", "total float", "critical path", "cpm", "schedule"]
+    },
+    {
+      "topic": "Labor law",
+      "trade": "law",
+      "state": null,
+      "source": "29 CFR 785.19 (meal periods); FLSA overtime 29 USC 207",
+      "fact": "A meal break counts as unpaid time only if the employee is fully relieved of duty. A non-exempt worker who must answer phones during a 30-minute clocked-out lunch is working, so in a week of five 8-hour days those 2.5 hours must be paid at 1.5 times the regular rate.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["meal period", "lunch break", "flsa", "overtime", "compensable time", "non-exempt"]
+    },
+    {
+      "topic": "Labor law",
+      "trade": "law",
+      "state": null,
+      "source": "29 CFR 516.2; DOL WHD Fact Sheet #21",
+      "fact": "For non-exempt employees the FLSA requires records of hours worked each workday and each workweek, wages and pay data, but does not require any specific timekeeping method or a record of the clock time the employee left each day.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["recordkeeping", "flsa records", "hours worked", "time clock", "non-exempt", "payroll records"]
+    },
+    {
+      "topic": "Labor law",
+      "trade": "law",
+      "state": null,
+      "source": "USCIS Form I-9 Lists of Acceptable Documents",
+      "fact": "On Form I-9, an unrestricted Social Security card is a List C document: it proves employment authorization but not identity, so it must be paired with a List B identity document such as a driver's license.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["form i-9", "list c", "social security card", "employment eligibility", "identity", "list b"]
+    },
+    {
+      "topic": "Payroll & tax",
+      "trade": "law",
+      "state": null,
+      "source": "IRS Instructions for Forms 1099-MISC and 1099-NEC",
+      "fact": "Payments for services to an independent contractor who is a sole proprietor (not an employee) are reported on Form 1099-NEC; payments to corporations are generally exempt.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["1099", "1099-nec", "independent contractor", "sole proprietor", "nonemployee compensation", "irs form"]
+    },
+    {
+      "topic": "Safety recordkeeping",
+      "trade": "law",
+      "state": null,
+      "source": "OSHA 29 CFR 1904.33",
+      "fact": "The OSHA 300 log, the 300A annual summary and the 301 incident reports must be kept for 5 years after the end of the calendar year they cover, with the 300 log updated during that period.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["osha 300", "record retention", "5 years", "300a", "301", "injury log"]
+    },
+    {
+      "topic": "Safety (OSHA)",
+      "trade": "gc",
+      "state": null,
+      "source": "OSHA 29 CFR 1910.1200(g) (incorporated by 1926.59)",
+      "fact": "Under the Hazard Communication standard, employers must keep a Safety Data Sheet (SDS, formerly MSDS) for every hazardous chemical on site and make it readily available to workers during each shift.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["sds", "msds", "safety data sheet", "hazard communication", "hazcom", "chemicals"]
+    },
+    {
+      "topic": "Bonds & insurance",
+      "trade": "law",
+      "state": null,
+      "source": "NASCLA Contractor's Guide topic: risk management and insurance",
+      "fact": "Insurance transfers the financial risk of losses such as accidents, theft, and property damage from the business to an insurer in return for a premium; property insurance in particular pays for physical loss or damage to owned buildings, contents and equipment.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["insurance purpose", "risk transfer", "property insurance", "premium", "loss", "theft"]
+    },
+    {
+      "topic": "Bonds & insurance",
+      "trade": "law",
+      "state": null,
+      "source": "NASCLA Contractor's Guide topic: insurance (inland marine)",
+      "fact": "A contractor's equipment floater is an inland marine policy that covers direct physical loss to mobile tools and equipment wherever they are, whether in storage, in transit, or at a jobsite.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["equipment floater", "inland marine", "contractors equipment", "tools", "in transit", "mobile equipment"]
+    },
+    {
+      "topic": "Bonds & insurance",
+      "trade": "law",
+      "state": null,
+      "source": "State workers' compensation law (general rule)",
+      "fact": "The employer pays workers' compensation insurance premiums and, in nearly all states, may not deduct them from employees' wages.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["workers compensation", "premium", "employer pays", "payroll deduction", "work comp", "insurance"]
+    },
+    {
+      "topic": "Financial management",
+      "trade": "law",
+      "state": null,
+      "source": "Accounting fundamentals (cash vs. accrual)",
+      "fact": "Under the cash method, revenue is recorded when it is received and expenses when they are paid. Under the accrual method, revenue is recorded when earned and expenses when incurred, whenever the cash actually moves.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["cash method", "accrual method", "accounting method", "expenses", "revenue recognition", "bookkeeping"]
+    },
+    {
+      "topic": "Project management",
+      "trade": "law",
+      "state": null,
+      "source": "NASCLA Contractor's Guide topic: scheduling",
+      "fact": "A bar (Gantt) chart shows activity durations on a timeline, while a CPM schedule also shows the logical dependencies between activities, which lets it identify the critical path and float.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["bar chart", "gantt", "cpm", "critical path method", "dependencies", "logic"]
+    },
+    {
+      "topic": "Contracts & liens",
+      "trade": "law",
+      "state": null,
+      "source": "NASCLA Contractor's Guide topic: contract types",
+      "fact": "Under a cost-plus contract, the monthly pay application bills the owner for the actual costs incurred, documented by records, plus the agreed fee, rather than a percentage of a fixed lump sum.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["cost plus", "pay application", "progress payment", "actual cost", "fee", "contract type"]
+    },
+    {
+      "topic": "Project management",
+      "trade": "law",
+      "state": null,
+      "source": "NASCLA Contractor's Guide topic: project delivery methods",
+      "fact": "In design-build, the owner signs one contract with a single entity that is responsible for both design and construction and assembles the team of architects, engineers and builders.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["design build", "single source", "project delivery", "one contract", "design and construction", "turnkey"]
+    },
+    {
+      "topic": "Payroll & tax",
+      "trade": "law",
+      "state": null,
+      "source": "IRS Pub 15 (Circular E)",
+      "fact": "Social Security tax is 6.2% of wages from the employee plus a matching 6.2% from the employer, up to the annual wage base. Medicare is 1.45% each with no wage cap, plus an extra 0.9% withheld from an employee's wages over $200,000.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["social security tax", "fica", "6.2 percent", "medicare", "wage base", "payroll tax"]
+    },
+    {
+      "topic": "Labor law",
+      "trade": "law",
+      "state": null,
+      "source": "Family and Medical Leave Act, 29 CFR 825.110 and 825.112",
+      "fact": "FMLA gives eligible employees up to 12 weeks of unpaid, job-protected leave in 12 months for birth of a child, adoption or foster placement, their own serious health condition, or caring for a spouse, child or parent with one. Eligibility requires 12 months of employment, 1,250 hours worked in the past 12 months, and 50 employees within 75 miles.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["fmla", "family leave", "12 weeks", "adoption", "1250 hours", "unpaid leave"]
+    },
+    {
+      "topic": "Estimating & bidding",
+      "trade": "law",
+      "state": null,
+      "source": "CSI MasterFormat; NASCLA Contractor's Guide topic: estimating",
+      "fact": "Estimates are easier to build and check when quantities and tasks are grouped by type of work, commonly following CSI MasterFormat divisions.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["estimate organization", "masterformat", "csi divisions", "type of work", "cost codes", "takeoff"]
+    },
+    {
+      "topic": "Residential code",
+      "trade": "gc",
+      "state": null,
+      "source": "IRC 2021 R703.9",
+      "fact": "Both standard EIFS and EIFS with drainage must stop at least 6 in above the finished ground level.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["eifs", "synthetic stucco", "6 inches above grade", "termination", "finished grade", "exterior insulation"]
+    },
+    {
+      "topic": "Drywall & finishes",
+      "trade": "gc",
+      "state": null,
+      "source": "EIFS manufacturer specifications / ASTM C1397",
+      "fact": "EIFS insulation boards are set tightly together; gaps wider than about 1/16 in are filled with slivers of insulation, not base coat, and board joints are staggered and offset from sheathing joints and from the corners of openings.",
+      "status": "unverified",
+      "note": "Cards say 1/16 in maximum gap and 6 in offset from sheathing joints and opening corners. These come from manufacturer instructions; offset distances differ by manufacturer (6-8 in).",
+      "keywords": ["eifs", "insulation board", "gap", "1/16 inch", "joint offset", "eps"]
+    },
+    {
+      "topic": "Drywall & finishes",
+      "trade": "gc",
+      "state": null,
+      "source": "EIFS evaluation reports (ICC-ES AC219) / manufacturer specs",
+      "fact": "EIFS foam insulation board has a minimum thickness (commonly 3/4 in) and a maximum set by the system's evaluation report (commonly about 4 in).",
+      "status": "unverified",
+      "note": "Card says maximum thickness 3/4 in; 3/4 in is usually cited as the MINIMUM. Limits are product-specific, so I did not mark this corrected.",
+      "keywords": ["eifs", "insulation thickness", "eps board", "3/4 inch", "foam board", "minimum thickness"]
+    },
+    {
+      "topic": "Drywall & finishes",
+      "trade": "gc",
+      "state": null,
+      "source": "EIFS manufacturer installation instructions",
+      "fact": "EIFS reinforcing mesh must run continuously around corners and overlap adjoining mesh, including back-wrapped mesh, by a minimum commonly specified as 2-1/2 in.",
+      "status": "unverified",
+      "note": "Cards 430 and 469 say 2-1/2 in. This is a manufacturer-handbook requirement, not a model-code provision.",
+      "keywords": ["eifs", "reinforcing mesh", "overlap", "2-1/2 inch", "base coat", "corners"]
+    },
+    {
+      "topic": "Fire protection",
+      "trade": "gc",
+      "state": null,
+      "source": "IBC 2021 907.2.11.6; IRC 2021 R314.6",
+      "fact": "In new Group R buildings, smoke alarms must get their primary power from the building wiring, with battery backup, and with no disconnecting switch other than the overcurrent protection.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["smoke alarm", "hardwired", "battery backup", "group r", "primary power", "building wiring"]
+    },
+    {
+      "topic": "Building code (IBC)",
+      "trade": "gc",
+      "state": null,
+      "source": "IBC 2021 805.1.2 and 805.1.3",
+      "fact": "In Types I and II construction, wood finish flooring may be attached to embedded or fireblocked wood sleepers, cemented to fire-resistance-rated construction, or attached to a wood subfloor on sleepers. Combustible insulating board beneath it is limited to 1/2 in thick, so 5/8-in board is not allowed.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["type i", "type ii", "wood flooring", "insulating board", "1/2 inch", "combustible materials"]
+    },
+    {
+      "topic": "Building code (IBC)",
+      "trade": "gc",
+      "state": null,
+      "source": "IBC 2021 3002.2",
+      "fact": "A single hoistway enclosure may hold no more than four elevator cars, and where four or more cars serve the same part of a building they must be in at least two separate hoistways.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["elevator", "hoistway", "four cars", "elevator shaft", "number of cars", "separate hoistways"]
+    },
+    {
+      "topic": "Doors, windows & glazing",
+      "trade": "gc",
+      "state": null,
+      "source": "IBC 2021 2405.4",
+      "fact": "In Types I and II construction, skylight frames must be noncombustible, and skylights sloped less than 45 degrees from horizontal must sit on a curb at least 4 in above the roof plane.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["skylight", "curb", "4 inches", "type i", "type ii", "sloped glazing"]
+    },
+    {
+      "topic": "Residential code",
+      "trade": "gc",
+      "state": null,
+      "source": "IRC 2021 R802.4.5",
+      "fact": "Roof purlins are supported by 2x4 (minimum) struts running to bearing walls at a slope of at least 45 degrees from horizontal; struts may be at most 4 ft on center with an unbraced length of no more than 8 ft.",
+      "status": "corrected",
+      "note": "Card says purlin struts shall not exceed 8 inches in length. The IRC limit is 8 FEET of unbraced strut length (with slope not less than 45 degrees).",
+      "keywords": ["purlin", "strut", "8 feet", "45 degrees", "rafter support", "roof framing"]
+    },
+    {
+      "topic": "Fire protection",
+      "trade": "gc",
+      "state": null,
+      "source": "IFC 2021 906.9.1-906.9.3; NFPA 10",
+      "fact": "Hand-held portable fire extinguishers must be mounted with at least 4 in of clearance between the floor and the bottom of the extinguisher; the top may be no higher than 5 ft for units of 40 lb or less, or 3-1/2 ft for heavier units.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["fire extinguisher", "mounting height", "4 inches", "clearance", "portable extinguisher", "5 feet"]
+    },
+    {
+      "topic": "Fire protection",
+      "trade": "gc",
+      "state": null,
+      "source": "IBC 2021 Table 716.1(2)",
+      "fact": "Doors in fire-resistance-rated corridor walls need a fire protection rating of at least 20 minutes (1/3 hour) and must also meet smoke and draft control requirements.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["corridor door", "20 minute door", "fire door", "fire protection rating", "smoke and draft", "fire partition"]
+    },
+    {
+      "topic": "Fire protection",
+      "trade": "gc",
+      "state": null,
+      "source": "IBC 2021 716 / Table 716.1(2)",
+      "fact": "Transom assemblies above doors in fire-resistance-rated walls must meet the rating requirements in IBC Section 716, which for some 2-hour assemblies call for fire-resistance-rated (not just fire-protection-rated) glazing.",
+      "status": "unverified",
+      "note": "Card says a transom in a 2-hour exterior wall needs a 2-hour rating. Table 716.1(2) gives 1-1/2 hr for doors in 2-hr exterior walls, and transom rules depend on wall type and glazing; could not confirm the card's figure.",
+      "keywords": ["transom", "fire rated glazing", "exterior wall", "2 hour", "opening protective", "door assembly"]
+    },
+    {
+      "topic": "Building code (IBC)",
+      "trade": "gc",
+      "state": null,
+      "source": "IBC 2021 1011.3; IRC 2021 R311.7.2",
+      "fact": "Stairways need at least 80 in (6 ft 8 in) of headroom, measured vertically from the line connecting the tread nosings; spiral stairs may have 78 in.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["stair headroom", "80 inches", "6 ft 8 in", "stairway", "nosing", "clearance"]
+    },
+    {
+      "topic": "Fire protection",
+      "trade": "gc",
+      "state": null,
+      "source": "IBC 2021 709.3 exception",
+      "fact": "Smoke barriers generally need a 1-hour fire-resistance rating, but in Group I-3 (detention) buildings they may be built of steel sheet at least 0.10 in thick.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["smoke barrier", "group i-3", "sheet steel", "0.10 inch", "detention", "1 hour"]
+    },
+    {
+      "topic": "Building code (IBC)",
+      "trade": "gc",
+      "state": null,
+      "source": "IBC 2021 1809.4; IRC 2021 R403.1.4",
+      "fact": "Footings must extend at least 12 in below undisturbed ground surface and also below the frost line unless they are frost-protected.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["footing depth", "12 inches", "undisturbed soil", "frost line", "foundation", "minimum depth"]
+    },
+    {
+      "topic": "Wood framing",
+      "trade": "gc",
+      "state": null,
+      "source": "IRC 2021 Table R602.3(1)",
+      "fact": "Combination subfloor-underlayment 3/4 in thick or less (including 5/8 in) is fastened to framing with 8d common nails or 6d deformed-shank nails, spaced 6 in at panel edges and 12 in in the field.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["subfloor nailing", "8d nail", "combination subfloor", "underlayment", "fastener schedule", "5/8 inch"]
+    },
+    {
+      "topic": "Fire protection",
+      "trade": "gc",
+      "state": null,
+      "source": "IBC 2021 903.4",
+      "fact": "Valves controlling the water supply to automatic sprinkler systems, along with waterflow switches and other critical components, must be electrically supervised by a listed fire alarm control unit.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["sprinkler valve", "supervision", "fire alarm control unit", "tamper switch", "waterflow", "control valve"]
+    },
+    {
+      "topic": "Building code (IBC)",
+      "trade": "gc",
+      "state": null,
+      "source": "IBC 2021 3003.1",
+      "fact": "Where an elevator is required to have standby power and only one elevator is installed, it must transfer automatically to standby power within 60 seconds after normal power fails.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["elevator", "standby power", "60 seconds", "power failure", "emergency power", "transfer"]
+    },
+    {
+      "topic": "Fire protection",
+      "trade": "gc",
+      "state": null,
+      "source": "IBC 2021 713.4",
+      "fact": "Shaft enclosures such as elevator hoistways must be rated 2 hours when they connect four or more stories and 1 hour when they connect fewer than four, and never less than the floor assembly they pass through.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["shaft enclosure", "elevator shaft", "1 hour", "2 hour", "fire resistance", "stories"]
+    },
+    {
+      "topic": "Building code (IBC)",
+      "trade": "gc",
+      "state": null,
+      "source": "IBC 2021 1803.5.3",
+      "fact": "Soil is classified as expansive when it meets all four criteria: plasticity index of 15 or more, more than 10% passing a No. 200 sieve, more than 10% of particles smaller than 5 micrometers, and an expansion index above 20. Testing the expansion index alone is allowed in place of the first three tests.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["expansive soil", "plasticity index", "expansion index", "no 200 sieve", "geotechnical", "clay"]
+    },
+    {
+      "topic": "Fire protection",
+      "trade": "gc",
+      "state": null,
+      "source": "IBC 2021 Section 803 (furred interior finish) and Section 718",
+      "fact": "Where wall or ceiling finish is set out from the structure on furring strips, the concealed space must be filled with noncombustible material or fireblocked at intervals of no more than 8 ft in any direction.",
+      "status": "corrected",
+      "note": "Card says 8 inches. The IBC fireblocking interval for furred interior finish is 8 FEET in every direction.",
+      "keywords": ["fireblocking", "furring strips", "8 feet", "concealed space", "interior finish", "furred wall"]
+    },
+    {
+      "topic": "Residential code",
+      "trade": "gc",
+      "state": null,
+      "source": "IRC 2021 R403.1.6",
+      "fact": "Sill plates are anchored with at least 1/2-in bolts embedded at least 7 in into the concrete or grouted masonry, spaced no more than 6 ft apart, with a bolt within 12 in of each plate end and at least two per plate section.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["anchor bolt", "sill plate", "7 inches", "embedment", "6 feet", "foundation anchorage"]
+    },
+    {
+      "topic": "Building code (IBC)",
+      "trade": "gc",
+      "state": null,
+      "source": "IBC 2021 1010.2.9",
+      "fact": "Swinging doors serving a Group H occupancy must have panic or fire exit hardware whatever the occupant load. In Group A and E occupancies the requirement applies to rooms or spaces with an occupant load of 50 or more.",
+      "status": "corrected",
+      "note": "Card says Group H doors need panic hardware at an occupant load of 50 or more. The 50-person threshold applies to Groups A and E; Group H requires panic or fire exit hardware with no occupant-load threshold.",
+      "keywords": ["panic hardware", "fire exit hardware", "group h", "occupant load 50", "egress doors", "hazardous occupancy"]
+    },
+    {
+      "topic": "Roofing",
+      "trade": "gc",
+      "state": null,
+      "source": "IRC 2021 R905.16 and Table R905.1.1(2)",
+      "fact": "On low-slope roofs (below 4:12) receiving photovoltaic or asphalt shingles, the IRC calls for a double-coverage underlayment application, with specified end laps that are staggered between courses (one cited figure is 4-in end laps offset 6 ft).",
+      "status": "unverified",
+      "note": "Card says 4-in end laps offset 6 ft for slopes 3:12 to 4:12. Underlayment application tables and PV shingle slope limits changed between IRC editions; could not confirm the exact 2021 values.",
+      "keywords": ["photovoltaic shingles", "underlayment", "end lap", "low slope", "solar shingles", "4:12"]
+    },
+    {
+      "topic": "Residential code",
+      "trade": "gc",
+      "state": null,
+      "source": "IRC 2021 R317.1",
+      "fact": "In crawl spaces, wood joists or the underside of a wood structural floor closer than 18 in to exposed ground, and wood girders closer than 12 in, must be naturally durable or preservative-treated wood.",
+      "status": "corrected",
+      "note": "Card says 13 in. The IRC thresholds are 18 in for floor joists and 12 in for girders above exposed ground in under-floor spaces.",
+      "keywords": ["crawl space", "joist clearance", "18 inches", "treated wood", "decay protection", "girder 12 inches"]
+    },
+    {
+      "topic": "Accessibility",
+      "trade": "gc",
+      "state": null,
+      "source": "2010 ADA Standards 303.2-303.4",
+      "fact": "On an accessible route, a change in level up to 1/4 in may be vertical; from 1/4 in to 1/2 in it must be beveled no steeper than 1:2; anything over 1/2 in must be ramped.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["change in level", "bevel", "1:2", "1/4 inch", "1/2 inch", "accessible route"]
+    },
+    {
+      "topic": "Accessibility",
+      "trade": "gc",
+      "state": null,
+      "source": "2010 ADA Standards 402.2",
+      "fact": "Accessible routes can be made up of walking surfaces with a running slope no steeper than 1:20, doorways, ramps, curb ramps (not counting flared sides), elevators and platform lifts.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["accessible route", "walking surface", "1:20", "ramp", "curb ramp", "components"]
+    },
+    {
+      "topic": "Accessibility",
+      "trade": "gc",
+      "state": null,
+      "source": "2010 ADA Standards 502.2",
+      "fact": "A van-accessible parking space must be at least 132 in wide with a 60-in access aisle, or 96 in wide when the adjacent access aisle is at least 96 in wide.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["van accessible", "parking space", "132 inches", "access aisle", "ada parking", "96 inches"]
+    },
+    {
+      "topic": "Accessibility",
+      "trade": "gc",
+      "state": null,
+      "source": "ICC A117.1 / 2010 ADA Standards 611",
+      "fact": "Accessible washing machines need a clear floor space for a parallel approach centered on the appliance, and for front-loading machines one standard is cited as allowing the space's centerline to be offset up to 24 in from the door centerline.",
+      "status": "unverified",
+      "note": "Card says 24 in maximum offset from the door centerline. ADA 611 centers the space on the appliance; the 24-in offset appears to come from an ICC A117.1 dwelling-unit provision that I could not confirm.",
+      "keywords": ["washing machine", "front loading", "clear floor space", "laundry", "offset", "parallel approach"]
+    },
+    {
+      "topic": "Accessibility",
+      "trade": "gc",
+      "state": null,
+      "source": "2010 ADA Standards 405.8 and 505.7.1",
+      "fact": "A ramp run with a rise greater than 6 in must have handrails on both sides, and handrails with a circular cross section must have an outside diameter of 1-1/4 in to 2 in.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["ramp handrail", "6 inch rise", "handrail diameter", "1-1/4 to 2 inches", "grip", "ada ramp"]
+    },
+    {
+      "topic": "Accessibility",
+      "trade": "gc",
+      "state": null,
+      "source": "2010 ADA Standards 604.8.1.2",
+      "fact": "In a wheelchair-accessible toilet compartment, the door goes in the front partition or the side wall farthest from the water closet; if it is in the front partition, the opening must be no more than 4 in from the side wall farthest from the toilet.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["toilet compartment", "stall door", "4 inches", "accessible stall", "water closet", "door location"]
+    },
+    {
+      "topic": "Accessibility",
+      "trade": "gc",
+      "state": null,
+      "source": "2010 ADA Standards 309.4",
+      "fact": "Accessible operable parts must work with one hand, without tight grasping, pinching or twisting of the wrist, and with no more than 5 lbf of force.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["operable parts", "5 pounds force", "one hand", "no twisting", "controls", "hardware"]
+    },
+    {
+      "topic": "Accessibility",
+      "trade": "gc",
+      "state": null,
+      "source": "2010 ADA Standards 405.2, 405.3, 405.7.1",
+      "fact": "Accessible ramps may have a running slope no steeper than 1:12, and the cross slope of ramp runs and landings may be no steeper than 1:48, which still lets water drain without pooling.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["ramp cross slope", "1:48", "landing", "running slope", "1:12", "drainage"]
+    },
+    {
+      "topic": "Accessibility",
+      "trade": "gc",
+      "state": null,
+      "source": "2010 ADA Standards 602.4",
+      "fact": "For wheelchair users, a drinking fountain spout outlet may be no higher than 36 in above the floor; standing-person fountains have spouts 38 to 43 in high.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["drinking fountain", "spout height", "36 inches", "water fountain", "wheelchair", "38 to 43 inches"]
+    },
+    {
+      "topic": "Accessibility",
+      "trade": "gc",
+      "state": null,
+      "source": "2010 ADA Standards 404.3.7",
+      "fact": "Manual control switches for automatic doors and gates must meet the operable-parts rules, and their clear floor space must be beyond the arc of the door swing.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["automatic door", "control switch", "door swing", "clear floor space", "push button", "power operated door"]
+    },
+    {
+      "topic": "Building code (IBC)",
+      "trade": "gc",
+      "state": null,
+      "source": "IBC 2021 Chapter 2 definitions; 705.11",
+      "fact": "A parapet is the part of a wall that extends above the roof deck; IBC 705.11 requires parapets on many exterior walls, generally at least 30 in high.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["parapet", "parapet wall", "roof", "fire wall", "30 inches", "wall above roof"]
+    },
+    {
+      "topic": "Safety (OSHA)",
+      "trade": "gc",
+      "state": null,
+      "source": "OSHA 29 CFR 1926.502(b)(1)-(2)",
+      "fact": "Guardrail systems need midrails, screens, mesh or equivalent intermediate members between the top rail and the walking/working surface wherever there is no wall or parapet at least 21 in high; midrails go midway, and the top rail is 42 in plus or minus 3 in.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["midrail", "guardrail", "21 inches", "parapet", "fall protection", "top rail 42 inches"]
+    },
+    {
+      "topic": "Site work & concrete",
+      "trade": "gc",
+      "state": null,
+      "source": "CRSI / AWS D1.4 guidance on tack welding reinforcing bars",
+      "fact": "Tack welding reinforcing bars (for example to hold bars in place) can seriously weaken them, so it is not allowed unless approved by the engineer and done under AWS D1.4; one cited figure puts the reduced capacity at 35-40% of original.",
+      "status": "unverified",
+      "note": "Card says 35-40%. The weakening effect is real, but the specific percentage could not be confirmed and varies with bar chemistry and welding procedure.",
+      "keywords": ["tack welding", "rebar", "welding reinforcing", "strength reduction", "aws d1.4", "embrittlement"]
+    },
+    {
+      "topic": "Site work & concrete",
+      "trade": "gc",
+      "state": null,
+      "source": "ASTM C150 cement types",
+      "fact": "Type III portland cement is high-early-strength cement, used when concrete must gain strength fast, for example to strip forms early or in cold weather; Type I is general purpose, Type II moderate sulfate resistance, Type IV low heat, and Type V high sulfate resistance.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["type iii cement", "high early strength", "portland cement types", "astm c150", "fast setting", "cement type"]
+    },
+    {
+      "topic": "Financial management",
+      "trade": "law",
+      "state": null,
+      "source": "NASCLA Contractor's Guide topic: equipment cost accounting",
+      "fact": "A separate record for each piece of equipment should track its costs, such as purchase cost, depreciation, maintenance and repair, fuel and operating hours, so equipment rates can be charged to jobs and replacement decisions made.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["equipment records", "maintenance costs", "depreciation", "equipment accounting", "operating hours", "equipment rate"]
+    },
+    {
+      "topic": "Site work & concrete",
+      "trade": "gc",
+      "state": null,
+      "source": "Dry-pack grout practice",
+      "fact": "Dry-pack mortar (a stiff, low-water mix rammed into place) is used to fill joints and spaces such as under base plates, with about 1 in commonly cited as the governing joint thickness.",
+      "status": "unverified",
+      "note": "Card says joints for drypack should be at least 1 in thick. Sources differ on whether 1 in is a minimum or maximum for dry-pack versus flowable grout; could not confirm.",
+      "keywords": ["dry pack", "drypack grout", "base plate", "joint thickness", "grout", "1 inch"]
+    }
+  ],
+  "questions": [
+    {
+      "t": "gc",
+      "topic": "Residential code",
+      "q": "A notch is needed in the bottom edge of a sawn-lumber floor joist, outside the middle third of the span and away from the bearing. What is the maximum notch depth?",
+      "c": ["1/4 of the joist depth", "1/3 of the joist depth", "1/6 of the joist depth", "1/8 of the joist depth"],
+      "a": 2,
+      "ref": "IRC 2021 R502.8.1",
+      "why": "Notches away from the ends are limited to 1/6 of the joist depth and are not allowed in the middle third; only end notches may go to 1/4 of the depth."
+    },
+    {
+      "t": "gc",
+      "topic": "Residential code",
+      "q": "Where collar ties connect opposing rafters, what is the maximum spacing permitted by the IRC?",
+      "c": ["2 ft on center", "4 ft on center", "6 ft on center", "8 ft on center"],
+      "a": 1,
+      "ref": "IRC 2021 R802.4.6",
+      "why": "Collar ties must be at least 1x4, in the upper third of the attic, and no more than 4 ft apart, which is every third pair of rafters set 16 in on center."
+    },
+    {
+      "t": "gc",
+      "topic": "Residential code",
+      "q": "In a crawl space, untreated wood floor joists must be at least how far above exposed ground?",
+      "c": ["8 in", "12 in", "24 in", "18 in"],
+      "a": 3,
+      "ref": "IRC 2021 R317.1",
+      "why": "Joists closer than 18 in (girders closer than 12 in) to exposed ground must be naturally durable or preservative-treated wood."
+    },
+    {
+      "t": "gc",
+      "topic": "Residential code",
+      "q": "A 2x4 strut supporting a roof purlin runs down to a bearing wall at a slope of at least 45 degrees. What is the maximum unbraced length of the strut?",
+      "c": ["4 ft", "6 ft", "10 ft", "8 ft"],
+      "a": 3,
+      "ref": "IRC 2021 R802.4.5",
+      "why": "Purlin struts are limited to 8 ft of unbraced length, spaced no more than 4 ft on center, at a slope of at least 45 degrees."
+    },
+    {
+      "t": "gc",
+      "topic": "Residential code",
+      "q": "Minimum embedment of 1/2-in anchor bolts securing a sill plate to a concrete foundation is:",
+      "c": ["7 in", "4 in", "5 in", "12 in"],
+      "a": 0,
+      "ref": "IRC 2021 R403.1.6",
+      "why": "Bolts must be embedded at least 7 in, spaced no more than 6 ft apart, with a bolt within 12 in of each plate end."
+    },
+    {
+      "t": "gc",
+      "topic": "Site work & concrete",
+      "q": "High-early-strength concrete must be kept above 50 degrees F and moist for at least how long after placement?",
+      "c": ["1 day", "3 days", "7 days", "14 days"],
+      "a": 1,
+      "ref": "ACI 318-19 26.5.3.1",
+      "why": "High-early-strength concrete needs at least 3 days of curing; ordinary concrete needs at least 7 days."
+    },
+    {
+      "t": "gc",
+      "topic": "Site work & concrete",
+      "q": "Per ACI 347, what minimum construction live load is added to the slab dead load when designing elevated slab formwork (no motorized carts)?",
+      "c": ["100 psf", "75 psf", "20 psf", "50 psf"],
+      "a": 3,
+      "ref": "ACI 347R",
+      "why": "The minimum construction live load is 50 psf (75 psf with motorized carts), and dead plus live load must total at least 100 psf."
+    },
+    {
+      "t": "gc",
+      "topic": "Site work & concrete",
+      "q": "A slab on grade is 5 in thick. What is the minimum depth for its saw-cut contraction joints?",
+      "c": ["1/2 in", "3/4 in", "1-1/4 in", "2-1/2 in"],
+      "a": 2,
+      "ref": "ACI 302.1R / PCA",
+      "why": "Contraction joints should be at least 1/4 of the slab thickness, and 5 in x 1/4 = 1-1/4 in."
+    },
+    {
+      "t": "gc",
+      "topic": "Site work & concrete",
+      "q": "What is the nominal diameter of a #6 reinforcing bar?",
+      "c": ["0.60 in", "0.75 in", "0.625 in", "1.00 in"],
+      "a": 1,
+      "ref": "ASTM A615",
+      "why": "Inch-pound bar numbers give the diameter in eighths of an inch, so #6 = 6/8 = 0.75 in."
+    },
+    {
+      "t": "gc",
+      "topic": "Steel & trusses",
+      "q": "Weld washers are required when puddle welding steel deck thinner than:",
+      "c": ["0.028 in (about 22 gauge)", "0.0598 in (about 16 gauge)", "0.0474 in (about 18 gauge)", "0.0358 in (about 20 gauge)"],
+      "a": 0,
+      "ref": "SDI / AWS D1.3",
+      "why": "Deck thinner than 0.028 in will burn through under an arc spot weld, so a weld washer is used to make the connection."
+    },
+    {
+      "t": "law",
+      "topic": "Contracts & liens",
+      "q": "Under the AIA A201 general conditions, unless the contract documents provide otherwise, who secures and pays for the building permit?",
+      "c": ["The architect", "The owner", "The contractor", "The building official"],
+      "a": 2,
+      "ref": "AIA A201-2017 3.7.1",
+      "why": "A201 puts the contractor in charge of the building permit and other legally required permits, fees, licenses and inspections, unless the contract says otherwise."
+    },
+    {
+      "t": "law",
+      "topic": "Labor law",
+      "q": "A non-exempt carpenter works 8 hours a day, 5 days a week, and must answer the office phone during a 30-minute clocked-out lunch each day. Under the FLSA, how should the lunch time be paid?",
+      "c": ["It is unpaid because meal periods are never compensable", "2.5 hours at straight time", "5 hours at 1.5 times the regular rate", "2.5 hours at 1.5 times the regular rate"],
+      "a": 3,
+      "ref": "29 CFR 785.19",
+      "why": "A meal break is unpaid only if the employee is fully relieved of duty; the 5 x 0.5 = 2.5 hours push the week past 40, so they are paid as overtime."
+    },
+    {
+      "t": "law",
+      "topic": "Labor law",
+      "q": "Which document proves employment authorization but not identity for Form I-9 purposes?",
+      "c": ["U.S. passport", "Unrestricted Social Security card", "State driver's license", "Permanent resident card"],
+      "a": 1,
+      "ref": "USCIS Form I-9, List C",
+      "why": "A Social Security card is a List C document and must be paired with a List B identity document; a passport or green card is List A and proves both."
+    },
+    {
+      "t": "law",
+      "topic": "Safety recordkeeping",
+      "q": "How long must an employer keep its OSHA 300 log, 300A summary and 301 incident reports?",
+      "c": ["5 years after the end of the calendar year covered", "1 year after the end of the calendar year covered", "3 years from the date of each injury", "30 years from the date of each injury"],
+      "a": 0,
+      "ref": "OSHA 29 CFR 1904.33",
+      "why": "Injury and illness records are kept 5 years after the year they cover; the 30-year rule applies to exposure and medical records."
+    },
+    {
+      "t": "law",
+      "topic": "Payroll & tax",
+      "q": "What rate of Social Security tax is withheld from an employee's wages (up to the annual wage base)?",
+      "c": ["1.45%", "7.65%", "6.2%", "12.4%"],
+      "a": 2,
+      "ref": "IRS Pub 15",
+      "why": "The employee pays 6.2% and the employer matches 6.2%, for 12.4% in total; 1.45% is the Medicare rate."
+    },
+    {
+      "t": "law",
+      "topic": "Labor law",
+      "q": "To be eligible for FMLA leave, an employee must have worked at least how many hours for the employer during the previous 12 months?",
+      "c": ["1,000 hours", "1,250 hours", "1,500 hours", "2,080 hours"],
+      "a": 1,
+      "ref": "29 CFR 825.110",
+      "why": "Eligibility requires 12 months of employment, 1,250 hours in the past 12 months, and 50 employees within 75 miles."
+    },
+    {
+      "t": "gc",
+      "topic": "Building code (IBC)",
+      "q": "Under IBC 2021, swinging doors serving a Group H occupancy must have panic or fire exit hardware when the occupant load reaches:",
+      "c": ["10 or more", "50 or more", "100 or more", "Any occupant load; no threshold applies"],
+      "a": 3,
+      "ref": "IBC 2021 1010.2.9",
+      "why": "Group H requires panic or fire exit hardware whatever the occupant load; the 50-person trigger applies to Group A and E spaces."
+    },
+    {
+      "t": "gc",
+      "topic": "Fire protection",
+      "q": "An elevator shaft connects three stories. What is its minimum fire-resistance rating (assuming the floors penetrated are rated no more than that)?",
+      "c": ["1/2 hour", "1 hour", "2 hours", "3 hours"],
+      "a": 1,
+      "ref": "IBC 2021 713.4",
+      "why": "Shafts connecting fewer than four stories need 1 hour; four or more stories need 2 hours, and never less than the floor penetrated."
+    },
+    {
+      "t": "gc",
+      "topic": "Building code (IBC)",
+      "q": "Where only one elevator is installed and standby power is required, the elevator must transfer to standby power within what time after normal power fails?",
+      "c": ["10 seconds", "30 seconds", "60 seconds", "120 seconds"],
+      "a": 2,
+      "ref": "IBC 2021 3003.1",
+      "why": "A single elevator must switch to standby power automatically within 60 seconds of losing normal power."
+    },
+    {
+      "t": "gc",
+      "topic": "Fire protection",
+      "q": "What is the minimum fire protection rating for a door in a fire-resistance-rated corridor wall?",
+      "c": ["20 minutes", "45 minutes", "60 minutes", "90 minutes"],
+      "a": 0,
+      "ref": "IBC 2021 Table 716.1(2)",
+      "why": "Doors in rated corridor walls need a 1/3-hour (20-minute) rating and must also meet smoke and draft control requirements."
+    },
+    {
+      "t": "gc",
+      "topic": "Fire protection",
+      "q": "What is the minimum clearance between the floor and the bottom of a wall-mounted hand-held portable fire extinguisher?",
+      "c": ["2 in", "4 in", "6 in", "12 in"],
+      "a": 1,
+      "ref": "IFC 2021 906.9.3",
+      "why": "At least 4 in of clearance is required below the extinguisher; the top may be no higher than 5 ft for units of 40 lb or less."
+    },
+    {
+      "t": "gc",
+      "topic": "Accessibility",
+      "q": "A van-accessible parking space served by a 60-in access aisle must be at least how wide?",
+      "c": ["96 in", "108 in", "120 in", "132 in"],
+      "a": 3,
+      "ref": "2010 ADA 502.2",
+      "why": "A van space is 132 in wide with a 60-in aisle, or 96 in wide if the aisle is at least 96 in."
+    },
+    {
+      "t": "gc",
+      "topic": "Accessibility",
+      "q": "What is the steepest cross slope allowed on an accessible ramp run or landing?",
+      "c": ["1:12", "1:20", "1:48", "1:16"],
+      "a": 2,
+      "ref": "2010 ADA 405.3",
+      "why": "A cross slope of no more than 1:48 lets water drain without making wheelchairs drift sideways; 1:12 is the maximum running slope."
+    },
+    {
+      "t": "gc",
+      "topic": "Accessibility",
+      "q": "Handrails are required on both sides of an accessible ramp run when its rise is greater than:",
+      "c": ["4 in", "6 in", "12 in", "30 in"],
+      "a": 1,
+      "ref": "2010 ADA 405.8",
+      "why": "Ramp runs rising more than 6 in need handrails on both sides; circular handrails must be 1-1/4 to 2 in in diameter."
+    },
+    {
+      "t": "gc",
+      "topic": "Accessibility",
+      "q": "A 3/8-in change in level on an accessible route will be beveled. What is the steepest bevel allowed?",
+      "c": ["1:2", "1:8", "1:12", "1:20"],
+      "a": 0,
+      "ref": "2010 ADA 303.3",
+      "why": "Changes from 1/4 in to 1/2 in may be beveled at no more than 1:2; over 1/2 in requires a ramp."
+    },
+    {
+      "t": "gc",
+      "topic": "Safety (OSHA)",
+      "q": "Midrails, screens or mesh are required in a guardrail system unless there is a wall or parapet at least how high?",
+      "c": ["30 in", "21 in", "36 in", "42 in"],
+      "a": 1,
+      "ref": "OSHA 29 CFR 1926.502(b)(2)",
+      "why": "Intermediate members are needed between the top rail and the walking surface wherever no wall or parapet at least 21 in high exists."
+    },
+    {
+      "t": "law",
+      "topic": "Project management",
+      "q": "An owner holds three separate contracts, one each with the architect, the general contractor, and a construction manager who serves only as the owner's advisor. Which delivery method is this?",
+      "c": ["Design-build", "Construction manager at-risk", "Agency construction management", "Design-bid-build"],
+      "a": 2,
+      "ref": "NASCLA Guide: delivery methods",
+      "why": "In agency CM the construction manager advises the owner without taking cost risk, and the owner contracts directly with both the designer and the contractor."
+    },
+    {
+      "t": "gc",
+      "topic": "Building code (IBC)",
+      "q": "Without a geotechnical report, what is the IBC presumptive allowable foundation pressure for sandy gravel or gravel (GW, GP)?",
+      "c": ["1,500 psf", "2,000 psf", "3,000 psf", "4,000 psf"],
+      "a": 2,
+      "ref": "IBC 2021 Table 1806.2",
+      "why": "Gravels get 3,000 psf, sands and silty/clayey sands 2,000 psf, and clays and silts 1,500 psf."
+    },
+    {
+      "t": "gc",
+      "topic": "Fire protection",
+      "q": "Wall finish is installed over wood furring strips. If the space behind the finish is not filled with noncombustible material, fireblocking is required at what maximum interval in every direction?",
+      "c": ["16 in", "4 ft", "8 ft", "10 ft"],
+      "a": 2,
+      "ref": "IBC 2021 Sec. 803 / 718",
+      "why": "Concealed spaces behind furred finish must be filled or fireblocked at no more than 8 ft in any direction."
+    },
+    {
+      "t": "gc",
+      "topic": "Building code (IBC)",
+      "q": "What is the minimum depth of a footing below undisturbed ground surface (before considering frost depth)?",
+      "c": ["6 in", "18 in", "24 in", "12 in"],
+      "a": 3,
+      "ref": "IBC 2021 1809.4",
+      "why": "Footings go at least 12 in below undisturbed ground and also below the frost line unless they are frost-protected."
+    },
+    {
+      "t": "law",
+      "topic": "Contracts & liens",
+      "q": "An owner pays a progress payment one day late. The contractor stops all work and walks off the job with no intent to return. Legally, which statement is correct?",
+      "c": ["The contractor has committed a material breach", "The owner committed a material breach that justified termination", "Neither party has breached the contract", "The contractor committed only a minor breach"],
+      "a": 0,
+      "ref": "Contract law fundamentals",
+      "why": "A one-day-late payment is a minor breach that allows only damages; abandoning the job is a material breach by the contractor."
+    },
+    {
+      "t": "gc",
+      "topic": "Doors, windows & glazing",
+      "q": "In Type I or II construction, a skylight sloped less than 45 degrees from horizontal must be mounted on a curb at least how high above the roof plane?",
+      "c": ["2 in", "4 in", "6 in", "8 in"],
+      "a": 1,
+      "ref": "IBC 2021 2405.4",
+      "why": "These skylights need a curb at least 4 in high, and in Types I and II their frames must be noncombustible."
+    }
+  ]
+}

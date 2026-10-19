@@ -1,0 +1,1310 @@
+{
+ "facts": [
+  {
+   "id": "R3-001",
+   "topic": "Electrical theory",
+   "trade": "elec",
+   "state": null,
+   "source": "Ohm's law",
+   "fact": "I = E ÷ R = 120 ÷ 10 = 12 A. (Q: A 120-volt circuit feeds a 10-ohm resistive load. What is the current? A: 12 A)",
+   "status": "verified",
+   "note": "From the hand-checked core question bank",
+   "keywords": [
+    "volt",
+    "circuit",
+    "feeds",
+    "resistive",
+    "load",
+    "current"
+   ]
+  },
+  {
+   "id": "R3-002",
+   "topic": "Electrical theory",
+   "trade": "elec",
+   "state": null,
+   "source": "P = E × I",
+   "fact": "240 V × 20 A = 4,800 W. (Q: A 240-volt, 20-ampere resistive load uses how much power? A: 4,800 W)",
+   "status": "verified",
+   "note": "From the hand-checked core question bank",
+   "keywords": [
+    "volt",
+    "ampere",
+    "resistive",
+    "load",
+    "uses",
+    "much",
+    "power"
+   ]
+  },
+  {
+   "id": "R3-003",
+   "topic": "GFCI / AFCI",
+   "trade": "elec",
+   "state": null,
+   "source": "NEC 2023 210.8(A)(1)",
+   "fact": "All 125 V through 250 V receptacles in dwelling bathrooms require GFCI protection. (Q: In a dwelling unit, 125-volt, 15- and 20-ampere receptacles in bathrooms must have: A: GFCI protection for personnel)",
+   "status": "verified",
+   "note": "From the hand-checked core question bank",
+   "keywords": [
+    "dwelling",
+    "unit",
+    "volt",
+    "ampere",
+    "receptacles",
+    "bathrooms",
+    "have"
+   ]
+  },
+  {
+   "id": "R3-004",
+   "topic": "Grounding & bonding",
+   "trade": "elec",
+   "state": null,
+   "source": "NEC 2023 Table 250.122",
+   "fact": "Table 250.122 lists 12 AWG copper for a 20 A overcurrent device. (Q: Minimum copper equipment grounding conductor for a circuit protected by a 20 A overcurrent device: A: 12 AWG)",
+   "status": "verified",
+   "note": "From the hand-checked core question bank",
+   "keywords": [
+    "minimum",
+    "copper",
+    "equipment",
+    "grounding",
+    "conductor",
+    "circuit",
+    "protected",
+    "overcurrent"
+   ]
+  },
+  {
+   "id": "R3-005",
+   "topic": "Branch circuits",
+   "trade": "elec",
+   "state": null,
+   "source": "NEC 2023 210.20(A)",
+   "fact": "Rate the OCPD at not less than the noncontinuous load plus 125% of the continuous load. (Q: A branch-circuit overcurrent device supplying a continuous load must be rated at least what percent of the continuous load? A: 125%)",
+   "status": "verified",
+   "note": "From the hand-checked core question bank",
+   "keywords": [
+    "branch",
+    "circuit",
+    "overcurrent",
+    "device",
+    "supplying",
+    "continuous",
+    "load",
+    "rated"
+   ]
+  },
+  {
+   "id": "R3-006",
+   "topic": "Receptacle layout",
+   "trade": "elec",
+   "state": null,
+   "source": "NEC 2023 210.52(A)(1)",
+   "fact": "Receptacles are placed so no point is more than 6 ft from one (12 ft max between them). (Q: In dwelling living areas, no point along the floor line of a wall may be more than ___ from a receptacle. A: 6 ft)",
+   "status": "verified",
+   "note": "From the hand-checked core question bank",
+   "keywords": [
+    "dwelling",
+    "living",
+    "areas",
+    "point",
+    "along",
+    "floor",
+    "line",
+    "wall"
+   ]
+  },
+  {
+   "id": "R3-007",
+   "topic": "Receptacle layout",
+   "trade": "elec",
+   "state": null,
+   "source": "NEC 2023 210.52(C)(1)",
+   "fact": "No point along the countertop wall line may be more than 24 in from a receptacle outlet. (Q: Kitchen wall countertops: receptacles are placed so no point along the wall line is more than ___ from a receptacle. A: 24 in)",
+   "status": "verified",
+   "note": "From the hand-checked core question bank",
+   "keywords": [
+    "kitchen",
+    "wall",
+    "countertops",
+    "receptacles",
+    "placed",
+    "point",
+    "along",
+    "line"
+   ]
+  },
+  {
+   "id": "R3-008",
+   "topic": "Branch circuits",
+   "trade": "elec",
+   "state": null,
+   "source": "NEC 2023 210.11(C)(1)",
+   "fact": "Two or more 20 A small-appliance branch circuits are required. (Q: How many 20-ampere small-appliance branch circuits are required at minimum in a dwelling kitchen area? A: Two)",
+   "status": "verified",
+   "note": "From the hand-checked core question bank",
+   "keywords": [
+    "ampere",
+    "small",
+    "appliance",
+    "branch",
+    "circuits",
+    "required",
+    "minimum",
+    "dwelling"
+   ]
+  },
+  {
+   "id": "R3-009",
+   "topic": "Working space",
+   "trade": "elec",
+   "state": null,
+   "source": "NEC 2023 Table 110.26(A)(1)",
+   "fact": "Condition 1 at 0–150 V to ground requires 3 ft (900 mm). (Q: Minimum working-space depth in front of 120/240 V equipment (0–150 V to ground), Condition 1: A: 3 ft)",
+   "status": "verified",
+   "note": "From the hand-checked core question bank",
+   "keywords": [
+    "minimum",
+    "working",
+    "space",
+    "depth",
+    "front",
+    "equipment",
+    "ground",
+    "condition"
+   ]
+  },
+  {
+   "id": "R3-010",
+   "topic": "Working space",
+   "trade": "elec",
+   "state": null,
+   "source": "NEC 2023 110.26(A)(3)",
+   "fact": "Height is 2.0 m (6½ ft) or the height of the equipment, whichever is greater. (Q: Minimum headroom for working space about service equipment and panelboards: A: 6.5 ft)",
+   "status": "verified",
+   "note": "From the hand-checked core question bank",
+   "keywords": [
+    "minimum",
+    "headroom",
+    "working",
+    "space",
+    "about",
+    "service",
+    "equipment",
+    "panelboards"
+   ]
+  },
+  {
+   "id": "R3-011",
+   "topic": "Conductors",
+   "trade": "elec",
+   "state": null,
+   "source": "NEC 2023 Table 310.16; 240.4(D)",
+   "fact": "12 AWG Cu is 25 A at 75 °C, but 240.4(D) limits its overcurrent protection to 20 A. (Q: Ignoring small-conductor rules, the 75 °C ampacity of 12 AWG copper in Table 310.16 is: A: 25 A)",
+   "status": "verified",
+   "note": "From the hand-checked core question bank",
+   "keywords": [
+    "ignoring",
+    "small",
+    "conductor",
+    "rules",
+    "ampacity",
+    "copper",
+    "table"
+   ]
+  },
+  {
+   "id": "R3-012",
+   "topic": "Boxes",
+   "trade": "elec",
+   "state": null,
+   "source": "NEC 2023 Table 314.16(B)",
+   "fact": "14 AWG = 2.00, 12 AWG = 2.25, 10 AWG = 2.50 cubic inches. (Q: Box-fill volume allowance for each 12 AWG conductor: A: 2.25 in³)",
+   "status": "verified",
+   "note": "From the hand-checked core question bank",
+   "keywords": [
+    "fill",
+    "volume",
+    "allowance",
+    "each",
+    "conductor"
+   ]
+  },
+  {
+   "id": "R3-013",
+   "topic": "Electrical theory",
+   "trade": "elec",
+   "state": null,
+   "source": "Three-phase power formula",
+   "fact": "P = E × I × √3 (1.732) × power factor. (Q: True power in a balanced three-phase circuit equals: A: E × I × 1.732 × PF)",
+   "status": "verified",
+   "note": "From the hand-checked core question bank",
+   "keywords": [
+    "true",
+    "power",
+    "balanced",
+    "three",
+    "phase",
+    "circuit",
+    "equals"
+   ]
+  },
+  {
+   "id": "R3-014",
+   "topic": "Drainage",
+   "trade": "plumb",
+   "state": null,
+   "source": "IPC 2021 Table 704.1",
+   "fact": "Pipe 2½ in and smaller: ¼ in per foot. 3–6 in: ⅛ in per foot. (Q: Minimum slope for a 2-inch horizontal drainage pipe: A: 1/4 in per ft)",
+   "status": "verified",
+   "note": "From the hand-checked core question bank",
+   "keywords": [
+    "minimum",
+    "slope",
+    "inch",
+    "horizontal",
+    "drainage",
+    "pipe"
+   ]
+  },
+  {
+   "id": "R3-015",
+   "topic": "Drainage",
+   "trade": "plumb",
+   "state": null,
+   "source": "IPC 2021 Table 704.1",
+   "fact": "Pipe from 3 to 6 inches requires ⅛ in per foot minimum. (Q: Minimum slope for a 4-inch horizontal drainage pipe: A: 1/8 in per ft)",
+   "status": "verified",
+   "note": "From the hand-checked core question bank",
+   "keywords": [
+    "minimum",
+    "slope",
+    "inch",
+    "horizontal",
+    "drainage",
+    "pipe"
+   ]
+  },
+  {
+   "id": "R3-016",
+   "topic": "Traps",
+   "trade": "plumb",
+   "state": null,
+   "source": "IPC 2021 1002.4",
+   "fact": "Trap seals are 2 in minimum, 4 in maximum (deeper allowed only where designed for it). (Q: A fixture trap must have a liquid seal of at least ___ and not more than ___. A: 2 in / 4 in)",
+   "status": "verified",
+   "note": "From the hand-checked core question bank",
+   "keywords": [
+    "fixture",
+    "trap",
+    "have",
+    "liquid",
+    "seal",
+    "least",
+    "more",
+    "than"
+   ]
+  },
+  {
+   "id": "R3-017",
+   "topic": "DFU / sizing",
+   "trade": "plumb",
+   "state": null,
+   "source": "IPC 2021 Table 709.1",
+   "fact": "A lavatory is rated at 1 DFU. (Q: Drainage fixture unit value of a lavatory: A: 1)",
+   "status": "verified",
+   "note": "From the hand-checked core question bank",
+   "keywords": [
+    "drainage",
+    "fixture",
+    "unit",
+    "value",
+    "lavatory"
+   ]
+  },
+  {
+   "id": "R3-018",
+   "topic": "Water supply",
+   "trade": "plumb",
+   "state": null,
+   "source": "IPC 2021 604.8",
+   "fact": "Over 80 psi static, an approved PRV must reduce pressure to 80 psi or less. (Q: When static water pressure exceeds ___, a pressure-reducing valve is required. A: 80 psi)",
+   "status": "verified",
+   "note": "From the hand-checked core question bank",
+   "keywords": [
+    "when",
+    "static",
+    "water",
+    "pressure",
+    "exceeds",
+    "reducing",
+    "valve",
+    "required"
+   ]
+  },
+  {
+   "id": "R3-019",
+   "topic": "Water supply",
+   "trade": "plumb",
+   "state": null,
+   "source": "IPC 2021 Table 604.4",
+   "fact": "Private lavatory faucets are limited to 2.2 gpm at 60 psi. (Q: Maximum flow rate for a private lavatory faucet: A: 2.2 gpm at 60 psi)",
+   "status": "verified",
+   "note": "From the hand-checked core question bank",
+   "keywords": [
+    "maximum",
+    "flow",
+    "rate",
+    "private",
+    "lavatory",
+    "faucet"
+   ]
+  },
+  {
+   "id": "R3-020",
+   "topic": "Water heaters",
+   "trade": "plumb",
+   "state": null,
+   "source": "IPC 2021 504.6",
+   "fact": "The discharge terminates atmospherically not more than 6 in above the floor or waste receptor. (Q: A water heater relief valve discharge pipe that terminates near the floor must end no more than ___ above the floor. A: 6 in)",
+   "status": "verified",
+   "note": "From the hand-checked core question bank",
+   "keywords": [
+    "water",
+    "heater",
+    "relief",
+    "valve",
+    "discharge",
+    "pipe",
+    "terminates",
+    "near"
+   ]
+  },
+  {
+   "id": "R3-021",
+   "topic": "Load & airflow",
+   "trade": "hvac",
+   "state": null,
+   "source": "Q = 1.08 × CFM × ΔT",
+   "fact": "1.08 × 1,000 × 20 = 21,600 Btu/h. (Q: Sensible heat for 1,000 CFM with a 20 °F temperature difference: A: 21,600 Btu/h)",
+   "status": "verified",
+   "note": "From the hand-checked core question bank",
+   "keywords": [
+    "sensible",
+    "heat",
+    "temperature",
+    "difference"
+   ]
+  },
+  {
+   "id": "R3-022",
+   "topic": "Load & airflow",
+   "trade": "hvac",
+   "state": null,
+   "source": "Definition",
+   "fact": "1 ton = 12,000 Btu/h (heat to melt one ton of ice in 24 hours). (Q: One ton of refrigeration equals: A: 12,000 Btu/h)",
+   "status": "verified",
+   "note": "From the hand-checked core question bank",
+   "keywords": [
+    "refrigeration",
+    "equals"
+   ]
+  },
+  {
+   "id": "R3-023",
+   "topic": "EPA 608",
+   "trade": "hvac",
+   "state": null,
+   "source": "40 CFR 82.161",
+   "fact": "Type I = small appliances (5 lb or less). Type II = high-pressure, Type III = low-pressure. Vehicle A/C falls under Section 609. (Q: EPA Section 608 Type I certification covers: A: Small appliances with 5 lb or less of refrigerant)",
+   "status": "verified",
+   "note": "From the hand-checked core question bank",
+   "keywords": [
+    "section",
+    "type",
+    "certification",
+    "covers"
+   ]
+  },
+  {
+   "id": "R3-024",
+   "topic": "EPA 608",
+   "trade": "hvac",
+   "state": null,
+   "source": "Clean Air Act §608; 40 CFR 82.154",
+   "fact": "The venting prohibition took effect July 1, 1992. (Q: Knowingly venting ozone-depleting refrigerant during service became illegal on: A: July 1, 1992)",
+   "status": "verified",
+   "note": "From the hand-checked core question bank",
+   "keywords": [
+    "knowingly",
+    "venting",
+    "ozone",
+    "depleting",
+    "refrigerant",
+    "during",
+    "service",
+    "became"
+   ]
+  },
+  {
+   "id": "R3-025",
+   "topic": "EPA 608",
+   "trade": "hvac",
+   "state": null,
+   "source": "DOT / EPA 608 practice",
+   "fact": "Fill to no more than 80% to leave room for liquid expansion. (Q: A refillable recovery cylinder should not be filled beyond ___ of capacity by weight (liquid). A: 80%)",
+   "status": "verified",
+   "note": "From the hand-checked core question bank",
+   "keywords": [
+    "refillable",
+    "recovery",
+    "cylinder",
+    "should",
+    "filled",
+    "beyond",
+    "capacity",
+    "weight"
+   ]
+  },
+  {
+   "id": "R3-026",
+   "topic": "Refrigeration cycle",
+   "trade": "hvac",
+   "state": null,
+   "source": "Refrigeration fundamentals",
+   "fact": "Superheat = suction line temperature minus evaporator saturation temperature. (Q: Superheat is measured at the: A: Suction line leaving the evaporator)",
+   "status": "verified",
+   "note": "From the hand-checked core question bank",
+   "keywords": [
+    "superheat",
+    "measured"
+   ]
+  },
+  {
+   "id": "R3-027",
+   "topic": "Refrigeration cycle",
+   "trade": "hvac",
+   "state": null,
+   "source": "Refrigeration fundamentals",
+   "fact": "TXV systems are charged by subcooling; fixed-orifice systems by superheat. (Q: A system with a TXV is normally charged using: A: Subcooling)",
+   "status": "verified",
+   "note": "From the hand-checked core question bank",
+   "keywords": [
+    "system",
+    "normally",
+    "charged",
+    "using"
+   ]
+  },
+  {
+   "id": "R3-028",
+   "topic": "Condensate",
+   "trade": "hvac",
+   "state": null,
+   "source": "IMC 2021 307.2.2",
+   "fact": "Not less than ⅛ in per foot (1% slope). (Q: Horizontal condensate drain piping must slope at least: A: 1/8 in per ft)",
+   "status": "verified",
+   "note": "From the hand-checked core question bank",
+   "keywords": [
+    "horizontal",
+    "condensate",
+    "drain",
+    "piping",
+    "slope",
+    "least"
+   ]
+  },
+  {
+   "id": "R3-029",
+   "topic": "EPA 608",
+   "trade": "hvac",
+   "state": null,
+   "source": "40 CFR Part 82 Subpart A",
+   "fact": "As of January 1, 2020, R-22 may only come from recovered, recycled or stockpiled supply. (Q: Production and import of new R-22 ended in the U.S. on: A: January 1, 2020)",
+   "status": "verified",
+   "note": "From the hand-checked core question bank",
+   "keywords": [
+    "production",
+    "import",
+    "ended"
+   ]
+  },
+  {
+   "id": "R3-030",
+   "topic": "Safety (OSHA)",
+   "trade": "gc",
+   "state": null,
+   "source": "29 CFR 1926.501(b)(1)",
+   "fact": "Construction trigger height is 6 ft (scaffolds are 10 ft under 1926.451). (Q: Fall protection is required on construction walking/working surfaces with an unprotected edge ___ or more above a lower level. A: 6 ft)",
+   "status": "verified",
+   "note": "From the hand-checked core question bank",
+   "keywords": [
+    "fall",
+    "protection",
+    "required",
+    "construction",
+    "walking",
+    "working",
+    "surfaces",
+    "unprotected"
+   ]
+  },
+  {
+   "id": "R3-031",
+   "topic": "Safety (OSHA)",
+   "trade": "gc",
+   "state": null,
+   "source": "29 CFR 1926.1053(b)(1)",
+   "fact": "Side rails extend at least 3 ft above the upper landing surface. (Q: A portable ladder used to reach an upper landing must extend at least ___ above the landing. A: 3 ft)",
+   "status": "verified",
+   "note": "From the hand-checked core question bank",
+   "keywords": [
+    "portable",
+    "ladder",
+    "used",
+    "reach",
+    "upper",
+    "landing",
+    "extend",
+    "least"
+   ]
+  },
+  {
+   "id": "R3-032",
+   "topic": "Safety (OSHA)",
+   "trade": "gc",
+   "state": null,
+   "source": "29 CFR 1926.652(a)(1)",
+   "fact": "Excavations 5 ft or deeper need protection unless made entirely in stable rock. (Q: A protective system is required for trenches at what depth, unless in stable rock? A: 5 ft)",
+   "status": "verified",
+   "note": "From the hand-checked core question bank",
+   "keywords": [
+    "protective",
+    "system",
+    "required",
+    "trenches",
+    "depth",
+    "unless",
+    "stable",
+    "rock"
+   ]
+  },
+  {
+   "id": "R3-033",
+   "topic": "Safety (OSHA)",
+   "trade": "gc",
+   "state": null,
+   "source": "29 CFR 1926.502(b)(1)",
+   "fact": "Top edge height is 42 in plus or minus 3 in above the walking level. (Q: Top rail height of a guardrail system: A: 42 in ± 3 in)",
+   "status": "verified",
+   "note": "From the hand-checked core question bank",
+   "keywords": [
+    "rail",
+    "height",
+    "guardrail",
+    "system"
+   ]
+  },
+  {
+   "id": "R3-034",
+   "topic": "Residential code",
+   "trade": "gc",
+   "state": null,
+   "source": "IRC 2021 R311.7.5.1",
+   "fact": "Maximum riser 7¾ in; minimum tread depth 10 in (R311.7.5.2). (Q: Maximum riser height for stairways in a one- or two-family dwelling: A: 7¾ in)",
+   "status": "verified",
+   "note": "From the hand-checked core question bank",
+   "keywords": [
+    "maximum",
+    "riser",
+    "height",
+    "stairways",
+    "family",
+    "dwelling"
+   ]
+  },
+  {
+   "id": "R3-035",
+   "topic": "Residential code",
+   "trade": "gc",
+   "state": null,
+   "source": "IRC 2021 R311.7.8.1",
+   "fact": "Handrails are not less than 34 in and not more than 38 in high. (Q: Handrail height on IRC stairways, measured from the tread nosing: A: 34–38 in)",
+   "status": "verified",
+   "note": "From the hand-checked core question bank",
+   "keywords": [
+    "handrail",
+    "height",
+    "stairways",
+    "measured",
+    "tread",
+    "nosing"
+   ]
+  },
+  {
+   "id": "R3-036",
+   "topic": "Estimating",
+   "trade": "gc",
+   "state": null,
+   "source": "BF = T × W × L ÷ 12",
+   "fact": "2 × 12 × 16 ÷ 12 = 32 board feet. (Q: How many board feet are in one 2 × 12 × 16 ft plank (nominal)? A: 32)",
+   "status": "verified",
+   "note": "From the hand-checked core question bank",
+   "keywords": [
+    "board",
+    "feet",
+    "plank",
+    "nominal"
+   ]
+  },
+  {
+   "id": "R3-037",
+   "topic": "Estimating",
+   "trade": "gc",
+   "state": null,
+   "source": "27 ft³ per yd³",
+   "fact": "30 × 20 × 0.333 = 200 ft³; 200 ÷ 27 = 7.4 yd³. (Q: A 30 ft × 20 ft slab, 4 in thick, needs about how much concrete before waste? A: 7.4 yd³)",
+   "status": "verified",
+   "note": "From the hand-checked core question bank",
+   "keywords": [
+    "slab",
+    "thick",
+    "needs",
+    "about",
+    "much",
+    "concrete",
+    "before",
+    "waste"
+   ]
+  },
+  {
+   "id": "R3-038",
+   "topic": "Business & Law",
+   "trade": "law",
+   "state": null,
+   "source": "Margin = profit ÷ sell",
+   "fact": "$20,000 ÷ $100,000 = 20%. Markup would be $20,000 ÷ $80,000 = 25%. (Q: A job costs $80,000 and sells for $100,000. What is the gross profit margin? A: 20%)",
+   "status": "verified",
+   "note": "From the hand-checked core question bank",
+   "keywords": [
+    "costs",
+    "sells",
+    "gross",
+    "profit",
+    "margin"
+   ]
+  },
+  {
+   "id": "R3-039",
+   "topic": "Business & Law",
+   "trade": "law",
+   "state": null,
+   "source": "8 CFR 274a.2(b)",
+   "fact": "Section 2 is due within 3 business days of the first day of employment. (Q: Employers must complete Section 2 of Form I-9 within ___ of the employee's first day of work. A: 3 business days)",
+   "status": "verified",
+   "note": "From the hand-checked core question bank",
+   "keywords": [
+    "employers",
+    "complete",
+    "section",
+    "form",
+    "within",
+    "employee",
+    "first",
+    "work"
+   ]
+  },
+  {
+   "id": "R3-040",
+   "topic": "Business & Law",
+   "trade": "law",
+   "state": null,
+   "source": "IRS Form 941",
+   "fact": "Form 941 is the Employer's Quarterly Federal Tax Return. Form 940 is annual FUTA. (Q: Federal income tax withheld and FICA taxes are reported on which IRS form, usually quarterly? A: Form 941)",
+   "status": "verified",
+   "note": "From the hand-checked core question bank",
+   "keywords": [
+    "federal",
+    "income",
+    "withheld",
+    "fica",
+    "taxes",
+    "reported",
+    "form",
+    "usually"
+   ]
+  },
+  {
+   "id": "R3-041",
+   "topic": "Business & Law",
+   "trade": "law",
+   "state": null,
+   "source": "Surety fundamentals",
+   "fact": "Payment bonds guarantee subs and suppliers get paid; performance bonds guarantee the work is completed. (Q: A payment bond on a construction project protects: A: Subcontractors and suppliers against nonpayment)",
+   "status": "verified",
+   "note": "From the hand-checked core question bank",
+   "keywords": [
+    "payment",
+    "bond",
+    "construction",
+    "project",
+    "protects"
+   ]
+  },
+  {
+   "id": "R3-042",
+   "topic": "Safety (OSHA)",
+   "trade": "law",
+   "state": null,
+   "source": "29 CFR 1926.651(c)(2)",
+   "fact": "A stairway, ladder, ramp or other egress must be within 25 ft of lateral travel. (Q: Each job site with trenches 4 ft or deeper must have a means of egress within ___ of lateral travel. A: 25 ft)",
+   "status": "verified",
+   "note": "From the hand-checked core question bank",
+   "keywords": [
+    "each",
+    "site",
+    "trenches",
+    "deeper",
+    "have",
+    "means",
+    "egress",
+    "within"
+   ]
+  },
+  {
+   "id": "R3-043",
+   "topic": "Business organization",
+   "trade": "law",
+   "state": null,
+   "source": "Business organization basics",
+   "fact": "A sole proprietor and the business are legally the same person, so the owner has unlimited personal liability. (Q: Which form of business leaves the owner personally liable for all of the company's debts? A: Sole proprietorship)",
+   "status": "verified",
+   "note": "From the hand-checked core question bank",
+   "keywords": [
+    "form",
+    "business",
+    "leaves",
+    "owner",
+    "personally",
+    "liable",
+    "company",
+    "debts"
+   ]
+  },
+  {
+   "id": "R3-044",
+   "topic": "Business organization",
+   "trade": "law",
+   "state": null,
+   "source": "Business organization basics",
+   "fact": "An LLC limits members' personal liability while profits can pass through to the owners' personal returns. (Q: A contractor wants pass-through taxation but also wants personal assets protected from business debts. The best fit is usually: A: Limited liability company)",
+   "status": "verified",
+   "note": "From the hand-checked core question bank",
+   "keywords": [
+    "contractor",
+    "wants",
+    "pass",
+    "through",
+    "taxation",
+    "also",
+    "personal",
+    "assets"
+   ]
+  },
+  {
+   "id": "R3-045",
+   "topic": "Contracts & liens",
+   "trade": "law",
+   "state": null,
+   "source": "Contract law fundamentals",
+   "fact": "A valid contract needs offer and acceptance, consideration, capacity and a legal purpose. Notarization is not required. (Q: Which of these is NOT required for a contract to be legally valid? A: Notarization)",
+   "status": "verified",
+   "note": "From the hand-checked core question bank",
+   "keywords": [
+    "these",
+    "required",
+    "contract",
+    "legally",
+    "valid"
+   ]
+  },
+  {
+   "id": "R3-046",
+   "topic": "Contracts & liens",
+   "trade": "law",
+   "state": null,
+   "source": "Statute of frauds",
+   "fact": "Contracts involving the sale of land or real property must be written to be enforceable. (Q: Under the statute of frauds, which contract must be in writing to be enforceable? A: A contract for the sale of real property)",
+   "status": "verified",
+   "note": "From the hand-checked core question bank",
+   "keywords": [
+    "statute",
+    "frauds",
+    "contract",
+    "writing",
+    "enforceable"
+   ]
+  },
+  {
+   "id": "R3-047",
+   "topic": "Contracts & liens",
+   "trade": "law",
+   "state": null,
+   "source": "Lien waiver practice",
+   "fact": "A conditional waiver gives up lien rights only once the payment clears. An unconditional waiver is effective on signing, so only sign one after you are paid. (Q: A conditional lien waiver takes effect: A: Only after the stated payment is actually received)",
+   "status": "verified",
+   "note": "From the hand-checked core question bank",
+   "keywords": [
+    "conditional",
+    "lien",
+    "waiver",
+    "takes",
+    "effect"
+   ]
+  },
+  {
+   "id": "R3-048",
+   "topic": "Contracts & liens",
+   "trade": "law",
+   "state": null,
+   "source": "Contract law fundamentals",
+   "fact": "Liquidated damages are a pre-agreed amount for late completion, set when actual damages would be hard to measure. (Q: A contract clause requiring the contractor to pay the owner $500 for each day the project finishes late is called: A: Liquidated damages)",
+   "status": "verified",
+   "note": "From the hand-checked core question bank",
+   "keywords": [
+    "contract",
+    "clause",
+    "requiring",
+    "contractor",
+    "owner",
+    "each",
+    "project",
+    "finishes"
+   ]
+  },
+  {
+   "id": "R3-049",
+   "topic": "Bonds & insurance",
+   "trade": "law",
+   "state": null,
+   "source": "Surety fundamentals",
+   "fact": "If the winning bidder backs out, the bid bond covers the owner's cost of going to the next bidder, up to the bond amount. (Q: A bid bond guarantees that: A: The low bidder will sign the contract and provide the required bonds if awarded)",
+   "status": "verified",
+   "note": "From the hand-checked core question bank",
+   "keywords": [
+    "bond",
+    "guarantees"
+   ]
+  },
+  {
+   "id": "R3-050",
+   "topic": "Bonds & insurance",
+   "trade": "law",
+   "state": null,
+   "source": "Miller Act, 40 U.S.C. 3131",
+   "fact": "The Miller Act requires both bonds on federal construction contracts above the threshold set in the Federal Acquisition Regulation. Davis-Bacon covers prevailing wages. (Q: Which federal law requires performance and payment bonds on federal construction contracts? A: Miller Act)",
+   "status": "verified",
+   "note": "From the hand-checked core question bank",
+   "keywords": [
+    "federal",
+    "requires",
+    "performance",
+    "payment",
+    "bonds",
+    "construction",
+    "contracts"
+   ]
+  },
+  {
+   "id": "R3-051",
+   "topic": "Bonds & insurance",
+   "trade": "law",
+   "state": null,
+   "source": "Construction insurance basics",
+   "fact": "Builder's risk is property coverage for the structure and materials during construction. Employee injuries fall under workers' compensation. (Q: Builder's risk insurance primarily covers: A: Damage to the building and materials while under construction)",
+   "status": "verified",
+   "note": "From the hand-checked core question bank",
+   "keywords": [
+    "builder",
+    "risk",
+    "insurance",
+    "primarily",
+    "covers"
+   ]
+  },
+  {
+   "id": "R3-052",
+   "topic": "Bonds & insurance",
+   "trade": "law",
+   "state": null,
+   "source": "Workers' compensation basics",
+   "fact": "Workers' comp is a no-fault system. In exchange, employees generally cannot sue the employer for covered injuries. (Q: Workers' compensation insurance pays benefits for job-related injuries: A: Regardless of who was at fault)",
+   "status": "verified",
+   "note": "From the hand-checked core question bank",
+   "keywords": [
+    "workers",
+    "compensation",
+    "insurance",
+    "pays",
+    "benefits",
+    "related",
+    "injuries"
+   ]
+  },
+  {
+   "id": "R3-053",
+   "topic": "Payroll & tax",
+   "trade": "law",
+   "state": null,
+   "source": "26 U.S.C. 3111(a)",
+   "fact": "Employer and employee each pay 6.2% for Social Security. Medicare is 1.45% each, so the combined FICA share per side is 7.65%. (Q: The employer's share of Social Security tax is ___ of each employee's wages, up to the annual wage base. A: 6.2%)",
+   "status": "verified",
+   "note": "From the hand-checked core question bank",
+   "keywords": [
+    "employer",
+    "share",
+    "social",
+    "security",
+    "each",
+    "employee",
+    "wages",
+    "annual"
+   ]
+  },
+  {
+   "id": "R3-054",
+   "topic": "Payroll & tax",
+   "trade": "law",
+   "state": null,
+   "source": "26 U.S.C. 3111(b)",
+   "fact": "Employer and employee each pay 1.45% for Medicare, with no wage cap. The extra 0.9% on high earners is withheld from the employee only. (Q: The employer's share of Medicare tax is: A: 1.45%)",
+   "status": "verified",
+   "note": "From the hand-checked core question bank",
+   "keywords": [
+    "employer",
+    "share",
+    "medicare"
+   ]
+  },
+  {
+   "id": "R3-055",
+   "topic": "Payroll & tax",
+   "trade": "law",
+   "state": null,
+   "source": "26 U.S.C. 3306(b)(1)",
+   "fact": "The FUTA wage base is the first $7,000 per employee each calendar year. It is reported annually on Form 940. (Q: Federal unemployment (FUTA) tax applies to the first ___ of wages paid to each employee per year. A: $7,000)",
+   "status": "verified",
+   "note": "From the hand-checked core question bank",
+   "keywords": [
+    "federal",
+    "unemployment",
+    "futa",
+    "applies",
+    "first",
+    "wages",
+    "paid",
+    "each"
+   ]
+  },
+  {
+   "id": "R3-056",
+   "topic": "Payroll & tax",
+   "trade": "law",
+   "state": null,
+   "source": "IRS Form W-4",
+   "fact": "The W-4 sets federal income tax withholding. Work authorization is verified on Form I-9, and annual wages are reported on Form W-2. (Q: An employee completes Form W-4 so the employer can: A: Figure how much federal income tax to withhold)",
+   "status": "verified",
+   "note": "From the hand-checked core question bank",
+   "keywords": [
+    "employee",
+    "completes",
+    "form",
+    "employer"
+   ]
+  },
+  {
+   "id": "R3-057",
+   "topic": "Payroll & tax",
+   "trade": "law",
+   "state": null,
+   "source": "IRS common-law control test",
+   "fact": "The IRS weighs behavioral control, financial control and the relationship of the parties. The more the business controls how the work is done, the more likely the worker is an employee. (Q: When deciding whether a worker is an employee or an independent contractor, the IRS mainly looks at: A: The degree of control the business has over the work)",
+   "status": "verified",
+   "note": "From the hand-checked core question bank",
+   "keywords": [
+    "when",
+    "deciding",
+    "whether",
+    "worker",
+    "employee",
+    "independent",
+    "contractor",
+    "mainly"
+   ]
+  },
+  {
+   "id": "R3-058",
+   "topic": "Labor law",
+   "trade": "law",
+   "state": null,
+   "source": "29 U.S.C. 207(a)",
+   "fact": "Federal law requires at least 1.5 times the regular rate for hours over 40 in a workweek. Some states also require daily overtime. (Q: Under the Fair Labor Standards Act, a non-exempt employee must be paid overtime for hours worked over ___ in a workweek. A: 40)",
+   "status": "verified",
+   "note": "From the hand-checked core question bank",
+   "keywords": [
+    "fair",
+    "labor",
+    "standards",
+    "exempt",
+    "employee",
+    "paid",
+    "overtime",
+    "hours"
+   ]
+  },
+  {
+   "id": "R3-059",
+   "topic": "Labor law",
+   "trade": "law",
+   "state": null,
+   "source": "29 U.S.C. 207(a)",
+   "fact": "40 × $20 = $800, plus 6 overtime hours × $30 (1.5 × $20) = $180, for a total of $980. (Q: A non-exempt carpenter earning $20 per hour works 46 hours in one workweek. Gross pay is: A: $980)",
+   "status": "verified",
+   "note": "From the hand-checked core question bank",
+   "keywords": [
+    "exempt",
+    "carpenter",
+    "earning",
+    "hour",
+    "works",
+    "hours",
+    "workweek",
+    "gross"
+   ]
+  },
+  {
+   "id": "R3-060",
+   "topic": "Labor law",
+   "trade": "law",
+   "state": null,
+   "source": "8 CFR 274a.2(b)(2)",
+   "fact": "Keep the I-9 for 3 years from the hire date or 1 year after employment ends, whichever is later. (Q: An employer must keep a former employee's Form I-9 for: A: 3 years after hire or 1 year after employment ends, whichever is later)",
+   "status": "verified",
+   "note": "From the hand-checked core question bank",
+   "keywords": [
+    "employer",
+    "keep",
+    "former",
+    "employee",
+    "form"
+   ]
+  },
+  {
+   "id": "R3-061",
+   "topic": "Safety recordkeeping",
+   "trade": "law",
+   "state": null,
+   "source": "29 CFR 1904.32(b)(6)",
+   "fact": "The Form 300A summary of the prior year is posted from February 1 to April 30. (Q: Employers covered by OSHA recordkeeping must post the annual injury summary (Form 300A) from: A: February 1 to April 30)",
+   "status": "verified",
+   "note": "From the hand-checked core question bank",
+   "keywords": [
+    "employers",
+    "covered",
+    "osha",
+    "recordkeeping",
+    "post",
+    "annual",
+    "injury",
+    "summary"
+   ]
+  },
+  {
+   "id": "R3-062",
+   "topic": "Safety recordkeeping",
+   "trade": "law",
+   "state": null,
+   "source": "29 CFR 1904.33(a)",
+   "fact": "OSHA 300 logs, 300A summaries and 301 incident reports are kept for 5 years following the end of the calendar year they cover. (Q: OSHA injury and illness records must be kept for: A: 5 years after the end of the calendar year they cover)",
+   "status": "verified",
+   "note": "From the hand-checked core question bank",
+   "keywords": [
+    "osha",
+    "injury",
+    "illness",
+    "records",
+    "kept"
+   ]
+  },
+  {
+   "id": "R3-063",
+   "topic": "Safety recordkeeping",
+   "trade": "law",
+   "state": null,
+   "source": "29 CFR 1904.39(a)(1)",
+   "fact": "Fatalities are reported within 8 hours. In-patient hospitalization, amputation or loss of an eye is reported within 24 hours. (Q: A work-related fatality must be reported to OSHA within: A: 8 hours)",
+   "status": "verified",
+   "note": "From the hand-checked core question bank",
+   "keywords": [
+    "work",
+    "related",
+    "fatality",
+    "reported",
+    "osha",
+    "within"
+   ]
+  },
+  {
+   "id": "R3-064",
+   "topic": "Financial management",
+   "trade": "law",
+   "state": null,
+   "source": "Accounting fundamentals",
+   "fact": "Everything the business owns (assets) is financed either by creditors (liabilities) or by the owners (equity). (Q: The basic accounting equation is: A: Assets = Liabilities + Owner's equity)",
+   "status": "verified",
+   "note": "From the hand-checked core question bank",
+   "keywords": [
+    "basic",
+    "accounting",
+    "equation"
+   ]
+  },
+  {
+   "id": "R3-065",
+   "topic": "Financial management",
+   "trade": "law",
+   "state": null,
+   "source": "Current ratio = CA ÷ CL",
+   "fact": "$250,000 ÷ $100,000 = 2.5. Working capital would be $250,000 − $100,000 = $150,000. (Q: A contractor has $250,000 in current assets and $100,000 in current liabilities. The current ratio is: A: 2.5)",
+   "status": "verified",
+   "note": "From the hand-checked core question bank",
+   "keywords": [
+    "contractor",
+    "current",
+    "assets",
+    "liabilities",
+    "ratio"
+   ]
+  },
+  {
+   "id": "R3-066",
+   "topic": "Financial management",
+   "trade": "law",
+   "state": null,
+   "source": "Financial ratio fundamentals",
+   "fact": "The quick ratio counts only assets that convert to cash fast, so inventory (and usually prepaid expenses) are left out. (Q: The quick (acid-test) ratio differs from the current ratio because it leaves out: A: Inventory)",
+   "status": "verified",
+   "note": "From the hand-checked core question bank",
+   "keywords": [
+    "quick",
+    "acid",
+    "test",
+    "ratio",
+    "differs",
+    "current",
+    "because",
+    "leaves"
+   ]
+  },
+  {
+   "id": "R3-067",
+   "topic": "Financial management",
+   "trade": "law",
+   "state": null,
+   "source": "Straight-line depreciation",
+   "fact": "(Cost − salvage) ÷ useful life = ($50,000 − $10,000) ÷ 5 = $8,000 per year. (Q: A $50,000 truck with a $10,000 salvage value is depreciated straight-line over 5 years. Annual depreciation is: A: $8,000)",
+   "status": "verified",
+   "note": "From the hand-checked core question bank",
+   "keywords": [
+    "truck",
+    "salvage",
+    "value",
+    "depreciated",
+    "straight",
+    "line",
+    "over",
+    "years"
+   ]
+  },
+  {
+   "id": "R3-068",
+   "topic": "Financial management",
+   "trade": "law",
+   "state": null,
+   "source": "Break-even = overhead ÷ margin",
+   "fact": "$120,000 ÷ 0.20 = $600,000 in revenue before any net profit is earned. (Q: A contractor's annual overhead is $120,000 and jobs average a 20% gross profit margin. Revenue needed to break even is: A: $600,000)",
+   "status": "verified",
+   "note": "From the hand-checked core question bank",
+   "keywords": [
+    "contractor",
+    "annual",
+    "overhead",
+    "jobs",
+    "average",
+    "gross",
+    "profit",
+    "margin"
+   ]
+  },
+  {
+   "id": "R3-069",
+   "topic": "Environmental",
+   "trade": "law",
+   "state": null,
+   "source": "40 CFR 745.103",
+   "fact": "Target housing is housing built before 1978, when lead-based paint was banned for residential use. (Q: EPA's Lead Renovation, Repair and Painting (RRP) rule applies to work in housing built before: A: 1978)",
+   "status": "verified",
+   "note": "From the hand-checked core question bank",
+   "keywords": [
+    "lead",
+    "renovation",
+    "repair",
+    "painting",
+    "rule",
+    "applies",
+    "work",
+    "housing"
+   ]
+  },
+  {
+   "id": "R3-070",
+   "topic": "Environmental",
+   "trade": "law",
+   "state": null,
+   "source": "40 CFR 745.84",
+   "fact": "Firms must give the Renovate Right pamphlet and get written acknowledgment before work begins. (Q: Before starting an RRP-covered renovation in a pre-1978 home, the renovator must give the owner: A: EPA's Renovate Right pamphlet)",
+   "status": "verified",
+   "note": "From the hand-checked core question bank",
+   "keywords": [
+    "before",
+    "starting",
+    "covered",
+    "renovation",
+    "1978",
+    "home",
+    "renovator",
+    "give"
+   ]
+  },
+  {
+   "id": "R3-900",
+   "topic": "Contracts & liens",
+   "trade": "law",
+   "state": null,
+   "source": "Lien waiver practice",
+   "fact": "A conditional lien waiver gives up lien rights only after the stated payment is actually received (it is conditioned on payment); an unconditional lien waiver is effective as soon as it is signed, so sign one only after the money has cleared.",
+   "status": "verified",
+   "note": "",
+   "keywords": [
+    "conditional lien waiver",
+    "unconditional waiver",
+    "lien release",
+    "payment",
+    "waiver"
+   ]
+  }
+ ],
+ "questions": []
+}

@@ -1,0 +1,1013 @@
+{
+  "source": "NASCLA contractor's guide set cards 321-486",
+  "facts": [
+    {
+      "topic": "Environmental",
+      "trade": "law",
+      "state": null,
+      "source": "EPA 40 CFR 745.84 (Renovation, Repair and Painting Rule)",
+      "fact": "Before a paid renovation of a pre-1978 home or child-occupied facility, the renovation firm must give the owner and occupants EPA's 'Renovate Right' lead pamphlet no more than 60 days before work starts and get a signed acknowledgment (or proof of mailing).",
+      "status": "verified",
+      "note": "",
+      "keywords": ["lead", "renovate right", "pamphlet", "pre-1978", "rrp rule", "pre-renovation education"]
+    },
+    {
+      "topic": "Environmental",
+      "trade": "law",
+      "state": null,
+      "source": "TSCA section 16; EPA civil monetary penalty inflation adjustment rule (40 CFR 19.4)",
+      "fact": "Violations of EPA lead-based paint rules (such as the RRP Rule) carry civil penalties per violation per day that are adjusted for inflation every year; the cap is now well above the old $37,500 figure (it passed $48,000 per violation per day in the 2024 adjustment).",
+      "status": "corrected",
+      "note": "Card says up to $37,500 per day. That was the cap before the 2015 inflation-adjustment law; EPA now raises the TSCA maximum every year (about $48,512 in 2024 and roughly $49,772 in 2025). Check the current year's figure in 40 CFR 19.4.",
+      "keywords": ["lead", "fine", "penalty", "epa", "tsca", "violation per day"]
+    },
+    {
+      "topic": "Environmental",
+      "trade": "law",
+      "state": null,
+      "source": "EPA 40 CFR 745.223 (definition of abatement)",
+      "fact": "Lead abatement means work designed to permanently eliminate lead-based paint hazards (for example removal, enclosure or encapsulation meant to last). It is regulated separately from ordinary renovation, which disturbs paint but is not aimed at permanent hazard removal.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["lead abatement", "permanent", "lead hazard", "removal", "encapsulation", "definition"]
+    },
+    {
+      "topic": "Payroll & tax",
+      "trade": "law",
+      "state": null,
+      "source": "IRS Pub 15-A; IRS common-law rules (behavioral control, financial control, relationship of the parties)",
+      "fact": "The IRS decides worker status by looking at behavioral control, financial control and the relationship of the parties. A worker whose methods and finances the business does not control, who gets no employee benefits, and whose relationship is not permanent or ongoing is generally an independent contractor.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["independent contractor", "employee", "worker classification", "common law test", "behavioral control", "financial control"]
+    },
+    {
+      "topic": "Payroll & tax",
+      "trade": "law",
+      "state": null,
+      "source": "IRS Pub 15-A; IRS common-law rules",
+      "fact": "No single factor decides worker status. A verbal rather than written agreement, piece-rate pay, or supplying one's own tools does not by itself make someone an independent contractor, and full-time, continuing work that the business regularly inspects and directs points toward employee status.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["employee", "independent contractor", "piecework", "misclassification", "verbal agreement", "full time"]
+    },
+    {
+      "topic": "Risk management",
+      "trade": "law",
+      "state": null,
+      "source": "NASCLA Contractor's Guide topic: risk management",
+      "fact": "Before a subcontractor starts work, the prime contractor should get and check certificates of insurance (general liability and workers' compensation) for that sub. If the sub is uninsured, injury claims and insurance premium-audit charges can fall back on the prime.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["certificate of insurance", "subcontractor", "liability", "workers compensation", "premium audit", "verify coverage"]
+    },
+    {
+      "topic": "Financial management",
+      "trade": "law",
+      "state": null,
+      "source": "Accounting fundamentals",
+      "fact": "Bookkeeping is recording a business's financial transactions in a systematic way. Managers base financial decisions on those records.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["bookkeeping", "recording transactions", "accounting", "records", "financial decisions"]
+    },
+    {
+      "topic": "Financial management",
+      "trade": "law",
+      "state": null,
+      "source": "Accounting fundamentals",
+      "fact": "The general ledger holds every account of the business (assets, liabilities, equity, revenue, expenses). Its account balances are used to prepare the financial statements.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["general ledger", "accounts", "financial statements", "trial balance", "bookkeeping"]
+    },
+    {
+      "topic": "Financial management",
+      "trade": "law",
+      "state": null,
+      "source": "Accounting fundamentals",
+      "fact": "Noncash entries such as depreciation, accruals, adjusting entries and corrections go in the general journal. The special journals (cash receipts, cash disbursements, payroll) handle routine cash transactions.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["general journal", "noncash transactions", "adjusting entries", "depreciation entry", "special journals"]
+    },
+    {
+      "topic": "Financial management",
+      "trade": "law",
+      "state": null,
+      "source": "Accounting fundamentals",
+      "fact": "A source document is created whenever money is paid or received, a debt is incurred or a receivable arises, and it proves the transaction happened. Examples are receipts, customer and vendor invoices, purchase orders, deposit slips and time cards. Cash itself is not a source document.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["source documents", "invoices", "receipts", "purchase orders", "deposit slips", "time cards"]
+    },
+    {
+      "topic": "Financial management",
+      "trade": "law",
+      "state": null,
+      "source": "Accounting fundamentals",
+      "fact": "The three basic financial statements are the balance sheet, the income statement (profit and loss statement) and the statement of cash flows.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["financial statements", "balance sheet", "income statement", "cash flow statement", "profit and loss"]
+    },
+    {
+      "topic": "Financial management",
+      "trade": "law",
+      "state": null,
+      "source": "Accounting fundamentals",
+      "fact": "An asset is anything of value the business owns. Current assets are cash and items expected to turn into cash within one year (such as receivables). Fixed assets are long-lived items used in the business, such as land, buildings, equipment and furniture; an office building, for example, is fixed, not current.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["asset", "current asset", "fixed asset", "equipment", "cash", "one year"]
+    },
+    {
+      "topic": "Financial management",
+      "trade": "law",
+      "state": null,
+      "source": "Accounting fundamentals",
+      "fact": "A liability is any debt or obligation the business owes. Current liabilities are due within one year, such as a six-month note or the part of a long-term equipment loan due in the next 12 months. Long-term liabilities are due more than one year out.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["liability", "current liability", "long-term liability", "note payable", "debt", "one year"]
+    },
+    {
+      "topic": "Financial management",
+      "trade": "law",
+      "state": null,
+      "source": "Accounting fundamentals (accounting equation)",
+      "fact": "The balance sheet follows the accounting equation: Assets = Liabilities + Owner's Equity. It shows the company's financial position at one specific date.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["accounting equation", "balance sheet", "assets", "liabilities", "owners equity", "financial position"]
+    },
+    {
+      "topic": "Financial management",
+      "trade": "law",
+      "state": null,
+      "source": "Accounting fundamentals",
+      "fact": "Owner's equity is the owners' stake in the business: their initial and later investments plus retained earnings. The balance sheet does not show the owner's personal finances, the market value of the business, or cash flows (those go on the cash flow statement).",
+      "status": "verified",
+      "note": "",
+      "keywords": ["owners equity", "initial investment", "balance sheet", "retained earnings", "personal finances", "market value"]
+    },
+    {
+      "topic": "Financial management",
+      "trade": "law",
+      "state": null,
+      "source": "Accounting fundamentals",
+      "fact": "The income statement (profit and loss statement) shows revenue and expenses over a period, so it reflects the company's operations. It does not show the cash balance. Gross profit = revenue minus cost of goods sold (direct job costs). Net income (net profit) = revenue minus all expenses.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["income statement", "profit and loss", "gross profit", "net income", "cost of goods sold", "net profit"]
+    },
+    {
+      "topic": "Estimating & bidding",
+      "trade": "law",
+      "state": null,
+      "source": "NASCLA Contractor's Guide topic: job costing and overhead",
+      "fact": "Direct costs can be charged to one project, such as job materials, field labor and subcontractor costs. Indirect costs (overhead) cannot be traced to one job and are spread across many; examples are office rent and a year-end bonus not tied to a particular project.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["direct cost", "indirect cost", "overhead", "job costing", "subcontractor cost", "fixed overhead"]
+    },
+    {
+      "topic": "Financial management",
+      "trade": "law",
+      "state": null,
+      "source": "Financial ratio analysis fundamentals",
+      "fact": "Liquidity ratios measure whether a company can pay the obligations coming due in the next year. Current ratio = current assets ÷ current liabilities. Quick (acid-test) ratio = (current assets − inventory) ÷ current liabilities; for example, ($60,000 − $15,000) ÷ $40,000 = 1.125.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["liquidity ratio", "current ratio", "quick ratio", "acid test", "inventory", "working capital"]
+    },
+    {
+      "topic": "Financial management",
+      "trade": "law",
+      "state": null,
+      "source": "Financial ratio analysis fundamentals",
+      "fact": "Activity (efficiency) ratios measure how well a company uses its assets and manages credit. Examples are receivables turnover and the average collection period.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["activity ratio", "efficiency ratio", "receivables turnover", "collection period", "credit management"]
+    },
+    {
+      "topic": "Financial management",
+      "trade": "law",
+      "state": null,
+      "source": "Financial ratio analysis fundamentals",
+      "fact": "Debt ratio = total debt ÷ total assets. For example, $56,655 of debt ÷ $75,387 of assets ≈ 0.75, meaning creditors fund about 75% of the assets.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["debt ratio", "leverage", "total debt", "total assets", "solvency"]
+    },
+    {
+      "topic": "Financial management",
+      "trade": "law",
+      "state": null,
+      "source": "Financial ratio analysis fundamentals",
+      "fact": "The profitability ratio (net profit margin) = net income after taxes ÷ revenue. Return on total assets = net profit after taxes ÷ total assets.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["profitability ratio", "net profit margin", "return on assets", "net income", "revenue"]
+    },
+    {
+      "topic": "Financial management",
+      "trade": "law",
+      "state": null,
+      "source": "IRS Pub 538 (Accounting Periods and Methods)",
+      "fact": "Under the cash method, income is reported when it is received and expenses are deducted when they are paid. Its main weakness is that revenue and the expenses that produced it often fall in different periods, which distorts the company's true financial picture.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["cash basis", "cash method", "income when received", "expenses when paid", "matching", "disadvantage"]
+    },
+    {
+      "topic": "Financial management",
+      "trade": "law",
+      "state": null,
+      "source": "IRS Pub 538 (Accounting Periods and Methods)",
+      "fact": "Under the accrual method, income is recorded when it is earned, even if not yet collected, and expenses are recorded when incurred, even if not yet paid. This matches revenue with the related costs.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["accrual basis", "accrual method", "earned", "incurred", "matching principle"]
+    },
+    {
+      "topic": "Financial management",
+      "trade": "law",
+      "state": null,
+      "source": "IRC 460(e)(1)(B) and 448(c); IRS Pub 538",
+      "fact": "A contractor may use the completed-contract method on a construction contract it expects to finish within 2 years if its average annual gross receipts for the 3 prior tax years are under the IRC 448(c) limit. That limit is $25 million indexed for inflation ($31 million for tax years beginning in 2025). Home construction contracts are exempt from percentage-of-completion regardless of size.",
+      "status": "corrected",
+      "note": "Card says $10 million. That was the limit before the 2017 Tax Cuts and Jobs Act, which raised it to $25 million indexed for inflation starting in 2018 ($30M for 2024, $31M for 2025). Check the current year's indexed amount.",
+      "keywords": ["completed contract method", "small contractor exception", "gross receipts test", "long-term contract", "tax", "percentage of completion"]
+    },
+    {
+      "topic": "Financial management",
+      "trade": "law",
+      "state": null,
+      "source": "IRC 460; IRS Pub 538",
+      "fact": "The completed-contract method's main advantage is tax deferral: no income from the contract is reported until it is finished. A 'long-term contract' for tax purposes is a building or construction contract that is not finished in the tax year it was entered into, so the method you may use depends on contract type, average gross receipts and whether the contract is finished at year end.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["completed contract", "tax deferral", "long-term contract", "percentage of completion", "contract accounting method"]
+    },
+    {
+      "topic": "Contracts & liens",
+      "trade": "law",
+      "state": null,
+      "source": "Contract law fundamentals (contract pricing types)",
+      "fact": "In a cost-plus contract, the owner pays the contractor's actual allowable costs plus an agreed fee (fixed or a percentage). Payment is not based on a percentage of work completed against a fixed price.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["cost plus", "contract type", "actual costs", "fee", "reimbursable", "pricing"]
+    },
+    {
+      "topic": "Contracts & liens",
+      "trade": "law",
+      "state": null,
+      "source": "Prompt Payment Act, 31 U.S.C. 3903; FAR 52.232-27",
+      "fact": "Under the federal Prompt Payment Act, a federal agency must pay construction progress payments within 14 days after receiving a proper payment request, and final payment (including retainage) generally within 30 days. Late payments earn interest.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["prompt payment act", "federal contract", "14 days", "progress payment", "interest penalty", "invoice"]
+    },
+    {
+      "topic": "Contracts & liens",
+      "trade": "law",
+      "state": null,
+      "source": "Prompt Payment Act, 31 U.S.C. 3905(b); FAR 52.232-27",
+      "fact": "On federal construction contracts, the prime contractor must pay each subcontractor for satisfactory work within 7 days after receiving payment from the government. Otherwise it owes the sub an interest penalty.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["prompt payment", "subcontractor payment", "7 days", "prime contractor", "interest", "federal"]
+    },
+    {
+      "topic": "Financial management",
+      "trade": "law",
+      "state": null,
+      "source": "NASCLA Contractor's Guide topic: equipment management",
+      "fact": "A contractor should keep a separate record for each piece of equipment, including purchase cost, maintenance and repair costs, fuel and depreciation. These records let equipment costs be charged accurately to jobs.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["equipment records", "maintenance costs", "equipment cost", "repair", "job costing"]
+    },
+    {
+      "topic": "Financial management",
+      "trade": "law",
+      "state": null,
+      "source": "Accounting fundamentals (depreciation)",
+      "fact": "Depreciation spreads an asset's cost over its useful life. Straight-line depreciation per year = (cost − salvage value) ÷ useful life in years, so the same amount is written off each year.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["depreciation", "straight line", "salvage value", "useful life", "annual depreciation"]
+    },
+    {
+      "topic": "Financial management",
+      "trade": "law",
+      "state": null,
+      "source": "Accounting fundamentals; IRS Pub 946 (MACRS)",
+      "fact": "Accelerated depreciation writes off more of the asset's cost in its early years, which gives larger early tax deductions; it suits assets likely to be replaced early. Declining-balance and MACRS calculations apply a set rate or table without first subtracting salvage value (MACRS treats salvage as zero).",
+      "status": "verified",
+      "note": "",
+      "keywords": ["accelerated depreciation", "declining balance", "macrs", "salvage value", "tax deduction"]
+    },
+    {
+      "topic": "Financial management",
+      "trade": "law",
+      "state": null,
+      "source": "Commercial payment terms (trade discounts)",
+      "fact": "'2/10 net 30' means a 2% discount if paid within 10 days, otherwise the full amount is due in 30 days; a $1,000 invoice paid within 10 days costs $980. '1/10 net 30' gives a 1% discount for payment within 10 days.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["2/10 net 30", "cash discount", "payment terms", "early payment", "invoice", "trade discount"]
+    },
+    {
+      "topic": "Estimating & bidding",
+      "trade": "law",
+      "state": null,
+      "source": "NASCLA Contractor's Guide topic: purchasing and job costing",
+      "fact": "Purchase orders record exactly what was ordered, the price and the terms, which helps control and organize expenses. A material's total cost includes its price plus shipping and delivery charges.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["purchase order", "material cost", "shipping", "delivery charges", "purchasing"]
+    },
+    {
+      "topic": "Payroll & tax",
+      "trade": "law",
+      "state": null,
+      "source": "IRS Pub 15-T; Form W-4 (2020 and later)",
+      "fact": "Employers figure federal income tax withholding from the employee's Form W-4 (filing status, dependents and other adjustments) using the methods and tables in IRS Pub 15-T.",
+      "status": "corrected",
+      "note": "Card says withholding follows the tax table and 'number of exemptions'. Since the 2020 redesign of Form W-4, withholding allowances and exemptions are no longer used, and personal exemptions were suspended by the 2017 tax law. Withholding tables moved from Pub 15 to Pub 15-T.",
+      "keywords": ["federal withholding", "w-4", "pub 15-t", "withholding tables", "allowances", "income tax withholding"]
+    },
+    {
+      "topic": "Payroll & tax",
+      "trade": "law",
+      "state": null,
+      "source": "IRS Pub 15; Form W-4 instructions",
+      "fact": "An employee who claims exemption from federal income tax withholding must give the employer a new Form W-4 by February 15 each year to keep the exemption.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["w-4", "exempt from withholding", "february 15", "annual renewal", "withholding exemption"]
+    },
+    {
+      "topic": "Payroll & tax",
+      "trade": "law",
+      "state": null,
+      "source": "IRS Pub 15 (FICA)",
+      "fact": "Social Security tax is 6.2% on wages up to the annual wage base ($176,100 for 2025), and Medicare tax is 1.45% on all wages. Employee and employer each pay these rates. Employees also pay an Additional Medicare Tax of 0.9% on wages over $200,000, with no employer match.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["social security", "medicare", "fica", "6.2%", "1.45%", "wage base"]
+    },
+    {
+      "topic": "Payroll & tax",
+      "trade": "law",
+      "state": null,
+      "source": "IRS Pub 15",
+      "fact": "Employers must withhold federal income tax and the employee's share of FICA (Social Security and Medicare) from paychecks. FUTA is paid only by the employer and is never withheld from wages.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["withholding", "fica", "federal income tax", "futa", "employer tax", "paycheck"]
+    },
+    {
+      "topic": "Business organization",
+      "trade": "law",
+      "state": null,
+      "source": "IRS EIN guidance; Form SS-4 instructions",
+      "fact": "The IRS issues Employer Identification Numbers (EINs) free of charge. A sole proprietor or single-member LLC with no employees (and no excise-tax or pension-plan filings) can use the owner's SSN, but must get an EIN once it hires employees. Corporations and partnerships always need one.",
+      "status": "corrected",
+      "note": "Card says sole proprietors and single-owner LLCs do not need an EIN. That is true only if they have no employees and no excise or pension filings; hiring even one employee requires an EIN.",
+      "keywords": ["ein", "employer identification number", "sole proprietor", "single member llc", "irs", "ss-4"]
+    },
+    {
+      "topic": "Payroll & tax",
+      "trade": "law",
+      "state": null,
+      "source": "IRS Form 1120 and 1120-S instructions",
+      "fact": "C corporations file their federal income tax return on Form 1120, and S corporations file Form 1120-S.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["form 1120", "form 1120-s", "corporation tax return", "s corporation", "c corporation"]
+    },
+    {
+      "topic": "Payroll & tax",
+      "trade": "law",
+      "state": null,
+      "source": "IRS Form 1040-ES; IRS Pub 505",
+      "fact": "A sole proprietor with no withholding on business profits avoids the underpayment penalty by making quarterly estimated tax payments (Form 1040-ES), due about April 15, June 15, September 15 and January 15.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["estimated tax", "1040-es", "quarterly payments", "sole proprietor", "underpayment penalty"]
+    },
+    {
+      "topic": "Payroll & tax",
+      "trade": "law",
+      "state": null,
+      "source": "IRS Pub 15 (depositing taxes); Treas. Reg. 31.6302-1",
+      "fact": "All federal employment tax deposits must be made by electronic funds transfer, usually through EFTPS. A small liability (under $2,500 for the quarter) may instead be paid with a timely filed Form 941.",
+      "status": "corrected",
+      "note": "Card says payroll taxes can be mailed with a payment coupon. Paper deposit coupons (Form 8109) were discontinued January 1, 2011, and deposits must now be made electronically.",
+      "keywords": ["eftps", "payroll tax deposit", "electronic funds transfer", "form 8109", "deposit coupon"]
+    },
+    {
+      "topic": "Payroll & tax",
+      "trade": "law",
+      "state": null,
+      "source": "IRS Pub 15 (recordkeeping)",
+      "fact": "Employers must keep employment tax records for at least 4 years after the tax is due or paid, whichever is later.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["record retention", "employment tax records", "4 years", "payroll records", "irs"]
+    },
+    {
+      "topic": "Payroll & tax",
+      "trade": "law",
+      "state": null,
+      "source": "IRS Pub 15 (Circular E)",
+      "fact": "IRS Publication 15, Circular E (the Employer's Tax Guide), explains employer duties to withhold, deposit, report and pay employment taxes. The withholding tables are now in companion Pub 15-T.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["circular e", "publication 15", "employer tax guide", "withholding", "deposits"]
+    },
+    {
+      "topic": "Payroll & tax",
+      "trade": "law",
+      "state": null,
+      "source": "IRS Pub 15 (deposit schedules)",
+      "fact": "An employer is a monthly depositor for Form 941 taxes if its total liability in the lookback period (the four quarters ending June 30 of the prior year) was $50,000 or less, and a semiweekly depositor if it was more than $50,000. Any day's accumulated liability of $100,000 or more must be deposited the next business day.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["deposit schedule", "monthly depositor", "semiweekly", "lookback period", "$50,000", "form 941"]
+    },
+    {
+      "topic": "Payroll & tax",
+      "trade": "law",
+      "state": null,
+      "source": "IRS General Instructions for Forms W-2 and W-3",
+      "fact": "Employers report each employee's annual wages and withholding on Form W-2. They must give W-2s to employees and file them with the Social Security Administration by January 31.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["w-2", "january 31", "wage reporting", "ssa", "employee wages"]
+    },
+    {
+      "topic": "Payroll & tax",
+      "trade": "law",
+      "state": null,
+      "source": "IRS Form 941 instructions; IRS Pub 15",
+      "fact": "Form 941, the Employer's Quarterly Federal Tax Return, reports wages paid and federal income tax, Social Security and Medicare withheld each quarter, and every employer files it. If the quarter's total liability is under $2,500, the tax may be paid with the return; otherwise it must be deposited on the monthly or semiweekly schedule.",
+      "status": "corrected",
+      "note": "Card suggests Form 941 is used only when reporting under $2,500 for the quarter. In fact every employer files 941 quarterly; the $2,500 test decides only whether tax may be paid with the return instead of deposited.",
+      "keywords": ["form 941", "quarterly return", "$2,500", "employer tax return", "deposit"]
+    },
+    {
+      "topic": "Payroll & tax",
+      "trade": "law",
+      "state": null,
+      "source": "IRC 6656; IRS Pub 15 (failure-to-deposit penalty)",
+      "fact": "The IRS failure-to-deposit penalty is 2% if the deposit is 1-5 days late, 5% if 6-15 days late, and 10% if more than 15 days late (or not made electronically). It rises to 15% if the tax is still unpaid more than 10 days after the first IRS notice. The same tiers apply to FUTA deposits, so a FUTA deposit 7 days late draws 5%.",
+      "status": "corrected",
+      "note": "Cards say the 10% penalty applies to deposits more than 16 days late and that penalties run '2% up to 10%'. The 10% tier starts at more than 15 days, and a 15% tier applies after an IRS notice goes unanswered.",
+      "keywords": ["failure to deposit penalty", "late deposit", "2%", "5%", "10%", "payroll tax penalty"]
+    },
+    {
+      "topic": "Payroll & tax",
+      "trade": "law",
+      "state": null,
+      "source": "IRC 6041A; Form 1099-NEC instructions; One Big Beautiful Bill Act (2025) section 70433",
+      "fact": "Payments for services to an unincorporated independent contractor (such as a sole-proprietor HVAC sub) are reported on Form 1099-NEC. The threshold was $600 or more per year for payments through 2025 and is $2,000 for payments made in 2026 and later, indexed for inflation after that. Payments to corporations generally need no 1099.",
+      "status": "corrected",
+      "note": "Cards say amounts over $600 paid to contractors are 'wages' reported on 'Form 1099'. Nonemployee pay is not wages; since tax year 2020 it goes on Form 1099-NEC, not 1099-MISC. The 2025 tax law raised the threshold from $600 to $2,000 for payments after December 31, 2025. Verify the threshold for the year in question.",
+      "keywords": ["1099-nec", "independent contractor", "$600", "subcontractor payments", "information return", "nonemployee compensation"]
+    },
+    {
+      "topic": "Payroll & tax",
+      "trade": "law",
+      "state": null,
+      "source": "IRC 3301; IRS Form 940 instructions",
+      "fact": "FUTA is 6.0% of the first $7,000 of each employee's annual wages. Employers that pay state unemployment tax on time get a credit of up to 5.4%, so the net rate is usually 0.6% (higher in credit-reduction states).",
+      "status": "corrected",
+      "note": "Card only says FUTA is figured 'at the current prevailing rate according to the IRS'. The actual rule is 6.0% on the first $7,000 of wages, with up to a 5.4% state credit (net 0.6%).",
+      "keywords": ["futa", "federal unemployment tax", "6.0%", "0.6%", "$7,000 wage base", "state credit"]
+    },
+    {
+      "topic": "Payroll & tax",
+      "trade": "law",
+      "state": null,
+      "source": "IRS Form 940 instructions; IRS Pub 15",
+      "fact": "FUTA tax must be deposited quarterly once the accumulated liability exceeds $500, by the last day of the month after the quarter ends. The annual Form 940 is due January 31, or February 10 if all FUTA deposits were made on time.",
+      "status": "corrected",
+      "note": "Card says that owing over $500 means you must 'file' quarterly. What is quarterly is the deposit; Form 940 is filed once a year by January 31.",
+      "keywords": ["futa deposit", "form 940", "$500", "quarterly deposit", "january 31", "unemployment tax"]
+    },
+    {
+      "topic": "Payroll & tax",
+      "trade": "law",
+      "state": "Georgia",
+      "source": "Georgia Department of Revenue withholding payment schedules",
+      "fact": "Georgia sets each employer's state withholding payment schedule from a lookback period (July 1 through June 30 of the prior year). Employers whose liability is under the state threshold (reported as $50,000) pay monthly.",
+      "status": "unverified",
+      "note": "State-specific, and the card is vague. Georgia uses a lookback period and monthly/semiweekly schedules similar to the federal rules, but confirm current thresholds (including any quarterly filer tier) with Georgia DOR.",
+      "keywords": ["georgia withholding", "state payroll tax", "lookback period", "monthly payer", "deposit schedule"]
+    },
+    {
+      "topic": "Payroll & tax",
+      "trade": "law",
+      "state": "Georgia",
+      "source": "O.C.G.A. 48-7-21 (Georgia corporate income tax)",
+      "fact": "Georgia's corporate income tax rate is no longer 6%. It dropped to 5.75% in 2019 and has since been cut further alongside the individual rate (5.39% for 2024 and 5.19% for 2025), with more step-downs scheduled.",
+      "status": "corrected",
+      "note": "Card says 6%, the rate before 2019. Because the rate now changes year to year by legislation, confirm the current-year rate with Georgia DOR before relying on an exact figure.",
+      "keywords": ["georgia corporate tax", "corporate income tax rate", "state tax", "6%", "georgia"]
+    },
+    {
+      "topic": "Contracts & liens",
+      "trade": "law",
+      "state": null,
+      "source": "Construction lien law fundamentals",
+      "fact": "A construction (mechanic's) lien is a claim against the improved real property. It secures payment for contractors, subcontractors, laborers and suppliers who improved the property and were not paid.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["mechanics lien", "construction lien", "real property", "unpaid supplier", "subcontractor", "security"]
+    },
+    {
+      "topic": "Contracts & liens",
+      "trade": "law",
+      "state": null,
+      "source": "Construction lien law fundamentals",
+      "fact": "In lien law, the 'contractor' is the party in direct contract (privity) with the property owner, usually the general contractor. Subcontractors and suppliers below the GC are not in privity with the owner and generally must give extra notices to protect lien rights.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["privity", "direct contract", "general contractor", "owner", "lien rights", "subcontractor"]
+    },
+    {
+      "topic": "Contracts & liens",
+      "trade": "law",
+      "state": null,
+      "source": "Construction lien law fundamentals",
+      "fact": "In many states, paying the general contractor in full does not by itself protect the owner from liens by unpaid subcontractors and suppliers, who can lien the property directly. Owners protect themselves by getting lien waivers or releases from everyone who furnished labor or materials before or as they pay.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["lien waiver", "double payment", "owner protection", "supplier lien", "release", "unpaid supplier"]
+    },
+    {
+      "topic": "Contracts & liens",
+      "trade": "law",
+      "state": "Georgia",
+      "source": "O.C.G.A. 44-14-361.1",
+      "fact": "In Georgia, a lien claim must be filed for record within 90 days after the claimant last furnished labor, services or materials to the property.",
+      "status": "unverified",
+      "note": "State-specific lien law. The 90-day period matches O.C.G.A. 44-14-361.1 as amended in 2020 (effective 2021), but confirm against the current statute.",
+      "keywords": ["georgia lien", "90 days", "file lien", "last furnishing", "claim of lien"]
+    },
+    {
+      "topic": "Contracts & liens",
+      "trade": "law",
+      "state": "Georgia",
+      "source": "O.C.G.A. 44-14-361.1 (as amended effective Jan 1, 2021)",
+      "fact": "In Georgia, a lien claimant must start a lawsuit to enforce the lien within 365 days after the lien claim is filed, or the lien expires.",
+      "status": "unverified",
+      "note": "One card measures 365 days from when the claim comes due (the pre-2021 rule); another measures from filing. The 2020 amendments (SB 315) moved the start to the filing date. Confirm against the current statute.",
+      "keywords": ["georgia lien", "365 days", "enforce lien", "foreclose lien", "lawsuit deadline"]
+    },
+    {
+      "topic": "Contracts & liens",
+      "trade": "law",
+      "state": "Georgia",
+      "source": "O.C.G.A. 44-14-361.1",
+      "fact": "In Georgia, after filing a lien claim, the claimant must send a true copy to the property owner (and to the contractor where required) within 2 business days of filing.",
+      "status": "unverified",
+      "note": "State-specific lien law; confirm the current notice recipients and the 2-business-day deadline against the statute.",
+      "keywords": ["georgia lien", "copy to owner", "2 business days", "notice of filing", "lien claimant"]
+    },
+    {
+      "topic": "Contracts & liens",
+      "trade": "law",
+      "state": "Georgia",
+      "source": "O.C.G.A. 44-14-361.1",
+      "fact": "In Georgia, a lien claimant must also file a notice of commencement of the lien enforcement action with the clerk of superior court. If no such notice is filed within 395 days of the date the lien claim was filed, the lien may be disregarded.",
+      "status": "unverified",
+      "note": "State-specific lien law (the notice is generally due within 30 days of filing suit, with an outside limit of 395 days from the lien filing). Confirm against the current statute.",
+      "keywords": ["georgia lien", "395 days", "notice of commencement of action", "lien disregarded", "clerk of superior court"]
+    },
+    {
+      "topic": "Contracts & liens",
+      "trade": "law",
+      "state": "Georgia",
+      "source": "O.C.G.A. 44-14-361.5",
+      "fact": "On Georgia private projects, the owner or contractor files a Notice of Commencement with the clerk of superior court in the county where the property is located, no later than 15 days after the contractor physically starts work.",
+      "status": "unverified",
+      "note": "State-specific; confirm the 15-day deadline and the required contents against the current statute.",
+      "keywords": ["notice of commencement", "georgia", "15 days", "clerk of superior court", "county", "lien"]
+    },
+    {
+      "topic": "Contracts & liens",
+      "trade": "law",
+      "state": "Georgia",
+      "source": "O.C.G.A. 44-14-361.5",
+      "fact": "In Georgia, a subcontractor or supplier not in privity with the contractor must send a Notice to Contractor within 30 days of first furnishing labor or materials or within 30 days of the Notice of Commencement being filed, whichever is later, to preserve lien rights when a Notice of Commencement has been filed.",
+      "status": "unverified",
+      "note": "Card says 30 days of 'receiving' the notice of commencement. The statute is generally read as the later of first furnishing or the filing of the Notice of Commencement. Confirm the current wording.",
+      "keywords": ["notice to contractor", "georgia", "30 days", "lien rights", "subcontractor", "supplier"]
+    },
+    {
+      "topic": "Contracts & liens",
+      "trade": "law",
+      "state": "Georgia",
+      "source": "O.C.G.A. 44-14-361.3 (pre-2021 version)",
+      "fact": "Under older Georgia law, a supplier who kept an improper preliminary notice of lien rights on record after being paid and asked to cancel it could be held liable for the owner's attorney's fees to remove it.",
+      "status": "unverified",
+      "note": "Card says the supplier pays the owner's $2,500 attorney fee. The 2020 lien-law amendments (effective 2021) eliminated the preliminary notice of lien rights, so this scenario may be outdated. Confirm against current law.",
+      "keywords": ["preliminary notice of lien rights", "georgia", "attorney fees", "cancel notice", "supplier"]
+    },
+    {
+      "topic": "Business organization",
+      "trade": "law",
+      "state": "Georgia",
+      "source": "O.C.G.A. 43-41 (Georgia residential and general contractor licensing)",
+      "fact": "In Georgia, the qualifying agent named on a business's contractor license is legally responsible for supervising, directing, managing and controlling the construction work on permits pulled under that license. The qualifying agent is jointly and equally responsible with the business for its compliance, including financial mismanagement, even if not an owner.",
+      "status": "unverified",
+      "note": "State-specific licensing rule; confirm the current wording of O.C.G.A. 43-41 and the board rules.",
+      "keywords": ["qualifying agent", "georgia", "license", "responsibility", "jointly liable", "supervise"]
+    },
+    {
+      "topic": "Business organization",
+      "trade": "law",
+      "state": "Georgia",
+      "source": "O.C.G.A. 43-41-3 and 43-41-4",
+      "fact": "Georgia's State Licensing Board for Residential and General Contractors has two divisions, residential and general contractor. The Governor appoints members to five-year terms, at least two general-contractor-division members must be small-volume builders (under $5,000,000 a year), each division meets about six times a year, and the division director may issue subpoenas.",
+      "status": "unverified",
+      "note": "State-specific board structure from the cards (residential division 8 members, GC division 7, quorum 8 with at least 3 from each division, 4 residential members for residential-only actions). Membership numbers and meeting requirements have been amended over time; confirm against the current statute.",
+      "keywords": ["georgia licensing board", "residential division", "general contractor division", "quorum", "small volume builder", "governor appointed"]
+    },
+    {
+      "topic": "Business organization",
+      "trade": "law",
+      "state": "Georgia",
+      "source": "O.C.G.A. 43-41-6 and board rules",
+      "fact": "Georgia contractor license applicants must be at least 21. The cards say residential licensing needs about 2 years of experience and general contractor licensing about 4 years, though education can substitute for part of the experience.",
+      "status": "unverified",
+      "note": "State-specific; experience and education combinations differ by license tier (residential basic, residential light commercial, general, limited tier). Confirm with the current board rules.",
+      "keywords": ["georgia license requirements", "age 21", "experience", "residential contractor", "general contractor", "qualifications"]
+    },
+    {
+      "topic": "Business organization",
+      "trade": "law",
+      "state": "Georgia",
+      "source": "O.C.G.A. 43-41-9 and board rules",
+      "fact": "According to the cards, a licensed Georgia business must report changes to the board within set deadlines: 30 days for qualifying-agent changes, insurance changes and legal name changes, and 45 days for changes to application information or going out of business. It has 120 days to replace a departed qualifying agent before it must stop work.",
+      "status": "unverified",
+      "note": "State-specific; the cards give 30 days and 45 days for similar 'changes', which suggests some confusion. Confirm each deadline against the current statute and rules.",
+      "keywords": ["georgia", "notify board", "qualifying agent change", "120 days", "30 days", "45 days"]
+    },
+    {
+      "topic": "Business organization",
+      "trade": "law",
+      "state": "Georgia",
+      "source": "O.C.G.A. 43-41-9",
+      "fact": "In Georgia, a joint venture is treated as a separate organization that must hold its own contractor license, and the cards say each member must be licensed before the venture is formed. The cards also say a qualifying agent may serve more than one licensed business.",
+      "status": "unverified",
+      "note": "State-specific. Whether one person may qualify multiple companies, and on what conditions, should be checked against the current statute and board rules.",
+      "keywords": ["joint venture", "georgia license", "qualifying agent", "multiple companies", "licensing"]
+    },
+    {
+      "topic": "Business organization",
+      "trade": "law",
+      "state": "Georgia",
+      "source": "O.C.G.A. 43-41-12 and 43-41-17; O.C.G.A. 43-1-19",
+      "fact": "The Georgia board may issue a stop-work order when it has probable cause that unlicensed work is being done, and may impose administrative fines (cards say up to $5,000 per violation). Revoking or denying a license takes a majority vote, and falsely representing work as bonded can lead to license revocation.",
+      "status": "unverified",
+      "note": "State-specific enforcement provisions; confirm fine amounts and procedures against the current statute.",
+      "keywords": ["stop work order", "georgia board", "unlicensed contractor", "administrative fine", "revocation", "bonded"]
+    },
+    {
+      "topic": "Business organization",
+      "trade": "law",
+      "state": "Georgia",
+      "source": "O.C.G.A. 43-41-12 and 43-41-17",
+      "fact": "The cards say Georgia treats misrepresenting the value or percentage of completed work as a crime (fine of at least $500 and/or about three months' imprisonment), and that a building official who knowingly issues a permit to an unlicensed contractor commits a misdemeanor (fine up to $500).",
+      "status": "unverified",
+      "note": "State-specific criminal penalties from the cards; confirm against the current statute.",
+      "keywords": ["georgia", "misdemeanor", "permit unlicensed", "building inspector", "fraud penalty", "misrepresentation"]
+    },
+    {
+      "topic": "Business organization",
+      "trade": "law",
+      "state": "Georgia",
+      "source": "O.C.G.A. 43-41 and board rules",
+      "fact": "In Georgia, if a licensed contractor dies leaving work unfinished, an affiliated person such as a partner, employee or relative may complete the job and must notify the board within 30 days. Abandoning a contracted project, which the cards say means 90 days without work, is grounds for discipline.",
+      "status": "unverified",
+      "note": "State-specific; confirm current provisions.",
+      "keywords": ["contractor death", "complete job", "georgia", "abandonment", "90 days", "notify board"]
+    },
+    {
+      "topic": "Business organization",
+      "trade": "law",
+      "state": "Georgia",
+      "source": "O.C.G.A. 43-41-17 (exemptions)",
+      "fact": "Georgia licensing exemptions in the cards include an owner building on their own property, who after selling must wait 24 months before building another structure without a license, and minor repair work when the owner is told the worker is unlicensed.",
+      "status": "unverified",
+      "note": "State-specific and likely oversimplified. Georgia also exempts small jobs below a dollar threshold, and the repair exemption has conditions. Confirm against the current statute.",
+      "keywords": ["georgia exemption", "owner builder", "24 months", "unlicensed repair", "license exemption"]
+    },
+    {
+      "topic": "Business organization",
+      "trade": "law",
+      "state": "Georgia",
+      "source": "O.C.G.A. 43-41 and board rules",
+      "fact": "The cards say a Georgia plumbing (specialty) contractor may do incidental electrical work on a job such as a bathroom remodel if the electrical portion is no more than $10,000 or 25% of the job, whichever is greater.",
+      "status": "unverified",
+      "note": "The card is unusual and may be garbled. Trade licensing for electrical work in Georgia falls under a separate board. Confirm before relying on it.",
+      "keywords": ["incidental work", "specialty contractor", "plumbing contractor", "electrical work", "georgia", "scope limit"]
+    },
+    {
+      "topic": "Business organization",
+      "trade": "law",
+      "state": "Georgia",
+      "source": "Georgia board rules (limited tier general contractor)",
+      "fact": "The cards say Georgia's limited-tier general contractor license requires a minimum net worth of $25,000 and limits each contract to $1,000,000.",
+      "status": "unverified",
+      "note": "State-specific financial thresholds that may have changed; confirm current tier limits and net worth requirements with the board.",
+      "keywords": ["limited tier", "general contractor", "georgia", "net worth", "contract limit", "license tier"]
+    },
+    {
+      "topic": "Site work & concrete",
+      "trade": "gc",
+      "state": "Georgia",
+      "source": "Georgia Utility Facility Protection Act (O.C.G.A. 25-9)",
+      "fact": "Before excavating in Georgia, a contractor must contact Georgia 811 (the Utilities Protection Center). The cards say utility owners have 48 hours, excluding non-business days, to mark their facilities.",
+      "status": "unverified",
+      "note": "State-specific; Georgia's locate response period and ticket rules have been amended. Confirm the current number of business days.",
+      "keywords": ["georgia 811", "utilities protection center", "call before you dig", "locate", "excavation", "48 hours"]
+    },
+    {
+      "topic": "Contracts & liens",
+      "trade": "law",
+      "state": "Georgia",
+      "source": "Georgia Prompt Pay Act, O.C.G.A. 13-11",
+      "fact": "Under the Georgia Prompt Pay Act, the cards say an owner must pay the contractor within 15 days of receiving a payment request for completed work, and late payments carry interest of 1% per month. The cards also say the Act does not apply to improvements of fewer than 12 residential units.",
+      "status": "unverified",
+      "note": "State-specific; confirm payment deadlines (including the contractor-to-sub deadline), the interest rate and the residential exclusion against the current statute.",
+      "keywords": ["georgia prompt pay act", "15 days", "1% per month", "late payment interest", "residential exclusion"]
+    },
+    {
+      "topic": "Contracts & liens",
+      "trade": "law",
+      "state": "Georgia",
+      "source": "Georgia retainage provisions, O.C.G.A. 13-11 and 13-10-80",
+      "fact": "The cards say that in Georgia, once a subcontractor's work is 50% complete and the contractor is being paid retainage, the sub becomes entitled to its share of that retainage.",
+      "status": "unverified",
+      "note": "The card is muddled. Georgia limits retainage (commonly 10% until 50% completion, then no further retainage if work is satisfactory). Confirm how release to subcontractors works under the current statute.",
+      "keywords": ["retainage", "georgia", "50% complete", "subcontractor", "release of retainage"]
+    },
+    {
+      "topic": "Bonds & insurance",
+      "trade": "law",
+      "state": "Georgia",
+      "source": "O.C.G.A. 34-9-18 and 34-9-19",
+      "fact": "The cards say knowingly making false or misleading statements to get or deny Georgia workers' compensation benefits can bring civil penalties of $1,000 to $10,000 per violation and up to 12 months in prison.",
+      "status": "unverified",
+      "note": "State-specific penalty figures; confirm current amounts in the Georgia Workers' Compensation Act.",
+      "keywords": ["workers compensation fraud", "georgia", "civil penalty", "false statement", "imprisonment"]
+    },
+    {
+      "topic": "Bonds & insurance",
+      "trade": "law",
+      "state": "Georgia",
+      "source": "O.C.G.A. 34-9-200.1(g) and 34-9-264",
+      "fact": "Georgia workers' compensation defines 'catastrophic injury' to include injuries such as spinal cord injury with paralysis, amputation, severe brain injury, serious burns and total blindness; complete hearing loss in one ear does not qualify. The cards say occupational hearing loss averaging 92 decibels or more across the four test frequencies counts as total (100%) compensable hearing loss.",
+      "status": "unverified",
+      "note": "State-specific; confirm the list of catastrophic injuries and the hearing-loss formula against the current statute.",
+      "keywords": ["catastrophic injury", "georgia workers comp", "hearing loss", "92 decibels", "amputation", "paralysis"]
+    },
+    {
+      "topic": "Energy & environmental",
+      "trade": "gc",
+      "state": null,
+      "source": "EPA indoor air quality guidance on volatile organic compounds",
+      "fact": "To limit worker and occupant exposure to volatile organic compounds (VOCs), choose low-VOC or low-emitting products. Store VOC-containing materials sealed, in a well-ventilated area kept apart from occupied spaces.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["voc", "volatile organic compounds", "low emitting", "indoor air quality", "ventilation", "storage"]
+    }
+  ],
+  "questions": [
+    {
+      "t": "law",
+      "topic": "Financial management",
+      "q": "A contractor has current assets of $80,000, of which $20,000 is inventory, and current liabilities of $40,000. What is the quick ratio?",
+      "c": ["1.50", "2.00", "0.50", "0.75"],
+      "a": 0,
+      "ref": "Financial ratio fundamentals",
+      "why": "Quick ratio = (current assets − inventory) ÷ current liabilities = ($80,000 − $20,000) ÷ $40,000 = 1.50."
+    },
+    {
+      "t": "law",
+      "topic": "Financial management",
+      "q": "A company reports total debt of $90,000 and total assets of $120,000. What is its debt ratio?",
+      "c": ["1.33", "0.75", "0.25", "0.57"],
+      "a": 1,
+      "ref": "Financial ratio fundamentals",
+      "why": "Debt ratio = total debt ÷ total assets = $90,000 ÷ $120,000 = 0.75."
+    },
+    {
+      "t": "law",
+      "topic": "Financial management",
+      "q": "Which equation describes the balance sheet?",
+      "c": ["Assets = Revenue − Expenses", "Equity = Assets + Liabilities", "Assets = Liabilities + Owner's Equity", "Liabilities = Assets + Owner's Equity"],
+      "a": 2,
+      "ref": "Accounting equation",
+      "why": "Everything the company owns (assets) is financed either by creditors (liabilities) or by the owners (equity)."
+    },
+    {
+      "t": "law",
+      "topic": "Financial management",
+      "q": "An excavator was financed on a five-year note, and the remaining balance will be paid off in four months. How should that balance appear on the balance sheet?",
+      "c": ["Long-term liability", "Owner's equity", "Fixed asset", "Current liability"],
+      "a": 3,
+      "ref": "Accounting fundamentals",
+      "why": "Any obligation due within the next 12 months is a current liability, whatever the original term of the loan."
+    },
+    {
+      "t": "law",
+      "topic": "Financial management",
+      "q": "A supplier invoice for $2,500 carries terms of 2/10 net 30. How much should the contractor pay if paying within 10 days?",
+      "c": ["$2,450", "$2,250", "$2,475", "$2,500"],
+      "a": 0,
+      "ref": "Trade payment terms",
+      "why": "2/10 net 30 gives a 2% discount for payment within 10 days: $2,500 × 0.98 = $2,450."
+    },
+    {
+      "t": "law",
+      "topic": "Financial management",
+      "q": "A skid steer costs $48,000, has an estimated salvage value of $8,000 and a useful life of 5 years. What is the annual straight-line depreciation?",
+      "c": ["$9,600", "$8,000", "$11,200", "$6,400"],
+      "a": 1,
+      "ref": "Straight-line depreciation",
+      "why": "($48,000 − $8,000) ÷ 5 years = $8,000 per year."
+    },
+    {
+      "t": "law",
+      "topic": "Financial management",
+      "q": "Which accounting method records income when it is earned and expenses when they are incurred, whether or not cash has changed hands?",
+      "c": ["Cash method", "Completed-contract method", "Accrual method", "Hybrid cash method"],
+      "a": 2,
+      "ref": "IRS Pub 538",
+      "why": "The accrual method matches revenue with the costs that produced it, unlike the cash method, which waits for money to be received or paid."
+    },
+    {
+      "t": "law",
+      "topic": "Contracts & liens",
+      "q": "Under the federal Prompt Payment Act, how soon must a prime contractor on a federal construction job pay a subcontractor after receiving payment from the government?",
+      "c": ["14 days", "30 days", "10 days", "7 days"],
+      "a": 3,
+      "ref": "31 U.S.C. 3905(b)",
+      "why": "Primes must pay subs for satisfactory work within 7 days of receiving government payment, or owe interest."
+    },
+    {
+      "t": "law",
+      "topic": "Payroll & tax",
+      "q": "By what date must an employer give employees their Form W-2 for the prior year?",
+      "c": ["January 31", "February 15", "March 15", "April 15"],
+      "a": 0,
+      "ref": "IRS W-2/W-3 instructions",
+      "why": "W-2s are due to employees, and to the SSA, by January 31."
+    },
+    {
+      "t": "law",
+      "topic": "Payroll & tax",
+      "q": "An employee wants to keep claiming exemption from federal income tax withholding. By when must a new Form W-4 be submitted each year?",
+      "c": ["January 31", "February 15", "April 15", "December 31"],
+      "a": 1,
+      "ref": "IRS Pub 15",
+      "why": "An exempt W-4 expires each year, and the employee must give a new one by February 15 to continue the exemption."
+    },
+    {
+      "t": "law",
+      "topic": "Payroll & tax",
+      "q": "What is the regular Medicare tax rate that both the employer and the employee pay on wages?",
+      "c": ["6.2%", "0.9%", "1.45%", "2.9%"],
+      "a": 2,
+      "ref": "IRS Pub 15",
+      "why": "Medicare is 1.45% each for employer and employee (2.9% combined). Social Security is 6.2% each, up to the wage base."
+    },
+    {
+      "t": "law",
+      "topic": "Payroll & tax",
+      "q": "An employer's total Form 941 tax liability during its lookback period was $42,000. What federal deposit schedule applies?",
+      "c": ["Semiweekly", "Next business day", "Quarterly with the return", "Monthly"],
+      "a": 3,
+      "ref": "IRS Pub 15",
+      "why": "A lookback-period liability of $50,000 or less makes the employer a monthly depositor; more than $50,000 means semiweekly."
+    },
+    {
+      "t": "law",
+      "topic": "Payroll & tax",
+      "q": "A payroll tax deposit is made 20 days late. What IRS failure-to-deposit penalty rate applies?",
+      "c": ["10%", "2%", "5%", "15%"],
+      "a": 0,
+      "ref": "IRC 6656",
+      "why": "The penalty is 2% for 1-5 days late, 5% for 6-15 days and 10% for more than 15 days (15% after an unanswered IRS notice)."
+    },
+    {
+      "t": "law",
+      "topic": "Payroll & tax",
+      "q": "An employer's accumulated FUTA liability for the quarter is $650. When is the deposit due?",
+      "c": ["With the annual Form 940", "By the last day of the month after the quarter ends", "Within 3 banking days", "By the 15th of the next month"],
+      "a": 1,
+      "ref": "IRS Form 940 instructions",
+      "why": "Once FUTA liability exceeds $500, it must be deposited by the last day of the month after the quarter. Smaller amounts carry over to the next quarter."
+    },
+    {
+      "t": "law",
+      "topic": "Payroll & tax",
+      "q": "What is the gross FUTA tax rate and the wage base it applies to?",
+      "c": ["6.2% of the first $176,100", "5.4% of the first $10,000", "6.0% of the first $7,000", "1.45% of all wages"],
+      "a": 2,
+      "ref": "IRC 3301; Form 940",
+      "why": "FUTA is 6.0% of the first $7,000 of each employee's wages. A state unemployment credit of up to 5.4% usually brings the net rate to 0.6%."
+    },
+    {
+      "t": "law",
+      "topic": "Payroll & tax",
+      "q": "A prime contractor pays an unincorporated HVAC subcontractor $10,000 for services during the year. Which IRS form reports this payment?",
+      "c": ["Form W-2", "Form 941", "Form 1099-MISC", "Form 1099-NEC"],
+      "a": 3,
+      "ref": "Form 1099-NEC instructions",
+      "why": "Payments for services to a non-employee who is not a corporation are reported on Form 1099-NEC once they reach the annual threshold."
+    },
+    {
+      "t": "law",
+      "topic": "Payroll & tax",
+      "q": "At minimum, how long must an employer keep employment tax records?",
+      "c": ["4 years", "2 years", "3 years", "7 years"],
+      "a": 0,
+      "ref": "IRS Pub 15",
+      "why": "The IRS requires employment tax records to be kept at least 4 years after the tax is due or paid, whichever is later."
+    },
+    {
+      "t": "law",
+      "topic": "Environmental",
+      "q": "Under EPA's RRP Rule, when must a renovator give the owner of a pre-1978 home the 'Renovate Right' pamphlet?",
+      "c": ["Within 30 days after the work ends", "No more than 60 days before work begins", "Only if lead hazards are found", "At final payment"],
+      "a": 1,
+      "ref": "40 CFR 745.84",
+      "why": "Pre-renovation education means delivering the pamphlet no more than 60 days before starting and documenting that it was received."
+    },
+    {
+      "t": "law",
+      "topic": "Environmental",
+      "q": "Which term describes work designed to permanently eliminate lead-based paint hazards?",
+      "c": ["Interim controls", "Renovation", "Abatement", "Cleaning verification"],
+      "a": 2,
+      "ref": "40 CFR 745.223",
+      "why": "Abatement is aimed at permanent elimination of lead hazards. Interim controls and ordinary renovation are temporary or incidental."
+    },
+    {
+      "t": "law",
+      "topic": "Financial management",
+      "q": "How is gross profit calculated on a contractor's income statement?",
+      "c": ["Revenue minus all expenses", "Net income minus taxes", "Current assets minus current liabilities", "Revenue minus cost of goods sold (direct job costs)"],
+      "a": 3,
+      "ref": "Accounting fundamentals",
+      "why": "Gross profit is revenue less direct job costs. Subtracting overhead and other expenses then gives net income."
+    },
+    {
+      "t": "law",
+      "topic": "Contracts & liens",
+      "q": "Which contract type pays the contractor its actual allowable costs plus an agreed fee?",
+      "c": ["Cost-plus", "Lump sum", "Unit price", "Guaranteed fixed price"],
+      "a": 0,
+      "ref": "Contract law fundamentals",
+      "why": "Cost-plus contracts reimburse actual costs and add a fixed or percentage fee, instead of paying a set price."
+    },
+    {
+      "t": "law",
+      "topic": "Business organization",
+      "q": "A sole proprietor who has operated without employees hires her first employee. What must she now obtain from the IRS?",
+      "c": ["A Form W-9", "An Employer Identification Number", "A Form 1120-S election", "A state resale certificate"],
+      "a": 1,
+      "ref": "IRS EIN guidance",
+      "why": "A sole proprietor without employees may use her SSN, but once she has employees she needs an EIN for payroll tax filings."
+    },
+    {
+      "t": "law",
+      "topic": "Payroll & tax",
+      "q": "A profitable sole proprietor has no tax withheld on business income. What should he do to avoid an underpayment penalty?",
+      "c": ["File Form 941 quarterly", "Elect the completed-contract method", "Make quarterly estimated payments using Form 1040-ES", "File Form 940 by January 31"],
+      "a": 2,
+      "ref": "IRS Form 1040-ES",
+      "why": "Self-employed people with no withholding pay income and self-employment tax through quarterly estimated payments."
+    },
+    {
+      "t": "law",
+      "topic": "Financial management",
+      "q": "Which of the following is NOT a source document?",
+      "c": ["A deposit slip", "A purchase order", "An employee time card", "Cash in the register"],
+      "a": 3,
+      "ref": "Accounting fundamentals",
+      "why": "Source documents are the papers that prove a transaction happened. Cash itself is an asset, not evidence of a transaction."
+    }
+  ]
+}

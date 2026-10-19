@@ -1,0 +1,1066 @@
+{
+  "source": "NASCLA study guide (codes) cards 1-160",
+  "facts": [
+    {
+      "topic": "Residential code", "trade": "gc", "state": null,
+      "source": "IRC 2021 R806.2; IBC 2021 1202.2.1",
+      "fact": "Enclosed attics and enclosed rafter spaces need a total net free ventilating area of at least 1/150 of the area of the vented space. It may be reduced to 1/300 only when 40-50% of the required vent area is in the upper part of the attic (no more than 3 ft below the ridge) and, in Climate Zones 6-8, a Class I or II vapor retarder is installed on the warm-in-winter side of the ceiling.",
+      "status": "verified", "note": "",
+      "keywords": ["attic ventilation", "net free area", "1/150", "1/300", "soffit vent", "ridge vent"]
+    },
+    {
+      "topic": "Wood framing", "trade": "gc", "state": null,
+      "source": "IRC 2021 R802.6",
+      "fact": "Each end of a ceiling joist or rafter must have at least 1-1/2 in of bearing on wood or metal and at least 3 in of bearing on masonry or concrete.",
+      "status": "verified", "note": "",
+      "keywords": ["ceiling joist", "rafter", "bearing", "top plate", "1-1/2 inch", "masonry bearing"]
+    },
+    {
+      "topic": "Building code (IBC)", "trade": "gc", "state": null,
+      "source": "IBC 2021 1014.7; IRC 2021 R311.7.8",
+      "fact": "A handrail mounted next to a wall or other surface must have a clear space of at least 1-1/2 in between the handrail and the wall.",
+      "status": "verified", "note": "",
+      "keywords": ["handrail", "wall clearance", "1-1/2 inch", "stair", "grab space", "knuckle clearance"]
+    },
+    {
+      "topic": "Roofing", "trade": "gc", "state": null,
+      "source": "IRC 2021 R905.7.6 and R905.8.6",
+      "fact": "Each wood shingle or wood shake must be attached with two fasteners, which must be corrosion resistant.",
+      "status": "verified", "note": "",
+      "keywords": ["wood shingles", "wood shakes", "fasteners", "two nails", "roof attachment", "cedar"]
+    },
+    {
+      "topic": "Site work & concrete", "trade": "gc", "state": null,
+      "source": "IRC 2021 R405.1; IBC 2021 1805.4.2",
+      "fact": "Where a gravel or crushed-stone foundation drain is required, the drainage material must extend at least 12 in beyond the outside edge of the footing and its top must be at least 6 in above the top of the footing.",
+      "status": "verified", "note": "",
+      "keywords": ["foundation drain", "footing drain", "gravel", "crushed stone", "6 inches", "drainage"]
+    },
+    {
+      "topic": "Building code (IBC)", "trade": "gc", "state": null,
+      "source": "IBC 2021 Table 1806.2; IRC 2021 Table R401.4.1",
+      "fact": "When no soil investigation is done, the presumptive allowable bearing pressure for clay, sandy clay, silty clay, clayey silt and silt (CL, ML, MH, CH) is 1,500 psf.",
+      "status": "verified", "note": "",
+      "keywords": ["clay soil", "presumptive load bearing", "1500 psf", "soil bearing capacity", "foundation", "allowable pressure"]
+    },
+    {
+      "topic": "Building code (IBC)", "trade": "gc", "state": null,
+      "source": "IBC 2021 Table 1806.2",
+      "fact": "Presumptive allowable foundation pressures: crystalline bedrock 12,000 psf; sedimentary and foliated rock 4,000 psf; sandy gravel and gravel (GW, GP) 3,000 psf; sand, silty or clayey sand and silty or clayey gravel 2,000 psf; clays and silts 1,500 psf.",
+      "status": "verified", "note": "",
+      "keywords": ["sandy gravel", "3000 psf", "soil bearing", "presumptive values", "bedrock", "foundation pressure"]
+    },
+    {
+      "topic": "Building code (IBC)", "trade": "gc", "state": null,
+      "source": "IBC 2021 Table 1004.5",
+      "fact": "Commercial kitchens use an occupant load factor of 200 gross sq ft per occupant. A 42 ft x 70 ft kitchen (2,940 sq ft) works out to 14.7, which is rounded up to 15 occupants.",
+      "status": "corrected",
+      "note": "Card answers 14, which truncates 14.7. Fractional occupant loads are rounded up in design practice (ICC commentary), giving 15. The 200 gross factor itself is correct.",
+      "keywords": ["occupant load", "commercial kitchen", "200 gross", "load factor", "egress", "occupancy calculation"]
+    },
+    {
+      "topic": "Drywall & finishes", "trade": "gc", "state": null,
+      "source": "USG Gypsum Construction Handbook (resilient channels)",
+      "fact": "For resilient channels on a stud wall, the bottom channel is placed about 2 in above the floor and the top channel within 6 in of the ceiling.",
+      "status": "unverified",
+      "note": "Manufacturer handbook guidance (USG); not a code requirement and may vary by edition or product.",
+      "keywords": ["resilient channel", "sound control", "steel studs", "drywall", "channel spacing", "gypsum handbook"]
+    },
+    {
+      "topic": "Drywall & finishes", "trade": "gc", "state": null,
+      "source": "USG Gypsum Construction Handbook (plaster bases)",
+      "fact": "When old plaster and lath are removed for a conventional plaster job, 3/8 in gypsum lath (Rocklath) is the recommended plaster base.",
+      "status": "unverified",
+      "note": "Product-specific manufacturer recommendation; cannot confirm against a code.",
+      "keywords": ["gypsum lath", "rocklath", "plaster base", "conventional plaster", "renovation", "lath"]
+    },
+    {
+      "topic": "Drywall & finishes", "trade": "gc", "state": null,
+      "source": "USG Gypsum Construction Handbook (control joints)",
+      "fact": "A door frame that extends to the ceiling can act as a vertical control joint in a gypsum board partition.",
+      "status": "unverified",
+      "note": "Manufacturer handbook guidance; not a code rule.",
+      "keywords": ["control joint", "door frame", "drywall cracking", "partition", "expansion joint", "gypsum board"]
+    },
+    {
+      "topic": "Drywall & finishes", "trade": "gc", "state": null,
+      "source": "Standard practice: veneer plaster",
+      "fact": "Veneer plaster drying (setting) time depends mainly on air temperature, relative humidity and air movement across the surface.",
+      "status": "verified", "note": "",
+      "keywords": ["veneer plaster", "drying time", "humidity", "temperature", "air movement", "plaster finish"]
+    },
+    {
+      "topic": "Drywall & finishes", "trade": "gc", "state": null,
+      "source": "USG Gypsum Construction Handbook (veneer plaster)",
+      "fact": "Conditions around 80 degrees F and 65% relative humidity fall within the normal drying range for veneer plaster finishes.",
+      "status": "unverified",
+      "note": "Manufacturer handbook drying chart; values cannot be independently confirmed.",
+      "keywords": ["veneer plaster", "drying range", "humidity", "temperature", "plaster", "gypsum handbook"]
+    },
+    {
+      "topic": "Estimating", "trade": "gc", "state": null,
+      "source": "USG Gypsum Construction Handbook (joint compound coverage)",
+      "fact": "About 9.4 gallons of ready-mixed lightweight all-purpose joint compound are estimated to finish 1,000 sq ft of gypsum board.",
+      "status": "unverified",
+      "note": "Product-specific coverage figure from a manufacturer handbook; varies by product and finish level.",
+      "keywords": ["joint compound", "coverage", "drywall estimating", "mud", "gallons per 1000 sq ft", "lightweight"]
+    },
+    {
+      "topic": "Drywall & finishes", "trade": "gc", "state": null,
+      "source": "USG Gypsum Construction Handbook (sanding)",
+      "fact": "Conventional-weight all-purpose joint compound is sanded with fine paper, roughly 120 grit or finer, to avoid scuffing the board face.",
+      "status": "unverified",
+      "note": "Manufacturer recommendations on grit differ by product (some say 150 or finer); cannot confirm the exact grit.",
+      "keywords": ["sandpaper", "grit", "joint compound", "drywall sanding", "finishing", "mud"]
+    },
+    {
+      "topic": "Safety (OSHA)", "trade": "gc", "state": null,
+      "source": "OSHA 29 CFR 1926.1202; 1910.146(b)",
+      "fact": "An oxygen-deficient atmosphere contains less than 19.5% oxygen by volume; an oxygen-enriched atmosphere contains more than 23.5%.",
+      "status": "verified", "note": "",
+      "keywords": ["oxygen deficient", "19.5 percent", "confined space", "atmosphere testing", "oxygen enriched", "permit space"]
+    },
+    {
+      "topic": "Safety (OSHA)", "trade": "gc", "state": null,
+      "source": "OSHA 29 CFR 1926.154(b)(1), Table V-3",
+      "fact": "A temporary radiant-type room heater must have at least 36 in of clearance to combustible material at its sides.",
+      "status": "verified", "note": "",
+      "keywords": ["temporary heater", "radiant heater", "clearance", "combustibles", "36 inches", "jobsite heating"]
+    },
+    {
+      "topic": "Safety (OSHA)", "trade": "gc", "state": null,
+      "source": "OSHA 29 CFR 1926.502(d)(15)",
+      "fact": "An anchorage for personal fall arrest must support at least 5,000 lb per employee attached, or be designed, installed and used under a qualified person's supervision as part of a complete system with a safety factor of at least two.",
+      "status": "corrected",
+      "note": "Card says 5,400 lb dead weight, which comes from the old 29 CFR 1926.104 lifeline rule. Current personal fall arrest anchorage strength is 5,000 lb per attached employee under 1926.502(d)(15).",
+      "keywords": ["anchorage", "fall arrest", "5000 pounds", "lifeline", "tie off", "fall protection"]
+    },
+    {
+      "topic": "Safety (OSHA)", "trade": "gc", "state": null,
+      "source": "OSHA 29 CFR 1926.151(c)(2)",
+      "fact": "Driveways between and around outdoor combustible storage piles must be at least 15 ft wide, kept clear, and spaced so no grid unit exceeds 50 ft by 150 ft.",
+      "status": "verified", "note": "",
+      "keywords": ["combustible storage", "driveway width", "15 feet", "open yard storage", "fire lane", "storage piles"]
+    },
+    {
+      "topic": "Safety (OSHA)", "trade": "gc", "state": null,
+      "source": "OSHA 29 CFR 1926.151(c)(1)",
+      "fact": "Outdoor piles of combustible materials must be stable and may never be stacked higher than 20 ft.",
+      "status": "verified", "note": "",
+      "keywords": ["combustible materials", "pile height", "20 feet", "storage", "stacking", "fire prevention"]
+    },
+    {
+      "topic": "Safety (OSHA)", "trade": "gc", "state": null,
+      "source": "OSHA 29 CFR 1926.151(c)",
+      "fact": "In open yard storage areas, portable fire extinguishers rated at least 2A must be placed so the travel distance to the nearest one does not exceed 100 ft.",
+      "status": "verified", "note": "",
+      "keywords": ["fire extinguisher", "travel distance", "100 feet", "yard storage", "2A rating", "fire protection"]
+    },
+    {
+      "topic": "Safety (OSHA)", "trade": "gc", "state": null,
+      "source": "OSHA 29 CFR 1926.1051(a)",
+      "fact": "A stairway or ladder must be provided at every point of worker access where there is a break in elevation of 19 in or more, unless a ramp, runway, embankment or personnel hoist is provided.",
+      "status": "verified", "note": "",
+      "keywords": ["stairway", "ladder", "19 inches", "break in elevation", "access", "stairs required"]
+    },
+    {
+      "topic": "Safety (OSHA)", "trade": "gc", "state": null,
+      "source": "OSHA 29 CFR 1926.651(k)(1)",
+      "fact": "A competent person must inspect excavations, adjacent areas and protective systems daily before work starts and as needed during the shift, and again after every rainstorm or other event that increases the hazard.",
+      "status": "verified", "note": "",
+      "keywords": ["excavation inspection", "competent person", "trench", "rainstorm", "daily inspection", "cave-in"]
+    },
+    {
+      "topic": "Masonry", "trade": "gc", "state": null,
+      "source": "Brick Industry Association Technical Note 46 (repointing)",
+      "fact": "Repointing (tuckpointing) mortar should be prehydrated before use and is usually a Type N or softer mortar so it is not stronger than the original masonry.",
+      "status": "verified", "note": "",
+      "keywords": ["tuckpointing", "repointing", "prehydrated mortar", "type n", "mortar joints", "brick repair"]
+    },
+    {
+      "topic": "Masonry", "trade": "gc", "state": null,
+      "source": "Standard practice: masonry grout",
+      "fact": "Grout mixed with more water than specified can segregate (aggregate separates from the paste) and shrink excessively in the cells.",
+      "status": "verified", "note": "",
+      "keywords": ["masonry grout", "segregation", "too wet", "slump", "grout consistency", "cmu cells"]
+    },
+    {
+      "topic": "Masonry", "trade": "gc", "state": null,
+      "source": "Brick cleaning practice (abrasive blasting)",
+      "fact": "Abrasive blasting of brick is done at low to moderate nozzle pressure, roughly 60-100 psi, to avoid damaging the brick face and mortar joints.",
+      "status": "unverified",
+      "note": "Card gives 60-100 'psf', an obvious unit error for psi. Recommended pressures vary by source and abrasive; cannot confirm the exact range.",
+      "keywords": ["abrasive blasting", "sandblasting", "brick cleaning", "psi", "nozzle pressure", "masonry cleaning"]
+    },
+    {
+      "topic": "Masonry", "trade": "gc", "state": null,
+      "source": "TMS 402 composite wall ties (referenced by IBC 2021 Ch. 21)",
+      "fact": "In composite masonry walls, wire wall ties may be spaced no more than 36 in apart horizontally and 24 in apart vertically.",
+      "status": "verified", "note": "",
+      "keywords": ["wall ties", "composite wall", "tie spacing", "36 inches", "masonry", "multi-wythe"]
+    },
+    {
+      "topic": "Building code (IBC)", "trade": "gc", "state": null,
+      "source": "IBC 2021 Section 202 (definition of shear wall)",
+      "fact": "A shear wall is a wall designed to resist lateral forces (wind or seismic) acting parallel to the plane of the wall.",
+      "status": "verified", "note": "",
+      "keywords": ["shear wall", "lateral force", "in-plane", "wind load", "seismic", "bracing"]
+    },
+    {
+      "topic": "Residential code", "trade": "gc", "state": null,
+      "source": "Standard practice: attic ventilation",
+      "fact": "Passive attic ventilation uses natural airflow: air enters through soffit or eave vents and exits through ridge vents, with no fans.",
+      "status": "verified", "note": "",
+      "keywords": ["passive ventilation", "ridge vent", "soffit vent", "eave vent", "attic airflow", "natural ventilation"]
+    },
+    {
+      "topic": "Energy & environmental", "trade": "gc", "state": null,
+      "source": "Manufacturer guidance: wet-spray cellulose",
+      "fact": "Wet-spray cellulose insulation must dry to a low moisture content (often cited as below about 19%) before drywall is installed over it.",
+      "status": "unverified",
+      "note": "Manufacturer limits vary (some allow up to 25%); the 19% figure cannot be confirmed as a single standard.",
+      "keywords": ["wet spray cellulose", "insulation", "moisture content", "drying", "drywall", "damp spray"]
+    },
+    {
+      "topic": "Wood framing", "trade": "gc", "state": null,
+      "source": "DOC PS 20 (American Softwood Lumber Standard)",
+      "fact": "Dry dimension lumber is smaller than its nominal size: a 2x4 is 1-1/2 x 3-1/2 in, 2x6 is 1-1/2 x 5-1/2 in, 2x8 is 1-1/2 x 7-1/4 in, 2x10 is 1-1/2 x 9-1/4 in and 2x12 is 1-1/2 x 11-1/4 in.",
+      "status": "verified", "note": "",
+      "keywords": ["actual size", "nominal size", "2x4", "2x8", "dimension lumber", "dressed lumber"]
+    },
+    {
+      "topic": "Wood framing", "trade": "gc", "state": null,
+      "source": "DOC PS 20 (green lumber sizes)",
+      "fact": "Unseasoned (green) 2x6 lumber is dressed to 1-9/16 x 5-5/8 in, so it is 3/8 in narrower than a 6 in steel stud.",
+      "status": "verified", "note": "",
+      "keywords": ["green lumber", "unseasoned", "2x6", "steel stud", "5-5/8", "lumber size"]
+    },
+    {
+      "topic": "Site work & concrete", "trade": "gc", "state": null,
+      "source": "ASTM A615 (deformed reinforcing bars)",
+      "fact": "The raised ribs (deformations) on reinforcing bars are made on purpose to improve bond, so the concrete grips the steel and load transfers between them.",
+      "status": "verified", "note": "",
+      "keywords": ["rebar", "deformations", "bond", "reinforcing steel", "ribs", "concrete grip"]
+    },
+    {
+      "topic": "Building code (IBC)", "trade": "gc", "state": null,
+      "source": "ASTM B88 (seamless copper water tube)",
+      "fact": "Copper water tube is color coded by wall thickness: Type K (thickest) green, Type L blue, Type M (thinnest) red.",
+      "status": "verified", "note": "",
+      "keywords": ["copper pipe", "type m", "type l", "type k", "color code", "water tube"]
+    },
+    {
+      "topic": "Estimating", "trade": "gc", "state": null,
+      "source": "Standard estimating practice: stud count",
+      "fact": "For a straight partition, studs = (length in inches / spacing) + 1; a 12 ft wall at 16 in on center needs 144/16 + 1 = 10 studs before adding for corners, openings or waste.",
+      "status": "verified", "note": "",
+      "keywords": ["stud count", "partition", "16 inches on center", "framing takeoff", "estimating", "studs per wall"]
+    },
+    {
+      "topic": "Wood framing", "trade": "gc", "state": null,
+      "source": "Standard practice: pocket doors",
+      "fact": "A pocket door frame must be installed during framing, before the drywall, because the door slides into a cavity inside the wall.",
+      "status": "verified", "note": "",
+      "keywords": ["pocket door", "door frame", "rough framing", "before drywall", "sliding door", "split jamb"]
+    },
+    {
+      "topic": "Estimating", "trade": "gc", "state": null,
+      "source": "Earthwork estimating: swell factors",
+      "fact": "When excavated, blasted rock swells the most (roughly 50-65% from bank to loose volume), more than clay, loam or sand, so it needs the most haul capacity per bank cubic yard.",
+      "status": "verified", "note": "",
+      "keywords": ["swell factor", "blasted rock", "bank yards", "loose yards", "earthwork", "excavation"]
+    },
+    {
+      "topic": "Estimating", "trade": "gc", "state": null,
+      "source": "Standard estimating math: trench volume",
+      "fact": "Trench volume = average width x depth x length. A trench 18 ft wide at the top, 5 ft wide at the bottom, 8 ft deep and 750 ft long holds (18+5)/2 x 8 x 750 = 69,000 cu ft (about 2,556 cu yd).",
+      "status": "corrected",
+      "note": "Card states an 18-inch top width but answers 69,000 cu ft, which only works with an 18-ft top width; with 18 in the volume would be 19,500 cu ft.",
+      "keywords": ["trench volume", "cubic feet", "excavation quantity", "average width", "takeoff", "cubic yards"]
+    },
+    {
+      "topic": "Doors, windows & glazing", "trade": "gc", "state": null,
+      "source": "Standard practice: glass curtain walls",
+      "fact": "Framing for a fixed-glass curtain wall must be rigid enough to carry lateral wind loads on the glass without excessive deflection.",
+      "status": "verified", "note": "",
+      "keywords": ["curtain wall", "fixed glass", "wind load", "lateral force", "glazing frame", "deflection"]
+    },
+    {
+      "topic": "Site work & concrete", "trade": "gc", "state": null,
+      "source": "Structural fundamentals: precast concrete frames",
+      "fact": "Connections in precast concrete frames are usually treated as pinned, so they resist little moment; lateral stability must come from shear walls, bracing or other lateral systems.",
+      "status": "corrected",
+      "note": "Card says pin-type connections provide lateral stability. Pinned connections do not resist moment, so stability has to be provided by a separate lateral system.",
+      "keywords": ["precast concrete", "pin connection", "lateral stability", "shear wall", "bracing", "frame"]
+    },
+    {
+      "topic": "Site work & concrete", "trade": "gc", "state": null,
+      "source": "Standard practice: site surveys",
+      "fact": "A topographic survey shows existing ground contours and elevations; the sitework contractor compares it to design grades to figure cut and fill.",
+      "status": "verified", "note": "",
+      "keywords": ["topographic survey", "cut and fill", "contours", "grading", "elevations", "earthwork"]
+    },
+    {
+      "topic": "Estimating", "trade": "gc", "state": null,
+      "source": "Earthwork estimating: shrinkage factors",
+      "fact": "Loam shrinks when compacted relative to its bank volume; one textbook shrinkage factor given for loam is about 0.83.",
+      "status": "unverified",
+      "note": "Shrinkage and load factors vary by reference table (common values for loam range about 0.80-0.90); cannot confirm 0.83 as standard.",
+      "keywords": ["shrinkage factor", "loam", "compaction", "earthwork", "bank volume", "soil"]
+    },
+    {
+      "topic": "Building code (IBC)", "trade": "gc", "state": null,
+      "source": "IBC 2021 1206.2 and 1206.3",
+      "fact": "Walls, partitions and floor-ceiling assemblies separating dwelling or sleeping units from each other or from public areas must have an STC of at least 50 (45 if field tested); floor-ceiling assemblies also need an IIC of at least 50 (45 field tested).",
+      "status": "verified", "note": "",
+      "keywords": ["stc 50", "sound transmission", "iic", "dwelling unit separation", "acoustics", "sound rating"]
+    },
+    {
+      "topic": "Labor law", "trade": "law", "state": null,
+      "source": "NASCLA Contractor's Guide topic: employee handbooks",
+      "fact": "Company employee handbooks cover policies for current employees (pay, conduct, benefits, safety); hiring practices are generally kept out of the employee manual.",
+      "status": "unverified",
+      "note": "From a multiple-choice card with no options shown; cannot confirm this is a firm rule.",
+      "keywords": ["employee handbook", "employee manual", "hiring practices", "policies", "hr", "personnel"]
+    },
+    {
+      "topic": "Estimating & bidding", "trade": "law", "state": null,
+      "source": "NASCLA Contractor's Guide topic: labor burden",
+      "fact": "True labor cost includes more than wages: the employer's payroll taxes (FICA, FUTA, SUTA), workers' compensation insurance and fringe benefits are part of the labor burden.",
+      "status": "verified", "note": "",
+      "keywords": ["labor burden", "labor cost", "workers compensation", "payroll taxes", "fringe benefits", "estimating"]
+    },
+    {
+      "topic": "Labor law", "trade": "law", "state": null,
+      "source": "FLSA; 29 CFR 785.11-785.13",
+      "fact": "Under the FLSA, work an employer suffers or permits is paid work time, so unauthorized overtime by a non-exempt employee must still be paid at the overtime rate; the employer may discipline the employee but cannot withhold the pay.",
+      "status": "verified", "note": "",
+      "keywords": ["unauthorized overtime", "flsa", "overtime pay", "time and a half", "non-exempt", "wage law"]
+    },
+    {
+      "topic": "Safety recordkeeping", "trade": "law", "state": null,
+      "source": "OSHA Field Operations Manual (inspection types)",
+      "fact": "Programmed OSHA inspections are planned inspections aimed at high-hazard industries or establishments with high injury and illness rates; unprogrammed inspections respond to imminent danger, fatalities, complaints and referrals.",
+      "status": "verified", "note": "",
+      "keywords": ["osha inspection", "programmed inspection", "high injury rate", "targeting", "unprogrammed", "enforcement"]
+    },
+    {
+      "topic": "Environmental", "trade": "law", "state": null,
+      "source": "National Environmental Policy Act, 42 USC 4321 et seq.",
+      "fact": "NEPA applies to major federal actions, such as projects that are federally funded, federally permitted or on federal land, and requires their environmental effects to be evaluated.",
+      "status": "verified", "note": "",
+      "keywords": ["nepa", "federal action", "environmental review", "environmental impact statement", "federal funding", "environmental assessment"]
+    },
+    {
+      "topic": "Energy & environmental", "trade": "gc", "state": null,
+      "source": "EPA indoor air quality guidance (VOCs)",
+      "fact": "The best way to limit VOC exposure is to choose low-VOC (low-emitting) products and to store VOC-containing materials in a well-ventilated area sealed off from occupied spaces.",
+      "status": "verified", "note": "",
+      "keywords": ["voc", "volatile organic compounds", "low emitting", "indoor air quality", "ventilation", "storage"]
+    },
+    {
+      "topic": "Environmental", "trade": "law", "state": null,
+      "source": "EPA Asbestos NESHAP, 40 CFR 61.145",
+      "fact": "Before any demolition or renovation, the affected part of the building must be thoroughly inspected for asbestos (by an accredited inspector), and the regulating agency must be notified at least 10 working days before demolition or a regulated renovation begins.",
+      "status": "verified", "note": "",
+      "keywords": ["asbestos", "neshap", "demolition", "renovation", "inspection", "10 working days"]
+    },
+    {
+      "topic": "Environmental", "trade": "law", "state": null,
+      "source": "TSCA Section 16; 40 CFR Part 19 (civil penalty inflation adjustments)",
+      "fact": "Violating EPA lead-based paint rules (such as the RRP rule) can bring civil penalties per violation per day; the cap started at $37,500 and is raised each year for inflation, now exceeding $48,000.",
+      "status": "corrected",
+      "note": "Card says up to $37,500 per day, the original 2008-era amount. EPA adjusts TSCA penalties annually for inflation and the current maximum is well above that.",
+      "keywords": ["lead paint", "rrp rule", "epa fine", "penalty", "per day", "tsca"]
+    },
+    {
+      "topic": "Environmental", "trade": "law", "state": null,
+      "source": "40 CFR 745.223 (definition of abatement)",
+      "fact": "Lead abatement means measures designed to permanently eliminate lead-based paint hazards, unlike interim controls, which reduce hazards temporarily.",
+      "status": "verified", "note": "",
+      "keywords": ["lead abatement", "lead-based paint", "permanent removal", "interim controls", "lead hazard", "epa"]
+    },
+    {
+      "topic": "Safety (OSHA)", "trade": "gc", "state": null,
+      "source": "OSHA 29 CFR 1926.35; 1910.38(b)",
+      "fact": "An emergency action plan must be written, kept at the workplace and available to employees when the employer has more than 10 employees; with 10 or fewer it may be communicated orally.",
+      "status": "verified", "note": "",
+      "keywords": ["emergency action plan", "written plan", "11 employees", "eap", "evacuation", "osha"]
+    },
+    {
+      "topic": "Payroll & tax", "trade": "law", "state": null,
+      "source": "IRS Pub 15 (Circular E)",
+      "fact": "Medicare tax is 1.45% of all wages for the employee and another 1.45% for the employer, and the employer must withhold an extra 0.9% Additional Medicare Tax on an employee's wages above $200,000 in a year (employee only). Social Security tax is 6.2% each, up to the annual wage base.",
+      "status": "verified", "note": "",
+      "keywords": ["medicare tax", "1.45 percent", "fica", "social security", "additional medicare", "payroll tax"]
+    },
+    {
+      "topic": "Financial management", "trade": "law", "state": null,
+      "source": "Accounting fundamentals: balance sheet",
+      "fact": "Fixed assets are long-term tangible assets used to run the business, such as equipment, vehicles, buildings and land, and they are depreciated (except land).",
+      "status": "verified", "note": "",
+      "keywords": ["fixed assets", "equipment", "balance sheet", "depreciation", "long-term assets", "property"]
+    },
+    {
+      "topic": "Financial management", "trade": "law", "state": null,
+      "source": "Accounting fundamentals: balance sheet",
+      "fact": "Owner's equity is the owner's stake in the business: what the owner invested plus retained earnings, equal to total assets minus total liabilities.",
+      "status": "verified", "note": "",
+      "keywords": ["owners equity", "net worth", "capital", "balance sheet", "assets minus liabilities", "investment"]
+    },
+    {
+      "topic": "Financial management", "trade": "law", "state": null,
+      "source": "Accounting fundamentals: income statement",
+      "fact": "Gross profit equals revenue minus cost of goods sold (for a contractor, direct construction costs); net profit then subtracts overhead and other expenses.",
+      "status": "verified", "note": "",
+      "keywords": ["gross profit", "cost of goods sold", "revenue", "income statement", "direct costs", "margin"]
+    },
+    {
+      "topic": "Payroll & tax", "trade": "law", "state": null,
+      "source": "IRS Form 1040-ES; IRS Pub 505",
+      "fact": "A profitable sole proprietor has no employer withholding on business income, so they avoid the underpayment penalty by making quarterly estimated tax payments (Form 1040-ES).",
+      "status": "verified", "note": "",
+      "keywords": ["estimated tax", "quarterly payments", "sole proprietor", "1040-es", "underpayment penalty", "self-employed"]
+    },
+    {
+      "topic": "Payroll & tax", "trade": "law", "state": null,
+      "source": "IRS Pub 15 (depositing taxes)",
+      "fact": "Federal payroll tax deposits must be made by electronic funds transfer, usually through EFTPS; paper deposit coupons (Form 8109) were discontinued after 2010. An employer with less than $2,500 of liability for the quarter may instead pay with a timely filed Form 941.",
+      "status": "corrected",
+      "note": "Card says corporations may mail deposits with a payment coupon. The IRS eliminated Form 8109 deposit coupons as of January 1, 2011; deposits must be made electronically.",
+      "keywords": ["eftps", "tax deposit", "electronic funds transfer", "form 8109", "payroll tax", "form 941"]
+    },
+    {
+      "topic": "Payroll & tax", "trade": "law", "state": null,
+      "source": "IRS Pub 15 (Circular E)",
+      "fact": "Employers must withhold federal income tax and the employee's share of FICA (Social Security and Medicare) from paychecks; FUTA is paid only by the employer and is never withheld.",
+      "status": "verified", "note": "",
+      "keywords": ["withholding", "fica", "federal income tax", "futa", "paycheck", "employer taxes"]
+    },
+    {
+      "topic": "Financial management", "trade": "law", "state": null,
+      "source": "Financial ratio fundamentals",
+      "fact": "Net income divided by revenue is the net profit margin, a profitability ratio showing how much of each sales dollar is kept as profit.",
+      "status": "verified", "note": "",
+      "keywords": ["profitability ratio", "net profit margin", "net income", "revenue", "financial ratio", "return on sales"]
+    },
+    {
+      "topic": "Payroll & tax", "trade": "law", "state": null,
+      "source": "IRS Pub 15 (deposit schedules)",
+      "fact": "An employer whose total employment taxes in the lookback period were $50,000 or less deposits monthly; more than $50,000 means semiweekly deposits, and a $100,000 liability on any day must be deposited the next business day.",
+      "status": "verified", "note": "",
+      "keywords": ["deposit schedule", "monthly depositor", "semiweekly", "lookback period", "50000", "payroll tax"]
+    },
+    {
+      "topic": "Financial management", "trade": "law", "state": null,
+      "source": "Accounting fundamentals: cash vs accrual",
+      "fact": "The main drawback of cash-basis accounting is that revenue and expenses are recorded when cash moves, so expenses may not be matched to the revenue they produced in the same period.",
+      "status": "verified", "note": "",
+      "keywords": ["cash basis", "accrual", "matching principle", "accounting method", "revenue recognition", "expenses"]
+    },
+    {
+      "topic": "Business organization", "trade": "law", "state": null,
+      "source": "IRS guidance: Do you need an EIN?",
+      "fact": "A sole proprietor or single-member LLC may use the owner's SSN instead of an EIN only if it has no employees and does not file excise, employment or pension plan returns; once it hires employees it needs an EIN.",
+      "status": "corrected",
+      "note": "Card says sole proprietors and single-owner LLCs do not need an EIN, without the condition. They need one as soon as they have employees or certain filing obligations.",
+      "keywords": ["ein", "employer identification number", "sole proprietor", "single member llc", "ssn", "employees"]
+    },
+    {
+      "topic": "Payroll & tax", "trade": "law", "state": null,
+      "source": "IRS Pub 15; IRC 6656 (failure-to-deposit penalty)",
+      "fact": "Failure-to-deposit penalties: 2% for deposits 1-5 days late, 5% for 6-15 days late, 10% for more than 15 days late, and 15% if still unpaid 10 days after the first IRS notice.",
+      "status": "verified", "note": "",
+      "keywords": ["failure to deposit", "penalty", "10 percent", "late deposit", "irs", "payroll tax"]
+    },
+    {
+      "topic": "Payroll & tax", "trade": "law", "state": null,
+      "source": "IRS Form 940 instructions; Pub 15",
+      "fact": "If accumulated FUTA tax exceeds $500 at the end of a quarter, it must be deposited by the last day of the month after that quarter; the Form 940 return itself is filed once a year, due January 31.",
+      "status": "corrected",
+      "note": "Card says unemployment tax over $500 must be filed quarterly. The deposit is quarterly; the FUTA return (Form 940) is filed annually.",
+      "keywords": ["futa", "form 940", "unemployment tax", "quarterly deposit", "500 dollars", "annual return"]
+    },
+    {
+      "topic": "Contracts & liens", "trade": "law", "state": null,
+      "source": "Contract law fundamentals; statute of frauds",
+      "fact": "Oral contracts can be binding but are discouraged because their terms are hard to prove in a dispute, and some contracts (e.g. real estate or those not performable within a year) must be in writing under the statute of frauds.",
+      "status": "verified", "note": "",
+      "keywords": ["oral contract", "verbal agreement", "statute of frauds", "written contract", "proof", "dispute"]
+    },
+    {
+      "topic": "Bonds & insurance", "trade": "law", "state": null,
+      "source": "Miller Act, 40 USC 3131; FAR 28.102-2",
+      "fact": "On federal construction contracts covered by the Miller Act, the payment bond must equal 100% of the original contract price unless the contracting officer finds that impractical, so a $5.1 million contract needs a $5.1 million payment bond.",
+      "status": "corrected",
+      "note": "Cards claim $2.5 million on a $5.1M contract and 40% ($1,040,000) on a $2.6M contract. Those are the pre-1999 tiered amounts; the 1999 amendments set the payment bond at 100% of contract value.",
+      "keywords": ["payment bond", "miller act", "100 percent", "federal contract", "bond amount", "surety"]
+    },
+    {
+      "topic": "Bonds & insurance", "trade": "law", "state": null,
+      "source": "Surety bond fundamentals",
+      "fact": "A bid bond assures the owner that the bidder bid in good faith and, if awarded, will sign the contract and provide the required performance and payment bonds; otherwise the surety pays damages up to the bond amount.",
+      "status": "verified", "note": "",
+      "keywords": ["bid bond", "good faith", "surety", "bid security", "award", "bonds"]
+    },
+    {
+      "topic": "Contracts & liens", "trade": "law", "state": null,
+      "source": "Contract law fundamentals",
+      "fact": "A valid contract is an agreement between two or more parties with legal capacity, with offer and acceptance (mutual assent), consideration and a lawful purpose.",
+      "status": "verified", "note": "",
+      "keywords": ["contract elements", "offer", "acceptance", "consideration", "capacity", "legal purpose"]
+    },
+    {
+      "topic": "Contracts & liens", "trade": "law", "state": null,
+      "source": "AIA A201 Article 9 (Certificate for Payment)",
+      "fact": "Under AIA-based contracts, the architect reviews the contractor's application for payment and certifies to the owner the amount due based on work completed before a progress payment is made.",
+      "status": "verified", "note": "",
+      "keywords": ["progress payment", "architect", "certificate for payment", "pay application", "aia a201", "percent complete"]
+    },
+    {
+      "topic": "Contracts & liens", "trade": "law", "state": null,
+      "source": "AIA A201 Article 7 (changes in the work)",
+      "fact": "A change order is a written instrument, signed by owner, contractor and architect, that adds to, deletes from or alters the contract work and may adjust the contract sum and contract time.",
+      "status": "verified", "note": "",
+      "keywords": ["change order", "contract modification", "scope change", "contract sum", "contract time", "aia"]
+    },
+    {
+      "topic": "Payroll & tax", "trade": "law", "state": null,
+      "source": "IRS General Instructions for Information Returns (1099-NEC, 1099-MISC)",
+      "fact": "Recipient copies of Form 1099-NEC (used since tax year 2020 for nonemployee compensation paid to subcontractors) and most Form 1099-MISC must be furnished by January 31.",
+      "status": "verified", "note": "",
+      "keywords": ["1099-nec", "1099-misc", "january 31", "subcontractor", "information return", "nonemployee compensation"]
+    },
+    {
+      "topic": "Payroll & tax", "trade": "law", "state": null,
+      "source": "IRC 460(e); IRC 448(c); Rev. Proc. 2024-40",
+      "fact": "The small-contractor exception that allows the completed-contract method (instead of percentage of completion) applies to contracts expected to finish within 2 years by contractors whose average annual gross receipts for the prior 3 years do not exceed the inflation-indexed limit ($25 million base; $31 million for tax years beginning in 2025).",
+      "status": "corrected",
+      "note": "Card says $10 million, the pre-2018 limit. The Tax Cuts and Jobs Act raised it to $25 million indexed for inflation.",
+      "keywords": ["completed contract method", "small contractor", "gross receipts", "percentage of completion", "tcja", "tax accounting"]
+    },
+    {
+      "topic": "Bonds & insurance", "trade": "law", "state": null,
+      "source": "Miller Act, 40 USC 3131-3134; FAR 28.102-1",
+      "fact": "The Miller Act, enacted in 1935, requires performance and payment bonds on federal construction contracts (currently those over $150,000 under the FAR), because liens cannot be filed against federal property.",
+      "status": "verified", "note": "",
+      "keywords": ["miller act", "1935", "federal construction", "payment bond", "performance bond", "public works"]
+    },
+    {
+      "topic": "Bonds & insurance", "trade": "law", "state": null,
+      "source": "FAR 28.102-2(b)(1)",
+      "fact": "On federal construction projects, the performance bond is normally 100% of the original contract price.",
+      "status": "verified", "note": "",
+      "keywords": ["performance bond", "100 percent", "federal project", "contract price", "surety", "bond amount"]
+    },
+    {
+      "topic": "Contracts & liens", "trade": "law", "state": null,
+      "source": "Dispute resolution fundamentals",
+      "fact": "In mediation a neutral helps the parties reach their own voluntary settlement; in arbitration a neutral third party hears the case and issues a decision that is usually binding on the parties.",
+      "status": "verified", "note": "",
+      "keywords": ["mediation", "arbitration", "dispute resolution", "binding decision", "adr", "neutral"]
+    },
+    {
+      "topic": "Business organization", "trade": "law", "state": null,
+      "source": "IRS guidance: Do you need a new EIN?",
+      "fact": "A new owner who buys an existing business generally must get a new EIN; the seller's EIN cannot simply be taken over.",
+      "status": "verified", "note": "",
+      "keywords": ["ein", "new owner", "business purchase", "employer identification number", "acquisition", "irs"]
+    },
+    {
+      "topic": "Contracts & liens", "trade": "law", "state": null,
+      "source": "Contract law fundamentals: subcontracts",
+      "fact": "A flow-down clause binds the subcontractor to the general contractor the same way the general contractor is bound to the owner under the prime contract.",
+      "status": "verified", "note": "",
+      "keywords": ["flow-down clause", "subcontract", "prime contract", "pass-through", "obligations", "subcontractor"]
+    },
+    {
+      "topic": "Building code (IBC)", "trade": "gc", "state": null,
+      "source": "NEC (NFPA 70) electrical fundamentals",
+      "fact": "A three-phase panel has three ungrounded (hot) phase legs, A, B and C; a three-phase four-wire service adds a grounded neutral conductor to those three phases.",
+      "status": "verified", "note": "",
+      "keywords": ["three phase", "legs", "neutral", "four wire", "electrical service", "panel"]
+    },
+    {
+      "topic": "Residential code", "trade": "gc", "state": null,
+      "source": "IRC 2021 P2902.4.3",
+      "fact": "Sillcocks, hose bibbs, wall hydrants and other hose connections must have backflow protection from an atmospheric-type or pressure-type vacuum breaker or a permanently attached hose-connection vacuum breaker.",
+      "status": "verified", "note": "",
+      "keywords": ["hose bibb", "sillcock", "vacuum breaker", "backflow", "hose connection", "plumbing"]
+    },
+    {
+      "topic": "Building code (IBC)", "trade": "gc", "state": null,
+      "source": "NEC 250.24(A)(5) and 250.142(B)",
+      "fact": "Neutral (grounded) conductors and equipment grounding conductors are bonded together only at the service disconnect; in a subpanel downstream of the service they must be kept on separate, isolated bars.",
+      "status": "verified", "note": "",
+      "keywords": ["subpanel", "neutral", "ground", "bonding", "grounding bar", "electrical panel"]
+    },
+    {
+      "topic": "Building code (IBC)", "trade": "gc", "state": null,
+      "source": "IPC 2021 Table 308.5",
+      "fact": "Maximum horizontal pipe support spacing includes: PVC and ABS 4 ft; CPVC 1 in and smaller 3 ft; PEX 1 in and smaller 32 in; copper tubing 1-1/4 in and smaller 6 ft; cast iron 5 ft (10 ft with 10 ft lengths); steel 12 ft.",
+      "status": "corrected",
+      "note": "Card says PVC needs the most horizontal support. PVC (4 ft) needs closer support than metal pipe, but PEX and polybutylene (32 in) and small CPVC (3 ft) need even closer support.",
+      "keywords": ["pipe support", "hanger spacing", "pvc", "pex", "horizontal support", "plumbing"]
+    },
+    {
+      "topic": "Building code (IBC)", "trade": "gc", "state": null,
+      "source": "NEC 250.52(A)(3) and 250.52(B)",
+      "fact": "Rebar can be a grounding electrode: at least 20 ft of 1/2 in or larger bar in a footing in contact with earth, encased in at least 2 in of concrete (a concrete-encased or Ufer electrode). Metal underground gas piping and aluminum may not be used as grounding electrodes.",
+      "status": "corrected",
+      "note": "Card says rebar cannot be used for grounding. The NEC expressly permits concrete-encased rebar electrodes; gas piping and aluminum are the prohibited ones.",
+      "keywords": ["grounding electrode", "ufer ground", "rebar", "concrete encased", "gas pipe", "nec"]
+    },
+    {
+      "topic": "Building code (IBC)", "trade": "gc", "state": null,
+      "source": "NEC 2017+ 300.5(C) Exception No. 2; 330.10(A)(5)",
+      "fact": "Underground cables under a building normally must be in a raceway, but Type MC cable listed for direct burial (and MI cable embedded in concrete or fill) may run under a building without a raceway.",
+      "status": "unverified",
+      "note": "Exception added in the 2017 NEC; whether it applies depends on the NEC edition the jurisdiction has adopted.",
+      "keywords": ["mc cable", "direct burial", "raceway", "under building", "underground wiring", "nec"]
+    },
+    {
+      "topic": "Residential code", "trade": "gc", "state": null,
+      "source": "IRC 2021 Table P3201.7; IPC 2021 Table 709.1",
+      "fact": "A kitchen sink needs a 1-1/2 in trap, including when it serves a food waste disposer and dishwasher.",
+      "status": "verified", "note": "",
+      "keywords": ["kitchen sink", "trap size", "garbage disposal", "1-1/2 inch", "p-trap", "plumbing"]
+    },
+    {
+      "topic": "Environmental", "trade": "law", "state": null,
+      "source": "Clean Water Act NPDES; EPA Construction General Permit",
+      "fact": "A federal NPDES stormwater permit is required for construction that disturbs 1 acre or more, or less than 1 acre if part of a larger common plan of development that disturbs 1 acre or more.",
+      "status": "verified", "note": "",
+      "keywords": ["stormwater permit", "npdes", "1 acre", "construction general permit", "runoff", "swppp"]
+    },
+    {
+      "topic": "Building code (IBC)", "trade": "gc", "state": null,
+      "source": "IBC 2021 Table 3306.1",
+      "fact": "For construction more than 8 ft tall, pedestrian protection depends on setback from the lot line: under 5 ft needs a barrier and covered walkway, 5 ft up to 1/4 the height needs a barrier and covered walkway, 1/4 to 1/2 the height needs a barrier, and more than 1/2 the height needs none. A 48 ft building set back 20 ft (between 12 and 24 ft) needs a barrier.",
+      "status": "verified", "note": "",
+      "keywords": ["pedestrian protection", "barrier", "covered walkway", "setback", "lot line", "construction safety"]
+    },
+    {
+      "topic": "Building code (IBC)", "trade": "gc", "state": null,
+      "source": "IBC 2021 1005.7.1",
+      "fact": "A door in the means of egress, when fully open, may not reduce the required egress width by more than 7 in, and at any position it may not reduce the required width by more than half.",
+      "status": "verified", "note": "",
+      "keywords": ["door encroachment", "egress width", "7 inches", "means of egress", "door swing", "corridor"]
+    },
+    {
+      "topic": "Building code (IBC)", "trade": "gc", "state": null,
+      "source": "IBC 2021 105.2; IRC 2021 R105.2",
+      "fact": "Retaining walls no more than 4 ft high, measured from the bottom of the footing to the top of the wall, are exempt from a permit unless they support a surcharge or impound Class I, II or IIIA liquids.",
+      "status": "verified", "note": "",
+      "keywords": ["retaining wall", "permit exemption", "4 feet", "surcharge", "building permit", "landscape wall"]
+    },
+    {
+      "topic": "Steel & trusses", "trade": "gc", "state": null,
+      "source": "IBC 2021 Section 2207 (steel joist placement plans)",
+      "fact": "Steel joist placement plans must show loads, nonstandard joist profiles, support and splice connections, deflection criteria, bridging size and location, and joist headers, but they do not need the seal and signature of the joist manufacturer's registered design professional.",
+      "status": "verified", "note": "",
+      "keywords": ["steel joist", "placement plans", "bridging", "shop drawings", "professional seal", "joist girder"]
+    },
+    {
+      "topic": "Fire protection", "trade": "gc", "state": null,
+      "source": "IBC 2021 3007.6.3",
+      "fact": "An enclosed fire service access elevator lobby must be at least 150 sq ft with no dimension less than 8 ft.",
+      "status": "verified", "note": "",
+      "keywords": ["fire service access elevator", "elevator lobby", "150 square feet", "8 feet", "high-rise", "firefighter"]
+    },
+    {
+      "topic": "Accessibility", "trade": "gc", "state": null,
+      "source": "IBC 2021 1014.6; ICC A117.1 505.10.1",
+      "fact": "Where ramp handrails are not continuous between runs, they must extend horizontally at least 12 in beyond the top and bottom of each ramp run.",
+      "status": "verified", "note": "",
+      "keywords": ["ramp handrail", "handrail extension", "12 inches", "accessible ramp", "ada", "landing"]
+    },
+    {
+      "topic": "Fire protection", "trade": "gc", "state": null,
+      "source": "Manufacturer guidance: spray-applied fire-resistive materials",
+      "fact": "Spray-applied fireproofing on steel generally requires ambient and substrate temperatures of at least 40 degrees F during application and for about 24 hours after.",
+      "status": "unverified",
+      "note": "Temperature limits come from product manufacturers, not the IBC; values vary by product.",
+      "keywords": ["fireproofing", "sfrm", "steel beam", "40 degrees", "application temperature", "fire retardant"]
+    },
+    {
+      "topic": "Building code (IBC)", "trade": "gc", "state": null,
+      "source": "IBC 2021 Section 3306 (protection of pedestrians)",
+      "fact": "Pedestrians must be protected by directional barricades where a walkway in front of a construction site extends into the street; such walkways must be at least 4 ft wide.",
+      "status": "verified", "note": "",
+      "keywords": ["directional barricades", "pedestrian walkway", "street", "4 feet", "construction site", "sidewalk"]
+    },
+    {
+      "topic": "Building code (IBC)", "trade": "gc", "state": null,
+      "source": "IBC 2021 Table 1604.3; IRC 2021 Table R301.7",
+      "fact": "Floor members are limited to a live-load deflection of L/360 (span divided by 360); the IBC limit for total dead plus live load on floors is L/240.",
+      "status": "verified", "note": "",
+      "keywords": ["deflection", "l/360", "floor joist", "live load", "span", "stiffness"]
+    },
+    {
+      "topic": "Site work & concrete", "trade": "gc", "state": null,
+      "source": "IBC 2021 1809.3; IRC 2021 R403.1.5",
+      "fact": "Footings must be stepped where the bottom of the footing slopes more than 1 vertical in 10 horizontal (10%).",
+      "status": "verified", "note": "",
+      "keywords": ["stepped footing", "10 percent slope", "footing", "sloped site", "foundation", "1 in 10"]
+    },
+    {
+      "topic": "Accessibility", "trade": "gc", "state": null,
+      "source": "IBC 2021 Section 1010 (thresholds)",
+      "fact": "Door thresholds may be no more than 3/4 in high for sliding doors serving dwelling units and no more than 1/2 in high for other doors.",
+      "status": "verified", "note": "",
+      "keywords": ["threshold height", "sliding door", "3/4 inch", "1/2 inch", "doorway", "accessibility"]
+    },
+    {
+      "topic": "Wood framing", "trade": "gc", "state": null,
+      "source": "IRC 2021 R502.8.1",
+      "fact": "Notches at the ends of solid lumber joists may not exceed 1/4 of the joist depth; notches elsewhere are limited to 1/6 of the depth, no longer than 1/3 of the depth, and not in the middle third of the span.",
+      "status": "verified", "note": "",
+      "keywords": ["joist notch", "end notch", "1/4 depth", "notching", "floor joist", "cutting"]
+    },
+    {
+      "topic": "Roofing", "trade": "gc", "state": null,
+      "source": "IRC 2021 R905.2.8.5",
+      "fact": "Drip edge on shingle roofs must be mechanically fastened at no more than 12 in on center, overlap adjacent pieces at least 2 in, extend at least 1/4 in below the sheathing, and extend at least 2 in back onto the deck.",
+      "status": "verified", "note": "",
+      "keywords": ["drip edge", "fastener spacing", "12 inches", "roof edge", "shingle roof", "flashing"]
+    },
+    {
+      "topic": "Roofing", "trade": "gc", "state": null,
+      "source": "IRC 2021 R905.2.8.5",
+      "fact": "On shingle roofs, drip edge goes under the underlayment at eaves and over the underlayment along rake edges.",
+      "status": "verified", "note": "",
+      "keywords": ["drip edge", "eave", "rake", "underlayment", "felt", "installation order"]
+    },
+    {
+      "topic": "Fire protection", "trade": "gc", "state": null,
+      "source": "IBC 2021 Section 704 (impact protection)",
+      "fact": "Where fire-protective covering on a structural member could be damaged by vehicles, material handling or similar activity, it must be protected by corner guards or a metal or noncombustible jacket at least 5 ft above the finished floor.",
+      "status": "verified", "note": "",
+      "keywords": ["corner guards", "fireproofing protection", "impact damage", "5 feet", "column", "structural member"]
+    },
+    {
+      "topic": "Roofing", "trade": "gc", "state": null,
+      "source": "IRC 2021 R905.2.5; IBC 2021 1507.2.6",
+      "fact": "Asphalt shingles must be attached with corrosion-resistant roofing nails (galvanized steel, stainless steel, aluminum or copper) with at least a 12-gauge shank and a 3/8 in head; staples are not an approved fastener.",
+      "status": "verified", "note": "",
+      "keywords": ["asphalt shingles", "roofing nails", "staples", "fasteners", "12 gauge", "shingle installation"]
+    },
+    {
+      "topic": "Fire protection", "trade": "gc", "state": null,
+      "source": "IFC 2021 901.5",
+      "fact": "Fire protection systems must pass acceptance tests witnessed by the fire code official, and it is unlawful to occupy a structure until the required detection, alarm and suppression systems have been tested and approved.",
+      "status": "verified", "note": "",
+      "keywords": ["acceptance test", "fire protection system", "occupancy", "sprinkler test", "fire alarm", "certificate of occupancy"]
+    },
+    {
+      "topic": "Fire protection", "trade": "gc", "state": null,
+      "source": "IBC 2021 3007.2",
+      "fact": "Buildings with fire service access elevators must be fully sprinklered, except that sprinklers may not be installed in the machine rooms, machinery spaces, control rooms, control spaces or hoistways of those elevators.",
+      "status": "verified", "note": "",
+      "keywords": ["fire service access elevator", "machine room", "sprinkler", "hoistway", "elevator", "prohibited"]
+    },
+    {
+      "topic": "Residential code", "trade": "gc", "state": null,
+      "source": "IRC 2021 R1003.9; IBC 2021 2113.9",
+      "fact": "A masonry chimney must extend at least 3 ft above the highest point where it passes through the roof and at least 2 ft higher than any part of the building within 10 ft.",
+      "status": "verified", "note": "",
+      "keywords": ["chimney height", "3 feet", "2 feet", "10 feet", "chimney termination", "roof"]
+    },
+    {
+      "topic": "Fire protection", "trade": "gc", "state": null,
+      "source": "IFC 2021 Section 906 (portable fire extinguishers)",
+      "fact": "Extinguisher cabinets generally may not be locked, but in Group I-3 occupancies and mental health areas of Group I-2 occupancies, extinguishers may be locked up or kept at staff locations if staff have keys.",
+      "status": "verified", "note": "",
+      "keywords": ["fire extinguisher", "locked cabinet", "mental health", "group i-2", "group i-3", "secured"]
+    },
+    {
+      "topic": "Fire protection", "trade": "gc", "state": null,
+      "source": "IBC 2021 903.2.11.1",
+      "fact": "Any story or basement over 1,500 sq ft must be sprinklered unless it has qualifying exterior openings for fire department access, and each such opening must have a minimum dimension of at least 30 in.",
+      "status": "verified", "note": "",
+      "keywords": ["basement sprinkler", "exterior openings", "30 inches", "1500 square feet", "fire department access", "windowless story"]
+    },
+    {
+      "topic": "Residential code", "trade": "gc", "state": null,
+      "source": "IRC 2021 R317.1",
+      "fact": "Exterior wood siding, sheathing and wall framing less than 6 in above the ground, or less than 2 in above concrete steps, porches, patios or similar exposed surfaces, must be naturally durable or preservative-treated wood.",
+      "status": "verified", "note": "",
+      "keywords": ["siding clearance", "6 inches", "grade", "treated wood", "decay", "wood siding"]
+    },
+    {
+      "topic": "Fire protection", "trade": "gc", "state": null,
+      "source": "IBC 2021 403.2.1.2",
+      "fact": "In high-rise buildings 420 ft or less in height, fire barriers around vertical shafts (other than interior exit stairways and elevator hoistways) may be reduced to a 1-hour rating if automatic sprinklers are installed in the shafts at the top and at alternate floors.",
+      "status": "verified", "note": "",
+      "keywords": ["shaft enclosure", "high-rise", "420 feet", "1 hour", "fire rating reduction", "sprinklered shaft"]
+    },
+    {
+      "topic": "Building code (IBC)", "trade": "gc", "state": null,
+      "source": "IBC 2021 1014.3.1",
+      "fact": "Type I handrails with a circular cross section must be 1-1/4 to 2 in in outside diameter; non-circular Type I handrails must have a perimeter of 4 to 6-1/4 in and a cross section no larger than 2-1/4 in.",
+      "status": "verified", "note": "",
+      "keywords": ["handrail grip", "type i handrail", "perimeter", "graspability", "handrail diameter", "stair"]
+    },
+    {
+      "topic": "Fire protection", "trade": "gc", "state": null,
+      "source": "IFC 2021 Chapter 37 (combustible fibers)",
+      "fact": "A clearance of at least 3 ft is required between automatic sprinklers and the top of piles of loose combustible fibers.",
+      "status": "unverified",
+      "note": "Could not confirm the exact IFC section or value; general storage uses an 18 in clearance below sprinkler deflectors.",
+      "keywords": ["combustible fibers", "sprinkler clearance", "3 feet", "storage piles", "fire code", "cotton"]
+    },
+    {
+      "topic": "Building code (IBC)", "trade": "gc", "state": null,
+      "source": "IBC 2021 Section 202 (fire separation distance)",
+      "fact": "Fire separation distance is measured at right angles from the building face to the closest interior lot line, to the centerline of a street, alley or public way, or to an imaginary line between two buildings on the same lot.",
+      "status": "verified", "note": "",
+      "keywords": ["fire separation distance", "lot line", "street centerline", "exterior wall rating", "imaginary line", "definition"]
+    },
+    {
+      "topic": "Site work & concrete", "trade": "gc", "state": null,
+      "source": "IBC 2021 1810.2.1",
+      "fact": "Deep foundation elements standing unbraced in air, water or fluid soils may be considered laterally supported at a point 5 ft into stiff soil or 10 ft into soft soil unless otherwise approved.",
+      "status": "verified", "note": "",
+      "keywords": ["deep foundation", "piles", "lateral support", "5 feet", "stiff soil", "unbraced"]
+    },
+    {
+      "topic": "Fire protection", "trade": "gc", "state": null,
+      "source": "IBC 2021 704.2",
+      "fact": "When a fire-rated column extends through a ceiling, its fire protection must run continuously from the top of the foundation or floor/ceiling assembly below, through the ceiling space, to the top of the column.",
+      "status": "verified", "note": "",
+      "keywords": ["column protection", "fire resistance", "ceiling space", "fireproofing", "continuous", "structural column"]
+    },
+    {
+      "topic": "Residential code", "trade": "gc", "state": null,
+      "source": "IRC 2021 R1003.18",
+      "fact": "Interior masonry chimneys (including where they pass through floors and roofs) need at least 2 in of air space clearance to combustibles; chimneys located entirely outside the exterior walls need at least 1 in.",
+      "status": "verified", "note": "",
+      "keywords": ["chimney clearance", "combustibles", "2 inches", "wood framing", "masonry chimney", "roof penetration"]
+    },
+    {
+      "topic": "Fire protection", "trade": "gc", "state": null,
+      "source": "IBC 2021 907.4.2.1 and 907.4.2.2",
+      "fact": "Manual fire alarm boxes (pull stations) must be within 5 ft of the entrance to each exit, with the operable part 42 to 48 in above the floor.",
+      "status": "verified", "note": "",
+      "keywords": ["pull station", "manual fire alarm box", "5 feet", "exit", "mounting height", "fire alarm"]
+    },
+    {
+      "topic": "Building code (IBC)", "trade": "gc", "state": null,
+      "source": "IBC 2021 1010.1.6; IRC 2021 R311.3",
+      "fact": "Landings at doors must be at least as wide as the stairway or door, whichever is greater, and at least 44 in long in the direction of travel; in Group R-3, Group U and inside dwelling units the minimum length is 36 in.",
+      "status": "verified", "note": "",
+      "keywords": ["door landing", "44 inches", "36 inches", "landing length", "entry door", "egress"]
+    },
+    {
+      "topic": "Site work & concrete", "trade": "gc", "state": null,
+      "source": "IBC 2021 1810.3.5.3.1",
+      "fact": "Structural steel H-piles must have a nominal depth in the direction of the web of at least 8 in, flange and web thickness of at least 3/8 in, and flange width at least 80% of the section depth.",
+      "status": "verified", "note": "",
+      "keywords": ["h-pile", "steel pile", "web depth", "8 inches", "deep foundation", "3/8 inch"]
+    },
+    {
+      "topic": "Fire protection", "trade": "gc", "state": null,
+      "source": "IBC 2021 Chapter 33 (stairways during construction)",
+      "fact": "Once construction is more than 40 ft above the lowest level of fire department vehicle access, a temporary or permanent stairway is required, extended as work progresses to within one floor of the highest point with secured decking or flooring.",
+      "status": "verified", "note": "",
+      "keywords": ["construction stairway", "40 feet", "fire department access", "temporary stair", "high-rise construction", "decking"]
+    },
+    {
+      "topic": "Site work & concrete", "trade": "gc", "state": null,
+      "source": "IBC 2021 1807.3 (embedded posts and poles)",
+      "fact": "For an embedded post or pole, the hole must be at least 4 in larger than the column's diameter at its bottom, or 4 in larger than the diagonal of a square or rectangular column, to leave room for backfill.",
+      "status": "verified", "note": "",
+      "keywords": ["embedded post", "pole foundation", "annular space", "hole diameter", "4 inches", "backfill"]
+    },
+    {
+      "topic": "Building code (IBC)", "trade": "gc", "state": null,
+      "source": "IBC 2021 1011.5.5; IRC 2021 R311.7.5.3",
+      "fact": "Stair risers must be vertical or sloped under the tread above at no more than 30 degrees from vertical, measured from the underside of the nosing above.",
+      "status": "verified", "note": "",
+      "keywords": ["riser slope", "30 degrees", "stair riser", "nosing", "stairway", "tread"]
+    },
+    {
+      "topic": "Building code (IBC)", "trade": "gc", "state": null,
+      "source": "IBC 2021 1008.2.1",
+      "fact": "Means of egress illumination must be at least 1 footcandle (11 lux) at the walking surface whenever the building is occupied.",
+      "status": "verified", "note": "",
+      "keywords": ["egress lighting", "1 footcandle", "illumination", "means of egress", "walking surface", "lux"]
+    },
+    {
+      "topic": "Site work & concrete", "trade": "gc", "state": null,
+      "source": "IBC 2021 1810.3.5.2.1 and 1810.3.5.2.2",
+      "fact": "Cast-in-place or grouted-in-place deep foundation elements must have a diameter of at least 12 in without a permanent casing, or a nominal outside diameter of at least 8 in with a permanent casing.",
+      "status": "verified", "note": "",
+      "keywords": ["cast in place pile", "drilled shaft", "minimum diameter", "12 inches", "casing", "deep foundation"]
+    },
+    {
+      "topic": "Site work & concrete", "trade": "gc", "state": null,
+      "source": "IBC 2021 1810.3.1.3",
+      "fact": "The foundation or superstructure must be designed to handle a deep foundation element being out of position by at least 3 in.",
+      "status": "verified", "note": "",
+      "keywords": ["pile mislocation", "tolerance", "3 inches", "deep foundation", "pile cap", "eccentricity"]
+    },
+    {
+      "topic": "Accessibility", "trade": "gc", "state": null,
+      "source": "2010 ADA Standards 502.2; ICC A117.1 502",
+      "fact": "Accessible car parking spaces must be at least 96 in wide with access aisles at least 60 in wide; where spaces and aisles are marked with lines, widths are measured from the centerline of the markings.",
+      "status": "verified", "note": "",
+      "keywords": ["accessible parking", "centerline", "access aisle", "96 inches", "ada parking", "striping"]
+    },
+    {
+      "topic": "Accessibility", "trade": "gc", "state": null,
+      "source": "2010 ADA Standards 307.2",
+      "fact": "Objects with leading edges between 27 and 80 in above the floor may protrude no more than 4 in horizontally into a circulation path.",
+      "status": "verified", "note": "",
+      "keywords": ["protruding objects", "4 inches", "circulation path", "27 to 80 inches", "ada", "cane detection"]
+    },
+    {
+      "topic": "Accessibility", "trade": "gc", "state": null,
+      "source": "2010 ADA Standards 603.2.3 Exception 2; 305.3",
+      "fact": "A door to a single-user toilet or bathing room may swing into the turning space if a clear floor space of at least 30 x 48 in is provided inside the room beyond the arc of the door swing.",
+      "status": "verified", "note": "",
+      "keywords": ["toilet room", "door swing", "clear floor space", "30 by 48", "single user", "ada restroom"]
+    },
+    {
+      "topic": "Accessibility", "trade": "gc", "state": null,
+      "source": "2010 ADA Standards 409.4.3 (private residence elevators)",
+      "fact": "In a private residence elevator, the clearance between the car platform and the edge of any landing sill may not exceed 1-1/4 in.",
+      "status": "verified", "note": "",
+      "keywords": ["residential elevator", "sill clearance", "1-1/4 inch", "hoistway", "private residence", "ada elevator"]
+    },
+    {
+      "topic": "Accessibility", "trade": "gc", "state": null,
+      "source": "2010 ADA Standards 407.4.6.2 and 407.2.1.2",
+      "fact": "Accessible elevator car control buttons and hall call buttons must be at least 3/4 in in their smallest dimension.",
+      "status": "verified", "note": "",
+      "keywords": ["elevator buttons", "3/4 inch", "car controls", "call buttons", "ada elevator", "button size"]
+    },
+    {
+      "topic": "Steel & trusses", "trade": "gc", "state": null,
+      "source": "SBCA/TPI BCSI (truss installation tolerances)",
+      "fact": "Trusses are to be set close to their plan locations along the bearing; one cited tolerance is within 1/4 in of the dimension shown.",
+      "status": "unverified",
+      "note": "Industry installation guide value; could not confirm the exact tolerance figure.",
+      "keywords": ["truss placement", "tolerance", "bearing", "truss installation", "bcsi", "layout"]
+    },
+    {
+      "topic": "Steel & trusses", "trade": "gc", "state": null,
+      "source": "SBCA/TPI BCSI-B1 (truss lifting)",
+      "fact": "Lifting guidance for trusses depends on span: shorter trusses (around 30 ft) may be lifted at one or two pick points with taglines, while longer trusses need spreader bars and more pick points.",
+      "status": "unverified",
+      "note": "Cards conflict (one says 1 pick point for parallel-chord trusses up to 30 ft, another says 2 points for 30 ft single trusses); exact counts depend on truss type in BCSI diagrams.",
+      "keywords": ["truss lifting", "pick points", "spreader bar", "tagline", "crane", "bcsi"]
+    },
+    {
+      "topic": "Steel & trusses", "trade": "gc", "state": null,
+      "source": "SBCA/TPI BCSI (temporary restraint and bracing)",
+      "fact": "Temporary lateral restraint and bracing for trusses is attached to each truss with at least two 16d nails.",
+      "status": "unverified",
+      "note": "Industry guide (BCSI) recommendation rather than code; nail specifications may vary by edition.",
+      "keywords": ["truss bracing", "temporary restraint", "16d nails", "lateral restraint", "truss erection", "bcsi"]
+    },
+    {
+      "topic": "Estimating", "trade": "gc", "state": null,
+      "source": "Truss handling rule of thumb",
+      "fact": "A rough estimate of wood truss weight is about 15 lb per linear foot, so a bundle of seven 32 ft trusses weighs roughly 7 x 32 x 15 = 3,360 lb.",
+      "status": "unverified",
+      "note": "Rule-of-thumb figure; actual truss weight varies widely with depth, lumber and design.",
+      "keywords": ["truss weight", "pounds per foot", "crane lift", "bundle weight", "rigging", "estimate"]
+    },
+    {
+      "topic": "Safety (OSHA)", "trade": "gc", "state": null,
+      "source": "14 CFR 77.9; 14 CFR 77.7 (FAA Form 7460-1)",
+      "fact": "The FAA must be notified at least 45 days ahead (Form 7460-1) for a crane or structure more than 200 ft above ground, or one that would penetrate a 100:1 slope within 20,000 ft (about 3.8 mi) of a public-use airport runway longer than 3,200 ft (50:1 within 10,000 ft for shorter runways, 25:1 within 5,000 ft of a heliport).",
+      "status": "corrected",
+      "note": "Card says 5 miles. FAA notice under 14 CFR 77.9 is based on height and imaginary-surface slopes within 20,000 ft, 10,000 ft or 5,000 ft depending on the facility, not a 5-mile radius.",
+      "keywords": ["crane", "airport", "faa notice", "form 7460-1", "200 feet", "obstruction"]
+    },
+    {
+      "topic": "Site work & concrete", "trade": "gc", "state": null,
+      "source": "PCI erection and handling guidance",
+      "fact": "Prestressed members are unloaded in their upright (as-cast service) orientation and lifted and supported at points near their ends unless other points are designated.",
+      "status": "unverified",
+      "note": "From precast industry (PCI) handling guidance; cannot confirm exact wording against the source.",
+      "keywords": ["prestressed concrete", "off-loading", "lift points", "precast", "upright", "handling"]
+    },
+    {
+      "topic": "Site work & concrete", "trade": "gc", "state": null,
+      "source": "PCI storage guidance (dunnage)",
+      "fact": "When stacking stemmed members or hollow-core plank, dunnage should not run continuously across more than one stack of precast units.",
+      "status": "unverified",
+      "note": "Precast industry storage guidance; cannot confirm against the source document.",
+      "keywords": ["dunnage", "precast storage", "stacking", "plank", "double tee", "blocking"]
+    },
+    {
+      "topic": "Site work & concrete", "trade": "gc", "state": null,
+      "source": "Standard practice: dry-pack mortar",
+      "fact": "Drypack is mortar mixed with just enough water to make a stiff, damp, crumbly material that is rammed or packed into place, often under base plates or in voids.",
+      "status": "verified", "note": "",
+      "keywords": ["drypack", "dry pack mortar", "grout", "base plate", "packing", "stiff mix"]
+    },
+    {
+      "topic": "Steel & trusses", "trade": "gc", "state": null,
+      "source": "Rigging fundamentals: sling angle factors",
+      "fact": "In a two-leg bridle, each leg carries (load / 2) / sin(angle from horizontal). At 45 degrees each leg carries about 0.707 times the total load, so a 50,000 lb lift puts about 35,400 lb on each leg; size the rope from the rated-capacity tables.",
+      "status": "verified", "note": "",
+      "keywords": ["sling angle", "bridle hitch", "wire rope", "45 degrees", "rigging", "leg tension"]
+    }
+  ],
+  "questions": [
+    {"t": "gc", "topic": "Residential code", "q": "Without using any reduction allowed by the code, the net free ventilating area of an enclosed attic must be at least what fraction of the vented space?", "c": ["1/300", "1/250", "1/150", "1/100"], "a": 2, "ref": "IRC 2021 R806.2", "why": "The base requirement is 1/150; 1/300 is allowed only when high/low vent split and vapor retarder conditions are met."},
+    {"t": "gc", "topic": "Wood framing", "q": "What is the minimum bearing length for the end of a ceiling joist resting on a wood top plate?", "c": ["1-1/2 in", "1 in", "2 in", "3 in"], "a": 0, "ref": "IRC 2021 R802.6", "why": "Joists and rafters need 1-1/2 in of bearing on wood or metal; 3 in is required on masonry or concrete."},
+    {"t": "gc", "topic": "Building code (IBC)", "q": "With no soil investigation, what presumptive allowable bearing pressure may be used for silty clay?", "c": ["2,000 psf", "3,000 psf", "1,000 psf", "1,500 psf"], "a": 3, "ref": "IBC 2021 Table 1806.2", "why": "Clays and silts (CL, ML, MH, CH) carry a presumptive value of 1,500 psf."},
+    {"t": "gc", "topic": "Building code (IBC)", "q": "What presumptive allowable foundation pressure applies to sandy gravel (GW or GP)?", "c": ["2,000 psf", "3,000 psf", "4,000 psf", "12,000 psf"], "a": 1, "ref": "IBC 2021 Table 1806.2", "why": "Sandy gravel and gravel are assigned 3,000 psf; 4,000 is for sedimentary rock and 12,000 for crystalline bedrock."},
+    {"t": "gc", "topic": "Building code (IBC)", "q": "Which occupant load factor does the IBC assign to a commercial kitchen?", "c": ["100 sq ft gross", "150 sq ft gross", "200 sq ft gross", "300 sq ft gross"], "a": 2, "ref": "IBC 2021 Table 1004.5", "why": "Commercial kitchens are figured at 200 gross sq ft per occupant, with fractional results rounded up."},
+    {"t": "gc", "topic": "Safety (OSHA)", "q": "Below what oxygen concentration is an atmosphere considered oxygen deficient?", "c": ["20.9%", "19.5%", "18.0%", "23.5%"], "a": 1, "ref": "29 CFR 1926.1202", "why": "Less than 19.5% oxygen is deficient; more than 23.5% is enriched. Normal air is about 20.9%."},
+    {"t": "gc", "topic": "Safety (OSHA)", "q": "Unless designed by a qualified person with a safety factor of two, an anchorage for personal fall arrest must support at least how much per attached worker?", "c": ["3,000 lb", "5,400 lb", "5,000 lb", "2,500 lb"], "a": 2, "ref": "29 CFR 1926.502(d)(15)", "why": "Current OSHA rules require 5,000 lb per employee attached; the 5,400 lb figure came from a superseded lifeline rule."},
+    {"t": "gc", "topic": "Safety (OSHA)", "q": "How wide must driveways between and around outdoor combustible storage piles be?", "c": ["10 ft", "12 ft", "20 ft", "15 ft"], "a": 3, "ref": "29 CFR 1926.151(c)(2)", "why": "OSHA requires driveways at least 15 ft wide, kept clear, forming grid units no larger than 50 x 150 ft."},
+    {"t": "gc", "topic": "Safety (OSHA)", "q": "A stairway or ladder is required at a personnel access point when the break in elevation is at least:", "c": ["19 in", "16 in", "24 in", "30 in"], "a": 0, "ref": "29 CFR 1926.1051(a)", "why": "Breaks in elevation of 19 in or more need a stairway or ladder unless a ramp, runway, embankment or hoist is provided."},
+    {"t": "gc", "topic": "Safety (OSHA)", "q": "Besides daily inspections, when must a competent person re-inspect an open excavation?", "c": ["Only at the start of each work week", "After every rainstorm or other hazard-increasing event", "Only when the depth exceeds 20 ft", "Only after an OSHA compliance visit"], "a": 1, "ref": "29 CFR 1926.651(k)(1)", "why": "Excavations must be inspected daily and again after rainstorms or any occurrence that increases the hazard."},
+    {"t": "gc", "topic": "Safety (OSHA)", "q": "An employer must have a written emergency action plan once it has at least how many employees?", "c": ["5", "10", "11", "15"], "a": 2, "ref": "29 CFR 1910.38(b)", "why": "Employers with 10 or fewer employees may communicate the plan orally, so a written plan is required at 11 or more."},
+    {"t": "gc", "topic": "Safety (OSHA)", "q": "What minimum clearance to combustible material must be kept at the sides of a temporary radiant-type heater?", "c": ["12 in", "18 in", "24 in", "36 in"], "a": 3, "ref": "29 CFR 1926.154, Table V-3", "why": "Radiant room heaters need 36 in of side clearance; circulating types need only 12 in."},
+    {"t": "law", "topic": "Payroll & tax", "q": "What Medicare tax rate is withheld from an employee's wages up to $200,000 in a year?", "c": ["6.2%", "1.45%", "0.9%", "2.9%"], "a": 1, "ref": "IRS Pub 15", "why": "The employee pays 1.45% and the employer matches it; 2.9% is the combined total and 0.9% is the additional tax above $200,000."},
+    {"t": "law", "topic": "Payroll & tax", "q": "How must a corporation with a sizable quarterly liability make its federal payroll tax deposits?", "c": ["Mail a check with a Form 8109 coupon", "Pay in cash at a local IRS office", "Attach the payment to Form W-3", "Electronic funds transfer, such as EFTPS"], "a": 3, "ref": "IRS Pub 15", "why": "Paper deposit coupons ended in 2011; all federal tax deposits must be made electronically."},
+    {"t": "law", "topic": "Payroll & tax", "q": "An employer is a monthly depositor if its employment taxes in the lookback period totaled:", "c": ["$50,000 or less", "$100,000 or less", "$25,000 or less", "$2,500 or less"], "a": 0, "ref": "IRS Pub 15", "why": "$50,000 or less in the lookback period means monthly deposits; more than that means semiweekly."},
+    {"t": "law", "topic": "Payroll & tax", "q": "What failure-to-deposit penalty applies to a payroll tax deposit made more than 15 days late (before an IRS notice)?", "c": ["2%", "5%", "10%", "15%"], "a": 2, "ref": "IRC 6656; IRS Pub 15", "why": "The tiers are 2% (1-5 days), 5% (6-15 days), 10% (over 15 days) and 15% after an unpaid notice."},
+    {"t": "law", "topic": "Payroll & tax", "q": "When accumulated FUTA liability passes $500 at the end of a calendar quarter, when is the deposit due?", "c": ["January 31 of the following year", "Within 3 banking days", "The 15th of the following month", "The last day of the month after the quarter ends"], "a": 3, "ref": "IRS Form 940 instructions", "why": "FUTA over $500 is deposited by the end of the month following the quarter; Form 940 is filed annually."},
+    {"t": "law", "topic": "Bonds & insurance", "q": "On a $5.1 million federal construction contract, the Miller Act payment bond normally must be:", "c": ["$2.5 million", "$2.04 million", "$5.1 million", "$2.55 million"], "a": 2, "ref": "40 USC 3131; FAR 28.102-2", "why": "Since 1999 the payment bond equals 100% of the contract price unless the contracting officer finds that impractical."},
+    {"t": "law", "topic": "Bonds & insurance", "q": "Which bond guarantees that a bidder, if awarded the job, will sign the contract and furnish the required bonds?", "c": ["Bid bond", "Payment bond", "Performance bond", "Maintenance bond"], "a": 0, "ref": "Surety fundamentals", "why": "A bid bond protects the owner if the selected bidder refuses to enter the contract or provide bonds."},
+    {"t": "law", "topic": "Payroll & tax", "q": "Which gross receipts limit determines whether a small contractor may use the completed-contract method for tax purposes?", "c": ["$10 million, fixed", "$25 million, indexed for inflation", "$5 million, fixed", "$50 million, indexed for inflation"], "a": 1, "ref": "IRC 460(e); 448(c)", "why": "The TCJA raised the limit from $10 million to $25 million indexed ($31 million for 2025), based on the prior 3-year average."},
+    {"t": "law", "topic": "Payroll & tax", "q": "By what date must a contractor give subcontractors their copies of Form 1099-NEC?", "c": ["February 28", "March 31", "January 31", "April 15"], "a": 2, "ref": "IRS 1099 instructions", "why": "Form 1099-NEC is due to recipients (and to the IRS) by January 31."},
+    {"t": "law", "topic": "Business organization", "q": "Which business may use the owner's SSN instead of obtaining an EIN?", "c": ["A corporation with no employees", "A partnership with two partners", "A single-member LLC with three employees", "A sole proprietorship with no employees and no excise or pension filings"], "a": 3, "ref": "IRS EIN guidance", "why": "Sole proprietors and single-member LLCs need an EIN once they have employees; corporations and partnerships always need one."},
+    {"t": "law", "topic": "Labor law", "q": "A non-exempt employee works 3 hours of overtime without the required supervisor approval. What must the employer do?", "c": ["Refuse to pay for the unauthorized hours", "Pay the hours at the overtime rate, and may discipline the employee", "Pay the hours at straight time only", "Convert the hours to unpaid comp time"], "a": 1, "ref": "29 CFR 785.11-785.13", "why": "Work the employer suffers or permits must be paid; policy violations are handled by discipline, not by withholding wages."},
+    {"t": "law", "topic": "Environmental", "q": "A federal NPDES stormwater permit is required for construction activity that disturbs at least:", "c": ["1/4 acre", "1/2 acre", "5 acres", "1 acre"], "a": 3, "ref": "EPA Construction General Permit", "why": "Disturbing 1 acre or more, or less if part of a larger common plan of 1 acre or more, triggers permit coverage."},
+    {"t": "gc", "topic": "Fire protection", "q": "Manual fire alarm boxes must be located no more than what distance from the entrance to each exit?", "c": ["3 ft", "5 ft", "10 ft", "15 ft"], "a": 1, "ref": "IBC 2021 907.4.2.1", "why": "Pull stations go within 5 ft of each exit entrance, mounted 42-48 in above the floor."},
+    {"t": "gc", "topic": "Building code (IBC)", "q": "When fully open, a door in the means of egress may reduce the required egress width by no more than:", "c": ["7 in", "4 in", "10 in", "12 in"], "a": 0, "ref": "IBC 2021 1005.7.1", "why": "A fully opened door may project at most 7 in into the required width, and no more than half at any position."},
+    {"t": "gc", "topic": "Building code (IBC)", "q": "An unsurcharged landscape retaining wall is exempt from a building permit if its height, from bottom of footing to top of wall, does not exceed:", "c": ["2 ft", "3 ft", "4 ft", "6 ft"], "a": 2, "ref": "IBC 2021 105.2", "why": "Walls over 4 ft, or any wall supporting a surcharge or impounding flammable liquids, need a permit."},
+    {"t": "gc", "topic": "Building code (IBC)", "q": "A building under construction will be 48 ft tall and is 20 ft from the lot line. What pedestrian protection is required?", "c": ["Construction railings", "A barrier only", "A barrier and a covered walkway", "No protection"], "a": 1, "ref": "IBC 2021 Table 3306.1", "why": "20 ft falls between 1/4 (12 ft) and 1/2 (24 ft) of the height, which requires a barrier."},
+    {"t": "gc", "topic": "Fire protection", "q": "What are the minimum size requirements for an enclosed fire service access elevator lobby?", "c": ["100 sq ft, 7 ft minimum dimension", "200 sq ft, 10 ft minimum dimension", "120 sq ft, 6 ft minimum dimension", "150 sq ft, 8 ft minimum dimension"], "a": 3, "ref": "IBC 2021 3007.6.3", "why": "The lobby must be at least 150 sq ft with no dimension under 8 ft so firefighters can stage."},
+    {"t": "gc", "topic": "Accessibility", "q": "Where ramp handrails are not continuous between runs, how far must they extend horizontally beyond the top and bottom of each run?", "c": ["6 in", "12 in", "18 in", "24 in"], "a": 1, "ref": "IBC 2021 1014.6", "why": "Ramp handrail extensions must be at least 12 in at both the top and the bottom."},
+    {"t": "gc", "topic": "Building code (IBC)", "q": "What is the maximum live-load deflection allowed for a floor member?", "c": ["L/180", "L/240", "L/360", "L/480"], "a": 2, "ref": "IBC 2021 Table 1604.3", "why": "Floor members are limited to L/360 under live load; L/240 applies to total load."},
+    {"t": "gc", "topic": "Site work & concrete", "q": "Footings must be stepped when the bottom surface slopes more than:", "c": ["1 in 10 (10%)", "1 in 20 (5%)", "1 in 4 (25%)", "1 in 6 (about 17%)"], "a": 0, "ref": "IBC 2021 1809.3", "why": "A footing bottom sloping more than 10% must be stepped to keep bearing surfaces level."},
+    {"t": "gc", "topic": "Wood framing", "q": "A notch at the end of a solid sawn floor joist may not exceed what portion of the joist depth?", "c": ["1/6", "1/3", "1/2", "1/4"], "a": 3, "ref": "IRC 2021 R502.8.1", "why": "End notches are limited to 1/4 of the depth; notches elsewhere are limited to 1/6."},
+    {"t": "gc", "topic": "Roofing", "q": "At what maximum spacing must drip edge be mechanically fastened to the roof deck?", "c": ["6 in on center", "8 in on center", "12 in on center", "16 in on center"], "a": 2, "ref": "IRC 2021 R905.2.8.5", "why": "Drip edge is fastened no more than 12 in apart, with 2 in laps and 2 in onto the deck."},
+    {"t": "gc", "topic": "Roofing", "q": "How is drip edge layered with underlayment on a shingle roof?", "c": ["Over the underlayment at both eaves and rakes", "Under the underlayment at eaves and over it at rakes", "Under the underlayment at both eaves and rakes", "Over the underlayment at eaves and under it at rakes"], "a": 1, "ref": "IRC 2021 R905.2.8.5", "why": "At eaves the underlayment laps over the drip edge to shed water; at rakes the drip edge goes on top."},
+    {"t": "gc", "topic": "Fire protection", "q": "Corner guards protecting fireproofing on columns exposed to forklift traffic must extend at least how high above the finished floor?", "c": ["5 ft", "3 ft", "4 ft", "8 ft"], "a": 0, "ref": "IBC 2021 Sec. 704", "why": "Impact protection must reach at least 5 ft above the floor, or higher if needed for full protection."},
+    {"t": "gc", "topic": "Residential code", "q": "A masonry chimney must extend at least how far above the highest point where it passes through the roof?", "c": ["2 ft", "3 ft", "4 ft", "5 ft"], "a": 1, "ref": "IRC 2021 R1003.9", "why": "The 3-2-10 rule: 3 ft above the roof penetration and 2 ft above anything within 10 ft."},
+    {"t": "gc", "topic": "Building code (IBC)", "q": "A non-circular Type I handrail must have a perimeter dimension within what range?", "c": ["3 in to 5 in", "4-1/2 in to 7 in", "4 in to 6-1/4 in", "5 in to 6-1/4 in"], "a": 2, "ref": "IBC 2021 1014.3.1", "why": "Non-circular Type I rails need a 4 to 6-1/4 in perimeter and a cross section of no more than 2-1/4 in."},
+    {"t": "gc", "topic": "Site work & concrete", "q": "A pile standing unbraced in water may be considered laterally supported at what depth into stiff soil?", "c": ["2 ft", "5 ft", "10 ft", "15 ft"], "a": 1, "ref": "IBC 2021 1810.2.1", "why": "Lateral support may be assumed 5 ft into stiff soil or 10 ft into soft soil."},
+    {"t": "gc", "topic": "Building code (IBC)", "q": "What minimum illumination is required at the walking surface of a means of egress while the building is occupied?", "c": ["0.1 footcandle", "0.5 footcandle", "5 footcandles", "1 footcandle"], "a": 3, "ref": "IBC 2021 1008.2.1", "why": "Egress paths need at least 1 footcandle (11 lux) at the floor."},
+    {"t": "gc", "topic": "Fire protection", "q": "During construction, a temporary or permanent stairway is required once the building rises more than what height above the lowest fire department vehicle access?", "c": ["30 ft", "40 ft", "55 ft", "75 ft"], "a": 1, "ref": "IBC 2021 Ch. 33", "why": "Above 40 ft, a stair must be provided and kept within one floor of the highest secured deck."},
+    {"t": "gc", "topic": "Safety (OSHA)", "q": "Regardless of airport proximity, FAA notice is required for a crane or structure taller than what height above ground level?", "c": ["100 ft", "150 ft", "200 ft", "500 ft"], "a": 2, "ref": "14 CFR 77.9(a)", "why": "Anything over 200 ft AGL needs Form 7460-1; closer to airports, imaginary-surface slopes set lower trigger heights."},
+    {"t": "gc", "topic": "Accessibility", "q": "What is the minimum size, in the smallest dimension, of an accessible elevator car control button?", "c": ["3/4 in", "1/2 in", "5/8 in", "1 in"], "a": 0, "ref": "ADA 2010 407.4.6.2", "why": "Car and hall call buttons must be at least 3/4 in in their smallest dimension."},
+    {"t": "gc", "topic": "Accessibility", "q": "When accessible parking spaces are striped, where is their width measured?", "c": ["From the inside edge of each line", "From the outside edge of each line", "From the centerline of the markings", "From the curb face"], "a": 2, "ref": "ADA 2010 502.2", "why": "Space and access aisle widths are measured to the centerline of the striping."},
+    {"t": "gc", "topic": "Steel & trusses", "q": "A 50,000 lb load hangs from a two-leg bridle with each leg at 45 degrees from horizontal. About how much tension is in each leg?", "c": ["25,000 lb", "35,400 lb", "50,000 lb", "28,900 lb"], "a": 1, "ref": "Rigging sling angle factors", "why": "Each leg carries (W/2)/sin 45 = 0.707 x 50,000, about 35,400 lb; flatter angles raise leg tension."},
+    {"t": "gc", "topic": "Building code (IBC)", "q": "Which of the following may NOT be used as a grounding electrode?", "c": ["20 ft of 1/2 in rebar encased in a footing", "Metal underground water pipe with 10 ft in contact with earth", "Metal underground gas piping", "A ground ring of 2 AWG bare copper"], "a": 2, "ref": "NEC 250.52(B)", "why": "Gas piping and aluminum are prohibited electrodes; concrete-encased rebar is permitted."},
+    {"t": "gc", "topic": "Building code (IBC)", "q": "Under the IPC, what is the maximum horizontal support spacing for PVC pipe?", "c": ["4 ft", "3 ft", "6 ft", "10 ft"], "a": 0, "ref": "IPC 2021 Table 308.5", "why": "PVC and ABS are supported every 4 ft; small CPVC is 3 ft and PEX 32 in."},
+    {"t": "gc", "topic": "Building code (IBC)", "q": "What minimum STC rating is required for walls separating dwelling units when tested in a lab?", "c": ["40", "45", "50", "55"], "a": 2, "ref": "IBC 2021 1206.2", "why": "Dwelling and sleeping unit separations need STC 50 (45 if field tested)."},
+    {"t": "gc", "topic": "Estimating", "q": "How many studs does a 12 ft straight partition need at 16 in on center, ignoring corners, openings and waste?", "c": ["9", "10", "12", "8"], "a": 1, "ref": "Stud takeoff method", "why": "144 in / 16 in = 9 spaces, plus 1 for the end stud, gives 10 studs."},
+    {"t": "gc", "topic": "Estimating", "q": "A trench is 18 ft wide at the top, 5 ft wide at the bottom, 8 ft deep and 750 ft long. How much material is removed?", "c": ["19,500 cu ft", "34,500 cu ft", "69,000 cu ft", "108,000 cu ft"], "a": 2, "ref": "Average-end-width volume", "why": "Average width (18+5)/2 = 11.5 ft x 8 ft x 750 ft = 69,000 cu ft."},
+    {"t": "gc", "topic": "Building code (IBC)", "q": "What color marking identifies Type L copper water tube?", "c": ["Red", "Green", "Blue", "Yellow"], "a": 2, "ref": "ASTM B88", "why": "Type K is green, Type L blue and Type M red, from thickest to thinnest wall."},
+    {"t": "gc", "topic": "Accessibility", "q": "What is the maximum threshold height for a sliding door serving a dwelling unit?", "c": ["3/4 in", "1/2 in", "1 in", "1-1/4 in"], "a": 0, "ref": "IBC 2021 Sec. 1010", "why": "Dwelling-unit sliding doors may have 3/4 in thresholds; other doors are limited to 1/2 in."},
+    {"t": "gc", "topic": "Residential code", "q": "Untreated wood siding must be kept at least how far above the ground?", "c": ["2 in", "4 in", "6 in", "8 in"], "a": 2, "ref": "IRC 2021 R317.1", "why": "Wood within 6 in of earth, or within 2 in of exposed concrete, must be decay resistant or treated."},
+    {"t": "gc", "topic": "Fire protection", "q": "A building has a 1,600 sq ft basement with no sprinklers. Exterior openings intended to avoid the sprinkler requirement must each have a minimum dimension of at least:", "c": ["22 in", "24 in", "36 in", "30 in"], "a": 3, "ref": "IBC 2021 903.2.11.1", "why": "Qualifying fire department access openings must be at least 30 in in their least dimension."}
+  ]
+}

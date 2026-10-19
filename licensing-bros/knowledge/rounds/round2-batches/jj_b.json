@@ -1,0 +1,583 @@
+{
+  "source": "NASCLA seminar set cards 150-297",
+  "facts": [
+    {
+      "topic": "Site work & concrete",
+      "trade": "gc",
+      "state": null,
+      "source": "ACI 318-19 24.4 (shrinkage and temperature reinforcement)",
+      "fact": "In structural slabs, shrinkage and temperature (T&S) reinforcement runs at right angles to the main flexural steel to control cracking from drying shrinkage and temperature change. Deformed T&S bars may be spaced no farther apart than five times the slab thickness or 18 in, whichever is less.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["temperature steel", "shrinkage reinforcement", "t&s", "slab rebar", "perpendicular", "bar spacing"]
+    },
+    {
+      "topic": "Site work & concrete",
+      "trade": "gc",
+      "state": null,
+      "source": "ASTM A615/A615M bar designations",
+      "fact": "Standard inch-pound rebar sizes are #3 through #11 plus #14 and #18 (11 sizes). The soft-metric designations (#10, #13, #16, #19, #22, #25, #29, #32, #36, #43, #57) give the approximate diameter in millimeters, so a #5 bar (5/8 in) is a metric #16.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["rebar sizes", "bar number", "metric rebar", "#5 bar", "diameter", "soft metric"]
+    },
+    {
+      "topic": "Site work & concrete",
+      "trade": "gc",
+      "state": null,
+      "source": "ACI 301 / ACI 318 Ch. 26 (reinforcement surface condition)",
+      "fact": "When concrete is placed, reinforcing steel must be free of mud, oil and other coatings that impair bond. Normal rust and mill scale are acceptable as long as a hand-wire-brushed sample still meets the ASTM minimum dimensions, weight and deformation height.",
+      "status": "corrected",
+      "note": "Card lists mill scale and rust among the conditions that decrease bond, then says rust improves bond. Under ACI, ordinary rust and mill scale are not grounds for rejection if a wire-brushed specimen meets ASTM minimums; only mud, oil and other deleterious coatings must be removed.",
+      "keywords": ["rebar rust", "mill scale", "bond", "oil", "mud", "surface condition", "clean rebar"]
+    },
+    {
+      "topic": "Site work & concrete",
+      "trade": "gc",
+      "state": null,
+      "source": "ACI 318-19 Table 20.5.1.3.1 (specified concrete cover, cast-in-place nonprestressed)",
+      "fact": "Minimum cover for cast-in-place nonprestressed concrete is 3 in where cast against and permanently exposed to earth (such as footing bottoms); where exposed to weather or in contact with ground it is 2 in for #6 and larger bars and 1-1/2 in for #5 and smaller. Where not exposed, slabs, walls and joists need 3/4 in for #11 and smaller bars, and beams and columns need 1-1/2 in over primary bars, ties, stirrups and spirals.",
+      "status": "corrected",
+      "note": "Card gives 3 in 'at sides' and 2 in for bars larger than #5 without stating the exposure conditions. In ACI 318 the 3-in cover applies to concrete cast against and permanently exposed to earth, and the 2-in / 1-1/2-in values apply to concrete exposed to weather or in contact with ground. The card's 3-in clearance for footing and mat bottom bars follows from the cast-against-earth rule.",
+      "keywords": ["concrete cover", "rebar cover", "clear cover", "footing", "cast against earth", "exposed to weather", "aci 318"]
+    },
+    {
+      "topic": "Site work & concrete",
+      "trade": "gc",
+      "state": null,
+      "source": "CRSI Placing Reinforcing Bars (tie types)",
+      "fact": "The snap (single) tie is the simplest and most common rebar tie and is used mainly on flat horizontal work such as slabs. Wrap-and-snap, saddle (U) and wrap-and-saddle ties grip harder and are used where bars must not shift, such as wall mats, column ties at corner bars, beam stirrups and mats lifted by crane; the figure-eight tie is quicker but holds less than a saddle tie.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["rebar ties", "snap tie", "saddle tie", "wrap and saddle", "figure eight tie", "tie wire"]
+    },
+    {
+      "topic": "Site work & concrete",
+      "trade": "gc",
+      "state": null,
+      "source": "CRSI Placing Reinforcing Bars (handling and hoisting)",
+      "fact": "Long bundles of reinforcing bars (roughly 30 ft and longer) are usually hoisted with a spreader beam so the bundle stays level and does not sag or slip; one handbook figure calls for the spreader to be at least half the bundle length.",
+      "status": "unverified",
+      "note": "Industry handbook guidance (CRSI), not a code requirement; the 30-ft and one-half-length figures could not be confirmed against a current edition.",
+      "keywords": ["hoisting rebar", "spreader beam", "rebar bundle", "rigging", "crane", "handling"]
+    },
+    {
+      "topic": "Site work & concrete",
+      "trade": "gc",
+      "state": null,
+      "source": "CRSI Placing Reinforcing Bars (tying wall bars)",
+      "fact": "For a single curtain of wall reinforcement, one placing handbook calls for at least three ties on any one bar, with ties no more than about 4 to 6 ft apart in each direction; the actual number depends on bar size and spacing.",
+      "status": "unverified",
+      "note": "Handbook (CRSI) tying guidance; the exact figures could not be confirmed, and project specifications govern.",
+      "keywords": ["wall rebar", "tying", "curtain", "tie spacing", "wall reinforcement"]
+    },
+    {
+      "topic": "Site work & concrete",
+      "trade": "gc",
+      "state": null,
+      "source": "CRSI Manual of Standard Practice (bar supports)",
+      "fact": "Bottom bars in formed slabs are typically supported on continuous slab bolsters (SB), a wire bar support commonly supplied in 5-ft lengths; individual supports such as joist chairs and high chairs are used elsewhere.",
+      "status": "unverified",
+      "note": "Card lists slab bolster stock lengths of 2.5, 5 and 10 ft. CRSI standard practice shows 5-ft slab bolster lengths; other lengths appear to be manufacturer-specific, so the card's list could not be confirmed.",
+      "keywords": ["slab bolster", "bar supports", "chairs", "rebar support", "high chair", "wire bar support"]
+    },
+    {
+      "topic": "Roofing",
+      "trade": "gc",
+      "state": null,
+      "source": "IRC 2021 R905.1.1 (underlayment); roofing practice",
+      "fact": "Roof underlayment keeps the sheathing dry until the roof covering goes on, acts as a secondary water barrier if wind-driven rain gets past the roofing, and separates asphalt shingles from resin pockets in wood sheathing that can damage them. It also cushions heavy coverings such as tile and slate.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["underlayment", "felt", "roofing felt", "secondary water barrier", "sheathing", "shingles"]
+    },
+    {
+      "topic": "Roofing",
+      "trade": "gc",
+      "state": null,
+      "source": "Roof framing practice (slope vs pitch)",
+      "fact": "Roof slope is the rise in inches per 12 in of horizontal run (slope = total rise x 12 / total run), so a 6-ft rise over a 12-ft run is 6 in 12 (6:12). Pitch is total rise divided by total span (twice the run), so a 6:12 slope is a 1/4 pitch.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["roof slope", "pitch", "rise", "run", "span", "6 in 12"]
+    },
+    {
+      "topic": "Roofing",
+      "trade": "gc",
+      "state": null,
+      "source": "Asphalt shingle application practice (ARMA terminology)",
+      "fact": "Exposure is the part of a shingle left to the weather, top lap is the shingle width minus the exposure, and head lap is the overlap where three layers exist, equal to top lap minus exposure (width minus twice the exposure). For a 12-in strip shingle at 5-in exposure, top lap is 7 in and head lap is 2 in.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["head lap", "top lap", "exposure", "shingle", "asphalt shingle", "lap calculation"]
+    },
+    {
+      "topic": "Roofing",
+      "trade": "gc",
+      "state": null,
+      "source": "ASTM D6380 Class WS (wide-selvage roll roofing); roofing practice",
+      "fact": "Double-coverage (19-in selvage) roll roofing comes in 36-in-wide rolls with a 17-in mineral-surfaced portion left exposed and a 19-in smooth selvage that the next course covers, so the roof has two layers throughout.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["roll roofing", "selvage", "double coverage", "19 inch selvage", "exposure", "mineral surfaced"]
+    },
+    {
+      "topic": "Roofing",
+      "trade": "gc",
+      "state": null,
+      "source": "Built-up roofing practice (NRCA)",
+      "fact": "In a built-up roof the base sheet is the first ply installed, typically a heavier coated felt that may be mechanically fastened over nailable decks or insulation before the remaining plies are mopped in.",
+      "status": "unverified",
+      "note": "Card says base sheets weigh 45 to 80 lb per square and that the base sheet acts as the vapor retarder protecting the insulation. Base sheet weights vary by product, and a vapor retarder is normally a separate layer on the warm side below the insulation, so these claims could not be confirmed.",
+      "keywords": ["base sheet", "built-up roof", "bur", "felt", "ply", "vapor retarder"]
+    },
+    {
+      "topic": "Energy & environmental",
+      "trade": "gc",
+      "state": null,
+      "source": "ASTM E96 (water vapor transmission); building science practice",
+      "fact": "A vapor retarder's main job is to keep warm, humid interior air from reaching cold surfaces inside the assembly, where it would condense; it also cuts air movement through the envelope. Its resistance is rated in perms (1 perm = 1 grain of water vapor per sq ft per hour per inch of mercury vapor-pressure difference), and a lower perm rating means a better retarder.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["perm", "vapor retarder", "vapor barrier", "condensation", "permeance", "moisture"]
+    },
+    {
+      "topic": "Residential code",
+      "trade": "gc",
+      "state": null,
+      "source": "IRC 2021 R202 (vapor retarder class); IRC 2021 R702.7",
+      "fact": "The IRC classes vapor retarders by ASTM E96 desiccant-method permeance: Class I is 0.1 perm or less (e.g., polyethylene sheet, unperforated foil), Class II is more than 0.1 up to 1.0 perm (e.g., kraft-faced batts), and Class III is more than 1.0 up to 10 perm (e.g., latex or enamel paint).",
+      "status": "verified",
+      "note": "",
+      "keywords": ["vapor retarder class", "class i", "class ii", "class iii", "perm rating", "polyethylene", "kraft"]
+    },
+    {
+      "topic": "Roofing",
+      "trade": "gc",
+      "state": null,
+      "source": "Gutter installation practice (manufacturer guidance)",
+      "fact": "Gutter hangers (strap, spike-and-ferrule or hidden clip types) are commonly spaced about 3 ft on center, and closer (roughly 18 in to 2 ft) where heavy snow or ice loads are expected.",
+      "status": "unverified",
+      "note": "Trade and manufacturer guidance, not a code rule; recommended spacing varies by manufacturer and region.",
+      "keywords": ["gutter hangers", "gutter spacing", "spike and ferrule", "strap hanger", "snow load", "gutters"]
+    },
+    {
+      "topic": "Steel & trusses",
+      "trade": "gc",
+      "state": null,
+      "source": "Steel Deck Institute (SDI) deck types",
+      "fact": "The main steel deck types are roof deck (supports insulation and roofing), form deck (a non-composite permanent form for a reinforced concrete slab), composite floor deck (embossments lock it to the concrete so the deck acts as the slab's tension reinforcement), and cellular deck (a flat bottom sheet joined to fluted deck to form cells used as wiring raceways).",
+      "status": "verified",
+      "note": "",
+      "keywords": ["steel deck", "composite deck", "form deck", "cellular deck", "roof deck", "metal deck"]
+    },
+    {
+      "topic": "Steel & trusses",
+      "trade": "gc",
+      "state": null,
+      "source": "SDI Manual of Construction with Steel Deck",
+      "fact": "Steel deck panels are commonly made in coverage widths of about 24 to 36 in and lengths up to roughly 40 ft, and one erection guide cites a maximum bundle weight of about 4,000 lb.",
+      "status": "unverified",
+      "note": "Card lists widths of 12 to 36 in, 40-ft shipping lengths and a 4,000-lb bundle limit; these are manufacturer and handbook figures that vary by profile and supplier and could not be confirmed.",
+      "keywords": ["steel deck", "bundle weight", "deck length", "deck width", "shipping", "metal deck"]
+    },
+    {
+      "topic": "Steel & trusses",
+      "trade": "gc",
+      "state": null,
+      "source": "SDI deck standards (minimum end bearing)",
+      "fact": "Steel deck should have at least 1-1/2 in of end bearing on its supports unless the design shows otherwise; where bearing is shorter, the designer must check the deck's end capacity and extra fastening may be required.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["steel deck", "end bearing", "1-1/2 inch", "deck bearing", "deck installation", "support"]
+    },
+    {
+      "topic": "Steel & trusses",
+      "trade": "gc",
+      "state": null,
+      "source": "SDI deck attachment practice",
+      "fact": "Steel deck is fastened to the structural frame with arc spot (puddle) welds, self-drilling screws (commonly #12 or #14, about 1/4 in) or powder-actuated or pneumatic pins. Screw guns use a clutch and depth-limiting nosepiece, and pneumatic tools run at a regulated pressure, to prevent over- or under-driving.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["deck fastening", "self-drilling screws", "puddle weld", "powder actuated", "deck attachment", "screw gun"]
+    },
+    {
+      "topic": "Steel & trusses",
+      "trade": "gc",
+      "state": null,
+      "source": "Steel deck manufacturer guidance (openings)",
+      "fact": "Small penetrations through steel deck (about 6 in, removing one rib) may need no reinforcing or only a light plate, somewhat larger holes get thicker reinforcing plates, and large openings must be framed with members extending past the opening as designed by the project engineer.",
+      "status": "unverified",
+      "note": "Card gives a specific schedule (0.045-in and 0.057-in plates, framing above 13 in) and a C4x5.4 frame detail for 24-in openings; these are handbook or manufacturer details, not code, so the figures could not be confirmed.",
+      "keywords": ["deck openings", "penetrations", "reinforcing plate", "framing opening", "steel deck", "sump"]
+    },
+    {
+      "topic": "Building code (IBC)",
+      "trade": "gc",
+      "state": null,
+      "source": "IBC 2021 602 (construction classification)",
+      "fact": "IBC construction types: Types I and II have building elements of noncombustible materials; Type III has noncombustible exterior walls with interior elements of any permitted material; Type IV-HT (heavy timber) has noncombustible exterior walls and solid or laminated heavy-timber interior elements without concealed spaces; Type V allows any permitted material. The 2021 IBC also adds mass-timber Types IV-A, IV-B and IV-C.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["construction type", "type i", "type iii", "type v", "heavy timber", "noncombustible", "mass timber"]
+    },
+    {
+      "topic": "Building code (IBC)",
+      "trade": "gc",
+      "state": null,
+      "source": "IBC 2021 Section 406 (parking garages: clear height, vehicle barriers)",
+      "fact": "In parking garages, each floor level must have at least 7 ft of clear height in vehicle and pedestrian traffic areas. Vehicle barriers at least 2 ft 9 in high are required at drive lanes and parking spaces where the drop to the ground or surface below is more than 1 ft.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["parking garage", "clear height", "vehicle barrier", "7 feet", "33 inches", "headroom"]
+    },
+    {
+      "topic": "Fire protection",
+      "trade": "gc",
+      "state": null,
+      "source": "IBC 2021 Section 704 (bottom flange protection)",
+      "fact": "Fire protection may be omitted from the bottom flange of lintels, shelf angles and plates that span 6 ft 4 in or less, whether or not they are part of the primary structural frame, and from those that are not part of the primary structural frame regardless of span.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["lintel", "shelf angle", "bottom flange", "fireproofing", "fire resistance", "6 ft 4 in"]
+    },
+    {
+      "topic": "Fire protection",
+      "trade": "gc",
+      "state": null,
+      "source": "IBC 2021 903.4.1; IFC 2021 903.4.1",
+      "fact": "Sprinkler system alarm, supervisory and trouble signals must each be distinct and must be sent automatically to an approved supervising station or, where the fire code official approves, sound an audible signal at a constantly attended location.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["alarm signal", "supervisory signal", "trouble signal", "monitoring", "supervising station", "sprinkler"]
+    },
+    {
+      "topic": "Fire protection",
+      "trade": "gc",
+      "state": null,
+      "source": "IBC 2021 913.4; IFC 2021 913.4",
+      "fact": "Fire pump suction, discharge and bypass valves and the isolation valves on the backflow preventer must be supervised open by one of four methods: a central-station, proprietary or remote-station signaling service; a local signaling service that sounds at a constantly attended location; locking the valves open; or sealing them, with approved weekly recorded inspections, where they sit inside owner-controlled fenced enclosures.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["fire pump", "valve supervision", "locked open", "tamper", "sealed valves", "backflow"]
+    },
+    {
+      "topic": "Building code (IBC)",
+      "trade": "gc",
+      "state": null,
+      "source": "IBC 2021 1008.3.4 and 1008.3.5",
+      "fact": "Egress lighting on emergency power (required for at least 90 minutes) must start at an average of at least 1 footcandle with no point below 0.1 footcandle along the path of egress at floor level. It may decline to a 0.6-footcandle average and 0.06-footcandle minimum by the end of the duration, and the maximum-to-minimum uniformity ratio may not exceed 40:1.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["emergency lighting", "egress illumination", "footcandle", "90 minutes", "emergency power", "exit lighting"]
+    },
+    {
+      "topic": "Accessibility",
+      "trade": "gc",
+      "state": null,
+      "source": "IBC 2021 1009.2.1",
+      "fact": "Where a required accessible floor is four or more stories above or below a level of exit discharge, at least one of its required accessible means of egress must be an elevator. In fully sprinklered buildings, exceptions apply to floors at or above exit discharge that have a horizontal exit and to floors served by a code-compliant ramp.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["accessible means of egress", "elevator", "four stories", "exit discharge", "wheelchair", "egress"]
+    },
+    {
+      "topic": "Accessibility",
+      "trade": "gc",
+      "state": null,
+      "source": "IBC 2021 1009.6.3",
+      "fact": "Each area of refuge must provide one 30 x 48 in wheelchair space for every 200 occupants or portion thereof, based on the occupant load of the refuge area and the areas it serves. These spaces may not reduce the required egress width, and reaching any space may not require passing more than one adjoining wheelchair space.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["area of refuge", "wheelchair space", "30 x 48", "200 occupants", "accessible egress", "refuge area"]
+    },
+    {
+      "topic": "Building code (IBC)",
+      "trade": "gc",
+      "state": null,
+      "source": "IBC 2021 1010.1.1.1",
+      "fact": "Nothing may project into the required clear opening width of an egress door below 34 in above the floor, and projections between 34 and 80 in above the floor (such as panic hardware) may not exceed 4 in; door closers and door stops may be as low as 78 in.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["door projection", "clear width", "panic hardware", "34 inches", "4 inches", "egress door"]
+    },
+    {
+      "topic": "Building code (IBC)",
+      "trade": "gc",
+      "state": null,
+      "source": "IBC 2021 1011.5.2",
+      "fact": "Egress stair risers must be at least 4 in and no more than 7 in high, measured vertically between adjacent tread nosings, and rectangular treads must be at least 11 in deep. In Group R-3 and inside dwelling units the limits relax to a 7-3/4 in maximum riser and 10 in minimum tread.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["stair riser", "tread depth", "7 inch riser", "11 inch tread", "stairs", "rise and run"]
+    },
+    {
+      "topic": "Building code (IBC)",
+      "trade": "gc",
+      "state": null,
+      "source": "IBC 2021 1012.2; IBC 2021 Ch. 2 (ramp definition)",
+      "fact": "Means-of-egress ramps may have a running slope no steeper than 1 vertical in 12 horizontal, which is about 8.33 percent (1/12 = 0.0833). A walking surface counts as a ramp once its running slope is steeper than 1:20 (5 percent).",
+      "status": "corrected",
+      "note": "Card equates 1:12 with an 8% slope. One divided by 12 is 8.33%, so 8% understates the maximum.",
+      "keywords": ["ramp slope", "1:12", "8.33 percent", "running slope", "egress ramp", "grade"]
+    },
+    {
+      "topic": "Building code (IBC)",
+      "trade": "gc",
+      "state": null,
+      "source": "IBC 2021 1014.2",
+      "fact": "Handrails on stairs and ramps must be at a uniform height of 34 to 38 in, measured above the stair tread nosings or above the finished surface of the ramp slope.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["handrail height", "34 inches", "38 inches", "ramp handrail", "stair handrail", "nosing"]
+    },
+    {
+      "topic": "Roofing",
+      "trade": "gc",
+      "state": null,
+      "source": "IBC 2021 1507.2 (asphalt shingle valleys)",
+      "fact": "For open valleys on asphalt shingle roofs, metal valley lining must be at least 24 in wide and of an approved corrosion-resistant metal. Alternatively, two plies of mineral-surfaced roll roofing (ASTM D3909 or D6380) may be used, with the bottom ply 18 in wide and the top ply at least 36 in wide.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["valley flashing", "open valley", "valley lining", "roll roofing", "asphalt shingles", "24 inch"]
+    },
+    {
+      "topic": "Roofing",
+      "trade": "gc",
+      "state": null,
+      "source": "IBC 2021 1507.2 (valley lining material table)",
+      "fact": "Minimum thicknesses for metal valley lining under asphalt shingles include aluminum 0.024 in, cold-rolled copper 0.0216 in, galvanized steel 0.0179 in (26 gauge) and high-yield copper 0.0162 in.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["valley lining", "aluminum", "copper", "galvanized steel", "thickness", "26 gauge"]
+    },
+    {
+      "topic": "Estimating & bidding",
+      "trade": "law",
+      "state": null,
+      "source": "NASCLA Contractor's Guide topic: public vs private owners; public procurement law",
+      "fact": "Public owners (federal, state and local agencies) build with taxpayer funds and must follow procurement statutes, typically advertised competitive sealed bidding with award to the lowest responsive and responsible bidder plus statutory bonds, while private owners may choose contractors however they like, including by negotiation. A developer is a private owner who builds to sell or lease and often holds the project only briefly.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["public owner", "private owner", "developer", "public works", "sealed bid", "lowest responsible bidder"]
+    },
+    {
+      "topic": "Project management",
+      "trade": "law",
+      "state": null,
+      "source": "NASCLA Contractor's Guide topic: organizing the construction company",
+      "fact": "A decentralized construction firm pushes more decisions out to project and field staff, while a centralized firm (common among small contractors) keeps most decision-making authority at the home office. Narrower specialization lets each worker focus on fewer issues and work faster.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["centralized", "decentralized", "organization structure", "decision making", "specialization", "management"]
+    },
+    {
+      "topic": "Project management",
+      "trade": "law",
+      "state": null,
+      "source": "NASCLA Contractor's Guide topic: work breakdown structure",
+      "fact": "A work breakdown structure (WBS) is a deliverable-oriented hierarchy that divides the total project scope into manageable work packages, each with a defined scope, a responsible person, and measurable duration, cost and resources.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["work breakdown structure", "wbs", "work packages", "scope", "project planning", "deliverables"]
+    },
+    {
+      "topic": "Project management",
+      "trade": "law",
+      "state": null,
+      "source": "NASCLA Contractor's Guide topic: project delivery methods",
+      "fact": "In design-bid-build (traditional) delivery, the owner first hires a design professional to complete the drawings and specifications, then bids the finished design and signs a separate construction contract, usually with the low responsive bidder. The designer and the contractor have no contract with each other.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["design-bid-build", "delivery method", "traditional delivery", "low bidder", "separate contracts", "owner"]
+    },
+    {
+      "topic": "Project management",
+      "trade": "law",
+      "state": null,
+      "source": "NASCLA Contractor's Guide topic: project delivery methods",
+      "fact": "Under construction management at risk (CMAR), the construction manager advises the owner during design and then holds the trade contracts and carries cost risk, usually under a guaranteed maximum price (GMP). In agency CM, by contrast, the CM is only the owner's advisor.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["cm at risk", "construction manager", "guaranteed maximum price", "gmp", "cmar", "delivery method"]
+    },
+    {
+      "topic": "Project management",
+      "trade": "law",
+      "state": null,
+      "source": "NASCLA Contractor's Guide topic: construction manager services",
+      "fact": "Typical construction manager preconstruction services include feasibility and site studies, design and constructability review, value engineering, cost estimating, scheduling, procurement of long-lead items, and splitting the work into bid (work) packages.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["construction manager", "preconstruction", "constructability review", "value engineering", "bid packages", "procurement"]
+    },
+    {
+      "topic": "Project management",
+      "trade": "law",
+      "state": null,
+      "source": "Commissioning practice (ASHRAE Guideline 0); NASCLA Contractor's Guide topic: project completion",
+      "fact": "Commissioning is a quality process that verifies and documents that building systems such as HVAC and controls, electrical and fire alarm are installed and perform as the owner's project requirements call for. Closeout and commissioning should be planned from the start of the job, and closeout often overlaps the owner's move-in and startup.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["commissioning", "closeout", "hvac", "system testing", "turnover", "owner startup"]
+    },
+    {
+      "topic": "Project management",
+      "trade": "law",
+      "state": null,
+      "source": "NASCLA Contractor's Guide topic: project cost control",
+      "fact": "For project control, the accepted estimate (budget) is the cost baseline and the approved schedule is the time baseline; actual costs and progress are compared with them to catch variances early.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["cost control", "baseline", "budget", "schedule", "variance", "project control"]
+    },
+    {
+      "topic": "Project management",
+      "trade": "law",
+      "state": null,
+      "source": "CSI MasterFormat 01 33 00 (submittal procedures); AIA A201 3.12",
+      "fact": "Each technical specification section lists the submittals required for that work (shop drawings, product data, samples, test reports, O&M manuals, warranties), while the general conditions and the Division 01 submittal procedures section set how submittals are prepared, routed and reviewed.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["submittals", "shop drawings", "product data", "samples", "division 01", "specifications"]
+    },
+    {
+      "topic": "Contracts & liens",
+      "trade": "law",
+      "state": null,
+      "source": "AIA G702 / G703",
+      "fact": "Contractors usually request progress payments monthly, commonly on AIA G702 (Application and Certificate for Payment) supported by the G703 continuation sheet, which lists work completed and materials stored for each schedule-of-values line.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["pay application", "g702", "g703", "application for payment", "progress payment", "schedule of values"]
+    }
+  ],
+  "questions": [
+    {
+      "t": "gc",
+      "topic": "Site work & concrete",
+      "q": "Unless the drawings say otherwise, what minimum concrete cover is required over the reinforcement in a footing cast directly against and permanently exposed to the earth?",
+      "c": ["1-1/2 in", "2 in", "3 in", "4 in"],
+      "a": 2,
+      "ref": "ACI 318-19 Table 20.5.1.3.1",
+      "why": "Concrete cast against and permanently exposed to earth needs 3 in of cover; the 2-in and 1-1/2-in values apply to formed surfaces exposed to weather or soil."
+    },
+    {
+      "t": "gc",
+      "topic": "Site work & concrete",
+      "q": "Deformed shrinkage-and-temperature bars in a 6-in-thick structural slab may be spaced no farther apart than:",
+      "c": ["12 in", "18 in", "24 in", "30 in"],
+      "a": 1,
+      "ref": "ACI 318-19 24.4.3.3",
+      "why": "T&S bar spacing is limited to the lesser of 5 times the slab thickness (30 in here) and 18 in, so 18 in governs."
+    },
+    {
+      "t": "gc",
+      "topic": "Site work & concrete",
+      "q": "An inspector checks reinforcing bars just before a pour. Which condition requires the bars to be cleaned before concrete is placed?",
+      "c": ["Light, tight rust on the bar surface", "Mill scale left from the rolling process", "Minor seams that still meet ASTM limits", "Form oil and dried mud on the bars"],
+      "a": 3,
+      "ref": "ACI 301; ACI 318 Ch. 26",
+      "why": "Mud, oil and similar coatings impair bond and must be removed; ordinary rust and mill scale are acceptable if a wire-brushed sample still meets ASTM minimums."
+    },
+    {
+      "t": "gc",
+      "topic": "Roofing",
+      "q": "Strip shingles 12 in wide are installed with a 5-in exposure. What is the head lap?",
+      "c": ["7 in", "5 in", "2 in", "3 in"],
+      "a": 2,
+      "ref": "Shingle laps: HL = W - 2E",
+      "why": "Head lap equals shingle width minus twice the exposure: 12 - (2 x 5) = 2 in. The 7-in figure is the top lap (width minus exposure)."
+    },
+    {
+      "t": "gc",
+      "topic": "Roofing",
+      "q": "On an asphalt shingle roof with an open valley lined with corrosion-resistant metal, the valley lining must be at least how wide?",
+      "c": ["12 in", "16 in", "18 in", "24 in"],
+      "a": 3,
+      "ref": "IBC 2021 1507.2 (valleys)",
+      "why": "Metal open-valley lining must be at least 24 in wide; 18 in is the bottom ply width when two plies of mineral-surfaced roll roofing are used instead."
+    },
+    {
+      "t": "gc",
+      "topic": "Residential code",
+      "q": "Under the IRC, a Class II vapor retarder, such as the kraft facing on batt insulation, has a permeance of:",
+      "c": ["0.1 perm or less", "More than 0.1 up to 1.0 perm", "More than 1.0 up to 10 perm", "More than 10 perm"],
+      "a": 1,
+      "ref": "IRC 2021 R202",
+      "why": "Class I is 0.1 perm or less, Class II is over 0.1 to 1.0 perm, and Class III is over 1.0 to 10 perm."
+    },
+    {
+      "t": "gc",
+      "topic": "Building code (IBC)",
+      "q": "For an egress stairway in a commercial office building, the IBC limits riser height to:",
+      "c": ["4 in minimum and 7 in maximum", "4 in minimum and 7-3/4 in maximum", "5 in minimum and 8 in maximum", "6 in minimum and 7-1/2 in maximum"],
+      "a": 0,
+      "ref": "IBC 2021 1011.5.2",
+      "why": "Egress stair risers must be 4 to 7 in high with treads at least 11 in deep; the 7-3/4 in maximum applies only in Group R-3 and inside dwelling units."
+    },
+    {
+      "t": "gc",
+      "topic": "Building code (IBC)",
+      "q": "Egress lighting on emergency power is allowed to dim over its required 90-minute duration. At the end of that period, what average illumination must still be provided along the path of egress at floor level?",
+      "c": ["1.0 footcandle", "0.6 footcandle", "0.1 footcandle", "0.06 footcandle"],
+      "a": 1,
+      "ref": "IBC 2021 1008.3.5",
+      "why": "Emergency egress lighting starts at a 1-fc average (0.1-fc minimum) and may decline to a 0.6-fc average and 0.06-fc minimum by the end of the duration."
+    },
+    {
+      "t": "gc",
+      "topic": "Accessibility",
+      "q": "An area of refuge serves spaces with a combined occupant load of 450. How many 30 x 48 in wheelchair spaces must it provide?",
+      "c": ["1", "2", "3", "5"],
+      "a": 2,
+      "ref": "IBC 2021 1009.6.3",
+      "why": "One wheelchair space is required per 200 occupants or portion thereof: 450 / 200 = 2.25, which rounds up to 3."
+    },
+    {
+      "t": "gc",
+      "topic": "Fire protection",
+      "q": "Fire protection may be left off the bottom flange of a lintel that is part of the primary structural frame when the lintel spans no more than:",
+      "c": ["4 ft 0 in", "6 ft 4 in", "8 ft 0 in", "10 ft 6 in"],
+      "a": 1,
+      "ref": "IBC 2021 Section 704",
+      "why": "Bottom-flange protection is not required for lintels, shelf angles and plates spanning 6 ft 4 in or less, or for those outside the primary frame at any span."
+    },
+    {
+      "t": "gc",
+      "topic": "Building code (IBC)",
+      "q": "A means-of-egress ramp built at the steepest running slope the IBC permits has a grade of approximately:",
+      "c": ["8.33%", "5%", "10%", "12%"],
+      "a": 0,
+      "ref": "IBC 2021 1012.2",
+      "why": "The maximum ramp slope is 1:12, and 1 divided by 12 is about 8.33 percent; 5 percent (1:20) is the point above which a walking surface is treated as a ramp."
+    },
+    {
+      "t": "law",
+      "topic": "Project management",
+      "q": "In which delivery method does a construction manager advise the owner during design and then hold the trade contracts under a guaranteed maximum price?",
+      "c": ["Agency construction management", "Design-bid-build", "Multiple prime contracting", "Construction management at risk"],
+      "a": 3,
+      "ref": "NASCLA Guide: delivery methods",
+      "why": "In CM at risk the CM takes on contract and cost risk, usually under a GMP; an agency CM only advises the owner and holds no trade contracts."
+    },
+    {
+      "t": "law",
+      "topic": "Contracts & liens",
+      "q": "Which AIA form does a contractor commonly submit each month as its Application and Certificate for Payment?",
+      "c": ["G702", "A101", "A201", "G704"],
+      "a": 0,
+      "ref": "AIA G702/G703",
+      "why": "G702 is the payment application, backed by the G703 continuation sheet; A101 is an owner-contractor agreement, A201 the general conditions, and G704 the certificate of substantial completion."
+    },
+    {
+      "t": "law",
+      "topic": "Project management",
+      "q": "A project manager splits the full project scope into smaller deliverable-based work packages, each assigned to a responsible person with its own duration and cost. This tool is the:",
+      "c": ["Schedule of values", "Critical path diagram", "Work breakdown structure", "Resource histogram"],
+      "a": 2,
+      "ref": "NASCLA Guide: project organization",
+      "why": "A WBS breaks the scope into manageable, measurable work packages; it feeds the schedule and estimate but is not itself a schedule or a billing document."
+    }
+  ]
+}

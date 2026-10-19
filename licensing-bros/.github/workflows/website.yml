@@ -1,0 +1,79 @@
+# Publishes the Licensing Bro's website to GitHub Pages on every push to main, and from the Actions tab.
+# One-time setup: repository Settings > Pages > Build and deployment > Source: "GitHub Actions".
+# Uses the same SUPABASE_URL and SUPABASE_ANON_KEY variables as the Android build. The site address comes from
+# GitHub Pages itself, so it works both at https://YOU.github.io/licensing-bros/ and on a custom domain.
+# Hosting somewhere else (Vercel)? Disable this workflow under Actions > Publish website > ... > Disable workflow.
+name: Publish website
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# One publish at a time; a newer push waits instead of cancelling a deploy halfway
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    name: Build website
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Check settings
+        env:
+          SUPABASE_URL: ${{ vars.SUPABASE_URL }}
+          SUPABASE_ANON_KEY: ${{ vars.SUPABASE_ANON_KEY }}
+        run: |
+          if [ -z "$SUPABASE_URL" ] || [ -z "$SUPABASE_ANON_KEY" ]; then
+            echo "::error::Add repository variables SUPABASE_URL and SUPABASE_ANON_KEY (Settings > Secrets and variables > Actions > Variables)."
+            exit 1
+          fi
+
+      # Reads this repo's Pages address. Fails with a clear message if Pages isn't switched on yet
+      # (Settings > Pages > Source: GitHub Actions).
+      - name: Read GitHub Pages settings
+        id: pages
+        uses: actions/configure-pages@v5
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Build
+        env:
+          NEXT_PUBLIC_SUPABASE_URL: ${{ vars.SUPABASE_URL }}
+          NEXT_PUBLIC_SUPABASE_ANON_KEY: ${{ vars.SUPABASE_ANON_KEY }}
+          # The address GitHub Pages serves this site at (custom domain, or you.github.io/licensing-bros)
+          NEXT_PUBLIC_SITE_URL: ${{ steps.pages.outputs.base_url }}
+          # "/licensing-bros" on a github.io address, empty on a custom domain
+          NEXT_PUBLIC_BASE_PATH: ${{ steps.pages.outputs.base_path }}
+          NEXT_TELEMETRY_DISABLED: "1"
+        run: |
+          echo "Publishing to ${NEXT_PUBLIC_SITE_URL} (subfolder: '${NEXT_PUBLIC_BASE_PATH}')"
+          npm ci
+          npx next build
+          touch out/.nojekyll
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: out
+
+  deploy:
+    name: Publish to GitHub Pages
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

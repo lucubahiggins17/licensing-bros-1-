@@ -1,0 +1,24 @@
+# Minimal Supabase CLI config so the GitHub workflow can deploy the edge functions.
+project_id = "licensing-bros"
+
+[functions.tutor]
+verify_jwt = true
+
+[functions.generate]
+verify_jwt = true
+
+[functions.session]
+verify_jwt = true
+
+[functions.lesson]
+verify_jwt = true
+
+[functions.live-token]
+verify_jwt = true
+
+[functions.stripe-checkout]
+verify_jwt = true
+
+# Stripe calls this one directly; it checks the Stripe-Signature header instead of a sign-in.
+[functions.stripe-webhook]
+verify_jwt = false

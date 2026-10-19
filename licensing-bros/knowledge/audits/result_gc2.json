@@ -1,0 +1,213 @@
+{
+  "questions": [
+    {
+      "i": 184,
+      "action": "fix",
+      "reason": "Curing durations are in the construction requirements (26.5.3.2), not 26.5.3.1; cite the section level",
+      "fixed": { "ref": "ACI 318-19 26.5.3" }
+    },
+    {
+      "i": 207,
+      "action": "fix",
+      "reason": "Code says inorganic or Class A fill, and the 8 ft rule is for furred finish on rated/noncombustible elements; stem lacked that context (IRC stud-wall rule is 10 ft)",
+      "fixed": {
+        "q": "Under the IBC, interior wall finish is set on wood furring over a fire-resistance-rated or noncombustible wall. If the space behind the finish is not filled with inorganic or Class A material, fireblocking is required at what maximum interval in any direction?",
+        "why": "IBC 803 requires furred spaces behind finish on rated or noncombustible elements to be filled with inorganic or Class A material or fireblocked (per Section 718) at no more than 8 ft in any direction."
+      }
+    },
+    {
+      "i": 214,
+      "action": "fix",
+      "reason": "Explanation misstates Table D-3: the 3 fc row itself begins 'General construction areas, concrete placement...'; stem must use the exact 5 fc row wording to be unambiguous",
+      "fixed": {
+        "q": "OSHA Table D-3 has a row titled 'general construction area lighting' (overall site lighting). What minimum illumination does that row require?",
+        "why": "The 'general construction area lighting' row is 5 foot-candles. A separate 3 foot-candle row covers general construction areas, concrete placement, excavation and waste areas, accessways, active storage, loading platforms, refueling and field maintenance; shops need 10 and offices or first aid stations 30."
+      }
+    },
+    {
+      "i": 226,
+      "action": "fix",
+      "reason": "The 90/125 degree exposure limit is in 1926.303(c)(1), not (b)(2)",
+      "fixed": { "ref": "OSHA 1926.303(c)(1)" }
+    },
+    {
+      "i": 230,
+      "action": "fix",
+      "reason": "1926.452(s) sets no load limit; the 750 lb figure is from non-mandatory Appendix A to Subpart L",
+      "fixed": {
+        "q": "OSHA's non-mandatory scaffold specifications (Appendix A to Subpart L) describe float (ship) scaffolds for a maximum intended load of:",
+        "ref": "OSHA 1926 Subpt L App. A (s)",
+        "why": "Appendix A gives float scaffold specifications (3/4 in plywood platform, 2x4 or 1x10 bearers, rope equal to 1 in manila) for a 750 lb maximum intended load; the mandatory rule in 1926.452(s) has no load figure."
+      }
+    },
+    {
+      "i": 235,
+      "action": "fix",
+      "reason": "Roofing 6 ft storage rule is 1926.502(j)(7)(i), not (j)(9)",
+      "fixed": { "ref": "OSHA 1926.502(j)(7)" }
+    },
+    {
+      "i": 236,
+      "action": "fix",
+      "reason": "Fender rule is 1926.602(a)(5), not (a)(3), and OSHA has suspended it pending reconsideration (1926.602(a)(8)(ii)); question must not present it as an enforced requirement",
+      "fixed": {
+        "q": "OSHA 1926.602(a)(5), whose fender requirement is currently suspended, applies to rubber-tired earthmoving haulage equipment whose maximum speed exceeds:",
+        "ref": "OSHA 1926.602(a)(5)",
+        "why": "The rule covers pneumatic-tired trucks, scrapers, tractors and trailing units capable of more than 15 mph, but 1926.602(a)(8)(ii) suspends the fender requirement pending reconsideration."
+      }
+    }
+  ],
+  "facts": [
+    {
+      "id": "SAFE-034",
+      "action": "fix",
+      "reason": "1926.753(d)(1) allows only initial connection and hooking/unhooking; 'guiding' is not listed (it comes from the crane rule 1926.1425)",
+      "fixed": {
+        "fact": "During steel erection, routes for suspended loads must be pre-planned so no one works directly below a suspended load, except employees making the initial connection of the steel or employees needed to hook or unhook the load.",
+        "source": "OSHA 29 CFR 1926.753(d)(1)"
+      }
+    },
+    {
+      "id": "SAFE-035",
+      "action": "fix",
+      "reason": "Current 1926.452(k) has no 'light duty' language (that was the pre-1996 rule)",
+      "fixed": {
+        "fact": "Ladder jack scaffold platforms may not exceed 20 ft in height."
+      }
+    },
+    {
+      "id": "SAFE-047",
+      "action": "fix",
+      "reason": "OSHA 1926.403(i)(1)(v) requires 6 ft 3 in headroom; 6-1/2 ft is the NEC figure, so the combined citation was inconsistent",
+      "fixed": {
+        "fact": "Electrical equipment operating at 0 to 150 volts to ground needs at least 3 ft of clear working space in front of it and at least 30 in wide (or the equipment width). Headroom is 6 ft 3 in under OSHA 1926.403 and 6-1/2 ft under NEC 110.26(A)(3)."
+      }
+    },
+    {
+      "id": "SAFE-049",
+      "action": "fix",
+      "reason": "The 35 ft rest-platform rule is 1926.451(e)(2)(iii)",
+      "fixed": { "source": "OSHA 29 CFR 1926.451(e)(2)(iii)" }
+    },
+    {
+      "id": "SAFE-052",
+      "action": "fix",
+      "reason": "Catenary scaffolds are 1926.452(r) (rule is (r)(4)); (s) is float scaffolds",
+      "fixed": { "source": "OSHA 29 CFR 1926.452(r)(4)" }
+    },
+    {
+      "id": "SAFE-063",
+      "action": "fix",
+      "reason": "Table D-3's 3 fc row actually begins 'General construction areas, concrete placement...'; the fact and note wrongly said the card was in error",
+      "fixed": {
+        "fact": "OSHA Table D-3 minimum illumination: 5 foot-candles for 'general construction area lighting'; 3 foot-candles for 'general construction areas, concrete placement, excavation and waste areas, accessways, active storage areas, loading platforms, refueling and field maintenance areas'; 5 for indoor warehouses, corridors and exitways and for tunnels and general underground work; 10 for construction plants and shops; 30 for first aid stations, infirmaries and offices.",
+        "note": "Both the 5 fc and 3 fc rows mention general construction areas. Exam questions worded 'general construction area lighting' expect 5; items about construction areas listed with concrete placement or excavation expect 3."
+      }
+    },
+    {
+      "id": "SAFE-074",
+      "action": "fix",
+      "reason": "Merged two rules: (a)(1) per-shift inspection does not name a competent person; (a)(6) daily sling inspection by a competent person",
+      "fixed": {
+        "fact": "Rigging equipment for material handling must be inspected before use on each shift and as needed during use, and defective rigging must be removed from service; slings and their fastenings and attachments must also be inspected each day before use by a competent person designated by the employer.",
+        "source": "OSHA 29 CFR 1926.251(a)(1), (a)(6)"
+      }
+    },
+    {
+      "id": "SAFE-078",
+      "action": "fix",
+      "reason": "Only jigsaws with blade shanks 1/4 in or narrower may have a positive on-off control; wider-shank jigsaws need momentary contact",
+      "fixed": {
+        "fact": "Hand-held tools such as drills, fastener drivers, grinders and disc sanders with wheels or discs over 2 in, belt sanders, reciprocating and saber saws, and jigsaws with blade shanks wider than 1/4 in need a momentary-contact on-off control, which may have a lock-on that releases with a single motion of the same finger; platen sanders, grinders and disc sanders 2 in or smaller, routers, planers and jigsaws with blade shanks 1/4 in or narrower may have only a positive on-off control."
+      }
+    },
+    {
+      "id": "SAFE-081",
+      "action": "fix",
+      "reason": "The 90/125 degree exposure limit is in 1926.303(c)(1)",
+      "fixed": { "source": "OSHA 29 CFR 1926.303(c)(1)" }
+    },
+    {
+      "id": "SAFE-084",
+      "action": "fix",
+      "reason": "1926.350(a)(2) says cradle, slingboard or pallet; and cylinders 'shall' be moved by tilting and rolling",
+      "fixed": {
+        "fact": "Compressed gas cylinders must be moved by tilting and rolling them on their bottom edges and must not be intentionally dropped or struck; valve protection caps may not be used to lift cylinders, and cylinders being hoisted must be secured on a cradle, slingboard or pallet, never lifted by magnets or choker slings."
+      }
+    },
+    {
+      "id": "SAFE-097",
+      "action": "fix",
+      "reason": "1926.452(s) contains no load limit; 750 lb is from non-mandatory Appendix A to Subpart L",
+      "fixed": {
+        "fact": "OSHA's non-mandatory scaffold specifications describe float (ship) scaffolds for a maximum intended load of 750 lb; the mandatory rule requires at least two bearers extending at least 6 in beyond the platform on each side.",
+        "source": "OSHA 29 CFR 1926 Subpart L Appendix A (s); 1926.452(s)(1)"
+      }
+    },
+    {
+      "id": "SAFE-100",
+      "action": "fix",
+      "reason": "The 4 ft overhand bricklaying storage rule is 1926.502(j)(6)",
+      "fixed": { "source": "OSHA 29 CFR 1926.501(b)(9); 1926.502(j)(6)" }
+    },
+    {
+      "id": "SAFE-108",
+      "action": "fix",
+      "reason": "Roofing storage rule is 1926.502(j)(7)",
+      "fixed": { "source": "OSHA 29 CFR 1926.502(j)(7)" }
+    },
+    {
+      "id": "SAFE-112",
+      "action": "fix",
+      "reason": "Rule is 1926.602(a)(5), and the fender requirement is suspended pending reconsideration by 1926.602(a)(8)(ii)",
+      "fixed": {
+        "fact": "OSHA 1926.602(a)(5) calls for fenders on all wheels of pneumatic-tired earthmoving haulage equipment (trucks, scrapers, tractors and trailing units) with a maximum speed over 15 mph, but OSHA has suspended that fender requirement pending reconsideration.",
+        "source": "OSHA 29 CFR 1926.602(a)(5), (a)(8)(ii)"
+      }
+    },
+    {
+      "id": "SAFE-121",
+      "action": "fix",
+      "reason": "Erection-bridging rules are in 1926.757(d)(1)-(3), not (c)(5)-(7)",
+      "fixed": { "source": "OSHA 29 CFR 1926.757(d)(1)-(3)" }
+    },
+    {
+      "id": "SITE-006",
+      "action": "fix",
+      "reason": "IRC trigger is the footing bottom slope; IBC 1809.3 trigger is the ground surface slope; fact applied the IRC wording to both",
+      "fixed": {
+        "fact": "Footings must be stepped where the top elevation changes or where a slope steeper than 1 vertical in 10 horizontal (10%) occurs: under the IRC, where the bottom of the footing would slope more than 10%; under the IBC, where the ground surface slopes more than 10%."
+      }
+    },
+    {
+      "id": "SITE-039",
+      "action": "fix",
+      "reason": "Overstated; steel sheet piles are sometimes designed to carry vertical load (e.g., bridge abutments)",
+      "fixed": {
+        "fact": "Sheet piles are interlocking sections driven to form a wall that resists lateral (horizontal) earth and water pressure, as in cofferdams and excavation support; they are generally not used as the primary support for vertical building loads."
+      }
+    },
+    {
+      "id": "SITE-041",
+      "action": "fix",
+      "reason": "Curing durations are in the construction requirements (26.5.3.2), not 26.5.3.1",
+      "fixed": { "source": "ACI 318-19 26.5.3" }
+    },
+    {
+      "id": "WOOD-007",
+      "action": "unverify",
+      "reason": "Concept is sound (similar exceptions exist, e.g. timber below permanent water level), but the cited IBC 2304.12 / IRC R317.1 wording could not be confirmed",
+      "fixed": {
+        "note": "Exact code location of this exception not confirmed; verify the current IBC/IRC section before relying on the citation."
+      }
+    },
+    {
+      "id": "WOOD-008",
+      "action": "fix",
+      "reason": "For fire-retardant-treated wood the rule applies only to exterior or wet/damp use, and preservative-treated wood has exceptions (1/2 in or larger steel bolts, mechanically galvanized fasteners for some uses)",
+      "fixed": {
+        "fact": "Fasteners, nuts and washers in contact with preservative-treated wood, and those in fire-retardant-treated wood used outdoors or in wet or damp locations, must be hot-dipped zinc-coated galvanized steel, stainless steel, silicon bronze or copper. Limited exceptions apply, such as plain steel bolts 1/2 in diameter or larger, and FRT wood used indoors follows the manufacturer's recommendations."
+      }
+    }
+  ]
+}

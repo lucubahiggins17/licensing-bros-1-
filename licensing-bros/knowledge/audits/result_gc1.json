@@ -1,0 +1,153 @@
+{
+  "questions": [
+    {
+      "i": 83,
+      "action": "fix",
+      "reason": "Explanation calls the 5,400 lb lifeline rule superseded; 1926.104(b) still lists it. Reword to a claim that can be verified.",
+      "fixed": {
+        "why": "1926.502(d)(15) requires 5,000 lb per attached employee (or a qualified-person design with a safety factor of two); 5,400 lb is the separate lifeline anchorage figure in 1926.104(b)."
+      }
+    },
+    {
+      "i": 108,
+      "action": "fix",
+      "reason": "IBC 1809.3 lets the footing bottom slope up to 1:10 and requires steps where the ground surface slopes more than 1:10; the question mixed the two up",
+      "fixed": {
+        "q": "Under the IBC, footings must be stepped where the ground surface slopes more than:",
+        "why": "IBC 1809.3 keeps footing tops level, allows the bottom to slope no more than 1:10, and requires stepped footings where the ground slopes more than 1 in 10 (10%)."
+      }
+    },
+    {
+      "i": 149,
+      "action": "fix",
+      "reason": "1926.452(k) sets the 20 ft limit but does not say 'light duty'",
+      "fixed": {
+        "why": "OSHA 1926.452(k)(1) limits ladder jack scaffold platforms to a height of 20 ft."
+      }
+    },
+    {
+      "i": 152,
+      "action": "fix",
+      "reason": "Explanation gives a 6.5 ft headroom, which is the NEC figure; 1926.403 uses 6 ft 3 in. Height dropped.",
+      "fixed": {
+        "why": "Under Table K-1, equipment at 0 to 150 V to ground needs 3 ft of working depth in front of it and at least 30 in of width; this is a distance, not an area."
+      }
+    },
+    {
+      "i": 159,
+      "action": "fix",
+      "reason": "2021 IRC renumbered R310.2 subsections; R310.2.2 may not be the sill-height section",
+      "fixed": {
+        "ref": "IRC 2021 R310.2"
+      }
+    },
+    {
+      "i": 168,
+      "action": "fix",
+      "reason": "IRC R317.3.1 exception allows plain steel bolts 1/2 in and larger, so 'bright steel' is not always wrong",
+      "fixed": {
+        "c": ["Electro-galvanized steel", "Aluminum", "Bright (uncoated) steel nails", "Silicon bronze"]
+      }
+    }
+  ],
+  "facts": [
+    {
+      "id": "ACCE-005",
+      "action": "fix",
+      "reason": "603.2.3 already lets doors swing into the turning space; Exception 2 lets a single-user room door swing into fixture clearances",
+      "fixed": {
+        "fact": "Doors in toilet and bathing rooms may swing into the turning space but not into a fixture's clear floor space; in a single-user room, the door may swing into fixture clear floor spaces if a clear floor space of at least 30 x 48 in is provided inside the room beyond the arc of the door swing."
+      }
+    },
+    {
+      "id": "BUIL-009",
+      "action": "fix",
+      "reason": "Said 'only at the service disconnect', which leaves out separately derived systems (transformers, generators), where bonding is also required",
+      "fixed": {
+        "fact": "Neutral (grounded) conductors and equipment grounding conductors are bonded together at the service disconnect (and at the source or first disconnect of a separately derived system such as a transformer); in a subpanel fed from the service they must be kept on separate, isolated bars."
+      }
+    },
+    {
+      "id": "DOOR-005",
+      "action": "unverify",
+      "reason": "Recent IBC editions may give the curb trigger as roof pitch under 3:12 rather than 45 degrees; 2021 text not confirmed",
+      "fixed": {
+        "note": "Noncombustible frame rule in Types I and II is solid. The 4 in curb trigger may read 'roof pitch flatter than 3:12 unless the manufacturer specifies otherwise' in the 2021 IBC rather than 45 degrees; confirm against the code text."
+      }
+    },
+    {
+      "id": "FIRE-004",
+      "action": "fix",
+      "reason": "IFC 901.5 requires the tests to be witnessed by the fire code official only when required; the occupancy prohibition is in 901.5.1",
+      "fixed": {
+        "fact": "Fire protection systems must pass acceptance tests, conducted in the presence of the fire code official when required, and it is unlawful to occupy any portion of a structure until the required detection, alarm and suppression systems have been tested and approved.",
+        "source": "IFC 2021 901.5, 901.5.1"
+      }
+    },
+    {
+      "id": "FIRE-015",
+      "action": "fix",
+      "reason": "Leaves out the reduction to 1 hour in a fully sprinklered building, which covers nearly every high-rise",
+      "fixed": {
+        "fact": "In a high-rise, fuel lines supplying a generator inside the building must be separated from other areas (other than the generator room) by an approved method or assembly rated at least 2 hours; where the building is fully sprinklered, the rating may be reduced to 1 hour."
+      }
+    },
+    {
+      "id": "FIRE-026",
+      "action": "fix",
+      "reason": "The code says the spaces are filled with Class A material, not noncombustible material. The rule also applies only where the wall or ceiling must be rated or noncombustible.",
+      "fixed": {
+        "fact": "Where walls or ceilings required to be fire-resistance-rated or noncombustible have interior finish set out on furring strips, the concealed spaces between furring must be filled with Class A material or fireblocked at intervals of no more than 8 ft in any direction.",
+        "source": "IBC 2021 803.11.1; Section 718"
+      }
+    },
+    {
+      "id": "RESI-008",
+      "action": "fix",
+      "reason": "Wording is from NEC 2017; NEC 2020 210.8(A) covers 125 V through 250 V receptacles in dwellings",
+      "fixed": {
+        "fact": "In dwellings, receptacles installed within 6 ft of the top inside edge of a sink bowl must have GFCI protection; the IRC states this for 125-volt, 15- and 20-amp receptacles, and NEC 2020 extends dwelling GFCI rules to all 125- through 250-volt receptacles on circuits of 150 V or less to ground."
+      }
+    },
+    {
+      "id": "RESI-016",
+      "action": "fix",
+      "reason": "2021 IRC renumbered R310.2 subsections; cite the parent section",
+      "fixed": {
+        "source": "IRC 2021 R310.2; IBC 2021 1031.3"
+      }
+    },
+    {
+      "id": "RESI-021",
+      "action": "fix",
+      "reason": "Mixes up the gravel-drain dimensions with the pipe-drain rule, and presents holes-down as a code requirement",
+      "fixed": {
+        "fact": "Where perforated pipe or drain tile is used for a foundation drain, its invert may not be higher than the floor, it is placed on at least 2 in of gravel or crushed stone and covered with at least 6 in, and the top of the joints or perforations is protected with a filter membrane; laying perforations facing down is common practice."
+      }
+    },
+    {
+      "id": "ROOF-008",
+      "action": "fix",
+      "reason": "The code sets the valley flashing material and gage but does not ban woven or closed-cut valleys",
+      "fixed": {
+        "fact": "Valley flashing for wood shingle and wood shake roofs must be corrosion-resistant sheet metal of at least No. 26 gage; open, metal-lined valleys are the standard installation practice for these roofs."
+      }
+    },
+    {
+      "id": "SAFE-006",
+      "action": "fix",
+      "reason": "Note calls 1926.104 'old'; its 5,400 lb lifeline figure is still in the CFR",
+      "fixed": {
+        "note": "Card says 5,400 lb dead weight. That figure is the lifeline anchorage requirement in 29 CFR 1926.104(b); the personal fall arrest anchorage requirement in 1926.502(d)(15) is 5,000 lb per attached employee."
+      }
+    },
+    {
+      "id": "SAFE-020",
+      "action": "fix",
+      "reason": "'Only' overstates it: excavations under 5 ft (competent-person check) and the 3-1/2 ft vertical lower portion allowed in Type A also apply",
+      "fixed": {
+        "fact": "In the OSHA Appendix B sloping table, stable rock is the only classification allowed a vertical (90 degree) slope. Other exceptions exist: excavations under 5 ft deep may skip a protective system when a competent person finds no sign of cave-in, and Type A soil allows a vertical lower portion up to 3-1/2 ft in certain configurations."
+      }
+    }
+  ]
+}

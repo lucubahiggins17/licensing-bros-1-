@@ -1,0 +1,22 @@
+{
+  "name": "licensing-bros-android",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Android app wrapper for Licensing Bro's (Capacitor).",
+  "scripts": {
+    "sync": "cap sync android",
+    "open": "cap open android"
+  },
+  "dependencies": {
+    "@capacitor-community/speech-recognition": "7.0.1",
+    "@capacitor-community/text-to-speech": "6.1.0",
+    "@capacitor/android": "7.6.9",
+    "@capacitor/app": "7.1.2",
+    "@capacitor/core": "7.6.9",
+    "@capacitor/status-bar": "7.0.6"
+  },
+  "devDependencies": {
+    "@capacitor/cli": "7.6.9",
+    "typescript": "^5.5.4"
+  }
+}

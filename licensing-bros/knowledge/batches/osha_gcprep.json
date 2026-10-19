@@ -1,0 +1,1357 @@
+{
+  "source": "NASCLA final practice exam + commercial GC prep course sets",
+  "facts": [
+    {
+      "topic": "Safety (OSHA)", "trade": "gc", "state": null,
+      "source": "OSHA 29 CFR 1926.25(a)-(b); 1926.252(c)",
+      "fact": "Jobsite housekeeping: form and scrap lumber with protruding nails and other debris must be kept clear of work areas, combustible scrap and debris must be removed at regular intervals, and scrap, waste and rubbish must be cleared from the immediate work area as the work progresses.",
+      "status": "verified", "note": "",
+      "keywords": ["housekeeping", "debris", "scrap", "rubbish", "combustible", "cleanup"]
+    },
+    {
+      "topic": "Safety (OSHA)", "trade": "gc", "state": null,
+      "source": "OSHA 29 CFR 1926.50(d)(2)",
+      "fact": "Jobsite first aid supplies must be kept in a weatherproof container with each item individually sealed, and the employer must check the kit before it goes out to each job and at least weekly so used or expired items are replaced.",
+      "status": "verified", "note": "",
+      "keywords": ["first aid kit", "weekly", "medical", "supplies", "inspection", "sealed"]
+    },
+    {
+      "topic": "Safety (OSHA)", "trade": "gc", "state": null,
+      "source": "OSHA 29 CFR 1926.51(c)(1) Table D-1",
+      "fact": "Minimum jobsite toilets: 20 or fewer employees need 1 toilet; 20 or more employees need 1 toilet seat and 1 urinal per 40 workers; 200 or more need 1 toilet seat and 1 urinal per 50 workers. A crew of 25 therefore needs 1 toilet seat and 1 urinal.",
+      "status": "verified", "note": "",
+      "keywords": ["toilet", "sanitation", "urinal", "restroom", "portable toilet", "number of employees"]
+    },
+    {
+      "topic": "Safety (OSHA)", "trade": "gc", "state": null,
+      "source": "OSHA 29 CFR 1926.52 Table D-2",
+      "fact": "OSHA permissible noise exposure (slow response): 90 dBA for 8 hours, 92 dBA for 6 hours, 95 dBA for 4 hours, 97 dBA for 3 hours, 100 dBA for 2 hours, 102 dBA for 1.5 hours, 105 dBA for 1 hour, 110 dBA for 0.5 hour and 115 dBA for 0.25 hour or less.",
+      "status": "verified", "note": "",
+      "keywords": ["noise", "decibels", "dba", "hearing", "permissible exposure", "pel"]
+    },
+    {
+      "topic": "Safety (OSHA)", "trade": "gc", "state": null,
+      "source": "OSHA 29 CFR 1926.52 Table D-2 (mixed exposure note)",
+      "fact": "For exposure at several noise levels, add each fraction of actual time divided by permitted time; a total greater than 1 exceeds the limit. Example: 1/4 h at 110 dBA (0.25/0.5) + 1/2 h at 105 dBA (0.5/1) + 3 h at 95 dBA (3/4) = 0.5 + 0.5 + 0.75 = 1.75, which is over the limit.",
+      "status": "verified", "note": "",
+      "keywords": ["noise dose", "mixed exposure", "decibels", "calculation", "hearing", "over limit"]
+    },
+    {
+      "topic": "Safety (OSHA)", "trade": "gc", "state": null,
+      "source": "OSHA 29 CFR 1926.56 Table D-3",
+      "fact": "Minimum illumination for general construction area lighting is 5 foot-candles; 3 foot-candles is allowed for areas such as concrete placement, excavation and waste areas, accessways, active storage, loading platforms, refueling and field maintenance; 10 foot-candles for construction plants and shops; 30 foot-candles for first aid stations and offices.",
+      "status": "corrected",
+      "note": "Card says 3 foot-candles for general construction areas. Table D-3 sets 5 foot-candles for general construction area lighting; the 3 foot-candle row applies to concrete placement, excavation and waste areas, accessways, active storage, loading platforms, refueling and field maintenance areas.",
+      "keywords": ["lighting", "illumination", "foot-candles", "light level", "general construction", "excavation"]
+    },
+    {
+      "topic": "Safety (OSHA)", "trade": "gc", "state": null,
+      "source": "OSHA 29 CFR 1926.100(a)-(b); 1926.95",
+      "fact": "Workers exposed to possible head injury from impact, falling or flying objects, or electrical shock and burns must wear protective helmets, and the employer is responsible for providing head protection that meets the ANSI Z89.1 standard.",
+      "status": "verified", "note": "",
+      "keywords": ["hard hat", "helmet", "head protection", "ansi", "ppe", "employer"]
+    },
+    {
+      "topic": "Safety (OSHA)", "trade": "gc", "state": null,
+      "source": "OSHA 29 CFR 1926.102(a)(1)",
+      "fact": "When employees are exposed to eye or face hazards such as flying particles, molten metal, liquid chemicals, acids, caustic liquids or injurious light, the employer must provide eye and face protection.",
+      "status": "verified", "note": "",
+      "keywords": ["eye protection", "face shield", "safety glasses", "goggles", "ppe", "chemicals"]
+    },
+    {
+      "topic": "Safety (OSHA)", "trade": "gc", "state": null,
+      "source": "OSHA 29 CFR 1926.502(d)(9), (d)(16)",
+      "fact": "A personal fall arrest system must use a full body harness (body belts are not allowed for fall arrest), lanyards and vertical lifelines with at least 5,000 lb breaking strength, and be rigged so the worker free falls no more than 6 ft and cannot contact any lower level; deceleration distance is limited to 3.5 ft and arresting force to 1,800 lb with a harness.",
+      "status": "corrected",
+      "note": "Card says a safety belt lanyard must be at least 1/2-in nylon with a 6 ft maximum fall, which is the legacy safety-belt rule (old 1926.104). Body belts have been prohibited as part of a personal fall arrest system since January 1, 1998; current requirements are in 1926.502(d).",
+      "keywords": ["lanyard", "harness", "body belt", "personal fall arrest", "free fall", "pfas"]
+    },
+    {
+      "topic": "Safety (OSHA)", "trade": "gc", "state": null,
+      "source": "OSHA 29 CFR 1926.502(c)(1)-(2)",
+      "fact": "Safety nets must be installed as close as practicable below the work surface and never more than 30 ft below it, and must extend outward from the edge 8 ft when up to 5 ft below the work surface, 10 ft when more than 5 ft up to 10 ft below, and 13 ft when more than 10 ft below.",
+      "status": "verified", "note": "",
+      "keywords": ["safety net", "net extension", "fall protection", "horizontal distance", "30 feet", "nets"]
+    },
+    {
+      "topic": "Safety (OSHA)", "trade": "gc", "state": null,
+      "source": "OSHA 29 CFR 1926.502(c)(4), (c)(7), (c)(9)",
+      "fact": "Safety net mesh openings may not exceed 36 sq in or 6 in on a side, connections between net panels must be as strong as the integral net components and spaced no more than 6 in apart, and nets must pass a drop test with a 400 lb bag of sand about 30 in in diameter.",
+      "status": "verified", "note": "",
+      "keywords": ["safety net", "mesh", "drop test", "panel connections", "fall protection", "nets"]
+    },
+    {
+      "topic": "Fire protection", "trade": "gc", "state": null,
+      "source": "OSHA 29 CFR 1926.150(c)(1)",
+      "fact": "A fire extinguisher rated at least 2A is required for each 3,000 sq ft of protected building area, with travel distance to one no more than 100 ft; one 55-gallon open drum of water with two fire pails may substitute for a 2A extinguisher, and an extinguisher rated at least 10B must be within 50 ft wherever more than 5 gallons of flammable liquid or 5 lb of flammable gas is used.",
+      "status": "verified", "note": "",
+      "keywords": ["fire extinguisher", "2a", "55 gallon drum", "fire pails", "10b", "travel distance"]
+    },
+    {
+      "topic": "Fire protection", "trade": "gc", "state": null,
+      "source": "NFPA 10 extinguisher classes; OSHA 29 CFR 1926.150",
+      "fact": "Soda-acid and other water-based extinguishers are rated only for Class A fires (ordinary combustibles); Class B fires involving flammable liquids, gasoline, oil, paint or grease need carbon dioxide, dry chemical or foam extinguishers.",
+      "status": "verified", "note": "",
+      "keywords": ["class b", "soda acid", "extinguisher type", "flammable liquid fire", "co2", "dry chemical"]
+    },
+    {
+      "topic": "Fire protection", "trade": "gc", "state": null,
+      "source": "OSHA 29 CFR 1926.152(b)(1)",
+      "fact": "No more than 25 gallons of flammable liquids may be stored in a room outside an approved storage cabinet; larger quantities belong in approved cabinets or storage rooms.",
+      "status": "verified", "note": "",
+      "keywords": ["flammable liquids", "storage", "25 gallons", "cabinet", "gasoline", "fuel storage"]
+    },
+    {
+      "topic": "Fire protection", "trade": "gc", "state": null,
+      "source": "OSHA 29 CFR 1926.152(b)(3)",
+      "fact": "A single flammable liquid storage cabinet may hold no more than 60 gallons of Category 1, 2 or 3 flammable liquids, or no more than 120 gallons of Category 4 flammable liquids.",
+      "status": "verified", "note": "",
+      "keywords": ["storage cabinet", "flammable", "60 gallons", "120 gallons", "category 4", "combustible liquid"]
+    },
+    {
+      "topic": "Safety (OSHA)", "trade": "gc", "state": null,
+      "source": "OSHA 29 CFR 1926.154",
+      "fact": "Temporary heaters used in confined or enclosed spaces require sufficient ventilation for safe combustion and to protect workers, and heaters used near combustible tarpaulins, canvas or similar coverings must be at least 10 ft from them.",
+      "status": "verified", "note": "",
+      "keywords": ["temporary heater", "ventilation", "tarp", "canvas", "10 feet", "carbon monoxide"]
+    },
+    {
+      "topic": "Safety (OSHA)", "trade": "gc", "state": null,
+      "source": "OSHA 29 CFR 1926.154 Table V-4",
+      "fact": "A radiant-type room heater needs at least 36 in clearance from combustible material above, in front, at the sides and at the rear; a circulating-type room heater needs 36 in above, 24 in in front and 12 in at the sides and rear.",
+      "status": "verified", "note": "",
+      "keywords": ["heater clearance", "radiant heater", "36 inches", "combustibles", "temporary heat", "circulating heater"]
+    },
+    {
+      "topic": "Safety (OSHA)", "trade": "gc", "state": null,
+      "source": "OSHA 29 CFR 1926.250(b)(1)",
+      "fact": "Material stored inside a building under construction may not be placed within 6 ft of a hoistway or inside floor opening, nor within 10 ft of an exterior wall that does not extend above the top of the stored material.",
+      "status": "verified", "note": "",
+      "keywords": ["material storage", "hoistway", "floor opening", "6 feet", "10 feet", "exterior wall"]
+    },
+    {
+      "topic": "Safety (OSHA)", "trade": "gc", "state": null,
+      "source": "OSHA 29 CFR 1926.250(b)(3)",
+      "fact": "Bagged materials must be stacked by stepping back the layers and cross-keying the bags at least every 10 bags high.",
+      "status": "verified", "note": "",
+      "keywords": ["bagged materials", "cement bags", "stacking", "cross-key", "10 bags", "storage"]
+    },
+    {
+      "topic": "Safety (OSHA)", "trade": "gc", "state": null,
+      "source": "OSHA 29 CFR 1926.250(b)(6)",
+      "fact": "Loose brick stacks may not exceed 7 ft in height, and once a stack reaches 4 ft it must be tapered back 2 in for every foot of height above the 4 ft level.",
+      "status": "verified", "note": "",
+      "keywords": ["brick stack", "stacking", "7 feet", "taper", "masonry storage", "4 feet"]
+    },
+    {
+      "topic": "Safety (OSHA)", "trade": "gc", "state": null,
+      "source": "OSHA 29 CFR 1926.250(b)(7)",
+      "fact": "When masonry blocks are stacked higher than 6 ft, the stack must be tapered back one-half block per tier above the 6 ft level.",
+      "status": "verified", "note": "",
+      "keywords": ["masonry block", "cmu", "stacking", "half block", "6 feet", "taper"]
+    },
+    {
+      "topic": "Safety (OSHA)", "trade": "gc", "state": null,
+      "source": "OSHA 29 CFR 1926.250(b)(8)",
+      "fact": "Used lumber must have all nails removed before stacking; lumber must be stacked on level, solidly supported sills, and piles may not exceed 20 ft high, or 16 ft if the lumber is handled manually.",
+      "status": "verified", "note": "",
+      "keywords": ["lumber pile", "stacking", "nails", "20 feet", "16 feet", "storage"]
+    },
+    {
+      "topic": "Safety (OSHA)", "trade": "gc", "state": null,
+      "source": "OSHA 29 CFR 1926.251(a)(6)",
+      "fact": "Rigging equipment for material handling must be inspected by a competent person before use on each shift and as needed during use to make sure it is safe; defective rigging must be removed from service.",
+      "status": "verified", "note": "",
+      "keywords": ["rigging", "slings", "inspection", "each shift", "competent person", "material handling"]
+    },
+    {
+      "topic": "Safety (OSHA)", "trade": "gc", "state": null,
+      "source": "OSHA 29 CFR 1926.252(a)",
+      "fact": "An enclosed chute is required whenever material is dropped more than 20 ft to any point outside the exterior walls of the building.",
+      "status": "verified", "note": "",
+      "keywords": ["chute", "debris", "dropping material", "20 feet", "waste disposal", "demolition"]
+    },
+    {
+      "topic": "Safety (OSHA)", "trade": "gc", "state": null,
+      "source": "OSHA 29 CFR 1926.252(b)",
+      "fact": "When debris is dropped through floor holes without a chute, the drop area must be fully enclosed by barricades at least 42 in high set at least 6 ft back from the projected edge of the opening above, with warning signs posted at each level.",
+      "status": "verified", "note": "",
+      "keywords": ["debris", "floor hole", "barricade", "42 inches", "6 feet", "dropping"]
+    },
+    {
+      "topic": "Fire protection", "trade": "gc", "state": null,
+      "source": "OSHA 29 CFR 1926.252(e)",
+      "fact": "Solvent waste, oily rags and flammable liquids must be kept in fire-resistant covered containers until they are removed from the worksite.",
+      "status": "verified", "note": "",
+      "keywords": ["oily rags", "solvent waste", "covered container", "fire resistant", "flammable", "disposal"]
+    },
+    {
+      "topic": "Safety (OSHA)", "trade": "gc", "state": null,
+      "source": "OSHA 29 CFR 1926.300(b)",
+      "fact": "Power tools designed to accept guards must have those guards in place when in use; the point of operation is the area of a machine where work is actually performed on the material.",
+      "status": "verified", "note": "",
+      "keywords": ["machine guarding", "power tools", "guards", "point of operation", "tool safety", "guard"]
+    },
+    {
+      "topic": "Safety (OSHA)", "trade": "gc", "state": null,
+      "source": "OSHA 29 CFR 1926.300(d)(3)-(4)",
+      "fact": "Hand-held tools such as drills, fastener drivers, grinders with wheels over 2 in diameter, belt sanders and reciprocating or saber saws need a momentary-contact (constant pressure) switch, which may have a lock-on that releases with one motion; sanders and grinders with wheels or discs 2 in or smaller, routers, planers, jigsaws and similar tools may have only a positive on-off control.",
+      "status": "verified", "note": "",
+      "keywords": ["switch", "on-off control", "momentary contact", "grinder", "hand tools", "lock-on"]
+    },
+    {
+      "topic": "Safety (OSHA)", "trade": "gc", "state": null,
+      "source": "OSHA 29 CFR 1926.302(a)(1)",
+      "fact": "Electric power-operated tools must be either the approved double-insulated type or grounded.",
+      "status": "verified", "note": "",
+      "keywords": ["double insulated", "grounded", "electric tools", "shock", "power tools", "grounding"]
+    },
+    {
+      "topic": "Safety (OSHA)", "trade": "gc", "state": null,
+      "source": "OSHA 29 CFR 1926.302(b)(3)-(4)",
+      "fact": "Pneumatic nailers, staplers and similar tools operating above 100 psi must have a safety device on the muzzle to prevent ejecting fasteners unless the muzzle is against the work; compressed air for cleaning must be reduced below 30 psi and used only with effective chip guarding and personal protective equipment.",
+      "status": "verified", "note": "",
+      "keywords": ["pneumatic nailer", "muzzle", "compressed air", "30 psi", "100 psi", "chip guarding"]
+    },
+    {
+      "topic": "Safety (OSHA)", "trade": "gc", "state": null,
+      "source": "OSHA 29 CFR 1926.302(e)",
+      "fact": "Only employees trained in the operation of the particular tool may operate a powder-actuated tool; the tool must be tested daily before loading and must not be loaded until just before use or left loaded unattended.",
+      "status": "verified", "note": "",
+      "keywords": ["powder actuated", "power actuated tool", "ramset", "trained", "nail gun", "explosive"]
+    },
+    {
+      "topic": "Safety (OSHA)", "trade": "gc", "state": null,
+      "source": "OSHA 29 CFR 1926.303(b)(2)",
+      "fact": "Floor-stand and bench-mounted abrasive wheels used for external grinding need safety guards (hoods), and the exposed wheel periphery and sides may not exceed 90 degrees, or 125 degrees when the work must contact the wheel below the horizontal plane of the spindle.",
+      "status": "verified", "note": "",
+      "keywords": ["bench grinder", "abrasive wheel", "guard", "90 degrees", "125 degrees", "grinding"]
+    },
+    {
+      "topic": "Safety (OSHA)", "trade": "gc", "state": null,
+      "source": "OSHA abrasive wheel guidance (1926.303 / 1910.215 context)",
+      "fact": "Eye shields that provide adequate eye protection are often permanently mounted on the bench or floor stand of a grinder.",
+      "status": "unverified",
+      "note": "Statement reflects common OSHA guidance on grinders, but the specific wording could not be tied to a regulatory paragraph; workers still need eye protection per 1926.102.",
+      "keywords": ["eye shield", "grinder", "bench grinder", "eye protection", "floor stand", "abrasive"]
+    },
+    {
+      "topic": "Safety (OSHA)", "trade": "gc", "state": null,
+      "source": "OSHA 29 CFR 1926.304(d)",
+      "fact": "Portable power-driven circular saws need guards above and below the base plate: the upper guard covers the saw to the depth of the teeth except for the arc needed to tilt the base for bevel cuts, and the lower guard covers to the depth of the teeth and returns automatically to the covering position when the saw is withdrawn.",
+      "status": "verified", "note": "",
+      "keywords": ["circular saw", "blade guard", "upper guard", "lower guard", "bevel", "skilsaw"]
+    },
+    {
+      "topic": "Safety (OSHA)", "trade": "gc", "state": null,
+      "source": "OSHA 29 CFR 1926.350(a)",
+      "fact": "Compressed gas cylinders may be moved by tilting and rolling them on their bottom edges and must not be dropped or struck; valve protection caps must never be used to lift cylinders, and hoisting requires a cradle, boat or suitable platform rather than magnets or choker slings.",
+      "status": "verified", "note": "",
+      "keywords": ["gas cylinder", "compressed gas", "valve cap", "moving cylinders", "hoisting", "welding"]
+    },
+    {
+      "topic": "Safety (OSHA)", "trade": "gc", "state": null,
+      "source": "OSHA 29 CFR 1926.350(a)(10)",
+      "fact": "Stored oxygen cylinders must be separated from fuel-gas cylinders and combustible materials (especially oil or grease) by at least 20 ft or by a noncombustible barrier at least 5 ft high with a fire-resistance rating of at least one-half hour.",
+      "status": "verified", "note": "",
+      "keywords": ["oxygen", "fuel gas", "acetylene", "cylinder storage", "20 feet", "barrier"]
+    },
+    {
+      "topic": "Safety (OSHA)", "trade": "gc", "state": null,
+      "source": "OSHA 29 CFR 1926.350(d)",
+      "fact": "Gas cylinder valves must always be opened slowly to protect the regulator, fuel-gas cylinder valves should not be opened more than 1-1/2 turns, and a valve key or wrench must stay on the stem of non-handwheel valves while the cylinder is in use.",
+      "status": "verified", "note": "",
+      "keywords": ["cylinder valve", "open slowly", "regulator", "fuel gas", "1-1/2 turns", "welding"]
+    },
+    {
+      "topic": "Safety (OSHA)", "trade": "gc", "state": null,
+      "source": "OSHA 29 CFR 1926.350(f)",
+      "fact": "Hoses carrying acetylene, oxygen, fuel gas or any harmful substance must be inspected at the beginning of each working shift, and defective hose must be removed from service.",
+      "status": "verified", "note": "",
+      "keywords": ["welding hose", "oxygen hose", "acetylene", "inspection", "each shift", "torch"]
+    },
+    {
+      "topic": "Safety (OSHA)", "trade": "gc", "state": null,
+      "source": "OSHA 29 CFR 1926.351(e)",
+      "fact": "Whenever practicable, arc welding and cutting operations must be shielded with noncombustible or flameproof screens to protect nearby workers from the direct rays of the arc.",
+      "status": "verified", "note": "",
+      "keywords": ["arc welding", "welding screen", "arc rays", "flameproof", "shielding", "cutting"]
+    },
+    {
+      "topic": "Safety (OSHA)", "trade": "gc", "state": null,
+      "source": "OSHA 29 CFR 1926.353(a)(2), (b)(1)",
+      "fact": "Oxygen must never be used to ventilate a welding area, and when a welder enters a confined space through a manhole or other small opening, lifelines or similar means must be provided for quick removal in an emergency, with an attendant stationed outside.",
+      "status": "verified", "note": "",
+      "keywords": ["welding ventilation", "oxygen", "confined space", "lifeline", "attendant", "manhole"]
+    },
+    {
+      "topic": "Safety (OSHA)", "trade": "gc", "state": null,
+      "source": "OSHA 29 CFR 1926.450(b); 1926.452(r)",
+      "fact": "A catenary scaffold is a suspension scaffold whose platform rests on two essentially horizontal, parallel ropes attached to structural members; no more than one platform may be placed between consecutive vertical pickups and no more than two platforms may be used on one catenary scaffold.",
+      "status": "verified", "note": "",
+      "keywords": ["catenary scaffold", "suspension scaffold", "platforms", "scaffold types", "ropes", "definition"]
+    },
+    {
+      "topic": "Safety (OSHA)", "trade": "gc", "state": null,
+      "source": "OSHA 29 CFR 1926.451(a)(1), (a)(3)",
+      "fact": "Each scaffold and scaffold component must support its own weight plus at least 4 times the maximum intended load, and each suspension rope must support at least 6 times the maximum intended load.",
+      "status": "verified", "note": "",
+      "keywords": ["scaffold capacity", "4 times", "safety factor", "suspension rope", "6 times", "intended load"]
+    },
+    {
+      "topic": "Safety (OSHA)", "trade": "gc", "state": null,
+      "source": "OSHA 29 CFR 1926.451(b)(1)-(2)",
+      "fact": "Scaffold platforms must be fully planked or decked with gaps between units and between the platform and uprights no more than 1 in (unless a wider space is shown to be necessary), and work platforms must generally be at least 18 in wide.",
+      "status": "verified", "note": "",
+      "keywords": ["scaffold platform", "planking", "1 inch gap", "18 inches", "decking", "scaffold width"]
+    },
+    {
+      "topic": "Safety (OSHA)", "trade": "gc", "state": null,
+      "source": "OSHA 29 CFR 1926.451(f)(6)",
+      "fact": "Scaffolds and conductive material on them must stay at least 3 ft from insulated power lines under 300 volts and at least 10 ft from insulated lines of 300 V to 50 kV and from uninsulated lines under 50 kV; above 50 kV the distance is 10 ft plus 0.4 in for each kV over 50 kV.",
+      "status": "verified", "note": "",
+      "keywords": ["scaffold", "power lines", "clearance", "3 feet", "10 feet", "electrical"]
+    },
+    {
+      "topic": "Safety (OSHA)", "trade": "gc", "state": null,
+      "source": "OSHA 29 CFR 1926.452(a)",
+      "fact": "On pole scaffolds, bearers must extend at least 3 in beyond the outside edges of the runners, and when a platform is moved to the next level the existing platform must stay in place until the new bearers are set and braced.",
+      "status": "verified", "note": "",
+      "keywords": ["pole scaffold", "bearers", "runners", "3 inches", "platform", "scaffold"]
+    },
+    {
+      "topic": "Safety (OSHA)", "trade": "gc", "state": null,
+      "source": "OSHA 29 CFR 1926.452(k)(1)",
+      "fact": "Platforms on ladder jack scaffolds may not be higher than 20 ft.",
+      "status": "verified", "note": "",
+      "keywords": ["ladder jack", "scaffold height", "20 feet", "platform", "ladder", "scaffold"]
+    },
+    {
+      "topic": "Safety (OSHA)", "trade": "gc", "state": null,
+      "source": "OSHA 29 CFR 1926.452(m)",
+      "fact": "Crawling boards (chicken ladders) used for roof construction, repair or maintenance must extend from the roof peak to the eaves.",
+      "status": "verified", "note": "",
+      "keywords": ["crawling board", "chicken ladder", "roof", "eaves", "peak", "roofing"]
+    },
+    {
+      "topic": "Safety (OSHA)", "trade": "gc", "state": null,
+      "source": "OSHA 29 CFR 1926.452(s)(1)",
+      "fact": "Float (ship) scaffolds have a maximum intended load of 750 lb.",
+      "status": "verified", "note": "",
+      "keywords": ["float scaffold", "ship scaffold", "750 pounds", "intended load", "suspended", "scaffold"]
+    },
+    {
+      "topic": "Safety (OSHA)", "trade": "gc", "state": null,
+      "source": "OSHA 29 CFR 1926.454(a)-(b)",
+      "fact": "The employer must have each employee who works on a scaffold trained by a qualified person on its hazards; employees who erect, disassemble, move, operate, repair, maintain or inspect scaffolds must be trained by a competent person on the hazards, correct procedures, design criteria, maximum intended load and load-carrying capacity.",
+      "status": "verified", "note": "",
+      "keywords": ["scaffold training", "qualified person", "competent person", "employer", "erecting", "training"]
+    },
+    {
+      "topic": "Safety (OSHA)", "trade": "gc", "state": null,
+      "source": "OSHA 29 CFR 1926.501(b)(1), (b)(4)",
+      "fact": "In construction, employees on a walking/working surface with an unprotected side or edge 6 ft or more above a lower level must be protected by guardrails, safety nets or personal fall arrest systems, and holes (including skylights) more than 6 ft above a lower level must be protected by covers, guardrails or personal fall arrest.",
+      "status": "verified", "note": "",
+      "keywords": ["fall protection", "6 feet", "unprotected edge", "holes", "skylight", "guardrail"]
+    },
+    {
+      "topic": "Safety (OSHA)", "trade": "gc", "state": null,
+      "source": "OSHA 29 CFR 1926.501(b)(5)",
+      "fact": "Workers on the face of formwork or reinforcing steel must be protected from falls of 6 ft or more by personal fall arrest systems, safety nets or positioning device systems.",
+      "status": "verified", "note": "",
+      "keywords": ["formwork", "rebar", "reinforcing steel", "positioning device", "6 feet", "fall protection"]
+    },
+    {
+      "topic": "Safety (OSHA)", "trade": "gc", "state": null,
+      "source": "OSHA 29 CFR 1926.501(b)(9); 1926.502(j)(8)",
+      "fact": "During overhand bricklaying, an employee reaching more than 10 in below the level of the walking/working surface must be protected by guardrails, safety nets or personal fall arrest, and no materials other than masonry and mortar may be stored within 4 ft of the working edge.",
+      "status": "verified", "note": "",
+      "keywords": ["overhand bricklaying", "10 inches", "masonry", "fall protection", "4 feet", "working edge"]
+    },
+    {
+      "topic": "Safety (OSHA)", "trade": "gc", "state": null,
+      "source": "OSHA 29 CFR 1926.502(b)(1)-(5)",
+      "fact": "Guardrail top rails must be 42 in plus or minus 3 in above the walking/working level and withstand 200 lb; midrails, screens or mesh are needed when there is no wall or parapet at least 21 in high, with midrails set midway between the top rail and the surface and able to withstand 150 lb.",
+      "status": "verified", "note": "",
+      "keywords": ["guardrail", "top rail", "42 inches", "midrail", "21 inches", "200 pounds"]
+    },
+    {
+      "topic": "Safety (OSHA)", "trade": "gc", "state": null,
+      "source": "OSHA 29 CFR 1926.502(d)(8)",
+      "fact": "Horizontal lifelines must be designed, installed and used under the supervision of a qualified person as part of a complete personal fall arrest system that maintains a safety factor of at least two.",
+      "status": "verified", "note": "",
+      "keywords": ["horizontal lifeline", "qualified person", "safety factor", "fall arrest", "lifeline", "design"]
+    },
+    {
+      "topic": "Safety (OSHA)", "trade": "gc", "state": null,
+      "source": "OSHA 29 CFR 1926.502(d)(9), (d)(15)",
+      "fact": "Lanyards and vertical lifelines must have a minimum breaking strength of 5,000 lb, and anchorages for personal fall arrest must support at least 5,000 lb per attached employee or be designed by a qualified person with a safety factor of at least two.",
+      "status": "verified", "note": "",
+      "keywords": ["lanyard strength", "5000 pounds", "anchorage", "vertical lifeline", "breaking strength", "fall arrest"]
+    },
+    {
+      "topic": "Safety (OSHA)", "trade": "gc", "state": null,
+      "source": "OSHA 29 CFR 1926.502(d)(5)-(6), (d)(23)",
+      "fact": "Only locking-type snaphooks may be used in personal fall arrest systems, and they may not be hooked directly to webbing, rope, each other or an incompatible object unless designed for it; fall arrest systems must not be attached to guardrail systems or to hoists except as specifically allowed.",
+      "status": "verified", "note": "",
+      "keywords": ["snaphook", "locking", "anchorage", "guardrail", "hoist", "tie-off"]
+    },
+    {
+      "topic": "Safety (OSHA)", "trade": "gc", "state": null,
+      "source": "OSHA 29 CFR 1926.502(d)(19), (d)(21)",
+      "fact": "Personal fall arrest systems must be inspected before each use for wear, damage and deterioration, defective components must be removed from service, and any system that has arrested a fall must be taken out of service until a competent person inspects it.",
+      "status": "verified", "note": "",
+      "keywords": ["harness inspection", "fall arrest", "defective", "remove from service", "competent person", "inspection"]
+    },
+    {
+      "topic": "Safety (OSHA)", "trade": "gc", "state": null,
+      "source": "OSHA 29 CFR 1926.502(f)",
+      "fact": "Roof warning lines are made of ropes, wires or chains on supporting stanchions, flagged with high-visibility material at no more than 6 ft intervals, with the line between 34 in and 39 in above the surface and at least 6 ft back from the roof edge (10 ft perpendicular to the direction of mechanical equipment).",
+      "status": "verified", "note": "",
+      "keywords": ["warning line", "roofing", "stanchions", "34 inches", "39 inches", "low slope roof"]
+    },
+    {
+      "topic": "Safety (OSHA)", "trade": "gc", "state": null,
+      "source": "OSHA 29 CFR 1926.502(i)",
+      "fact": "Covers over holes in floors, roofs and other walking surfaces must support at least twice the weight of employees, equipment and materials that may be on them, be secured against displacement, and be marked HOLE or COVER (or color coded).",
+      "status": "verified", "note": "",
+      "keywords": ["hole cover", "twice the weight", "floor opening", "marked", "fall protection", "cover"]
+    },
+    {
+      "topic": "Safety (OSHA)", "trade": "gc", "state": null,
+      "source": "OSHA 29 CFR 1926.502(j)(9)",
+      "fact": "During roofing work, materials and equipment may not be stored within 6 ft of a roof edge unless guardrails are erected at that edge, and stacked materials near the edge must be stable and self-supporting.",
+      "status": "verified", "note": "",
+      "keywords": ["roof edge", "material storage", "6 feet", "guardrail", "roofing", "falling objects"]
+    },
+    {
+      "topic": "Safety (OSHA)", "trade": "gc", "state": null,
+      "source": "OSHA 29 CFR 1926.503",
+      "fact": "Employers must train every employee exposed to fall hazards through a competent person, document it with a written certification record showing the employee name, training date and signature of the trainer or employer, and retrain when changes or observed deficiencies show it is needed.",
+      "status": "verified", "note": "",
+      "keywords": ["fall protection training", "certification", "written record", "retraining", "competent person", "documentation"]
+    },
+    {
+      "topic": "Safety (OSHA)", "trade": "gc", "state": null,
+      "source": "OSHA 29 CFR 1926.552(c)(1)",
+      "fact": "Personnel hoist towers located outside the structure must be enclosed for the full height on the side or sides used for entering and exiting the structure.",
+      "status": "verified", "note": "",
+      "keywords": ["personnel hoist", "hoist tower", "enclosure", "elevator", "full height", "hoist"]
+    },
+    {
+      "topic": "Safety (OSHA)", "trade": "gc", "state": null,
+      "source": "OSHA 29 CFR 1926.1408(a), Table A",
+      "fact": "Cranes working near power lines must keep the equipment, load line and load at least 20 ft from lines up to 350 kV (50 ft above 350 kV) unless the utility confirms the voltage; with the voltage known, Table A minimums apply: 10 ft up to 50 kV, 15 ft over 50 to 200 kV, 20 ft over 200 to 350 kV, 25 ft over 350 to 500 kV.",
+      "status": "corrected",
+      "note": "Card cites Subpart O 1926.600 (and the former 1926.550 crane rule) for a 10 ft clearance up to 50 kV. Cranes and derricks are now covered by Subpart CC (1926.1408); 10 ft still applies up to 50 kV when the voltage is confirmed, but the default is 20 ft when it is not.",
+      "keywords": ["crane", "power lines", "clearance", "10 feet", "20 feet", "subpart cc"]
+    },
+    {
+      "topic": "Safety (OSHA)", "trade": "gc", "state": null,
+      "source": "OSHA 29 CFR 1926.602(a)(3)",
+      "fact": "Pneumatic-tired earthmoving haulage equipment (trucks, scrapers, tractors and trailing units) with a maximum speed over 15 mph must have fenders on all wheels.",
+      "status": "verified", "note": "",
+      "keywords": ["fenders", "earthmoving", "scraper", "15 mph", "haulage", "equipment"]
+    },
+    {
+      "topic": "Safety (OSHA)", "trade": "gc", "state": null,
+      "source": "OSHA 29 CFR 1926.604(a)(2)",
+      "fact": "Equipment used in site clearing must have rollover guards meeting Subpart W, and rider-operated equipment also needs an overhead and rear canopy guard.",
+      "status": "verified", "note": "",
+      "keywords": ["site clearing", "rollover guard", "rops", "canopy", "land clearing", "equipment"]
+    },
+    {
+      "topic": "Safety (OSHA)", "trade": "gc", "state": null,
+      "source": "OSHA 29 CFR 1926.652(b)(3)",
+      "fact": "When sloping or benching is designed from tabulated data, at least one copy of that data, identifying the registered professional engineer who approved it, must be kept at the jobsite during construction of the protective system.",
+      "status": "verified", "note": "",
+      "keywords": ["tabulated data", "sloping", "benching", "engineer", "jobsite", "excavation"]
+    },
+    {
+      "topic": "Safety (OSHA)", "trade": "gc", "state": null,
+      "source": "OSHA 29 CFR 1926.652(g)(2)",
+      "fact": "In trenches protected by shield systems, earth may be excavated up to 2 ft below the bottom of the shield only if the shield is designed for the forces of the full trench depth and there is no sign of soil loss from behind or below it.",
+      "status": "verified", "note": "",
+      "keywords": ["trench box", "shield", "2 feet", "trench", "excavation", "cave-in"]
+    },
+    {
+      "topic": "Safety (OSHA)", "trade": "gc", "state": null,
+      "source": "OSHA 29 CFR 1926 Subpart P Appendix A",
+      "fact": "Soil classification uses both visual analysis and manual tests; manual tests include the plasticity (thread) test, dry strength test, thumb penetration test, pocket penetrometer or shearvane strength tests, and the drying test.",
+      "status": "verified", "note": "",
+      "keywords": ["soil classification", "manual test", "thumb penetration", "plasticity", "visual test", "soil type"]
+    },
+    {
+      "topic": "Safety (OSHA)", "trade": "gc", "state": null,
+      "source": "OSHA 29 CFR 1926 Subpart P Appendix B Table B-1",
+      "fact": "Maximum allowable slopes for excavations 20 ft deep or less: stable rock vertical (90 degrees), Type A soil 3/4:1 (53 degrees), Type B soil 1:1 (45 degrees), Type C soil 1-1/2:1 (34 degrees), stated as horizontal to vertical.",
+      "status": "verified", "note": "",
+      "keywords": ["slope", "type c soil", "excavation", "sloping", "type a", "type b"]
+    },
+    {
+      "topic": "Safety (OSHA)", "trade": "gc", "state": null,
+      "source": "OSHA 29 CFR 1926.706(a)-(b)",
+      "fact": "Masonry walls over 8 ft high must be braced to prevent overturning and collapse unless otherwise adequately supported, and a limited access zone equal to the wall height plus 4 ft must be set up along the full length of the wall on the unscaffolded side.",
+      "status": "verified", "note": "",
+      "keywords": ["masonry wall", "bracing", "8 feet", "limited access zone", "overturning", "collapse"]
+    },
+    {
+      "topic": "Safety (OSHA)", "trade": "gc", "state": null,
+      "source": "OSHA 29 CFR 1926.752(a)",
+      "fact": "A steel erection contractor may not begin erecting steel until it receives written notification that the concrete in footings, piers and walls has reached 75 percent of its intended minimum compressive design strength (based on ASTM tests of field-cured samples) or enough strength to carry erection loads.",
+      "status": "verified", "note": "",
+      "keywords": ["steel erection", "written notification", "75 percent", "concrete strength", "footings", "anchor"]
+    },
+    {
+      "topic": "Safety (OSHA)", "trade": "gc", "state": null,
+      "source": "OSHA 29 CFR 1926.755(a)(1)",
+      "fact": "Steel erection columns must be anchored by at least 4 anchor rods (anchor bolts).",
+      "status": "verified", "note": "",
+      "keywords": ["column anchorage", "anchor bolts", "anchor rods", "4", "steel erection", "columns"]
+    },
+    {
+      "topic": "Safety (OSHA)", "trade": "gc", "state": null,
+      "source": "OSHA 29 CFR 1926.757(c)(5)-(7)",
+      "fact": "On open web steel joists that require bolted diagonal erection bridging, hoisting cables may not be released until that bridging is installed and anchored; only one employee is allowed on spans that need a single midspan row (per Tables A and B) and no more than two employees on 60 to 144 ft spans until all bridging is installed and anchored.",
+      "status": "verified", "note": "",
+      "keywords": ["steel joist", "bridging", "hoisting cables", "two employees", "open web", "erection"]
+    },
+    {
+      "topic": "Safety (OSHA)", "trade": "gc", "state": null,
+      "source": "OSHA 29 CFR 1926.760(a)-(b)",
+      "fact": "Steel erection workers on surfaces with unprotected sides or edges more than 15 ft above a lower level need fall protection, while connectors and workers in a controlled decking zone get protection at more than two stories or 30 ft, whichever is less.",
+      "status": "verified", "note": "",
+      "keywords": ["steel erection", "15 feet", "connector", "30 feet", "decking zone", "fall protection"]
+    },
+    {
+      "topic": "Safety (OSHA)", "trade": "gc", "state": null,
+      "source": "OSHA 29 CFR 1926.800(c)",
+      "fact": "In underground construction the employer must keep a check-in/check-out procedure so aboveground personnel can accurately count the people underground in an emergency.",
+      "status": "verified", "note": "",
+      "keywords": ["underground", "tunnel", "check-in", "check-out", "headcount", "emergency"]
+    },
+    {
+      "topic": "Safety (OSHA)", "trade": "gc", "state": null,
+      "source": "OSHA 29 CFR 1926.800(k)(1)-(2)",
+      "fact": "Underground work areas must get enough fresh air to prevent dangerous accumulations of dusts, fumes, mists, vapors or gases, with at least 200 cubic feet per minute of fresh air for each employee underground.",
+      "status": "verified", "note": "",
+      "keywords": ["underground ventilation", "tunnel", "fresh air", "200 cfm", "gases", "dust"]
+    },
+    {
+      "topic": "Safety (OSHA)", "trade": "gc", "state": null,
+      "source": "OSHA 29 CFR 1926.850(a)",
+      "fact": "Before demolition begins, a competent person must make an engineering survey of the structure to assess the condition of its framing, floors and walls and the possibility of unplanned collapse.",
+      "status": "verified", "note": "",
+      "keywords": ["demolition", "engineering survey", "competent person", "collapse", "pre-demolition", "survey"]
+    },
+    {
+      "topic": "Safety (OSHA)", "trade": "gc", "state": null,
+      "source": "OSHA 29 CFR 1926.1051(a); 1926.1052(a)",
+      "fact": "A stairway or ladder is required at any break in elevation of 19 in or more with no ramp or other safe access, and stairs must be installed between 30 and 50 degrees from horizontal.",
+      "status": "verified", "note": "",
+      "keywords": ["stairway", "stair angle", "30 degrees", "50 degrees", "19 inches", "access"]
+    },
+    {
+      "topic": "Safety (OSHA)", "trade": "gc", "state": null,
+      "source": "OSHA 29 CFR 1926.1053(a)",
+      "fact": "Side rails of through and side-step fixed ladders must extend 42 in above the top of the access level or landing; for a parapet ladder the access level is the roof if the parapet is cut for passage, or the top of the parapet if it is continuous.",
+      "status": "verified", "note": "",
+      "keywords": ["fixed ladder", "side rails", "42 inches", "parapet", "landing", "ladder"]
+    },
+    {
+      "topic": "Safety (OSHA)", "trade": "gc", "state": null,
+      "source": "OSHA 29 CFR 1926.1053(b)(13)",
+      "fact": "The top cap or top step of a stepladder may not be used as a step.",
+      "status": "verified", "note": "",
+      "keywords": ["stepladder", "top step", "ladder safety", "top cap", "ladder", "step"]
+    },
+    {
+      "topic": "Safety (OSHA)", "trade": "gc", "state": null,
+      "source": "OSHA 29 CFR 1926.1101(b)-(c)",
+      "fact": "In the OSHA construction asbestos standard, asbestos means chrysotile, amosite, crocidolite, tremolite, anthophyllite and actinolite asbestos, including chemically treated or altered forms, and PACM is presumed asbestos-containing material; the exposure limits are 0.1 fiber/cc as an 8-hour TWA and 1.0 fiber/cc averaged over 30 minutes (excursion limit).",
+      "status": "verified", "note": "",
+      "keywords": ["asbestos", "pacm", "chrysotile", "pel", "excursion limit", "fibers"]
+    },
+    {
+      "topic": "Safety (OSHA)", "trade": "gc", "state": null,
+      "source": "OSHA 29 CFR 1926.1101(i)(1)",
+      "fact": "The employer must provide, and require the use of, protective clothing such as coveralls for any employee exposed to airborne asbestos above the TWA or excursion limit, or doing certain classes of asbestos work.",
+      "status": "verified", "note": "",
+      "keywords": ["asbestos", "protective clothing", "coveralls", "ppe", "excursion limit", "employer"]
+    },
+    {
+      "topic": "Safety (OSHA)", "trade": "gc", "state": null,
+      "source": "OSHA 29 CFR 1926.1202",
+      "fact": "A confined space is large enough for an employee to enter and work, has limited or restricted means of entry or exit, and is not designed for continuous employee occupancy.",
+      "status": "verified", "note": "",
+      "keywords": ["confined space", "definition", "entry", "occupancy", "permit space", "restricted"]
+    },
+    {
+      "topic": "Safety (OSHA)", "trade": "gc", "state": null,
+      "source": "OSHA 29 CFR 1926.1203(e)(2)",
+      "fact": "Before entry, a confined space atmosphere must be tested with a calibrated direct-reading instrument in this order: oxygen content first, then flammable gases and vapors, then potential toxic air contaminants.",
+      "status": "verified", "note": "",
+      "keywords": ["confined space", "atmospheric testing", "oxygen", "flammable gas", "toxic", "test order"]
+    },
+    {
+      "topic": "Steel & trusses", "trade": "gc", "state": null,
+      "source": "SBCA/TPI BCSI-B1 (truss handling and storage)",
+      "fact": "Trusses stored on site, especially for more than a week, should rest on blocking high enough to keep them off the ground, typically at 8 to 10 ft intervals, to limit lateral bending and moisture pickup, and should be covered for weather protection.",
+      "status": "unverified",
+      "note": "Interval comes from BCSI industry handbook guidance; confirm with the current BCSI-B1 summary sheet and the truss manufacturer's instructions.",
+      "keywords": ["truss storage", "blocking", "lateral bending", "moisture", "jobsite storage", "trusses"]
+    },
+    {
+      "topic": "Safety (OSHA)", "trade": "gc", "state": null,
+      "source": "SBCA/TPI BCSI-B1; OSHA 29 CFR 1926 Subpart CC",
+      "fact": "BCSI guidance places responsibility for crane compliance with OSHA on the crane operator and/or contractor unless a contract expressly assigns it to someone else.",
+      "status": "unverified",
+      "note": "Allocation of responsibility is contractual and comes from handbook guidance; under OSHA Subpart CC duties fall on the employer operating the equipment and on the controlling entity, so check the contract.",
+      "keywords": ["crane", "responsibility", "operator", "contractor", "compliance", "contract"]
+    },
+    {
+      "topic": "Safety (OSHA)", "trade": "gc", "state": null,
+      "source": "OSHA 29 CFR 1926.1417(c)",
+      "fact": "When a crane manufacturer's procedures are unavailable, the employer must develop them: operational control procedures by a qualified person, and procedures related to capacity (equipment limitations) developed and signed by a registered professional engineer familiar with the equipment.",
+      "status": "verified", "note": "",
+      "keywords": ["crane", "manufacturer specifications", "registered engineer", "load capacity", "qualified person", "procedures"]
+    },
+    {
+      "topic": "Steel & trusses", "trade": "gc", "state": null,
+      "source": "SBCA/TPI BCSI-B1 (lifting trusses)",
+      "fact": "Lift trusses with closed-loop attachments (slings, chains, straps) on the top chord, control them with tag lines, and avoid lateral (out-of-plane) bending, which can damage plates and members; erection should stop in high winds or lightning.",
+      "status": "verified", "note": "",
+      "keywords": ["truss lifting", "tag line", "lateral bending", "closed loop", "crane", "weather"]
+    },
+    {
+      "topic": "Project management", "trade": "gc", "state": null,
+      "source": "FAA 14 CFR Part 77 (77.7, 77.9)",
+      "fact": "FAA Form 7460-1 notice must be filed at least 45 days before construction when a structure or crane would exceed FAA notice criteria, such as being more than 200 ft above ground or penetrating a 100:1 imaginary surface extending 20,000 ft from a public-use airport runway longer than 3,200 ft.",
+      "status": "corrected",
+      "note": "Card says to contact the airport 30 days before using a crane within 5 miles of an airport. The governing rule is FAA 14 CFR Part 77, which requires notice to the FAA (Form 7460-1) at least 45 days in advance when notice criteria are met; distance is measured from the runway, not a flat 5 miles.",
+      "keywords": ["crane", "airport", "faa", "7460-1", "45 days", "part 77"]
+    },
+    {
+      "topic": "Steel & trusses", "trade": "gc", "state": null,
+      "source": "SBCA/TPI BCSI-B1 (lifting trusses)",
+      "fact": "Single trusses up to 30 ft long are lifted with at least 2 pick points near top chord joints spaced no more than about half the truss length apart; trusses over 60 ft need a strongback or spreader bar about 2/3 to 3/4 of the truss length.",
+      "status": "verified", "note": "",
+      "keywords": ["pick points", "spreader bar", "strongback", "truss length", "lifting", "crane"]
+    },
+    {
+      "topic": "Steel & trusses", "trade": "gc", "state": null,
+      "source": "SBCA/TPI BCSI-B1 (lifting trusses)",
+      "fact": "Trusses roughly 30 to 60 ft long should be lifted with a spreader bar about 1/2 to 2/3 of the truss length, attached at the top chord.",
+      "status": "corrected",
+      "note": "Card says a spreader bar 1/2 to 1/3 of the truss length. BCSI-B1 calls for about 1/2 to 2/3 in this range; the card's 1/3 appears garbled and would be shorter than the pick spacing used for trusses under 30 ft.",
+      "keywords": ["spreader bar", "truss lifting", "30 to 60 feet", "crane", "pick points", "trusses"]
+    },
+    {
+      "topic": "Steel & trusses", "trade": "gc", "state": null,
+      "source": "SBCA/TPI BCSI-B2 (installation and bracing)",
+      "fact": "The first truss set must be securely attached to ground bracing (exterior or interior) and braced before others are added, because every following truss depends on it for stability.",
+      "status": "verified", "note": "",
+      "keywords": ["first truss", "ground bracing", "stability", "truss erection", "bracing", "installation"]
+    },
+    {
+      "topic": "Steel & trusses", "trade": "gc", "state": null,
+      "source": "SBCA/TPI BCSI-B2 (installation and bracing)",
+      "fact": "Unless the building designer specifies otherwise, temporary lateral restraint and diagonal bracing should be at least 2x4 stress-graded lumber attached to each truss with at least two 16d nails (or equivalent).",
+      "status": "verified", "note": "",
+      "keywords": ["lateral restraint", "diagonal bracing", "2x4", "16d nails", "temporary bracing", "trusses"]
+    },
+    {
+      "topic": "Steel & trusses", "trade": "gc", "state": null,
+      "source": "SBCA/TPI BCSI-B2 (installation and bracing)",
+      "fact": "When the first truss cannot be ground braced from the building exterior, it may be set and braced from the interior, sometimes starting near the middle of the building.",
+      "status": "unverified",
+      "note": "Card says install it in the center of the building; BCSI shows interior ground bracing options but the exact location depends on site conditions and the designer's bracing plan.",
+      "keywords": ["first truss", "interior bracing", "ground bracing", "center", "truss erection", "bracing"]
+    },
+    {
+      "topic": "Steel & trusses", "trade": "gc", "state": null,
+      "source": "SBCA/TPI BCSI-B1 (installation tolerances)",
+      "fact": "Installation tolerances in handbook guidance: for top chord bearing parallel chord trusses, the gap between the inside edge of the bearing and the first web should not exceed 1/2 in, and truss spacing along the bearing should be within about plus or minus 1/4 in of plan.",
+      "status": "unverified",
+      "note": "Specific tolerances come from BCSI/truss manufacturer guidance and could not be confirmed against a code; check the truss design drawings.",
+      "keywords": ["truss tolerance", "spacing", "bearing gap", "parallel chord", "1/2 inch", "1/4 inch"]
+    },
+    {
+      "topic": "Steel & trusses", "trade": "gc", "state": null,
+      "source": "SBCA/TPI BCSI-B2 (installation and bracing)",
+      "fact": "Trusses must be set at their exact design spacing before lateral restraints and diagonal bracing are fastened, and construction should not proceed until the bracing is securely in place.",
+      "status": "verified", "note": "",
+      "keywords": ["truss spacing", "lateral restraint", "bracing", "installation sequence", "trusses", "erection"]
+    },
+    {
+      "topic": "Steel & trusses", "trade": "gc", "state": null,
+      "source": "SBCA/TPI BCSI-B4 (construction loading)",
+      "fact": "Never stack materials on unbraced trusses; once braced, place only limited amounts that will not overload them, positioned over or next to load-bearing walls rather than near midspan.",
+      "status": "verified", "note": "",
+      "keywords": ["construction loading", "stacking", "unbraced", "bearing wall", "midspan", "trusses"]
+    },
+    {
+      "topic": "Steel & trusses", "trade": "gc", "state": null,
+      "source": "SBCA/TPI BCSI-B2/B3",
+      "fact": "Lateral restraints by themselves can let trusses shift together, so rows of lateral restraint must be anchored with diagonal bracing.",
+      "status": "verified", "note": "",
+      "keywords": ["lateral restraint", "diagonal bracing", "domino", "trusses", "bracing", "collapse"]
+    },
+    {
+      "topic": "Steel & trusses", "trade": "gc", "state": null,
+      "source": "SBCA/TPI BCSI-B2",
+      "fact": "Before erecting trusses, confirm the building dimensions match the trusses, bearing walls and supports are plumb and braced, and the tops of bearings are at the correct elevation.",
+      "status": "verified", "note": "",
+      "keywords": ["pre-erection", "bearing walls", "plumb", "elevation", "trusses", "checklist"]
+    },
+    {
+      "topic": "Steel & trusses", "trade": "gc", "state": null,
+      "source": "SBCA/TPI BCSI-B2",
+      "fact": "Web member plane diagonal bracing is installed to stabilize the first five trusses, with braces crossing the web members at roughly 45 degrees.",
+      "status": "verified", "note": "",
+      "keywords": ["web bracing", "first five trusses", "45 degrees", "diagonal bracing", "trusses", "stabilize"]
+    },
+    {
+      "topic": "Steel & trusses", "trade": "gc", "state": null,
+      "source": "SBCA/TPI BCSI-B2",
+      "fact": "Diagonal bracing is required at each end of the building and repeated every 10 truss spaces, with no more than 20 ft between diagonal braces along continuous top chord lateral restraint.",
+      "status": "verified", "note": "",
+      "keywords": ["diagonal bracing", "10 truss spaces", "20 feet", "building ends", "trusses", "bracing"]
+    },
+    {
+      "topic": "Steel & trusses", "trade": "gc", "state": null,
+      "source": "SBCA/TPI BCSI-B2",
+      "fact": "BCTLR means bottom chord temporary lateral restraint; rows are installed at a maximum of 15 ft on center.",
+      "status": "verified", "note": "",
+      "keywords": ["bctlr", "bottom chord", "lateral restraint", "15 feet", "temporary bracing", "trusses"]
+    },
+    {
+      "topic": "Steel & trusses", "trade": "gc", "state": null,
+      "source": "Standard truss terminology (SBCA)",
+      "fact": "A hip set is a series of trusses that step down in height to form the sloped end of a hip roof; a valley set is a group of trusses that sits on top of other trusses to change the direction of roof planes.",
+      "status": "verified", "note": "",
+      "keywords": ["hip set", "valley set", "hip roof", "trusses", "roof framing", "definitions"]
+    },
+    {
+      "topic": "Steel & trusses", "trade": "gc", "state": null,
+      "source": "SBCA/TPI BCSI-B4",
+      "fact": "Trusses overstressed by excessive construction loads may suffer broken members, failed joints, or permanent sag that remains after the load is removed.",
+      "status": "verified", "note": "",
+      "keywords": ["overstressed", "construction load", "sagging", "joint failure", "trusses", "damage"]
+    },
+    {
+      "topic": "Steel & trusses", "trade": "gc", "state": null,
+      "source": "SBCA/TPI BCSI-B5 (damage and repair)",
+      "fact": "Truss members must never be cut, drilled or altered without approval; problems or damage go to the building designer, truss designer or truss manufacturer, and approved repairs typically use plywood or OSB gussets, metal nail-on plates, or lumber scabs over broken chords or webs.",
+      "status": "verified", "note": "",
+      "keywords": ["truss repair", "damaged truss", "gusset", "scab", "truss designer", "cutting webs"]
+    },
+    {
+      "topic": "Steel & trusses", "trade": "gc", "state": null,
+      "source": "SBCA/TPI BCSI-B3 (permanent bracing)",
+      "fact": "Permanent bracing is required in the top chord plane, bottom chord plane and web member plane; it prevents out-of-plane buckling of compression members, keeps trusses properly spaced, and transfers lateral loads; diagonal bracing in the web plane at the building ends and at designer-specified intervals is called sway bracing.",
+      "status": "verified", "note": "",
+      "keywords": ["permanent bracing", "sway bracing", "top chord", "bottom chord", "web plane", "buckling"]
+    },
+    {
+      "topic": "Plan reading", "trade": "gc", "state": null,
+      "source": "Standard drafting practice",
+      "fact": "Residential floor plans are commonly drawn at 1/4 in = 1 ft-0 in, and dimension lines show the distance between the two points they connect.",
+      "status": "verified", "note": "",
+      "keywords": ["scale", "quarter inch", "floor plan", "dimension line", "blueprint", "drawing"]
+    },
+    {
+      "topic": "Plan reading", "trade": "gc", "state": null,
+      "source": "Standard drafting practice",
+      "fact": "A foundation plan is a top (plan) view of footings and foundation walls, an elevation is a side view showing height and width, and a detail is an enlarged drawing of a small or complex part of the building.",
+      "status": "verified", "note": "",
+      "keywords": ["foundation plan", "elevation", "detail", "plan view", "blueprint", "drawings"]
+    },
+    {
+      "topic": "Plan reading", "trade": "gc", "state": null,
+      "source": "Standard construction documents practice",
+      "fact": "A schedule is a table or chart on the drawings (doors, windows, finishes, fixtures), and specifications are the written requirements for materials, workmanship and methods that accompany the drawings.",
+      "status": "verified", "note": "",
+      "keywords": ["schedule", "specifications", "door schedule", "construction documents", "specs", "blueprint"]
+    },
+    {
+      "topic": "Estimating & bidding", "trade": "law", "state": null,
+      "source": "Contract law fundamentals",
+      "fact": "A bid is a contractor's signed proposal offering to perform defined work for a stated price; it becomes binding once accepted under the terms of the solicitation.",
+      "status": "verified", "note": "",
+      "keywords": ["bid", "proposal", "offer", "signed", "acceptance", "bidding"]
+    },
+    {
+      "topic": "Estimating", "trade": "gc", "state": null,
+      "source": "Standard lumber measurement",
+      "fact": "Board feet equal thickness (in) times width (in) times length (ft), divided by 12; a 2 in by 10 in board 9 ft long contains 15 board feet.",
+      "status": "verified", "note": "",
+      "keywords": ["board feet", "lumber", "calculation", "takeoff", "bd ft", "estimate"]
+    },
+    {
+      "topic": "Estimating", "trade": "gc", "state": null,
+      "source": "Standard estimating practice",
+      "fact": "Excavation is estimated by the volume of earth removed in cubic yards, found by dividing cubic feet by 27.",
+      "status": "verified", "note": "",
+      "keywords": ["excavation", "cubic yards", "earthwork", "27", "takeoff", "estimate"]
+    },
+    {
+      "topic": "Wood framing", "trade": "gc", "state": null,
+      "source": "Standard carpentry tools",
+      "fact": "A biscuit (plate) jointer is a portable power tool that cuts crescent-shaped slots in the edges of workpieces to receive wooden biscuits for alignment and gluing.",
+      "status": "verified", "note": "",
+      "keywords": ["biscuit jointer", "plate joiner", "power tool", "joinery", "slots", "carpentry"]
+    },
+    {
+      "topic": "Site work & concrete", "trade": "gc", "state": null,
+      "source": "PCA Design and Control of Concrete Mixtures",
+      "fact": "Concrete is a mixture of portland cement, fine and coarse aggregate and water; portland cement is made by heating limestone and clay or shale in a kiln to form clinker, which is ground with gypsum.",
+      "status": "verified", "note": "",
+      "keywords": ["concrete", "portland cement", "aggregate", "kiln", "clinker", "mix"]
+    },
+    {
+      "topic": "Site work & concrete", "trade": "gc", "state": null,
+      "source": "PCA Design and Control of Concrete Mixtures",
+      "fact": "Aggregates make up about 60 to 75 percent of concrete volume and their quality and grading affect strength, but the water-cement ratio is the main factor controlling strength, durability and watertightness; adding water without cement lowers strength (it does not control color).",
+      "status": "verified", "note": "",
+      "keywords": ["water cement ratio", "aggregate", "concrete strength", "durability", "mix design", "w/c"]
+    },
+    {
+      "topic": "Site work & concrete", "trade": "gc", "state": null,
+      "source": "ACI 212 admixtures",
+      "fact": "Retarding admixtures slow the setting of concrete (useful in hot weather), while accelerating admixtures speed setting and early strength gain (useful in cold weather).",
+      "status": "verified", "note": "",
+      "keywords": ["admixture", "retarder", "accelerator", "set time", "hot weather", "concrete"]
+    },
+    {
+      "topic": "Site work & concrete", "trade": "gc", "state": null,
+      "source": "ASTM C143 slump test",
+      "fact": "The slump test measures concrete consistency: the greater the slump, the wetter and more fluid the mix.",
+      "status": "corrected",
+      "note": "Card answer is garbled (it repeats 'color and aesthetics'). A higher slump indicates a wetter mix.",
+      "keywords": ["slump", "slump test", "consistency", "workability", "wet concrete", "astm c143"]
+    },
+    {
+      "topic": "Site work & concrete", "trade": "gc", "state": null,
+      "source": "ACI 309 consolidation",
+      "fact": "Consolidation removes trapped air from fresh concrete; on small jobs it is done by hand rodding, spading, tamping or tapping the forms, while larger placements use mechanical vibrators.",
+      "status": "verified", "note": "",
+      "keywords": ["consolidation", "vibrator", "rodding", "tamping", "air voids", "concrete placement"]
+    },
+    {
+      "topic": "Site work & concrete", "trade": "gc", "state": null,
+      "source": "Carpentry/surveying textbook comparison",
+      "fact": "A dumpy (builder's) level is described in carpentry texts as the simplest and least expensive optical leveling instrument compared with a transit-level.",
+      "status": "unverified",
+      "note": "Relative cost claim is textbook-specific and depends on what instruments are compared (hand levels and water levels are cheaper still).",
+      "keywords": ["dumpy level", "builder's level", "transit", "survey instrument", "leveling", "layout"]
+    },
+    {
+      "topic": "Site work & concrete", "trade": "gc", "state": null,
+      "source": "Standard surveying practice",
+      "fact": "A benchmark is a reference point of known elevation used to lay out a building and set grades; the rod holder raises or lowers the target until it aligns with the instrument crosshair, and a larger rod reading means lower ground (readings of 5 ft at A and 7 ft at B mean B is 2 ft lower).",
+      "status": "verified", "note": "",
+      "keywords": ["benchmark", "elevation", "leveling rod", "rod reading", "grade", "surveying"]
+    },
+    {
+      "topic": "Site work & concrete", "trade": "gc", "state": null,
+      "source": "Standard surveying practice",
+      "fact": "In angle measurement, one degree equals 60 minutes and one minute equals 60 seconds.",
+      "status": "verified", "note": "",
+      "keywords": ["degrees", "minutes", "seconds", "angle", "surveying", "transit"]
+    },
+    {
+      "topic": "Site work & concrete", "trade": "gc", "state": null,
+      "source": "Standard building layout practice",
+      "fact": "A rectangular building can be laid out without an instrument using two long tapes: square corners are checked with the 3-4-5 triangle method and by confirming both diagonals are equal.",
+      "status": "verified", "note": "",
+      "keywords": ["layout", "3-4-5", "diagonals", "square", "tape measure", "building corners"]
+    },
+    {
+      "topic": "Site work & concrete", "trade": "gc", "state": null,
+      "source": "Standard building layout practice",
+      "fact": "Batter boards are horizontal boards nailed to stakes set outside the building corners so string lines can mark the building lines after excavation; their tops are often set at the height of the foundation wall.",
+      "status": "verified", "note": "",
+      "keywords": ["batter boards", "layout", "string line", "stakes", "foundation", "corners"]
+    },
+    {
+      "topic": "Site work & concrete", "trade": "gc", "state": null,
+      "source": "Standard foundation practice",
+      "fact": "A footing is the widened base of a foundation that spreads the building load over a larger area of soil; form ties such as snap ties hold the two sides of wall forms together and are snapped off after the forms are stripped.",
+      "status": "verified", "note": "",
+      "keywords": ["footing", "snap ties", "form ties", "formwork", "foundation", "bearing"]
+    },
+    {
+      "topic": "Residential code", "trade": "gc", "state": null,
+      "source": "IRC 2021 R406.1; IBC 2021 1805.2",
+      "fact": "Foundation walls that retain earth and enclose interior space or floors below grade must be dampproofed on the exterior from the top of the footing to finished grade; waterproofing is required instead where a high water table or severe soil-water conditions exist.",
+      "status": "verified", "note": "",
+      "keywords": ["dampproofing", "waterproofing", "foundation wall", "basement", "moisture", "below grade"]
+    },
+    {
+      "topic": "Masonry", "trade": "gc", "state": null,
+      "source": "Standard masonry terminology",
+      "fact": "A head joint is the vertical mortar joint between masonry units and a bed joint is the horizontal one; a stack bond aligns units directly above one another so the vertical joints are continuous.",
+      "status": "verified", "note": "",
+      "keywords": ["head joint", "bed joint", "stack bond", "mortar joint", "masonry", "bond pattern"]
+    },
+    {
+      "topic": "Masonry", "trade": "gc", "state": null,
+      "source": "BIA Technical Notes; TMS 602",
+      "fact": "Mortar should be used within about 2-1/2 hours of mixing in warm weather (80 degrees F or above); mortar may be retempered with water only to replace evaporation, and mortar that has stiffened from hydration (begun to set) must be discarded.",
+      "status": "verified", "note": "",
+      "keywords": ["mortar", "board life", "retempering", "2.5 hours", "hydration", "masonry"]
+    },
+    {
+      "topic": "Masonry", "trade": "gc", "state": null,
+      "source": "Standard masonry terminology",
+      "fact": "Parging is applying a thin coat of mortar or cement plaster over masonry such as block foundation walls, and a lintel is a beam over an opening that carries loads around it, like a header in a wood wall.",
+      "status": "verified", "note": "",
+      "keywords": ["parging", "lintel", "block wall", "opening", "masonry", "header"]
+    },
+    {
+      "topic": "Wood framing", "trade": "gc", "state": null,
+      "source": "USDA Wood Handbook",
+      "fact": "Lumber shrinkage along its length is negligible; nearly all shrinkage occurs across the width and thickness as the wood dries below the fiber saturation point.",
+      "status": "verified", "note": "",
+      "keywords": ["shrinkage", "lumber", "moisture", "length", "width", "drying"]
+    },
+    {
+      "topic": "Wood framing", "trade": "gc", "state": null,
+      "source": "USDA Wood Handbook; lumber grading rules",
+      "fact": "A shake is a lengthwise grain separation between or through the growth rings; sapwood of native species has low natural decay resistance regardless of species.",
+      "status": "verified", "note": "",
+      "keywords": ["shake", "lumber defect", "sapwood", "decay", "growth rings", "grading"]
+    },
+    {
+      "topic": "Wood framing", "trade": "gc", "state": null,
+      "source": "APA panel trademark guidance",
+      "fact": "Structural plywood grade trademarks are often stamped on the back face of the panel.",
+      "status": "unverified",
+      "note": "Stamp location varies by panel type and mill (sheathing panels often carry the mark on the face, sanded panels on the back or edge).",
+      "keywords": ["plywood", "grade stamp", "apa", "trademark", "panel", "sheathing"]
+    },
+    {
+      "topic": "Wood framing", "trade": "gc", "state": null,
+      "source": "APA engineered wood guidance",
+      "fact": "OSB (oriented strand board) is made of wood strands bonded with adhesive under heat and pressure; wood structural panels such as plywood and OSB should be installed with about 1/8 in spacing at panel edges and ends to allow for expansion.",
+      "status": "verified", "note": "",
+      "keywords": ["osb", "oriented strand board", "panel spacing", "1/8 inch", "sheathing", "plywood"]
+    },
+    {
+      "topic": "Wood framing", "trade": "gc", "state": null,
+      "source": "APA/AITC glulam guidance",
+      "fact": "Glulam beams are often made with a slight upward curve called camber to offset deflection, and they must not be notched or drilled unless the design accounts for it.",
+      "status": "verified", "note": "",
+      "keywords": ["glulam", "camber", "notching", "drilling", "beam", "engineered wood"]
+    },
+    {
+      "topic": "Wood framing", "trade": "gc", "state": null,
+      "source": "Standard structural terminology",
+      "fact": "A shear wall is a wall designed to resist lateral forces such as wind and seismic loads, and a girder is a large horizontal member that supports floor joists.",
+      "status": "verified", "note": "",
+      "keywords": ["shear wall", "lateral force", "girder", "wind", "seismic", "framing"]
+    },
+    {
+      "topic": "Wood framing", "trade": "gc", "state": null,
+      "source": "Standard nail sizing",
+      "fact": "A nail's penny (d) size indicates its length: 8d is 2-1/2 in, 10d is 3 in and 16d is 3-1/2 in.",
+      "status": "verified", "note": "",
+      "keywords": ["penny", "nail size", "16d", "8d", "nail length", "fasteners"]
+    },
+    {
+      "topic": "Residential code", "trade": "gc", "state": null,
+      "source": "IRC 2021 R502.8.1",
+      "fact": "Notches in solid lumber floor joists may not exceed 1/6 of the joist depth, be longer than 1/3 of the depth, or be located in the middle third of the span; end notches may not exceed 1/4 of the depth, and bored holes may not exceed 1/3 of the depth or be within 2 in of the top or bottom edge.",
+      "status": "verified", "note": "",
+      "keywords": ["notching", "joist", "boring", "middle third", "holes", "floor framing"]
+    },
+    {
+      "topic": "Wood framing", "trade": "gc", "state": null,
+      "source": "Standard framing terminology",
+      "fact": "A tail joist is a shortened floor joist that runs from a header at an opening to a bearing wall or girder.",
+      "status": "verified", "note": "",
+      "keywords": ["tail joist", "header", "floor opening", "framing", "trimmer", "joist"]
+    },
+    {
+      "topic": "Wood framing", "trade": "gc", "state": null,
+      "source": "Standard roof framing terminology",
+      "fact": "A gable is the triangular wall section formed by the sloping ends of a roof, and rafter slope is figured using a unit run of 12 in (unit rise per 12 in of run).",
+      "status": "verified", "note": "",
+      "keywords": ["gable", "unit run", "rafter", "slope", "roof framing", "pitch"]
+    },
+    {
+      "topic": "Fire protection", "trade": "gc", "state": null,
+      "source": "IRC 2021 R302.11; IBC 2021 718.2",
+      "fact": "Fireblocking slows the spread of flame and gases through concealed spaces; in wood stud walls it is required vertically at ceiling and floor levels and horizontally at intervals of no more than 10 ft.",
+      "status": "verified", "note": "",
+      "keywords": ["fireblocking", "concealed space", "10 feet", "stud wall", "fire spread", "draftstopping"]
+    },
+    {
+      "topic": "Residential code", "trade": "gc", "state": null,
+      "source": "IRC 2021 R802.6; R502.6",
+      "fact": "Ends of ceiling joists (and floor joists) must have at least 1-1/2 in of bearing on wood or metal and at least 3 in of bearing on masonry or concrete.",
+      "status": "verified", "note": "",
+      "keywords": ["joist bearing", "ceiling joist", "masonry", "3 inches", "1-1/2 inches", "bearing length"]
+    }
+  ],
+  "questions": [
+    {
+      "t": "gc", "topic": "Safety (OSHA)",
+      "q": "A jobsite has 25 workers. Under OSHA, what is the minimum toilet facility requirement?",
+      "c": ["1 toilet seat only", "1 toilet seat and 1 urinal", "2 toilet seats and 1 urinal", "2 toilet seats and 2 urinals"],
+      "a": 1, "ref": "OSHA 1926.51 Table D-1",
+      "why": "With 20 or more workers, OSHA requires 1 toilet seat and 1 urinal per 40 workers, so 25 workers need one of each."
+    },
+    {
+      "t": "gc", "topic": "Safety (OSHA)",
+      "q": "What is the maximum daily exposure OSHA permits for continuous noise at 95 dBA?",
+      "c": ["8 hours", "6 hours", "4 hours", "2 hours"],
+      "a": 2, "ref": "OSHA 1926.52 Table D-2",
+      "why": "Table D-2 allows 4 hours at 95 dBA; the permitted time halves for every 5 dBA increase above 90 dBA."
+    },
+    {
+      "t": "gc", "topic": "Safety (OSHA)",
+      "q": "A worker is exposed to 105 dBA for 30 minutes and 92 dBA for 4 hours. What is the combined noise dose?",
+      "c": ["0.67, within the limit", "0.92, within the limit", "1.00, exactly at the limit", "1.17, over the limit"],
+      "a": 3, "ref": "OSHA 1926.52 Table D-2",
+      "why": "0.5 h / 1 h at 105 dBA = 0.50 plus 4 h / 6 h at 92 dBA = 0.67, totaling 1.17; any total above 1 exceeds the permissible exposure."
+    },
+    {
+      "t": "gc", "topic": "Safety (OSHA)",
+      "q": "What minimum illumination does OSHA require for general construction area lighting?",
+      "c": ["5 foot-candles", "3 foot-candles", "10 foot-candles", "30 foot-candles"],
+      "a": 0, "ref": "OSHA 1926.56 Table D-3",
+      "why": "General construction area lighting requires 5 foot-candles; 3 is allowed only for areas like excavations, accessways and active storage, 10 for shops and 30 for offices and first aid stations."
+    },
+    {
+      "t": "gc", "topic": "Safety (OSHA)",
+      "q": "A personal fall arrest system must be rigged so that a worker cannot free fall more than:",
+      "c": ["4 ft", "8 ft", "10 ft", "6 ft"],
+      "a": 3, "ref": "OSHA 1926.502(d)(16)",
+      "why": "PFAS must limit free fall to 6 ft and prevent contact with any lower level, using a full body harness rather than a body belt."
+    },
+    {
+      "t": "gc", "topic": "Safety (OSHA)",
+      "q": "A safety net is hung 8 ft below the working surface. How far must it extend horizontally beyond the edge of the work surface?",
+      "c": ["8 ft", "10 ft", "13 ft", "15 ft"],
+      "a": 1, "ref": "OSHA 1926.502(c)(2)",
+      "why": "Nets more than 5 ft and up to 10 ft below the work surface must extend 10 ft; 8 ft applies only up to 5 ft below and 13 ft beyond 10 ft."
+    },
+    {
+      "t": "gc", "topic": "Fire protection",
+      "q": "On a building under construction, one fire extinguisher rated at least 2A must be provided for each how many square feet of protected area?",
+      "c": ["1,500 sq ft", "2,500 sq ft", "3,000 sq ft", "5,000 sq ft"],
+      "a": 2, "ref": "OSHA 1926.150(c)(1)",
+      "why": "OSHA requires a 2A extinguisher per 3,000 sq ft with no more than 100 ft of travel to reach one; a 55-gallon drum with two pails may substitute."
+    },
+    {
+      "t": "gc", "topic": "Fire protection",
+      "q": "Which extinguisher type is NOT suitable for a gasoline or grease (Class B) fire?",
+      "c": ["Soda-acid", "Carbon dioxide", "Dry chemical", "Foam"],
+      "a": 0, "ref": "NFPA 10; OSHA 1926.150",
+      "why": "Soda-acid is a water-based agent rated only for Class A fires; water spreads burning liquids, so Class B fires need CO2, dry chemical or foam."
+    },
+    {
+      "t": "gc", "topic": "Fire protection",
+      "q": "What is the maximum amount of Category 4 flammable liquid allowed in one approved storage cabinet?",
+      "c": ["60 gallons", "90 gallons", "120 gallons", "150 gallons"],
+      "a": 2, "ref": "OSHA 1926.152(b)(3)",
+      "why": "A cabinet may hold 60 gallons of Category 1-3 liquids or 120 gallons of Category 4 liquids."
+    },
+    {
+      "t": "gc", "topic": "Safety (OSHA)",
+      "q": "How far must a temporary heater be kept from combustible tarpaulins or canvas coverings?",
+      "c": ["3 ft", "6 ft", "10 ft", "20 ft"],
+      "a": 2, "ref": "OSHA 1926.154",
+      "why": "Heaters used near combustible tarps, canvas or similar coverings must be at least 10 ft away to prevent ignition."
+    },
+    {
+      "t": "gc", "topic": "Safety (OSHA)",
+      "q": "Materials stored inside a building under construction may not be placed within what distance of a hoistway or inside floor opening?",
+      "c": ["6 ft", "4 ft", "10 ft", "15 ft"],
+      "a": 0, "ref": "OSHA 1926.250(b)(1)",
+      "why": "Stored material must stay 6 ft from hoistways and floor openings, and 10 ft from an exterior wall that does not extend above the material."
+    },
+    {
+      "t": "gc", "topic": "Safety (OSHA)",
+      "q": "What is the maximum height of a loose brick stack on a jobsite?",
+      "c": ["4 ft", "6 ft", "10 ft", "7 ft"],
+      "a": 3, "ref": "OSHA 1926.250(b)(6)",
+      "why": "Loose brick stacks are limited to 7 ft and must taper back 2 in per foot of height above 4 ft."
+    },
+    {
+      "t": "gc", "topic": "Safety (OSHA)",
+      "q": "Materials are being dropped to a point outside the exterior walls of a building. Above what drop height is an enclosed chute required?",
+      "c": ["10 ft", "15 ft", "20 ft", "25 ft"],
+      "a": 2, "ref": "OSHA 1926.252(a)",
+      "why": "An enclosed chute is required whenever material is dropped more than 20 ft to a point outside the building's exterior walls."
+    },
+    {
+      "t": "gc", "topic": "Safety (OSHA)",
+      "q": "Debris is dropped through a floor opening without a chute. What barricade is required around the landing area?",
+      "c": ["36 in high, 4 ft back from the opening edge", "42 in high, 6 ft back from the opening edge", "42 in high, 10 ft back from the opening edge", "48 in high, 6 ft back from the opening edge"],
+      "a": 1, "ref": "OSHA 1926.252(b)",
+      "why": "The drop area must be fully enclosed by barricades at least 42 in high and at least 6 ft back from the projected edge of the opening, with warning signs at each level."
+    },
+    {
+      "t": "gc", "topic": "Safety (OSHA)",
+      "q": "Compressed air may be used for cleaning only when its pressure is reduced to:",
+      "c": ["Less than 30 psi", "Less than 50 psi", "Less than 75 psi", "Less than 100 psi"],
+      "a": 0, "ref": "OSHA 1926.302(b)(4)",
+      "why": "Cleaning air must be below 30 psi and used only with effective chip guarding and PPE."
+    },
+    {
+      "t": "gc", "topic": "Safety (OSHA)",
+      "q": "On a bench or floor-stand grinder, the exposed portion of the wheel periphery and sides may not exceed what angle for normal work above the spindle?",
+      "c": ["65 degrees", "90 degrees", "125 degrees", "180 degrees"],
+      "a": 1, "ref": "OSHA 1926.303(b)(2)",
+      "why": "Guards may expose no more than 90 degrees of the wheel, increasing to 125 degrees only when work must contact the wheel below the spindle centerline."
+    },
+    {
+      "t": "gc", "topic": "Safety (OSHA)",
+      "q": "Stored oxygen cylinders must be separated from fuel-gas cylinders by a minimum distance of:",
+      "c": ["10 ft", "15 ft", "50 ft", "20 ft"],
+      "a": 3, "ref": "OSHA 1926.350(a)(10)",
+      "why": "Separation must be at least 20 ft, or a noncombustible barrier at least 5 ft high with at least a one-half hour fire rating."
+    },
+    {
+      "t": "gc", "topic": "Safety (OSHA)",
+      "q": "Each scaffold and scaffold component must be able to support its own weight plus at least how many times the maximum intended load?",
+      "c": ["4 times", "6 times", "8 times", "10 times"],
+      "a": 0, "ref": "OSHA 1926.451(a)(1)",
+      "why": "Scaffold components need a 4-to-1 factor; suspension ropes need 6 times the maximum intended load."
+    },
+    {
+      "t": "gc", "topic": "Safety (OSHA)",
+      "q": "What is the minimum clearance between a scaffold and an insulated power line carrying less than 300 volts?",
+      "c": ["3 ft", "5 ft", "10 ft", "15 ft"],
+      "a": 0, "ref": "OSHA 1926.451(f)(6)",
+      "why": "Insulated lines under 300 V require 3 ft; 300 V to 50 kV and uninsulated lines under 50 kV require 10 ft."
+    },
+    {
+      "t": "gc", "topic": "Safety (OSHA)",
+      "q": "What is the maximum platform height permitted on a ladder jack scaffold?",
+      "c": ["10 ft", "14 ft", "16 ft", "20 ft"],
+      "a": 3, "ref": "OSHA 1926.452(k)(1)",
+      "why": "Ladder jack scaffold platforms may not exceed 20 ft in height."
+    },
+    {
+      "t": "gc", "topic": "Safety (OSHA)",
+      "q": "What is the maximum intended load for a float (ship) scaffold?",
+      "c": ["500 lb", "750 lb", "1,000 lb", "1,250 lb"],
+      "a": 1, "ref": "OSHA 1926.452(s)(1)",
+      "why": "Float or ship scaffolds are limited to a maximum intended load of 750 lb."
+    },
+    {
+      "t": "gc", "topic": "Safety (OSHA)",
+      "q": "During overhand bricklaying, fall protection is required when a mason reaches more than what distance below the walking/working surface?",
+      "c": ["6 in", "12 in", "10 in", "18 in"],
+      "a": 2, "ref": "OSHA 1926.501(b)(9)",
+      "why": "Reaching more than 10 in below the working level requires guardrails, safety nets or personal fall arrest."
+    },
+    {
+      "t": "gc", "topic": "Safety (OSHA)",
+      "q": "What is the required height of a guardrail top rail above the walking/working level?",
+      "c": ["36 in plus or minus 3 in", "39 in plus or minus 3 in", "42 in plus or minus 3 in", "45 in plus or minus 2 in"],
+      "a": 2, "ref": "OSHA 1926.502(b)(1)",
+      "why": "Top rails must be 42 in plus or minus 3 in high and withstand a 200 lb force; midrails go midway between top rail and surface."
+    },
+    {
+      "t": "gc", "topic": "Safety (OSHA)",
+      "q": "What is the minimum breaking strength for lanyards and vertical lifelines in a personal fall arrest system?",
+      "c": ["2,000 lb", "3,600 lb", "4,000 lb", "5,000 lb"],
+      "a": 3, "ref": "OSHA 1926.502(d)(9)",
+      "why": "Lanyards and vertical lifelines need at least 5,000 lb breaking strength, matching the 5,000 lb per-person anchorage requirement."
+    },
+    {
+      "t": "gc", "topic": "Safety (OSHA)",
+      "q": "A cover over a floor hole must be able to support at least:",
+      "c": ["The expected load", "1.5 times the expected load", "2 times the expected load", "4 times the expected load"],
+      "a": 2, "ref": "OSHA 1926.502(i)(2)",
+      "why": "Hole covers must support twice the weight of workers, equipment and materials that may be on them at one time, and must be secured and marked."
+    },
+    {
+      "t": "gc", "topic": "Safety (OSHA)",
+      "q": "During roofing work without guardrails at the edge, materials may not be stored within what distance of the roof edge?",
+      "c": ["4 ft", "6 ft", "10 ft", "15 ft"],
+      "a": 1, "ref": "OSHA 1926.502(j)(9)",
+      "why": "Construction roofing rules bar storing materials and equipment within 6 ft of a roof edge unless guardrails are erected there."
+    },
+    {
+      "t": "gc", "topic": "Safety (OSHA)",
+      "q": "Rubber-tired earthmoving haulage equipment must have fenders on all wheels if its maximum speed exceeds:",
+      "c": ["15 mph", "10 mph", "20 mph", "25 mph"],
+      "a": 0, "ref": "OSHA 1926.602(a)(3)",
+      "why": "Pneumatic-tired trucks, scrapers, tractors and trailing units capable of more than 15 mph need fenders on all wheels."
+    },
+    {
+      "t": "gc", "topic": "Safety (OSHA)",
+      "q": "In a trench protected by a shield (trench box), how far below the bottom of the shield may soil be excavated if conditions allow?",
+      "c": ["1 ft", "18 in", "2 ft", "3 ft"],
+      "a": 2, "ref": "OSHA 1926.652(g)(2)",
+      "why": "Up to 2 ft below the shield is allowed only if the shield is designed for the full trench depth and there is no sign of soil loss."
+    },
+    {
+      "t": "gc", "topic": "Safety (OSHA)",
+      "q": "What is the maximum allowable slope (horizontal to vertical) for a simple sloped excavation 20 ft deep or less in Type C soil?",
+      "c": ["3/4:1", "1:1", "2:1", "1-1/2:1"],
+      "a": 3, "ref": "OSHA Subpart P App. B",
+      "why": "Type C soil requires 1-1/2:1 (34 degrees); Type B is 1:1 and Type A is 3/4:1."
+    },
+    {
+      "t": "gc", "topic": "Safety (OSHA)",
+      "q": "A 12 ft high masonry wall is under construction. How wide must the limited access zone be?",
+      "c": ["12 ft", "14 ft", "16 ft", "20 ft"],
+      "a": 2, "ref": "OSHA 1926.706(a)",
+      "why": "The limited access zone equals the wall height plus 4 ft and runs the full length of the wall on the unscaffolded side."
+    },
+    {
+      "t": "gc", "topic": "Safety (OSHA)",
+      "q": "Before steel erection begins, the erector must receive written notice that footing and pier concrete has reached what portion of its minimum design strength?",
+      "c": ["50 percent", "75 percent", "65 percent", "100 percent"],
+      "a": 1, "ref": "OSHA 1926.752(a)",
+      "why": "Concrete must reach 75 percent of intended minimum compressive strength (or enough to carry erection loads), confirmed in writing."
+    },
+    {
+      "t": "gc", "topic": "Safety (OSHA)",
+      "q": "What is the minimum number of anchor rods required for each steel column?",
+      "c": ["4", "2", "3", "6"],
+      "a": 0, "ref": "OSHA 1926.755(a)(1)",
+      "why": "All columns must be anchored with at least 4 anchor rods to resist overturning during erection."
+    },
+    {
+      "t": "gc", "topic": "Safety (OSHA)",
+      "q": "Apart from connectors and controlled decking zones, steel erection workers need fall protection when on an unprotected edge more than how high above a lower level?",
+      "c": ["6 ft", "10 ft", "30 ft", "15 ft"],
+      "a": 3, "ref": "OSHA 1926.760(a)(1)",
+      "why": "Subpart R sets 15 ft for steel erection; connectors and decking zone workers are protected at more than two stories or 30 ft."
+    },
+    {
+      "t": "gc", "topic": "Safety (OSHA)",
+      "q": "How much fresh air must be supplied for each employee working underground?",
+      "c": ["100 cfm", "150 cfm", "200 cfm", "300 cfm"],
+      "a": 2, "ref": "OSHA 1926.800(k)(2)",
+      "why": "Underground ventilation must supply at least 200 cubic feet per minute of fresh air per employee."
+    },
+    {
+      "t": "gc", "topic": "Safety (OSHA)",
+      "q": "Within what range of angles from horizontal must construction stairways be installed?",
+      "c": ["20 to 40 degrees", "30 to 50 degrees", "40 to 60 degrees", "45 to 75 degrees"],
+      "a": 1, "ref": "OSHA 1926.1052(a)",
+      "why": "Stairs must be between 30 and 50 degrees from horizontal; a stair or ladder is needed at any break in elevation of 19 in or more."
+    },
+    {
+      "t": "gc", "topic": "Safety (OSHA)",
+      "q": "In what order must a confined space atmosphere be tested before entry?",
+      "c": ["Toxic contaminants, flammable gases, oxygen", "Flammable gases, oxygen, toxic contaminants", "Oxygen, toxic contaminants, flammable gases", "Oxygen, flammable gases, toxic contaminants"],
+      "a": 3, "ref": "OSHA 1926.1203(e)(2)",
+      "why": "Test oxygen first (sensors for combustibles need oxygen to read correctly), then flammable gases and vapors, then toxic contaminants."
+    },
+    {
+      "t": "gc", "topic": "Safety (OSHA)",
+      "q": "What is the OSHA 8-hour time-weighted average permissible exposure limit for asbestos in construction?",
+      "c": ["0.01 fiber/cc", "0.1 fiber/cc", "1.0 fiber/cc", "5.0 fibers/cc"],
+      "a": 1, "ref": "OSHA 1926.1101(c)",
+      "why": "The PEL is 0.1 fiber/cc as an 8-hour TWA; 1.0 fiber/cc over 30 minutes is the excursion limit."
+    },
+    {
+      "t": "gc", "topic": "Safety (OSHA)",
+      "q": "The utility has confirmed a nearby power line is 45 kV. What minimum clearance must a crane and its load keep from the line?",
+      "c": ["10 ft", "6 ft", "15 ft", "20 ft"],
+      "a": 0, "ref": "OSHA 1926.1408 Table A",
+      "why": "Table A requires 10 ft for lines up to 50 kV once the voltage is confirmed; without confirmation the default is 20 ft for lines up to 350 kV."
+    },
+    {
+      "t": "gc", "topic": "Project management",
+      "q": "A crane will exceed FAA notice criteria near a public-use airport. At least how far in advance must FAA Form 7460-1 be filed?",
+      "c": ["15 days", "30 days", "60 days", "45 days"],
+      "a": 3, "ref": "FAA 14 CFR 77.7",
+      "why": "Part 77 requires notice at least 45 days before construction or crane use that meets the notice criteria."
+    },
+    {
+      "t": "gc", "topic": "Steel & trusses",
+      "q": "When lifting a truss longer than 60 ft, the strongback or spreader bar should be about what fraction of the truss length?",
+      "c": ["1/3 to 1/2", "1/2 to 2/3", "2/3 to 3/4", "The full truss length"],
+      "a": 2, "ref": "SBCA/TPI BCSI-B1",
+      "why": "Long trusses over 60 ft need a strongback or spreader bar about 2/3 to 3/4 of their length to prevent lateral bending."
+    },
+    {
+      "t": "gc", "topic": "Steel & trusses",
+      "q": "During truss erection, diagonal bracing must be installed at each end of the building and repeated at what interval?",
+      "c": ["Every 5 truss spaces, 10 ft maximum", "Every 10 truss spaces, 20 ft maximum", "Every 15 truss spaces, 30 ft maximum", "Every 20 truss spaces, 40 ft maximum"],
+      "a": 1, "ref": "SBCA/TPI BCSI-B2",
+      "why": "Diagonal bracing anchors the lateral restraint rows and is repeated every 10 truss spaces, no more than 20 ft apart."
+    },
+    {
+      "t": "gc", "topic": "Steel & trusses",
+      "q": "Rows of bottom chord temporary lateral restraint (BCTLR) should be spaced no more than:",
+      "c": ["15 ft on center", "8 ft on center", "10 ft on center", "20 ft on center"],
+      "a": 0, "ref": "SBCA/TPI BCSI-B2",
+      "why": "BCSI calls for BCTLR rows at a maximum of 15 ft on center, tied to diagonal bracing."
+    },
+    {
+      "t": "gc", "topic": "Estimating",
+      "q": "How many board feet are in a 2 in x 12 in plank that is 14 ft long?",
+      "c": ["24 bd ft", "28 bd ft", "32 bd ft", "336 bd ft"],
+      "a": 1, "ref": "Lumber measurement",
+      "why": "Board feet = thickness x width (inches) x length (feet) / 12, so 2 x 12 x 14 / 12 = 28."
+    },
+    {
+      "t": "gc", "topic": "Estimating",
+      "q": "A basement excavation measures 30 ft by 40 ft by 3 ft deep. About how many cubic yards of earth must be removed?",
+      "c": ["44 cu yd", "120 cu yd", "400 cu yd", "133 cu yd"],
+      "a": 3, "ref": "Estimating practice",
+      "why": "30 x 40 x 3 = 3,600 cu ft, and 3,600 / 27 = about 133 cu yd."
+    },
+    {
+      "t": "gc", "topic": "Site work & concrete",
+      "q": "Adding water to a concrete mix without adding cement will most directly:",
+      "c": ["Lower strength and durability", "Speed up initial set", "Increase compressive strength", "Reduce the slump"],
+      "a": 0, "ref": "PCA concrete mixtures",
+      "why": "A higher water-cement ratio weakens the hardened paste, reducing strength, durability and watertightness, and raises slump."
+    },
+    {
+      "t": "gc", "topic": "Masonry",
+      "q": "In weather of 80 degrees F or warmer, mortar should be used within about how long after mixing?",
+      "c": ["1 hour", "1-1/2 hours", "2-1/2 hours", "4 hours"],
+      "a": 2, "ref": "BIA Tech Notes; TMS 602",
+      "why": "Mortar should be placed within about 2-1/2 hours of mixing; it may be retempered only for evaporation, never after it begins to set."
+    },
+    {
+      "t": "gc", "topic": "Residential code",
+      "q": "Under the IRC, notches in solid sawn floor joists are prohibited in which part of the span?",
+      "c": ["The first 2 ft from a bearing", "The middle third of the span", "The outer quarter at each end", "The top edge near the bearing"],
+      "a": 1, "ref": "IRC 2021 R502.8.1",
+      "why": "Notches may not be in the middle third of the span, where bending stress is highest, and are limited to 1/6 of the joist depth."
+    },
+    {
+      "t": "gc", "topic": "Residential code",
+      "q": "What minimum bearing length does the IRC require for ceiling joist ends resting on a masonry wall?",
+      "c": ["1 in", "1-1/2 in", "4 in", "3 in"],
+      "a": 3, "ref": "IRC 2021 R802.6",
+      "why": "Joists need 3 in of bearing on masonry or concrete and 1-1/2 in on wood or metal."
+    },
+    {
+      "t": "gc", "topic": "Fire protection",
+      "q": "In concealed spaces of wood stud walls, horizontal fireblocking is required at intervals not exceeding:",
+      "c": ["8 ft", "10 ft", "12 ft", "16 ft"],
+      "a": 1, "ref": "IRC 2021 R302.11",
+      "why": "Fireblocking goes at ceiling and floor levels and horizontally at no more than 10 ft intervals to slow fire spread through cavities."
+    },
+    {
+      "t": "gc", "topic": "Wood framing",
+      "q": "What is the length of a 16d common nail?",
+      "c": ["3-1/2 in", "2-1/2 in", "3 in", "4 in"],
+      "a": 0, "ref": "Standard nail sizing",
+      "why": "Penny size indicates length: 8d is 2-1/2 in, 10d is 3 in and 16d is 3-1/2 in."
+    },
+    {
+      "t": "gc", "topic": "Site work & concrete",
+      "q": "A level rod reads 5 ft at point A and 7 ft at point B. What is the relationship between the two points?",
+      "c": ["B is 2 ft higher than A", "Both points are at the same elevation", "B is 2 ft lower than A", "B is 12 ft lower than A"],
+      "a": 2, "ref": "Surveying practice",
+      "why": "A larger rod reading means the ground is farther below the line of sight, so B is 7 - 5 = 2 ft lower."
+    }
+  ]
+}

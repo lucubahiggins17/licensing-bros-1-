@@ -1,0 +1,40 @@
+/* Typography for rendered Markdown (lesson bodies, course descriptions, tutor answers). */
+.prose{font-size:16px;line-height:1.7;color:var(--ink);overflow-wrap:break-word;min-width:0}
+.prose>:first-child{margin-top:0}
+.prose>:last-child{margin-bottom:0}
+.prose p{margin:0 0 14px}
+.prose h2{font-family:var(--display);font-weight:400;text-transform:uppercase;font-size:24px;line-height:1.1;margin:28px 0 10px;color:var(--navy)}
+.prose h3{font-family:var(--heading);font-weight:800;font-size:19px;margin:24px 0 8px}
+.prose h4,.prose h5,.prose h6{font-family:var(--heading);font-weight:800;font-size:16.5px;margin:20px 0 6px}
+.prose strong{font-weight:750}
+.prose a{color:var(--info);text-underline-offset:2px;font-weight:600}
+.prose a:hover{color:var(--orange-2)}
+.prose ul,.prose ol{margin:0 0 14px;padding-left:24px}
+.prose li{margin:4px 0}
+.prose li>ul,.prose li>ol{margin:4px 0 0}
+.prose ul li::marker{color:var(--orange)}
+.prose ol li::marker{color:var(--navy);font-weight:800}
+.prose li input[type="checkbox"]{margin:0 6px 0 -2px;vertical-align:-1px;accent-color:var(--orange)}
+.prose code{font-family:var(--mono);font-size:.86em;background:var(--orange-soft);color:var(--orange-2);padding:1px 6px;border-radius:4px;border:1px solid #fbd5bd}
+.prose pre{background:var(--navy);color:#e9ecf8;border-radius:8px;padding:14px 16px;overflow-x:auto;margin:0 0 16px;font-size:13.5px;line-height:1.55}
+.prose pre code{background:none;border:0;color:inherit;padding:0;font-size:inherit}
+.prose blockquote{margin:0 0 16px;padding:12px 16px;border-left:5px solid var(--orange);background:var(--orange-soft);border-radius:0 8px 8px 0}
+.prose blockquote>:last-child{margin-bottom:0}
+.prose hr{border:0;height:8px;margin:24px 0;background:repeating-linear-gradient(-45deg,var(--hazard) 0 10px,var(--navy) 10px 20px);border-radius:2px;opacity:.85}
+.prose img{display:block;max-width:100%;height:auto;border:1.5px solid var(--line);border-radius:8px;margin:6px 0}
+.prose [data-md="table"]{overflow-x:auto;margin:0 0 16px;border:1.5px solid var(--navy);border-radius:8px;-webkit-overflow-scrolling:touch}
+.prose table{border-collapse:collapse;width:100%;font-size:14.5px;line-height:1.45}
+.prose th{background:var(--navy);color:#fff;font-family:var(--heading);font-weight:800;text-align:left;padding:9px 12px;white-space:nowrap}
+.prose td{padding:9px 12px;border-top:1px solid var(--line);vertical-align:top}
+.prose tbody tr:nth-child(even) td{background:var(--surface)}
+.prose del{color:var(--muted)}
+
+/* Smaller variant for chat bubbles */
+.compact{font-size:14.5px;line-height:1.6}
+.compact p{margin:0 0 8px}
+.compact h2{font-size:18px;margin:14px 0 6px}
+.compact h3{font-size:16px;margin:12px 0 6px}
+.compact ul,.compact ol{margin:0 0 8px;padding-left:20px}
+.compact pre{font-size:12.5px;padding:10px 12px}
+.compact table{font-size:13px}
+.compact th,.compact td{padding:6px 9px}

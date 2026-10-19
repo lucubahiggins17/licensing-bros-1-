@@ -1,0 +1,1381 @@
+{
+  "source": "NASCLA study guide (codes) cards 161-320",
+  "facts": [
+    {
+      "topic": "Roofing", "trade": "gc", "state": null,
+      "source": "Roofing trade practice (gutter installation)",
+      "fact": "Gutters are commonly pitched about 1/16 in per foot toward the downspout, which gives roughly 1-3/8 in of fall over a 22-ft gutter run.",
+      "status": "unverified",
+      "note": "Gutter pitch is a manufacturer/trade recommendation, not a model-code requirement; published guidance ranges from about 1/4 in per 10 ft up to 1/4 in per ft.",
+      "keywords": ["gutter", "slope", "pitch", "downspout", "fall", "drainage"]
+    },
+    {
+      "topic": "Roofing", "trade": "gc", "state": null,
+      "source": "EPDM single-ply roofing practice",
+      "fact": "Field seams between EPDM membrane sheets are made with primed seam (splice) tape or splice adhesive, and the exposed seam edges are finished with lap sealant (caulk).",
+      "status": "verified", "note": "",
+      "keywords": ["epdm", "rubber roof", "seam tape", "splice", "lap sealant", "single ply"]
+    },
+    {
+      "topic": "Roofing", "trade": "gc", "state": null,
+      "source": "Built-up roofing practice (NRCA)",
+      "fact": "The aggregate (gravel) surfacing on a built-up roof embedded in the flood coat shields the bitumen and felts from UV, heat, drying and weathering, and also adds fire resistance and protection from foot traffic and hail.",
+      "status": "verified", "note": "",
+      "keywords": ["bur", "built-up roof", "aggregate", "gravel", "flood coat", "uv protection"]
+    },
+    {
+      "topic": "Roofing", "trade": "gc", "state": null,
+      "source": "IRC 2021 R905.7.4, R905.8.8",
+      "fact": "Wood shingle and wood shake roofs are installed with open valleys lined with corrosion-resistant sheet-metal valley flashing of at least No. 26 gage, rather than woven or closed-cut valleys.",
+      "status": "verified", "note": "",
+      "keywords": ["wood shingles", "shakes", "open valley", "valley flashing", "26 gage", "cedar"]
+    },
+    {
+      "topic": "Safety (OSHA)", "trade": "gc", "state": null,
+      "source": "OSHA 29 CFR 1926.1053(b)(1)",
+      "fact": "When a portable ladder is used to reach an upper landing, its side rails must extend at least 3 ft above the upper landing surface (or the ladder must be secured with a grab device if that is not possible).",
+      "status": "verified", "note": "",
+      "keywords": ["portable ladder", "extend", "3 feet", "landing", "side rails", "access"]
+    },
+    {
+      "topic": "Safety (OSHA)", "trade": "gc", "state": null,
+      "source": "OSHA 29 CFR 1926.451(d)(10)",
+      "fact": "Suspension scaffold ropes must be inspected by a competent person before each shift and replaced if there are 6 randomly distributed broken wires in one rope lay or 3 broken wires in one strand in one lay, as well as for kinks, heat or electrical damage, or wear exceeding one-third of the outside wire diameter.",
+      "status": "verified", "note": "",
+      "keywords": ["wire rope", "scaffold", "broken wires", "replace", "rope lay", "suspension"]
+    },
+    {
+      "topic": "Safety (OSHA)", "trade": "gc", "state": null,
+      "source": "OSHA 29 CFR 1926.303",
+      "fact": "Grinding machines with abrasive wheels must be fitted with safety guards (protection hoods) that cover the spindle end, nut and flange projections and are strong enough to contain a bursting wheel.",
+      "status": "verified", "note": "",
+      "keywords": ["abrasive wheel", "grinder", "guard", "hood", "grinding", "power tools"]
+    },
+    {
+      "topic": "Safety (OSHA)", "trade": "gc", "state": null,
+      "source": "OSHA 29 CFR 1926.651(k), 1926.652(c)",
+      "fact": "A competent person must inspect excavations and their protective systems; departing from a manufacturer's tabulated data for shoring or shielding requires the manufacturer's specific written approval, and engineered designs must be approved by a registered professional engineer.",
+      "status": "corrected",
+      "note": "Card says the excavator (equipment operator) may change or adjust the shoring method. OSHA places inspection with the competent person and requires manufacturer or registered PE approval for deviations from tabulated or engineered designs.",
+      "keywords": ["shoring", "competent person", "registered engineer", "tabulated data", "excavation", "protective system"]
+    },
+    {
+      "topic": "Safety (OSHA)", "trade": "gc", "state": null,
+      "source": "OSHA 29 CFR 1926.153 Table F-3",
+      "fact": "LP-gas containers stored outdoors awaiting use must be kept from the nearest building by distance based on quantity: 500 lb or less needs no separation, 501 to 6,000 lb needs 10 ft, 6,001 to 10,000 lb needs 20 ft, and over 10,000 lb needs 25 ft. Storing LP-gas inside buildings is prohibited.",
+      "status": "verified", "note": "",
+      "keywords": ["lp gas", "propane", "storage", "distance", "building", "container"]
+    },
+    {
+      "topic": "Safety (OSHA)", "trade": "gc", "state": null,
+      "source": "OSHA 29 CFR 1926.152(b)(1)",
+      "fact": "No more than 25 gallons of flammable liquids may be stored in a room outside of an approved storage cabinet on a construction site.",
+      "status": "corrected",
+      "note": "Card says 25 gallons not in an approved container. The OSHA limit applies to liquids kept outside an approved storage cabinet; approved containers are still required for the liquids themselves.",
+      "keywords": ["flammable liquids", "25 gallons", "storage cabinet", "room", "gasoline", "fire"]
+    },
+    {
+      "topic": "Energy & environmental", "trade": "gc", "state": null,
+      "source": "HVAC service rule of thumb",
+      "fact": "In cooling mode, a properly charged and airflow-balanced air conditioner typically shows a temperature drop (evaporator delta-T) of roughly 16 to 22 degrees F between return air and supply air.",
+      "status": "unverified",
+      "note": "Industry rule of thumb, not a code requirement; target delta-T varies with humidity, airflow and equipment (many sources cite 15-20 degrees F).",
+      "keywords": ["delta t", "supply air", "return air", "temperature split", "hvac", "air conditioning"]
+    },
+    {
+      "topic": "Fire protection", "trade": "gc", "state": null,
+      "source": "NFPA 13 (hotel and motel closet exemption)",
+      "fact": "In NFPA 13 systems, sprinklers are not required in clothes closets, linen closets and pantries inside hotel or motel guest units when the space is 24 sq ft or less and its walls and ceiling are surfaced with noncombustible or limited-combustible materials.",
+      "status": "verified", "note": "",
+      "keywords": ["sprinkler", "hotel", "closet", "24 square feet", "nfpa 13", "exemption"]
+    },
+    {
+      "topic": "Residential code", "trade": "gc", "state": null,
+      "source": "NEC 2020 210.8(A)(7); IRC 2021 E3902",
+      "fact": "In dwellings, 125-volt, single-phase, 15- and 20-amp receptacles installed within 6 ft of the top inside edge of a sink bowl must have GFCI protection.",
+      "status": "verified", "note": "",
+      "keywords": ["gfci", "sink", "6 feet", "receptacle", "outlet", "ground fault"]
+    },
+    {
+      "topic": "Residential code", "trade": "gc", "state": null,
+      "source": "IRC 2021 P2719.1",
+      "fact": "A floor drain must have a waste outlet of at least 2 in diameter and a removable strainer, and it must be built so the drain can be cleaned.",
+      "status": "verified", "note": "",
+      "keywords": ["floor drain", "2 inch", "strainer", "plumbing", "waste outlet", "inspection"]
+    },
+    {
+      "topic": "Residential code", "trade": "gc", "state": null,
+      "source": "IFGC 2021 Ch. 5 (venting); manufacturer instructions",
+      "fact": "An atmospheric (Category I) gas water heater is typically vented with listed Type B double-wall gas vent, sized from the IFGC vent tables and the manufacturer's instructions based on appliance input and vent height; there is no single required diameter.",
+      "status": "corrected",
+      "note": "Card says a water heater needs a 4 in double-wall Type B vent. Type B is correct for Category I appliances, but the diameter is sized per the vent tables and listing (3 in and 4 in are both common); power-vent and condensing units use other venting.",
+      "keywords": ["water heater", "type b vent", "double wall", "gas vent", "category i", "flue"]
+    },
+    {
+      "topic": "Residential code", "trade": "gc", "state": null,
+      "source": "IFGC 2021 Sec. 403 (pipe threading specifications)",
+      "fact": "When threading 1/2 in steel gas pipe, about 10 threads are cut, for a threaded length of roughly 3/4 in.",
+      "status": "verified", "note": "",
+      "keywords": ["gas pipe", "threads", "1/2 inch", "threading", "black iron", "fuel gas"]
+    },
+    {
+      "topic": "Residential code", "trade": "gc", "state": null,
+      "source": "NEC 2020 Art. 100, 210, 250",
+      "fact": "A 240-volt-only single-phase load needs two ungrounded (hot) circuit conductors plus an equipment grounding conductor; a 120/240-volt load adds a grounded (neutral) conductor, for three circuit conductors plus the ground.",
+      "status": "corrected",
+      "note": "Card says 4 leads are used as circuit conductors. The equipment grounding conductor is not a circuit conductor, so a 240 V load uses 2 circuit conductors and a 120/240 V load uses 3.",
+      "keywords": ["240 volt", "conductors", "hot", "neutral", "ground", "circuit"]
+    },
+    {
+      "topic": "Site work & concrete", "trade": "gc", "state": null,
+      "source": "ACI 117; PTI field procedures",
+      "fact": "Vertical placement tolerance for post-tensioning tendons in members 8 to 24 in deep is plus or minus 3/8 in (plus or minus 1/4 in for members 8 in or less, and 1/2 in for members over 24 in).",
+      "status": "verified", "note": "",
+      "keywords": ["post tensioning", "tendon", "tolerance", "vertical", "profile", "elevated slab"]
+    },
+    {
+      "topic": "Site work & concrete", "trade": "gc", "state": null,
+      "source": "PTI field procedures manual",
+      "fact": "If a post-tensioning tendon breaks during stressing, the decision on whether it must be replaced is made by the engineer of record working with the post-tensioning supplier.",
+      "status": "unverified",
+      "note": "Reflects PTI practice; project specifications decide who has authority, and the engineer of record normally has final say.",
+      "keywords": ["tendon", "broken", "post tensioning", "engineer", "supplier", "replace"]
+    },
+    {
+      "topic": "Site work & concrete", "trade": "gc", "state": null,
+      "source": "PTI field procedures manual",
+      "fact": "Enough tendon tail must be left beyond the slab edge at each stressing end for the jack to grip; a figure of about 12 in per end is often quoted for a tendon stressed at both ends.",
+      "status": "unverified",
+      "note": "Required tail length depends on the stressing jack and the supplier's procedures; could not confirm a fixed 12 in value.",
+      "keywords": ["tendon tail", "stressing", "post tensioning", "jack", "length", "slab edge"]
+    },
+    {
+      "topic": "Safety (OSHA)", "trade": "gc", "state": null,
+      "source": "OSHA 29 CFR 1926 Subpart P App. A and B",
+      "fact": "Stable rock is the only soil classification in which excavation walls may be cut vertical (90 degrees) without a protective system, because it stays intact while exposed.",
+      "status": "verified", "note": "",
+      "keywords": ["stable rock", "vertical", "excavation", "soil classification", "trench", "sloping"]
+    },
+    {
+      "topic": "Steel & trusses", "trade": "gc", "state": null,
+      "source": "SJI handling and erection guidance",
+      "fact": "Steel joists should be stored on site upright, in the position they were shipped, on blocking off the ground so they do not bend, twist or collect water.",
+      "status": "unverified",
+      "note": "Manufacturer/SJI handling recommendation rather than a code requirement.",
+      "keywords": ["steel joist", "storage", "jobsite", "upright", "blocking", "handling"]
+    },
+    {
+      "topic": "Steel & trusses", "trade": "gc", "state": null,
+      "source": "SJI joist girder specifications",
+      "fact": "When steel joists bear on a joist girder, they must be located at the girder's top-chord panel points, because joist girders are designed to receive concentrated loads only there.",
+      "status": "verified", "note": "",
+      "keywords": ["joist girder", "panel point", "top chord", "bearing", "steel joist", "load"]
+    },
+    {
+      "topic": "Steel & trusses", "trade": "gc", "state": null,
+      "source": "OSHA 29 CFR 1926.757; SJI Code of Standard Practice",
+      "fact": "Before any field modification of a steel joist or joist girder, consult the joist manufacturer; OSHA prohibits modifications that affect joist strength without written approval of the project structural engineer of record.",
+      "status": "verified", "note": "",
+      "keywords": ["joist", "modification", "manufacturer", "engineer of record", "field change", "steel"]
+    },
+    {
+      "topic": "Safety (OSHA)", "trade": "gc", "state": null,
+      "source": "OSHA 29 CFR 1926.50(d)(2)",
+      "fact": "First aid kit contents must be in a weatherproof container with individually sealed packages, and the employer must check the kit before it goes to each job and at least weekly on each job to replace used items.",
+      "status": "verified", "note": "",
+      "keywords": ["first aid kit", "weekly", "weatherproof", "medical", "inspection", "supplies"]
+    },
+    {
+      "topic": "Safety (OSHA)", "trade": "gc", "state": null,
+      "source": "OSHA 29 CFR 1926.451(f)(6)",
+      "fact": "Scaffolds must be kept at least 3 ft from insulated power lines under 300 volts and at least 10 ft from insulated lines of 300 V to 50 kV and from uninsulated lines under 50 kV, with greater clearance for higher voltages.",
+      "status": "verified", "note": "",
+      "keywords": ["scaffold", "power lines", "clearance", "300 volts", "3 feet", "electrical"]
+    },
+    {
+      "topic": "Safety (OSHA)", "trade": "gc", "state": null,
+      "source": "OSHA 29 CFR 1926 Subpart Q (1926.700-.706)",
+      "fact": "OSHA requirements for concrete formwork, shoring and reshoring are in Subpart Q, Concrete and Masonry Construction.",
+      "status": "verified", "note": "",
+      "keywords": ["formwork", "subpart q", "concrete", "masonry", "shoring", "osha"]
+    },
+    {
+      "topic": "Safety (OSHA)", "trade": "gc", "state": null,
+      "source": "OSHA 29 CFR 1926.502(f)",
+      "fact": "A roof warning line must be set at least 6 ft back from the roof edge, flagged with high-visibility material at intervals of no more than 6 ft, with its lowest point (including sag) 34 to 39 in above the walking surface.",
+      "status": "corrected",
+      "note": "Card says warning lines are flagged at not more than 6 ft from the roof edge. The 6 ft is the minimum setback from the edge; the flagging interval is a separate maximum of 6 ft.",
+      "keywords": ["warning line", "roof", "flagging", "6 feet", "low slope", "fall protection"]
+    },
+    {
+      "topic": "Safety (OSHA)", "trade": "gc", "state": null,
+      "source": "OSHA 29 CFR 1926.650(b)",
+      "fact": "In excavation terms, a kickout is the accidental release or failure of a cross brace in a shoring system.",
+      "status": "verified", "note": "",
+      "keywords": ["kickout", "cross brace", "shoring", "excavation", "failure", "definition"]
+    },
+    {
+      "topic": "Safety (OSHA)", "trade": "gc", "state": null,
+      "source": "OSHA 29 CFR 1926.501(b)(1)",
+      "fact": "In construction, workers on a walking or working surface with an unprotected side or edge 6 ft or more above a lower level must be protected by guardrails, safety nets or personal fall arrest systems.",
+      "status": "verified", "note": "",
+      "keywords": ["fall protection", "6 feet", "unprotected edge", "guardrail", "harness", "lower level"]
+    },
+    {
+      "topic": "Safety (OSHA)", "trade": "gc", "state": null,
+      "source": "OSHA 29 CFR 1926.150(c)(1)(i)",
+      "fact": "A portable fire extinguisher rated at least 2A is required for each 3,000 sq ft of protected building area, and travel distance from any point to the nearest extinguisher may not exceed 100 ft.",
+      "status": "verified", "note": "",
+      "keywords": ["fire extinguisher", "2a", "100 feet", "travel distance", "3000 square feet", "fire protection"]
+    },
+    {
+      "topic": "Safety (OSHA)", "trade": "gc", "state": null,
+      "source": "OSHA 29 CFR 1926.451(b)(3)",
+      "fact": "A scaffold platform generally may be no more than 14 in from the face of the work, but for plastering and lathing operations the limit is 18 in.",
+      "status": "verified", "note": "",
+      "keywords": ["scaffold", "plastering", "lathing", "18 inches", "14 inches", "platform gap"]
+    },
+    {
+      "topic": "Safety (OSHA)", "trade": "gc", "state": null,
+      "source": "OSHA 29 CFR 1926.152(c)(1)",
+      "fact": "Outdoor piles of flammable-liquid containers (60 gal or less each) may not exceed 1,100 gal per pile, must be separated from each other by 5 ft, and may be no closer than 20 ft to a building.",
+      "status": "verified", "note": "",
+      "keywords": ["flammable liquids", "outdoor storage", "20 feet", "drums", "building", "pile"]
+    },
+    {
+      "topic": "Safety (OSHA)", "trade": "gc", "state": null,
+      "source": "OSHA 29 CFR 1926.154 (heater clearance table)",
+      "fact": "Temporary radiant-type room heaters need at least 36 in of clearance to combustibles at the sides and rear (circulating-type room heaters need 12 in), and 18 in at the chimney connector.",
+      "status": "verified", "note": "",
+      "keywords": ["temporary heater", "radiant", "clearance", "36 inches", "combustibles", "heating"]
+    },
+    {
+      "topic": "Safety (OSHA)", "trade": "gc", "state": null,
+      "source": "OSHA 29 CFR 1926.651(l)",
+      "fact": "Walkways must be provided where workers or equipment cross over excavations, and guardrails are required on walkways that are 6 ft or more above the lower level.",
+      "status": "verified", "note": "",
+      "keywords": ["walkway", "excavation", "guardrail", "crossing", "6 feet", "trench"]
+    },
+    {
+      "topic": "Site work & concrete", "trade": "gc", "state": null,
+      "source": "Surveying and earthwork fundamentals",
+      "fact": "Percent slope is rise divided by run times 100, so a 100% slope has equal rise and run and corresponds to a 45-degree angle.",
+      "status": "verified", "note": "",
+      "keywords": ["slope", "percent", "45 degrees", "grade", "rise over run", "angle"]
+    },
+    {
+      "topic": "Site work & concrete", "trade": "gc", "state": null,
+      "source": "Dewatering practice",
+      "fact": "Wellpoint dewatering works best in sands and gravels; in fine-grained silts and clays it is much less effective because water drains too slowly, so other methods (vacuum wellpoints, electro-osmosis) may be needed.",
+      "status": "verified", "note": "",
+      "keywords": ["wellpoint", "dewatering", "groundwater", "sand", "fine grained", "silt"]
+    },
+    {
+      "topic": "Site work & concrete", "trade": "gc", "state": null,
+      "source": "Earthwork and road design convention",
+      "fact": "Grades are signed by direction of travel: an uphill grade is positive and a downhill grade is negative.",
+      "status": "verified", "note": "",
+      "keywords": ["negative grade", "downhill", "slope", "haul road", "positive grade", "earthwork"]
+    },
+    {
+      "topic": "Site work & concrete", "trade": "gc", "state": null,
+      "source": "ASTM D6938 (nuclear density gauge)",
+      "fact": "A nuclear density gauge measures in-place soil density and moisture quickly without removing a soil sample from the site, unlike sand-cone or rubber-balloon tests.",
+      "status": "verified", "note": "",
+      "keywords": ["nuclear gauge", "compaction test", "density", "moisture", "field test", "soil"]
+    },
+    {
+      "topic": "Site work & concrete", "trade": "gc", "state": null,
+      "source": "Soil mechanics fundamentals",
+      "fact": "Coarse-grained soils such as gravel and sand drain freely and keep most of their strength when saturated, whereas fine-grained silts and clays lose strength and become unworkable when wet.",
+      "status": "verified", "note": "",
+      "keywords": ["coarse grained", "gravel", "saturation", "drainage", "soil strength", "clay"]
+    },
+    {
+      "topic": "Site work & concrete", "trade": "gc", "state": null,
+      "source": "Compaction equipment practice",
+      "fact": "Coarse sand and gravel compact best with vibration (vibratory rollers or plates) and adequate water, while cohesive clays compact best with kneading or impact equipment such as sheepsfoot or padfoot rollers.",
+      "status": "verified", "note": "",
+      "keywords": ["compaction", "vibratory roller", "sand", "gravel", "sheepsfoot", "clay"]
+    },
+    {
+      "topic": "Site work & concrete", "trade": "gc", "state": null,
+      "source": "Waterworks thrust restraint practice (AWWA)",
+      "fact": "The thrust at a pipe bend equals 2 x internal pressure x pipe cross-sectional area x sin(bend angle / 2), and the required thrust block bearing area equals that thrust divided by the allowable soil bearing pressure.",
+      "status": "verified", "note": "",
+      "keywords": ["thrust block", "bend", "pipe", "water main", "bearing area", "soil pressure"]
+    },
+    {
+      "topic": "Safety (OSHA)", "trade": "gc", "state": null,
+      "source": "OSHA 29 CFR 1926 Subpart P App. B, Table B-1",
+      "fact": "For excavations under 20 ft deep, OSHA's maximum allowable slopes are 3/4H:1V (53 degrees) in Type A soil, 1H:1V (45 degrees) in Type B soil, and 1-1/2H:1V (34 degrees) in Type C soil.",
+      "status": "verified", "note": "",
+      "keywords": ["sloping", "angle of repose", "type b", "1 to 1", "45 degrees", "excavation"]
+    },
+    {
+      "topic": "Plan reading", "trade": "gc", "state": null,
+      "source": "Topographic map reading fundamentals",
+      "fact": "On a topographic map, contour lines that close on themselves mark a hilltop (summit) or a depression; depression contours are often drawn with hachure tick marks pointing downhill.",
+      "status": "verified", "note": "",
+      "keywords": ["contour lines", "closed loop", "summit", "depression", "topographic map", "hill"]
+    },
+    {
+      "topic": "Plan reading", "trade": "gc", "state": null,
+      "source": "Topographic map reading fundamentals",
+      "fact": "Contour lines spaced closely together indicate steep ground, and widely spaced contours indicate gentle slopes.",
+      "status": "verified", "note": "",
+      "keywords": ["contour spacing", "steep", "slope", "topographic", "site plan", "grade"]
+    },
+    {
+      "topic": "Plan reading", "trade": "gc", "state": null,
+      "source": "Topographic map reading fundamentals",
+      "fact": "A concave slope (steep at the top, flattening toward the bottom) shows contour lines bunched near the top and spreading apart toward the base; a convex slope shows the opposite.",
+      "status": "verified", "note": "",
+      "keywords": ["concave", "convex", "contour", "slope shape", "topography", "map"]
+    },
+    {
+      "topic": "Residential code", "trade": "gc", "state": null,
+      "source": "IFGC 2021 403.4, 404.3",
+      "fact": "Black (uncoated) steel pipe is the standard material for natural gas piping, and gas piping concealed in walls may not contain unions, tubing fittings, bushings, compression couplings, right-and-left couplings or swing joints.",
+      "status": "verified", "note": "",
+      "keywords": ["black pipe", "gas piping", "concealed", "unions", "fittings", "natural gas"]
+    },
+    {
+      "topic": "Plan reading", "trade": "gc", "state": null,
+      "source": "Building layout fundamentals",
+      "fact": "The 3-4-5 method (or any multiple such as 6-8-10) uses a right triangle to check that building corners are square during layout.",
+      "status": "verified", "note": "",
+      "keywords": ["3-4-5", "square", "layout", "right angle", "batter boards", "building lines"]
+    },
+    {
+      "topic": "Energy & environmental", "trade": "gc", "state": null,
+      "source": "Insulation retrofit practice (DOE)",
+      "fact": "Blown-in loose-fill insulation (cellulose or fiberglass) is the usual method for adding insulation to existing homes, since it can be blown into attics and dense-packed into closed wall cavities without removing finishes.",
+      "status": "verified", "note": "",
+      "keywords": ["loose fill", "blown in", "retrofit", "existing home", "cellulose", "insulation"]
+    },
+    {
+      "topic": "Residential code", "trade": "gc", "state": null,
+      "source": "IRC 2021 R806.3",
+      "fact": "Where eave or soffit vents are installed, attic insulation must not block airflow, and at least 1 in of space must be kept between the insulation and the roof sheathing at the vent location (baffles are typically used).",
+      "status": "verified", "note": "",
+      "keywords": ["soffit vent", "baffle", "attic insulation", "ventilation", "1 inch", "eave"]
+    },
+    {
+      "topic": "Masonry", "trade": "gc", "state": null,
+      "source": "IRC 2021 R703.8",
+      "fact": "Anchored masonry (brick) veneer must be supported on concrete or masonry footings or foundations or other approved noncombustible support; the IRC allows limited exceptions such as steel angles over openings and support on wood framing under specific weight and height conditions.",
+      "status": "verified", "note": "",
+      "keywords": ["brick veneer", "foundation", "support", "noncombustible", "steel angle", "masonry"]
+    },
+    {
+      "topic": "Masonry", "trade": "gc", "state": null,
+      "source": "Masonry fireplace construction practice",
+      "fact": "In a masonry fireplace, the smoke shelf behind the damper turns back cold downdrafts coming down the flue so they do not push smoke into the room.",
+      "status": "verified", "note": "",
+      "keywords": ["smoke shelf", "chimney", "downdraft", "fireplace", "damper", "flue"]
+    },
+    {
+      "topic": "Energy & environmental", "trade": "gc", "state": null,
+      "source": "Batt insulation installation practice",
+      "fact": "Unfaced batt insulation is friction-fit between studs and needs no stapling; faced batts are stapled through their flanges.",
+      "status": "verified", "note": "",
+      "keywords": ["unfaced batt", "friction fit", "wall insulation", "fiberglass", "studs", "kraft faced"]
+    },
+    {
+      "topic": "Project management", "trade": "gc", "state": null,
+      "source": "CPM scheduling fundamentals",
+      "fact": "When a follow-on activity can begin a set number of days after a predecessor begins (for example, painting starting 7 days after drywall starts), the link is a start-to-start relationship with a lag of that many days.",
+      "status": "verified", "note": "",
+      "keywords": ["start to start", "lag", "schedule", "cpm", "relationship", "activity"]
+    },
+    {
+      "topic": "Project management", "trade": "gc", "state": null,
+      "source": "Construction project management practice",
+      "fact": "When a subcontractor reports a conflict in the specifications, the project manager should evaluate its cost and schedule impact and send a request for information (RFI) to the design professional for a resolution rather than deciding it alone.",
+      "status": "verified", "note": "",
+      "keywords": ["rfi", "conflict", "specifications", "project manager", "subcontractor", "clarification"]
+    },
+    {
+      "topic": "Project management", "trade": "gc", "state": null,
+      "source": "Job site layout planning",
+      "fact": "Job site space allocation is the part of the site layout plan that designates areas for material delivery and storage, temporary offices, sanitary facilities, parking and equipment.",
+      "status": "verified", "note": "",
+      "keywords": ["site layout", "space allocation", "laydown", "storage", "temporary facilities", "logistics"]
+    },
+    {
+      "topic": "Project management", "trade": "gc", "state": null,
+      "source": "Project closeout practice",
+      "fact": "As-built (record) drawings document final dimensions, locations of concealed utilities and facilities, and all changes from the contract drawings, and they should be kept in a secure, retrievable location for the owner's future use.",
+      "status": "verified", "note": "",
+      "keywords": ["as-built", "record drawings", "changes", "closeout", "dimensions", "documents"]
+    },
+    {
+      "topic": "Project management", "trade": "gc", "state": null,
+      "source": "Project closeout practice",
+      "fact": "As-built drawings are most accurate when marked up continuously in the field by the superintendent or foreman who sees the work installed; the office-based project manager is the least likely to produce accurate as-builts.",
+      "status": "verified", "note": "",
+      "keywords": ["as-built", "superintendent", "field markup", "foreman", "project manager", "accuracy"]
+    },
+    {
+      "topic": "Project management", "trade": "law", "state": null,
+      "source": "AIA A201 Sec. 9.8-9.10 (closeout)",
+      "fact": "The contractor is responsible for assembling closeout requirements such as warranties, O&M manuals, lien releases and record documents, while the architect inspects and certifies substantial and final completion for the owner.",
+      "status": "corrected",
+      "note": "Card says the project architect is responsible to the contractor for meeting all closeout and filing requirements. Under standard AIA documents the contractor gathers closeout items and the architect reviews and certifies completion on the owner's behalf.",
+      "keywords": ["closeout", "architect", "contractor", "final completion", "warranties", "lien release"]
+    },
+    {
+      "topic": "Steel & trusses", "trade": "gc", "state": null,
+      "source": "AISC 360-16 I3.2c (composite deck)",
+      "fact": "For composite floors on formed steel deck, the concrete must be at least 2 in thick above the top of the deck flutes.",
+      "status": "verified", "note": "",
+      "keywords": ["composite deck", "steel deck", "concrete topping", "2 inches", "flutes", "metal deck"]
+    },
+    {
+      "topic": "Project management", "trade": "gc", "state": null,
+      "source": "Material management practice",
+      "fact": "Receiving and storing materials as close as practical to where they will be installed cuts double handling, lowers cost and improves worker productivity.",
+      "status": "verified", "note": "",
+      "keywords": ["material handling", "storage", "productivity", "staging", "laydown", "delivery"]
+    },
+    {
+      "topic": "Project management", "trade": "gc", "state": null,
+      "source": "Submittal practice (CSI)",
+      "fact": "Shop drawings are needed for custom-fabricated items such as structural steel, millwork, curtain wall and ductwork; standard off-the-shelf products like sheet vinyl flooring are usually submitted as product data and samples instead.",
+      "status": "verified", "note": "",
+      "keywords": ["shop drawings", "submittal", "product data", "samples", "vinyl flooring", "fabrication"]
+    },
+    {
+      "topic": "Project management", "trade": "gc", "state": null,
+      "source": "Submittal practice (CSI)",
+      "fact": "When the general contractor rejects a subcontractor's shop drawings, they are returned to the subcontractor to be revised and resubmitted before being forwarded to the architect.",
+      "status": "verified", "note": "",
+      "keywords": ["shop drawings", "rejected", "resubmit", "subcontractor", "submittal review", "revise"]
+    },
+    {
+      "topic": "Project management", "trade": "gc", "state": null,
+      "source": "Construction technology fundamentals",
+      "fact": "Building Information Modeling (BIM) is a shared digital model of a project that is continually updated and can link cost (5D) and schedule (4D) data to improve coordination, productivity and quality.",
+      "status": "verified", "note": "",
+      "keywords": ["bim", "building information modeling", "3d model", "clash detection", "4d", "5d"]
+    },
+    {
+      "topic": "Estimating", "trade": "gc", "state": null,
+      "source": "Cost engineering fundamentals",
+      "fact": "Life-cycle costing compares alternatives using initial, operating, maintenance and replacement costs plus future benefits over the useful life of a building or system, not first cost alone.",
+      "status": "verified", "note": "",
+      "keywords": ["life cycle cost", "operating cost", "maintenance", "value engineering", "ownership cost", "lcc"]
+    },
+    {
+      "topic": "Estimating & bidding", "trade": "law", "state": null,
+      "source": "Bidding practice (CSI / AIA)",
+      "fact": "A bid alternate is a price, requested in the bid documents, for using a different material, product or scope than the base bid, so the owner can decide which options to accept.",
+      "status": "verified", "note": "",
+      "keywords": ["alternate", "bid alternate", "base bid", "add alternate", "deduct", "substitution"]
+    },
+    {
+      "topic": "Financial management", "trade": "law", "state": null,
+      "source": "NASCLA Contractor's Guide topic: financial management",
+      "fact": "Front-end loading means placing extra value on early activities in the schedule of values so the contractor collects more in early pay applications, offsetting the cash-flow drag of the retainage the owner withholds.",
+      "status": "verified", "note": "",
+      "keywords": ["front end loading", "schedule of values", "retainage", "cash flow", "pay application", "billing"]
+    },
+    {
+      "topic": "Safety (OSHA)", "trade": "gc", "state": null,
+      "source": "OSHA 29 CFR 1926.1101(k)(1)",
+      "fact": "OSHA presumes that thermal system insulation and sprayed or troweled surfacing materials in buildings built no later than 1980, as well as asphalt and vinyl flooring installed by then, contain asbestos unless testing proves otherwise.",
+      "status": "verified", "note": "",
+      "keywords": ["asbestos", "1980", "pacm", "floor tile", "pipe insulation", "renovation"]
+    },
+    {
+      "topic": "Energy & environmental", "trade": "gc", "state": null,
+      "source": "EPA / NAHB construction waste estimates",
+      "fact": "New construction generates roughly 4 lb of waste per square foot of building area.",
+      "status": "unverified",
+      "note": "Commonly cited estimate (NAHB studies show roughly 4.0 to 4.4 lb/sq ft for new homes); varies by building type and source.",
+      "keywords": ["construction waste", "pounds per square foot", "debris", "recycling", "dumpster", "c&d"]
+    },
+    {
+      "topic": "Energy & environmental", "trade": "gc", "state": null,
+      "source": "State erosion and sediment control manuals",
+      "fact": "Where gravel is used to backfill a silt fence trench, washed stone of about 3/4 in to 1-1/2 in is typical.",
+      "status": "unverified",
+      "note": "Silt fence details vary by state BMP manual and project specification; could not confirm a national standard.",
+      "keywords": ["silt fence", "gravel", "backfill", "erosion control", "stone size", "trench"]
+    },
+    {
+      "topic": "Energy & environmental", "trade": "gc", "state": null,
+      "source": "USGBC / GSA performance studies",
+      "fact": "LEED-certified buildings are often reported to use about 25 to 30 percent less energy on average than comparable conventional buildings.",
+      "status": "unverified",
+      "note": "Widely quoted figure from early studies; actual savings vary widely by building and certification level.",
+      "keywords": ["leed", "energy savings", "green building", "usgbc", "percent", "efficiency"]
+    },
+    {
+      "topic": "Environmental", "trade": "law", "state": null,
+      "source": "CERCLA Sec. 101(39) (Brownfields Act of 2002)",
+      "fact": "A brownfield is real property whose expansion, redevelopment or reuse may be complicated by the presence or potential presence of a hazardous substance, pollutant or contaminant.",
+      "status": "verified", "note": "",
+      "keywords": ["brownfield", "contamination", "epa", "redevelopment", "hazardous substance", "cercla"]
+    },
+    {
+      "topic": "Energy & environmental", "trade": "gc", "state": null,
+      "source": "EPA stormwater BMP guidance",
+      "fact": "Silt fences are installed along the contour at the toe (bottom) of disturbed slopes, downslope of the work, to trap sediment carried by sheet flow.",
+      "status": "verified", "note": "",
+      "keywords": ["silt fence", "toe of slope", "erosion control", "sediment", "stormwater", "swppp"]
+    },
+    {
+      "topic": "Energy & environmental", "trade": "gc", "state": null,
+      "source": "USGBC LEED program",
+      "fact": "LEED is a voluntary, third-party green building certification program run by the U.S. Green Building Council that gives a common standard for measuring high-performance, sustainable buildings.",
+      "status": "verified", "note": "",
+      "keywords": ["leed", "usgbc", "voluntary", "certification", "green building", "sustainable"]
+    },
+    {
+      "topic": "Energy & environmental", "trade": "gc", "state": null,
+      "source": "USGBC LEED rating system",
+      "fact": "LEED credit categories include Sustainable Sites, Water Efficiency, Energy and Atmosphere, Materials and Resources, Indoor Environmental Quality, Innovation and Regional Priority (LEED v4 adds Location and Transportation and Integrative Process).",
+      "status": "verified", "note": "",
+      "keywords": ["leed categories", "water efficiency", "energy and atmosphere", "indoor environmental quality", "materials", "credits"]
+    },
+    {
+      "topic": "Drywall & finishes", "trade": "gc", "state": null,
+      "source": "EIFS manufacturer installation guidelines",
+      "fact": "EIFS base-coat mesh is reinforced at critical points: doubled near inside and outside corners, diagonal mesh patches (about 9 x 12 in) at the corners of doors, windows and other openings, and mesh wrapped onto opening returns so it extends a few inches past the corner.",
+      "status": "unverified",
+      "note": "Exact dimensions (8 in, 9 x 12 in, 2-1/2 in) come from manufacturer instructions and ASTM E2511/E2568 guidance, not the IBC; verify against the specific system.",
+      "keywords": ["eifs", "reinforcing mesh", "diagonal mesh", "corners", "openings", "stucco"]
+    },
+    {
+      "topic": "Drywall & finishes", "trade": "gc", "state": null,
+      "source": "EIFS manufacturer installation guidelines",
+      "fact": "Mechanical fasteners attaching EIFS insulation board to steel framing must penetrate the steel a minimum distance set by the system manufacturer (often cited as 5/16 in or at least three threads).",
+      "status": "unverified",
+      "note": "Manufacturer-specific requirement; could not confirm a single code value.",
+      "keywords": ["eifs", "fastener", "steel stud", "penetration", "insulation board", "screw"]
+    },
+    {
+      "topic": "Energy & environmental", "trade": "gc", "state": null,
+      "source": "Polyiso manufacturer product data",
+      "fact": "Polyisocyanurate insulation boards are commonly made in 4 ft (48 in) widths and lengths up to about 10 ft (120 in).",
+      "status": "unverified",
+      "note": "Product sizes are set by manufacturers and vary; not a code requirement.",
+      "keywords": ["polyiso", "polyisocyanurate", "board size", "rigid insulation", "48 inches", "120 inches"]
+    },
+    {
+      "topic": "Building code (IBC)", "trade": "gc", "state": null,
+      "source": "IBC 2021 1805.2.1",
+      "fact": "Where floors require dampproofing, a vapor retarder such as 6-mil polyethylene is placed between the slab and base course with joints lapped at least 6 in.",
+      "status": "verified", "note": "",
+      "keywords": ["dampproofing", "vapor retarder", "6 mil", "lap", "slab", "polyethylene"]
+    },
+    {
+      "topic": "Building code (IBC)", "trade": "gc", "state": null,
+      "source": "IBC 2021 1003.2",
+      "fact": "Means of egress must have a ceiling height of at least 7 ft 6 in, with exceptions such as stair headroom (80 in) and limited projections and door heights.",
+      "status": "verified", "note": "",
+      "keywords": ["means of egress", "ceiling height", "7 feet 6 inches", "headroom", "exit", "corridor"]
+    },
+    {
+      "topic": "Residential code", "trade": "gc", "state": null,
+      "source": "IRC 2021 R905.2.8.5",
+      "fact": "Drip edge at eaves and gables must overlap adjacent pieces by at least 2 in, extend at least 1/4 in below the roof sheathing, and extend at least 2 in back onto the roof deck; at the eave it goes under the underlayment.",
+      "status": "verified", "note": "",
+      "keywords": ["drip edge", "eave", "overlap", "2 inches", "underlayment", "shingles"]
+    },
+    {
+      "topic": "Wood framing", "trade": "gc", "state": null,
+      "source": "IRC 2021 R317.2; IBC 2021 2303.1.9.1",
+      "fact": "Preservative-treated wood must bear an approved quality mark identifying the treating manufacturer, inspection agency, preservative, minimum retention, applicable AWPA standard and intended end use (such as ground contact or foundation), plus moisture content if dried after treatment.",
+      "status": "verified", "note": "",
+      "keywords": ["treated wood", "quality mark", "label", "end use", "retention", "foundation"]
+    },
+    {
+      "topic": "Building code (IBC)", "trade": "gc", "state": null,
+      "source": "IBC 2021 Table 1806.2; IRC 2021 Table R401.4.1",
+      "fact": "Presumptive load-bearing values are 12,000 psf for crystalline bedrock, 4,000 psf for sedimentary and foliated rock, 3,000 psf for sandy gravel or gravel, 2,000 psf for sand and silty or clayey sands and gravels, and 1,500 psf for clays and silts.",
+      "status": "verified", "note": "",
+      "keywords": ["soil bearing", "crystalline bedrock", "12000 psf", "presumptive", "foundation", "load bearing"]
+    },
+    {
+      "topic": "Wood framing", "trade": "gc", "state": null,
+      "source": "IBC 2021 2304.12; IRC 2021 R317.1",
+      "fact": "Untreated wood is allowed in locations that otherwise require treatment when it is continuously and entirely below the groundwater level or fully submerged in fresh water, because decay organisms cannot survive without oxygen.",
+      "status": "verified", "note": "",
+      "keywords": ["untreated wood", "groundwater", "submerged", "piles", "decay", "treated lumber"]
+    },
+    {
+      "topic": "Building code (IBC)", "trade": "gc", "state": null,
+      "source": "IBC 2021 1805.3.1",
+      "fact": "Floors that must be waterproofed get a membrane of rubberized asphalt, butyl rubber, approved bonded HDPE or polyolefin composite, or PVC at least 6 mil thick, with joints lapped at least 6 in.",
+      "status": "verified", "note": "",
+      "keywords": ["waterproofing", "floor", "pvc", "6 mil", "membrane", "lap"]
+    },
+    {
+      "topic": "Residential code", "trade": "gc", "state": null,
+      "source": "IRC 2021 R310.2.2; IBC 2021 1031.3",
+      "fact": "The bottom of the clear opening of an emergency escape and rescue opening may be no more than 44 in above the floor.",
+      "status": "verified", "note": "",
+      "keywords": ["egress window", "eero", "sill height", "44 inches", "bedroom", "rescue opening"]
+    },
+    {
+      "topic": "Residential code", "trade": "gc", "state": null,
+      "source": "IRC 2021 R401.3; IBC 2021 1804.4",
+      "fact": "Impervious surfaces such as paving within 10 ft of a building foundation must slope at least 2 percent away from the building; landscaped grade must fall at least 6 in within the first 10 ft.",
+      "status": "verified", "note": "",
+      "keywords": ["grading", "drainage", "2 percent", "impervious", "foundation", "slope away"]
+    },
+    {
+      "topic": "Building code (IBC)", "trade": "gc", "state": null,
+      "source": "IBC 2021 3307.1",
+      "fact": "The person causing an excavation must give owners of adjoining buildings written notice at least 10 days before the scheduled start so they can protect their buildings.",
+      "status": "verified", "note": "",
+      "keywords": ["excavation", "adjoining property", "notice", "10 days", "neighbor", "protection"]
+    },
+    {
+      "topic": "Fire protection", "trade": "gc", "state": null,
+      "source": "IFC/IBC 2021 Sec. 904 (commercial cooking systems)",
+      "fact": "The manual pull station for a commercial kitchen hood suppression system must be at or near an egress path from the cooking area, 10 to 20 ft from the kitchen exhaust system, and mounted 42 to 48 in above the floor.",
+      "status": "verified", "note": "",
+      "keywords": ["kitchen hood", "manual pull", "suppression", "10 to 20 feet", "commercial cooking", "actuation"]
+    },
+    {
+      "topic": "Fire protection", "trade": "gc", "state": null,
+      "source": "IBC 2021 403.4.8",
+      "fact": "In a high-rise, fuel lines serving an emergency or standby generator must be separated from other areas of the building by an approved method or assembly with at least a 2-hour fire-resistance rating.",
+      "status": "verified", "note": "",
+      "keywords": ["high rise", "generator", "fuel line", "2 hour", "standby power", "fire resistance"]
+    },
+    {
+      "topic": "Fire protection", "trade": "gc", "state": null,
+      "source": "IBC 2021 2702.1; IFC 2021 1203.1",
+      "fact": "Required emergency and standby power systems must supply their loads for at least 2 hours without refueling or recharging unless another section of the code states a different duration.",
+      "status": "verified", "note": "",
+      "keywords": ["emergency power", "standby power", "2 hours", "generator", "duration", "fuel"]
+    },
+    {
+      "topic": "Residential code", "trade": "gc", "state": null,
+      "source": "IRC 2021 R405.1",
+      "fact": "Gravel or crushed-stone foundation drains must extend at least 1 ft beyond the outside edge of the footing and 6 in above its top, and be covered with an approved filter membrane.",
+      "status": "verified", "note": "",
+      "keywords": ["foundation drain", "filter fabric", "gravel", "drain tile", "footing", "membrane"]
+    },
+    {
+      "topic": "Fire protection", "trade": "gc", "state": null,
+      "source": "IBC 2021 903.3.1.2.1",
+      "fact": "In Type V buildings with NFPA 13R systems, exterior balconies and decks with a roof or deck above must be sprinklered; sidewall heads may have deflectors 1 to 6 in below the structural members and no more than 14 in below the underside of an open-wood-joist deck.",
+      "status": "verified", "note": "",
+      "keywords": ["sidewall sprinkler", "balcony", "deck", "type v", "nfpa 13r", "14 inches"]
+    },
+    {
+      "topic": "Accessibility", "trade": "gc", "state": null,
+      "source": "IBC 2021 1010.1.3; 2010 ADA Standards 404.2.9",
+      "fact": "Interior swinging doors other than fire doors must open with no more than 5 lbf of push or pull force.",
+      "status": "verified", "note": "",
+      "keywords": ["door force", "5 pounds", "opening force", "interior door", "ada", "egress"]
+    },
+    {
+      "topic": "Residential code", "trade": "gc", "state": null,
+      "source": "IRC 2021 R314.3; NFPA 72",
+      "fact": "Smoke alarms must be placed at least 3 ft horizontally from the door or opening of a bathroom that contains a tub or shower, unless that would prevent a required placement.",
+      "status": "verified", "note": "",
+      "keywords": ["smoke alarm", "bathroom", "3 feet", "shower", "location", "nuisance alarm"]
+    },
+    {
+      "topic": "Wood framing", "trade": "gc", "state": null,
+      "source": "IRC 2021 R317.3.1",
+      "fact": "Fasteners, nuts and washers used in preservative-treated or fire-retardant-treated wood must be hot-dipped zinc-coated galvanized steel, stainless steel, silicon bronze or copper.",
+      "status": "verified", "note": "",
+      "keywords": ["fasteners", "treated wood", "hot dipped galvanized", "stainless", "corrosion", "screws"]
+    },
+    {
+      "topic": "Fire protection", "trade": "gc", "state": null,
+      "source": "NFPA 13 obstruction rules; IFC 2021",
+      "fact": "Automatic sprinklers are needed beneath covered kiosks, display booths, concession stands and similar obstructions that exceed 4 ft in width, because the cover blocks overhead sprinkler discharge.",
+      "status": "unverified",
+      "note": "Consistent with the NFPA 13 rule for obstructions wider than 4 ft, but could not pin the exact IFC/IBC section the card relies on.",
+      "keywords": ["kiosk", "booth", "sprinkler", "obstruction", "4 feet", "mall"]
+    },
+    {
+      "topic": "Building code (IBC)", "trade": "gc", "state": null,
+      "source": "IBC 2021 713.4",
+      "fact": "Shaft enclosures (such as elevator hoistways) connecting four or more stories need at least a 2-hour fire-resistance rating; those connecting fewer than four stories need 1 hour, and never less than the floor assembly penetrated.",
+      "status": "verified", "note": "",
+      "keywords": ["shaft enclosure", "elevator", "2 hour", "fire rating", "four stories", "hoistway"]
+    },
+    {
+      "topic": "Project management", "trade": "gc", "state": null,
+      "source": "Submittal practice (CSI)",
+      "fact": "Shop drawings are prepared by the fabricator or subcontractor to show exactly how an item will be fabricated and installed, letting the design team confirm it meets design intent before production begins.",
+      "status": "verified", "note": "",
+      "keywords": ["shop drawings", "fabrication", "submittal", "detail", "design intent", "approval"]
+    },
+    {
+      "topic": "Financial management", "trade": "law", "state": null,
+      "source": "NASCLA Contractor's Guide topic: job cost accounting",
+      "fact": "Cost codes classify project costs by work item so that actual costs can be compared with the estimate and budget, which shows overruns early and improves future estimates.",
+      "status": "verified", "note": "",
+      "keywords": ["cost codes", "job costing", "actual vs estimate", "budget", "variance", "accounting"]
+    },
+    {
+      "topic": "Project management", "trade": "gc", "state": null,
+      "source": "Project closeout practice",
+      "fact": "Project closeout includes turning over spare parts and attic stock, O&M manuals, warranties, as-built drawings, keys and final lien releases, along with punch list completion and owner training.",
+      "status": "verified", "note": "",
+      "keywords": ["closeout", "spare parts", "attic stock", "warranties", "om manuals", "turnover"]
+    },
+    {
+      "topic": "Financial management", "trade": "law", "state": null,
+      "source": "NASCLA Contractor's Guide topic: financial management",
+      "fact": "A project budget is built from the accepted estimate, which becomes the baseline for tracking job costs.",
+      "status": "verified", "note": "",
+      "keywords": ["budget", "estimate", "baseline", "job cost", "project budget", "cost control"]
+    },
+    {
+      "topic": "Project management", "trade": "gc", "state": null,
+      "source": "Job site logistics planning",
+      "fact": "On a small or tight site, the delivery point must account for traffic patterns, enough room for delivery trucks to stand and maneuver, and access for unloading equipment such as forklifts or cranes.",
+      "status": "verified", "note": "",
+      "keywords": ["delivery", "tight site", "traffic", "logistics", "unloading", "staging"]
+    },
+    {
+      "topic": "Accessibility", "trade": "gc", "state": null,
+      "source": "2010 ADA Standards 604.4",
+      "fact": "An accessible water closet seat must be 17 to 19 in above the finished floor, measured to the top of the seat.",
+      "status": "verified", "note": "",
+      "keywords": ["toilet", "water closet", "seat height", "17 to 19 inches", "ada", "accessible"]
+    },
+    {
+      "topic": "Accessibility", "trade": "gc", "state": null,
+      "source": "2010 ADA Standards 405.2, 405.6",
+      "fact": "Accessible ramps may have a running slope of no more than 1:12 and a rise of no more than 30 in per run, so a run at 1:12 can be at most 30 ft long before a landing is needed.",
+      "status": "verified", "note": "",
+      "keywords": ["ramp", "1:12", "30 inches", "rise", "landing", "run length"]
+    },
+    {
+      "topic": "Accessibility", "trade": "gc", "state": null,
+      "source": "2010 ADA Standards 502.4; ICC A117.1",
+      "fact": "Accessible parking spaces and access aisles may not slope more than 1:48 (about 2 percent) in any direction.",
+      "status": "corrected",
+      "note": "Card says 1:45. The ADA Standards and ICC A117.1 limit parking space and access aisle slopes to 1:48.",
+      "keywords": ["accessible parking", "slope", "1:48", "access aisle", "2 percent", "ada"]
+    },
+    {
+      "topic": "Accessibility", "trade": "gc", "state": null,
+      "source": "2010 ADA Standards 810.9",
+      "fact": "Escalators provided in below-grade transportation stations must have a clear width of at least 32 in.",
+      "status": "verified", "note": "",
+      "keywords": ["escalator", "32 inches", "clear width", "transit station", "below grade", "ada"]
+    },
+    {
+      "topic": "Accessibility", "trade": "gc", "state": null,
+      "source": "2010 ADA Standards 604.3.1",
+      "fact": "The clearance around an accessible water closet must be at least 60 in wide measured perpendicular from the side wall, and at least 56 in deep measured from the rear wall.",
+      "status": "verified", "note": "",
+      "keywords": ["water closet", "clearance", "60 inches", "toilet", "side wall", "accessible"]
+    },
+    {
+      "topic": "Accessibility", "trade": "gc", "state": null,
+      "source": "2010 ADA Standards 405.9.1",
+      "fact": "When ramp edge protection is provided by an extended floor surface instead of a curb, the ramp surface must extend at least 12 in beyond the inside face of the handrail.",
+      "status": "verified", "note": "",
+      "keywords": ["ramp", "edge protection", "12 inches", "handrail", "curb", "extended surface"]
+    },
+    {
+      "topic": "Safety (OSHA)", "trade": "gc", "state": null,
+      "source": "OSHA 29 CFR 1926.753(d)",
+      "fact": "During steel erection, only employees hooking, unhooking or guiding a load, or making the initial connection of the load to the structure, may work under a suspended load.",
+      "status": "verified", "note": "",
+      "keywords": ["suspended load", "steel erection", "hooking", "connector", "crane", "overhead"]
+    },
+    {
+      "topic": "Safety (OSHA)", "trade": "gc", "state": null,
+      "source": "OSHA 29 CFR 1926.452(k)(1)",
+      "fact": "Ladder jack scaffolds are limited to light duty and may not exceed 20 ft above the floor or ground.",
+      "status": "verified", "note": "",
+      "keywords": ["ladder jack", "scaffold", "20 feet", "light duty", "height limit", "platform"]
+    },
+    {
+      "topic": "Safety (OSHA)", "trade": "gc", "state": null,
+      "source": "OSHA 29 CFR 1926.304(d)",
+      "fact": "Portable power-driven circular saws must have guards above and below the base plate (shoe), and the lower guard must return automatically to cover the blade.",
+      "status": "verified", "note": "",
+      "keywords": ["circular saw", "guard", "base plate", "skil saw", "lower guard", "power tools"]
+    },
+    {
+      "topic": "Safety (OSHA)", "trade": "gc", "state": null,
+      "source": "OSHA 29 CFR 1926.35",
+      "fact": "An emergency action plan must cover evacuation and escape procedures and routes, procedures for workers who stay to run critical operations, accounting for employees after evacuation, rescue and medical duties, and how to report emergencies.",
+      "status": "verified", "note": "",
+      "keywords": ["emergency action plan", "evacuation", "escape routes", "head count", "emergency", "plan"]
+    },
+    {
+      "topic": "Safety (OSHA)", "trade": "gc", "state": null,
+      "source": "OSHA 29 CFR 1926.451(g)(1)(ii)",
+      "fact": "Each employee on a single-point or two-point adjustable suspension scaffold must be protected by both a personal fall arrest system and a guardrail system.",
+      "status": "verified", "note": "",
+      "keywords": ["two point", "suspension scaffold", "swing stage", "fall arrest", "guardrail", "harness"]
+    },
+    {
+      "topic": "Safety (OSHA)", "trade": "gc", "state": null,
+      "source": "OSHA 29 CFR 1926.501(b)(2)",
+      "fact": "Employees constructing a leading edge 6 ft or more above a lower level must be protected by guardrails, safety nets or personal fall arrest, or by a fall protection plan if those are shown to be infeasible.",
+      "status": "verified", "note": "",
+      "keywords": ["leading edge", "6 feet", "fall protection", "decking", "fall protection plan", "harness"]
+    },
+    {
+      "topic": "Safety (OSHA)", "trade": "gc", "state": null,
+      "source": "OSHA 29 CFR 1926.302(a)(1)",
+      "fact": "Electric power tools must be either grounded or of the approved double-insulated type.",
+      "status": "verified", "note": "",
+      "keywords": ["power tools", "double insulated", "grounded", "electric tools", "shock", "cord"]
+    },
+    {
+      "topic": "Safety (OSHA)", "trade": "gc", "state": null,
+      "source": "OSHA 29 CFR 1926.501(b)(7)",
+      "fact": "Employees at the edge of an excavation 6 ft or more deep must be protected by guardrails, fences or barricades when the excavation is hidden by plant growth or another visual barrier.",
+      "status": "verified", "note": "",
+      "keywords": ["excavation edge", "6 feet", "barricade", "fence", "hidden", "fall protection"]
+    },
+    {
+      "topic": "Safety (OSHA)", "trade": "gc", "state": null,
+      "source": "OSHA 29 CFR 1926.651(j)(2)",
+      "fact": "Excavated spoil, materials and equipment must be kept at least 2 ft from the edge of an excavation or held back by retaining devices.",
+      "status": "verified", "note": "",
+      "keywords": ["spoil pile", "2 feet", "excavation edge", "trench", "materials", "setback"]
+    },
+    {
+      "topic": "Safety (OSHA)", "trade": "gc", "state": null,
+      "source": "OSHA 29 CFR 1926.250(b)",
+      "fact": "Bagged materials must be stacked by stepping back the layers and cross-keying the bags at least every 10 bags high.",
+      "status": "verified", "note": "",
+      "keywords": ["bagged material", "stacking", "cross key", "10 bags", "cement bags", "storage"]
+    },
+    {
+      "topic": "Safety (OSHA)", "trade": "gc", "state": null,
+      "source": "OSHA 29 CFR 1926.1412(d)(1)",
+      "fact": "A competent person must inspect cranes each shift, including air, hydraulic and other pressurized lines for deterioration or leakage.",
+      "status": "verified", "note": "",
+      "keywords": ["crane inspection", "each shift", "hydraulic", "leakage", "competent person", "subpart cc"]
+    },
+    {
+      "topic": "Safety (OSHA)", "trade": "gc", "state": null,
+      "source": "OSHA 29 CFR 1926.250(b)(1)",
+      "fact": "Materials stored inside buildings under construction may not be placed within 6 ft of hoistways or floor openings, nor within 10 ft of an exterior wall that does not extend above the top of the stored material.",
+      "status": "verified", "note": "",
+      "keywords": ["material storage", "10 feet", "exterior wall", "floor opening", "hoistway", "6 feet"]
+    },
+    {
+      "topic": "Safety (OSHA)", "trade": "gc", "state": null,
+      "source": "OSHA 29 CFR 1926.1202; 1910.146(b)",
+      "fact": "A confined-space atmosphere is oxygen-enriched above 23.5 percent oxygen by volume and oxygen-deficient below 19.5 percent.",
+      "status": "verified", "note": "",
+      "keywords": ["oxygen enriched", "23.5 percent", "confined space", "oxygen deficient", "19.5 percent", "atmosphere"]
+    },
+    {
+      "topic": "Safety (OSHA)", "trade": "gc", "state": null,
+      "source": "OSHA 29 CFR 1926.403 Table K-1; NEC 2020 110.26(A)",
+      "fact": "Electrical equipment operating at 0 to 150 volts to ground needs at least 3 ft of clear working space in front of it, at least 30 in wide (or the equipment width) and 6-1/2 ft high.",
+      "status": "corrected",
+      "note": "Card says 3 square feet. The requirement is a 3 ft working depth (a distance), plus 30 in width and 6.5 ft headroom, not an area.",
+      "keywords": ["working clearance", "electrical panel", "3 feet", "150 volts", "30 inches", "nec 110.26"]
+    },
+    {
+      "topic": "Safety (OSHA)", "trade": "gc", "state": null,
+      "source": "OSHA 29 CFR 1926.651(c)(2)",
+      "fact": "Trenches 4 ft or more deep must have a stairway, ladder, ramp or other safe exit placed so workers travel no more than 25 ft laterally to reach it.",
+      "status": "verified", "note": "",
+      "keywords": ["trench", "ladder", "egress", "25 feet", "4 feet deep", "means of exit"]
+    },
+    {
+      "topic": "Safety (OSHA)", "trade": "gc", "state": null,
+      "source": "OSHA 29 CFR 1926.451(e)(2)(iv)",
+      "fact": "Hook-on and attachable ladders on supported scaffolds over 35 ft high must have rest platforms at vertical intervals of no more than 35 ft.",
+      "status": "verified", "note": "",
+      "keywords": ["hook on ladder", "scaffold", "rest platform", "35 feet", "access", "supported scaffold"]
+    },
+    {
+      "topic": "Safety (OSHA)", "trade": "gc", "state": null,
+      "source": "OSHA 29 CFR 1910.146(c)(5)(ii)(C); 1926 Subpart AA",
+      "fact": "Before entry, a permit-required confined space is tested in this order: oxygen content first, then flammable gases and vapors, then toxic air contaminants.",
+      "status": "verified", "note": "",
+      "keywords": ["confined space", "atmospheric testing", "oxygen first", "gas monitor", "flammable", "toxic"]
+    },
+    {
+      "topic": "Safety (OSHA)", "trade": "gc", "state": null,
+      "source": "OSHA 29 CFR 1926.502(c)(2)",
+      "fact": "Safety nets must extend outward from the outermost projection of the work surface at least 8 ft when the drop is up to 5 ft, 10 ft when the drop is over 5 ft up to 10 ft, and 13 ft when the drop is over 10 ft.",
+      "status": "verified", "note": "",
+      "keywords": ["safety net", "13 feet", "horizontal extension", "fall protection", "drop", "net"]
+    },
+    {
+      "topic": "Safety (OSHA)", "trade": "gc", "state": null,
+      "source": "OSHA 29 CFR 1926.452(s)",
+      "fact": "Wire ropes on catenary scaffolds must be continuous, with no splices between anchors.",
+      "status": "verified", "note": "",
+      "keywords": ["catenary scaffold", "wire rope", "splice", "anchors", "continuous", "scaffold"]
+    },
+    {
+      "topic": "Building code (IBC)", "trade": "gc", "state": null,
+      "source": "IPC 2021 608; IRC 2021 P2902",
+      "fact": "No cross connection, actual or potential, is allowed between a potable water system and any nonpotable system unless protected by an approved backflow prevention method.",
+      "status": "verified", "note": "",
+      "keywords": ["cross connection", "potable water", "backflow", "nonpotable", "plumbing", "contamination"]
+    },
+    {
+      "topic": "Safety (OSHA)", "trade": "gc", "state": null,
+      "source": "OSHA 29 CFR 1910.134(d)(3)(i)(A) Table 1",
+      "fact": "The assigned protection factor is 10 for a half-mask air-purifying respirator and 50 for a full-facepiece air-purifying respirator, so the full facepiece is rated 5 times as protective.",
+      "status": "verified", "note": "",
+      "keywords": ["respirator", "assigned protection factor", "half mask", "full facepiece", "apf", "air purifying"]
+    },
+    {
+      "topic": "Safety (OSHA)", "trade": "gc", "state": null,
+      "source": "OSHA 29 CFR 1926.302(b)(4)",
+      "fact": "Compressed air may be used for cleaning only when reduced to less than 30 psi, and then only with effective chip guarding and proper PPE.",
+      "status": "verified", "note": "",
+      "keywords": ["compressed air", "cleaning", "30 psi", "chip guarding", "ppe", "blow off"]
+    },
+    {
+      "topic": "Safety (OSHA)", "trade": "gc", "state": null,
+      "source": "OSHA 29 CFR 1926.502(d)(15)",
+      "fact": "Personal fall arrest anchorages must be independent of anchorages supporting platforms and able to support at least 5,000 lb per attached employee, or be designed with a safety factor of at least two under a qualified person's supervision.",
+      "status": "verified", "note": "",
+      "keywords": ["anchorage", "5000 pounds", "fall arrest", "tie off", "independent", "harness"]
+    },
+    {
+      "topic": "Masonry", "trade": "gc", "state": null,
+      "source": "Masonry practice (BIA)",
+      "fact": "Common (American) bond is running bond with a course of full-length headers placed periodically, typically every sixth course (every fifth to seventh), to tie wythes together structurally and create the pattern.",
+      "status": "verified", "note": "",
+      "keywords": ["common bond", "american bond", "header course", "brick pattern", "wythe", "masonry bond"]
+    },
+    {
+      "topic": "Masonry", "trade": "gc", "state": null,
+      "source": "Masonry practice (BIA)",
+      "fact": "In stack bond all head (vertical) joints line up, so units do not overlap and horizontal joint reinforcement is normally needed for strength.",
+      "status": "verified", "note": "",
+      "keywords": ["stack bond", "vertical joints", "head joints", "joint reinforcement", "brick pattern", "masonry"]
+    },
+    {
+      "topic": "Masonry", "trade": "gc", "state": null,
+      "source": "Masonry practice (BIA Technical Notes)",
+      "fact": "Tooled concave and V-shaped mortar joints are the most weather-resistant and are recommended where walls face heavy rain and high winds, because tooling compresses the mortar and sheds water.",
+      "status": "verified", "note": "",
+      "keywords": ["mortar joint", "concave", "v joint", "weather resistant", "tooling", "rain"]
+    },
+    {
+      "topic": "Site work & concrete", "trade": "gc", "state": null,
+      "source": "Concrete finishing practice (ACI 302)",
+      "fact": "Bull floating right after screeding levels ridges, fills low spots and pushes coarse aggregate just below the surface, and it must be finished before bleed water appears.",
+      "status": "verified", "note": "",
+      "keywords": ["bull float", "concrete finishing", "screed", "aggregate", "bleed water", "slab"]
+    },
+    {
+      "topic": "Masonry", "trade": "gc", "state": null,
+      "source": "Brick paving guidance (BIA)",
+      "fact": "The excavated base for brick paving is graded to roughly the same slope as the finished surface, on the order of 1/8 to 1/4 in per foot, so water drains.",
+      "status": "unverified",
+      "note": "Brick paving slope recommendations vary by source and use (pedestrian vs vehicular); could not confirm the card's exact range.",
+      "keywords": ["brick paving", "pavers", "slope", "base grade", "drainage", "per foot"]
+    },
+    {
+      "topic": "Site work & concrete", "trade": "gc", "state": null,
+      "source": "Earthwork practice",
+      "fact": "Saturated silt or clay well above optimum moisture cannot be properly compacted; it must be dried by aeration or discing, stabilized with lime or cement, or removed and replaced with suitable dry fill.",
+      "status": "verified", "note": "",
+      "keywords": ["saturated soil", "clay", "silt", "compaction", "optimum moisture", "replace fill"]
+    },
+    {
+      "topic": "Estimating", "trade": "gc", "state": null,
+      "source": "Earthwork estimating fundamentals",
+      "fact": "Loose volume is converted to bank volume by dividing by (1 + swell), so 700 loose cubic yards per hour of soil with 35 percent swell equals about 519 bank cubic yards per hour.",
+      "status": "verified", "note": "",
+      "keywords": ["swell factor", "bank cubic yards", "loose cubic yards", "production rate", "earthwork", "conversion"]
+    },
+    {
+      "topic": "Plan reading", "trade": "gc", "state": null,
+      "source": "Topographic map reading fundamentals",
+      "fact": "A contour line connects points of equal elevation above or below a reference datum.",
+      "status": "verified", "note": "",
+      "keywords": ["contour line", "elevation", "datum", "topographic", "site plan", "definition"]
+    },
+    {
+      "topic": "Site work & concrete", "trade": "gc", "state": null,
+      "source": "Dozer production practice",
+      "fact": "Slot dozing pushes material down the same path repeatedly so the trench walls keep soil from spilling off the blade, reducing load loss during the push.",
+      "status": "verified", "note": "",
+      "keywords": ["slot dozing", "dozer", "blade", "spillage", "production", "earthmoving"]
+    },
+    {
+      "topic": "Site work & concrete", "trade": "gc", "state": null,
+      "source": "Excavation equipment practice",
+      "fact": "Tracked backhoes or excavators are preferred for trenching in soft soil because tracks spread the machine's weight (lower ground pressure) and give better traction and stability than wheels.",
+      "status": "verified", "note": "",
+      "keywords": ["tracked excavator", "backhoe", "soft soil", "trenching", "ground pressure", "flotation"]
+    },
+    {
+      "topic": "Energy & environmental", "trade": "gc", "state": null,
+      "source": "State erosion and sediment control manuals",
+      "fact": "Silt fence posts are typically spaced no more than about 6 ft apart and driven at least 12 in into the ground.",
+      "status": "unverified",
+      "note": "Post spacing (often 6 to 10 ft) and embedment (12 to 18 in) vary by state BMP manual and fabric backing.",
+      "keywords": ["silt fence", "post spacing", "embedment", "6 feet", "erosion control", "stakes"]
+    },
+    {
+      "topic": "Site work & concrete", "trade": "gc", "state": null,
+      "source": "Soil mechanics reference tables",
+      "fact": "The angle of repose of compacted sharp sand is often listed at about 33 degrees.",
+      "status": "unverified",
+      "note": "Handbook value; reported angles for sand vary with grading, moisture and compaction.",
+      "keywords": ["angle of repose", "sand", "33 degrees", "slope", "stockpile", "soil"]
+    },
+    {
+      "topic": "Wood framing", "trade": "gc", "state": null,
+      "source": "IRC 2021 R502.10",
+      "fact": "Floor openings are framed with trimmer joists and header joists carrying the cut tail joists; when the header span exceeds 4 ft the trimmers and header must be doubled, hangers are required where the header span exceeds 6 ft, and tail joists over 12 ft long need framing anchors or 2x2 ledger strips.",
+      "status": "verified", "note": "",
+      "keywords": ["floor opening", "trimmer", "header", "tail joist", "stairwell", "framing"]
+    }
+  ],
+  "questions": [
+    {
+      "t": "gc", "topic": "Safety (OSHA)",
+      "q": "A contractor needs to store 650 lb of LP-gas outdoors in containers awaiting use. Under OSHA, what minimum distance must the storage be from the nearest building?",
+      "c": ["5 ft", "10 ft", "20 ft", "25 ft"], "a": 1,
+      "ref": "OSHA 1926.153 Table F-3",
+      "why": "Quantities from 501 to 6,000 lb must be at least 10 ft from the nearest building; 20 ft applies above 6,000 lb and 25 ft above 10,000 lb."
+    },
+    {
+      "t": "gc", "topic": "Safety (OSHA)",
+      "q": "What is the most flammable liquid OSHA allows to be kept in a single room on a construction site outside of an approved storage cabinet?",
+      "c": ["10 gallons", "60 gallons", "25 gallons", "120 gallons"], "a": 2,
+      "ref": "OSHA 1926.152(b)(1)",
+      "why": "No more than 25 gallons of flammable liquid may be stored in a room outside an approved storage cabinet."
+    },
+    {
+      "t": "gc", "topic": "Safety (OSHA)",
+      "q": "What is the minimum clearance between a scaffold and an insulated power line carrying less than 300 volts?",
+      "c": ["3 ft", "6 ft", "10 ft", "15 ft"], "a": 0,
+      "ref": "OSHA 1926.451(f)(6)",
+      "why": "Insulated lines under 300 V require 3 ft of clearance; 300 V to 50 kV and uninsulated lines under 50 kV require 10 ft."
+    },
+    {
+      "t": "gc", "topic": "Safety (OSHA)",
+      "q": "When a warning line system is used on a low-slope roof (no mechanical equipment), how far back from the roof edge must the line be placed at a minimum?",
+      "c": ["4 ft", "10 ft", "15 ft", "6 ft"], "a": 3,
+      "ref": "OSHA 1926.502(f)",
+      "why": "Warning lines must be at least 6 ft from the edge and flagged with high-visibility material at intervals of no more than 6 ft."
+    },
+    {
+      "t": "gc", "topic": "Safety (OSHA)",
+      "q": "On a jobsite, a 2A-rated fire extinguisher is provided for each 3,000 sq ft. What is the maximum travel distance from any point to the nearest extinguisher?",
+      "c": ["50 ft", "100 ft", "75 ft", "150 ft"], "a": 1,
+      "ref": "OSHA 1926.150(c)(1)(i)",
+      "why": "OSHA limits travel distance to the nearest 2A extinguisher to 100 ft."
+    },
+    {
+      "t": "gc", "topic": "Safety (OSHA)",
+      "q": "For plastering and lathing work, what is the maximum distance a scaffold platform may be from the face of the work?",
+      "c": ["12 in", "14 in", "18 in", "24 in"], "a": 2,
+      "ref": "OSHA 1926.451(b)(3)",
+      "why": "The general limit is 14 in, but plastering and lathing operations are allowed up to 18 in."
+    },
+    {
+      "t": "gc", "topic": "Safety (OSHA)",
+      "q": "What minimum rear clearance to combustibles does OSHA require for a temporary radiant-type room heater?",
+      "c": ["36 in", "12 in", "18 in", "24 in"], "a": 0,
+      "ref": "OSHA 1926.154",
+      "why": "Radiant room heaters need 36 in at the sides and rear; circulating-type room heaters need only 12 in."
+    },
+    {
+      "t": "gc", "topic": "Safety (OSHA)",
+      "q": "For an excavation less than 20 ft deep in Type B soil, what is OSHA's maximum allowable slope (horizontal to vertical)?",
+      "c": ["3/4:1", "1-1/2:1", "2:1", "1:1"], "a": 3,
+      "ref": "OSHA 1926 Subpart P App. B",
+      "why": "Type B soil may be sloped no steeper than 1H:1V (45 degrees); Type A is 3/4:1 and Type C is 1-1/2:1."
+    },
+    {
+      "t": "gc", "topic": "Estimating",
+      "q": "A loader moves 700 loose cubic yards per hour of soil with a 35 percent swell. About how many bank cubic yards per hour is that?",
+      "c": ["455 BCY", "519 BCY", "665 BCY", "945 BCY"], "a": 1,
+      "ref": "Earthwork estimating",
+      "why": "Bank volume equals loose volume divided by (1 + swell): 700 / 1.35 is about 519 BCY."
+    },
+    {
+      "t": "gc", "topic": "Safety (OSHA)",
+      "q": "At a minimum, how often must the employer check a jobsite first aid kit once it is on the job?",
+      "c": ["Daily", "Monthly", "Weekly", "Quarterly"], "a": 2,
+      "ref": "OSHA 1926.50(d)(2)",
+      "why": "The kit is checked before being sent to each job and at least weekly on each job so used items are replaced."
+    },
+    {
+      "t": "gc", "topic": "Safety (OSHA)",
+      "q": "In OSHA excavation terms, what does a kickout describe?",
+      "c": ["A trench wall sliding into the excavation", "Water boiling up through the trench bottom", "Spoil rolling back into the trench", "The accidental release or failure of a cross brace"], "a": 3,
+      "ref": "OSHA 1926.650(b)",
+      "why": "OSHA defines kickout as the accidental release or failure of a cross brace in a shoring system."
+    },
+    {
+      "t": "gc", "topic": "Safety (OSHA)",
+      "q": "Workers are in a trench 4 ft or more deep. What is the maximum lateral travel distance allowed to reach a ladder, stairway or ramp?",
+      "c": ["25 ft", "15 ft", "35 ft", "50 ft"], "a": 0,
+      "ref": "OSHA 1926.651(c)(2)",
+      "why": "A means of egress must be located so no worker travels more than 25 ft laterally to reach it."
+    },
+    {
+      "t": "gc", "topic": "Safety (OSHA)",
+      "q": "How far from the edge of an excavation must spoil piles be kept, at a minimum, when no retaining device is used?",
+      "c": ["1 ft", "3 ft", "2 ft", "5 ft"], "a": 2,
+      "ref": "OSHA 1926.651(j)(2)",
+      "why": "Materials and equipment must be at least 2 ft from the excavation edge or held back by retaining devices."
+    },
+    {
+      "t": "gc", "topic": "Safety (OSHA)",
+      "q": "A safety net is installed where the drop from the working level to the net is more than 10 ft. How far must the net extend outward from the outermost projection of the work surface?",
+      "c": ["8 ft", "10 ft", "15 ft", "13 ft"], "a": 3,
+      "ref": "OSHA 1926.502(c)(2)",
+      "why": "Net extension is 8 ft for drops up to 5 ft, 10 ft for drops over 5 to 10 ft, and 13 ft for drops over 10 ft."
+    },
+    {
+      "t": "gc", "topic": "Safety (OSHA)",
+      "q": "Above what oxygen concentration is a confined-space atmosphere considered oxygen-enriched?",
+      "c": ["21.0 percent", "23.5 percent", "19.5 percent", "25.0 percent"], "a": 1,
+      "ref": "OSHA 1926.1202",
+      "why": "Above 23.5 percent oxygen is oxygen-enriched; below 19.5 percent is oxygen-deficient."
+    },
+    {
+      "t": "gc", "topic": "Safety (OSHA)",
+      "q": "When testing the atmosphere of a permit-required confined space before entry, what must be tested first?",
+      "c": ["Oxygen content", "Flammable gases and vapors", "Carbon monoxide", "Hydrogen sulfide"], "a": 0,
+      "ref": "OSHA 1910.146(c)(5)(ii)(C)",
+      "why": "Testing order is oxygen, then flammable gases and vapors, then toxic contaminants, since combustible gas meters need adequate oxygen to read correctly."
+    },
+    {
+      "t": "gc", "topic": "Safety (OSHA)",
+      "q": "Under OSHA, compressed air may be used for cleaning only when its pressure is reduced below what level, with chip guarding and PPE?",
+      "c": ["15 psi", "50 psi", "30 psi", "90 psi"], "a": 2,
+      "ref": "OSHA 1926.302(b)(4)",
+      "why": "Compressed air for cleaning must be under 30 psi and used only with effective chip guarding and PPE."
+    },
+    {
+      "t": "gc", "topic": "Safety (OSHA)",
+      "q": "An anchorage for personal fall arrest, not designed by a qualified person, must support at least how much per attached employee?",
+      "c": ["1,800 lb", "3,000 lb", "10,000 lb", "5,000 lb"], "a": 3,
+      "ref": "OSHA 1926.502(d)(15)",
+      "why": "Anchorages must hold 5,000 lb per employee or be designed with a safety factor of two under a qualified person's supervision."
+    },
+    {
+      "t": "gc", "topic": "Safety (OSHA)",
+      "q": "What is the maximum height above the floor or ground at which a ladder jack scaffold may be used?",
+      "c": ["20 ft", "16 ft", "24 ft", "30 ft"], "a": 0,
+      "ref": "OSHA 1926.452(k)(1)",
+      "why": "Ladder jack scaffolds are restricted to light duty and a maximum height of 20 ft."
+    },
+    {
+      "t": "gc", "topic": "Safety (OSHA)",
+      "q": "Hook-on ladders serving a supported scaffold more than 35 ft high must have rest platforms at what maximum vertical interval?",
+      "c": ["20 ft", "35 ft", "25 ft", "50 ft"], "a": 1,
+      "ref": "OSHA 1926.451(e)(2)(iv)",
+      "why": "Rest platforms are required at vertical intervals of no more than 35 ft on these ladders."
+    },
+    {
+      "t": "gc", "topic": "Safety (OSHA)",
+      "q": "What is the OSHA assigned protection factor for a full-facepiece air-purifying respirator?",
+      "c": ["10", "25", "50", "1,000"], "a": 2,
+      "ref": "OSHA 1910.134 Table 1",
+      "why": "A full-facepiece APR has an APF of 50, five times the APF of 10 for a half-mask APR."
+    },
+    {
+      "t": "gc", "topic": "Safety (OSHA)",
+      "q": "What minimum depth of clear working space is required in front of an electrical panel operating at 120/240 V (150 V or less to ground)?",
+      "c": ["2 ft", "4 ft", "3 sq ft", "3 ft"], "a": 3,
+      "ref": "OSHA 1926.403 Table K-1",
+      "why": "Equipment at 0 to 150 V to ground requires 3 ft of working depth, at least 30 in wide and 6.5 ft high; it is a distance, not an area."
+    },
+    {
+      "t": "gc", "topic": "Accessibility",
+      "q": "What is the maximum slope permitted in any direction for an accessible parking space and its access aisle?",
+      "c": ["1:48", "1:20", "1:12", "1:45"], "a": 0,
+      "ref": "2010 ADA Standards 502.4",
+      "why": "Parking spaces and access aisles may not exceed 1:48 (about 2 percent) in any direction."
+    },
+    {
+      "t": "gc", "topic": "Accessibility",
+      "q": "An accessible ramp is built at a 1:12 slope. What is the maximum rise allowed for a single ramp run before a landing is required?",
+      "c": ["24 in", "30 in", "36 in", "48 in"], "a": 1,
+      "ref": "2010 ADA Standards 405.6",
+      "why": "A ramp run may rise no more than 30 in; at 1:12 that is a 30 ft horizontal run."
+    },
+    {
+      "t": "gc", "topic": "Accessibility",
+      "q": "What is the required height range for the top of an accessible water closet seat above the finished floor?",
+      "c": ["15 to 17 in", "16 to 18 in", "17 to 19 in", "18 to 20 in"], "a": 2,
+      "ref": "2010 ADA Standards 604.4",
+      "why": "Accessible water closet seats must be 17 to 19 in above the floor, measured to the top of the seat."
+    },
+    {
+      "t": "gc", "topic": "Accessibility",
+      "q": "What is the minimum clear width for an escalator serving a below-grade transportation station?",
+      "c": ["28 in", "36 in", "40 in", "32 in"], "a": 3,
+      "ref": "2010 ADA Standards 810.9",
+      "why": "Escalators in below-grade stations must provide a clear width of at least 32 in."
+    },
+    {
+      "t": "gc", "topic": "Accessibility",
+      "q": "Other than fire doors, what is the maximum force allowed to push or pull open an interior swinging door?",
+      "c": ["5 lbf", "8.5 lbf", "15 lbf", "30 lbf"], "a": 0,
+      "ref": "IBC 2021 1010.1.3",
+      "why": "Interior swinging doors other than fire doors must open with no more than 5 lbf."
+    },
+    {
+      "t": "gc", "topic": "Building code (IBC)",
+      "q": "What is the minimum ceiling height required within a means of egress under the IBC?",
+      "c": ["7 ft 0 in", "6 ft 8 in", "7 ft 6 in", "8 ft 0 in"], "a": 2,
+      "ref": "IBC 2021 1003.2",
+      "why": "Means of egress must have at least 7 ft 6 in of ceiling height, with limited exceptions such as 80 in stair headroom."
+    },
+    {
+      "t": "gc", "topic": "Residential code",
+      "q": "What is the maximum height from the floor to the bottom of the clear opening of a bedroom emergency escape and rescue opening?",
+      "c": ["36 in", "44 in", "48 in", "42 in"], "a": 1,
+      "ref": "IRC 2021 R310.2.2",
+      "why": "The sill of an emergency escape and rescue opening may be no more than 44 in above the floor."
+    },
+    {
+      "t": "gc", "topic": "Building code (IBC)",
+      "q": "Absent a soils report, what presumptive allowable bearing pressure does the code assign to crystalline bedrock?",
+      "c": ["4,000 psf", "6,000 psf", "8,000 psf", "12,000 psf"], "a": 3,
+      "ref": "IBC 2021 Table 1806.2",
+      "why": "Crystalline bedrock is assigned 12,000 psf; sedimentary and foliated rock get 4,000 psf."
+    },
+    {
+      "t": "gc", "topic": "Residential code",
+      "q": "An asphalt parking area lies within 10 ft of a building foundation. What minimum slope away from the building is required?",
+      "c": ["2 percent", "1 percent", "5 percent", "1/8 in per ft"], "a": 0,
+      "ref": "IRC 2021 R401.3",
+      "why": "Impervious surfaces within 10 ft of the foundation must slope at least 2 percent away from the building."
+    },
+    {
+      "t": "gc", "topic": "Building code (IBC)",
+      "q": "Before starting an excavation, how many days of advance written notice must be given to owners of adjoining buildings?",
+      "c": ["5 days", "7 days", "10 days", "30 days"], "a": 2,
+      "ref": "IBC 2021 3307.1",
+      "why": "Notice must be delivered at least 10 days before the scheduled start so neighbors can protect their buildings."
+    },
+    {
+      "t": "gc", "topic": "Building code (IBC)",
+      "q": "An elevator hoistway enclosure connects five stories. What minimum fire-resistance rating does the shaft enclosure need?",
+      "c": ["1 hour", "2 hours", "3 hours", "4 hours"], "a": 1,
+      "ref": "IBC 2021 713.4",
+      "why": "Shafts connecting four or more stories need a 2-hour rating; fewer than four stories need 1 hour."
+    },
+    {
+      "t": "gc", "topic": "Fire protection",
+      "q": "How far from the kitchen exhaust system must the manual actuation device for a commercial hood suppression system be located?",
+      "c": ["5 to 10 ft", "20 to 30 ft", "Within 5 ft", "10 to 20 ft"], "a": 3,
+      "ref": "IFC 2021 Sec. 904",
+      "why": "The manual pull must be on an egress path 10 to 20 ft from the exhaust system and 42 to 48 in above the floor."
+    },
+    {
+      "t": "gc", "topic": "Fire protection",
+      "q": "Unless another section says otherwise, required emergency and standby power systems must run without refueling or recharging for at least how long?",
+      "c": ["2 hours", "30 minutes", "90 minutes", "4 hours"], "a": 0,
+      "ref": "IBC 2021 2702.1",
+      "why": "The code's default load duration for emergency and standby power is 2 hours."
+    },
+    {
+      "t": "gc", "topic": "Fire protection",
+      "q": "In a Type V building, a sidewall sprinkler protects an exterior deck of open wood joist construction. What is the maximum distance the deflector may be below the deck?",
+      "c": ["6 in", "12 in", "14 in", "18 in"], "a": 2,
+      "ref": "IBC 2021 903.3.1.2.1",
+      "why": "Deflectors may be 1 to 6 in below the structural members and no more than 14 in below the deck."
+    },
+    {
+      "t": "gc", "topic": "Residential code",
+      "q": "How far, at a minimum, must a smoke alarm be placed horizontally from the door of a bathroom containing a shower?",
+      "c": ["1 ft", "3 ft", "5 ft", "10 ft"], "a": 1,
+      "ref": "IRC 2021 R314.3",
+      "why": "Smoke alarms must be at least 3 ft horizontally from the door or opening of a bathroom with a tub or shower, to limit steam nuisance alarms."
+    },
+    {
+      "t": "gc", "topic": "Wood framing",
+      "q": "Which fastener material is acceptable for use in preservative-treated lumber under the IRC?",
+      "c": ["Electro-galvanized steel", "Aluminum", "Bright (uncoated) steel", "Silicon bronze"], "a": 3,
+      "ref": "IRC 2021 R317.3.1",
+      "why": "Fasteners in treated wood must be hot-dipped galvanized steel, stainless steel, silicon bronze or copper."
+    },
+    {
+      "t": "gc", "topic": "Residential code",
+      "q": "What is the minimum overlap required where adjacent pieces of roof drip edge meet?",
+      "c": ["2 in", "1 in", "4 in", "6 in"], "a": 0,
+      "ref": "IRC 2021 R905.2.8.5",
+      "why": "Drip edge segments must overlap at least 2 in and extend at least 2 in back onto the roof deck."
+    },
+    {
+      "t": "gc", "topic": "Steel & trusses",
+      "q": "For a composite floor on formed steel deck, what minimum concrete thickness is required above the top of the deck flutes?",
+      "c": ["1 in", "1-1/2 in", "3 in", "2 in"], "a": 3,
+      "ref": "AISC 360-16 I3.2c",
+      "why": "Composite design requires at least 2 in of concrete above the top of the steel deck."
+    },
+    {
+      "t": "gc", "topic": "Project management",
+      "q": "Drywall takes 30 days, and painting may begin 7 days after drywall begins. How is this schedule relationship described?",
+      "c": ["Finish-to-start with 7-day lag", "Start-to-start with 7-day lag", "Finish-to-finish with 7-day lag", "Start-to-finish with 23-day lag"], "a": 1,
+      "ref": "CPM scheduling",
+      "why": "Because the successor's start is tied to the predecessor's start plus 7 days, it is a start-to-start link with a 7-day lag."
+    },
+    {
+      "t": "law", "topic": "Financial management",
+      "q": "A contractor assigns inflated values to early line items in the schedule of values. What is this practice called, and why is it done?",
+      "c": ["Back charging, to recover cleanup costs", "Unbalanced bidding, to win the low bid", "Front-end loading, to offset retainage and improve early cash flow", "Value engineering, to lower the contract price"], "a": 2,
+      "ref": "NASCLA Guide: financial mgmt",
+      "why": "Front-end loading pulls payment forward into early pay applications, offsetting the cash withheld as retainage."
+    },
+    {
+      "t": "gc", "topic": "Safety (OSHA)",
+      "q": "OSHA presumes certain flooring, insulation and surfacing materials contain asbestos in buildings constructed no later than what year?",
+      "c": ["1970", "1990", "1975", "1980"], "a": 3,
+      "ref": "OSHA 1926.1101(k)(1)",
+      "why": "Thermal insulation and surfacing in buildings built by 1980, and asphalt or vinyl flooring installed by 1980, are presumed asbestos-containing unless tested."
+    },
+    {
+      "t": "gc", "topic": "Wood framing",
+      "q": "Under the IRC, at what header span must the header joist and trimmer joists around a floor opening be doubled?",
+      "c": ["More than 4 ft", "More than 3 ft", "More than 6 ft", "More than 8 ft"], "a": 0,
+      "ref": "IRC 2021 R502.10",
+      "why": "Header spans over 4 ft require doubled header and trimmers; spans over 6 ft also require hangers."
+    },
+    {
+      "t": "gc", "topic": "Safety (OSHA)",
+      "q": "A portable ladder gives access to an upper landing. How far must its side rails extend above the landing surface?",
+      "c": ["2 ft", "4 ft", "3 ft", "5 ft"], "a": 2,
+      "ref": "OSHA 1926.1053(b)(1)",
+      "why": "Side rails must extend at least 3 ft above the upper landing unless a grab device is provided where that is not possible."
+    },
+    {
+      "t": "gc", "topic": "Residential code",
+      "q": "In a dwelling, 15- and 20-amp, 125-volt receptacles within what distance of the top inside edge of a sink bowl require GFCI protection?",
+      "c": ["3 ft", "6 ft", "4 ft", "10 ft"], "a": 1,
+      "ref": "NEC 2020 210.8(A)(7)",
+      "why": "Receptacles within 6 ft of the top inside edge of a sink bowl must be GFCI-protected."
+    },
+    {
+      "t": "gc", "topic": "Residential code",
+      "q": "About how many threads are cut on the end of a 1/2 in steel gas pipe?",
+      "c": ["6", "8", "12", "10"], "a": 3,
+      "ref": "IFGC 2021 Sec. 403",
+      "why": "The IFGC threading table calls for about 10 threads (roughly 3/4 in of thread) on 1/2 in and 3/4 in pipe."
+    },
+    {
+      "t": "gc", "topic": "Plan reading",
+      "q": "On a topographic site map, what do contour lines spaced very close together indicate?",
+      "c": ["A steep slope", "Flat ground", "A drainage swale", "A property line"], "a": 0,
+      "ref": "Topographic map reading",
+      "why": "Each contour is a fixed elevation interval, so closely spaced lines mean elevation changes quickly over a short distance."
+    }
+  ]
+}

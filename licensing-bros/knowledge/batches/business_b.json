@@ -1,0 +1,1872 @@
+{
+  "source": "NASCLA contractor's guide set cards 161-320",
+  "facts": [
+    {
+      "topic": "Contracts & liens",
+      "trade": "law",
+      "state": null,
+      "source": "Contract law fundamentals",
+      "fact": "Contract breaches are classed as material or immaterial (minor). A material breach defeats the essential purpose of the contract and lets the other party stop performing, terminate and sue for damages; an immaterial breach only entitles the other party to damages while the contract continues.",
+      "status": "verified",
+      "note": "",
+      "keywords": [
+        "material breach",
+        "immaterial breach",
+        "minor breach",
+        "breach of contract",
+        "termination",
+        "default"
+      ]
+    },
+    {
+      "topic": "Contracts & liens",
+      "trade": "law",
+      "state": null,
+      "source": "Contract law fundamentals",
+      "fact": "Liquidated damages are a dollar amount agreed in the contract in advance (for example a set sum per calendar day of late completion) that the contractor pays the owner for delay. Courts enforce them only if they are a reasonable estimate of hard-to-calculate actual damages, not a penalty.",
+      "status": "verified",
+      "note": "",
+      "keywords": [
+        "liquidated damages",
+        "stated damages",
+        "per day",
+        "late completion",
+        "delay penalty",
+        "damages clause"
+      ]
+    },
+    {
+      "topic": "Contracts & liens",
+      "trade": "law",
+      "state": null,
+      "source": "Contract law fundamentals",
+      "fact": "In contract law, 'damages' is the money awarded to compensate a party for the loss it suffered because of the other party's breach. Common types are compensatory (actual), consequential, liquidated and nominal damages; punitive damages are rarely available for a pure breach of contract.",
+      "status": "verified",
+      "note": "",
+      "keywords": [
+        "damages",
+        "compensatory",
+        "consequential",
+        "financial loss",
+        "breach",
+        "remedy"
+      ]
+    },
+    {
+      "topic": "Contracts & liens",
+      "trade": "law",
+      "state": null,
+      "source": "AIA A201 general conditions; CSI project manual Division 00",
+      "fact": "The standard general conditions of a construction contract are modified or added to for a particular project through supplementary (supplemental) conditions, which are issued with the bid documents so bidders price the changes.",
+      "status": "verified",
+      "note": "",
+      "keywords": [
+        "supplementary conditions",
+        "supplemental conditions",
+        "general conditions",
+        "modify contract",
+        "bid documents",
+        "a201"
+      ]
+    },
+    {
+      "topic": "Contracts & liens",
+      "trade": "law",
+      "state": null,
+      "source": "Contract law fundamentals",
+      "fact": "An indemnification (hold-harmless) clause obligates one party (the indemnitor) to cover the other party's (the indemnitee's) losses, defense costs or liability, typically for claims brought by third parties. Many states have anti-indemnity statutes that void clauses requiring a party to be indemnified for its own sole negligence.",
+      "status": "verified",
+      "note": "",
+      "keywords": [
+        "indemnification",
+        "indemnify",
+        "hold harmless",
+        "third party claims",
+        "anti-indemnity",
+        "liability"
+      ]
+    },
+    {
+      "topic": "Contracts & liens",
+      "trade": "law",
+      "state": null,
+      "source": "AIA A201-2017 Section 12.2 (correction of work)",
+      "fact": "The warranty (guarantee) provisions of a contract define the contractor's duty to repair defective work after completion and give the owner the right to demand correction. Under AIA A201 the contractor must correct nonconforming work discovered within one year after substantial completion, in addition to any longer express warranties.",
+      "status": "verified",
+      "note": "",
+      "keywords": [
+        "warranty",
+        "guarantee",
+        "correction period",
+        "defective work",
+        "one year",
+        "callback"
+      ]
+    },
+    {
+      "topic": "Contracts & liens",
+      "trade": "law",
+      "state": null,
+      "source": "Contract law fundamentals; NASCLA Contractor's Guide topic: contract types",
+      "fact": "A lump-sum (stipulated-sum) contract fixes one total price for the whole scope, so the contractor carries the risk of cost overruns and the owner is best protected from unexpected costs. It should only be used when complete, detailed plans and specifications allow an accurate estimate.",
+      "status": "verified",
+      "note": "",
+      "keywords": [
+        "lump sum",
+        "stipulated sum",
+        "fixed price",
+        "contract type",
+        "cost risk",
+        "complete plans"
+      ]
+    },
+    {
+      "topic": "Contracts & liens",
+      "trade": "law",
+      "state": null,
+      "source": "Contract law fundamentals; NASCLA Contractor's Guide topic: contract types",
+      "fact": "Under a cost-plus contract the owner reimburses the contractor's actual costs of labor, materials and other job costs plus a fee (fixed amount or percentage) for overhead and profit; the owner carries most of the cost risk unless a guaranteed maximum price (GMP) is added.",
+      "status": "verified",
+      "note": "",
+      "keywords": [
+        "cost plus",
+        "cost reimbursable",
+        "fee",
+        "markup",
+        "guaranteed maximum price",
+        "gmp"
+      ]
+    },
+    {
+      "topic": "Contracts & liens",
+      "trade": "law",
+      "state": null,
+      "source": "Contract law fundamentals; NASCLA Contractor's Guide topic: contract types",
+      "fact": "A unit-price contract pays a set price per unit of work (per cubic yard, linear foot, ton, etc.) times the actual measured quantity, and is used when the full quantity of work cannot be determined in advance, such as excavation or paving. Unit-price or cost-plus contracts suit jobs without detailed plans.",
+      "status": "verified",
+      "note": "",
+      "keywords": [
+        "unit price",
+        "per unit",
+        "quantities unknown",
+        "measured quantity",
+        "contract type",
+        "excavation"
+      ]
+    },
+    {
+      "topic": "Contracts & liens",
+      "trade": "law",
+      "state": null,
+      "source": "NASCLA Contractor's Guide topic: project delivery methods",
+      "fact": "In design-build delivery a single entity contracts with the owner to provide both design and construction, giving the owner one point of responsibility. Turnkey delivery is the closest relative: the contractor handles design and construction and may also arrange land or financing, handing over a ready-to-use facility.",
+      "status": "verified",
+      "note": "",
+      "keywords": [
+        "design build",
+        "turnkey",
+        "single source",
+        "project delivery",
+        "one contract",
+        "financing"
+      ]
+    },
+    {
+      "topic": "Contracts & liens",
+      "trade": "law",
+      "state": null,
+      "source": "AIA A201-2017 Article 7; CSI Division 00",
+      "fact": "Addenda are written changes to the bidding documents issued before bids are opened or the contract is signed; changes after award are made by change order. A change order must be in writing and signed by the owner and contractor (and the architect under AIA A201), and it may add, delete or alter work and adjust the contract sum and/or contract time.",
+      "status": "verified",
+      "note": "",
+      "keywords": [
+        "addenda",
+        "addendum",
+        "change order",
+        "in writing",
+        "contract sum",
+        "contract time"
+      ]
+    },
+    {
+      "topic": "Contracts & liens",
+      "trade": "law",
+      "state": null,
+      "source": "AIA A201-2017 Section 3.8 (allowances)",
+      "fact": "An allowance is a placeholder amount in the contract for an item not yet selected. If the owner's selection costs more (or less) than the allowance, the contract sum is adjusted by a written change order.",
+      "status": "verified",
+      "note": "",
+      "keywords": [
+        "allowance",
+        "change order",
+        "over allowance",
+        "selections",
+        "contract sum",
+        "owner upgrade"
+      ]
+    },
+    {
+      "topic": "Contracts & liens",
+      "trade": "law",
+      "state": null,
+      "source": "AIA A201-2017 Article 15",
+      "fact": "Contract claims procedures give owner and contractor a path to resolve disputes over extra money or time arising from changes. Under AIA A201 a claim goes first to the Initial Decision Maker (the architect unless another person is named), then to mediation, then to binding dispute resolution such as arbitration or litigation.",
+      "status": "verified",
+      "note": "",
+      "keywords": [
+        "claims",
+        "initial decision maker",
+        "architect",
+        "dispute resolution",
+        "a201",
+        "contract changes"
+      ]
+    },
+    {
+      "topic": "Contracts & liens",
+      "trade": "law",
+      "state": null,
+      "source": "CSI MasterFormat Section 01 25 00 (substitution procedures)",
+      "fact": "After a bid is accepted, contracts usually allow a product substitution only for limited reasons, such as the specified item being discontinued or unavailable, and only with the architect's or owner's written approval.",
+      "status": "unverified",
+      "note": "Allowed grounds for substitution depend on each project's specifications; 'discontinued product' is a typical but not universal ground.",
+      "keywords": [
+        "substitution",
+        "discontinued",
+        "or equal",
+        "product approval",
+        "specifications",
+        "after bid"
+      ]
+    },
+    {
+      "topic": "Contracts & liens",
+      "trade": "law",
+      "state": null,
+      "source": "Contract law fundamentals (alternative dispute resolution)",
+      "fact": "In mediation a neutral mediator helps the parties negotiate, but the parties decide whether and on what terms to settle; it is non-binding unless they sign an agreement. In arbitration a neutral arbitrator hears the case and issues an award that is legally binding on the parties.",
+      "status": "verified",
+      "note": "",
+      "keywords": [
+        "mediation",
+        "arbitration",
+        "binding",
+        "non-binding",
+        "adr",
+        "dispute"
+      ]
+    },
+    {
+      "topic": "Contracts & liens",
+      "trade": "law",
+      "state": null,
+      "source": "CSI MasterFormat Division 00 (procurement and contracting requirements)",
+      "fact": "In a typical project manual, Division 00 holds the procurement (bidding) requirements, such as the invitation to bid, instructions to bidders, bid forms and addenda, and the contracting requirements, such as the agreement, bonds, general and supplementary conditions and change order forms.",
+      "status": "verified",
+      "note": "",
+      "keywords": [
+        "project manual",
+        "division 00",
+        "bidding requirements",
+        "contract documents",
+        "general conditions",
+        "addenda"
+      ]
+    },
+    {
+      "topic": "Contracts & liens",
+      "trade": "law",
+      "state": null,
+      "source": "Contract law fundamentals (statute of frauds)",
+      "fact": "Oral contracts are generally legally enforceable but unwise, because their terms are hard to prove. The statute of frauds requires certain contracts to be in writing, including those for interests in real estate, those that cannot be performed within one year, and sales of goods of $500 or more under UCC 2-201; many states also require written home-improvement contracts.",
+      "status": "verified",
+      "note": "",
+      "keywords": [
+        "oral contract",
+        "verbal agreement",
+        "statute of frauds",
+        "written contract",
+        "enforceable",
+        "proof"
+      ]
+    },
+    {
+      "topic": "Contracts & liens",
+      "trade": "law",
+      "state": null,
+      "source": "Contract law fundamentals (parol evidence rule)",
+      "fact": "Under the parol evidence rule, a final, fully integrated written contract cannot be contradicted by earlier or simultaneous oral agreements, so the written terms control. Later modifications, including some oral ones, can still change the contract unless the contract or a statute requires changes to be in writing.",
+      "status": "corrected",
+      "note": "Card says written agreements 'always' take precedence over oral agreements. That holds for prior or contemporaneous oral terms under the parol evidence rule, but a later oral modification can be valid in some situations, so 'always' overstates it.",
+      "keywords": [
+        "parol evidence",
+        "written vs oral",
+        "integration clause",
+        "precedence",
+        "discrepancy",
+        "modification"
+      ]
+    },
+    {
+      "topic": "Contracts & liens",
+      "trade": "law",
+      "state": null,
+      "source": "Contract law fundamentals (contra proferentem)",
+      "fact": "When contract language is ambiguous and the ambiguity cannot be resolved, courts interpret it against the party that drafted the contract (the rule of contra proferentem).",
+      "status": "verified",
+      "note": "",
+      "keywords": [
+        "ambiguous",
+        "vague contract",
+        "drafter",
+        "contra proferentem",
+        "interpretation",
+        "court"
+      ]
+    },
+    {
+      "topic": "Contracts & liens",
+      "trade": "law",
+      "state": null,
+      "source": "NASCLA Contractor's Guide topic: subcontracts",
+      "fact": "A subcontract should identify at least the project name and location, the scope of work, the contract price, the payment schedule and retainage, and should also address schedule, insurance, indemnity and change-order procedures.",
+      "status": "verified",
+      "note": "",
+      "keywords": [
+        "subcontract",
+        "subcontractor agreement",
+        "payment schedule",
+        "scope",
+        "contract price",
+        "retainage"
+      ]
+    },
+    {
+      "topic": "Project management",
+      "trade": "law",
+      "state": null,
+      "source": "NASCLA Contractor's Guide topic: scheduling",
+      "fact": "Float (slack) is the amount of time an activity can be delayed in starting or finishing without delaying the project completion date. Activities on the critical path have zero float.",
+      "status": "verified",
+      "note": "",
+      "keywords": [
+        "float",
+        "slack",
+        "critical path",
+        "leeway",
+        "schedule",
+        "delay"
+      ]
+    },
+    {
+      "topic": "Project management",
+      "trade": "law",
+      "state": null,
+      "source": "NASCLA Contractor's Guide topic: scheduling",
+      "fact": "The three common scheduling methods are calendar scheduling, bar charts (Gantt charts) and the critical path method. Calendar scheduling ties tasks to specific dates and can be done on a simple calendar; a bar chart shows each activity's duration and sequence but not how activities depend on each other.",
+      "status": "verified",
+      "note": "",
+      "keywords": [
+        "scheduling methods",
+        "bar chart",
+        "gantt",
+        "calendar schedule",
+        "interdependencies",
+        "sequence"
+      ]
+    },
+    {
+      "topic": "Project management",
+      "trade": "law",
+      "state": null,
+      "source": "NASCLA Contractor's Guide topic: scheduling",
+      "fact": "The critical path method (CPM) shows the logical relationships between activities; the longest chain of dependent activities (the critical path) sets the minimum overall project duration, so any delay to a critical activity delays the whole project. CPM is regarded as the best method for scheduling construction.",
+      "status": "verified",
+      "note": "",
+      "keywords": [
+        "critical path method",
+        "cpm",
+        "project duration",
+        "dependencies",
+        "delay",
+        "schedule logic"
+      ]
+    },
+    {
+      "topic": "Project management",
+      "trade": "law",
+      "state": null,
+      "source": "NASCLA Contractor's Guide topic: project management roles",
+      "fact": "The project manager is responsible for the job budget, schedule, cost control and overall management of the project, while bidding is normally handled by the estimator. The superintendent oversees daily on-site operations and typically drives completion of the punch list.",
+      "status": "verified",
+      "note": "",
+      "keywords": [
+        "project manager",
+        "superintendent",
+        "budget",
+        "punch list",
+        "roles",
+        "daily operations"
+      ]
+    },
+    {
+      "topic": "Project management",
+      "trade": "law",
+      "state": null,
+      "source": "NASCLA Contractor's Guide topic: project management roles",
+      "fact": "The foreman assists the superintendent with daily operations, directs the crew and is often responsible for training employees in the field.",
+      "status": "unverified",
+      "note": "Division of duties among superintendent and foreman varies by company; training assignment to the foreman matches the card and NASCLA convention but is not a universal rule.",
+      "keywords": [
+        "foreman",
+        "crew leader",
+        "training",
+        "superintendent",
+        "field supervision",
+        "roles"
+      ]
+    },
+    {
+      "topic": "Financial management",
+      "trade": "law",
+      "state": null,
+      "source": "Accounting fundamentals",
+      "fact": "Working capital equals current assets minus current liabilities. Tracking cash coming in and going out during a project helps ensure the contractor has enough working capital to finish the job.",
+      "status": "corrected",
+      "note": "Card defines working capital as 'cash available after liabilities or debts are paid'. The accounting definition is current assets minus current liabilities, which includes receivables and inventory, not just cash.",
+      "keywords": [
+        "working capital",
+        "current assets",
+        "current liabilities",
+        "cash flow",
+        "liquidity",
+        "formula"
+      ]
+    },
+    {
+      "topic": "Project management",
+      "trade": "law",
+      "state": null,
+      "source": "AIA A201-2017 Section 9.4; AIA G702",
+      "fact": "On projects using AIA documents, the architect (sometimes an engineer) reviews the contractor's application for payment and certifies the amount due before the owner makes a progress payment.",
+      "status": "verified",
+      "note": "",
+      "keywords": [
+        "progress payment",
+        "certify payment",
+        "architect",
+        "application for payment",
+        "g702",
+        "pay request"
+      ]
+    },
+    {
+      "topic": "Project management",
+      "trade": "law",
+      "state": null,
+      "source": "NASCLA Contractor's Guide topic: job documentation",
+      "fact": "A daily log (job diary) records facts that affect progress, such as weather, workers and hours on site, equipment, deliveries, visitors, work completed and delays. It is key evidence for time-extension claims such as rain delays and should stay factual, without personal comments or opinions.",
+      "status": "verified",
+      "note": "",
+      "keywords": [
+        "daily log",
+        "job diary",
+        "daily report",
+        "weather",
+        "rain delay",
+        "time extension"
+      ]
+    },
+    {
+      "topic": "Project management",
+      "trade": "law",
+      "state": null,
+      "source": "NASCLA Contractor's Guide topic: materials management",
+      "fact": "Just-in-time delivery, ordering materials by construction phase so they arrive close to when they will be installed, keeps job-site inventory low, which reduces storage space needed and losses from theft and damage.",
+      "status": "verified",
+      "note": "",
+      "keywords": [
+        "just in time",
+        "inventory",
+        "material delivery",
+        "theft",
+        "storage",
+        "procurement"
+      ]
+    },
+    {
+      "topic": "Financial management",
+      "trade": "law",
+      "state": null,
+      "source": "NASCLA Contractor's Guide topic: job cost accounting",
+      "fact": "The simplest way to track a project budget is a job cost system that compares actual costs, by cost code, against the original cost estimate.",
+      "status": "verified",
+      "note": "",
+      "keywords": [
+        "job cost",
+        "budget tracking",
+        "cost estimate",
+        "cost codes",
+        "variance",
+        "cost control"
+      ]
+    },
+    {
+      "topic": "Project management",
+      "trade": "law",
+      "state": null,
+      "source": "NASCLA Contractor's Guide topic: value engineering",
+      "fact": "Value engineering is a systematic review of a project's design, materials and methods to deliver the required function and the owner's cost, quality and time priorities at the lowest life-cycle cost without reducing performance.",
+      "status": "verified",
+      "note": "",
+      "keywords": [
+        "value engineering",
+        "ve",
+        "life cycle cost",
+        "owner priorities",
+        "cost savings",
+        "alternatives"
+      ]
+    },
+    {
+      "topic": "Project management",
+      "trade": "law",
+      "state": null,
+      "source": "AIA A201-2017 Section 3.12",
+      "fact": "Shop drawings are prepared by subcontractors or suppliers; the contractor must review and approve them first, then submit them to the architect for review against the design intent.",
+      "status": "verified",
+      "note": "",
+      "keywords": [
+        "shop drawings",
+        "submittals",
+        "architect review",
+        "contractor approval",
+        "a201",
+        "fabrication drawings"
+      ]
+    },
+    {
+      "topic": "Labor law",
+      "trade": "law",
+      "state": null,
+      "source": "29 CFR 570.35 (FLSA child labor, hours for 14 and 15 year olds)",
+      "fact": "Under the FLSA, 14- and 15-year-olds may work only between 7 a.m. and 7 p.m. (until 9 p.m. from June 1 through Labor Day), with daily and weekly hour limits during school periods.",
+      "status": "corrected",
+      "note": "Card says a 15-year-old may not begin work before 6 a.m.; 29 CFR 570.35 sets the earliest start at 7 a.m.",
+      "keywords": [
+        "child labor",
+        "minor",
+        "15 year old",
+        "work hours",
+        "7 am",
+        "flsa"
+      ]
+    },
+    {
+      "topic": "Labor law",
+      "trade": "law",
+      "state": null,
+      "source": "29 CFR 570.33 and 570.50-570.68 (hazardous occupations orders)",
+      "fact": "Minors can work for a construction company, but 14- and 15-year-olds are barred from construction work except office or sales jobs away from the site, and 16- and 17-year-olds may not do jobs covered by the hazardous occupations orders, including roofing, wrecking and demolition, trenching and excavation, and running most power-driven woodworking machines.",
+      "status": "verified",
+      "note": "",
+      "keywords": [
+        "minors",
+        "child labor",
+        "hazardous occupations",
+        "roofing",
+        "demolition",
+        "construction"
+      ]
+    },
+    {
+      "topic": "Payroll & tax",
+      "trade": "law",
+      "state": null,
+      "source": "42 U.S.C. 653a (PRWORA new hire reporting)",
+      "fact": "Federal law requires employers to report each new hire or rehire to their state's new hire directory within 20 days of hire, or sooner if the state sets a shorter deadline. States forward the data to the National Directory of New Hires, which is used mainly to enforce child support orders.",
+      "status": "verified",
+      "note": "",
+      "keywords": [
+        "new hire reporting",
+        "state directory",
+        "national directory of new hires",
+        "child support",
+        "20 days",
+        "rehire"
+      ]
+    },
+    {
+      "topic": "Payroll & tax",
+      "trade": "law",
+      "state": null,
+      "source": "42 U.S.C. 653a(d)",
+      "fact": "A state may fine an employer for failing to report a new hire, capped by federal law at $25 per unreported employee, or $500 if the failure results from a conspiracy between employer and employee.",
+      "status": "verified",
+      "note": "",
+      "keywords": [
+        "new hire penalty",
+        "fine",
+        "$25",
+        "failure to report",
+        "conspiracy",
+        "new hire law"
+      ]
+    },
+    {
+      "topic": "Payroll & tax",
+      "trade": "law",
+      "state": "Georgia",
+      "source": "O.C.G.A. 19-11-9.2 (Georgia new hire reporting)",
+      "fact": "Georgia requires employers to report new hires and rehires to the Georgia New Hire Reporting Program within 10 days of the hire date.",
+      "status": "unverified",
+      "note": "State-specific deadline; believed to be 10 days but should be confirmed against the current Georgia statute.",
+      "keywords": [
+        "georgia",
+        "new hire reporting",
+        "10 days",
+        "state directory",
+        "rehire",
+        "deadline"
+      ]
+    },
+    {
+      "topic": "Labor law",
+      "trade": "law",
+      "state": "Georgia",
+      "source": "O.C.G.A. 39-2-11 (Georgia employment certificates for minors)",
+      "fact": "Georgia requires an employment certificate (work permit) for minors under 18 who have not graduated from high school or earned a GED.",
+      "status": "unverified",
+      "note": "State-specific rule from the card; not confirmed against the current Georgia statute.",
+      "keywords": [
+        "georgia",
+        "work permit",
+        "employment certificate",
+        "minor",
+        "ged",
+        "child labor"
+      ]
+    },
+    {
+      "topic": "Labor law",
+      "trade": "law",
+      "state": null,
+      "source": "8 CFR 274a.2; USCIS Form I-9 instructions",
+      "fact": "Form I-9 verifies the identity and employment authorization of every person hired in the U.S., citizens and noncitizens alike. It is required by the Immigration and Nationality Act as amended by IRCA and applies to all employers regardless of size.",
+      "status": "corrected",
+      "note": "Card says the I-9 shows legal immigration status. It verifies identity and authorization to work, and U.S. citizens complete it too. Card also says the INA applies to employers of '1 or more'; the I-9 requirement applies to every employer regardless of size.",
+      "keywords": [
+        "i-9",
+        "employment eligibility",
+        "identity",
+        "immigration",
+        "irca",
+        "work authorization"
+      ]
+    },
+    {
+      "topic": "Labor law",
+      "trade": "law",
+      "state": null,
+      "source": "8 CFR 274a.2(b)",
+      "fact": "A new employee must complete Section 1 of Form I-9 no later than the first day of work, and the employer must examine documents and complete Section 2 within 3 business days after the employee's first day.",
+      "status": "verified",
+      "note": "",
+      "keywords": [
+        "i-9 deadline",
+        "3 business days",
+        "section 2",
+        "new hire",
+        "documents",
+        "first day"
+      ]
+    },
+    {
+      "topic": "Labor law",
+      "trade": "law",
+      "state": null,
+      "source": "8 CFR 274a.2(b)(2)",
+      "fact": "Employers must keep each Form I-9 for 3 years after the date of hire or 1 year after employment ends, whichever is later.",
+      "status": "corrected",
+      "note": "Card says '3 years and for 1 year after employee is terminated', which implies both periods. The rule is whichever of the two dates is later.",
+      "keywords": [
+        "i-9 retention",
+        "3 years",
+        "1 year after termination",
+        "whichever later",
+        "records",
+        "keep"
+      ]
+    },
+    {
+      "topic": "Labor law",
+      "trade": "law",
+      "state": null,
+      "source": "USCIS Form I-9 Lists of Acceptable Documents",
+      "fact": "An unrestricted Social Security card is a List C document: it proves employment authorization but not identity, so it must be paired with a List B identity document such as a driver's license. A bank statement is not an acceptable I-9 document.",
+      "status": "verified",
+      "note": "",
+      "keywords": [
+        "social security card",
+        "list c",
+        "list b",
+        "i-9 documents",
+        "bank statement",
+        "employment eligibility"
+      ]
+    },
+    {
+      "topic": "Payroll & tax",
+      "trade": "law",
+      "state": null,
+      "source": "IRS Form W-4 instructions",
+      "fact": "Employees complete IRS Form W-4 so the employer can calculate how much federal income tax to withhold from their pay.",
+      "status": "verified",
+      "note": "",
+      "keywords": [
+        "w-4",
+        "withholding",
+        "federal income tax",
+        "new hire forms",
+        "irs",
+        "payroll"
+      ]
+    },
+    {
+      "topic": "Labor law",
+      "trade": "law",
+      "state": null,
+      "source": "29 U.S.C. 206(g) (FLSA youth minimum wage)",
+      "fact": "The federal minimum wage is $7.25 per hour, but employers may pay employees under 20 years old a youth minimum wage of $4.25 per hour during their first 90 consecutive calendar days of employment.",
+      "status": "verified",
+      "note": "",
+      "keywords": [
+        "youth minimum wage",
+        "under 20",
+        "90 days",
+        "$4.25",
+        "minimum wage",
+        "flsa"
+      ]
+    },
+    {
+      "topic": "Labor law",
+      "trade": "law",
+      "state": null,
+      "source": "29 U.S.C. 206, 207 (FLSA)",
+      "fact": "The FLSA's main wage requirements are paying covered non-exempt employees at least the federal minimum wage and paying overtime of at least 1.5 times the regular rate for hours over 40 in a workweek. The FLSA also sets child labor and recordkeeping rules.",
+      "status": "verified",
+      "note": "",
+      "keywords": [
+        "flsa",
+        "minimum wage",
+        "overtime",
+        "time and a half",
+        "40 hours",
+        "non-exempt"
+      ]
+    },
+    {
+      "topic": "Labor law",
+      "trade": "law",
+      "state": null,
+      "source": "29 U.S.C. 203(s); DOL Fact Sheet #14",
+      "fact": "The FLSA has no minimum number of employees. It covers enterprises with at least two employees and at least $500,000 in annual business volume (plus hospitals, schools and government), and it also covers individual employees engaged in interstate commerce, so nearly all contractors are covered.",
+      "status": "corrected",
+      "note": "Card says the FLSA applies to all employers with 1 or more employees. Coverage is based on enterprise dollar volume or individual interstate-commerce activity, not an employee-count threshold.",
+      "keywords": [
+        "flsa coverage",
+        "enterprise coverage",
+        "$500,000",
+        "interstate commerce",
+        "covered employer",
+        "employees"
+      ]
+    },
+    {
+      "topic": "Labor law",
+      "trade": "law",
+      "state": null,
+      "source": "29 CFR 785.19 (meal periods)",
+      "fact": "A meal break is unpaid only if the employee is completely relieved of duty. If a worker must answer phones during lunch, that time counts as hours worked even if he is clocked out, so 8 hours plus a 30-minute working lunch for 5 days is 42.5 hours, with 2.5 hours owed at time and a half.",
+      "status": "verified",
+      "note": "",
+      "keywords": [
+        "meal break",
+        "lunch",
+        "hours worked",
+        "on duty",
+        "overtime",
+        "clocked out"
+      ]
+    },
+    {
+      "topic": "Labor law",
+      "trade": "law",
+      "state": null,
+      "source": "29 CFR 778.104-778.105",
+      "fact": "Under the FLSA, a workweek is a fixed, regularly recurring period of 168 hours (seven consecutive 24-hour periods) that may begin on any day and hour. Each workweek stands alone: hours cannot be averaged across weeks, so a worker who works 37 hours one week and 43 the next is owed 3 overtime hours in the second week.",
+      "status": "verified",
+      "note": "",
+      "keywords": [
+        "workweek",
+        "168 hours",
+        "averaging",
+        "make up time",
+        "overtime",
+        "flsa"
+      ]
+    },
+    {
+      "topic": "Labor law",
+      "trade": "law",
+      "state": null,
+      "source": "29 CFR 785.11-785.13; 29 CFR 541.3",
+      "fact": "Non-exempt employees are those entitled to minimum wage and overtime; laborers, hourly carpenters and other manual or blue-collar workers are non-exempt no matter how much they earn. Overtime that the employer suffers or permits must be paid even if it was not authorized, although the employer may discipline the worker.",
+      "status": "verified",
+      "note": "",
+      "keywords": [
+        "non-exempt",
+        "laborer",
+        "carpenter",
+        "unauthorized overtime",
+        "blue collar",
+        "overtime pay"
+      ]
+    },
+    {
+      "topic": "Labor law",
+      "trade": "law",
+      "state": null,
+      "source": "29 CFR Part 541",
+      "fact": "Exempt employees, such as bona fide executives, administrative and professional staff, are not owed overtime, but they must be paid on a salary basis above the DOL salary threshold and their actual duties must meet the exemption tests; job title alone does not make someone exempt.",
+      "status": "verified",
+      "note": "",
+      "keywords": [
+        "exempt",
+        "executive",
+        "salary basis",
+        "duties test",
+        "white collar",
+        "overtime exemption"
+      ]
+    },
+    {
+      "topic": "Labor law",
+      "trade": "law",
+      "state": null,
+      "source": "DOL Fact Sheet #22 (hours worked); FLSA",
+      "fact": "The FLSA does not require employers to provide paid vacation, holidays, sick leave, severance or (for adults) rest or meal breaks; these are matters of company policy, contract or state law.",
+      "status": "verified",
+      "note": "",
+      "keywords": [
+        "paid vacation",
+        "holidays",
+        "sick leave",
+        "not required",
+        "benefits",
+        "flsa"
+      ]
+    },
+    {
+      "topic": "Labor law",
+      "trade": "law",
+      "state": null,
+      "source": "29 CFR 516.2; DOL Fact Sheet #21",
+      "fact": "For each non-exempt worker, FLSA records must include identifying information, the day and hour the workweek begins, hours worked each workday and each workweek, pay rate, straight-time and overtime earnings, deductions and pay dates. No particular form or time clock is required.",
+      "status": "verified",
+      "note": "",
+      "keywords": [
+        "flsa records",
+        "recordkeeping",
+        "workweek begins",
+        "hours worked",
+        "payroll records",
+        "time clock"
+      ]
+    },
+    {
+      "topic": "Labor law",
+      "trade": "law",
+      "state": null,
+      "source": "29 U.S.C. 216(a)",
+      "fact": "Willful violations of the FLSA can be prosecuted criminally, with fines up to $10,000; a second conviction can also bring imprisonment of up to 6 months. Employers also face back wages, liquidated damages and civil money penalties.",
+      "status": "verified",
+      "note": "",
+      "keywords": [
+        "flsa penalty",
+        "willful violation",
+        "$10,000",
+        "criminal",
+        "back wages",
+        "fine"
+      ]
+    },
+    {
+      "topic": "Labor law",
+      "trade": "law",
+      "state": null,
+      "source": "42 U.S.C. 12111(5) (ADA Title I)",
+      "fact": "The ADA's employment provisions (Title I) apply to employers with 15 or more employees. They prohibit discrimination against qualified individuals with disabilities and require reasonable accommodation.",
+      "status": "verified",
+      "note": "",
+      "keywords": [
+        "ada",
+        "15 employees",
+        "disability discrimination",
+        "title i",
+        "reasonable accommodation",
+        "employer coverage"
+      ]
+    },
+    {
+      "topic": "Labor law",
+      "trade": "law",
+      "state": null,
+      "source": "29 CFR 1630.2 (ADA definitions, as amended by ADAAA)",
+      "fact": "People with HIV/AIDS are protected under the ADA. Temporary, short-term conditions such as a broken arm or the flu generally are not disabilities, although a temporary impairment that is severe enough can qualify under the ADA Amendments Act.",
+      "status": "verified",
+      "note": "",
+      "keywords": [
+        "ada disability",
+        "hiv",
+        "aids",
+        "broken arm",
+        "influenza",
+        "temporary condition"
+      ]
+    },
+    {
+      "topic": "Labor law",
+      "trade": "law",
+      "state": null,
+      "source": "29 U.S.C. 2611-2612; 29 CFR Part 825 (FMLA)",
+      "fact": "The FMLA gives eligible employees up to 12 workweeks of unpaid, job-protected leave in a 12-month period, with group health coverage kept in place, for the birth of a child, adoption or foster placement, caring for a spouse, child or parent with a serious health condition, or the employee's own serious health condition. It applies to private employers with 50 or more employees.",
+      "status": "verified",
+      "note": "",
+      "keywords": [
+        "fmla",
+        "12 weeks",
+        "unpaid leave",
+        "adoption",
+        "serious health condition",
+        "50 employees"
+      ]
+    },
+    {
+      "topic": "Bonds & insurance",
+      "trade": "law",
+      "state": null,
+      "source": "State workers' compensation law (general principles)",
+      "fact": "Workers' compensation covers employees who are injured or become ill from their work, regardless of fault, and generally does not cover independent contractors. In nearly all states the employer pays the entire premium and may not deduct any of it from employee wages (Washington is a notable exception with an employee share).",
+      "status": "verified",
+      "note": "",
+      "keywords": [
+        "workers comp",
+        "workers compensation",
+        "premium",
+        "employer pays",
+        "0 percent",
+        "injured employee"
+      ]
+    },
+    {
+      "topic": "Estimating & bidding",
+      "trade": "law",
+      "state": null,
+      "source": "NASCLA Contractor's Guide topic: labor burden",
+      "fact": "A contractor's true labor cost includes the labor burden on top of wages: workers' compensation insurance, the employer's share of Social Security and Medicare, federal and state unemployment taxes, and any benefits.",
+      "status": "verified",
+      "note": "",
+      "keywords": [
+        "labor burden",
+        "labor cost",
+        "workers comp",
+        "payroll taxes",
+        "fica",
+        "estimating"
+      ]
+    },
+    {
+      "topic": "Bonds & insurance",
+      "trade": "law",
+      "state": "Georgia",
+      "source": "O.C.G.A. 34-9-2",
+      "fact": "Georgia requires workers' compensation coverage for any employer that regularly employs 3 or more employees, counting part-time workers.",
+      "status": "verified",
+      "note": "",
+      "keywords": [
+        "georgia",
+        "workers comp",
+        "3 employees",
+        "required coverage",
+        "threshold",
+        "employer"
+      ]
+    },
+    {
+      "topic": "Bonds & insurance",
+      "trade": "law",
+      "state": "Georgia",
+      "source": "Georgia State Board of Workers' Compensation rules",
+      "fact": "To self-insure workers' compensation in Georgia, an employer applies to the State Board of Workers' Compensation with three years of audited financial statements and an application fee (reported as $500).",
+      "status": "unverified",
+      "note": "Fee amount and filing requirements are state rules taken from the card and not confirmed against current Board rules.",
+      "keywords": [
+        "georgia",
+        "self insurer",
+        "workers comp",
+        "application fee",
+        "audited financials",
+        "state board"
+      ]
+    },
+    {
+      "topic": "Bonds & insurance",
+      "trade": "law",
+      "state": "Georgia",
+      "source": "O.C.G.A. 34-9-126",
+      "fact": "A Georgia employer that fails to carry required workers' compensation coverage can face civil penalties (reported as up to $5,000) and may be charged with a misdemeanor.",
+      "status": "unverified",
+      "note": "Penalty amount from the card; not confirmed against the current Georgia statute.",
+      "keywords": [
+        "georgia",
+        "workers comp penalty",
+        "$5,000",
+        "failure to insure",
+        "fine",
+        "misdemeanor"
+      ]
+    },
+    {
+      "topic": "Bonds & insurance",
+      "trade": "law",
+      "state": "Georgia",
+      "source": "O.C.G.A. 34-9-201 (panel of physicians)",
+      "fact": "Georgia employers must post a panel of physicians from which injured workers choose a treating doctor; the standard panel lists at least six providers, including an orthopedic surgeon, and a conformed panel has its own composition rules.",
+      "status": "unverified",
+      "note": "Card asks which specialty a conformed panel need not include (answer ENT). Panel composition rules were not confirmed against the current statute and Board rules.",
+      "keywords": [
+        "georgia",
+        "panel of physicians",
+        "workers comp",
+        "orthopedic",
+        "treating doctor",
+        "posted panel"
+      ]
+    },
+    {
+      "topic": "Payroll & tax",
+      "trade": "law",
+      "state": null,
+      "source": "IRS Pub 15 (FUTA); 26 U.S.C. 3306",
+      "fact": "An employer owes federal unemployment (FUTA) tax if it paid wages of $1,500 or more in any calendar quarter, or had at least one employee for some part of a day in 20 or more different weeks, in the current or prior year. FUTA is 6.0% on the first $7,000 of each employee's wages, usually reduced to 0.6% by the state credit.",
+      "status": "verified",
+      "note": "",
+      "keywords": [
+        "futa",
+        "unemployment tax",
+        "20 weeks",
+        "$1,500",
+        "$7,000",
+        "wage base"
+      ]
+    },
+    {
+      "topic": "Payroll & tax",
+      "trade": "law",
+      "state": "Georgia",
+      "source": "Georgia Department of Labor (state unemployment tax)",
+      "fact": "Georgia state unemployment tax is paid on the first $9,500 of each employee's wages per calendar year; the federal FUTA wage base is separately $7,000.",
+      "status": "corrected",
+      "note": "Cards say unemployment contributions are paid on the first $8,500. Georgia's taxable wage base has been $9,500 since 2013, and the federal FUTA base is $7,000. Re-check the Georgia figure each year.",
+      "keywords": [
+        "georgia",
+        "suta",
+        "unemployment tax",
+        "wage base",
+        "$9,500",
+        "state unemployment"
+      ]
+    },
+    {
+      "topic": "Payroll & tax",
+      "trade": "law",
+      "state": "Georgia",
+      "source": "Georgia Department of Labor (new employer rate)",
+      "fact": "New employers in Georgia are assigned a standard beginning unemployment tax rate (the card gives 2.7%) until they have enough experience to receive an experience-based rate.",
+      "status": "unverified",
+      "note": "Georgia's new-employer rate and add-on assessments change; 2.7% from the card was not confirmed for the current year.",
+      "keywords": [
+        "georgia",
+        "new employer rate",
+        "unemployment tax",
+        "2.7%",
+        "suta",
+        "experience rating"
+      ]
+    },
+    {
+      "topic": "Risk management",
+      "trade": "law",
+      "state": null,
+      "source": "NASCLA Contractor's Guide topic: safety programs",
+      "fact": "Accidents caused by unsafe conditions cost a contractor productivity and profit. A safety and health program reduces injuries and workers' compensation premiums and improves productivity, morale and profitability.",
+      "status": "verified",
+      "note": "",
+      "keywords": [
+        "safety program",
+        "workers comp premiums",
+        "productivity",
+        "profits",
+        "injury reduction",
+        "morale"
+      ]
+    },
+    {
+      "topic": "Safety (OSHA)",
+      "trade": "gc",
+      "state": null,
+      "source": "OSH Act Section 5(a)",
+      "fact": "Under the OSH Act the employer is responsible for providing a workplace free from recognized hazards (the General Duty Clause) and for complying with OSHA standards.",
+      "status": "verified",
+      "note": "",
+      "keywords": [
+        "employer responsibility",
+        "general duty clause",
+        "safe workplace",
+        "osh act",
+        "hazards",
+        "osha"
+      ]
+    },
+    {
+      "topic": "Safety (OSHA)",
+      "trade": "gc",
+      "state": null,
+      "source": "OSHA 29 CFR 1926.35",
+      "fact": "When an OSHA standard requires an emergency action plan, it must be written if the employer has more than 10 employees (11 or more); employers with 10 or fewer may communicate the plan orally.",
+      "status": "verified",
+      "note": "",
+      "keywords": [
+        "emergency action plan",
+        "eap",
+        "written plan",
+        "11 employees",
+        "10 or fewer",
+        "oral"
+      ]
+    },
+    {
+      "topic": "Safety recordkeeping",
+      "trade": "law",
+      "state": null,
+      "source": "OSHA 29 CFR 1904.1, 1904.30",
+      "fact": "Employers with more than 10 employees at any time in the previous calendar year must keep OSHA injury and illness records (construction is not a partially exempt industry). A construction operation expected to last one year or more is a separate establishment needing its own OSHA 300 log; shorter projects may be recorded on one log.",
+      "status": "verified",
+      "note": "",
+      "keywords": [
+        "osha 300",
+        "recordkeeping",
+        "10 employees",
+        "establishment",
+        "one year",
+        "separate log"
+      ]
+    },
+    {
+      "topic": "Safety recordkeeping",
+      "trade": "law",
+      "state": null,
+      "source": "OSHA 29 CFR 1904.29, 1904.32",
+      "fact": "OSHA Form 300 is the Log of Work-Related Injuries and Illnesses, listing each recordable case; Form 300A is the annual summary, posted from February 1 to April 30; Form 301 is the Injury and Illness Incident Report, completed within 7 calendar days of learning of the case.",
+      "status": "verified",
+      "note": "",
+      "keywords": [
+        "form 300",
+        "form 300a",
+        "form 301",
+        "injury log",
+        "incident report",
+        "annual summary"
+      ]
+    },
+    {
+      "topic": "Safety recordkeeping",
+      "trade": "law",
+      "state": null,
+      "source": "OSHA 29 CFR 1904.33",
+      "fact": "Employers must keep OSHA Forms 300, 300A and 301 for 5 years following the end of the calendar year the records cover.",
+      "status": "verified",
+      "note": "",
+      "keywords": [
+        "record retention",
+        "5 years",
+        "osha 300",
+        "form 301",
+        "keep records",
+        "recordkeeping"
+      ]
+    },
+    {
+      "topic": "Safety recordkeeping",
+      "trade": "law",
+      "state": null,
+      "source": "OSHA 29 CFR 1910.1020(d) (applied by 1926.33)",
+      "fact": "Employee exposure records must be kept for at least 30 years, and employee medical records for the duration of employment plus 30 years.",
+      "status": "verified",
+      "note": "",
+      "keywords": [
+        "exposure records",
+        "medical records",
+        "30 years",
+        "retention",
+        "1910.1020",
+        "toxic exposure"
+      ]
+    },
+    {
+      "topic": "Safety recordkeeping",
+      "trade": "law",
+      "state": null,
+      "source": "OSHA 29 CFR 1904.39",
+      "fact": "An employer must report a work-related fatality to OSHA within 8 hours, and any in-patient hospitalization of one or more employees, an amputation or loss of an eye within 24 hours.",
+      "status": "corrected",
+      "note": "Card says the fatality or hospitalization of 3 or more employees must be reported within 8 hours. That was the pre-2015 rule; since January 1, 2015, a single hospitalization, amputation or eye loss must be reported within 24 hours and any fatality within 8 hours.",
+      "keywords": [
+        "report to osha",
+        "fatality",
+        "8 hours",
+        "hospitalization",
+        "24 hours",
+        "amputation"
+      ]
+    },
+    {
+      "topic": "Safety (OSHA)",
+      "trade": "gc",
+      "state": null,
+      "source": "OSHA 29 CFR 1910.1200(g) (applied by 1926.59)",
+      "fact": "Under the Hazard Communication Standard, a Safety Data Sheet (SDS, formerly MSDS) for each hazardous chemical must be kept and be readily accessible to employees during every work shift; SDSs follow a standardized 16-section format.",
+      "status": "verified",
+      "note": "",
+      "keywords": [
+        "sds",
+        "msds",
+        "safety data sheet",
+        "hazard communication",
+        "hazcom",
+        "chemicals"
+      ]
+    },
+    {
+      "topic": "Safety recordkeeping",
+      "trade": "law",
+      "state": null,
+      "source": "OSH Act Section 17; 29 CFR 1903.15(d)",
+      "fact": "OSHA civil penalties are maximums adjusted for inflation each January, not fixed or mandatory amounts. After the January 2025 adjustment, the maximum was $16,550 per serious or other-than-serious violation, including posting violations, and $165,514 per willful or repeated violation, with a willful minimum of $11,823.",
+      "status": "corrected",
+      "note": "Cards give $7,000 as a 'mandatory' serious and posting penalty and $70,000 as the willful maximum. Those were the pre-2016 statutory caps; penalties have been inflation-adjusted every year since 2016 and are maximums the agency may reduce.",
+      "keywords": [
+        "osha penalty",
+        "serious violation",
+        "willful violation",
+        "fine",
+        "posting violation",
+        "inflation adjustment"
+      ]
+    },
+    {
+      "topic": "Safety recordkeeping",
+      "trade": "law",
+      "state": null,
+      "source": "OSH Act Section 17(g)",
+      "fact": "Knowingly making a false statement or falsifying records required under the OSH Act is a criminal offense punishable by a fine of up to $10,000, imprisonment of up to 6 months, or both.",
+      "status": "verified",
+      "note": "",
+      "keywords": [
+        "falsifying records",
+        "false statement",
+        "$10,000",
+        "criminal penalty",
+        "osha",
+        "6 months"
+      ]
+    },
+    {
+      "topic": "Safety recordkeeping",
+      "trade": "law",
+      "state": null,
+      "source": "OSHA Field Operations Manual, Chapter 2",
+      "fact": "OSHA inspections are either programmed (planned, such as targeting high-hazard industries or establishments with high injury rates) or unprogrammed (triggered by imminent danger, fatalities or catastrophes, complaints, referrals or follow-ups).",
+      "status": "verified",
+      "note": "",
+      "keywords": [
+        "osha inspection",
+        "programmed",
+        "unprogrammed",
+        "fatality",
+        "complaint",
+        "high injury rate"
+      ]
+    },
+    {
+      "topic": "Environmental",
+      "trade": "law",
+      "state": null,
+      "source": "42 U.S.C. 4321 et seq. (NEPA)",
+      "fact": "NEPA applies to major federal actions, meaning projects that are federally funded, federally permitted or on federal land. These require an environmental review (categorical exclusion, environmental assessment or environmental impact statement) before proceeding. The EPA is the federal agency charged with protecting human health and air, water and land quality.",
+      "status": "verified",
+      "note": "",
+      "keywords": [
+        "nepa",
+        "federal action",
+        "environmental impact statement",
+        "environmental assessment",
+        "epa",
+        "federal project"
+      ]
+    },
+    {
+      "topic": "Environmental",
+      "trade": "law",
+      "state": null,
+      "source": "Clean Air Act; 40 CFR Part 82 Subpart F",
+      "fact": "The main air-quality issues on construction sites are open burning, dust and engine emissions, and ozone-depleting refrigerants such as CFCs, which may not be vented and must be handled by certified technicians. Watering exposed soil and haul roads is the basic way to control dust and avoid violations.",
+      "status": "verified",
+      "note": "",
+      "keywords": [
+        "air quality",
+        "open burning",
+        "dust control",
+        "cfc",
+        "refrigerant",
+        "emissions"
+      ]
+    },
+    {
+      "topic": "Environmental",
+      "trade": "law",
+      "state": null,
+      "source": "40 CFR 61.145 (asbestos NESHAP)",
+      "fact": "Before any demolition or renovation, the owner or operator must have the building thoroughly inspected for asbestos. Written notice must be sent to EPA or the delegated state agency at least 10 working days before any demolition, and before renovations disturbing regulated asbestos above the threshold amounts (260 linear ft, 160 sq ft or 35 cu ft).",
+      "status": "verified",
+      "note": "",
+      "keywords": [
+        "asbestos",
+        "neshap",
+        "10 working days",
+        "notification",
+        "demolition",
+        "inspection"
+      ]
+    },
+    {
+      "topic": "Environmental",
+      "trade": "law",
+      "state": null,
+      "source": "33 U.S.C. 1311 (Clean Water Act)",
+      "fact": "The Clean Water Act prohibits discharging any pollutant into waters of the United States without a permit, such as an NPDES permit. Sediment from eroding construction sites is a major source of water pollution, and a site can send more sediment into streams in a short time than natural processes deposit over decades.",
+      "status": "verified",
+      "note": "",
+      "keywords": [
+        "clean water act",
+        "sediment",
+        "water pollution",
+        "erosion",
+        "discharge",
+        "navigable waters"
+      ]
+    },
+    {
+      "topic": "Environmental",
+      "trade": "law",
+      "state": null,
+      "source": "40 CFR 122.26(b)(15); EPA Construction General Permit",
+      "fact": "NPDES stormwater permit coverage is required for construction that disturbs 1 acre or more of land, or less than 1 acre if it is part of a larger common plan of development disturbing 1 acre or more. Coverage requires a stormwater pollution prevention plan (SWPPP).",
+      "status": "verified",
+      "note": "",
+      "keywords": [
+        "npdes",
+        "stormwater",
+        "1 acre",
+        "swppp",
+        "construction general permit",
+        "runoff"
+      ]
+    },
+    {
+      "topic": "Environmental",
+      "trade": "law",
+      "state": null,
+      "source": "RCRA; 40 CFR Parts 261, 273, 279",
+      "fact": "Ordinary construction and demolition debris such as scrap wood, drywall, brick and concrete is generally non-hazardous solid waste. Lead-based paint waste, used oil and batteries must be kept out of regular debris and managed under hazardous or special waste rules (used oil under 40 CFR 279, batteries as universal waste).",
+      "status": "verified",
+      "note": "",
+      "keywords": [
+        "construction waste",
+        "non-hazardous",
+        "hazardous waste",
+        "used oil",
+        "batteries",
+        "lead paint debris"
+      ]
+    },
+    {
+      "topic": "Environmental",
+      "trade": "law",
+      "state": null,
+      "source": "40 CFR 745.82, 745.83 (Lead RRP and pre-renovation education)",
+      "fact": "EPA's lead pre-renovation education and RRP rules apply in pre-1978 housing and child-occupied facilities when renovation disturbs more than 6 sq ft of painted surface per room inside or more than 20 sq ft outside, or involves window replacement or demolition of painted surfaces.",
+      "status": "corrected",
+      "note": "Card says compliance is required when 2 sq ft or more is disturbed. The 2 sq ft minor-repair threshold came from the original 1998 rule; the 2008 RRP rule raised it to 6 sq ft interior per room and 20 sq ft exterior.",
+      "keywords": [
+        "lead rrp",
+        "pre-renovation education",
+        "6 square feet",
+        "20 square feet",
+        "lead paint",
+        "pre-1978"
+      ]
+    },
+    {
+      "topic": "Environmental",
+      "trade": "law",
+      "state": null,
+      "source": "40 CFR 745.84, 745.86",
+      "fact": "Before renovating pre-1978 housing, the renovator must give the owner and occupants EPA's Renovate Right lead pamphlet and get written acknowledgment. RRP records, including proof of pamphlet delivery, must be kept for 3 years after the renovation is completed.",
+      "status": "verified",
+      "note": "",
+      "keywords": [
+        "renovate right",
+        "lead pamphlet",
+        "3 years",
+        "record retention",
+        "proof of delivery",
+        "rrp records"
+      ]
+    }
+  ],
+  "questions": [
+    {
+      "t": "law",
+      "topic": "Contracts & liens",
+      "q": "A contract requires the contractor to pay the owner $750 for each calendar day the project finishes late. This provision is an example of:",
+      "c": [
+        "Consequential damages",
+        "Punitive damages",
+        "Liquidated damages",
+        "Nominal damages"
+      ],
+      "a": 2,
+      "ref": "Contract law fundamentals",
+      "why": "Liquidated damages are a delay amount agreed in advance; they must be a reasonable estimate of actual loss, not a penalty."
+    },
+    {
+      "t": "law",
+      "topic": "Contracts & liens",
+      "q": "An owner with only preliminary drawings wants to start work on a site where the amount of rock excavation is unknown. Which contract type best fits the excavation work?",
+      "c": [
+        "Unit price",
+        "Lump sum",
+        "Stipulated sum with no allowances",
+        "Fixed-price design-bid-build"
+      ],
+      "a": 0,
+      "ref": "Contract types",
+      "why": "Unit-price contracts pay a set rate times the actual measured quantity, so they suit work whose quantity cannot be determined in advance."
+    },
+    {
+      "t": "law",
+      "topic": "Contracts & liens",
+      "q": "A client upgrades flooring and the cost exceeds the flooring allowance in the contract. How should the contractor handle the difference?",
+      "c": [
+        "Absorb the overage as part of the original price",
+        "Bill the overage on the final invoice without documentation",
+        "Reduce another allowance to compensate",
+        "Issue a written change order adjusting the contract sum"
+      ],
+      "a": 3,
+      "ref": "AIA A201 3.8",
+      "why": "When an allowance is exceeded, the contract sum is adjusted by a written, signed change order."
+    },
+    {
+      "t": "law",
+      "topic": "Contracts & liens",
+      "q": "Changes to the bidding documents issued before bids are opened are called:",
+      "c": [
+        "Change orders",
+        "Addenda",
+        "Construction change directives",
+        "Supplementary conditions"
+      ],
+      "a": 1,
+      "ref": "CSI Division 00",
+      "why": "Addenda modify the bid documents before bid opening or contract execution; change orders modify the contract after award."
+    },
+    {
+      "t": "law",
+      "topic": "Contracts & liens",
+      "q": "Which dispute resolution method produces a decision that legally binds the parties?",
+      "c": [
+        "Mediation",
+        "Partnering",
+        "Arbitration",
+        "Negotiation"
+      ],
+      "a": 2,
+      "ref": "ADR fundamentals",
+      "why": "An arbitrator issues a binding award; a mediator only helps the parties reach their own agreement."
+    },
+    {
+      "t": "law",
+      "topic": "Contracts & liens",
+      "q": "A contract clause is ambiguous and neither party can show what was intended. A court will usually interpret it:",
+      "c": [
+        "Against the party that drafted the contract",
+        "In favor of the party that drafted the contract",
+        "In favor of the owner in all cases",
+        "By voiding the entire contract"
+      ],
+      "a": 0,
+      "ref": "Contra proferentem",
+      "why": "Ambiguities are construed against the drafter, who had the chance to write the language clearly."
+    },
+    {
+      "t": "law",
+      "topic": "Project management",
+      "q": "The amount of time an activity can slip without delaying the project completion date is called:",
+      "c": [
+        "Lag",
+        "Lead time",
+        "Duration",
+        "Float"
+      ],
+      "a": 3,
+      "ref": "NASCLA scheduling",
+      "why": "Float (slack) is scheduling leeway; activities on the critical path have zero float."
+    },
+    {
+      "t": "law",
+      "topic": "Project management",
+      "q": "What is the main limitation of a bar chart (Gantt) schedule compared with a CPM schedule?",
+      "c": [
+        "It cannot show activity durations",
+        "It does not show dependencies between activities",
+        "It cannot be tied to calendar dates",
+        "It cannot show start dates"
+      ],
+      "a": 1,
+      "ref": "NASCLA scheduling",
+      "why": "Bar charts show durations and timing, but only CPM shows the logical links that reveal how one delay affects the finish date."
+    },
+    {
+      "t": "law",
+      "topic": "Project management",
+      "q": "On a project using AIA contract documents, who certifies the contractor's application for payment?",
+      "c": [
+        "The owner's lender",
+        "The superintendent",
+        "The architect",
+        "The building official"
+      ],
+      "a": 2,
+      "ref": "AIA A201 9.4",
+      "why": "The architect reviews each pay application and certifies the amount due before the owner pays."
+    },
+    {
+      "t": "law",
+      "topic": "Project management",
+      "q": "Which record best supports a contractor's request for a time extension due to rain delays?",
+      "c": [
+        "The daily job log",
+        "The schedule of values",
+        "The bid tabulation",
+        "The certificate of insurance"
+      ],
+      "a": 0,
+      "ref": "NASCLA job documentation",
+      "why": "Daily logs record weather and its effect on work each day, providing evidence for delay claims."
+    },
+    {
+      "t": "law",
+      "topic": "Labor law",
+      "q": "Under the FLSA, what is the earliest time of day a 15-year-old may begin work?",
+      "c": [
+        "5 a.m.",
+        "6 a.m.",
+        "8 a.m.",
+        "7 a.m."
+      ],
+      "a": 3,
+      "ref": "29 CFR 570.35",
+      "why": "14- and 15-year-olds may work only between 7 a.m. and 7 p.m. (9 p.m. from June 1 through Labor Day)."
+    },
+    {
+      "t": "law",
+      "topic": "Payroll & tax",
+      "q": "Under federal law, what is the longest an employer may take to report a new hire to the state directory if the state has not set a shorter deadline?",
+      "c": [
+        "10 days",
+        "20 days",
+        "30 days",
+        "45 days"
+      ],
+      "a": 1,
+      "ref": "42 U.S.C. 653a",
+      "why": "Federal law sets a 20-day maximum; states may require faster reporting."
+    },
+    {
+      "t": "law",
+      "topic": "Labor law",
+      "q": "An employee starts work on Monday. By when must the employer complete Section 2 of Form I-9?",
+      "c": [
+        "Before the employee's first day",
+        "By the end of the first pay period",
+        "Within 3 business days after the first day of work",
+        "Within 30 days of hire"
+      ],
+      "a": 2,
+      "ref": "8 CFR 274a.2",
+      "why": "Section 1 is due by the first day of work; the employer must examine documents and complete Section 2 within 3 business days."
+    },
+    {
+      "t": "law",
+      "topic": "Labor law",
+      "q": "A worker was hired 5 years ago and quit last month. How long must the employer keep his Form I-9?",
+      "c": [
+        "Until 1 year after his last day of work",
+        "It may be destroyed now",
+        "Until 3 years after his last day of work",
+        "Permanently"
+      ],
+      "a": 0,
+      "ref": "8 CFR 274a.2(b)(2)",
+      "why": "Retention is 3 years after hire or 1 year after termination, whichever is later; here the 1-year date is later."
+    },
+    {
+      "t": "law",
+      "topic": "Labor law",
+      "q": "For Form I-9 purposes, an unrestricted Social Security card establishes:",
+      "c": [
+        "Identity only",
+        "Both identity and employment authorization",
+        "Employment authorization only",
+        "Neither; it is not acceptable"
+      ],
+      "a": 2,
+      "ref": "USCIS I-9 List C",
+      "why": "It is a List C document and must be paired with a List B identity document such as a driver's license."
+    },
+    {
+      "t": "law",
+      "topic": "Labor law",
+      "q": "A 17-year-old new hire may be paid the $4.25 youth minimum wage for how long?",
+      "c": [
+        "The first 30 consecutive calendar days",
+        "The first 60 working days",
+        "Until he turns 18",
+        "The first 90 consecutive calendar days"
+      ],
+      "a": 3,
+      "ref": "29 U.S.C. 206(g)",
+      "why": "Employees under 20 may receive the youth wage only during their first 90 consecutive calendar days of employment."
+    },
+    {
+      "t": "law",
+      "topic": "Labor law",
+      "q": "A carpenter works 37 hours one week and 43 hours the next to make up missed time. How is he paid for the second week under the FLSA?",
+      "c": [
+        "43 hours at straight time, since the two weeks average 40",
+        "40 hours at straight time plus 3 hours at 1.5 times the regular rate",
+        "43 hours at 1.5 times the regular rate",
+        "40 hours at straight time; the extra 3 hours are unpaid"
+      ],
+      "a": 1,
+      "ref": "29 CFR 778.104",
+      "why": "Each workweek stands alone and hours cannot be averaged, so hours over 40 in a week earn overtime."
+    },
+    {
+      "t": "law",
+      "topic": "Labor law",
+      "q": "An hourly worker stays 3 extra hours without his supervisor's approval, violating company policy. Under the FLSA, the employer:",
+      "c": [
+        "Must pay the overtime but may discipline the worker",
+        "May refuse to pay because it was unauthorized",
+        "Must pay straight time only",
+        "May give comp time next month instead"
+      ],
+      "a": 0,
+      "ref": "29 CFR 785.11",
+      "why": "Work the employer suffers or permits is compensable; policy violations can be handled through discipline, not by withholding pay."
+    },
+    {
+      "t": "law",
+      "topic": "Labor law",
+      "q": "Title I of the ADA applies to employers with at least how many employees?",
+      "c": [
+        "1",
+        "15",
+        "20",
+        "50"
+      ],
+      "a": 1,
+      "ref": "42 U.S.C. 12111",
+      "why": "ADA employment provisions cover employers with 15 or more employees."
+    },
+    {
+      "t": "law",
+      "topic": "Labor law",
+      "q": "An eligible employee requests FMLA leave to care for a newly adopted child. How much job-protected leave must a covered employer allow?",
+      "c": [
+        "Up to 6 weeks paid",
+        "Up to 8 weeks unpaid",
+        "Up to 16 weeks unpaid",
+        "Up to 12 weeks unpaid"
+      ],
+      "a": 3,
+      "ref": "29 U.S.C. 2612",
+      "why": "The FMLA provides up to 12 workweeks of unpaid, job-protected leave in a 12-month period, with health coverage maintained."
+    },
+    {
+      "t": "law",
+      "topic": "Payroll & tax",
+      "q": "An employer becomes liable for FUTA tax if it had at least one employee during some part of a day in how many weeks of the year?",
+      "c": [
+        "10",
+        "13",
+        "20",
+        "26"
+      ],
+      "a": 2,
+      "ref": "IRS Pub 15",
+      "why": "The FUTA test is 20 or more weeks with an employee, or $1,500 in wages in any calendar quarter."
+    },
+    {
+      "t": "law",
+      "topic": "Safety recordkeeping",
+      "q": "An employee is admitted to the hospital overnight after a fall on a jobsite. Within how many hours must the employer report it to OSHA?",
+      "c": [
+        "8 hours",
+        "24 hours",
+        "48 hours",
+        "7 days"
+      ],
+      "a": 1,
+      "ref": "29 CFR 1904.39",
+      "why": "Any in-patient hospitalization, amputation or loss of an eye must be reported within 24 hours; a fatality within 8 hours."
+    },
+    {
+      "t": "law",
+      "topic": "Safety recordkeeping",
+      "q": "How long must OSHA Forms 300, 300A and 301 be kept?",
+      "c": [
+        "5 years after the end of the year they cover",
+        "3 years after the end of the year they cover",
+        "1 year after the injury",
+        "30 years after employment ends"
+      ],
+      "a": 0,
+      "ref": "29 CFR 1904.33",
+      "why": "Injury and illness records are kept for 5 years following the end of the calendar year they cover."
+    },
+    {
+      "t": "law",
+      "topic": "Safety recordkeeping",
+      "q": "Which OSHA form is the Injury and Illness Incident Report, which must be completed within 7 calendar days?",
+      "c": [
+        "Form 300",
+        "Form 300A",
+        "Form 301",
+        "Form 170"
+      ],
+      "a": 2,
+      "ref": "29 CFR 1904.29",
+      "why": "Form 301 gives the details of each case; Form 300 is the log and Form 300A is the annual summary."
+    },
+    {
+      "t": "law",
+      "topic": "Safety recordkeeping",
+      "q": "Which statement about OSHA civil penalty amounts is correct?",
+      "c": [
+        "They are fixed by statute at $7,000 per serious violation",
+        "They are mandatory amounts OSHA cannot reduce",
+        "They apply only to willful violations",
+        "They are maximums adjusted for inflation each year"
+      ],
+      "a": 3,
+      "ref": "29 CFR 1903.15(d)",
+      "why": "Since 2016 OSHA has adjusted its maximum penalties for inflation each January, and it may reduce proposed penalties."
+    },
+    {
+      "t": "law",
+      "topic": "Safety recordkeeping",
+      "q": "An OSHA inspection triggered by a worker fatality is classified as:",
+      "c": [
+        "Programmed",
+        "Unprogrammed",
+        "Scheduled",
+        "Consultative"
+      ],
+      "a": 1,
+      "ref": "OSHA FOM Ch. 2",
+      "why": "Unprogrammed inspections respond to events such as fatalities, complaints, referrals and imminent danger."
+    },
+    {
+      "t": "law",
+      "topic": "Environmental",
+      "q": "NPDES construction stormwater permit coverage is required when land disturbance reaches at least:",
+      "c": [
+        "One-half acre",
+        "5 acres",
+        "1 acre",
+        "10 acres"
+      ],
+      "a": 2,
+      "ref": "40 CFR 122.26",
+      "why": "Disturbing 1 acre or more, or less as part of a larger common plan of 1 acre or more, requires permit coverage and a SWPPP."
+    },
+    {
+      "t": "law",
+      "topic": "Environmental",
+      "q": "Under the asbestos NESHAP, written notification of a planned demolition must be submitted at least how far in advance?",
+      "c": [
+        "10 working days",
+        "48 hours",
+        "30 calendar days",
+        "5 working days"
+      ],
+      "a": 0,
+      "ref": "40 CFR 61.145",
+      "why": "Notice is due at least 10 working days before demolition, after a thorough asbestos inspection."
+    },
+    {
+      "t": "law",
+      "topic": "Environmental",
+      "q": "In a 1965 house, EPA lead-safe work practice rules apply to interior renovation that disturbs more than how much painted surface per room?",
+      "c": [
+        "2 square feet",
+        "6 square feet",
+        "20 square feet",
+        "50 square feet"
+      ],
+      "a": 1,
+      "ref": "40 CFR 745.83",
+      "why": "The minor-repair exemption covers up to 6 sq ft per room inside and 20 sq ft outside; beyond that the RRP rule applies."
+    },
+    {
+      "t": "law",
+      "topic": "Environmental",
+      "q": "How long must a renovator keep proof that the Renovate Right lead pamphlet was delivered?",
+      "c": [
+        "1 year",
+        "5 years",
+        "3 years",
+        "Until the property is sold"
+      ],
+      "a": 2,
+      "ref": "40 CFR 745.86",
+      "why": "RRP records, including pamphlet acknowledgments, must be kept for 3 years after the renovation is completed."
+    }
+  ]
+}

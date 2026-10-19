@@ -1,0 +1,445 @@
+{
+  "source": "NASCLA business practice test 2 set",
+  "facts": [
+    {
+      "topic": "Labor law",
+      "trade": "law",
+      "state": null,
+      "source": "Davis-Bacon Act, 40 U.S.C. 3141-3148; 29 CFR Part 5",
+      "fact": "The Davis-Bacon Act requires contractors and subcontractors on federally funded or federally assisted contracts over $2,000 for building, altering or repairing (including painting and decorating) public buildings or public works to pay laborers and mechanics at least the local prevailing wage rates and fringe benefits set by the U.S. Department of Labor.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["davis-bacon", "prevailing wage", "federal project", "public works", "fringe benefits", "wage determination"]
+    },
+    {
+      "topic": "Labor law",
+      "trade": "law",
+      "state": null,
+      "source": "29 CFR 5.5(a)(3)(ii); Copeland Anti-Kickback Act, 40 U.S.C. 3145; 29 CFR Part 3",
+      "fact": "On Davis-Bacon covered jobs, each contractor and subcontractor must submit a certified payroll for every week it performs work (DOL's optional Form WH-347 may be used), signed with a statement of compliance; the Copeland Anti-Kickback Act makes it illegal to force workers to give back any part of their pay.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["certified payroll", "wh-347", "copeland act", "anti-kickback", "davis-bacon", "weekly payroll report"]
+    },
+    {
+      "topic": "Labor law",
+      "trade": "law",
+      "state": null,
+      "source": "Walsh-Healey Public Contracts Act, 41 U.S.C. 6502; McNamara-O'Hara Service Contract Act, 41 U.S.C. 6702",
+      "fact": "Other federal contract wage laws cover non-construction work: the Walsh-Healey Public Contracts Act applies to federal contracts over $15,000 to manufacture or furnish goods (minimum wage, overtime after 40 hours a week, child-labor and safety rules), and the Service Contract Act requires prevailing wages and fringe benefits on federal service contracts over $2,500. Federal construction work falls under Davis-Bacon instead.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["walsh-healey", "service contract act", "federal supply contract", "federal service contract", "prevailing wage", "government contracts"]
+    },
+    {
+      "topic": "Labor law",
+      "trade": "law",
+      "state": null,
+      "source": "Consumer Credit Protection Act Title III, 15 U.S.C. 1673-1674; 29 CFR Part 870",
+      "fact": "Federal law limits an ordinary wage garnishment to the lesser of 25% of the employee's disposable earnings or the amount by which weekly disposable earnings exceed 30 times the federal minimum hourly wage, and forbids firing an employee because his wages are garnished for any one debt. Child support, bankruptcy and tax levies follow different limits.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["wage garnishment", "garnish", "ccpa", "disposable earnings", "creditor", "payroll deduction"]
+    },
+    {
+      "topic": "Safety (OSHA)",
+      "trade": "gc",
+      "state": null,
+      "source": "OSHA 29 CFR 1926.35(b)(6) and (e)",
+      "fact": "An OSHA emergency action plan must list the names or regular job titles of the people or departments employees can contact for more information about the plan and their duties under it. The employer must train enough people to assist an orderly evacuation and review the plan with each covered employee when it is first developed, when that employee's duties under it change, and whenever the plan changes.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["emergency action plan", "eap", "evacuation", "plan contact", "emergency coordinator", "training"]
+    },
+    {
+      "topic": "Safety (OSHA)",
+      "trade": "gc",
+      "state": null,
+      "source": "OSHA 29 CFR 1910.1200(g)(2) and Appendix D (applied to construction by 1926.59)",
+      "fact": "Section 1 (Identification) of a Safety Data Sheet gives the product identifier used on the label, recommended uses and restrictions, and the name, address and telephone number of the manufacturer, importer or other responsible party, plus an emergency telephone number.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["sds", "msds", "safety data sheet", "section 1", "emergency phone", "hazard communication", "manufacturer contact"]
+    },
+    {
+      "topic": "Payroll & tax",
+      "trade": "law",
+      "state": null,
+      "source": "IRS Schedule C (Form 1040) instructions; IRS Pub 334",
+      "fact": "A sole proprietorship pays no separate income tax: the owner reports business income and expenses on Schedule C filed with his Form 1040, and the net profit is taxed as the owner's ordinary income at individual rates, whether or not the money is withdrawn from the business.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["sole proprietor", "schedule c", "ordinary income", "form 1040", "business profit", "income tax"]
+    },
+    {
+      "topic": "Payroll & tax",
+      "trade": "law",
+      "state": null,
+      "source": "IRC 1401-1402; IRS Schedule SE (Form 1040) instructions",
+      "fact": "A sole proprietor or general partner owes self-employment tax (Social Security and Medicare) when net earnings from self-employment are $400 or more for the year. It is figured on Schedule SE and filed with Form 1040 at a combined 15.3% (12.4% Social Security up to the annual wage base plus 2.9% Medicare), and half of it is deductible.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["self-employment tax", "schedule se", "sole proprietor", "15.3%", "social security", "medicare", "$400"]
+    },
+    {
+      "topic": "Labor law",
+      "trade": "law",
+      "state": null,
+      "source": "Federal-state unemployment insurance program (FUTA, 26 U.S.C. 3301; state UI laws)",
+      "fact": "Unemployment insurance, run by each state and funded mainly by employer state unemployment and FUTA taxes, pays temporary weekly benefits to eligible workers who lose their jobs through no fault of their own, such as in a layoff. Workers' compensation, by contrast, pays for job-related injuries and illnesses.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["unemployment insurance", "laid off", "layoff", "jobless benefits", "suta", "futa"]
+    },
+    {
+      "topic": "Labor law",
+      "trade": "law",
+      "state": null,
+      "source": "COBRA, 29 U.S.C. 1161-1168; 26 CFR 54.4980B",
+      "fact": "COBRA lets employees and covered family members keep the employer's group health coverage after a qualifying event; after job loss (other than for gross misconduct) or a cut in hours, coverage can continue for up to 18 months. It applies to employers with 20 or more employees, and the person can be charged up to 102% of the plan's cost.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["cobra", "health insurance continuation", "group health plan", "18 months", "102%", "termination"]
+    },
+    {
+      "topic": "Labor law",
+      "trade": "law",
+      "state": null,
+      "source": "USCIS Form I-9 Lists of Acceptable Documents; 8 CFR 274a.2(b)(1)(v)(A)",
+      "fact": "A List A document proves both identity and employment authorization for Form I-9, so it is acceptable by itself. Examples are a U.S. passport or passport card, a Permanent Resident Card (Form I-551) and an Employment Authorization Document (Form I-766).",
+      "status": "verified",
+      "note": "",
+      "keywords": ["i-9", "list a", "passport", "green card", "employment authorization", "work eligibility"]
+    },
+    {
+      "topic": "Labor law",
+      "trade": "law",
+      "state": null,
+      "source": "USCIS Form I-9 Lists of Acceptable Documents; USCIS Handbook for Employers M-274",
+      "fact": "A Certificate of Naturalization (Form N-550/N-570) or Certificate of U.S. Citizenship (Form N-560/N-561) is not on the current Form I-9 lists of acceptable documents, so an employer may not accept one to verify employment eligibility.",
+      "status": "corrected",
+      "note": "Card treats a Certificate of Naturalization as a document that establishes eligibility to work. These certificates were dropped from the acceptable-documents lists (reflected in the Form I-9 revised in 2007). A naturalized citizen can present a U.S. passport, or a List B identity document together with a List C document such as an unrestricted Social Security card.",
+      "keywords": ["i-9", "certificate of naturalization", "citizenship certificate", "acceptable documents", "work eligibility", "naturalized citizen"]
+    },
+    {
+      "topic": "Business organization",
+      "trade": "law",
+      "state": null,
+      "source": "Uniform Partnership Act / Revised Uniform Partnership Act (dissociation and dissolution)",
+      "fact": "A general partnership lacks the perpetual life of a corporation: a partner's death or withdrawal can end the business unless the partnership agreement or state law lets the remaining partners continue and buy out the departing partner's interest, so a written agreement should include buy-sell terms.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["partnership", "dissolution", "partner death", "limited life", "buy-sell agreement", "partnership agreement"]
+    },
+    {
+      "topic": "Bonds & insurance",
+      "trade": "law",
+      "state": null,
+      "source": "ISO commercial general liability form CG 00 01, Coverage A exclusions e (employer's liability) and j (damage to property)",
+      "fact": "A standard CGL policy pays only for bodily injury and property damage to third parties. It excludes injuries to the contractor's own employees (workers' compensation/employer's liability) and damage to property the contractor owns, rents or occupies, such as its own equipment and purchased materials (an equipment floater or builder's risk covers those), and any per-occurrence deductible is subtracted from the covered loss.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["cgl", "general liability", "exclusions", "deductible", "third party", "owned property", "claim"]
+    },
+    {
+      "topic": "Business organization",
+      "trade": "law",
+      "state": null,
+      "source": "NASCLA Contractor's Guide topic: business organization; state business corporation statutes",
+      "fact": "A C corporation's advantages include continuous (perpetual) existence regardless of changes in shareholders and easy transfer of ownership through shares; its disadvantages include higher costs to form and run, required formalities (articles, bylaws, a board of directors, meetings and minutes, annual reports) and heavier regulation and recordkeeping.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["c corporation", "perpetual existence", "unlimited life", "corporate formalities", "bylaws", "advantages disadvantages"]
+    },
+    {
+      "topic": "Business organization",
+      "trade": "law",
+      "state": null,
+      "source": "IRC 1361(b)(1) and 1361(c)(1); IRS Form 2553 instructions",
+      "fact": "A C corporation may have any number of shareholders, but an S corporation may have no more than 100 shareholders (members of a family can count as one), may issue only one class of stock, and generally may not have corporations, partnerships or nonresident aliens as shareholders.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["s corporation", "c corporation", "shareholder limit", "100 shareholders", "one class of stock", "eligibility"]
+    },
+    {
+      "topic": "Financial management",
+      "trade": "law",
+      "state": null,
+      "source": "Accounting fundamentals (statement of cash flows, indirect method)",
+      "fact": "Depreciation is a noncash expense: it reduces reported net income and taxable income without any cash leaving the business in that period, so it is added back to net income when figuring cash flow from operations.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["depreciation", "noncash expense", "non-cash", "cash flow", "net income", "add back"]
+    },
+    {
+      "topic": "Labor law",
+      "trade": "law",
+      "state": null,
+      "source": "FLSA 29 U.S.C. 207(a); 29 CFR Part 778",
+      "fact": "Under the FLSA, the overtime premium is the extra half-time pay on hours over 40 in a workweek, while the full overtime rate is 1.5 times the regular rate. Example: $10/hr for 50 hours gives a premium of 10 hours x $5 = $50 and total gross pay of 50 x $10 + $50 = $550.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["overtime premium", "half-time", "time and a half", "flsa", "40 hours", "gross pay"]
+    },
+    {
+      "topic": "Project management",
+      "trade": "law",
+      "state": null,
+      "source": "NASCLA Contractor's Guide topic: project management roles",
+      "fact": "In the NASCLA guide's description of project roles, the project manager is responsible for monitoring the project's compliance with building and safety codes.",
+      "status": "unverified",
+      "note": "Based on the practice-test answer key, not confirmed against the guide text. On real jobs this duty is shared: the superintendent and safety staff enforce day-to-day compliance on site and the building official inspects, with the PM overseeing at the project level.",
+      "keywords": ["project manager", "code compliance", "safety compliance", "superintendent", "roles", "responsibilities"]
+    },
+    {
+      "topic": "Payroll & tax",
+      "trade": "law",
+      "state": null,
+      "source": "IRC 6031; IRS Form 1065 instructions",
+      "fact": "A partnership must file Form 1065 (U.S. Return of Partnership Income) every year, due by the 15th day of the 3rd month after its tax year ends (March 15 for a calendar year), and give each partner a Schedule K-1. It is an information return: the partnership pays no federal income tax itself, and the partners pay tax on their shares.",
+      "status": "corrected",
+      "note": "Card says partnerships are the one business type that need not file an annual income tax return. A partnership does not pay federal income tax, but it must still file Form 1065 each year and faces a per-partner, per-month penalty for filing late.",
+      "keywords": ["partnership", "form 1065", "information return", "schedule k-1", "partnership tax return", "march 15"]
+    },
+    {
+      "topic": "Project management",
+      "trade": "law",
+      "state": null,
+      "source": "Critical path method (CPM) scheduling fundamentals",
+      "fact": "Total float for an activity equals its late finish minus its early finish (or late start minus early start). An activity that can finish as early as day 20 but need not finish until day 26 has 6 days of float.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["float", "total float", "slack", "late finish", "early finish", "cpm", "schedule"]
+    },
+    {
+      "topic": "Payroll & tax",
+      "trade": "law",
+      "state": null,
+      "source": "IRS: Business Taxes (income, estimated, self-employment, employment, excise); state and local property tax law (e.g. Tenn. Code 67-5-901)",
+      "fact": "The IRS groups federal business taxes into income tax, estimated tax, self-employment tax, employment taxes and excise taxes. Property tax is not a federal tax, but state and local governments levy it, and businesses owning real estate (and in many states equipment and other tangible business personal property) must pay it.",
+      "status": "corrected",
+      "note": "Card says property tax is generally not a business tax. It is not one of the federal business tax categories, but businesses routinely owe state/local property tax on real property and, in many states including Tennessee, on tangible business personal property.",
+      "keywords": ["business taxes", "property tax", "excise tax", "employment tax", "federal taxes", "personal property tax"]
+    },
+    {
+      "topic": "Labor law",
+      "trade": "law",
+      "state": null,
+      "source": "ADA Title I, 42 U.S.C. 12111(8); 29 CFR 1630.2(n)",
+      "fact": "A job description should set out the position's duties and responsibilities, required skills and knowledge, qualifications such as licenses or certifications, and reporting relationships. Under the ADA, a written job description prepared before advertising or interviewing for the job counts as evidence of the job's essential functions.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["job description", "essential functions", "ada", "hiring", "qualifications", "duties"]
+    },
+    {
+      "topic": "Payroll & tax",
+      "trade": "law",
+      "state": null,
+      "source": "IRC 6656; IRS Pub 15 (Penalties)",
+      "fact": "IRS failure-to-deposit penalties on employment taxes are 2% for deposits 1 to 5 calendar days late, 5% for 6 to 15 days late, 10% for more than 15 days late (or for amounts paid directly to the IRS or with the return instead of deposited), and 15% for amounts still unpaid more than 10 days after the first IRS notice.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["failure to deposit", "late deposit penalty", "payroll tax", "form 941", "eftps", "irs penalty"]
+    },
+    {
+      "topic": "Bonds & insurance",
+      "trade": "law",
+      "state": null,
+      "source": "Workers' compensation rating fundamentals (NCCI classification rates per $100 of payroll)",
+      "fact": "Workers' compensation premiums are figured by job classification: premium = (class payroll / 100) x the class rate per $100 of payroll, summed for all classes and then adjusted by the experience modification and any credits or discounts. For example, $200,000 of payroll at $3.50 per $100 = $7,000.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["workers compensation", "premium calculation", "per $100 of payroll", "class code", "rate", "experience mod"]
+    },
+    {
+      "topic": "Contracts & liens",
+      "trade": "law",
+      "state": null,
+      "source": "CSI MasterFormat (2004 and later editions); CSI SectionFormat",
+      "fact": "Project manual technical specifications are organized by CSI MasterFormat, which since the 2004 edition uses 50 divisions numbered 00 to 49 (replacing the old 16-division format). CSI SectionFormat arranges each specification section in three parts: Part 1 General, Part 2 Products and Part 3 Execution.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["masterformat", "csi", "specifications", "divisions", "sectionformat", "project manual"]
+    },
+    {
+      "topic": "Contracts & liens",
+      "trade": "law",
+      "state": null,
+      "source": "AIA A201-2017 1.2.1 and 3.2.2; NASCLA Contractor's Guide topic: plans and specifications",
+      "fact": "When drawings and specifications conflict, the NASCLA guide teaches following the stricter (more demanding) requirement; in practice the contract's order-of-precedence clause controls, and the contractor should report the conflict to the architect and get a written clarification.",
+      "status": "unverified",
+      "note": "Contract dependent. AIA A201-2017 1.2.1 treats the contract documents as complementary with no order of precedence, and 3.2.2 requires the contractor to report inconsistencies it finds; many general conditions say specifications govern over drawings or that the more stringent requirement applies.",
+      "keywords": ["conflict", "plans and specifications", "drawings", "order of precedence", "more stringent", "rfi"]
+    },
+    {
+      "topic": "Contracts & liens",
+      "trade": "law",
+      "state": null,
+      "source": "Contract law fundamentals; AIA A201-2017 8.3.1",
+      "fact": "A force majeure clause excuses a party from liability for delay or non-performance caused by events beyond its reasonable control, such as labor strikes, severe natural disasters, war, epidemics or government action; depending on its wording it usually grants a time extension rather than extra money.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["force majeure", "act of god", "labor strike", "excusable delay", "time extension", "contract clause"]
+    },
+    {
+      "topic": "Contracts & liens",
+      "trade": "law",
+      "state": null,
+      "source": "Construction contract law fundamentals (directed and constructive acceleration)",
+      "fact": "Schedule acceleration means requiring the contractor to finish sooner than the contract schedule allows. Directed acceleration is ordered by the owner; constructive acceleration occurs when the owner denies a time extension for an excusable delay and insists on the original date. In either case the contractor can generally recover its added costs.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["acceleration", "constructive acceleration", "schedule", "excusable delay", "time extension", "claim"]
+    },
+    {
+      "topic": "Payroll & tax",
+      "trade": "law",
+      "state": null,
+      "source": "IRS Pub 15-A; IRS common-law rules (financial control)",
+      "fact": "Under the IRS financial-control factors, an employee is usually guaranteed a regular wage for each hour, week or other period, while an independent contractor is usually paid a flat fee or a time-and-materials price for the job (though some trades customarily bill hourly).",
+      "status": "verified",
+      "note": "",
+      "keywords": ["independent contractor", "flat fee", "employee vs contractor", "worker classification", "financial control", "1099"]
+    },
+    {
+      "topic": "Business planning",
+      "trade": "law",
+      "state": null,
+      "source": "NASCLA Contractor's Guide topic: marketing",
+      "fact": "The purposes of marketing are to attract new customers, keep existing customers and generate repeat and referral work that raises sales and cash flow; recruiting and hiring employees is a human-resources function, not a marketing goal.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["marketing", "customers", "customer retention", "referrals", "sales", "business development"]
+    },
+    {
+      "topic": "Payroll & tax",
+      "trade": "law",
+      "state": null,
+      "source": "IRS Pub 15-T (Federal Income Tax Withholding Methods)",
+      "fact": "IRS Pub 15-T gives two manual withholding methods: the wage bracket method (look up the pay-period wage in tables by filing status; covers wages up to about $100,000 a year) and the percentage method (works for any wage). Separate tables apply to Forms W-4 from 2020 or later, which use no allowances, and to older W-4s still on file that claim allowances; table amounts change every year.",
+      "status": "corrected",
+      "note": "Card asks for withholding for a married employee with '3 exemptions' and gives $32 from an older Circular E table. Withholding tables now live in Pub 15-T and change annually, and the 2020 and later Form W-4 has no exemptions or allowances, so that dollar answer cannot be reused; always use the current year's tables.",
+      "keywords": ["wage bracket method", "percentage method", "pub 15-t", "withholding tables", "form w-4", "federal income tax withholding"]
+    },
+    {
+      "topic": "Labor law",
+      "trade": "law",
+      "state": null,
+      "source": "OSH Act Section 11(c), 29 U.S.C. 660(c); 29 CFR 1977.15(d)",
+      "fact": "An employee who believes the employer retaliated against him for a safety complaint or other activity protected by the OSH Act must file a Section 11(c) complaint with OSHA within 30 days of the retaliatory action.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["osha retaliation", "11(c)", "whistleblower", "discrimination complaint", "30 days", "employee rights"]
+    }
+  ],
+  "questions": [
+    {
+      "t": "law",
+      "topic": "Labor law",
+      "q": "A contractor is bidding a federally funded repair job on a public courthouse. Above what contract amount do the Davis-Bacon Act's prevailing wage requirements apply?",
+      "c": ["$2,500", "$2,000", "$15,000", "$150,000"],
+      "a": 1,
+      "ref": "40 U.S.C. 3142; 29 CFR 5.5",
+      "why": "Davis-Bacon covers federally funded or assisted construction, alteration and repair contracts over $2,000. $2,500 is the Service Contract Act threshold, $15,000 is Walsh-Healey's supply-contract threshold and $150,000 is the Miller Act bond threshold."
+    },
+    {
+      "t": "law",
+      "topic": "Labor law",
+      "q": "Two days after reporting an unshored trench to OSHA, a laborer is moved to night shifts at lower pay. To pursue a Section 11(c) retaliation claim, he must file a complaint with OSHA within:",
+      "c": ["10 days", "90 days", "180 days", "30 days"],
+      "a": 3,
+      "ref": "OSH Act 11(c); 29 CFR 1977.15(d)",
+      "why": "Section 11(c) of the OSH Act gives employees 30 days from the retaliatory action to file; other whistleblower laws OSHA enforces have different deadlines."
+    },
+    {
+      "t": "law",
+      "topic": "Payroll & tax",
+      "q": "A contractor makes its employment tax deposit 9 calendar days after the due date. What failure-to-deposit penalty rate applies to the late amount?",
+      "c": ["2%", "10%", "5%", "15%"],
+      "a": 2,
+      "ref": "IRC 6656; IRS Pub 15",
+      "why": "Deposits 1-5 days late draw 2%, 6-15 days late 5%, more than 15 days late 10%, and amounts still unpaid more than 10 days after the first IRS notice 15%."
+    },
+    {
+      "t": "law",
+      "topic": "Bonds & insurance",
+      "q": "A contractor's CGL policy (no endorsements) has a $500 per-occurrence deductible. One crane accident causes $4,200 in injuries to two of the contractor's laborers, $3,600 damage to a neighbor's parked car, $2,900 damage to scaffolding the contractor owns and $1,800 loss of lumber the contractor bought for the job. How much does the CGL insurer pay?",
+      "c": ["$3,100", "$3,600", "$7,300", "$12,000"],
+      "a": 0,
+      "ref": "ISO CG 00 01 exclusions e and j",
+      "why": "CGL covers only third-party injury or damage, so only the $3,600 car claim counts, less the $500 deductible. Employee injuries go to workers' comp, and the contractor's own scaffolding and lumber are excluded owned property."
+    },
+    {
+      "t": "law",
+      "topic": "Bonds & insurance",
+      "q": "A contractor's workers' compensation rates are $0.15 per $100 of clerical payroll and $4.00 per $100 of carpentry payroll. Annual payroll is $40,000 clerical and $150,000 carpentry, and the insurer gives a 10% credit for a written safety program. What is the annual premium?",
+      "c": ["$6,060", "$5,454", "$6,666", "$54,540"],
+      "a": 1,
+      "ref": "Workers' comp rating per $100 payroll",
+      "why": "Clerical: 400 x $0.15 = $60; carpentry: 1,500 x $4.00 = $6,000; total $6,060 less the 10% credit = $5,454. Rates apply per $100 of payroll in each class."
+    },
+    {
+      "t": "law",
+      "topic": "Labor law",
+      "q": "A non-exempt carpenter paid $22.00 per hour works 47 hours in one workweek. What is the overtime premium portion of his pay?",
+      "c": ["$154", "$231", "$1,111", "$77"],
+      "a": 3,
+      "ref": "29 U.S.C. 207(a); 29 CFR 778",
+      "why": "The premium is the extra half-time on hours over 40: 7 hours x $11.00 = $77. His total gross pay would be 47 x $22 + $77 = $1,111."
+    },
+    {
+      "t": "law",
+      "topic": "Project management",
+      "q": "In a CPM schedule an activity has an early start of day 12, a late start of day 15, an early finish of day 20 and a late finish of day 23. How much total float does it have?",
+      "c": ["8 days", "11 days", "3 days", "0 days"],
+      "a": 2,
+      "ref": "CPM scheduling: TF = LF - EF",
+      "why": "Total float is late finish minus early finish (23 - 20) or late start minus early start (15 - 12): 3 days the activity can slip without delaying project completion."
+    },
+    {
+      "t": "law",
+      "topic": "Payroll & tax",
+      "q": "A three-member general partnership made a profit last year. Which federal return must the partnership itself file to report its income and each partner's share?",
+      "c": ["Form 1065", "Form 1120", "Form 1120-S", "Schedule C"],
+      "a": 0,
+      "ref": "IRS Form 1065 instructions",
+      "why": "A partnership pays no federal income tax but must file the Form 1065 information return every year and issue each partner a Schedule K-1. Form 1120 is for C corporations, 1120-S for S corporations and Schedule C for sole proprietors."
+    },
+    {
+      "t": "law",
+      "topic": "Payroll & tax",
+      "q": "A sole proprietor owes self-employment tax once net earnings from self-employment for the year reach at least:",
+      "c": ["$100", "$250", "$400", "$1,000"],
+      "a": 2,
+      "ref": "IRC 1402(b); Schedule SE",
+      "why": "Self-employment tax (15.3% for Social Security and Medicare) applies when net self-employment earnings are $400 or more; it is figured on Schedule SE and filed with Form 1040."
+    },
+    {
+      "t": "law",
+      "topic": "Contracts & liens",
+      "q": "A subcontract clause excuses late completion caused by events beyond either party's control, such as a regional trade strike or a hurricane. This is a:",
+      "c": ["Liquidated damages clause", "Force majeure clause", "No-damages-for-delay clause", "Termination for convenience clause"],
+      "a": 1,
+      "ref": "Contract law; AIA A201-2017 8.3.1",
+      "why": "A force majeure clause shields a party from liability for delay caused by events it cannot control, usually by granting extra time. A liquidated damages clause does the opposite, charging a set amount per day of late completion."
+    },
+    {
+      "t": "law",
+      "topic": "Business organization",
+      "q": "What is the maximum number of shareholders an S corporation may have?",
+      "c": ["35", "50", "70", "100"],
+      "a": 3,
+      "ref": "IRC 1361(b)(1)",
+      "why": "An S corporation is limited to 100 shareholders (family members may count as one) and one class of stock; a C corporation has no shareholder limit."
+    },
+    {
+      "t": "law",
+      "topic": "Labor law",
+      "q": "A new hire wants to present only one document for Form I-9. Which one is acceptable by itself to prove both identity and employment authorization?",
+      "c": ["U.S. passport card", "State-issued photo ID card", "Certified U.S. birth certificate", "Voter registration card"],
+      "a": 0,
+      "ref": "USCIS Form I-9 List A",
+      "why": "A U.S. passport or passport card is a List A document. A state ID or voter registration card is List B (identity only) and a birth certificate is List C (work authorization only), so each must be paired with a document from the other list."
+    }
+  ]
+}

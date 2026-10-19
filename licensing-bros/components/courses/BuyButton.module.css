@@ -1,0 +1,13 @@
+.box{display:flex;flex-direction:column;gap:8px}
+.small{margin:0;font-size:12.5px;color:var(--muted);line-height:1.45}
+.small svg{width:14px;height:14px;color:var(--ok);display:inline-block;vertical-align:-2px;margin-right:5px}
+.small a{color:var(--navy);font-weight:700}
+.spinWhite{width:16px;height:16px;border:2.5px solid rgba(255,255,255,.45);border-top-color:#fff;border-radius:50%;display:inline-block;animation:spin .8s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+
+.web{display:flex;flex-direction:column;gap:10px;border:2px dashed var(--navy);border-radius:8px;padding:14px;background:var(--orange-soft)}
+.webHead{margin:0;display:flex;align-items:center;gap:8px;font-family:var(--heading);font-weight:900;text-transform:uppercase;letter-spacing:.08em;font-size:13px;color:var(--navy)}
+.webHead svg{width:18px;height:18px;color:var(--orange)}
+.webText{margin:0;font-size:14px;line-height:1.5}
+.linkRow{display:flex;gap:8px;align-items:center;min-width:0}
+.url{flex:1;min-width:0;font-family:var(--mono);font-size:12px;background:#fff;border:1.5px solid var(--line);border-radius:6px;padding:7px 9px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}

@@ -1,0 +1,824 @@
+{
+  "source": "NASCLA contractor's guide set cards 1-160",
+  "facts": [
+    {
+      "topic": "Business organization",
+      "trade": "law",
+      "state": null,
+      "source": "IRS: Do You Need a New EIN?",
+      "fact": "A person who buys an existing business and operates it as their own (for example as a sole proprietorship or a newly formed entity) generally must obtain a new Employer Identification Number; the seller's EIN does not transfer to the buyer.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["ein", "employer identification number", "buy business", "new owner", "irs", "tax id"]
+    },
+    {
+      "topic": "Contracts & liens",
+      "trade": "law",
+      "state": null,
+      "source": "Contract law fundamentals (subcontract flow-down provisions)",
+      "fact": "A flow-down clause in a subcontract binds the subcontractor to the same obligations toward the general contractor that the general contractor owes the owner under the prime contract.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["flow-down clause", "flow down", "subcontract", "prime contract", "obligations", "subcontractor"]
+    },
+    {
+      "topic": "Business planning",
+      "trade": "law",
+      "state": null,
+      "source": "NASCLA Contractor's Guide topic: business planning",
+      "fact": "A business plan serves three main purposes: it is a planning tool for running the company, a document presented to lenders or investors to obtain financing, and a benchmark for measuring actual performance against goals. Project contract documents are not part of a business plan.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["business plan", "planning tool", "loan", "investor", "benchmark", "financing"]
+    },
+    {
+      "topic": "Business organization",
+      "trade": "law",
+      "state": null,
+      "source": "NASCLA Contractor's Guide topic: business organization",
+      "fact": "A sole proprietorship is the simplest business structure to set up, but its major drawback is that the owner has unlimited personal liability for all business debts and obligations.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["sole proprietorship", "simplest structure", "unlimited liability", "personal liability", "business entity", "owner"]
+    },
+    {
+      "topic": "Business organization",
+      "trade": "law",
+      "state": null,
+      "source": "Uniform Partnership Act principles",
+      "fact": "A general partnership is an association of two or more persons carrying on a business for profit as co-owners. Partners should put their arrangement in a written partnership agreement, and each general partner is bound by the acts of another partner done in the name of the business.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["general partnership", "partnership agreement", "written agreement", "co-owners", "agency", "partner liability"]
+    },
+    {
+      "topic": "Business organization",
+      "trade": "law",
+      "state": null,
+      "source": "Uniform Partnership Act principles (joint and several liability)",
+      "fact": "General partners are jointly and severally liable for partnership debts: if a partnership leaves unpaid debt, a creditor can collect the full amount from any one general partner, who must then seek contribution from the others.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["joint and several", "partnership debt", "general partner", "liability", "dissolution", "creditor"]
+    },
+    {
+      "topic": "Business organization",
+      "trade": "law",
+      "state": null,
+      "source": "Uniform Limited Partnership Act principles",
+      "fact": "In a limited partnership, limited partners take no part in management decisions and their liability is restricted to the amount they invested; at least one general partner manages the business and carries unlimited liability.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["limited partner", "limited partnership", "investment", "liability limit", "management", "general partner"]
+    },
+    {
+      "topic": "Business organization",
+      "trade": "law",
+      "state": null,
+      "source": "State business entity statutes (foreign registration)",
+      "fact": "A partnership, LLC or corporation formed in another state is a 'foreign' entity in your state and must register (typically by filing an application for registration or certificate of authority with the Secretary of State) before doing business there.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["foreign llc", "foreign partnership", "foreign registration", "secretary of state", "certificate of authority", "out of state"]
+    },
+    {
+      "topic": "Business organization",
+      "trade": "law",
+      "state": null,
+      "source": "IRS: corporate taxation (Form 1120, Form 2553)",
+      "fact": "A C corporation's main disadvantage is double taxation: profits are taxed at the corporate level and again when paid to shareholders as dividends. Its main advantage is that shareholders are generally not personally liable for corporate debts and acts.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["c corporation", "double taxation", "dividends", "limited liability", "corporate tax", "shareholders"]
+    },
+    {
+      "topic": "Business organization",
+      "trade": "law",
+      "state": null,
+      "source": "IRS Form 2553 instructions",
+      "fact": "An eligible corporation elects S corporation status by filing IRS Form 2553 (Election by a Small Business Corporation).",
+      "status": "verified",
+      "note": "",
+      "keywords": ["s corporation", "form 2553", "s election", "irs", "small business corporation", "elect"]
+    },
+    {
+      "topic": "Business organization",
+      "trade": "law",
+      "state": null,
+      "source": "IRS: S Corporations (Form 1120-S, Schedule K-1)",
+      "fact": "An S corporation avoids double taxation because its income, losses and credits pass through to shareholders, who pay tax on their share of the corporation's income whether or not that income is actually distributed; the S corporation itself generally pays no federal income tax.",
+      "status": "corrected",
+      "note": "Card says an S corp pays taxes only on income distributed to members. Pass-through income is taxed to shareholders on their pro-rata share whether or not it is distributed, and the entity generally pays no federal income tax; 'members' is LLC terminology.",
+      "keywords": ["s corporation", "pass-through", "k-1", "double taxation", "distributed income", "shareholder tax"]
+    },
+    {
+      "topic": "Business organization",
+      "trade": "law",
+      "state": null,
+      "source": "IRS: Limited Liability Company (LLC); Treas. Reg. 301.7701-3",
+      "fact": "A limited liability company (LLC) gives its members liability protection, and by default a multi-member LLC is taxed as a partnership (single-member as a disregarded entity), so members pay federal income tax on their share of profits whether or not those profits are distributed. An LLC may instead elect to be taxed as a corporation.",
+      "status": "corrected",
+      "note": "Card calls it a 'Limited Liability Corporation' and says federal income tax is filed only on income distributed to members. The correct name is limited liability company, and pass-through profits are taxed to members on their distributive share regardless of distribution.",
+      "keywords": ["llc", "limited liability company", "pass-through", "members", "partnership taxation", "disregarded entity"]
+    },
+    {
+      "topic": "Business organization",
+      "trade": "law",
+      "state": null,
+      "source": "NASCLA Contractor's Guide topic: business organization",
+      "fact": "A joint venture is a business arrangement in which two or more companies combine resources to undertake a specific project, usually ending when that project is complete.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["joint venture", "jv", "special project", "teaming", "two companies", "partnership"]
+    },
+    {
+      "topic": "Business organization",
+      "trade": "law",
+      "state": null,
+      "source": "State/local assumed-name (DBA) statutes",
+      "fact": "A sole proprietor who operates under any name other than their own legal name generally must file a fictitious (assumed) business name certificate, often called a DBA, with the county or state office designated by state law.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["dba", "doing business as", "fictitious name", "assumed name", "trade name", "sole proprietor"]
+    },
+    {
+      "topic": "Business organization",
+      "trade": "law",
+      "state": null,
+      "source": "State business entity statutes (name reservation)",
+      "fact": "The name of a corporation, LLC or limited partnership is reserved and registered through the state's Secretary of State (or equivalent business filing office).",
+      "status": "verified",
+      "note": "",
+      "keywords": ["name reservation", "secretary of state", "business name", "llc name", "corporation name", "register"]
+    },
+    {
+      "topic": "Business organization",
+      "trade": "law",
+      "state": null,
+      "source": "State contractor licensing statutes (general purpose)",
+      "fact": "The main purpose of contractor licensing is to protect the health, safety and welfare of the public.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["licensing purpose", "contractor license", "public safety", "health safety welfare", "licensing board", "protect public"]
+    },
+    {
+      "topic": "Business organization",
+      "trade": "law",
+      "state": "Georgia",
+      "source": "O.C.G.A. Title 43, Chapter 41 (State Licensing Board for Residential and General Contractors)",
+      "fact": "Georgia's State Licensing Board for Residential and General Contractors has a residential division and a general contractor division; board members are appointed by the Governor. The card set states each division has 7 members serving 5-year terms.",
+      "status": "unverified",
+      "note": "Appointment by the Governor is consistent with O.C.G.A. 43-41-3, but the division size and term length could not be confirmed against the current statute.",
+      "keywords": ["georgia licensing board", "governor appoints", "board members", "term", "residential division", "general contractor division"]
+    },
+    {
+      "topic": "Bonds & insurance",
+      "trade": "law",
+      "state": "Georgia",
+      "source": "Georgia State Licensing Board for Residential and General Contractors rules",
+      "fact": "Georgia contractor license applicants must show proof of general liability insurance (and workers' compensation where required); the card set gives minimums of $300,000 for residential and $500,000 for general (commercial) contractor applicants.",
+      "status": "unverified",
+      "note": "State-specific board rule amounts could not be confirmed against current Georgia rules.",
+      "keywords": ["georgia", "general liability", "insurance minimum", "residential contractor", "general contractor", "workers comp"]
+    },
+    {
+      "topic": "Business organization",
+      "trade": "law",
+      "state": "Georgia",
+      "source": "O.C.G.A. 43-41-17 (exemptions)",
+      "fact": "Georgia requires a residential or general contractor license for work whose total value exceeds $2,500; the card set also says residential contractors must give a written 1-year warranty on jobs over $2,500.",
+      "status": "unverified",
+      "note": "The $2,500 threshold matches the commonly cited Georgia exemption, but the threshold and the written-warranty requirement were not confirmed against the current statute.",
+      "keywords": ["georgia", "license threshold", "2500", "written warranty", "residential contractor", "exemption"]
+    },
+    {
+      "topic": "Business organization",
+      "trade": "law",
+      "state": "Georgia",
+      "source": "Georgia State Licensing Board for Residential and General Contractors rules",
+      "fact": "Georgia contractor licenses are renewed every 2 years; the card set states continuing education of at least 3 hours for Residential-Basic and 6 hours for Residential-Light licensees, revocation if not renewed within 6 months of expiration, and a minimum $500 fine for unlicensed contracting.",
+      "status": "unverified",
+      "note": "Renewal cycle, CE hours, lapse period and fine amounts are state board rules that could not be confirmed against current Georgia law.",
+      "keywords": ["georgia", "license renewal", "continuing education", "biennial", "unlicensed fine", "expiration"]
+    },
+    {
+      "topic": "Bonds & insurance",
+      "trade": "law",
+      "state": null,
+      "source": "Insurance fundamentals (risk transfer)",
+      "fact": "Insurance is a risk-transfer tool: in exchange for a premium, the insurer assumes the financial consequences of covered losses such as accidents, fire or theft.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["insurance purpose", "risk transfer", "premium", "loss", "insurer", "coverage"]
+    },
+    {
+      "topic": "Bonds & insurance",
+      "trade": "law",
+      "state": null,
+      "source": "Commercial property insurance fundamentals",
+      "fact": "Commercial property insurance covers a business's buildings and business personal property (equipment, inventory, furniture) against covered losses such as fire, theft and vandalism.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["property insurance", "fire", "theft", "business personal property", "commercial property", "loss"]
+    },
+    {
+      "topic": "Bonds & insurance",
+      "trade": "law",
+      "state": null,
+      "source": "Builder's risk insurance fundamentals",
+      "fact": "Builder's risk insurance covers a structure while it is under construction, including materials, supplies, fixtures and machinery that are or will become part of the building. An all-risk (special form) policy covers every peril not specifically excluded, while a named-peril policy covers only the perils listed, such as fire, lightning or windstorm.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["builders risk", "all risk", "named peril", "course of construction", "materials", "special form"]
+    },
+    {
+      "topic": "Bonds & insurance",
+      "trade": "law",
+      "state": null,
+      "source": "Inland marine insurance fundamentals",
+      "fact": "Inland marine floaters cover movable property: a contractor's equipment floater covers mobile equipment and tools against physical loss whether stored, in transit or at a jobsite, and a transit (transportation) floater covers goods while being shipped.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["inland marine", "equipment floater", "transit floater", "mobile equipment", "tools", "in transit"]
+    },
+    {
+      "topic": "Bonds & insurance",
+      "trade": "law",
+      "state": null,
+      "source": "Commercial General Liability (ISO CG 00 01) fundamentals",
+      "fact": "Commercial general liability (CGL) insurance covers the contractor's legal liability for bodily injury and property damage suffered by third parties (people not employed by the company), subject to listed exclusions; injuries to the contractor's own employees are covered by workers' compensation instead.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["cgl", "general liability", "third party", "bodily injury", "property damage", "exclusions"]
+    },
+    {
+      "topic": "Bonds & insurance",
+      "trade": "law",
+      "state": null,
+      "source": "Commercial insurance fundamentals",
+      "fact": "An umbrella liability policy pays claims that exceed the limits of the underlying general liability (and auto/employer's liability) policies. A business owner's policy (BOP) bundles property and general liability coverage for small businesses.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["umbrella", "excess liability", "bop", "business owners policy", "bundle", "limits"]
+    },
+    {
+      "topic": "Bonds & insurance",
+      "trade": "law",
+      "state": null,
+      "source": "Commercial insurance fundamentals",
+      "fact": "Professional liability (errors and omissions) insurance protects against claims from design errors or oversights; directors and officers (D&O) insurance protects company directors and officers against claims of wrongful acts in performing their duties; key person insurance is life/disability coverage on an individual whose loss would seriously harm the company.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["professional liability", "errors and omissions", "d&o", "key man", "key person", "design errors"]
+    },
+    {
+      "topic": "Bonds & insurance",
+      "trade": "law",
+      "state": null,
+      "source": "State workers' compensation laws",
+      "fact": "Workers' compensation provides medical care and partial wage replacement to employees with work-related injuries or illnesses regardless of fault. The employer pays the premium; employees contribute nothing in nearly all states (Washington is a notable exception with an employee payroll share).",
+      "status": "verified",
+      "note": "",
+      "keywords": ["workers compensation", "workers comp", "premium", "employer pays", "work injury", "wage replacement"]
+    },
+    {
+      "topic": "Payroll & tax",
+      "trade": "law",
+      "state": null,
+      "source": "IRS Pub 15 (Circular E), FUTA section",
+      "fact": "An employer owes federal unemployment (FUTA) tax if it paid wages of $1,500 or more in any calendar quarter, or had at least one employee for some part of a day in 20 or more different weeks, in the current or prior year. FUTA is paid only by the employer, and state unemployment tax is also employer-paid in most states (a few, such as Alaska, New Jersey and Pennsylvania, also withhold from employees).",
+      "status": "verified",
+      "note": "",
+      "keywords": ["futa", "unemployment tax", "suta", "20 weeks", "1500 quarter", "employer paid"]
+    },
+    {
+      "topic": "Risk management",
+      "trade": "law",
+      "state": null,
+      "source": "Construction risk management practice (certificates of insurance)",
+      "fact": "Before hiring a subcontractor, a contractor should verify the sub's insurance coverage (general liability and workers' compensation) by obtaining a current certificate of insurance; an uninsured sub's workers may otherwise become the hiring contractor's liability.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["certificate of insurance", "subcontractor insurance", "verify coverage", "coi", "workers comp", "liability"]
+    },
+    {
+      "topic": "Bonds & insurance",
+      "trade": "law",
+      "state": null,
+      "source": "Contract law fundamentals (indemnification and contractual liability coverage)",
+      "fact": "Before signing a contract with a clause requiring the contractor to indemnify the owner, the contractor should review its liability insurance to confirm that contractual liability for that indemnity is covered.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["indemnification", "indemnity clause", "contractual liability", "hold harmless", "insurance review", "owner"]
+    },
+    {
+      "topic": "Contracts & liens",
+      "trade": "law",
+      "state": null,
+      "source": "State mechanics' lien statutes (payment and lien discharge bonds)",
+      "fact": "Liens by subcontractors and suppliers can be limited with surety bonds: a payment bond gives unpaid claimants a claim against the bond, and a lien discharge (release) bond can be posted to free the property from a filed lien. Procedures and effect vary by state.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["lien bond", "bond off lien", "payment bond", "mechanics lien", "discharge", "supplier lien"]
+    },
+    {
+      "topic": "Bonds & insurance",
+      "trade": "law",
+      "state": null,
+      "source": "Surety fundamentals",
+      "fact": "A contract surety bond is a three-party agreement in which the surety guarantees to the obligee (owner) that the principal (contractor) will meet its obligations; unlike insurance, the contractor must reimburse the surety for any losses paid.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["surety bond", "three party", "principal", "obligee", "surety", "indemnity"]
+    },
+    {
+      "topic": "Bonds & insurance",
+      "trade": "law",
+      "state": null,
+      "source": "Surety fundamentals; FAR 28.101-2",
+      "fact": "A bid bond assures the owner that the bidder submitted its bid in good faith and, if awarded, will sign the contract at the bid price and furnish the required performance and payment bonds. On federal contracts the bid guarantee must be at least 20% of the bid price, not to exceed $3 million.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["bid bond", "bid guarantee", "good faith", "20 percent", "sign contract", "bid security"]
+    },
+    {
+      "topic": "Bonds & insurance",
+      "trade": "law",
+      "state": null,
+      "source": "Surety fundamentals",
+      "fact": "A performance bond guarantees the contractor will complete the work according to the contract's terms, time and conditions; a payment bond guarantees that subcontractors and suppliers will be paid for labor and materials they furnish. A general contractor can protect against a subcontractor's non-performance by requiring a subcontract performance bond.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["performance bond", "payment bond", "subcontractor default", "completion", "suppliers paid", "surety"]
+    },
+    {
+      "topic": "Bonds & insurance",
+      "trade": "law",
+      "state": null,
+      "source": "Surety fundamentals",
+      "fact": "A maintenance bond guarantees that no defects in workmanship or materials will appear in the completed project for a stated period; a completion bond assures the project's lender or financial backers that the work will be finished on time and free of liens.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["maintenance bond", "warranty bond", "completion bond", "lender", "defects", "workmanship"]
+    },
+    {
+      "topic": "Bonds & insurance",
+      "trade": "law",
+      "state": null,
+      "source": "Miller Act, 40 U.S.C. 3131-3134; FAR 28.102-1",
+      "fact": "The Miller Act (enacted 1935) requires performance and payment bonds on federal construction contracts; the current FAR threshold is contracts exceeding $150,000. States have similar public-works bonding laws known as 'Little Miller Acts'.",
+      "status": "corrected",
+      "note": "Card says the Miller Act applies to federal projects valued at $100,000. That was the statutory figure, but it has been inflation-adjusted to $150,000 in FAR 28.102-1; the October 2025 FAR inflation adjustment excluded the bond threshold, so $150,000 still applies.",
+      "keywords": ["miller act", "1935", "federal bonds", "150000", "little miller act", "public works"]
+    },
+    {
+      "topic": "Bonds & insurance",
+      "trade": "law",
+      "state": null,
+      "source": "FAR 28.102-2",
+      "fact": "On federal construction contracts, the performance bond and the payment bond are each normally 100% of the original contract price; the contracting officer may set a lower payment bond only if 100% is impractical, and never below the performance bond amount.",
+      "status": "corrected",
+      "note": "Cards say a $5.1 million contract needs a $2.5 million payment bond and a $2.6 million contract needs a 40% ($1,040,000) payment bond. Those are the pre-1999 Miller Act sliding-scale amounts; the Construction Industry Payment Protection Act of 1999 and FAR 28.102-2(b) set payment bonds at 100% of contract price.",
+      "keywords": ["payment bond amount", "performance bond amount", "100 percent", "federal contract", "far 28.102-2", "penal sum"]
+    },
+    {
+      "topic": "Business planning",
+      "trade": "law",
+      "state": null,
+      "source": "NASCLA Contractor's Guide topic: management and ethics",
+      "fact": "Effective delegation means assigning authority along with clear expectations and then following up with feedback and guidance; a written code of conduct helps establish ethical practices throughout the company.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["delegation", "feedback", "code of conduct", "ethics", "management", "leadership"]
+    },
+    {
+      "topic": "Business planning",
+      "trade": "law",
+      "state": null,
+      "source": "U.S. Small Business Administration programs (8(a), WOSB, HUBZone); USDOT DBE program",
+      "fact": "The Small Business Administration (SBA) provides training, counseling, loan guarantees and contracting assistance for small businesses, and government programs certify small, minority-owned and women-owned businesses (e.g., SBA 8(a), WOSB, DBE) to give them added opportunities on federal and state contracts.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["sba", "small business administration", "8(a)", "dbe", "minority owned", "women owned"]
+    },
+    {
+      "topic": "Estimating & bidding",
+      "trade": "law",
+      "state": null,
+      "source": "Construction bidding practice",
+      "fact": "A bid package typically includes the invitation to bid, instructions to bidders, the bid form, drawings and specifications, and any supplements or addenda. An addendum is a change to the bidding documents issued before bids are due (and before the owner-contractor agreement is signed); change orders are not part of a bid because they modify a contract after it is executed.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["bid package", "addendum", "addenda", "invitation to bid", "instructions to bidders", "change order"]
+    },
+    {
+      "topic": "Estimating & bidding",
+      "trade": "law",
+      "state": null,
+      "source": "Construction bidding ethics; Sherman Antitrust Act, 15 U.S.C. 1",
+      "fact": "Bid shopping is a contractor using one subcontractor's price to pressure other subs (including ones who never bid) into undercutting it, an unethical practice. Bid rigging is collusion among competitors to fix who wins a contract and is a federal crime under antitrust law.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["bid shopping", "bid rigging", "collusion", "antitrust", "sherman act", "unethical"]
+    },
+    {
+      "topic": "Contracts & liens",
+      "trade": "law",
+      "state": null,
+      "source": "AIA A201-2017 1.1.1 (Contract Documents); construction practice",
+      "fact": "Project documents include the agreement, general and supplementary conditions, drawings, specifications, addenda and modifications, along with any required bonds. The specifications describe the type and quality of materials and workmanship, while the drawings show location, dimensions and arrangement.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["contract documents", "specifications", "drawings", "general conditions", "materials", "project manual"]
+    },
+    {
+      "topic": "Estimating & bidding",
+      "trade": "law",
+      "state": null,
+      "source": "NASCLA Contractor's Guide topic: estimating",
+      "fact": "The card set claims a good detailed estimate should fall within 1% to 2% of the actual construction cost.",
+      "status": "unverified",
+      "note": "This accuracy target appears to come from the study guide; accuracy expectations vary by estimate type and are not a fixed industry standard.",
+      "keywords": ["estimate accuracy", "1-2 percent", "detailed estimate", "actual cost", "estimating", "variance"]
+    },
+    {
+      "topic": "Estimating & bidding",
+      "trade": "law",
+      "state": null,
+      "source": "Construction estimating practice",
+      "fact": "A site visit is one of the most important steps in estimating because access, soil, existing conditions and logistics affect cost. An estimator who ignores company resources, location and risk puts the company's profitability at risk.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["site visit", "estimating", "existing conditions", "risk", "profitability", "job site"]
+    },
+    {
+      "topic": "Estimating & bidding",
+      "trade": "law",
+      "state": null,
+      "source": "Construction estimating practice",
+      "fact": "The quantity take-off method is a detailed estimating method in which the estimator measures and prices each unit of material and labor for every task; subcontractor quotes are carried separately rather than on the task material list. Tasks are grouped by type of activity (commonly CSI MasterFormat divisions) for ease of estimating.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["quantity takeoff", "take-off", "detailed estimate", "material list", "masterformat", "csi divisions"]
+    },
+    {
+      "topic": "Estimating & bidding",
+      "trade": "law",
+      "state": null,
+      "source": "Construction estimating practice",
+      "fact": "Labor costs are estimated using the company's historical job-cost data and published productivity guides, combined with industry knowledge; crew size, worker skill level and weather all affect labor productivity and therefore labor cost.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["labor cost", "productivity", "historical data", "crew size", "weather", "cost guides"]
+    },
+    {
+      "topic": "Estimating & bidding",
+      "trade": "law",
+      "state": null,
+      "source": "Construction estimating practice (labor burden)",
+      "fact": "Labor burden is the employer's cost on top of base wages: employer payroll taxes (Social Security, Medicare, FUTA, SUTA), workers' compensation and liability insurance premiums, and fringe benefits. Regular pay itself is not labor burden.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["labor burden", "payroll taxes", "workers comp", "fringe benefits", "direct labor", "wages"]
+    },
+    {
+      "topic": "Estimating & bidding",
+      "trade": "law",
+      "state": null,
+      "source": "Construction estimating practice (equipment costs)",
+      "fact": "Equipment needed for a job, including special tools, is a direct cost carried in the equipment estimate. Rented equipment is priced at the rental (and operator, if supplied) hourly rate plus operating costs such as fuel, maintenance and delivery; equipment needs can also be met by leasing.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["equipment cost", "direct cost", "rental rate", "operating cost", "special tools", "leasing"]
+    },
+    {
+      "topic": "Estimating & bidding",
+      "trade": "law",
+      "state": null,
+      "source": "Construction estimating practice (overhead)",
+      "fact": "Project (job) overhead covers job-related costs that are not labor or materials, such as bonds, permits, temporary office and storage trailers, temporary utilities, dumpsters, portable toilets and site security. Company (general) overhead is the cost of running the business whether or not a job is underway, such as office rent, accounting and legal fees, office phones and administrative salaries.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["project overhead", "job overhead", "company overhead", "general overhead", "indirect costs", "office rent"]
+    },
+    {
+      "topic": "Estimating & bidding",
+      "trade": "law",
+      "state": null,
+      "source": "NASCLA Contractor's Guide topic: estimating",
+      "fact": "The card set states that project overhead typically accounts for about 5% to 10% of the total bid.",
+      "status": "unverified",
+      "note": "Rule-of-thumb percentage from the study guide; actual job overhead varies widely by project type and size.",
+      "keywords": ["project overhead percentage", "5-10 percent", "bid", "job overhead", "estimate", "rule of thumb"]
+    },
+    {
+      "topic": "Estimating & bidding",
+      "trade": "law",
+      "state": null,
+      "source": "Construction estimating practice (markup)",
+      "fact": "Markup must cover overhead and profit: if it is too low the contractor may fail to recover its costs, and if it is too high the bid will not be competitive and will not win work.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["markup", "profit", "overhead recovery", "competitive bid", "pricing", "margin"]
+    },
+    {
+      "topic": "Estimating & bidding",
+      "trade": "law",
+      "state": null,
+      "source": "Construction estimating practice (estimate types)",
+      "fact": "A conceptual estimate is an early, order-of-magnitude estimate usually prepared by the architect using cost models from previous projects. The square-foot method multiplies the project's floor area by a cost per square foot, and the unit-price method bundles material, labor and equipment into a single price per unit of work.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["conceptual estimate", "square foot method", "unit price", "cost per square foot", "architect", "estimate types"]
+    },
+    {
+      "topic": "Financial management",
+      "trade": "law",
+      "state": null,
+      "source": "Construction accounting practice (job costing)",
+      "fact": "A job cost system tracks actual costs against the estimate for each project, which lets the contractor monitor costs during the job, report results, base future labor-hour estimates on past performance, and make strategic decisions; using standard estimating formats and forms also reduces errors.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["job costing", "job cost system", "cost control", "historical data", "estimating accuracy", "reports"]
+    },
+    {
+      "topic": "Contracts & liens",
+      "trade": "law",
+      "state": null,
+      "source": "Contract law fundamentals",
+      "fact": "A contract is a legally enforceable agreement between two or more parties. A valid contract requires offer and acceptance (mutual agreement), consideration (something of value exchanged, not necessarily money), competent parties with legal capacity, and a legal purpose. A written contract helps prevent disputes.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["contract elements", "offer and acceptance", "consideration", "competent parties", "legal purpose", "valid contract"]
+    },
+    {
+      "topic": "Contracts & liens",
+      "trade": "law",
+      "state": null,
+      "source": "Contract law fundamentals (acceptance, mirror-image rule)",
+      "fact": "Acceptance is unconditional agreement to the terms of an offer, often shown by signing it. A counteroffer is not acceptance; it rejects the original offer and becomes a new offer.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["acceptance", "counteroffer", "mirror image rule", "offer", "rejection", "signature"]
+    },
+    {
+      "topic": "Contracts & liens",
+      "trade": "law",
+      "state": null,
+      "source": "AIA A201-2017 Article 9 (Payments and Completion)",
+      "fact": "Progress payments are partial payments made during construction based on the percentage of work completed (usually measured against a schedule of values) or on completion of defined phases. Under AIA A201 the architect reviews the contractor's payment application and certifies to the owner the amount due, and also certifies substantial completion.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["progress payment", "percentage of completion", "schedule of values", "certificate for payment", "architect", "substantial completion"]
+    },
+    {
+      "topic": "Contracts & liens",
+      "trade": "law",
+      "state": null,
+      "source": "Construction contract practice (retainage)",
+      "fact": "Retainage is a percentage (commonly 5% to 10%) withheld from each progress payment and released after completion; it gives the owner leverage to ensure the work is finished and protection against unpaid subcontractor and supplier liens. Many states cap retainage on public and some private work.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["retainage", "retention", "withheld", "progress payment", "final payment", "lien protection"]
+    },
+    {
+      "topic": "Contracts & liens",
+      "trade": "law",
+      "state": null,
+      "source": "Construction contract practice (retainage calculation)",
+      "fact": "On a $200,000 lump-sum contract with 10% retainage, when the work is 90% complete the contractor has earned $180,000 but been paid only $162,000 ($18,000 retained); the remaining balance is $38,000 ($20,000 of unfinished work plus $18,000 retainage).",
+      "status": "corrected",
+      "note": "Card answers $20,000, which ignores the $18,000 retainage withheld from the 90% earned. With 10% retainage, the payments made total $162,000, so $38,000 remains.",
+      "keywords": ["retainage calculation", "balance owed", "lump sum", "percent complete", "10 percent retainage", "payment math"]
+    },
+    {
+      "topic": "Contracts & liens",
+      "trade": "law",
+      "state": null,
+      "source": "AIA A201-2017 2.3.1 and 3.7.1",
+      "fact": "Responsibility for permits is set by the contract. Under AIA A201-2017, unless the contract says otherwise, the contractor secures and pays for the building permit and the permits, fees and licenses needed for the work, while the owner secures and pays for approvals, easements, assessments and charges such as zoning or utility connection approvals.",
+      "status": "corrected",
+      "note": "Cards say the owner is responsible for purchasing and paying for all permits. Under the standard AIA A201 general conditions the contractor obtains and pays for the building permit; the owner handles approvals and easements. Local law also often requires the licensed contractor to pull the permit.",
+      "keywords": ["building permit", "who pays permits", "aia a201", "permit fees", "owner responsibility", "contractor responsibility"]
+    },
+    {
+      "topic": "Contracts & liens",
+      "trade": "law",
+      "state": null,
+      "source": "Contract law fundamentals (breach)",
+      "fact": "A breach of contract is a party's failure to perform its obligations without legal excuse. A material breach goes to the heart of the contract and justifies termination; an immaterial (minor) breach, such as a progress payment one day late, entitles the other party only to damages. A contractor who walks off the job permanently over such a minor delay commits a material breach itself.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["breach of contract", "material breach", "immaterial breach", "termination", "abandonment", "late payment"]
+    }
+  ],
+  "questions": [
+    {
+      "t": "law",
+      "topic": "Business organization",
+      "q": "Which IRS form does a corporation file to elect to be taxed as an S corporation?",
+      "c": ["Form 1120", "Form 2553", "Form 8832", "Form SS-4"],
+      "a": 1,
+      "ref": "IRS Form 2553",
+      "why": "Form 2553 is the S corporation election. Form 8832 is the entity classification election, SS-4 requests an EIN, and 1120 is the C corporation return."
+    },
+    {
+      "t": "law",
+      "topic": "Business organization",
+      "q": "Shareholders of an S corporation are taxed on their share of the company's income:",
+      "c": ["only when it is paid out as dividends", "only after the corporation pays its own tax", "whether or not it is distributed to them", "only if it exceeds the company's retained earnings"],
+      "a": 2,
+      "ref": "IRS: S Corporations",
+      "why": "S corporation income passes through on Schedule K-1 and is taxable to shareholders in the year earned, whether or not it is distributed. The entity generally pays no federal income tax."
+    },
+    {
+      "t": "law",
+      "topic": "Business organization",
+      "q": "A general partnership closes owing a supplier $60,000. The partnership has three general partners. What is the most the supplier can collect from any single partner?",
+      "c": ["$20,000", "$30,000", "Only that partner's capital contribution", "$60,000"],
+      "a": 3,
+      "ref": "UPA joint and several liability",
+      "why": "General partners are jointly and severally liable, so a creditor can collect the entire debt from any one partner. That partner can then seek contribution from the others."
+    },
+    {
+      "t": "law",
+      "topic": "Business organization",
+      "q": "Which owners have no management authority and risk losing only the amount they invested?",
+      "c": ["Limited partners", "General partners", "Sole proprietors", "Joint venturers"],
+      "a": 0,
+      "ref": "Uniform Limited Partnership Act",
+      "why": "Limited partners stay out of management, and their liability is capped at their investment. General partners manage the business and carry unlimited liability."
+    },
+    {
+      "t": "law",
+      "topic": "Bonds & insurance",
+      "q": "A contractor wants coverage for a building under construction against every cause of loss except those specifically excluded. Which policy fits best?",
+      "c": ["Named-peril builder's risk", "All-risk builder's risk", "Contractor's equipment floater", "Business owner's policy"],
+      "a": 1,
+      "ref": "Builder's risk fundamentals",
+      "why": "An all-risk (special form) builder's risk policy covers every peril not excluded. A named-peril policy covers only the perils it lists."
+    },
+    {
+      "t": "law",
+      "topic": "Bonds & insurance",
+      "q": "A contractor's commercial general liability policy would normally respond to which claim?",
+      "c": ["An employee's back injury from lifting drywall", "Theft of the contractor's excavator from the yard", "A neighbor injured by debris falling from the jobsite", "A design error in drawings the contractor prepared"],
+      "a": 2,
+      "ref": "ISO CGL fundamentals",
+      "why": "CGL covers bodily injury and property damage to third parties. Employee injuries fall under workers' comp, equipment theft under an inland marine floater, and design errors under professional liability."
+    },
+    {
+      "t": "law",
+      "topic": "Bonds & insurance",
+      "q": "Which coverage protects mobile construction equipment while it is in storage, in transit, or at a temporary jobsite?",
+      "c": ["Umbrella liability", "Builder's risk", "Key person insurance", "Contractor's equipment floater"],
+      "a": 3,
+      "ref": "Inland marine fundamentals",
+      "why": "An equipment floater is an inland marine policy that follows movable equipment wherever it is. Builder's risk covers the structure being built."
+    },
+    {
+      "t": "law",
+      "topic": "Payroll & tax",
+      "q": "Under federal rules, an employer becomes liable for FUTA tax if it had at least one employee during some part of a day in how many different weeks of the current or prior calendar year?",
+      "c": ["20", "10", "26", "52"],
+      "a": 0,
+      "ref": "IRS Pub 15, FUTA",
+      "why": "The FUTA test is met by paying $1,500 or more in wages in any calendar quarter, or by having an employee in 20 or more different weeks in the current or prior year."
+    },
+    {
+      "t": "law",
+      "topic": "Bonds & insurance",
+      "q": "In a contract surety bond, the contractor whose performance is guaranteed is called the:",
+      "c": ["obligee", "principal", "surety", "beneficiary"],
+      "a": 1,
+      "ref": "Surety fundamentals",
+      "why": "The principal (contractor) owes the obligation, the obligee (owner) is protected, and the surety guarantees performance and can seek reimbursement from the principal."
+    },
+    {
+      "t": "law",
+      "topic": "Bonds & insurance",
+      "q": "Which bond assures the owner that a bidder will sign the contract at its bid price and furnish the required performance and payment bonds?",
+      "c": ["Maintenance bond", "Payment bond", "Bid bond", "Completion bond"],
+      "a": 2,
+      "ref": "FAR 28.101; surety basics",
+      "why": "A bid bond backs the bidder's promise to enter the contract and provide the required bonds. If the bidder refuses, the surety compensates the owner up to the bond amount."
+    },
+    {
+      "t": "law",
+      "topic": "Bonds & insurance",
+      "q": "Under the Miller Act as applied in the FAR, performance and payment bonds are required on federal construction contracts exceeding:",
+      "c": ["$25,000", "$100,000", "$250,000", "$150,000"],
+      "a": 3,
+      "ref": "FAR 28.102-1",
+      "why": "The original $100,000 statutory threshold has been inflation-adjusted to $150,000, and the 2025 FAR inflation update left the bond threshold unchanged."
+    },
+    {
+      "t": "law",
+      "topic": "Bonds & insurance",
+      "q": "A federal construction contract is awarded for $4,000,000. Absent a contracting officer determination that it is impractical, the payment bond's penal amount should be:",
+      "c": ["$4,000,000", "$1,600,000", "$2,000,000", "$2,500,000"],
+      "a": 0,
+      "ref": "FAR 28.102-2(b)",
+      "why": "Since the 1999 amendments, federal payment bonds equal 100% of the original contract price. The old 50%/40%/$2.5 million sliding scale no longer applies."
+    },
+    {
+      "t": "law",
+      "topic": "Bonds & insurance",
+      "q": "Which bond guarantees for a stated period after completion that no defects in workmanship or materials will appear?",
+      "c": ["Performance bond", "Maintenance bond", "Bid bond", "License bond"],
+      "a": 1,
+      "ref": "Surety fundamentals",
+      "why": "A maintenance (warranty) bond covers defects that appear in a set period after completion. A performance bond covers completing the work itself."
+    },
+    {
+      "t": "law",
+      "topic": "Estimating & bidding",
+      "q": "A change to the bidding documents issued to all bidders before bids are due is called a(n):",
+      "c": ["change order", "construction change directive", "addendum", "submittal"],
+      "a": 2,
+      "ref": "Bidding practice",
+      "why": "Addenda modify the bid documents before bids are opened and become part of the contract documents. Change orders and directives modify an executed contract."
+    },
+    {
+      "t": "law",
+      "topic": "Estimating & bidding",
+      "q": "Several contractors secretly agree on which of them will submit the low bid on a public project. This is:",
+      "c": ["bid shopping", "bid peddling", "value engineering", "bid rigging"],
+      "a": 3,
+      "ref": "Sherman Act, 15 U.S.C. 1",
+      "why": "Bid rigging is collusion among competitors to set the outcome of a bid and is a federal antitrust crime. Bid shopping is a contractor shopping one sub's price to others."
+    },
+    {
+      "t": "law",
+      "topic": "Estimating & bidding",
+      "q": "Which of the following is part of labor burden?",
+      "c": ["Employer's share of Social Security and Medicare", "The worker's base hourly wage", "Rental cost of a scissor lift", "Office rent"],
+      "a": 0,
+      "ref": "Estimating practice",
+      "why": "Labor burden is the employer's cost on top of wages: payroll taxes, workers' comp, insurance and benefits. Base wages, equipment and office rent are other cost categories."
+    },
+    {
+      "t": "law",
+      "topic": "Estimating & bidding",
+      "q": "Which cost is company (general) overhead rather than project overhead?",
+      "c": ["Jobsite storage trailer", "Accounting fees for the main office", "Portable toilets on site", "Building permit for the project"],
+      "a": 1,
+      "ref": "Estimating practice",
+      "why": "Company overhead is incurred whether or not jobs are running, such as office rent, accounting and admin salaries. Trailers, toilets and permits are job-specific costs."
+    },
+    {
+      "t": "law",
+      "topic": "Estimating & bidding",
+      "q": "Using the square-foot method, what is the estimated cost of a 2,400 sq ft building at $140 per square foot?",
+      "c": ["$240,000", "$280,000", "$336,000", "$384,000"],
+      "a": 2,
+      "ref": "Square-foot estimating",
+      "why": "The square-foot method multiplies floor area by a unit cost: 2,400 sq ft x $140/sq ft = $336,000."
+    },
+    {
+      "t": "law",
+      "topic": "Contracts & liens",
+      "q": "Which of the following is NOT one of the required elements of a valid contract?",
+      "c": ["Consideration", "Legal purpose", "Competent parties", "Notarized signatures"],
+      "a": 3,
+      "ref": "Contract law fundamentals",
+      "why": "A valid contract needs offer and acceptance, consideration, competent parties and a legal purpose. Notarization is not a general requirement."
+    },
+    {
+      "t": "law",
+      "topic": "Contracts & liens",
+      "q": "An owner offers a remodel contract for $80,000. The contractor replies that it will do the work for $86,000. Legally, the contractor's reply is:",
+      "c": ["a counteroffer that rejects the original offer", "an acceptance with a price adjustment", "a binding contract at $80,000", "a breach of contract"],
+      "a": 0,
+      "ref": "Mirror-image rule",
+      "why": "Acceptance must match the offer's terms. Changing the price makes the reply a counteroffer, which ends the original offer and creates a new one."
+    },
+    {
+      "t": "law",
+      "topic": "Contracts & liens",
+      "q": "A $200,000 lump-sum contract carries 10% retainage. The work is 90% complete and all progress payments to date have been made. How much remains to be paid to the contractor?",
+      "c": ["$20,000", "$38,000", "$18,000", "$40,000"],
+      "a": 1,
+      "ref": "Retainage calculation",
+      "why": "Earned to date is $180,000, less 10% retainage ($18,000), so $162,000 has been paid. The balance is $200,000 - $162,000 = $38,000."
+    },
+    {
+      "t": "law",
+      "topic": "Contracts & liens",
+      "q": "Under AIA A201-2017, unless the contract provides otherwise, who secures and pays for the building permit?",
+      "c": ["The owner", "The architect", "The contractor", "The surety"],
+      "a": 2,
+      "ref": "AIA A201-2017 3.7.1",
+      "why": "A201 assigns the building permit and related permits, fees and licenses to the contractor. The owner handles approvals, easements and assessments."
+    },
+    {
+      "t": "law",
+      "topic": "Contracts & liens",
+      "q": "An owner pays a progress payment one day late, and the contractor abandons the job permanently. Who has committed a material breach?",
+      "c": ["The owner, by paying late", "Neither party", "Both parties equally", "The contractor, by abandoning the work"],
+      "a": 3,
+      "ref": "Contract law: breach",
+      "why": "A one-day payment delay is normally an immaterial breach, which supports damages but not termination. Abandoning the work goes to the heart of the contract and is a material breach."
+    }
+  ]
+}

@@ -1,0 +1,1137 @@
+{
+  "source": "NASCLA seminar set cards 1-149",
+  "facts": [
+    {
+      "topic": "Safety (OSHA)",
+      "trade": "gc",
+      "state": null,
+      "source": "OSHA 29 CFR 1926.16",
+      "fact": "A prime contractor that contracts for full performance of a job takes on all employer obligations under OSHA's construction standards for the whole project, including work it subcontracts. Each subcontractor is also responsible for compliance on its own portion, so the responsibility is shared.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["prime contractor", "general contractor", "subcontractor", "safety responsibility", "multi-employer", "1926.16"]
+    },
+    {
+      "topic": "Safety (OSHA)",
+      "trade": "gc",
+      "state": null,
+      "source": "OSHA 29 CFR 1926.105(a); 1926.501(b)(1)",
+      "fact": "OSHA 1926.105 still requires safety nets where work is more than 25 ft above the ground, water or another surface and ladders, scaffolds, catch platforms, temporary floors, safety lines or safety belts are impractical. Separately, Subpart M requires guardrails, nets or personal fall arrest at 6 ft for most construction work, so 25 ft is not the general fall protection trigger.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["safety nets", "25 feet", "fall protection", "1926.105", "net height", "6 feet"]
+    },
+    {
+      "topic": "Safety (OSHA)",
+      "trade": "gc",
+      "state": null,
+      "source": "OSHA 29 CFR 1926 Subpart E (1926.95-1926.107)",
+      "fact": "OSHA construction Subpart E, Personal Protective and Life Saving Equipment, covers general PPE criteria, foot, head, hearing, eye and face, and respiratory protection, safety belts, lifelines and lanyards, safety nets, and working over or near water.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["ppe", "personal protective equipment", "subpart e", "life saving equipment", "respiratory protection", "head protection"]
+    },
+    {
+      "topic": "Safety (OSHA)",
+      "trade": "gc",
+      "state": null,
+      "source": "OSHA 29 CFR 1926.251(c)(4)(iv)",
+      "fact": "Wire rope used for rigging must be taken out of service if, in any length of eight rope diameters, the visible broken wires exceed 10 percent of the total number of wires, or if the rope shows other signs of excessive wear, corrosion or defects.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["wire rope", "broken wires", "rigging", "10 percent", "eight diameters", "remove from service"]
+    },
+    {
+      "topic": "Safety (OSHA)",
+      "trade": "gc",
+      "state": null,
+      "source": "OSHA 29 CFR 1926.300(d)",
+      "fact": "Hand-held powered circular saws, chain saws, and percussion tools without a positive accessory holding means must have a constant-pressure switch that cuts the power as soon as the operator releases it.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["constant pressure switch", "circular saw", "chain saw", "dead man switch", "percussion tool", "power tool switch"]
+    },
+    {
+      "topic": "Safety (OSHA)",
+      "trade": "gc",
+      "state": null,
+      "source": "OSHA 29 CFR 1926.302(b)(4)",
+      "fact": "The limit of less than 30 psi for compressed air used in cleaning (with chip guarding and PPE) does not apply when cleaning concrete forms, mill scale or for similar purposes.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["compressed air", "30 psi", "cleaning", "concrete forms", "mill scale", "air nozzle"]
+    },
+    {
+      "topic": "Safety (OSHA)",
+      "trade": "gc",
+      "state": null,
+      "source": "OSHA 29 CFR 1926.303",
+      "fact": "Workers using abrasive wheels must wear eye protection that meets Subpart E, unless eye shields permanently attached to the bench or floor stand give them adequate protection.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["abrasive wheel", "grinder", "eye protection", "safety glasses", "eye shield", "bench grinder"]
+    },
+    {
+      "topic": "Safety (OSHA)",
+      "trade": "gc",
+      "state": null,
+      "source": "OSHA 29 CFR 1926.350(a)",
+      "fact": "Bars may never be used under cylinder valves or valve protection caps to pry frozen compressed gas cylinders loose. Frozen cylinders are thawed with warm water, never boiling water.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["gas cylinder", "frozen cylinder", "thaw", "valve cap", "warm water", "pry bar"]
+    },
+    {
+      "topic": "Safety (OSHA)",
+      "trade": "gc",
+      "state": null,
+      "source": "OSHA 29 CFR 1926.350(a)(9)",
+      "fact": "Compressed gas cylinders must be secured upright at all times, except when necessary for short periods while they are actually being hoisted or carried.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["gas cylinder", "upright", "secured", "oxygen acetylene", "cylinder storage", "compressed gas"]
+    },
+    {
+      "topic": "Safety (OSHA)",
+      "trade": "gc",
+      "state": null,
+      "source": "OSHA 29 CFR 1926.350(a)(11)",
+      "fact": "Inside buildings, gas cylinders must be stored in a well-protected, well-ventilated, dry location at least 20 ft from highly combustible materials such as oil or excelsior. Their assigned places must be away from elevators, stairs and gangways, and never in unventilated enclosures such as lockers or cupboards.",
+      "status": "corrected",
+      "note": "Card says at least 2 ft (6.1 m). 6.1 m is 20 ft. 1926.350(a)(11) requires 20 ft from highly combustible materials.",
+      "keywords": ["gas cylinder storage", "inside building", "20 feet", "excelsior", "combustible materials", "lockers"]
+    },
+    {
+      "topic": "Safety (OSHA)",
+      "trade": "gc",
+      "state": null,
+      "source": "OSHA 29 CFR 1926.350(d)(1)",
+      "fact": "Before a regulator is connected, the cylinder valve is cracked (opened slightly and closed right away) to blow out dust and dirt. The worker stands to one side of the outlet, and a fuel-gas valve is never cracked where the gas could reach welding, sparks, flame or another ignition source.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["cracking valve", "regulator", "cylinder valve", "fuel gas", "oxy-acetylene", "welding"]
+    },
+    {
+      "topic": "Safety (OSHA)",
+      "trade": "gc",
+      "state": null,
+      "source": "OSHA 29 CFR 1926.351(d)",
+      "fact": "When an arc welder or cutter leaves the work or stops for any appreciable time, or when the welding machine is going to be moved, the power supply switch to the equipment must be opened (turned off).",
+      "status": "verified",
+      "note": "",
+      "keywords": ["arc welding", "power switch", "welder", "leaving work", "moving welder", "de-energize"]
+    },
+    {
+      "topic": "Safety (OSHA)",
+      "trade": "gc",
+      "state": null,
+      "source": "OSHA 29 CFR 1926.403(i)(1), Table K-1",
+      "fact": "For electrical equipment at 151 to 600 volts to ground, the minimum clear working space in front is 3 ft when there are exposed live parts on one side and nothing live or grounded opposite. It is 3-1/2 ft when grounded parts (including concrete, brick or tile walls) are opposite, and 4 ft when there are exposed live parts on both sides.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["working clearance", "electrical panel", "clear working space", "480 volt", "table k-1", "live parts"]
+    },
+    {
+      "topic": "Safety (OSHA)",
+      "trade": "gc",
+      "state": null,
+      "source": "OSHA 29 CFR 1926.403(j), Table K-2",
+      "fact": "Above 600 volts, OSHA's minimum depth of clear working space increases with voltage and exposure condition. For example, it is 3, 4 or 5 ft at 601 to 2,500 volts and 8, 10 or 12 ft above 75 kV, depending on whether the opposite side has no live or grounded parts, grounded parts, or exposed live parts.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["high voltage", "working space", "over 600 volts", "table k-2", "electrical clearance", "switchgear"]
+    },
+    {
+      "topic": "Safety (OSHA)",
+      "trade": "gc",
+      "state": null,
+      "source": "OSHA 29 CFR 1926.451(b)(3)(i)",
+      "fact": "An outrigger scaffold platform may be no more than 3 in from the face of the work. The general limit for other scaffolds is 14 in, or 18 in for plastering and lathing.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["outrigger scaffold", "3 inches", "face of work", "platform gap", "scaffold distance", "front edge"]
+    },
+    {
+      "topic": "Safety (OSHA)",
+      "trade": "gc",
+      "state": null,
+      "source": "OSHA 29 CFR 1926.451(b)(4)-(5)",
+      "fact": "Unless it is cleated or otherwise restrained, each end of a scaffold platform must extend at least 6 in past the centerline of its support. A platform 10 ft or shorter may overhang its support by no more than 12 in, and a longer one by no more than 18 in, unless the overhang is designed to carry the load without tipping or is blocked off by guardrails.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["scaffold plank", "overhang", "6 inches", "12 inches", "cantilever", "platform end", "centerline"]
+    },
+    {
+      "topic": "Safety (OSHA)",
+      "trade": "gc",
+      "state": null,
+      "source": "OSHA 29 CFR 1926.451(b)(7)",
+      "fact": "Where scaffold platforms are overlapped to make a longer platform, the overlap must fall only over supports and be at least 12 in, unless the platforms are nailed together or otherwise kept from moving.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["scaffold plank overlap", "12 inches", "platform overlap", "supports", "long platform", "nailed"]
+    },
+    {
+      "topic": "Safety (OSHA)",
+      "trade": "gc",
+      "state": null,
+      "source": "OSHA 29 CFR 1926.451(b)(10)",
+      "fact": "Scaffold components made by different manufacturers may be mixed only if they fit together without force and the scaffold's structural integrity is maintained. They may not be modified to make them fit unless a competent person determines that the result is structurally sound.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["intermix", "scaffold components", "different manufacturers", "competent person", "modify", "scaffold frames"]
+    },
+    {
+      "topic": "Safety (OSHA)",
+      "trade": "gc",
+      "state": null,
+      "source": "OSHA 29 CFR 1926.451(c)(2)",
+      "fact": "Legs, posts and frames of supported scaffolds must bear on base plates and mud sills or another firm foundation with level footings, and unstable objects may not be used as supports. Front-end loaders may hold platforms only if the manufacturer designed them for it, and forklifts only if the whole platform is attached to the forks and the forklift does not move horizontally while the platform is occupied.",
+      "status": "corrected",
+      "note": "Card says forklifts shall not be used at all. 1926.451(c)(2)(v) permits a forklift to support a scaffold platform if the entire platform is attached to the fork and the forklift is not moved horizontally while the platform is occupied.",
+      "keywords": ["mud sill", "base plate", "scaffold footing", "forklift", "front-end loader", "unstable objects"]
+    },
+    {
+      "topic": "Safety (OSHA)",
+      "trade": "gc",
+      "state": null,
+      "source": "OSHA 29 CFR 1926.451(g)(1)",
+      "fact": "Workers on a scaffold more than 10 ft above a lower level must be protected from falling. On boatswains' chairs and on catenary, float, needle beam and ladder jack scaffolds the protection must be personal fall arrest, while most supported scaffolds may use either guardrails or personal fall arrest.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["scaffold fall protection", "10 feet", "personal fall arrest", "guardrail", "ladder jack", "boatswains chair"]
+    },
+    {
+      "topic": "Safety (OSHA)",
+      "trade": "gc",
+      "state": null,
+      "source": "OSHA 29 CFR 1926.451(g)(1)(iii)-(vi)",
+      "fact": "On scaffolds over 10 ft high, a worker on a crawling board (chicken ladder) needs a guardrail or a 3/4 in diameter grabline or equivalent handhold beside the board. A walkway inside a scaffold needs a guardrail within 9-1/2 in of it along at least one side, and overhand bricklayers on supported scaffolds need guardrails or fall arrest on every open side except the side next to the wall.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["crawling board", "chicken ladder", "grabline", "scaffold walkway", "9-1/2 inches", "overhand bricklaying"]
+    },
+    {
+      "topic": "Safety (OSHA)",
+      "trade": "gc",
+      "state": null,
+      "source": "OSHA 29 CFR 1926.451(g)(4)(ii)",
+      "fact": "Toprails on supported scaffolds made or placed in service after January 1, 2000 must be 38 to 45 in above the platform. Older supported scaffolds, and suspended scaffolds that need both guardrails and fall arrest, may have toprails 36 to 45 in high.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["scaffold guardrail", "toprail height", "38 inches", "45 inches", "top rail", "january 1 2000"]
+    },
+    {
+      "topic": "Safety (OSHA)",
+      "trade": "gc",
+      "state": null,
+      "source": "OSHA 29 CFR 1926.452(w)(2)",
+      "fact": "Casters and wheels on mobile scaffolds must be locked with positive wheel and/or swivel locks, or an equivalent means, so the scaffold cannot move while it is used in one place.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["mobile scaffold", "casters", "wheel locks", "rolling scaffold", "swivel lock", "stationary"]
+    },
+    {
+      "topic": "Safety (OSHA)",
+      "trade": "gc",
+      "state": null,
+      "source": "OSHA 29 CFR 1926.501(b)(14)",
+      "fact": "Workers at wall openings, including openings with chutes attached, need guardrails, safety nets or personal fall arrest when the outside bottom edge of the opening is 6 ft or more above the lower level and the inside bottom edge is less than 39 in above the walking/working surface.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["wall opening", "39 inches", "6 feet", "fall protection", "window opening", "chute"]
+    },
+    {
+      "topic": "Safety (OSHA)",
+      "trade": "gc",
+      "state": null,
+      "source": "OSHA 29 CFR 1926.502(b)(2)(iv)",
+      "fact": "Balusters or other intermediate guardrail members between posts may be no more than 19 in apart. Other members, such as extra midrails or panels, must leave no opening in the guardrail system wider than 19 in.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["balusters", "19 inches", "guardrail", "intermediate members", "opening width", "guardrail spacing"]
+    },
+    {
+      "topic": "Safety (OSHA)",
+      "trade": "gc",
+      "state": null,
+      "source": "OSHA 29 CFR 1926.502(b)(9)",
+      "fact": "Guardrail top rails and midrails must be at least 1/4 in in nominal diameter or thickness so they do not cut workers. A wire-rope top rail must be flagged with high-visibility material at intervals of no more than 6 ft.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["top rail", "midrail", "1/4 inch", "wire rope guardrail", "flagging", "6 feet"]
+    },
+    {
+      "topic": "Safety (OSHA)",
+      "trade": "gc",
+      "state": null,
+      "source": "OSHA 29 CFR 1926.502(c)(4)(i)",
+      "fact": "Safety nets must be drop-tested at the jobsite after initial installation and before use, whenever they are relocated, after major repair, and every 6 months if left in one place. The test drops a 400 lb bag of sand, 30 in plus or minus 2 in in diameter, from the highest working surface, but from no less than 42 in above that level.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["safety net", "drop test", "6 months", "400 lb sand bag", "relocated", "42 inches"]
+    },
+    {
+      "topic": "Safety (OSHA)",
+      "trade": "gc",
+      "state": null,
+      "source": "OSHA 29 CFR 1926.502(d)(17)",
+      "fact": "A full body harness must attach at the center of the wearer's back near shoulder level, or above the wearer's head. A body belt's attachment point is at the center of the back, but body belts may not be used for fall arrest.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["harness", "d-ring", "attachment point", "shoulder level", "body belt", "fall arrest"]
+    },
+    {
+      "topic": "Safety (OSHA)",
+      "trade": "gc",
+      "state": null,
+      "source": "OSHA 29 CFR 1926.502(f)(2)",
+      "fact": "Once erected with the line attached, warning-line stanchions must resist, without tipping over, a horizontal force of at least 16 lb applied 30 in above the surface, perpendicular to the line and toward the roof edge. The rope, wire or chain must have a minimum tensile strength of 500 lb.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["warning line", "stanchion", "16 pounds", "roofing", "500 lb rope", "tip over"]
+    },
+    {
+      "topic": "Safety (OSHA)",
+      "trade": "gc",
+      "state": null,
+      "source": "OSHA 29 CFR 1926.502(i)(1)",
+      "fact": "Hole covers in roadways and vehicle aisles must support, without failure, at least twice the maximum axle load of the largest vehicle expected to cross them.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["hole cover", "roadway", "axle load", "vehicle aisle", "twice", "trench plate"]
+    },
+    {
+      "topic": "Safety (OSHA)",
+      "trade": "gc",
+      "state": null,
+      "source": "OSHA 29 CFR 1926.650(b); 1926.652(g)",
+      "fact": "A shield system, usually called a trench box or trench shield, is a structure that withstands the forces of a cave-in and protects the workers inside it. Shields may be permanent or portable (moved along as work progresses) and either premanufactured or job-built, and unlike shoring they do not hold the trench walls in place.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["shield system", "trench box", "trench shield", "cave-in", "protective system", "shoring"]
+    },
+    {
+      "topic": "Safety (OSHA)",
+      "trade": "gc",
+      "state": null,
+      "source": "OSHA 29 CFR 1926.651(g)(1)(i)",
+      "fact": "Where oxygen deficiency (less than 19.5 percent oxygen) or a hazardous atmosphere exists or could reasonably be expected, such as in landfills or near stored hazardous substances, the air in an excavation must be tested before workers enter if it is more than 4 ft deep.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["excavation atmosphere", "air testing", "4 feet", "oxygen deficiency", "landfill", "hazardous atmosphere"]
+    },
+    {
+      "topic": "Safety (OSHA)",
+      "trade": "gc",
+      "state": null,
+      "source": "OSHA 29 CFR 1926 Subpart P, Appendix A (manual tests)",
+      "fact": "In the plasticity test, soil that can be rolled into a 1/8 in thread at least 2 in long and held by one end without tearing is cohesive. In the thumb penetration test, Type A soil (about 1.5 tsf) can be readily indented by the thumb but penetrated only with great effort, while Type C soil (about 0.5 tsf) is easily penetrated several inches and molded with light finger pressure.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["thumb penetration test", "plasticity test", "soil classification", "cohesive soil", "manual test", "1/8 inch thread"]
+    },
+    {
+      "topic": "Safety (OSHA)",
+      "trade": "gc",
+      "state": null,
+      "source": "OSHA 29 CFR 1926 Subpart P, Appendix A(b)",
+      "fact": "Type A soil is cohesive soil with an unconfined compressive strength of 1.5 tsf or more, such as clay, silty clay, sandy clay, clay loam, and cemented soils like caliche and hardpan. No soil is Type A if it is fissured, subject to vibration from heavy traffic or pile driving, previously disturbed, part of a layered system dipping into the excavation at 4H:1V or steeper, or otherwise less stable.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["type a soil", "1.5 tsf", "unconfined compressive strength", "fissured", "previously disturbed", "caliche"]
+    },
+    {
+      "topic": "Safety (OSHA)",
+      "trade": "gc",
+      "state": null,
+      "source": "OSHA 29 CFR 1926 Subpart P, Appendix A(b)",
+      "fact": "Type B cohesive soil has an unconfined compressive strength greater than 0.5 tsf but less than 1.5 tsf. Type C has 0.5 tsf or less and includes granular soils such as gravel, sand and loamy sand, submerged soil, and soil from which water is freely seeping.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["type b soil", "type c soil", "0.5 tsf", "soil classification", "granular soil", "seeping water"]
+    },
+    {
+      "topic": "Safety (OSHA)",
+      "trade": "gc",
+      "state": null,
+      "source": "OSHA 29 CFR 1926 Subpart P, Appendix B (Figure B-1)",
+      "fact": "In Type A soil, excavations 20 ft deep or less may be sloped at 3/4H:1V, but short-term excavations (open 24 hours or less) that are 12 ft deep or less may be sloped at 1/2H:1V. Excavations 8 ft deep or less may have an unsupported vertical lower portion no taller than 3-1/2 ft.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["type a slope", "1/2 to 1", "short term excavation", "24 hours", "vertical lower portion", "3-1/2 feet"]
+    },
+    {
+      "topic": "Safety (OSHA)",
+      "trade": "gc",
+      "state": null,
+      "source": "OSHA 29 CFR 1926.703(a)",
+      "fact": "Formwork must be designed, built, braced and maintained to support every vertical and lateral load that can reasonably be expected. Drawings or plans, including all revisions, for the jack layout, formwork and shoring, working decks and scaffolds must be available at the jobsite.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["formwork", "shoring drawings", "jobsite plans", "concrete forms", "lateral loads", "subpart q"]
+    },
+    {
+      "topic": "Safety (OSHA)",
+      "trade": "gc",
+      "state": null,
+      "source": "OSHA 29 CFR 1926.754(b)",
+      "fact": "In multi-story steel erection there may be no more than 8 stories between the erection floor and the uppermost permanent floor, and no more than 4 floors or 48 ft (whichever is less) of unfinished bolting or welding above the foundation or uppermost secured floor. A fully planked or decked floor or nets must be kept within 2 stories or 30 ft (whichever is less) directly below erection work, unless the design itself maintains structural integrity.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["steel erection", "multi-story", "48 feet", "unfinished bolting", "permanent floors", "planked floor"]
+    },
+    {
+      "topic": "Safety (OSHA)",
+      "trade": "gc",
+      "state": null,
+      "source": "OSHA 29 CFR 1926.757(e)",
+      "fact": "A bundle of joist bridging landed on steel joists may weigh no more than 1,000 lb in total. It must rest on at least 3 joists that are secured at one end, with the edge of the bundle within 1 ft of the secured end.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["joist bridging", "1,000 lb", "bundle", "steel joists", "landing loads", "secured end"]
+    },
+    {
+      "topic": "Safety (OSHA)",
+      "trade": "gc",
+      "state": null,
+      "source": "OSHA 29 CFR 1926.800(b)",
+      "fact": "In underground construction the employer must provide safe access and egress to all work stations and protect workers from being struck by excavators, haulage machines, trains and other mobile equipment. Unused chutes, manways and other openings must be tightly covered, bulkheaded or fenced off and posted with Keep Out signs, and completed or unused sections must be barricaded.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["underground construction", "tunnel", "access and egress", "keep out", "manway", "barricade"]
+    },
+    {
+      "topic": "Safety (OSHA)",
+      "trade": "gc",
+      "state": null,
+      "source": "OSHA 29 CFR 1926.1053(a)(1)",
+      "fact": "Portable ladders, self-supporting or not, must hold at least 4 times their maximum intended load, except extra-heavy-duty Type 1A metal or plastic ladders, which must hold at least 3.3 times. For non-self-supporting ladders the load capacity is checked with the ladder set at 75-1/2 degrees from horizontal.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["ladder capacity", "type 1a", "3.3 times", "4 times", "portable ladder", "75-1/2 degrees"]
+    },
+    {
+      "topic": "Safety (OSHA)",
+      "trade": "gc",
+      "state": null,
+      "source": "OSHA 29 CFR 1926.1053(b)(5)(i)",
+      "fact": "A non-self-supporting ladder is set so the horizontal distance from its top support to its foot is about one-quarter of its working length (a 4-to-1 ratio). A ladder with 16 ft of working length, for example, has its foot about 4 ft out from the support.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["ladder angle", "4 to 1", "one quarter", "extension ladder", "ladder setup", "working length"]
+    },
+    {
+      "topic": "Safety (OSHA)",
+      "trade": "gc",
+      "state": null,
+      "source": "OSHA 29 CFR 1926.1053(b)(20)-(22)",
+      "fact": "Workers must face the ladder when climbing up or down, keep at least one hand on it while moving, and not carry any object or load that could make them lose their balance.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["face the ladder", "climbing", "one hand", "ladder use", "carrying loads", "descending"]
+    },
+    {
+      "topic": "Safety (OSHA)",
+      "trade": "gc",
+      "state": null,
+      "source": "OSHA 29 CFR 1926.1412(d)(1)",
+      "fact": "A competent person does the crane shift inspection, a visual check for obvious deficiencies before or during each shift, with no disassembly or booming down unless the visual check or a trial run shows a need. It covers control mechanisms, pressurized lines, hydraulic fluid level, hooks and latches, wire rope and reeving, electrical apparatus, tires, ground conditions, level position, cab windows, and safety devices and operational aids.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["crane inspection", "shift inspection", "competent person", "hooks and latches", "wire rope", "visual inspection"]
+    },
+    {
+      "topic": "Safety (OSHA)",
+      "trade": "gc",
+      "state": null,
+      "source": "OSHA 29 CFR 1926.451(f)(7)",
+      "fact": "Scaffolds may be erected, moved, dismantled or altered only under the supervision and direction of a competent person qualified in that work. Only experienced, trained employees chosen by that competent person may do the work.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["scaffold erection", "competent person", "dismantle", "supervision", "alter scaffold", "trained employees"]
+    },
+    {
+      "topic": "Safety (OSHA)",
+      "trade": "gc",
+      "state": null,
+      "source": "OSHA 29 CFR 1926.1203(e)(2); 1926.1204",
+      "fact": "Each employee who will enter a permit-required confined space, or that employee's authorized representative, must be given the chance to observe the pre-entry atmospheric testing.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["confined space", "pre-entry testing", "observe testing", "authorized representative", "permit space", "atmospheric monitoring"]
+    },
+    {
+      "topic": "Estimating",
+      "trade": "gc",
+      "state": null,
+      "source": "Earthwork estimating fundamentals (swell and load factor)",
+      "fact": "The load factor converts loose volume back to bank volume and equals 1 divided by (1 + swell). Soil with 25 percent swell has a load factor of 1/1.25 = 0.80, so 10 loose cubic yards equal 8 bank cubic yards.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["load factor", "swell", "bank cubic yards", "loose cubic yards", "earthwork", "0.80"]
+    },
+    {
+      "topic": "Estimating",
+      "trade": "gc",
+      "state": null,
+      "source": "Earthwork estimating fundamentals (haul calculations)",
+      "fact": "To figure truck trips, convert bank cubic yards to loose cubic yards and divide by the truck's capacity, rounding up. For example, 1,000 BCY of soil with 32 percent swell is 1,000 x 1.32 = 1,320 LCY, and with 14 LCY trucks that is 1,320 / 14 = 94.3, so 95 trips.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["truck trips", "haul", "bcy to lcy", "swell factor", "truck capacity", "earthwork estimate"]
+    },
+    {
+      "topic": "Estimating",
+      "trade": "gc",
+      "state": null,
+      "source": "Earthmoving equipment practice (Peurifoy, Construction Planning, Equipment and Methods)",
+      "fact": "Scraper load time can be shortened by loading downgrade and by using push tractors (pusher dozers). The pusher pushes the scraper through the cut and boosts it as it leaves, which raises the loading rate.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["scraper", "pusher dozer", "push loading", "load time", "downgrade", "earthmoving"]
+    },
+    {
+      "topic": "Plan reading",
+      "trade": "gc",
+      "state": null,
+      "source": "Surveying fundamentals (route stationing)",
+      "fact": "In route and site layout, one full station is 100 ft and is written 1+00. Station 12+50 is therefore 1,250 ft along the baseline from the starting point at 0+00.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["station", "stationing", "100 feet", "baseline", "survey layout", "12+50"]
+    },
+    {
+      "topic": "Site work & concrete",
+      "trade": "gc",
+      "state": null,
+      "source": "OSHA 29 CFR 1926 Subpart P, Appendix D; trench shoring practice",
+      "fact": "Aluminum hydraulic shoring (hydraulic shoring jacks) can be installed and removed from the top of the trench, so workers do not have to enter an unprotected trench. It works best in firm soil that will stand long enough for the shores to be placed.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["hydraulic shoring", "shoring jacks", "trench shoring", "aluminum shores", "firm soil", "install from top"]
+    },
+    {
+      "topic": "Site work & concrete",
+      "trade": "gc",
+      "state": null,
+      "source": "ASTM D698 (standard Proctor); ASTM D1557 (modified Proctor)",
+      "fact": "The standard Proctor test (ASTM D698) compacts soil in a mold in 3 layers, with 25 blows per layer from a 5.5 lb rammer dropped 12 in. The modified Proctor test (ASTM D1557) uses a 10 lb rammer dropped 18 in on 5 layers, which gives a higher compactive effort.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["proctor test", "standard proctor", "modified proctor", "compaction test", "astm d698", "rammer"]
+    },
+    {
+      "topic": "Site work & concrete",
+      "trade": "gc",
+      "state": null,
+      "source": "ASTM D698 / D1557; soil compaction fundamentals",
+      "fact": "The Proctor test plots dry density against moisture content to find a soil's maximum dry density and optimum moisture content. Field compaction is then specified and tested as a percentage of that maximum, such as 95 percent of standard Proctor.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["maximum dry density", "optimum moisture", "percent compaction", "proctor", "95 percent", "soil density"]
+    },
+    {
+      "topic": "Site work & concrete",
+      "trade": "gc",
+      "state": null,
+      "source": "Dewatering practice (wellpoint systems)",
+      "fact": "Wellpoints lift water by suction, so a single stage can lower the water table only about 15 to 20 ft. Deeper drawdowns need multiple stages of wellpoints, or deep wells or ejectors.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["wellpoint", "suction lift", "dewatering", "water table", "multi-stage", "deep wells"]
+    },
+    {
+      "topic": "Site work & concrete",
+      "trade": "gc",
+      "state": null,
+      "source": "Dewatering practice",
+      "fact": "Groundwater in an excavation is controlled by pumping from sumps, by perimeter ditches or trenches that drain to sumps and pumps, or by lowering the water table ahead of digging with wellpoints or deep wells.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["groundwater", "dewatering", "sump pump", "perimeter trench", "wellpoints", "excavation water"]
+    },
+    {
+      "topic": "Site work & concrete",
+      "trade": "gc",
+      "state": null,
+      "source": "Geotechnical fundamentals",
+      "fact": "A high groundwater table raises the contractor's excavation and foundation costs for dewatering and waterproofing. It also lowers soil bearing capacity, which affects the size and type of foundation the designer must use.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["water table", "groundwater level", "bearing capacity", "foundation design", "dewatering cost", "high water table"]
+    },
+    {
+      "topic": "Site work & concrete",
+      "trade": "gc",
+      "state": null,
+      "source": "PTI field procedures; post-tensioning practice",
+      "fact": "In post-tensioned concrete the tendons are not stressed until the concrete reaches the strength the engineer specifies, commonly about 75 percent of design strength (often around 3,000 psi). Until then neither the concrete nor the tendons carry any prestress.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["post-tensioning", "stressing", "75 percent", "tendon", "concrete strength", "jacking"]
+    },
+    {
+      "topic": "Site work & concrete",
+      "trade": "gc",
+      "state": null,
+      "source": "Prestressed concrete fundamentals (ACI 318 / PCI)",
+      "fact": "A member is fully prestressed when no tensile stress develops under service (working) loads, and partially prestressed when some tension is allowed, with bonded mild reinforcement added to control crack width. Partial prestressing is the most common and economical approach.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["fully prestressed", "partially prestressed", "prestressed concrete", "tensile stress", "crack control", "mild steel"]
+    },
+    {
+      "topic": "Site work & concrete",
+      "trade": "gc",
+      "state": null,
+      "source": "PTI Specification for Unbonded Single Strand Tendons",
+      "fact": "An unbonded single-strand tendon is a seven-wire steel strand coated with a corrosion-inhibiting post-tensioning coating (grease) and enclosed in plastic sheathing extruded around it. The strand can move relative to the concrete and is anchored only at its ends.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["unbonded tendon", "post-tensioning", "plastic sheathing", "pt coating", "seven-wire strand", "extrusion"]
+    },
+    {
+      "topic": "Site work & concrete",
+      "trade": "gc",
+      "state": null,
+      "source": "PTI field procedures (stressing equipment)",
+      "fact": "Post-tensioning jacks and their gauges are calibrated as a matched set and must stay together, and the numbers on the jack and gauge are checked against the calibration records. Stressing equipment is used only by trained personnel and only for stressing tendons.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["stressing jack", "gauge calibration", "post-tensioning", "matched set", "calibration record", "pt equipment"]
+    },
+    {
+      "topic": "Site work & concrete",
+      "trade": "gc",
+      "state": null,
+      "source": "PTI / PT supplier handling and storage guidance",
+      "fact": "Post-tensioning tendons should be unloaded with nylon straps close to their storage area and stored dry and off the ground. Tarps over them are rigged like a tent so air circulates and condensation does not corrode the strand, and anchors and wedges are kept clean and dry.",
+      "status": "unverified",
+      "note": "Supplier and PTI field guidance, not a code requirement; specific handling methods vary by supplier.",
+      "keywords": ["tendon storage", "post-tensioning", "nylon straps", "tarp", "corrosion", "anchors and wedges"]
+    },
+    {
+      "topic": "Site work & concrete",
+      "trade": "gc",
+      "state": null,
+      "source": "PT supplier installation guidance",
+      "fact": "Post-tensioning installation drawings typically show tendon support bars about 4 ft on center. Extra supports may be needed so the tendon does not take a reverse curvature, which can cause the concrete to spall during stressing.",
+      "status": "unverified",
+      "note": "From PT supplier installation guidance on the card; actual support spacing is set by the project shop drawings and specification.",
+      "keywords": ["support bars", "tendon profile", "post-tensioning", "reverse curvature", "spalling", "chairs"]
+    },
+    {
+      "topic": "Site work & concrete",
+      "trade": "gc",
+      "state": null,
+      "source": "PTI barrier cable guidance (project specification governs)",
+      "fact": "For post-tensioned vehicle barrier cables, the non-stressing (dead-end) anchorage is commonly pre-seated, and the cable stressed, to about 80 percent of the strand's ultimate strength.",
+      "status": "unverified",
+      "note": "The card's 80 percent of ultimate strength matches some barrier-cable guidance, but the exact seating and stressing forces come from the project specification and supplier; not confirmed.",
+      "keywords": ["barrier cable", "parking garage", "dead end anchor", "80 percent", "strand", "post-tensioning"]
+    },
+    {
+      "topic": "Site work & concrete",
+      "trade": "gc",
+      "state": null,
+      "source": "ASTM D2487 (Unified Soil Classification System)",
+      "fact": "By particle size, boulders are larger than 12 in and cobbles are 3 to 12 in. Gravel runs from 3 in down to the No. 4 sieve (about 3/16 in, 4.75 mm), sand from the No. 4 down to the No. 200 sieve (0.075 mm), and silt and clay are the fines that pass the No. 200 sieve.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["particle size", "boulders", "cobbles", "gravel", "no. 4 sieve", "no. 200 sieve", "soil classification"]
+    },
+    {
+      "topic": "Site work & concrete",
+      "trade": "gc",
+      "state": null,
+      "source": "AASHTO M 146 soil terms; USDA texture classes; ASTM D2487",
+      "fact": "Clay particles are generally defined as finer than 0.002 mm, and silt as 0.002 to 0.075 mm (AASHTO; USDA uses 0.05 mm as the upper limit). The Unified system tells silt from clay by plasticity rather than particle size.",
+      "status": "corrected",
+      "note": "Card gives silt as 0.002 to 0.02 mm, which is the International (Atterberg) scale. U.S. engineering practice puts the silt/sand boundary at the No. 200 sieve (0.075 mm).",
+      "keywords": ["silt", "clay", "0.002 mm", "particle size", "fines", "plasticity"]
+    },
+    {
+      "topic": "Site work & concrete",
+      "trade": "gc",
+      "state": null,
+      "source": "PCA / ACI concrete flatwork practice",
+      "fact": "Concrete sidewalks are typically 4 in thick, with a light broom finish and edges rounded with an edging tool. Contraction (control) joints are commonly spaced at about the width of the walk, roughly 4 to 5 ft.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["sidewalk", "4 inch slab", "broom finish", "control joints", "joint spacing", "flatwork"]
+    },
+    {
+      "topic": "Estimating",
+      "trade": "gc",
+      "state": null,
+      "source": "Earthmoving productivity (Peurifoy; Caterpillar Performance Handbook)",
+      "fact": "A haul unit's cycle time is load, haul, dump and return time. Travel speeds depend on haul distance, rolling resistance, grade resistance (or grade assistance downhill), and the rimpull the machine can deliver.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["cycle time", "haul", "rolling resistance", "grade resistance", "rimpull", "truck productivity"]
+    },
+    {
+      "topic": "Site work & concrete",
+      "trade": "gc",
+      "state": null,
+      "source": "Foundation construction practice (earth retention)",
+      "fact": "Excavation walls are kept from caving either by sloping them back to a stable angle or with temporary earth support, such as interlocking steel sheet piling, steel soldier piles with horizontal timber lagging, or concrete slurry walls.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["sheet piling", "soldier piles", "lagging", "slurry wall", "earth retention", "excavation support"]
+    },
+    {
+      "topic": "Site work & concrete",
+      "trade": "gc",
+      "state": null,
+      "source": "Foundation construction practice",
+      "fact": "Underpinning gives an existing building new permanent support by extending its foundations down to a deeper bearing stratum. It is typically needed when nearby excavation will remove supporting soil or when new loads are added to the structure.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["underpinning", "existing foundation", "adjacent excavation", "bearing stratum", "foundation repair", "settlement"]
+    },
+    {
+      "topic": "Site work & concrete",
+      "trade": "gc",
+      "state": null,
+      "source": "Foundation engineering fundamentals (deep foundations)",
+      "fact": "End-bearing piles carry load down to a firm stratum at the pile tip, friction piles carry it through skin friction along the shaft, and many piles use a combination of both. Piles are made of timber, steel, concrete or composite materials.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["end bearing pile", "friction pile", "skin friction", "deep foundation", "pile types", "load transfer"]
+    },
+    {
+      "topic": "Site work & concrete",
+      "trade": "gc",
+      "state": null,
+      "source": "Pile driving terminology (foundation construction practice)",
+      "fact": "A pile's head is the top that takes the hammer blows, protected by a driving cap or, on timber piles, a steel pile ring that keeps it from brooming. On a tapered pile the butt is the large end and the tip the small end, a pile shoe is a metal point that protects the tip, and the cutoff is the part trimmed off after driving.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["pile head", "pile butt", "pile tip", "pile shoe", "pile cutoff", "driving cap"]
+    },
+    {
+      "topic": "Steel & trusses",
+      "trade": "gc",
+      "state": null,
+      "source": "AISC 360-16 Table J3.3 (nominal hole dimensions)",
+      "fact": "Standard holes for structural bolts are 1/16 in larger than the bolt diameter for bolts up to 7/8 in, so a 3/4 in bolt gets a 13/16 in hole. For bolts 1 in and larger the hole is 1/8 in larger, so a 1 in bolt gets a 1-1/8 in hole.",
+      "status": "corrected",
+      "note": "Card says holes are always 1/16 in larger. AISC Table J3.3 uses bolt diameter plus 1/16 in only for bolts smaller than 1 in. A 1 in bolt gets a 1-1/8 in hole, and larger bolts get diameter plus 1/8 in.",
+      "keywords": ["bolt hole", "standard hole", "1/16 inch", "structural bolt", "aisc", "oversize"]
+    },
+    {
+      "topic": "Steel & trusses",
+      "trade": "gc",
+      "state": null,
+      "source": "AISC Steel Construction Manual (shape designations)",
+      "fact": "Common hot-rolled steel shapes are W (wide flange), S (American Standard beam), C and MC (channels), L (equal- or unequal-leg angles), HP (bearing piles), WT and ST tees cut from W and S shapes, HSS (hollow structural sections) and plate. A W12x26 is a wide flange with a nominal depth of 12 in that weighs 26 lb per foot.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["steel shapes", "wide flange", "w shape", "channel", "angle", "hss", "w12x26"]
+    },
+    {
+      "topic": "Steel & trusses",
+      "trade": "gc",
+      "state": null,
+      "source": "Structural fundamentals: truss types",
+      "fact": "Common truss types include king post, queen post, Fink (W), Howe, Pratt, Warren, scissors, bowstring, Belgian and sawtooth. Under gravity load a Pratt truss has its diagonals in tension and verticals in compression, and a Howe truss is the reverse.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["truss types", "pratt truss", "howe truss", "fink truss", "w truss", "warren truss", "king post"]
+    },
+    {
+      "topic": "Steel & trusses",
+      "trade": "gc",
+      "state": null,
+      "source": "Structural steel fundamentals (braced frames)",
+      "fact": "Tension cross-bracing (X-bracing) in steel frames handles load reversals because whichever diagonal is in tension resists the lateral load. The slender diagonals cannot resist compression, so removing one brace leaves the frame unstable for loads from that direction.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["cross bracing", "x bracing", "tension brace", "load reversal", "braced frame", "lateral stability"]
+    },
+    {
+      "topic": "Steel & trusses",
+      "trade": "gc",
+      "state": null,
+      "source": "AISC 360 connection types; structural fundamentals",
+      "fact": "Girder-to-column connections are either simple (pin-type) shear connections or moment connections. Pin-type connections carry vertical load only and need cross-bracing, shear walls or a concrete core for lateral stability, while moment connections resist rotation between girder and column and give the frame its own lateral stability.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["moment connection", "pin connection", "shear connection", "girder", "column", "lateral stability"]
+    },
+    {
+      "topic": "Steel & trusses",
+      "trade": "gc",
+      "state": null,
+      "source": "Structural steel erection practice",
+      "fact": "During steel erection, ironworkers line up the holes in connection plates and angles with drift pins and spud wrenches (wrenches with tapered handles) before final bolting.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["drift pin", "spud wrench", "steel erection", "bolt alignment", "ironworker", "connection"]
+    },
+    {
+      "topic": "Steel & trusses",
+      "trade": "gc",
+      "state": null,
+      "source": "Steel Deck Institute (SDI) deck types",
+      "fact": "The main types of steel deck are roof deck, form deck (a permanent form for concrete), composite floor deck (embossed so it bonds with the concrete and serves as the positive reinforcement), and cellular deck. Cellular deck has a flat bottom plate that forms cells used as electrical and communications raceways.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["steel deck", "composite deck", "form deck", "roof deck", "cellular deck", "metal decking"]
+    },
+    {
+      "topic": "Steel & trusses",
+      "trade": "gc",
+      "state": null,
+      "source": "Steel deck manufacturer catalogs (SDI)",
+      "fact": "Steel deck sheets are made in cover widths commonly from about 24 to 36 in (some cellular and specialty decks are narrower), and are cut to length for the project, often spanning several supports.",
+      "status": "unverified",
+      "note": "Card lists 12, 18, 24, 30 or 36 in as sheet lengths 'less than 40 in'. Those figures describe panel widths, not lengths, and exact widths vary by manufacturer and profile.",
+      "keywords": ["steel deck width", "cover width", "deck sheet", "metal deck", "panel size", "deck length"]
+    },
+    {
+      "topic": "Site work & concrete",
+      "trade": "gc",
+      "state": null,
+      "source": "Concrete construction practice (two-way joist systems, ACI 318)",
+      "fact": "A waffle slab is a two-way joist system formed with domes. The positive (bottom) reinforcement is concentrated in the ribs, while the negative reinforcement and temperature steel are placed within the slab thickness.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["waffle slab", "two-way joist", "ribbed slab", "dome forms", "positive reinforcement", "temperature steel"]
+    },
+    {
+      "topic": "Drywall & finishes",
+      "trade": "gc",
+      "state": null,
+      "source": "IRC 2021 R703.7; ASTM C926",
+      "fact": "Stucco is exterior portland cement plaster. Over metal or wire lath it is applied in three coats (scratch, brown and finish) totaling about 7/8 in, and over masonry or concrete in at least two coats.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["stucco", "portland cement plaster", "three coat", "scratch coat", "brown coat", "exterior plaster"]
+    },
+    {
+      "topic": "Roofing",
+      "trade": "gc",
+      "state": null,
+      "source": "NRCA single-ply roofing practice",
+      "fact": "EPDM is a thermoset (rubber) single-ply membrane, so its seams cannot be heat-welded and are made by lapping with splice adhesive or seam tape. Thermoplastic membranes such as PVC and TPO are joined by heat welding.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["epdm", "thermoset", "rubber roofing", "single-ply", "seam", "tpo pvc"]
+    },
+    {
+      "topic": "Masonry",
+      "trade": "gc",
+      "state": null,
+      "source": "Building construction fundamentals (curtain walls)",
+      "fact": "A curtain wall is a non-load-bearing exterior wall that carries only its own weight and lateral (wind) loads to the building frame. A masonry wall that carries floor or roof loads is a bearing wall, not a curtain wall.",
+      "status": "corrected",
+      "note": "Card says masonry curtain walls are either load-bearing or non-load-bearing. By definition a curtain wall carries no floor or roof loads; the load-bearing/non-load-bearing split describes masonry walls in general.",
+      "keywords": ["curtain wall", "non-load-bearing", "bearing wall", "masonry", "exterior wall", "cladding"]
+    },
+    {
+      "topic": "Fire protection",
+      "trade": "gc",
+      "state": null,
+      "source": "IBC 2021 Chapter 7 (fire-resistance of structural members); fireproofing practice",
+      "fact": "Structural steel is fireproofed with spray-applied fire-resistive materials, intumescent coatings, concrete or masonry encasement, or gypsum board enclosures. Lightweight insulating (cellular) concrete works well because its low density and high insulating value slow heat transfer.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["fireproofing", "spray-applied", "intumescent", "concrete encasement", "cellular concrete", "structural steel"]
+    },
+    {
+      "topic": "Site work & concrete",
+      "trade": "gc",
+      "state": null,
+      "source": "ACI 318 shear reinforcement",
+      "fact": "Stirrups are U-shaped or closed bars placed vertically across a beam to resist diagonal tension caused by shear. Shear is greatest near the supports, so stirrups are spaced closer together there and farther apart toward midspan.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["stirrups", "shear reinforcement", "diagonal tension", "beam", "stirrup spacing", "supports"]
+    },
+    {
+      "topic": "Site work & concrete",
+      "trade": "gc",
+      "state": null,
+      "source": "Reinforced concrete fundamentals (ACI 318)",
+      "fact": "Concrete is strong in compression but weak in tension, with a tensile strength of roughly one-tenth of its compressive strength. Reinforcing steel is therefore placed wherever tension occurs, such as near the bottom of a simply supported beam.",
+      "status": "verified",
+      "note": "",
+      "keywords": ["rebar purpose", "tension", "compression", "reinforced concrete", "tensile strength", "beam reinforcement"]
+    }
+  ],
+  "questions": [
+    {
+      "t": "gc",
+      "topic": "Safety (OSHA)",
+      "q": "A general contractor holds the prime contract for a building and subcontracts all of the framing. Under OSHA's construction standards, who is responsible for safety compliance on the framing work?",
+      "c": ["Only the framing subcontractor, because it controls the work", "The prime contractor, which keeps overall responsibility, along with the framing subcontractor for its portion", "Only the owner, who holds the building permit", "The prime contractor only if the subcontract assigns safety to it in writing"],
+      "a": 1,
+      "ref": "OSHA 29 CFR 1926.16",
+      "why": "By contracting for full performance, the prime contractor assumes all employer obligations for the whole job, even subcontracted work. Each subcontractor is also responsible for its own portion."
+    },
+    {
+      "t": "gc",
+      "topic": "Safety (OSHA)",
+      "q": "A rigging wire rope must be removed from service when the visible broken wires in any length of eight rope diameters exceed what share of the total wires?",
+      "c": ["10 percent", "5 percent", "20 percent", "25 percent"],
+      "a": 0,
+      "ref": "OSHA 29 CFR 1926.251(c)(4)(iv)",
+      "why": "Wire rope is retired when broken wires in any length of eight diameters exceed 10 percent of the total wires, or when it shows other excessive wear, corrosion or defects."
+    },
+    {
+      "t": "gc",
+      "topic": "Safety (OSHA)",
+      "q": "Which type of control must a hand-held powered circular saw have so that the power shuts off when the operator lets go?",
+      "c": ["Positive on-off toggle switch", "Lock-on switch with a separate release button", "Constant-pressure switch", "Key-operated safety switch"],
+      "a": 2,
+      "ref": "OSHA 29 CFR 1926.300(d)",
+      "why": "Circular saws, chain saws and percussion tools without positive accessory holding means need a constant-pressure switch that cuts the power when it is released."
+    },
+    {
+      "t": "gc",
+      "topic": "Safety (OSHA)",
+      "q": "Inside a building under construction, compressed gas cylinders must be stored at least how far from highly combustible materials such as oil or excelsior?",
+      "c": ["2 ft", "10 ft", "15 ft", "20 ft"],
+      "a": 3,
+      "ref": "OSHA 29 CFR 1926.350(a)(11)",
+      "why": "Indoor cylinder storage must be well-protected, ventilated and dry, and at least 20 ft (6.1 m) from highly combustible materials."
+    },
+    {
+      "t": "gc",
+      "topic": "Safety (OSHA)",
+      "q": "An electrician will work on 480Y/277-volt equipment (277 V to ground) with exposed live parts on one side of the working space and a concrete block wall on the other. What is the minimum depth of clear working space?",
+      "c": ["3 ft", "3-1/2 ft", "4 ft", "5 ft"],
+      "a": 1,
+      "ref": "OSHA 1926.403 Table K-1",
+      "why": "For 151 to 600 volts to ground, live parts on one side with grounded parts opposite require 3-1/2 ft, and concrete, brick or tile walls count as grounded."
+    },
+    {
+      "t": "gc",
+      "topic": "Safety (OSHA)",
+      "q": "What is the maximum distance allowed between an outrigger scaffold platform and the face of the work?",
+      "c": ["3 in", "8 in", "14 in", "18 in"],
+      "a": 0,
+      "ref": "OSHA 29 CFR 1926.451(b)(3)(i)",
+      "why": "Outrigger scaffolds are limited to 3 in from the face. The 14 in general limit and 18 in plastering/lathing limit do not apply to them."
+    },
+    {
+      "t": "gc",
+      "topic": "Safety (OSHA)",
+      "q": "Unless it is cleated or otherwise restrained, each end of a scaffold platform must extend past the centerline of its support by at least",
+      "c": ["2 in", "4 in", "12 in", "6 in"],
+      "a": 3,
+      "ref": "OSHA 29 CFR 1926.451(b)(4)",
+      "why": "An unrestrained platform end must extend at least 6 in over the centerline of its support so it cannot slip off."
+    },
+    {
+      "t": "gc",
+      "topic": "Safety (OSHA)",
+      "q": "Under what condition may a forklift be used to support a scaffold platform?",
+      "c": ["Never; forklifts are prohibited from supporting platforms", "When the forks are lowered to within 6 ft of the ground", "When the entire platform is attached to the forks and the forklift does not move horizontally while the platform is occupied", "When a spotter stays at the forklift at all times"],
+      "a": 2,
+      "ref": "OSHA 29 CFR 1926.451(c)(2)(v)",
+      "why": "A forklift may hold a scaffold platform only if the whole platform is attached to the fork and the forklift is not moved horizontally while workers are on it."
+    },
+    {
+      "t": "gc",
+      "topic": "Safety (OSHA)",
+      "q": "Workers on a scaffold must be protected from falling once they are more than what height above a lower level?",
+      "c": ["6 ft", "10 ft", "15 ft", "4 ft"],
+      "a": 1,
+      "ref": "OSHA 29 CFR 1926.451(g)(1)",
+      "why": "The scaffold standard sets the fall protection trigger at more than 10 ft, unlike the 6 ft general trigger in Subpart M."
+    },
+    {
+      "t": "gc",
+      "topic": "Safety (OSHA)",
+      "q": "On a supported scaffold placed in service after January 1, 2000, the top edge of the toprail must be between which heights above the platform?",
+      "c": ["36 and 42 in", "39 and 45 in", "38 and 45 in", "42 and 48 in"],
+      "a": 2,
+      "ref": "OSHA 29 CFR 1926.451(g)(4)(ii)",
+      "why": "Newer supported scaffolds need toprails 38 to 45 in high. The 36 to 45 in range applies only to older supported scaffolds and certain suspended scaffolds."
+    },
+    {
+      "t": "gc",
+      "topic": "Safety (OSHA)",
+      "q": "A wall opening has its outside bottom edge 8 ft above the ground. Fall protection is required if the inside bottom edge is less than how high above the floor?",
+      "c": ["39 in", "30 in", "42 in", "48 in"],
+      "a": 0,
+      "ref": "OSHA 29 CFR 1926.501(b)(14)",
+      "why": "Wall openings need guardrails, nets or fall arrest when the outside drop is 6 ft or more and the inside bottom edge is less than 39 in above the walking surface."
+    },
+    {
+      "t": "gc",
+      "topic": "Safety (OSHA)",
+      "q": "When balusters are used as intermediate members in a guardrail system, they may be no more than how far apart?",
+      "c": ["12 in", "19 in", "21 in", "24 in"],
+      "a": 1,
+      "ref": "OSHA 29 CFR 1926.502(b)(2)(iv)",
+      "why": "Intermediate members such as balusters may be at most 19 in apart, and no opening in the guardrail system may exceed 19 in."
+    },
+    {
+      "t": "gc",
+      "topic": "Safety (OSHA)",
+      "q": "A safety net installation that stays in one place must be drop-tested again at intervals of no more than",
+      "c": ["30 days", "3 months", "12 months", "6 months"],
+      "a": 3,
+      "ref": "OSHA 29 CFR 1926.502(c)(4)(i)",
+      "why": "Nets are drop-tested after installation, relocation and major repair, and every 6 months if left in place, using a 400 lb sand bag."
+    },
+    {
+      "t": "gc",
+      "topic": "Safety (OSHA)",
+      "q": "A temporary cover over a hole in a vehicle aisle must support, without failure, at least",
+      "c": ["the gross weight of the heaviest vehicle expected", "twice the maximum axle load of the largest vehicle expected to cross it", "1.5 times the weight of workers and materials on it", "4 times the intended load of foot traffic"],
+      "a": 1,
+      "ref": "OSHA 29 CFR 1926.502(i)(1)",
+      "why": "Covers in roadways and vehicle aisles must carry at least twice the maximum axle load of the largest vehicle expected. Other covers must carry twice the load of workers, equipment and materials."
+    },
+    {
+      "t": "gc",
+      "topic": "Safety (OSHA)",
+      "q": "Where a hazardous atmosphere could reasonably be expected, such as an excavation in a former landfill, the air must be tested before workers enter excavations deeper than",
+      "c": ["4 ft", "5 ft", "6 ft", "20 ft"],
+      "a": 0,
+      "ref": "OSHA 29 CFR 1926.651(g)(1)(i)",
+      "why": "Atmospheric testing is required before entry into excavations greater than 4 ft deep where oxygen deficiency or a hazardous atmosphere may exist."
+    },
+    {
+      "t": "gc",
+      "topic": "Safety (OSHA)",
+      "q": "A cohesive soil has an unconfined compressive strength of 2 tsf. Which condition by itself keeps it from being classified as Type A?",
+      "c": ["It is a clay loam", "It is cemented, like caliche", "It is fissured", "It was excavated less than 24 hours ago"],
+      "a": 2,
+      "ref": "OSHA 1926 Subpart P App. A",
+      "why": "No soil is Type A if it is fissured, subject to vibration, previously disturbed, or in layers dipping into the excavation at 4H:1V or steeper. Clay loam and cemented soils can be Type A."
+    },
+    {
+      "t": "gc",
+      "topic": "Safety (OSHA)",
+      "q": "An excavation in Type A soil is 10 ft deep and will be open less than 24 hours. What is the steepest simple slope Appendix B allows?",
+      "c": ["1:1", "3/4:1", "1-1/2:1", "1/2:1"],
+      "a": 3,
+      "ref": "OSHA 1926 Subpart P App. B",
+      "why": "Short-term (24 hours or less) Type A excavations 12 ft deep or less may be sloped at 1/2H:1V. Otherwise Type A is limited to 3/4H:1V."
+    },
+    {
+      "t": "gc",
+      "topic": "Safety (OSHA)",
+      "q": "During multi-story steel erection, unfinished bolting or welding above the foundation or uppermost permanently secured floor may not exceed",
+      "c": ["2 floors or 30 ft, whichever is less", "4 floors or 48 ft, whichever is less", "8 floors or 96 ft, whichever is less", "4 floors or 48 ft, whichever is greater"],
+      "a": 1,
+      "ref": "OSHA 29 CFR 1926.754(b)(2)",
+      "why": "The limit is 4 floors or 48 ft, whichever is less, unless the design maintains structural integrity. The 2 stories or 30 ft figure applies to the decked floor or nets below erection work."
+    },
+    {
+      "t": "gc",
+      "topic": "Safety (OSHA)",
+      "q": "A bundle of joist bridging landed on steel joists may weigh no more than",
+      "c": ["4,000 lb", "2,000 lb", "500 lb", "1,000 lb"],
+      "a": 3,
+      "ref": "OSHA 29 CFR 1926.757(e)",
+      "why": "Bridging bundles are capped at 1,000 lb and must sit on at least 3 joists secured at one end, within 1 ft of the secured end."
+    },
+    {
+      "t": "gc",
+      "topic": "Safety (OSHA)",
+      "q": "An extra-heavy-duty Type 1A metal or plastic portable ladder must be able to support at least how many times its maximum intended load?",
+      "c": ["4 times", "6 times", "3.3 times", "2 times"],
+      "a": 2,
+      "ref": "OSHA 29 CFR 1926.1053(a)(1)",
+      "why": "Portable ladders generally must hold 4 times the maximum intended load, but Type 1A metal or plastic ladders need only 3.3 times."
+    },
+    {
+      "t": "gc",
+      "topic": "Safety (OSHA)",
+      "q": "An extension ladder has a working length of 20 ft from its foot to its top support. About how far out from the support should its foot be placed?",
+      "c": ["2-1/2 ft", "4 ft", "5 ft", "6-2/3 ft"],
+      "a": 2,
+      "ref": "OSHA 29 CFR 1926.1053(b)(5)(i)",
+      "why": "The horizontal distance should be about one-quarter of the working length, and 20 ft / 4 = 5 ft."
+    },
+    {
+      "t": "gc",
+      "topic": "Estimating",
+      "q": "A soil swells 25 percent when excavated. What is its load factor?",
+      "c": ["1.25", "0.75", "0.85", "0.80"],
+      "a": 3,
+      "ref": "Earthwork estimating: load factor",
+      "why": "Load factor = 1 / (1 + swell) = 1 / 1.25 = 0.80. Multiply loose volume by it to get bank volume."
+    },
+    {
+      "t": "gc",
+      "topic": "Estimating",
+      "q": "You must haul away 1,000 bank cubic yards of soil that swells 32 percent, using trucks that carry 14 loose cubic yards. How many truck trips are needed?",
+      "c": ["72", "94", "95", "132"],
+      "a": 2,
+      "ref": "Earthwork estimating: haul trips",
+      "why": "1,000 BCY x 1.32 = 1,320 LCY, and 1,320 / 14 = 94.3. A partial load still needs a trip, so round up to 95."
+    },
+    {
+      "t": "gc",
+      "topic": "Plan reading",
+      "q": "On a site plan, station 6+75 is how far from station 0+00?",
+      "c": ["675 ft", "67.5 ft", "6.75 ft", "6,750 ft"],
+      "a": 0,
+      "ref": "Surveying: stationing",
+      "why": "One full station is 100 ft, so 6+75 means 6 x 100 + 75 = 675 ft from the start."
+    },
+    {
+      "t": "gc",
+      "topic": "Site work & concrete",
+      "q": "In the standard Proctor compaction test (ASTM D698), each soil layer gets 25 blows from a rammer of what weight dropped from what height?",
+      "c": ["5.5 lb dropped 12 in", "10 lb dropped 18 in", "5.5 lb dropped 18 in", "10 lb dropped 12 in"],
+      "a": 0,
+      "ref": "ASTM D698",
+      "why": "Standard Proctor uses a 5.5 lb rammer dropped 12 in on 3 layers. The 10 lb rammer dropped 18 in on 5 layers is the modified Proctor test."
+    },
+    {
+      "t": "gc",
+      "topic": "Steel & trusses",
+      "q": "Under AISC standard hole sizes, what diameter hole is used for a 1 in diameter structural bolt?",
+      "c": ["1 in", "1-1/16 in", "1-3/16 in", "1-1/8 in"],
+      "a": 3,
+      "ref": "AISC 360-16 Table J3.3",
+      "why": "Standard holes are the bolt diameter plus 1/16 in for bolts under 1 in, but plus 1/8 in for bolts 1 in and larger."
+    },
+    {
+      "t": "gc",
+      "topic": "Steel & trusses",
+      "q": "In the steel designation W12x26, what does the number 26 indicate?",
+      "c": ["Nominal depth in inches", "Flange width in inches", "Weight in pounds per linear foot", "Length of the member in feet"],
+      "a": 2,
+      "ref": "AISC shape designations",
+      "why": "W shapes are designated by nominal depth (12 in) followed by weight per foot (26 lb/ft)."
+    },
+    {
+      "t": "gc",
+      "topic": "Roofing",
+      "q": "How are field seams in an EPDM single-ply roof membrane normally joined?",
+      "c": ["Hot-air welding", "Lapping with splice adhesive or seam tape", "Torching with a propane flame", "Mopping with hot asphalt"],
+      "a": 1,
+      "ref": "NRCA single-ply practice",
+      "why": "EPDM is a thermoset rubber that cannot be heat-welded, so its laps are bonded with adhesive or tape. Heat welding is used for thermoplastics such as PVC and TPO."
+    },
+    {
+      "t": "gc",
+      "topic": "Masonry",
+      "q": "Which statement best describes a curtain wall?",
+      "c": ["An exterior wall that carries floor and roof loads to the foundation", "A non-load-bearing exterior wall that carries its own weight and wind loads to the frame", "An interior fire wall that divides a building into separate areas", "A temporary wall used to brace masonry during construction"],
+      "a": 1,
+      "ref": "Building construction fundamentals",
+      "why": "A curtain wall supports only itself and the lateral loads on it. A wall that carries floor or roof loads is a bearing wall."
+    },
+    {
+      "t": "gc",
+      "topic": "Site work & concrete",
+      "q": "Along a simply supported reinforced concrete beam, where are stirrups normally spaced closest together?",
+      "c": ["Near the supports", "At midspan", "Evenly along the full length", "Only within the top third of the beam depth"],
+      "a": 0,
+      "ref": "ACI 318 shear reinforcement",
+      "why": "Shear and diagonal tension are highest near the supports, so stirrups are closest together there and spread out toward midspan."
+    }
+  ]
+}

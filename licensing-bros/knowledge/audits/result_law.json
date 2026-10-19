@@ -1,0 +1,92 @@
+{
+  "questions": [
+    {
+      "i": 2,
+      "action": "fix",
+      "reason": "Original 1914 UPA made partners only jointly (not severally) liable for contract debts; joint and several liability for all debts comes from RUPA 306",
+      "fixed": {
+        "ref": "RUPA 306 joint and several liability",
+        "why": "Under the Revised Uniform Partnership Act, general partners are jointly and severally liable for partnership debts. Once the partnership's assets are exhausted, a creditor can collect the entire debt from any one partner, and that partner can then seek contribution from the others."
+      }
+    },
+    {
+      "i": 47,
+      "action": "fix",
+      "reason": "The first inflation adjustment came in August 2016; the January adjustments started in 2017",
+      "fixed": {
+        "why": "OSHA's maximum penalties have been adjusted for inflation since 2016 and are now updated every January. They are ceilings, and OSHA can reduce a proposed penalty based on factors such as employer size, good faith and history."
+      }
+    },
+    {
+      "i": 67,
+      "action": "fix",
+      "reason": "One distractor used a Social Security wage base that changes every year ($176,100 is the 2025 figure)",
+      "fixed": {
+        "c": ["6.2% of all wages", "5.4% of the first $10,000", "6.0% of the first $7,000", "1.45% of all wages"]
+      }
+    }
+  ],
+  "facts": [
+    {
+      "id": "BUSI-004",
+      "action": "fix",
+      "reason": "Joint and several liability for all partnership debts comes from RUPA 306, not the original UPA. RUPA 307 also generally requires creditors to exhaust partnership assets first",
+      "fixed": {
+        "source": "Revised Uniform Partnership Act secs. 306-307",
+        "fact": "General partners are jointly and severally liable for partnership debts. If the partnership's assets cannot cover a debt, a creditor can collect the full unpaid amount from any one general partner, who can then seek contribution from the other partners.",
+        "note": "Under RUPA 307, a creditor generally must first get a judgment against the partnership and exhaust partnership assets before going after a partner's personal assets."
+      }
+    },
+    {
+      "id": "ENVI-006",
+      "action": "fix",
+      "reason": "Overstated. EPA treats residential lead-based paint debris from renovation as excluded household waste (2000 interpretation and 2003 rule), so it can go to C&D or municipal landfills. Non-residential lead debris is hazardous only if it fails TCLP",
+      "fixed": {
+        "source": "RCRA; 40 CFR 261.4(b)(1), Parts 273, 279",
+        "fact": "Ordinary construction and demolition debris such as scrap wood, drywall, brick and concrete is generally non-hazardous solid waste. Used oil (40 CFR 279) and batteries (universal waste, 40 CFR 273) must be kept out of regular debris and managed under their own rules. Lead-based paint debris from residences is excluded household waste under federal rules and may go to C&D or municipal landfills. Lead debris from non-residential work may be hazardous waste if it fails the TCLP test. States can be stricter.",
+        "note": "EPA's July 2000 interpretation and June 2003 rule allow residential lead-based paint waste from contractors to be disposed of as household waste."
+      }
+    },
+    {
+      "id": "ENVI-013",
+      "action": "fix",
+      "reason": "40 CFR 61.145 requires a thorough inspection but does not itself require an accredited inspector. Accreditation comes from AHERA/MAP and state rules",
+      "fixed": {
+        "fact": "Before any demolition or renovation, the affected part of the building must be thoroughly inspected for asbestos. Many states, and EPA guidance, require or expect an accredited asbestos inspector. The regulating agency must be notified at least 10 working days before demolition, or before a renovation above the regulated asbestos thresholds, begins."
+      }
+    },
+    {
+      "id": "ENVI-014",
+      "action": "fix",
+      "reason": "Stated a 'current' penalty level; the figure is indexed every year, so it now carries a date",
+      "fixed": {
+        "fact": "Violating EPA lead-based paint rules (such as the RRP rule) can bring civil penalties per violation per day. The cap started at $37,500 and is adjusted every year for inflation; it was above $48,000 by the 2024 adjustment. Check 40 CFR 19.4 for the current maximum."
+      }
+    },
+    {
+      "id": "FINA-036",
+      "action": "fix",
+      "reason": "'whenever the cash actually moves' reads as the opposite of accrual accounting; it should say 'regardless of when'",
+      "fixed": {
+        "fact": "Under the cash method, revenue is recorded when it is received and expenses when they are paid. Under the accrual method, revenue is recorded when earned and expenses when incurred, regardless of when the cash actually moves."
+      }
+    },
+    {
+      "id": "PAYR-007",
+      "action": "fix",
+      "reason": "Stated a state wage base that can change each year as if it were permanent; it now carries a date",
+      "fixed": {
+        "fact": "Georgia's state unemployment tax wage base has been $9,500 per employee per calendar year since 2013 (still $9,500 as of 2025). It is separate from the federal FUTA wage base of $7,000. Confirm the current Georgia figure with the Georgia Department of Labor."
+      }
+    },
+    {
+      "id": "PAYR-022",
+      "action": "fix",
+      "reason": "Not every employer files Form 941. Employers told to file Form 944, agricultural employers (Form 943) and household employers (Schedule H) do not",
+      "fixed": {
+        "fact": "Form 941, the Employer's Quarterly Federal Tax Return, reports wages paid and the federal income tax, Social Security and Medicare tax withheld each quarter. Most employers file it every quarter (exceptions: small employers the IRS notifies to file annual Form 944, agricultural employers who use Form 943, and household employers). If the quarter's total liability is under $2,500, the tax may be paid with the return; otherwise it must be deposited on the monthly or semiweekly schedule.",
+        "note": "Card suggests Form 941 is used only when reporting under $2,500 for the quarter. In fact most employers file 941 quarterly; the $2,500 test decides only whether the tax may be paid with the return instead of deposited."
+      }
+    }
+  ]
+}
