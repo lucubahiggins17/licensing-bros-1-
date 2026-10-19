@@ -1,0 +1,257 @@
+{
+ "facts": [
+  {
+   "id": "P5",
+   "action": "fix",
+   "reason": "'Roughly one story high' is the older/UPC-style wording. The current IPC definition is a vertical distance of 8 ft or more between horizontal branch connections, measured down from the highest branch.",
+   "fixed": {
+    "fact": "A branch interval is a vertical measurement of distance, 8 ft or more in developed length, between the connections of horizontal branches to a drainage stack. Branch intervals are measured down the stack from the highest horizontal branch connection."
+   }
+  },
+  {
+   "id": "P22",
+   "action": "fix",
+   "reason": "The 'no portable ladder or step stool' clause is NEC 'readily accessible' language; the ICC 'ready access' definition is only about not removing or moving a panel or similar obstruction.",
+   "fixed": {
+    "fact": "'Ready access' means a fixture, appliance or equipment can be reached directly, without removing or moving any panel or similar obstruction. Plain 'access' allows first removing or moving a panel or similar obstruction."
+   }
+  },
+  {
+   "id": "P38",
+   "action": "fix",
+   "reason": "The 2 ft clear height / one-half trench depth / 8 ft maximum tunnel rule is UPC (314.2) text, not IPC. IPC 306.4 only requires protecting the pipe from damage and uneven loading and providing supporting structures in earth tunnels.",
+   "fixed": {
+    "fact": "Under the UPC, earth tunnels for pipe must have at least 2 ft of clear height above the pipe and are limited in length to one-half the trench depth, with a maximum of 8 ft; a drive pipe must be at least one size larger than the pipe being laid. The IPC (306.4) gives no dimensions: tunneled or jacked pipe must be protected from damage and uneven loading, and earth tunnels need supporting structures to prevent settling or caving.",
+    "source": "UPC 2021 314.2; IPC 2021 306.4"
+   }
+  },
+  {
+   "id": "P51",
+   "action": "fix",
+   "reason": "Model IPC 2021 312.4 final test is visual; a smoke test is optional and the 1 in water column/15 min applies to the smoke test. The 'manometer test' version is an Ohio amendment, not the model code.",
+   "fixed": {
+    "fact": "The final test of the completed DWV system is a visual inspection detailed enough to confirm code compliance. Where a smoke test is used, traps are filled with water, thick smoke is introduced, and once smoke appears at the roof stack openings they are closed and a pressure equal to a 1 in water column is held for at least 15 minutes."
+   }
+  },
+  {
+   "id": "P72",
+   "action": "fix",
+   "reason": "Table 403.1 puts nightclubs, bars and taverns in a separate, stricter A-2 row (WC 1 per 40, lav 1 per 75); 1 per 75 / 1 per 200 applies only to restaurants, banquet halls and food courts.",
+   "fixed": {
+    "fact": "Restaurants, banquet halls and food courts (Group A-2): water closets 1 per 75; lavatories 1 per 200; drinking fountains 1 per 500; 1 service sink. Nightclubs, bars and taverns (also A-2) are stricter: water closets 1 per 40 and lavatories 1 per 75."
+   }
+  },
+  {
+   "id": "P88",
+   "action": "unverify",
+   "reason": "The 1-1/2 in waste outlet and stopper are solid, but the claim that the 2021 IPC dropped the bathtub overflow requirement could not be confirmed against 2021 text (2018 required an overflow)."
+  },
+  {
+   "id": "P109",
+   "action": "fix",
+   "reason": "Omits the second half of the rule: where the pump is more than 2 ft from the access opening, the field-built opening must be at least 18 in x 18 in.",
+   "fixed": {
+    "fact": "Whirlpool bathtub circulation pumps need access. If the manufacturer does not specify the opening, a field-built access opening must be at least 12 in by 12 in, or at least 18 in by 18 in where the pump is more than 2 ft from the opening. The opening must be large enough to remove and replace the pump."
+   }
+  },
+  {
+   "id": "P153",
+   "action": "fix",
+   "reason": "The repair clause is paraphrased inaccurately: the code requires PRVs, regulators and strainers be constructed and installed so parts can be repaired or removed (without breaking the pipeline), not specifically 'with unions or flanges'.",
+   "fixed": {
+    "fact": "A pressure-reducing valve must be designed to stay open so water keeps flowing if the valve fails. PRVs, regulators and strainers must be constructed and installed so their parts can be repaired or removed without breaking the pipeline."
+   }
+  },
+  {
+   "id": "P159",
+   "action": "fix",
+   "reason": "Mastic/hot-poured bituminous joints are on the drainage list (707.1), not the water supply list; the water supply list includes fittings not approved for the specific installation.",
+   "fixed": {
+    "fact": "Prohibited water supply joints and connections include cement or concrete joints, joints made with fittings not approved for the specific installation, solvent-cement joints between different types of plastic pipe, and saddle-type fittings."
+   }
+  },
+  {
+   "id": "P179",
+   "action": "fix",
+   "reason": "Where conditioning chemicals are added, the code allows an air gap OR an RPZ, not only an RPZ.",
+   "fixed": {
+    "fact": "The potable supply to a boiler needs a backflow preventer with an intermediate atmospheric vent (ASSE 1012 or CSA B64.3). If chemical conditioners are added to the boiler water, the potable connection must be protected by an air gap or a reduced pressure principle backflow preventer (RPZ)."
+   }
+  },
+  {
+   "id": "P183",
+   "action": "fix",
+   "reason": "Code trigger is an 'essentially toxic' transfer fluid; a nonpotable but essentially nontoxic fluid may use single-wall construction. 'Nonpotable or toxic' and 'potable water' overstate the rule.",
+   "fixed": {
+    "fact": "Heat exchangers using an essentially toxic transfer fluid must be double-wall, with an air gap open to the atmosphere between the two walls. Heat exchangers using an essentially nontoxic transfer fluid may be single-wall."
+   }
+  },
+  {
+   "id": "P220",
+   "action": "fix",
+   "reason": "Cleanouts may be concealed if an access door or cover plate is provided; the rule is that plugs may not be covered with cement, plaster or other permanent finish. 'May not be concealed' is misleading.",
+   "fixed": {
+    "fact": "Cleanouts must open in the direction of flow or at right angles to it. Access must be provided: cleanout plugs may not be covered with cement, plaster or other permanent finish, and a concealed cleanout needs an access door or cover plate. Cleanout openings may not be used to connect new fixtures unless approved and another cleanout of equal access and capacity is provided."
+   }
+  },
+  {
+   "id": "P228",
+   "action": "fix",
+   "reason": "The trigger is the fixture flood level rim elevation relative to the next upstream manhole cover, not the floor level; also the existing-building exception belongs in the fact.",
+   "fixed": {
+    "fact": "Fixtures whose flood level rims are below the elevation of the manhole cover of the next upstream public sewer manhole must be protected by a backwater valve. Fixtures with flood level rims above that elevation may not discharge through the backwater valve (except in existing buildings)."
+   }
+  },
+  {
+   "id": "P230",
+   "action": "fix",
+   "reason": "Omits the key requirement: food storage/preparation/handling equipment must discharge indirectly by means of an air gap (an air break is not acceptable), which is what exams test.",
+   "fixed": {
+    "fact": "Equipment and fixtures used for storing, preparing and handling food (such as refrigerators, steam tables, ice machines and similar) must discharge through an indirect waste pipe by means of an air gap, not directly to the drainage system and not through an air break."
+   }
+  },
+  {
+   "id": "P301",
+   "action": "remove",
+   "reason": "Duplicate of P302 and P304, and it cites sq ft values from the pre-2018 leader table; the 2018/2021 IPC tabulates vertical leaders in gpm (Table 1106.3)."
+  },
+  {
+   "id": "P302",
+   "action": "fix",
+   "reason": "Since the 2018 IPC, vertical leaders are sized by flow (gpm) in Table 1106.3; the sq ft-at-1 in/hr figures came from the older table. Values are equivalent but the source/format should match 2021.",
+   "fixed": {
+    "fact": "Vertical leader capacity (circular leaders): 2 in = 30 gpm; 3 in = 92 gpm; 4 in = 192 gpm; 5 in = 360 gpm; 6 in = 563 gpm; 8 in = 1,208 gpm. At 1 in/hr of rainfall (gpm = sq ft x in/hr x 0.0104) these correspond to roughly 2,880; 8,800; 18,400; 34,600; 54,000; and 116,000 sq ft of projected roof. Older IPC editions tabulated the roof area directly.",
+    "source": "IPC 2021 Table 1106.3"
+   }
+  },
+  {
+   "id": "P304",
+   "action": "fix",
+   "reason": "Source should be the 2021 gpm-based leader table; recomputed result using 192 gpm.",
+   "fixed": {
+    "fact": "Worked example: a 4 in vertical leader is rated 192 gpm. At a 3 in/hr design rainfall, roof area = 192 / (3 x 0.0104) = about 6,150 sq ft (the older sq ft table gives 18,400 / 3 = about 6,133 sq ft).",
+    "source": "IPC 2021 Table 1106.3; plumbing math"
+   }
+  },
+  {
+   "id": "P305",
+   "action": "fix",
+   "reason": "The 24 sq ft per gpm (4 in/hr basis) continuous-flow rule is UPC 1104.1 text; it was not found in the IPC, which sizes storm piping directly by gpm since 2018.",
+   "fixed": {
+    "fact": "Under the UPC, continuous or semicontinuous discharge into a storm drain (pump, ejector, air-conditioning unit) is counted as 24 sq ft of roof area for each 1 gpm, based on a 4 in/hr rainfall rate (24 x 4 x 0.0104 = 1 gpm).",
+    "source": "UPC 2021 1104.1"
+   }
+  },
+  {
+   "id": "P309",
+   "action": "remove",
+   "reason": "The writer's own note says the 2018/2021 rewrite of Section 1105 (roof drains sized by tested flow rate) likely dropped these strainer rules; outdated content shouldn't be shown even with a warning."
+  },
+  {
+   "id": "P321",
+   "action": "fix",
+   "reason": "The specific table range '402.4(1) through 402.4(37)' is edition-dependent and not confirmed for 2021; state the rule without the range.",
+   "fixed": {
+    "fact": "Gas pipe may be sized from the IFGC Table 402.4 series (or its sizing equations), from a listed piping system manufacturer's tables (such as CSST), or by other approved engineering methods. With the tables, pipe length is set by the longest length, branch length or hybrid pressure method."
+   }
+  },
+  {
+   "id": "P329",
+   "action": "fix",
+   "reason": "'Black jacket marked AR' is product-specific, not a code requirement; the code test is listing of the arc-resistant jacket/coating to ANSI LC 1/CSA 6.26.",
+   "fixed": {
+    "fact": "CSST listed with an arc-resistant jacket or coating system (ANSI LC 1/CSA 6.26) is considered bonded when it is connected to an appliance that is connected to the equipment grounding conductor of the circuit supplying that appliance, so a separate bonding jumper is not needed. If any CSST segment in the system is not arc-resistant listed, the direct bonding rules for CSST apply."
+   }
+  },
+  {
+   "id": "P331",
+   "action": "fix",
+   "reason": "Right rule, wrong section: 'gas piping shall not be used as a grounding electrode' is IFGC 309.1 (Grounding); 310 is bonding.",
+   "fixed": {
+    "source": "IFGC 2021 309.1"
+   }
+  },
+  {
+   "id": "P336",
+   "action": "fix",
+   "reason": "Wrong for 2012-2021 IFGC: 404.4 'Underground penetrations prohibited' bars gas piping from penetrating foundation walls below grade; the sleeve-through-foundation rule is from older editions.",
+   "fixed": {
+    "fact": "Gas piping may not penetrate a building foundation wall at any point below grade. It must enter and exit the building above grade, and the annular space between the pipe and the wall must be sealed.",
+    "source": "IFGC 2021 404.4"
+   }
+  },
+  {
+   "id": "P345",
+   "action": "fix",
+   "reason": "Stated as absolute, but the IFGC also allows the valve at a manifold up to 50 ft away (with access) and a remote valve for vented decorative appliances/room heaters in fireplaces.",
+   "fixed": {
+    "fact": "Each appliance needs its own shutoff valve. Normally it is in the same room, within 6 ft of the appliance, upstream of the union, connector or quick-disconnect it serves, and provided with access. Alternatives: a valve at a manifold up to 50 ft from the appliance (with ready access and identified), or, for vented decorative appliances and room heaters in fireplaces, a remote valve permitted by the code."
+   }
+  }
+ ],
+ "questions": [
+  {
+   "i": 7,
+   "action": "fix",
+   "reason": "Model IPC 2021 312.4 has no manometer final test (that is an Ohio amendment). The 1 in water column applies to the optional smoke test.",
+   "fixed": {
+    "q": "Under the IPC, when a smoke test is used for the final DWV test, what pressure must be held for 15 minutes after the stack openings are closed?",
+    "c": [
+     "5 in water column",
+     "1 in water column",
+     "2 in water column",
+     "10 in of mercury"
+    ],
+    "a": 1,
+    "why": "The final test is visual; where a smoke test is used, a pressure equal to a 1 in water column is held for at least 15 minutes after smoke appears and the stack openings are closed."
+   }
+  },
+  {
+   "i": 16,
+   "action": "fix",
+   "reason": "The tunnel length limit (half the trench depth, 8 ft max, 2 ft clear height) is UPC 314.2, not IPC 306.4, which has no dimensions.",
+   "fixed": {
+    "q": "Under the UPC, an earth tunnel for pipe installation is limited in length to one-half the trench depth, with a maximum of:",
+    "ref": "UPC 2021 314.2",
+    "why": "UPC tunnels need 2 ft of clear height above the pipe and are limited to half the trench depth, 8 ft maximum. The IPC sets no tunnel dimensions."
+   }
+  },
+  {
+   "i": 20,
+   "action": "fix",
+   "reason": "Uses the older 'roughly one story' wording; the current IPC definition is a vertical distance of 8 ft or more between horizontal branch connections.",
+   "fixed": {
+    "q": "Under the IPC, a branch interval is a vertical distance between horizontal branch connections to a drainage stack of at least:",
+    "why": "A branch interval is 8 ft or more in developed length between horizontal branch connections, measured down from the highest branch."
+   }
+  },
+  {
+   "i": 91,
+   "action": "fix",
+   "reason": "The trigger is the fixture flood level rim elevation, not the floor level.",
+   "fixed": {
+    "q": "A backwater valve is required for fixtures whose flood level rims are below the elevation of:",
+    "why": "Fixtures with flood level rims below the manhole cover of the next upstream public sewer manhole need backwater valve protection; fixtures above it may not discharge through the valve (except in existing buildings)."
+   }
+  },
+  {
+   "i": 120,
+   "action": "fix",
+   "reason": "The 24 sq ft per gpm conversion is UPC 1104.1, not an IPC Chapter 11 rule.",
+   "fixed": {
+    "q": "Under the UPC, each gpm of continuous flow into a storm drain is counted as how much roof area?",
+    "ref": "UPC 2021 1104.1",
+    "why": "The UPC counts 1 gpm of continuous flow as 24 sq ft of roof area, based on a 4 in/hr rainfall rate (24 x 4 x 0.0104 = 1 gpm)."
+   }
+  },
+  {
+   "i": 127,
+   "action": "fix",
+   "reason": "The 6 ft rule applies to the normal same-room valve location; the IFGC also allows a manifold valve up to 50 ft away and remote valves for fireplace appliances, so the stem should say same room.",
+   "fixed": {
+    "q": "When an appliance gas shutoff valve is located in the same room as the appliance, it must be within what distance of the appliance?",
+    "why": "A same-room appliance shutoff valve must be within 6 ft of the appliance and upstream of the union, connector or quick-disconnect it serves (a manifold valve may be up to 50 ft away)."
+   }
+  }
+ ]
+}

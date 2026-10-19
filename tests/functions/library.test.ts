@@ -65,3 +65,14 @@ Deno.test("htmlToText: keeps headings, paragraphs, lists and tables; drops scrip
   assert.equal(p[0].ref, "Licensing Requirements");
   assert.ok(p.some((x) => x.ref === "Classifications"));
 });
+
+import { searchFacts } from "../../supabase/functions/_shared/kb.ts";
+Deno.test("searchFacts: plumbing ranks the student's own code (IPC in Tennessee, UPC in California) first", () => {
+  const q = "maximum trap arm length for a 2 inch fixture drain";
+  const tn = searchFacts(q, { trade: "plumb", state: "Tennessee", limit: 5 });
+  const ca = searchFacts(q, { trade: "plumb", state: "California", limit: 5 });
+  assert.ok(/^IPC/.test(tn[0].source), tn[0].source);
+  assert.ok(/^UPC/.test(ca[0].source), ca[0].source);
+  // Asking for the other code by name still finds it first
+  assert.ok(/^UPC/.test(searchFacts(`UPC ${q}`, { trade: "plumb", state: "Tennessee", limit: 3 })[0].source));
+});

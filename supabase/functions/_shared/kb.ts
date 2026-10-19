@@ -74,6 +74,9 @@ const DF = new Map<string, number>();
 for (const d of INDEX) for (const w of new Set([...d.kw, ...d.body])) DF.set(w, (DF.get(w) || 0) + 1);
 const idf = (w: string) => Math.log(1 + INDEX.length / (1 + (DF.get(w) || 0)));
 
+/** States whose statewide plumbing code is based on the Uniform Plumbing Code (the rest mostly use the IPC). */
+const UPC_STATES = new Set(["Alaska", "California", "Hawaii", "Idaho", "Iowa", "Minnesota", "Montana", "Nevada", "New Mexico", "North Dakota", "Oregon", "Washington"]);
+
 /** Facts that apply to this student: their trade or Business & Law, and only their own state's state-specific facts. */
 function applies(f: Fact, trade: string, state: string) {
   if (f.state && f.state !== state) return false;
@@ -87,6 +90,8 @@ export function searchFacts(query: string, opts: { trade: string; state: string;
   const q = expand([...new Set([...raw, ...raw.map(stem)])]);
   if (!q.length) return [];
   const scored: { f: Fact; s: number }[] = [];
+  const upcState = UPC_STATES.has(opts.state);
+  const askedCode = /\b(upc|ipc|uniform plumbing|international plumbing)\b/i.test(query);
   for (const d of INDEX) {
     if (!applies(d.f, opts.trade, opts.state)) continue;
     let s = 0;
@@ -96,6 +101,12 @@ export function searchFacts(query: string, opts: { trade: string; state: string;
     }
     if (s <= 0) continue;
     if (d.f.status === "unverified") s *= 0.6;
+    // Plumbing: most states use the IPC, about a dozen the UPC. Rank the student's own code first (both still show).
+    if (d.f.trade === "plumb" && !askedCode) {
+      const upcFact = /^UPC\b/.test(d.f.source), ipcFact = /^IPC\b/.test(d.f.source);
+      if (upcFact && !upcState) s *= 0.6;
+      if (ipcFact && upcState) s *= 0.75;
+    }
     if (d.f.state) s *= 1.2;
     scored.push({ f: d.f, s });
   }
