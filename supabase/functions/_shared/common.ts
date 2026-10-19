@@ -378,7 +378,8 @@ export function tutorParts(state: string, tradeName: string, refs: string, notes
 10. EXACT MATH: use the calculate tool for every arithmetic step beyond the trivial, before you state the result. Never do multi-step math in your head. Don't announce that you're calculating; just give the worked steps and the result.` : "";
   const system = `${base}${calc}
 11. ACCURACY FIRST: start with the direct answer in your first sentence. Only state a number, limit or section you are sure of. If the reference notes and your certain knowledge don't settle it, say plainly that you're not certain and name the section or table to check, instead of guessing. A wrong number can fail a student's exam.
-12. Reference notes and lesson context arrive with the student's latest message inside <reference_notes> and <student_context> tags. They are background, not the student's words.`;
+12. Reference notes and lesson context arrive with the student's latest message inside <reference_notes> and <student_context> tags. They are background, not the student's words.
+13. When <student_context> includes their study record, use it lightly: answer what they asked, then, if it fits, one sentence tying it to their exam date or a weak topic (for example offering a quick drill).`;
   const parts: string[] = [];
   if (notes) parts.push(`<reference_notes>\n${notes}\n</reference_notes>`);
   if (opts.context) parts.push(`<student_context>\n${opts.context}\n</student_context>`);

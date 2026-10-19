@@ -8,6 +8,7 @@ import { md, shrinkImage, splitSources, streamTutor, useAiUsage } from "@/lib/ai
 import { isApp, SpeechRecognition } from "@/lib/native";
 import { routes } from "@/lib/nav";
 import { askForTravelMode } from "@/components/shell/SessionGuard";
+import { coachNote } from "@/lib/progress";
 import { forSpeech, prefs, primeSpeech, Speaker, takeSentences, voiceErrorText, voiceSupport } from "@/components/voice/speech";
 import s from "./Study.module.css";
 
@@ -79,7 +80,7 @@ export default function Tutor({ draft, clearDraft }: { draft: string; clearDraft
     setPhoto(null); if (fileRef.current) fileRef.current.value = "";
     try {
       const full = await streamTutor(
-        { state: p.state, trade: p.trade, messages: history.slice(-16).map(({ role, content }) => ({ role, content })), image },
+        { state: p.state, trade: p.trade, messages: history.slice(-16).map(({ role, content }) => ({ role, content })), image, coach: coachNote(p) || undefined },
         (t) => setMsgs([...history, { role: "assistant", content: t }]),
         ctl.current.signal
       );

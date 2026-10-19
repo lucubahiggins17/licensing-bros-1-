@@ -272,3 +272,20 @@ export const shuffle = <T,>(a: T[]): T[] => {
 };
 
 export const fmtTime = (s: number) => `${Math.floor(s / 60)}:${String(s % 60).padStart(2, "0")}`;
+
+/** A one-line summary of how the student is doing, sent with tutor questions so Bro can tailor its help. */
+export function coachNote(p: Progress): string {
+  const s = p.stats[p.trade] || {};
+  let c = 0, a = 0;
+  const topics: { t: string; pct: number; a: number }[] = [];
+  for (const [t, v] of Object.entries(s)) { c += v.c; a += v.a; if (v.a >= 4) topics.push({ t, pct: Math.round((v.c / v.a) * 100), a: v.a }); }
+  topics.sort((x, y) => x.pct - y.pct);
+  const parts: string[] = [];
+  const left = daysLeft(p.examDate);
+  if (left !== null && left >= 0) parts.push(`Exam in ${left} day${left === 1 ? "" : "s"}.`);
+  if (a) parts.push(`${a} practice questions, ${Math.round((c / a) * 100)}% correct.`);
+  if (topics.length) parts.push(`Weakest: ${topics.slice(0, 3).map((x) => `${x.t} ${x.pct}%`).join(", ")}.`);
+  const mock = [...p.hist].reverse().find((h) => h.kind === "Mock exam");
+  if (mock) parts.push(`Last mock exam: ${mock.detail.split("·")[0].trim()}.`);
+  return parts.join(" ").slice(0, 400);
+}

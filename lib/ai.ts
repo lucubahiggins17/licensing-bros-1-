@@ -18,6 +18,8 @@ export type TutorBody = {
   context?: string;
   /** Speech-friendly reply (short, no markdown, ends with a check-in question) */
   voice?: boolean;
+  /** How the student is doing (exam countdown, accuracy, weakest topics) so Bro can tailor its help */
+  coach?: string;
 };
 
 const SESSION_CODES = new Set(["session_replaced", "no_session"]);

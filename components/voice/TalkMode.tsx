@@ -9,6 +9,7 @@ import { useAuth } from "@/lib/auth";
 import { md, splitSources, streamTutor } from "@/lib/ai";
 import { TRADES, TradeKey } from "@/lib/data";
 import { onBackButton } from "@/lib/native";
+import { coachNote } from "@/lib/progress";
 import {
   chooseVoice, currentVoiceId, forSpeech, Listening, ListenError, prefs, primeSpeech, RATES, say, Speaker,
   startListening, takeSentences, voiceErrorText, voiceOptions, VoiceOption, voiceSupport
@@ -179,7 +180,7 @@ export default function TalkMode({ open, onClose, context, title, initialQuestio
     const { state: st, trade: tr, context: cx } = ctxRef.current;
     try {
       const full = await streamTutor(
-        { state: st, trade: tr, context: cx || undefined, voice: true, messages: history.slice(-12) },
+        { state: st, trade: tr, context: cx || undefined, voice: true, messages: history.slice(-12), coach: app?.p ? coachNote(app.p) || undefined : undefined },
         (t) => {
           if (g !== gen.current) return;
           setMsgs([...history, { role: "assistant", content: t }]);

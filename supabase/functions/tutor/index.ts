@@ -70,7 +70,10 @@ Deno.serve(handler(async (req) => {
   const lastQuestion = turns[turns.length - 1].content;
   const route = ROUTING_ON() ? routeTutor({ question: lastQuestion, voice, image: hasImage, webSearch, turns: turns.length }) : "main";
   const notesText = [formatFacts(facts), library.map((p) => `[${p.ref}] ${p.text}`).join("\n")].filter(Boolean).join("\n");
-  const { system, notes } = tutorParts(state, tradeName, refs, notesText, { voice, context, webSearch, calculator: true });
+  // The student's study record (sent by the app) lets Bro tailor examples and suggest what to practice
+  const coach = typeof body.coach === "string" ? body.coach.replace(/[<>]/g, "").replace(/\s+/g, " ").trim().slice(0, 400) : "";
+  const studentContext = [context, coach ? `Their study record: ${coach}` : ""].filter(Boolean).join("\n\n");
+  const { system, notes } = tutorParts(state, tradeName, refs, notesText, { voice, context: studentContext, webSearch, calculator: true });
   const maxTokens = voice ? 600 : webSearch ? 1800 : 1400;
 
   // Messages: earlier turns as-is (cached), the latest question carries the notes and any photo

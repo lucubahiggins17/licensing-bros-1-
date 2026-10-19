@@ -703,6 +703,20 @@ def command_center(browser):
     ctx.close()
 
 @scenario
+def tutor_knows_the_student(browser):
+    fake = FakeBackend(user_id=PAID_ID)
+    ctx, page, errors = new_page(browser, fake)
+    goto(page, "/learn/#tutor")
+    page.wait_for_timeout(1500)
+    page.locator("textarea#ask").fill("What should I study next?")
+    page.locator("textarea#ask").press("Enter")
+    page.wait_for_timeout(2000)
+    coach = (getattr(fake, "tutor_bodies", [{}]) or [{}])[-1].get("coach", "")
+    check("tutor questions carry the student's study record", "Exam in" in coach and "Weakest" in coach and "correct" in coach, coach)
+    check("study record names the weakest topic first", "Contracts & liens" in coach.split("Weakest:")[-1].split(",")[0], coach)
+    ctx.close()
+
+@scenario
 def automations_page(browser):
     fake = FakeBackend(user_id=ADMIN_ID)
     ctx, page, errors = new_page(browser, fake)

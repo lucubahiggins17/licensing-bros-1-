@@ -520,6 +520,7 @@ class FakeBackend:
                 return 200, {"deleted": True}
             return 400, {"error": "Unknown request.", "code": "bad_request"}
         if name == "tutor":
+            self.tutor_bodies = getattr(self, "tutor_bodies", []) + [body]
             return 200, "In Tennessee, a guardrail top rail sits at 42 inches, plus or minus 3 inches, above the walking surface (29 CFR 1926.502(b)(1)).\n\nTry this: What is the midrail height?\nAnswer: About 21 inches.\n\nSources:\n- OSHA 1926.502 — https://www.osha.gov/laws-regs/regulations/standardnumber/1926/1926.502"
         return 404, {"error": "Unknown function", "code": "not_found"}
 
