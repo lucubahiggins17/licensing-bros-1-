@@ -6,6 +6,7 @@ import { useAuth } from "@/lib/auth";
 import { routes } from "@/lib/nav";
 import type { SiteSettings } from "@/lib/types";
 import s from "./Hero.module.css";
+import { CountUp } from "@/components/motion";
 
 export const DEFAULT_HERO: SiteSettings["hero"] = {
   badge_top: "2026 Edition",
@@ -18,7 +19,7 @@ export const DEFAULT_HERO: SiteSettings["hero"] = {
 export const DEFAULT_STATS: SiteSettings["home_stats"] = [
   { value: "50", label: "States + DC covered" },
   { value: "4", label: "Trades: GC, electrical, plumbing, HVAC" },
-  { value: "1,000+", label: "Verified code & OSHA facts" }
+  { value: "2,700+", label: "Verified code, OSHA, business & state facts" }
 ];
 
 const STAT_ICONS = [TrendingUp, MapPin, Users];
@@ -122,7 +123,7 @@ export default function Hero({ compact = false }: { compact?: boolean }) {
                 <li key={i} className={`statcard ${navy ? `navy ${s.statNavy}` : ""}`}>
                   <span className="ico"><Icon aria-hidden="true" /></span>
                   <span className={s.statText}>
-                    <b>{st.value}</b>
+                    <b><CountUp value={st.value} /></b>
                     <span className={s.statLabel}>{st.label}</span>
                   </span>
                 </li>

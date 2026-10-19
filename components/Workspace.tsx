@@ -5,9 +5,11 @@ import { supabase } from "@/lib/supabaseClient";
 import { useAuth } from "@/lib/auth";
 import { STATES, TRADES, TradeKey, Question } from "@/lib/data";
 import {
-  BADGES, EMPTY, Progress, daysLeft, dueMissed, normalize, readiness, streak, studiedToday,
+  BADGES, EMPTY, Progress, dailyGoal, daysLeft, dueMissed, localDay, normalize, readiness, streak, studiedToday,
   withAnswer, withBadges, withRecord, withSession
 } from "@/lib/progress";
+import { celebrate } from "@/components/motion";
+import { takePendingAsk } from "@/lib/pendingAsk";
 import { AppCtx, TalkOpts } from "@/components/ctx";
 import Tutor from "@/components/Tutor";
 import Review from "@/components/Review";
@@ -131,8 +133,19 @@ export default function Workspace({ onSignedOut }: { onSignedOut: () => void }) 
     if (!fresh.length) return;
     fresh.forEach((k) => seen.add(k));
     const b = BADGES.find((x) => x.id === fresh[fresh.length - 1]);
-    if (b) setToast(`Badge earned: ${b.name}`);
+    if (b) { setToast(`Badge earned: ${b.name}`); celebrate(); }
   }, [p.badges, loaded]);
+
+  // Celebrate hitting today's question goal (once per day)
+  const goalSeen = useRef<number | null>(null);
+  useEffect(() => {
+    if (!loaded) return;
+    const done = p.daily[localDay()] || 0;
+    const goal = dailyGoal(p.examDate);
+    const before = goalSeen.current;
+    goalSeen.current = done;
+    if (before !== null && before < goal && done >= goal) { setToast(`Daily goal reached: ${goal} questions`); celebrate(); }
+  }, [p.daily, p.examDate, loaded]);
   useEffect(() => {
     if (!toast) return;
     const t = setTimeout(() => setToast(""), 4500);
@@ -173,6 +186,8 @@ export default function Workspace({ onSignedOut }: { onSignedOut: () => void }) 
   const log = useCallback((kind: string, detail: string) => update((prev) => withSession(prev, kind, detail)), [update]);
   const askTutor = useCallback((text: string) => { setDraft(text); go("tutor"); }, [go]);
   const clearDraft = useCallback(() => setDraft(""), []);
+  // A question handed over from another page (today's plan, the welcome screen)
+  useEffect(() => { if (!loaded) return; const q = takePendingAsk(); if (q) askTutor(q); }, [loaded, askTutor]);
   const openTalk = useCallback((o?: TalkOpts) => { primeSpeech(); setTalk({ open: true, ...(o || {}) }); }, []);
   const closeTalk = useCallback(() => setTalk((t) => ({ ...t, open: false })), []);
 

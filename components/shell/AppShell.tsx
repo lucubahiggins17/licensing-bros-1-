@@ -8,6 +8,7 @@ import { useAuth, displayName } from "@/lib/auth";
 import { asset, routes } from "@/lib/nav";
 import NotificationBell from "@/components/notifications/NotificationBell";
 import SessionGuard from "@/components/shell/SessionGuard";
+import { useScrollReveal } from "@/components/motion";
 
 export type NavKey = "home" | "courses" | "learn" | "community" | "live" | "account" | "admin" | "none";
 
@@ -36,6 +37,7 @@ export default function AppShell({ children, active, bare = false, blueprint = f
   const { user, profile, account, signOut, ready } = useAuth();
   const [menu, setMenu] = useState(false);
   const menuRef = useRef<HTMLDivElement>(null);
+  useScrollReveal();
   useEffect(() => {
     const close = (e: MouseEvent) => { if (menuRef.current && !menuRef.current.contains(e.target as Node)) setMenu(false); };
     document.addEventListener("mousedown", close);

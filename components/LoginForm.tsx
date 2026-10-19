@@ -2,6 +2,7 @@
 import { useState } from "react";
 import { supabase } from "@/lib/supabaseClient";
 import { IS_APP_BUILD } from "@/lib/native";
+import { signupExtras } from "@/lib/onboarding";
 import { setSessionId } from "@/lib/sessionId";
 import { friendlyAuthError } from "@/lib/authErrors";
 import { routes } from "@/lib/nav";
@@ -28,7 +29,7 @@ export default function LoginForm({ initialMode = "signin", onSignedIn }: { init
     const sb = supabase();
     try {
       if (mode === "signup") {
-        const { data, error } = await sb.auth.signUp({ email, password, options: { data: { full_name: fullName.trim() }, ...(siteUrl ? { emailRedirectTo: `${siteUrl}/learn/` } : {}) } });
+        const { data, error } = await sb.auth.signUp({ email, password, options: { data: { full_name: fullName.trim(), ...signupExtras() }, ...(siteUrl ? { emailRedirectTo: `${siteUrl}/learn/` } : {}) } });
         if (error) throw error;
         if (data.session) onSignedIn();
         else { setMsg({ ok: true, text: "Check your email to confirm your account, then sign in here." }); setMode("signin"); }

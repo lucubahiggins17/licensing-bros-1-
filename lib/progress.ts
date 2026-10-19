@@ -25,11 +25,13 @@ export type Progress = {
   bestStreak: number;
   /** badge id → time earned */
   badges: Record<string, number>;
+  /** Questions answered per local date (last 60 days), for the daily goal */
+  daily: Record<string, number>;
 };
 
 export const EMPTY: Progress = {
   state: "Tennessee", trade: "gc", examDate: "", stats: {}, hist: [], cards: {}, extraPairs: [], extraBank: [], best: {},
-  missed: {}, days: [], xp: 0, answered: 0, exams: 0, bestStreak: 0, badges: {}
+  missed: {}, days: [], xp: 0, answered: 0, exams: 0, bestStreak: 0, badges: {}, daily: {}
 };
 
 const DAY_MS = 864e5;
@@ -58,7 +60,7 @@ function longestRun(days: string[]): number {
 export function normalize(d: any): Progress {
   const raw = isObj(d) ? d : {};
   const p = { ...EMPTY, ...raw } as Progress;
-  for (const k of ["stats", "cards", "best", "missed", "badges"] as const) if (!isObj(p[k])) (p as any)[k] = {};
+  for (const k of ["stats", "cards", "best", "missed", "badges", "daily"] as const) if (!isObj(p[k])) (p as any)[k] = {};
   for (const k of ["hist", "extraPairs", "extraBank", "days"] as const) if (!Array.isArray(p[k])) (p as any)[k] = [];
   // Records saved before streaks/XP existed: fill them in from the student's real history
   let c = 0, a = 0;
@@ -156,7 +158,15 @@ export function withRecord(p: Progress, topic: string, ok: boolean): Progress {
   const t = s[topic] ? { ...s[topic] } : { c: 0, a: 0 };
   t.a++; if (ok) t.c++;
   s[topic] = t; stats[p.trade] = s;
-  return touch({ ...p, stats, answered: p.answered + 1, xp: p.xp + XP.attempt + (ok ? XP.correct : 0) });
+  return touch({ ...p, stats, daily: bumpDaily(p.daily), answered: p.answered + 1, xp: p.xp + XP.attempt + (ok ? XP.correct : 0) });
+}
+
+function bumpDaily(d: Record<string, number>): Record<string, number> {
+  const today = localDay();
+  const next: Record<string, number> = { ...d, [today]: (d[today] || 0) + 1 };
+  const keys = Object.keys(next).sort();
+  if (keys.length > 60) keys.slice(0, keys.length - 60).forEach((k) => delete next[k]);
+  return next;
 }
 
 export function withSession(p: Progress, kind: string, detail: string): Progress {
@@ -288,4 +298,55 @@ export function coachNote(p: Progress): string {
   const mock = [...p.hist].reverse().find((h) => h.kind === "Mock exam");
   if (mock) parts.push(`Last mock exam: ${mock.detail.split("·")[0].trim()}.`);
   return parts.join(" ").slice(0, 400);
+}
+
+// ---------------------------------------------------------------------------------------------
+// Today's plan: a proactive daily coach built from the student's own record
+// ---------------------------------------------------------------------------------------------
+export type PlanStep = { key: "review" | "weak" | "exam" | "new" | "tutor" | "start"; tab: "review" | "exam" | "tutor"; title: string; detail: string; ask?: string };
+export type Plan = { goal: number; done: number; due: number; streak: number; studiedToday: boolean; daysLeft: number | null; headline: string; steps: PlanStep[] };
+
+/** Daily question goal: more as the exam gets closer. */
+export function dailyGoal(examDate: string): number {
+  const d = daysLeft(examDate);
+  if (d === null || d < 0) return 20;
+  if (d <= 7) return 40;
+  if (d <= 30) return 30;
+  return 20;
+}
+
+export function todayPlan(p: Progress, now = Date.now()): Plan {
+  const goal = dailyGoal(p.examDate);
+  const done = p.daily[localDay(now)] || 0;
+  const due = dueMissed(p, now).length;
+  const weak = weakTopics(p, 2);
+  const left = daysLeft(p.examDate);
+  const st = streak(p);
+  const steps: PlanStep[] = [];
+  const answered = Object.values(p.stats[p.trade] || {}).reduce((n, t) => n + t.a, 0);
+
+  if (!answered) {
+    steps.push({ key: "start", tab: "review", title: "Answer your first 10 questions", detail: "Smart Review mixes topics so Bro can see where you stand." });
+    steps.push({ key: "exam", tab: "exam", title: "Take a short mock exam", detail: "Timed, like test day. It sets your first readiness score." });
+    steps.push({ key: "tutor", tab: "tutor", title: "Ask Bro how your exam works", detail: `What's on the ${p.state} exam, and how to study for it.`, ask: `How does the ${p.state} contractor exam work for my trade, and how should I study for it?` });
+  } else {
+    if (due > 0) steps.push({ key: "review", tab: "review", title: `Clear ${due} review question${due === 1 ? "" : "s"}`, detail: "Questions you missed are due again. Get them right to push them out." });
+    if (weak[0]) steps.push({ key: "weak", tab: "review", title: `Drill ${weak[0].topic}`, detail: `You're at ${weak[0].pct}% here. Smart Review pulls extra questions from it.` });
+    const lastMock = p.hist.find((h) => h.kind === "Mock exam");
+    const mockStale = !lastMock || now - lastMock.at > 3 * 864e5;
+    if (mockStale && (left === null || left <= 21 || answered >= 40)) steps.push({ key: "exam", tab: "exam", title: "Take a timed mock exam", detail: lastMock ? "It's been a few days. See if your score moved." : "Get a real score under exam conditions." });
+    const explain = weak[1] || weak[0];
+    if (explain) steps.push({ key: "tutor", tab: "tutor", title: `Have Bro teach ${explain.topic}`, detail: "A quick lesson with the code section and a worked example.", ask: `Teach me ${explain.topic} for my exam. Keep it short, cite the code section, and finish with one practice question.` });
+    if (steps.length < 2) steps.push({ key: "new", tab: "review", title: "Mix in new topics", detail: "Cover more of the exam outline to raise your readiness." });
+  }
+
+  let headline: string;
+  if (left !== null && left === 0) headline = "Exam day. Quick review, then go get it.";
+  else if (done >= goal) headline = "Today's goal done. Anything extra is a bonus.";
+  else if (left !== null && left > 0 && left <= 7) headline = `${left} day${left === 1 ? "" : "s"} to go. Every question counts now.`;
+  else if (done > 0) headline = `${goal - done} more to hit today's goal.`;
+  else if (st > 0) headline = `Keep your ${st}-day streak going.`;
+  else headline = "Here's your plan for today.";
+
+  return { goal, done, due, streak: st, studiedToday: studiedToday(p), daysLeft: left, headline, steps: steps.slice(0, 3) };
 }

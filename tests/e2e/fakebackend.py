@@ -541,6 +541,7 @@ class FakeBackend:
             self.user_id = uid
             return 200, self.session_obj()
         if path.startswith("signup"):
+            self.calls.append(("signup", body))
             if "blocked" in str((body or {}).get("email", "")):
                 return 400, {"code": 400, "error_code": "email_address_not_authorized", "msg": "Email address not authorized: blocked@example.com"}
             return 200, {"user": {"id": str(uuid.uuid4()), "email": (body or {}).get("email")}, "session": None}

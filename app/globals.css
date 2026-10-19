@@ -347,4 +347,22 @@ h3,h4{font-family:var(--heading);font-weight:800;letter-spacing:0}
   html.lb-cert-print .nav,html.lb-cert-print .bottomtabs,html.lb-cert-print .toast{display:none!important}
   html.lb-cert-print .page{padding:0!important;background:#fff!important;min-height:0!important}
 }
+/* ---- Motion: scroll reveal, page entrance, micro-interactions (all off with reduced motion) ---- */
+.sr-only{position:absolute!important;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
+.motion [data-reveal]{transition:opacity .6s ease,transform .7s cubic-bezier(.2,.8,.2,1)}
+.motion [data-reveal]:not([data-in]){opacity:0;transform:translateY(24px)}
+.motion [data-reveal="left"]:not([data-in]){transform:translateX(-30px)}
+.motion [data-reveal="right"]:not([data-in]){transform:translateX(30px)}
+.motion [data-reveal="zoom"]:not([data-in]){transform:scale(.94)}
+.motion [data-reveal-child]{transition:opacity .5s ease,transform .6s cubic-bezier(.2,.8,.2,1)}
+.motion [data-reveal]:not([data-in]) [data-reveal-child]{opacity:0;transform:translateY(14px)}
+.page{animation:pageIn .38s cubic-bezier(.2,.8,.2,1) both}
+@keyframes pageIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+.btn.primary:hover{transform:translateY(-1px);box-shadow:0 12px 24px -10px rgba(242,106,27,.85)}
+.btn.primary:active{transform:translateY(1px) scale(.99)}
+.bottomtabs a{transition:color .15s ease}
+.bottomtabs a[aria-current="page"] svg{animation:tabPop .35s cubic-bezier(.2,1.6,.4,1)}
+@keyframes tabPop{0%{transform:scale(.7)}100%{transform:scale(1)}}
+.statcard{transition:transform .2s ease,box-shadow .2s ease}
+@media (hover:hover){.statcard:hover{transform:translateY(-3px)}}
 @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}

@@ -48,6 +48,16 @@ console.log("\nprofiles");
 ok("profile created by trigger", (await db.query(`select count(*)::int n from public.profiles`)).rows[0].n === 4);
 ok("full_name from signup metadata", (await db.query(`select full_name from public.profiles where id = $1`, [ids.free])).rows[0].full_name === "FREE");
 
+{
+  const r = await db.query(`insert into auth.users (email, raw_user_meta_data) values ('onb@test.com', $1) returning id`, [JSON.stringify({ full_name: "Onboarded", trade: "elec", state: "Georgia", exam_date: "2026-12-01" })]);
+  const pr = (await db.query(`select trade, state, exam_date::text d from public.profiles where id = $1`, [r.rows[0].id])).rows[0];
+  ok("sign-up keeps the trade, state and exam date picked in the app's onboarding", pr.trade === "elec" && pr.state === "Georgia" && pr.d === "2026-12-01", JSON.stringify(pr));
+  const r2 = await db.query(`insert into auth.users (email, raw_user_meta_data) values ('bad@test.com', $1) returning id`, [JSON.stringify({ trade: "dentist", state: "<script>", exam_date: "2026-02-31" })]);
+  const p2 = (await db.query(`select trade, state, exam_date from public.profiles where id = $1`, [r2.rows[0].id])).rows[0];
+  ok("bad onboarding values fall back to defaults instead of blocking sign-up", p2.trade === "gc" && p2.state === "Tennessee" && p2.exam_date === null, JSON.stringify(p2));
+  await db.query(`delete from auth.users where email in ('onb@test.com', 'bad@test.com')`);
+}
+
 console.log("\ncatalog visibility");
 const anonCourses = await as(null, "anon", () => tryQ(`select slug from public.courses order by slug`));
 ok("anonymous sees published courses only", JSON.stringify(anonCourses.rows.map((r) => r.slug)) === JSON.stringify(["free-osha", "gc-master"]), JSON.stringify(anonCourses));

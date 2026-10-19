@@ -6,6 +6,7 @@ import { Mic, Timer, Brain, Flame, CalendarClock, BookOpen, ArrowRight, Award, R
 import { useAuth, displayName } from "@/lib/auth";
 import { supabase } from "@/lib/supabaseClient";
 import { routes } from "@/lib/nav";
+import { loadProgressRaw } from "@/lib/loadProgress";
 import type { Live } from "@/lib/types";
 import { whenLabel } from "@/components/notifications/timeAgo";
 import s from "./Dashboard.module.css";
@@ -16,8 +17,6 @@ type Continue =
   | { kind: "done"; courseId: string; courseTitle: string }
   | { kind: "none" };
 type Study = { readiness: number | null; examDate: string; streak: number; today: boolean };
-
-const LOCAL_PROGRESS = "licensingbros.progress"; // offline copy kept by the study workspace
 
 const dayKey = (t: number) => { const d = new Date(t); return `${d.getFullYear()}-${d.getMonth() + 1}-${d.getDate()}`; };
 
@@ -94,13 +93,8 @@ export default function Dashboard({ lives, app = false }: { lives: Live[] | null
     let alive = true;
     (async () => {
       try {
-        const [m, res] = await Promise.all([
-          import("@/lib/progress"),
-          supabase().from("progress").select("data").eq("user_id", user.id).maybeSingle()
-        ]);
+        const [m, raw] = await Promise.all([import("@/lib/progress"), loadProgressRaw(user.id)]);
         mod.current = m;
-        let raw: any = res.error ? null : res.data?.data;
-        if (!raw) { try { raw = JSON.parse(localStorage.getItem(LOCAL_PROGRESS) || "null"); } catch { raw = null; } }
         const p = m.normalize(raw);
         const st = studyStreak(p.hist);
         if (alive) setStudy({ readiness: m.readiness(p), examDate: p.examDate, streak: st.streak, today: st.today });

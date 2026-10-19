@@ -1,7 +1,8 @@
 "use client";
-// Home page (/): hero, signed-in dashboard, trade band, course finder, features, how it works,
+// Home page (/): hero, signed-in dashboard and today's plan, trade band, course finder, features, how it works,
 // upcoming live classes, featured courses, Free vs Pro, FAQ and footer.
 import { useEffect, useState } from "react";
+import dynamic from "next/dynamic";
 import AppShell from "@/components/shell/AppShell";
 import { useAuth } from "@/lib/auth";
 import { IS_APP_BUILD } from "@/lib/nav";
@@ -15,6 +16,11 @@ import { UpcomingLives, FeaturedCourses } from "./Listings";
 import Plans from "./Plans";
 import Faq from "./Faq";
 import SiteFooter from "./SiteFooter";
+import TodayPlan from "./TodayPlan";
+import Splash from "@/components/app/Splash";
+
+// The Android app has its own home screen (launch screen, onboarding, app-style welcome); the website never loads it.
+const AppHome = IS_APP_BUILD ? dynamic(() => import("@/components/app/AppHome"), { ssr: false, loading: () => <Splash /> }) : null;
 
 /** Live classes that are on now or coming up (stale "scheduled" rows from long ago are skipped). */
 async function loadLives(): Promise<Live[]> {
@@ -41,7 +47,7 @@ async function loadCourses(): Promise<Course[]> {
 }
 
 export default function HomePage() {
-  const { user, ready, configured } = useAuth();
+  const { user, configured } = useAuth();
   const [lives, setLives] = useState<Live[] | null>(null);
   const [courses, setCourses] = useState<Course[] | null>(null);
 
@@ -53,25 +59,23 @@ export default function HomePage() {
     return () => { alive = false; };
   }, [configured]);
 
-  const signedIn = !!user;
-  // In the Android app a signed-in student sees their dashboard first and a smaller hero.
-  const appFirst = IS_APP_BUILD && signedIn;
-  const compactHero = IS_APP_BUILD && (signedIn || !ready);
+  if (AppHome) return <AppHome lives={lives} courses={courses} />;
 
+  const signedIn = !!user;
   return (
     <AppShell active="home">
       <main>
-        {appFirst && <Dashboard lives={lives} app />}
-        <Hero compact={compactHero} />
-        {signedIn && !appFirst && <Dashboard lives={lives} />}
-        <TradeBand />
-        <FindCourse />
-        <Features />
-        <HowItWorks />
-        {lives && lives.length > 0 && <UpcomingLives lives={lives} />}
-        {courses && courses.length > 0 && <FeaturedCourses courses={courses} />}
-        <Plans />
-        <Faq />
+        <Hero />
+        {signedIn && <Dashboard lives={lives} />}
+        {signedIn && <TodayPlan />}
+        <div data-reveal><TradeBand /></div>
+        <div data-reveal><FindCourse /></div>
+        <div data-reveal><Features /></div>
+        <div data-reveal><HowItWorks /></div>
+        {lives && lives.length > 0 && <div data-reveal><UpcomingLives lives={lives} /></div>}
+        {courses && courses.length > 0 && <div data-reveal><FeaturedCourses courses={courses} /></div>}
+        <div data-reveal><Plans /></div>
+        <div data-reveal><Faq /></div>
       </main>
       <SiteFooter />
     </AppShell>

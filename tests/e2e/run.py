@@ -872,6 +872,30 @@ def voice_playback(browser):
     ctx.close()
 
 # ---------------------------------------------------------------------------------------------------------------------
+@scenario
+def todays_plan(browser):
+    fake = FakeBackend(user_id=PAID_ID)
+    ctx, page, errors = new_page(browser, fake, 1280, 900)
+    goto(page, "/")
+    page.wait_for_selector("#plan-title", timeout=8000)
+    check("home shows today's plan for a signed-in student", page.locator("#plan-title").is_visible())
+    check("the plan targets the weakest topic", page.get_by_text("Drill Contracts & liens", exact=False).count() == 1)
+    check("the plan shows the daily goal ring", page.get_by_role("img", name="0 of 20 questions today").count() == 1)
+    page.mouse.wheel(0, 20000); page.wait_for_timeout(1200)
+    page.mouse.wheel(0, -20000); page.wait_for_timeout(400)
+    hidden = page.evaluate("[...document.querySelectorAll('[data-reveal]')].filter(e => !e.dataset.in).length")
+    check("every home section fades in once it scrolls into view", hidden == 0, f"{hidden} still hidden")
+    stats = page.evaluate("[...document.querySelectorAll('.statcard b [aria-hidden=true]')].map(e => e.textContent)")
+    check("hero numbers count up to their real values", stats == ["50", "4", "800+"], str(stats))
+    page.locator("#plan-title").scroll_into_view_if_needed()
+    page.get_by_text("Have Bro teach Safety (OSHA)", exact=False).click()
+    page.wait_for_url("**/learn/**", timeout=8000); page.wait_for_timeout(1800)
+    val = page.locator("textarea#ask").input_value() if page.locator("textarea#ask").count() else ""
+    check("tapping a plan step hands Bro the lesson request", "Safety (OSHA)" in val, val[:80])
+    check("today's plan ran without errors", not errors, "; ".join(errors[:3]))
+    ctx.close()
+
+# ---------------------------------------------------------------------------------------------------------------------
 if __name__ == "__main__":
     httpd = serve()
     with sync_playwright() as p:

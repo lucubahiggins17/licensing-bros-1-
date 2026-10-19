@@ -49,11 +49,22 @@ $$;
 grant execute on function public.my_role() to authenticated;
 
 -- Create a profile automatically for every new account
+-- The app's onboarding can pass the trade, state and exam date picked before signing up (sign-up metadata).
+-- Anything unexpected falls back to the defaults, so a bad value never blocks a sign-up.
 create or replace function public.handle_new_user()
 returns trigger language plpgsql security definer set search_path = public as $$
+declare
+  m jsonb := coalesce(new.raw_user_meta_data, '{}'::jsonb);
+  v_trade text := case when m->>'trade' in ('gc','elec','plumb','hvac') then m->>'trade' else 'gc' end;
+  v_state text := case when coalesce(m->>'state', '') ~ '^[A-Za-z .]{4,30}$' then m->>'state' else 'Tennessee' end;
+  v_exam date := null;
 begin
-  insert into public.profiles (id, full_name)
-  values (new.id, coalesce(new.raw_user_meta_data->>'full_name', split_part(new.email, '@', 1)))
+  begin
+    if coalesce(m->>'exam_date', '') ~ '^\d{4}-\d{2}-\d{2}$' then v_exam := (m->>'exam_date')::date; end if;
+  exception when others then v_exam := null;
+  end;
+  insert into public.profiles (id, full_name, state, trade, exam_date)
+  values (new.id, coalesce(m->>'full_name', split_part(new.email, '@', 1)), v_state, v_trade, v_exam)
   on conflict (id) do nothing;
   return new;
 end; $$;
