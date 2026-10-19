@@ -61,6 +61,23 @@ Deno.serve(handler(async (req) => {
   }
 
   const [admin, limits] = await Promise.all([isAdmin(user.id), planLimits(user.id)]);
+
+  // Setup check for the /status page: which server keys are present (never their values). Admins only.
+  if (kind === "health") {
+    if (!admin) throw new HttpError(403, "forbidden", "Only admins can run the setup check.");
+    const has = (k: string) => !!(Deno.env.get(k) || "").trim();
+    return json({
+      ai: has("ANTHROPIC_API_KEY"),
+      stripe: has("STRIPE_SECRET_KEY"),
+      stripe_live: (Deno.env.get("STRIPE_SECRET_KEY") || "").startsWith("sk_live_"),
+      stripe_webhook: has("STRIPE_WEBHOOK_SECRET"),
+      livekit: has("LIVEKIT_URL") && has("LIVEKIT_API_KEY") && has("LIVEKIT_API_SECRET"),
+      ipinfo: has("IPINFO_TOKEN"),
+      site_url: (Deno.env.get("SITE_URL") || "").replace(/\/+$/, "") || null,
+      model: MODEL()
+    });
+  }
+
   const { state, trade, tradeName, refs } = cleanContext(body.state, body.trade);
 
   switch (kind) {

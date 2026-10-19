@@ -2,6 +2,7 @@
 // Calls Licensing Bro's edge functions (Supabase Functions) with the student's sign-in and device session.
 import { accessToken } from "@/lib/supabaseClient";
 import { getSessionId } from "@/lib/sessionId";
+import { SUPABASE_KEY, SUPABASE_URL } from "@/lib/env";
 
 export class ApiError extends Error {
   status: number;
@@ -15,12 +16,12 @@ export class ApiError extends Error {
   }
 }
 
-export const FUNCTIONS_URL = () => `${(process.env.NEXT_PUBLIC_SUPABASE_URL || "").replace(/\/+$/, "")}/functions/v1`;
+export const FUNCTIONS_URL = () => `${SUPABASE_URL}/functions/v1`;
 
 export async function fnHeaders(requireAuth = true): Promise<Record<string, string>> {
   const t = await accessToken();
   if (!t && requireAuth) throw new ApiError("Sign in to continue.", 401, "signed_out");
-  const h: Record<string, string> = { "content-type": "application/json", apikey: process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || "" };
+  const h: Record<string, string> = { "content-type": "application/json", apikey: SUPABASE_KEY };
   if (t) h.authorization = `Bearer ${t}`;
   const sid = getSessionId();
   if (sid) h["x-session-id"] = sid;

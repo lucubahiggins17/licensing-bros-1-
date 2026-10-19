@@ -27,6 +27,7 @@ PAGES = [
     ("course", None, f"/course/?id={C_PAID}"),
     ("live-list", None, "/live/"),
     ("login", None, "/login/"),
+    ("status", None, "/status/"),
     ("home-signed-in", PAID_ID, "/"),
     ("lesson", PAID_ID, f"/lesson/?id={L_PAID1}"),
     ("learn-tutor", PAID_ID, "/learn/#tutor"),

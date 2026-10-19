@@ -99,20 +99,18 @@ jobs:
     runs-on: ubuntu-latest
     env:
       NEXT_PUBLIC_TARGET: app
-      NEXT_PUBLIC_SUPABASE_URL: ${{ vars.SUPABASE_URL }}
-      NEXT_PUBLIC_SUPABASE_ANON_KEY: ${{ vars.SUPABASE_ANON_KEY }}
       NEXT_PUBLIC_SITE_URL: ${{ vars.SITE_URL }}
       NEXT_TELEMETRY_DISABLED: "1"
       HAS_KEYSTORE: ${{ secrets.ANDROID_KEYSTORE_BASE64 != '' }}
     steps:
       - uses: actions/checkout@v4
 
+      # Tidies and tests the Supabase variables (sets NEXT_PUBLIC_SUPABASE_URL / _ANON_KEY for the build)
       - name: Check settings
-        run: |
-          if [ -z "$NEXT_PUBLIC_SUPABASE_URL" ] || [ -z "$NEXT_PUBLIC_SUPABASE_ANON_KEY" ]; then
-            echo "::error::Add repository variables SUPABASE_URL and SUPABASE_ANON_KEY (Settings > Secrets and variables > Actions > Variables). See README."
-            exit 1
-          fi
+        env:
+          SUPABASE_URL: ${{ vars.SUPABASE_URL }}
+          SUPABASE_ANON_KEY: ${{ vars.SUPABASE_ANON_KEY }}
+        run: bash .github/check-supabase.sh
 
       - uses: actions/setup-node@v4
         with:

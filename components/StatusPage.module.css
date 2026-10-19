@@ -1,0 +1,23 @@
+.wrap{padding-top:34px;padding-bottom:60px;max-width:860px}
+.h1{font-size:clamp(32px,6vw,52px);text-transform:uppercase;margin:4px 0 8px}
+.h1 span{color:var(--orange)}
+.lede{color:var(--muted);max-width:60ch;margin:0 0 16px}
+.summary{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:10px;border:2px solid var(--navy);border-radius:8px;background:#fff;padding:12px 14px;margin-bottom:14px;font-weight:800}
+.summary span{display:inline-flex;align-items:center;gap:8px}
+.summary svg{width:20px;height:20px}
+.good{color:var(--ok,#1d7a46)}
+.bad{color:var(--bad,#c62828)}
+.list{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:10px}
+.row{display:flex;gap:12px;align-items:flex-start;border-left:5px solid var(--line)}
+.row b{font-family:var(--heading);text-transform:uppercase;letter-spacing:.04em;font-size:14px}
+.row p{margin:4px 0 0;font-size:14.5px}
+.fix{color:var(--ink)}
+.fix b{font-family:inherit;text-transform:none;letter-spacing:0;font-size:inherit}
+.ico svg{width:24px;height:24px;flex:none;margin-top:1px}
+.pass{border-left-color:var(--ok,#1d7a46)}.pass .ico{color:var(--ok,#1d7a46)}
+.warn{border-left-color:var(--hazard)}.warn .ico{color:#b07d00}
+.fail{border-left-color:var(--bad,#c62828)}.fail .ico{color:var(--bad,#c62828)}
+.wait .ico{color:var(--muted)}
+.spin{animation:lbspin 1s linear infinite}
+@keyframes lbspin{to{transform:rotate(360deg)}}
+@media (prefers-reduced-motion:reduce){.spin{animation:none}}

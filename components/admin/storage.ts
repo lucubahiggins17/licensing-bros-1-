@@ -4,6 +4,7 @@
 // - Lesson videos and attachments go to the private `course-media` bucket and are stored as "storage:<path>";
 //   the `lesson` edge function turns those into short-lived signed links for students who have access.
 import { supabase, accessToken } from "@/lib/supabaseClient";
+import { SUPABASE_KEY, SUPABASE_URL } from "@/lib/env";
 
 export const PUBLIC_BUCKET = "public-media";
 export const PRIVATE_BUCKET = "course-media";
@@ -50,12 +51,12 @@ export function uploadPrivate(file: File, folder: string, onProgress: (pct: numb
     const token = await accessToken();
     if (!token) throw new Error("Your sign-in expired. Sign in again.");
     if (aborted) throw Object.assign(new Error("Upload cancelled."), { name: "AbortError" });
-    const base = (process.env.NEXT_PUBLIC_SUPABASE_URL || "").replace(/\/+$/, "");
+    const base = SUPABASE_URL;
     const url = `${base}/storage/v1/object/${PRIVATE_BUCKET}/${path.split("/").map(encodeURIComponent).join("/")}`;
     return await new Promise<string>((resolve, reject) => {
       xhr.open("POST", url);
       xhr.setRequestHeader("authorization", `Bearer ${token}`);
-      xhr.setRequestHeader("apikey", process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || "");
+      xhr.setRequestHeader("apikey", SUPABASE_KEY);
       xhr.setRequestHeader("x-upsert", "true");
       xhr.setRequestHeader("cache-control", "max-age=3600");
       xhr.setRequestHeader("content-type", file.type || "application/octet-stream");

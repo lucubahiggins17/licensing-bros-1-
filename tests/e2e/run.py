@@ -503,6 +503,39 @@ def game_decks(browser):
         check(f"[{tag}] student game pages ran without errors", not errors, "; ".join(errors[:3]))
         ctx.close()
 
+@scenario
+def setup_check(browser):
+    # Friendly sign-up error when Supabase can't send the confirmation email
+    fake = FakeBackend(user_id=None)
+    ctx, page, errors = new_page(browser, fake)
+    goto(page, "/login/?mode=signup")
+    page.fill("#fullName", "Test Owner")
+    page.fill("#email", "blocked@example.com")
+    page.fill("#password", "password123")
+    page.get_by_role("button", name="Create account").last.click()
+    page.wait_for_timeout(1200)
+    shot(page, "setup-signup-error")
+    check("sign-up email problem is explained in plain words", page.get_by_text("can't send sign-up emails yet", exact=False).first.count() > 0)
+    check("site owner gets the fix and a link to the setup check", page.get_by_text("SMTP Settings", exact=False).first.count() > 0 and page.get_by_role("link", name="Check the setup").count() > 0)
+    page.get_by_role("link", name="Check the setup").click()
+    page.wait_for_timeout(2500)
+    shot(page, "setup-check-visitor")
+    check("setup check runs for visitors", page.get_by_text("Supabase project", exact=False).first.count() > 0 and page.get_by_text("schema.sql has been run", exact=False).first.count() > 0)
+    check("setup check flags confirmation emails to double-check", page.get_by_text("Supabase's built-in sender only emails", exact=False).first.count() > 0)
+    check("setup check tells visitors to sign in for server keys", page.get_by_text("Sign in as the admin", exact=False).first.count() > 0)
+    check("setup check page ran without errors", not errors, "; ".join(errors[:3]))
+    ctx.close()
+    # Admin sees which server keys are set
+    fake = FakeBackend(user_id=ADMIN_ID)
+    ctx, page, errors = new_page(browser, fake)
+    goto(page, "/status/")
+    page.wait_for_timeout(2500)
+    shot(page, "setup-check-admin")
+    check("admin setup check shows the AI key", page.get_by_text("AI tutor key", exact=False).first.count() > 0 and page.get_by_text("model claude-sonnet-5-5", exact=False).first.count() > 0)
+    check("admin setup check shows Stripe test mode", page.get_by_text("test mode", exact=False).first.count() > 0)
+    check("admin setup check warns when LiveKit is missing", page.get_by_text("LiveKit keys aren't set", exact=False).first.count() > 0)
+    ctx.close()
+
 # ---------------------------------------------------------------------------------------------------------------------
 if __name__ == "__main__":
     httpd = serve()

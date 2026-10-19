@@ -3,6 +3,9 @@ import { useState } from "react";
 import { supabase } from "@/lib/supabaseClient";
 import { IS_APP_BUILD } from "@/lib/native";
 import { setSessionId } from "@/lib/sessionId";
+import { friendlyAuthError } from "@/lib/authErrors";
+import { routes } from "@/lib/nav";
+import Link from "next/link";
 
 type Mode = "signin" | "signup" | "reset" | "code" | "newpw";
 
@@ -15,7 +18,7 @@ export default function LoginForm({ initialMode = "signin", onSignedIn }: { init
   const [password, setPassword] = useState("");
   const [code, setCode] = useState("");
   const [busy, setBusy] = useState(false);
-  const [msg, setMsg] = useState<{ ok: boolean; text: string } | null>(null);
+  const [msg, setMsg] = useState<{ ok: boolean; text: string; owner?: string } | null>(null);
 
   const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || (typeof window !== "undefined" && !IS_APP_BUILD ? window.location.origin : "");
 
@@ -48,8 +51,8 @@ export default function LoginForm({ initialMode = "signin", onSignedIn }: { init
         onSignedIn();
       }
     } catch (err: any) {
-      const m = String(err?.message || "");
-      setMsg({ ok: false, text: /fetch|network/i.test(m) ? "You're offline. Connect to the internet to sign in." : m || "That didn't work. Try again." });
+      const f = friendlyAuthError(err);
+      setMsg({ ok: false, text: f.text, owner: f.owner });
     } finally { setBusy(false); }
   }
 
@@ -92,6 +95,11 @@ export default function LoginForm({ initialMode = "signin", onSignedIn }: { init
         )}
         <button className="btn primary cta block" disabled={busy}>{busy ? "Working…" : cta}</button>
         {msg && <p className={msg.ok ? "note" : "err"} role="status" style={{ margin: 0 }}>{msg.text}</p>}
+        {msg?.owner && (
+          <p className="note" style={{ margin: 0, fontSize: 12.5 }}>
+            <b>Site owner:</b> {msg.owner} <Link href={routes.status} style={{ color: "var(--orange)", fontWeight: 700 }}>Check the setup</Link>
+          </p>
+        )}
         {mode === "signin" && <button type="button" className="btn sm" style={{ alignSelf: "flex-start" }} onClick={() => { setMode("reset"); setMsg(null); }}>Forgot password?</button>}
         {(mode === "reset" || mode === "code") && <button type="button" className="btn sm" style={{ alignSelf: "flex-start" }} onClick={() => { setMode("signin"); setMsg(null); setCode(""); }}>Back to sign in</button>}
         {mode === "signup" && <p className="note" style={{ margin: 0 }}>Free accounts include free courses, free live classes and limited practice. Practice questions teach tested concepts and are not actual exam items.</p>}

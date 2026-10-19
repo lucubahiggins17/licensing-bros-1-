@@ -4,7 +4,7 @@ import { useCallback, useEffect, useState } from "react";
 import Link from "next/link";
 import {
   Users, UserPlus, CreditCard, DollarSign, Banknote, Activity, Bot, Plus, CalendarPlus, Sparkles, Megaphone,
-  RefreshCw, Radio, TrendingDown, Receipt, Clapperboard, Gamepad2
+  RefreshCw, Radio, TrendingDown, Receipt, Clapperboard, Gamepad2, ShieldCheck
 } from "lucide-react";
 import { supabase } from "@/lib/supabaseClient";
 import { routes } from "@/lib/nav";
@@ -87,6 +87,7 @@ export default function Dashboard() {
           <button type="button" className="btn navy" onClick={() => nav("lives", { action: "new" })}><CalendarPlus aria-hidden="true" />Schedule live</button>
           <button type="button" className="btn" onClick={() => nav("tests", { action: "new" })}><Sparkles aria-hidden="true" />Build a test with AI</button>
           <button type="button" className="btn" onClick={() => nav("tests", { action: "new-deck" })}><Gamepad2 aria-hidden="true" />Build a game with AI</button>
+          <Link className="btn" href={routes.status}><ShieldCheck aria-hidden="true" />Setup check</Link>
           <button type="button" className="btn" onClick={() => nav("notify")}><Megaphone aria-hidden="true" />Send announcement</button>
         </div>
         <span className="bolts" />

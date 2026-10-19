@@ -5,6 +5,7 @@ import { useSyncExternalStore } from "react";
 import { callFn, ApiError } from "@/lib/api";
 import { getSessionId, setSessionId } from "@/lib/sessionId";
 import { supabase } from "@/lib/supabaseClient";
+import { friendlyAuthError } from "@/lib/authErrors";
 
 export type LocationState = "home" | "away" | "outside" | "unset" | "unknown";
 export type LocationInfo = {
@@ -115,7 +116,7 @@ export async function sendSecurityCode(): Promise<void> {
   const email = data.user?.email;
   if (!email) throw new ApiError("Sign in again first.", 401, "signed_out");
   const { error } = await supabase().auth.signInWithOtp({ email, options: { shouldCreateUser: false } });
-  if (error) throw new ApiError(error.message, 400, "otp_failed");
+  if (error) { const f = friendlyAuthError(error); throw new ApiError(f.owner ? `${f.text} ${f.owner}` : f.text, 400, "otp_failed"); }
 }
 
 export async function verifySecurityCode(code: string): Promise<void> {

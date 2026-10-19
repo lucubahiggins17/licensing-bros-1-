@@ -27,15 +27,12 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      # Tidies and tests the Supabase variables, and shows the result on this run's summary page
       - name: Check settings
         env:
           SUPABASE_URL: ${{ vars.SUPABASE_URL }}
           SUPABASE_ANON_KEY: ${{ vars.SUPABASE_ANON_KEY }}
-        run: |
-          if [ -z "$SUPABASE_URL" ] || [ -z "$SUPABASE_ANON_KEY" ]; then
-            echo "::error::Add repository variables SUPABASE_URL and SUPABASE_ANON_KEY (Settings > Secrets and variables > Actions > Variables)."
-            exit 1
-          fi
+        run: bash .github/check-supabase.sh
 
       # Reads this repo's Pages address. Fails with a clear message if Pages isn't switched on yet
       # (Settings > Pages > Source: GitHub Actions).
@@ -50,8 +47,7 @@ jobs:
 
       - name: Build
         env:
-          NEXT_PUBLIC_SUPABASE_URL: ${{ vars.SUPABASE_URL }}
-          NEXT_PUBLIC_SUPABASE_ANON_KEY: ${{ vars.SUPABASE_ANON_KEY }}
+          # NEXT_PUBLIC_SUPABASE_URL and NEXT_PUBLIC_SUPABASE_ANON_KEY come from the Check settings step
           # The address GitHub Pages serves this site at (custom domain, or you.github.io/licensing-bros)
           NEXT_PUBLIC_SITE_URL: ${{ steps.pages.outputs.base_url }}
           # "/licensing-bros" on a github.io address, empty on a custom domain

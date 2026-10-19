@@ -94,6 +94,9 @@ Back up the key. Play also needs a privacy policy link; in-app account deletion 
 
 ---
 
+## Setup check
+Open `https://YOUR-SITE/status/` (or Admin → Dashboard → **Setup check**) any time. It tests the site's Supabase address and key, whether sign-ups are allowed, whether `schema.sql` ran, whether an admin exists and whether the backend functions are deployed. Signed in as the admin, it also checks the AI, Stripe and LiveKit keys and the `SITE_URL`. Each line says what to fix. The GitHub workflows also tidy and test the Supabase variables before every build and show the result on the run's page.
+
 ## Running your business: quick guide
 - **Add a course**: Admin → Courses → New course. Fill in the details and price, add modules and lessons, upload videos or paste YouTube/Vimeo links, and write quizzes yourself or with AI. Then flip **Published**.
   - Free courses need the **Free** switch.
@@ -115,7 +118,7 @@ Google requires its own billing for digital goods sold inside Android apps, so t
 - **Database security** against real Postgres in-process: 95 checks (paid content can't be self-unlocked, admin powers and the admin code are protected, older projects upgrade in place, and so on).
 - **Backend logic**: 60 Deno tests covering location rules, device sessions, Stripe signatures, LiveKit tokens, video links and AI output checks.
 - **Production build.**
-- **Browser tests**: 57 checks that click through the site as a visitor, a free student, a paying student and the admin, on desktop and phone.
+- **Browser tests**: 111 checks that click through the site as a visitor, a free student, a paying student and the admin, on desktop and phone.
 - **GitHub Pages subfolder**: builds the site for `you.github.io/licensing-bros` and checks every file and link stays inside the subfolder (13 checks).
 - **Device sweep**: opens all 25 main screens on 8 screen sizes (small phone, phone, iPad mini, iPad Air, iPad landscape, iPad Pro landscape, laptop, 1920 desktop) and fails on sideways scrolling, content wider than the screen, or errors.
 

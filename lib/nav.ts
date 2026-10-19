@@ -30,7 +30,8 @@ export const routes = {
   account: (tab?: string) => `/account/${tab ? "#" + tab : ""}`,
   admin: (tab?: string) => `/admin/${tab ? "#" + tab : ""}`,
   login: (mode?: "signup", next?: string) => `/login/${mode || next ? "?" + new URLSearchParams({ ...(mode ? { mode } : {}), ...(next ? { next } : {}) }).toString() : ""}`,
-  verify: (code?: string) => `/verify/${code ? "?code=" + code : ""}`
+  verify: (code?: string) => `/verify/${code ? "?code=" + code : ""}`,
+  status: "/status/"
 };
 
 export const IS_APP_BUILD = process.env.NEXT_PUBLIC_TARGET === "app";

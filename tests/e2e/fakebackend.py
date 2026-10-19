@@ -451,6 +451,10 @@ class FakeBackend:
                 return 200, {"text": "Week 1: Business & Law basics."}
             if k == "pairs":
                 return 200, {"pairs": [{"t": "gc", "k": "Retainage", "v": "Portion of payments held until completion", "ai": True}, {"t": "gc", "k": "Lien waiver", "v": "Gives up lien rights for a payment", "ai": True}, {"t": "gc", "k": "Change order", "v": "Written change to scope, price or time", "ai": True}]}
+            if k == "health":
+                if not self.is_admin():
+                    return 403, {"error": "Only admins can run the setup check.", "code": "forbidden"}
+                return 200, {"ai": True, "stripe": True, "stripe_live": False, "stripe_webhook": True, "livekit": False, "ipinfo": False, "site_url": "http://localhost:8833", "model": "claude-sonnet-5-5"}
             if k == "delete_account":
                 return 200, {"deleted": True}
             return 400, {"error": "Unknown request.", "code": "bad_request"}
@@ -460,6 +464,8 @@ class FakeBackend:
 
     # ------------------------------------------------------------------ Auth
     def auth(self, method, path, body):
+        if path.startswith("settings"):
+            return 200, {"external": {"email": True, "phone": False}, "disable_signup": False, "mailer_autoconfirm": False, "phone_autoconfirm": False}
         if path.startswith("user"):
             if not self.user_id:
                 return 401, {"message": "not signed in"}
@@ -473,6 +479,8 @@ class FakeBackend:
             self.user_id = uid
             return 200, self.session_obj()
         if path.startswith("signup"):
+            if "blocked" in str((body or {}).get("email", "")):
+                return 400, {"code": 400, "error_code": "email_address_not_authorized", "msg": "Email address not authorized: blocked@example.com"}
             return 200, {"user": {"id": str(uuid.uuid4()), "email": (body or {}).get("email")}, "session": None}
         if path.startswith("logout"):
             self.user_id = None
