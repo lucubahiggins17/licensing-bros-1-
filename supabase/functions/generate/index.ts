@@ -29,6 +29,7 @@ import {
 } from "../_shared/common.ts";
 import { formatFacts, sampleFacts, searchFacts } from "../_shared/kb.ts";
 import { askModel, buildDeck, buildTest } from "../_shared/builders.ts";
+import { searchLibrary } from "../_shared/library.ts";
 
 const ask = askModel;
 
@@ -140,7 +141,8 @@ Deno.serve(handler(async (req) => {
       anthropic();
       await useAiCredit(user.id, limits, admin);
       const postText = `${post.title}\n\n${post.body || ""}`.slice(0, 5200);
-      const notes = formatFacts(searchFacts(postText, { trade: ctx.trade, state: ctx.state, limit: 8 }));
+      const lib = await searchLibrary(postText, { trade: ctx.trade, state: ctx.state, limit: 4 }).catch(() => []);
+      const notes = [formatFacts(searchFacts(postText, { trade: ctx.trade, state: ctx.state, limit: 10 })), lib.map((p) => `[${p.ref}] ${p.text}`).join("\n")].filter(Boolean).join("\n");
       const answer = (await ask(MODEL(), `Community post:\nTITLE: ${post.title}\n\n${post.body || ""}`.slice(0, 5400), 900,
         communitySystem(ctx.state, ctx.tradeName, ctx.refs, notes))).trim();
       if (!answer) throw new HttpError(502, "ai_error", "The AI couldn't answer that one. Try again.");
