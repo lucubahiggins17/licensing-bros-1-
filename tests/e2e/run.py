@@ -644,6 +644,8 @@ def command_center(browser):
     goto(page, "/admin/#assistant")
     page.wait_for_timeout(900)
     shot(page, "command-empty")
+    check("the command center opens with today's briefing", page.get_by_text("Good morning, LuCuba.").count() > 0 and page.get_by_text("Exams this week").count() > 0)
+    check("briefing suggests next moves", page.get_by_role("button", name="Show me the 3 at-risk students and draft each a study plan").count() > 0)
     check("command center opens with suggestions", page.get_by_text("Bro").first.count() > 0 and page.get_by_role("button", name="Who's at risk of failing their exam this month?").count() > 0)
     page.get_by_role("button", name="Who's at risk of failing their exam this month?").click()
     page.wait_for_timeout(1500)

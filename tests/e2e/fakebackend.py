@@ -560,6 +560,9 @@ class FakeBackend:
         if not self.is_staff():
             return 403, {"error": "The command center is for admins and instructors.", "code": "forbidden"}
         a = body.get("action")
+        if a == "brief":
+            return 200, {"greeting": "Good morning, LuCuba.", "items": [{"label": "At risk", "value": 3}, {"label": "Exams this week", "value": 2}, {"label": "New today", "value": 1}, {"label": "Paid & quiet 7+ days", "value": 4}],
+                         "classes": ["Lien Law Live Q&A · LIVE NOW"], "suggestions": ["Show me the 3 at-risk students and draft each a study plan"]}
         if a in ("confirm", "cancel"):
             self.calls.append(("assistant", a))
             if a == "cancel":

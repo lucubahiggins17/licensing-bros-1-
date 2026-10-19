@@ -91,3 +91,10 @@
 .sendBtn{background:var(--orange);border-color:var(--orange);color:#fff}
 .stop{background:var(--navy);border-color:var(--navy);color:#fff}
 .live{background:var(--bad);border-color:var(--bad);color:#fff;animation:breathe 1.2s ease-in-out infinite}
+
+.brief{display:flex;flex-direction:column;gap:10px;background:#fff;border:2px solid var(--navy);border-radius:var(--r);padding:14px 16px}
+.briefHi{font-family:var(--heading);font-size:16px;font-weight:900}
+.briefItems{display:flex;flex-wrap:wrap;gap:8px}
+.briefItem{display:inline-flex;align-items:baseline;gap:6px;background:var(--surface);border:1.5px solid var(--line);border-radius:999px;padding:4px 12px;font-size:13px;color:var(--muted)}
+.briefItem b{font-family:var(--display);font-size:17px;color:var(--ink)}
+.briefItem[data-hot="1"]{border-color:var(--orange);background:var(--orange-soft)}

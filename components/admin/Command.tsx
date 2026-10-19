@@ -19,6 +19,7 @@ type Card =
   | { kind: "stats"; title: string; items: { label: string; value: string }[] }
   | { kind: "list"; title: string; items: string[] };
 type Action = { id: string; kind: string; summary: string; details: string[]; state?: "busy" | "done" | "cancelled" | "failed"; result?: string };
+type Brief = { greeting: string; items: { label: string; value: number }[]; classes: string[]; suggestions: string[] };
 type Item =
   | { type: "me"; text: string }
   | { type: "ai"; text: string }
@@ -63,6 +64,7 @@ export default function Command() {
   const [busy, setBusy] = useState(false);
   const [listening, setListening] = useState(false);
   const [speakOn, setSpeakOn] = useState(false);
+  const [brief, setBrief] = useState<Brief | null>(null);
   const historyRef = useRef<unknown[]>([]);
   const notesRef = useRef<string[]>([]);
   const abortRef = useRef<AbortController | null>(null);
@@ -78,6 +80,7 @@ export default function Command() {
     historyRef.current = v.history;
     notesRef.current = v.notes;
     try { setSpeakOn(localStorage.getItem("lb.cmd.voice") === "1"); } catch { /* ignore */ }
+    callFn<Brief>("assistant", { action: "brief", tz: Intl.DateTimeFormat().resolvedOptions().timeZone }).then(setBrief).catch(() => { /* briefing is a bonus */ });
     return () => { abortRef.current?.abort(); listenRef.current?.abort(); speakerRef.current?.cancel(); };
   }, []);
   useEffect(() => {
@@ -238,6 +241,19 @@ export default function Command() {
           {items.length > 0 && <button type="button" className="btn sm ghost" onClick={reset}><RotateCcw aria-hidden="true" />New chat</button>}
         </div>
       </section>
+
+      {brief && (
+        <section className={c.brief} aria-label="Today's briefing">
+          <b className={c.briefHi}>{brief.greeting}</b>
+          <div className={c.briefItems}>
+            {brief.items.map((x) => <span key={x.label} className={c.briefItem} data-hot={x.value > 0 && x.label !== "New today" ? "1" : "0"}><b>{x.value}</b>{x.label}</span>)}
+          </div>
+          {brief.classes.length > 0 && <span className="note">Coming up: {brief.classes.join(" · ")}</span>}
+          {brief.suggestions.length > 0 && (
+            <div className={c.chips}>{brief.suggestions.map((t) => <button key={t} type="button" className={c.chip} onClick={() => send(t)} disabled={busy}>{t}</button>)}</div>
+          )}
+        </section>
+      )}
 
       <section className={`card hard ${c.console}`}>
         <div ref={chatRef} className={`chat ${c.chat}`} aria-live="polite">

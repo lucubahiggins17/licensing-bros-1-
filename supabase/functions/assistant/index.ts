@@ -6,7 +6,7 @@
 //   {t:"done", history}                 conversation to send back next time
 // Body: {action:"chat", message, history?, tz?, voice?} | {action:"confirm"|"cancel", id, tz?}
 import { adminClient, anthropic, cors, handler, HttpError, json, MODEL, readBody, requireUser, staffRole } from "../_shared/common.ts";
-import { commandSystem, type Role, type ToolCtx, toolByName, toolDefs } from "../_shared/assistant.ts";
+import { allStudents, commandSystem, type Role, type ToolCtx, toolByName, toolDefs } from "../_shared/assistant.ts";
 import { cleanHistory } from "../_shared/logic.ts";
 
 const CACHE = { type: "ephemeral" } as const;
@@ -55,6 +55,37 @@ Deno.serve(handler(async (req) => {
       await db.from("assistant_actions").update({ status: "failed", result: { message } }).eq("id", id);
       return json({ ok: false, status: "failed", message });
     }
+  }
+
+  // ---------------------------------------------------------------- morning briefing (no AI; fast)
+  if (action === "brief") {
+    const all = (await allStudents()).filter((x) => x.role === "student");
+    const now = Date.now();
+    const risky = all.filter((x) => x.risk === "high");
+    const soon = all.filter((x) => x.days_to_exam !== null && x.days_to_exam >= 0 && x.days_to_exam <= 7);
+    const fresh = all.filter((x) => now - Date.parse(x.joined) <= 864e5);
+    const quiet = all.filter((x) => x.paid && x.days_inactive !== null && x.days_inactive >= 7);
+    const { data: lives } = await db.from("lives").select("title, starts_at, status").neq("status", "ended")
+      .gte("starts_at", new Date(now - 3 * 3600_000).toISOString()).lte("starts_at", new Date(now + 36 * 3600_000).toISOString()).order("starts_at").limit(3);
+    const hour = Number(new Intl.DateTimeFormat("en-US", { timeZone: ctx.tz, hour: "numeric", hourCycle: "h23" }).format(new Date()));
+    const first = ctx.name.split(/\s+/)[0];
+    const suggestions: string[] = [];
+    if (risky.length) suggestions.push(`Show me the ${risky.length} at-risk student${risky.length === 1 ? "" : "s"} and draft each a study plan`);
+    if (soon.length) suggestions.push(`Remind the ${soon.length} student${soon.length === 1 ? "" : "s"} with an exam this week to take a mock exam`);
+    if (quiet.length) suggestions.push(`Nudge the ${quiet.length} paid student${quiet.length === 1 ? "" : "s"} who haven't studied in a week`);
+    if (!lives?.length) suggestions.push("Plan a live class on the toughest topic and schedule it");
+    return json({
+      greeting: `${hour < 12 ? "Good morning" : hour < 18 ? "Good afternoon" : "Good evening"}, ${first}.`,
+      items: [
+        { label: "At risk", value: risky.length },
+        { label: "Exams this week", value: soon.length },
+        { label: "New today", value: fresh.length },
+        { label: "Paid & quiet 7+ days", value: quiet.length }
+      ],
+      // deno-lint-ignore no-explicit-any
+      classes: ((lives || []) as any[]).map((l) => `${l.title} · ${l.status === "live" ? "LIVE NOW" : new Date(l.starts_at).toLocaleString("en-US", { timeZone: ctx.tz, weekday: "short", hour: "numeric", minute: "2-digit" })}`),
+      suggestions: suggestions.slice(0, 3)
+    });
   }
 
   // ---------------------------------------------------------------- chat
