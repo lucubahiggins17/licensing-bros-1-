@@ -3,10 +3,10 @@
 // own material (PDF bulletins, board rules, notes, web pages). Each document is split into cited passages the tutor
 // and the AI builders search by keyword right away and by meaning once indexed.
 import { useCallback, useEffect, useRef, useState } from "react";
-import { BookMarked, Brain, FileText, Globe, Library, Search, Trash2, Upload, ClipboardPaste, ShieldCheck } from "lucide-react";
+import { BookMarked, Brain, FileText, Gauge, Globe, Library, Search, Trash2, Upload, ClipboardPaste, ShieldCheck } from "lucide-react";
 import { supabase } from "@/lib/supabaseClient";
 import { callFn } from "@/lib/api";
-import { STATES } from "@/lib/data";
+import { BANK, STATES, type Question } from "@/lib/data";
 import { errMsg, fmtDate, num, plural, q } from "./format";
 import { useAdmin, useDirty, useMounted, ConfirmButton, Empty, ErrorBox, FormPanel, Loading, SectionHead, Step } from "./ui";
 import s from "./admin.module.css";
@@ -76,6 +76,7 @@ export default function Knowledge() {
 
       <AddKnowledge onAdded={load} />
       <SearchTester />
+      <AccuracyCheck />
 
       <section className="stack" style={{ gap: 10 }} aria-label="Your documents">
         <h3 className={s.h3}>Your documents</h3>
@@ -293,6 +294,92 @@ function SearchTester() {
           {hits.map((h) => <li key={h.id}><b>{h.ref}</b><p className="note" style={{ margin: "2px 0 0" }}>{h.text.length > 320 ? `${h.text.slice(0, 320)}…` : h.text}</p></li>)}
         </ol>
       ) : <p className="note" style={{ margin: 0 }}>Nothing in your library matches yet. The tutor still answers from the built-in verified facts.</p>)}
+    </section>
+  );
+}
+
+// ------------------------------------------------------------------------------------------------
+type Graded = { q: Question; pick: number | null; why: string };
+const SIZES = [20, 50, 100];
+
+/** Runs real exam-style questions from the verified bank through the tutor (same facts, routing and calculator
+ *  students get) and grades the answers, so you can see the accuracy instead of trusting it. */
+function AccuracyCheck() {
+  const { toast } = useAdmin();
+  const mounted = useMounted();
+  const [trade, setTrade] = useState("all");
+  const [size, setSize] = useState(20);
+  const [state, setState] = useState("Tennessee");
+  const [run, setRun] = useState<null | { done: number; total: number }>(null);
+  const [graded, setGraded] = useState<Graded[] | null>(null);
+  const stop = useRef(false);
+
+  async function start() {
+    const pool = BANK.filter((x) => trade === "all" || x.t === trade || (trade === "law" && x.t === "law"));
+    if (!pool.length) { toast("No verified questions for that trade yet.", "info"); return; }
+    const pick = [...pool].sort(() => Math.random() - 0.5).slice(0, Math.min(size, pool.length));
+    stop.current = false;
+    setGraded([]);
+    setRun({ done: 0, total: pick.length });
+    const out: Graded[] = [];
+    try {
+      for (let i = 0; i < pick.length && !stop.current; i += 5) {
+        const batch = pick.slice(i, i + 5);
+        const r = await callFn<{ results: { pick: number | null; why: string }[] }>("library", {
+          action: "accuracy_check", questions: batch.map((x) => ({ q: x.q, c: x.c, trade: x.t, state }))
+        });
+        batch.forEach((x, k) => out.push({ q: x, pick: r.results?.[k]?.pick ?? null, why: r.results?.[k]?.why || "" }));
+        if (!mounted.current) return;
+        setGraded([...out]);
+        setRun({ done: out.length, total: pick.length });
+      }
+    } catch (e) { toast(errMsg(e, "The check stopped. Try again."), "bad"); }
+    if (mounted.current) setRun(null);
+  }
+
+  const right = (graded || []).filter((g) => g.pick === g.q.a).length;
+  const total = (graded || []).length;
+  const misses = (graded || []).filter((g) => g.pick !== g.q.a);
+  const pct = total ? Math.round((right / total) * 100) : 0;
+  return (
+    <section className="card hard stack" style={{ gap: 12 }} aria-label="Accuracy check">
+      <div className={s.cardHead}><h3><Gauge aria-hidden="true" style={{ width: 18, height: 18, verticalAlign: "-3px", marginRight: 6 }} />Accuracy check</h3></div>
+      <p className="note" style={{ margin: 0 }}>The tutor answers real exam-style questions from the verified bank, using exactly what students get, and we grade it against the known answers. Each question uses one AI request.</p>
+      <div className="grid2">
+        <label className="field">Trade
+          <select value={trade} onChange={(e) => setTrade(e.target.value)} disabled={!!run}>
+            <option value="all">All trades</option>
+            {Object.entries(KB_TRADES).map(([k, v]) => <option key={k} value={k}>{v}</option>)}
+          </select>
+        </label>
+        <label className="field">Questions
+          <select value={size} onChange={(e) => setSize(Number(e.target.value))} disabled={!!run}>{SIZES.map((n) => <option key={n} value={n}>{n}</option>)}</select>
+        </label>
+        <label className="field">Student&rsquo;s state
+          <select value={state} onChange={(e) => setState(e.target.value)} disabled={!!run}>{STATES.map((st) => <option key={st} value={st}>{st}</option>)}</select>
+        </label>
+      </div>
+      {run ? (
+        <div className={s.genBox} role="status" aria-live="polite">
+          <div className={s.genTop}><span className="spin" aria-hidden="true" /><div><b>Checking {run.done} of {run.total}…{total ? ` ${right} right so far` : ""}</b></div></div>
+          <div className="bar" aria-hidden="true"><i style={{ width: `${Math.max(4, (run.done / run.total) * 100)}%` }} /></div>
+          <div><button type="button" className="btn sm" onClick={() => { stop.current = true; }}>Stop</button></div>
+        </div>
+      ) : (
+        <button type="button" className="btn navy" onClick={start}><Gauge aria-hidden="true" />Run the accuracy check</button>
+      )}
+      {graded && total > 0 && (
+        <div className="stack" style={{ gap: 8 }}>
+          <p style={{ margin: 0, fontSize: 18 }}><b>{right} of {total} right ({pct}%)</b>{run ? "" : misses.length ? " · misses below" : " · perfect score"}</p>
+          {misses.slice(0, 20).map((g, i) => (
+            <details key={i} className="note" style={{ border: "1px solid var(--line)", borderRadius: 8, padding: "8px 10px" }}>
+              <summary style={{ cursor: "pointer" }}>{g.q.q}</summary>
+              <p style={{ margin: "6px 0 0" }}>Correct: <b>{"ABCD"[g.q.a]}. {g.q.c[g.q.a]}</b> ({g.q.ref}) · Tutor picked: <b>{g.pick === null ? "no clear answer" : `${"ABCD"[g.pick]}. ${g.q.c[g.pick]}`}</b></p>
+              {g.why && <p style={{ margin: "4px 0 0", whiteSpace: "pre-wrap" }}>{g.why}</p>}
+            </details>
+          ))}
+        </div>
+      )}
     </section>
   );
 }

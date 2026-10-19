@@ -235,3 +235,12 @@ Deno.test("safePath: same-site paths only", () => {
     assert.equal(safePath(bad, "/fallback"), "/fallback", String(bad));
   }
 });
+
+import { pickFromAnswer } from "../../supabase/functions/_shared/logic.ts";
+Deno.test("pickFromAnswer: reads the final ANSWER line", () => {
+  assert.equal(pickFromAnswer("Table 250.66 says 4 AWG.\nANSWER: C"), 2);
+  assert.equal(pickFromAnswer("ANSWER: A ... wait, recheck.\nANSWER: (D)"), 3); // the last one counts
+  assert.equal(pickFromAnswer("answer - b"), 1);
+  assert.equal(pickFromAnswer("It's B."), 1);
+  assert.equal(pickFromAnswer("No idea"), null);
+});

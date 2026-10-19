@@ -8,7 +8,10 @@
 import { adminClient, handler, HttpError, json, readBody, requireUser } from "../_shared/common.ts";
 import { htmlToText, STATES } from "../_shared/logic.ts";
 import { embedPending, saveLibraryDocument, searchLibrary } from "../_shared/library.ts";
-import { kbStats } from "../_shared/kb.ts";
+import { formatFacts, kbStats, searchFacts } from "../_shared/kb.ts";
+import { anthropic, CALC_TOOL, cleanContext, FAST_MODEL, MODEL, routeTutor, tutorParts } from "../_shared/common.ts";
+import { streamAnswer } from "../_shared/answer.ts";
+import { pickFromAnswer } from "../_shared/logic.ts";
 
 const TRADES = new Set(["gc", "elec", "plumb", "hvac", "law"]);
 const KINDS = new Set(["notes", "bulletin", "rules", "code", "lesson", "web", "other"]);
@@ -87,6 +90,41 @@ Deno.serve(handler(async (req) => {
     const state = body.state && STATES.includes(String(body.state)) ? String(body.state) : undefined;
     const hits = await searchLibrary(query, { trade, state, limit: 8 });
     return json({ hits });
+  }
+
+  // Accuracy check: the tutor answers real exam-style questions (sent by the admin page) with exactly the same
+  // facts, routing and calculator students get; the page grades them against the known answers.
+  if (action === "accuracy_check") {
+    const list = Array.isArray(body.questions) ? body.questions.slice(0, 5) : [];
+    if (!list.length) throw new HttpError(400, "bad_request", "Send some questions to check.");
+    const client = anthropic();
+    // deno-lint-ignore no-explicit-any
+    const results = await Promise.all(list.map(async (item: any) => {
+      const q = String(item?.q || "").slice(0, 1200);
+      const choices = Array.isArray(item?.c) ? item.c.slice(0, 4).map((x: unknown) => String(x).slice(0, 300)) : [];
+      if (!q || choices.length !== 4) return { pick: null, route: null, why: "bad question" };
+      const { state, trade, tradeName, refs } = cleanContext(item.state, item.trade === "law" ? "gc" : item.trade);
+      const question = `${q}\n${choices.map((c: string, i: number) => `${"ABCD"[i]}. ${c}`).join("\n")}`;
+      const facts = searchFacts(question, { trade, state, limit: 12 });
+      const lib = await searchLibrary(question, { trade, state, limit: 4 }).catch(() => []);
+      const notesText = [formatFacts(facts), lib.map((p) => `[${p.ref}] ${p.text}`).join("\n")].filter(Boolean).join("\n");
+      const { system, notes } = tutorParts(state, tradeName, refs, notesText, { calculator: true });
+      const route = routeTutor({ question: q });
+      let text = "";
+      try {
+        const r = await streamAnswer({
+          client, model: route === "fast" ? FAST_MODEL() : MODEL(), maxTokens: 900, send: () => {},
+          system: [{ type: "text", text: system, cache_control: { type: "ephemeral" } }],
+          messages: [{ role: "user", content: [...(notes ? [{ type: "text", text: notes }] : []), { type: "text", text: `${question}\n\nThis is a multiple-choice exam question. Work it out briefly, then end with a final line exactly like "ANSWER: B".` }] }],
+          tools: [CALC_TOOL]
+        });
+        text = r.text;
+      } catch (e) {
+        return { pick: null, route, why: `AI error: ${(e as Error)?.message || "failed"}`.slice(0, 200) };
+      }
+      return { pick: pickFromAnswer(text), route, why: text.replace(/ANSWER:\s*[A-D]\s*$/i, "").trim().slice(-400) };
+    }));
+    return json({ results });
   }
 
   if (action === "stats") {

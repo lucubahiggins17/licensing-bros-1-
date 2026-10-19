@@ -1,0 +1,252 @@
+{
+ "facts": [
+  {
+   "id": "H7",
+   "action": "fix",
+   "reason": "Ranges are split: gas open-burner ranges are heavy-duty; only electric discrete-element and hot-top ranges are medium-duty. 'Medium-duty includes ranges' is misleading.",
+   "fixed": {
+    "fact": "Commercial cooking appliances are grouped by duty: extra-heavy-duty appliances use solid fuel such as wood or charcoal; heavy-duty includes underfired broilers, chain (conveyor) broilers, gas open-burner ranges and wok ranges; medium-duty includes fryers, griddles, hot-top ranges and electric discrete-element ranges; light-duty includes ovens, steamers, kettles and pasta cookers."
+   }
+  },
+  {
+   "id": "H13",
+   "action": "fix",
+   "reason": "Leaves out the exception that is tested most often: appliances listed as flammable-vapor-ignition-resistant (FVIR), such as most modern gas water heaters, do not have to be elevated.",
+   "fixed": {
+    "fact": "In garages (private, public, repair and parking garages) and hazardous locations, appliances with an ignition source must be elevated so the source of ignition (burner, igniter or switch) is at least 18 inches above the floor. Exception: elevation is not required for appliances listed as flammable vapor ignition resistant (FVIR)."
+   }
+  },
+  {
+   "id": "H20",
+   "action": "fix",
+   "reason": "The exception is wrong. The 306.1.1 exception covers replacement furnaces in existing compartments or alcoves, which may use the manufacturer's clearances. It is not about a furnace 'listed for less clearance'.",
+   "fixed": {
+    "fact": "Central furnaces in compartments or alcoves need at least 3 inches of working clearance along the sides, back and top, with the enclosure at least 12 inches wider than the furnace (6 inches at the front if the firebox is open to the atmosphere). Exception: replacement furnaces installed in existing compartments or alcoves may use the manufacturer's working clearances."
+   }
+  },
+  {
+   "id": "H41",
+   "action": "fix",
+   "reason": "IECC R302.1 sets limits, not fixed values: no higher than 72 F for heating and no lower than 75 F for cooling.",
+   "fixed": {
+    "fact": "For residential load calculations, the interior design temperature may be no higher than 72 degrees F for heating and no lower than 75 degrees F for cooling."
+   }
+  },
+  {
+   "id": "H44",
+   "action": "fix",
+   "reason": "Since the 2018 IRC, M1602.2 covers return air only (outdoor air openings are in M1602.1). The list also leaves out 'mechanical room' and the exception for a dedicated garage-only system.",
+   "fixed": {
+    "fact": "Return air for a forced-air system may not be taken from a closet, bathroom, toilet room, kitchen, garage, mechanical room, boiler room, furnace room or unconditioned attic. Exceptions: a kitchen return is allowed if it serves only the kitchen and is at least 10 ft from the cooking appliances, and a dedicated forced-air system serving only a garage may take return air from the garage."
+   }
+  },
+  {
+   "id": "H45",
+   "action": "fix",
+   "reason": "Wrong section. Since the 2018 IRC, outdoor air intake openings are covered in M1602.1; M1602.2 covers return air.",
+   "fixed": {
+    "source": "IRC 2021 M1602.1"
+   }
+  },
+  {
+   "id": "H49",
+   "action": "fix",
+   "reason": "307.2.1 covers cooling coils and evaporators. Condensate from fuel-burning condensing appliances is covered by 307.1.",
+   "fixed": {
+    "source": "IMC 2021 307.1; 307.2.1"
+   }
+  },
+  {
+   "id": "H69",
+   "action": "fix",
+   "reason": "The Ez of 0.8 for ceiling supply and return applies only when the warm supply air is 15 F or more above space temperature. Warm air less than 15 F above space temperature (with throw to within 4.5 ft of the floor) is 1.0.",
+   "fixed": {
+    "fact": "Zone outdoor airflow is Voz = Vbz / Ez, where Ez is air distribution effectiveness. Ez is 1.0 for cool air supplied from the ceiling, and 0.8 for warm air supplied at the ceiling at 15 F or more above space temperature with a ceiling return (warm air less than 15 F above space temperature can be 1.0). Example: 85 cfm / 0.8 = about 106 cfm."
+   }
+  },
+  {
+   "id": "H73",
+   "action": "fix",
+   "reason": "The 2021 IRC R303.4 threshold reads '5 air changes per hour or less' (earlier editions said 'less than 5').",
+   "fixed": {
+    "fact": "Under the 2021 IRC, a dwelling unit tested at 5 air changes per hour or less at 50 Pascals (blower door) must be provided with whole-house mechanical ventilation (earlier editions said 'less than 5')."
+   }
+  },
+  {
+   "id": "H78",
+   "action": "fix",
+   "reason": "Wrong section. In the 2021 IRC, exhaust opening locations are in M1504.3; M1505 is mechanical ventilation.",
+   "fixed": {
+    "source": "IRC 2021 M1504.3"
+   }
+  },
+  {
+   "id": "H81",
+   "action": "fix",
+   "reason": "The 2018 and later IMC (504.8.1) and the IRC both require metal at least 0.0157 inch (No. 28 gage). The value 0.016 inch comes from older editions. The code also says 'metal', not 'rigid metal'.",
+   "fixed": {
+    "fact": "Domestic dryer exhaust ducts must have a smooth interior finish, be made of metal at least 0.0157 inch thick (No. 28 gage), and be 4 inches nominal diameter.",
+    "note": "Older editions (2015 and earlier) stated 0.016 inch."
+   }
+  },
+  {
+   "id": "H83",
+   "action": "fix",
+   "reason": "The current IMC 504.8.2 (and IRC M1502.4.2) requires dryer exhaust ducts to be supported at intervals of no more than 12 ft. The 4-ft interval is from older editions.",
+   "fixed": {
+    "fact": "Domestic dryer exhaust ducts must be supported at intervals not exceeding 12 ft and secured in place.",
+    "source": "IMC 2021 504.8.2; IRC 2021 M1502.4.2",
+    "note": "Older editions (2012 and earlier) required support at 4-ft intervals."
+   }
+  },
+  {
+   "id": "H91",
+   "action": "fix",
+   "reason": "The code states shield plates of 0.062-inch steel. No. 16 gage (0.0598 in) is slightly thinner, so 'at least No. 16 gage' understates the requirement.",
+   "fixed": {
+    "fact": "Where a dryer exhaust duct passes within 1-1/4 inches of the face of framing members, steel shield plates at least 0.062 inch thick must protect it, extending at least 2 inches above sole plates and below top plates."
+   }
+  },
+  {
+   "id": "H92",
+   "action": "fix",
+   "reason": "IMC 504.5 is dryer makeup air, not dampers or booster fans. The damper prohibition is in 504.2, and dryer exhaust duct power ventilators (DEPV) are covered by the separate DEPV provisions of Sec. 504.",
+   "fixed": {
+    "source": "IMC 2021 504.2; Sec. 504 (dryer exhaust duct power ventilators)"
+   }
+  },
+  {
+   "id": "H93",
+   "action": "fix",
+   "reason": "This mixes the IMC and IRC rules. Under the IRC (M1503.6), makeup air for hoods over 400 cfm is required only where a fuel-burning appliance that is neither direct-vent nor mechanical-draft is inside the dwelling's air barrier. An exam is likely to test that condition.",
+   "fixed": {
+    "fact": "IMC 505.2: a domestic kitchen exhaust hood able to exhaust more than 400 cfm must have makeup air at about the same rate, with a means of closure, automatically controlled to run with the hood. IRC M1503.6: makeup air (at about the exhaust rate, through an automatically opening gravity or electrically operated damper) is required for exhaust systems over 400 cfm only where a fuel-burning appliance that is neither direct-vent nor mechanical-draft is located inside the dwelling unit's air barrier."
+   }
+  },
+  {
+   "id": "H94",
+   "action": "fix",
+   "reason": "States the rule as absolute and leaves out exceptions an exam would test: Schedule 40 PVC is allowed for downdraft systems under a slab on grade, and listed ductless range hoods need not discharge outdoors.",
+   "fixed": {
+    "fact": "Ducts serving domestic kitchen cooking appliances must be galvanized steel, stainless steel or copper, have smooth interior surfaces, be airtight, have a backdraft damper, and discharge outdoors (not into an attic or crawl space). Exceptions: Schedule 40 PVC is allowed for downdraft exhaust ducts installed under a concrete slab on grade (with other conditions), and listed and labeled ductless range hoods need not discharge outdoors where other ventilation is provided."
+   }
+  },
+  {
+   "id": "H120",
+   "action": "fix",
+   "reason": "Leaves out the common exception: return-air duct detectors are not required where all areas served are covered by area smoke detection connected to a fire alarm system.",
+   "fixed": {
+    "fact": "Smoke detectors are required in the return air duct or plenum of air distribution systems with a design capacity greater than 2,000 cfm, located upstream of filters, exhaust connections and outdoor air connections. Exception: they are not required where all portions of the building served by the system are protected by area smoke detectors connected to a fire alarm system per the IFC."
+   }
+  },
+  {
+   "id": "H137",
+   "action": "fix",
+   "reason": "This rule is in the main text of 304.1, not an exception. The only 304.1 exception covers Type 1 clothes dryers.",
+   "fixed": {
+    "source": "IFGC 2021 304.1"
+   }
+  },
+  {
+   "id": "H164",
+   "action": "unverify",
+   "reason": "Could not confirm a 12-inch-above-flue-bottom entry rule in IFGC 503.10. The code text says the connector must enter above the extreme bottom of the chimney to avoid stoppage and must not extend so far that it restricts the flue."
+  },
+  {
+   "id": "H165",
+   "action": "fix",
+   "reason": "The 3-2-10 rule in 503.5.4 applies to chimneys for residential-type or low-heat appliances. Medium- and high-heat appliance chimneys need more height.",
+   "fixed": {
+    "fact": "A chimney for residential-type or low-heat appliances must extend at least 3 ft above the highest point where it passes through the roof and at least 2 ft higher than any part of the building within 10 ft horizontally."
+   }
+  },
+  {
+   "id": "H170",
+   "action": "unverify",
+   "reason": "The 12-inch-above-grade rule is in IFGC 503.8. The 7-ft public-walkway rule comes from NFPA 54, and I could not confirm it in the 2021 IFGC text."
+  },
+  {
+   "id": "H205",
+   "action": "fix",
+   "reason": "States the 18-inch rule as absolute. The manufacturer's installation instructions govern boiler clearances first, and 18 inches applies only where they do not specify.",
+   "fixed": {
+    "fact": "Clearances around boilers must follow the manufacturer's installation instructions; where none are given, passageways around all sides of a boiler must be at least 18 inches wide unless otherwise approved, to allow inspection, maintenance and repair."
+   }
+  },
+  {
+   "id": "H221",
+   "action": "unverify",
+   "reason": "This is a recent regulatory change that rests on one law-firm summary. I could not confirm the May 26, 2026 rule or its exact scope against EPA or the Federal Register."
+  },
+  {
+   "id": "H252",
+   "action": "fix",
+   "reason": "Leaves out the date split in Table 1. Low-pressure appliances require 25 mm Hg absolute only with recovery equipment made on or after November 15, 1993; older equipment requires 25 inches of mercury vacuum.",
+   "fixed": {
+    "fact": "Low-pressure appliances (such as R-123 or R-11 centrifugal chillers) must be evacuated to 25 mm of mercury absolute using recovery equipment made on or after November 15, 1993 (25 inches of mercury vacuum with older equipment); very high-pressure appliances (such as R-23 or R-503) must be evacuated to 0 inches of mercury."
+   }
+  },
+  {
+   "id": "H296",
+   "action": "fix",
+   "reason": "Misleading by omission. Production and import of R-22 (HCFC-22) ended January 1, 2020, a common exam date. The fact as written suggests R-22 production runs until 2030.",
+   "fixed": {
+    "fact": "U.S. production of CFCs such as R-12 ended at the end of 1995; manufacture of new equipment designed for R-22 ended January 1, 2010; production and import of R-22 ended January 1, 2020 (only recovered, recycled or reclaimed R-22 remains for servicing); and production of the remaining HCFCs, including R-123, ends January 1, 2030."
+   }
+  }
+ ],
+ "questions": [
+  {
+   "i": 12,
+   "action": "fix",
+   "reason": "Most modern residential gas water heaters are listed as FVIR and are exempt from the 18-inch elevation, so the question as written is wrong for a typical water heater.",
+   "fixed": {
+    "q": "In a residential garage, a gas furnace that is NOT listed as flammable-vapor-ignition-resistant (FVIR) must have its ignition source at least how high above the floor?",
+    "why": "Ignition sources in garages must be at least 18 inches above the floor; appliances listed as FVIR (such as most modern gas water heaters) are exempt from this elevation requirement."
+   }
+  },
+  {
+   "i": 33,
+   "action": "fix",
+   "reason": "The 2021 IRC R303.4 threshold is '5 air changes per hour or less', not 'below 5'.",
+   "fixed": {
+    "q": "Under the 2021 IRC, whole-house mechanical ventilation is required when a dwelling's blower door test result is at or below:",
+    "why": "IRC 2021 R303.4 requires whole-house mechanical ventilation where tested air leakage is 5 air changes per hour or less at 50 Pa (earlier editions said less than 5)."
+   }
+  },
+  {
+   "i": 36,
+   "action": "fix",
+   "reason": "Wrong section. In the 2021 IRC, exhaust opening locations are in M1504.3.",
+   "fixed": {
+    "ref": "IRC 2021 M1504.3"
+   }
+  },
+  {
+   "i": 46,
+   "action": "fix",
+   "reason": "The 'why' leaves out the IRC condition: makeup air applies only where a non-direct-vent, non-mechanical-draft fuel-burning appliance is inside the air barrier. It also calls the damper 'interlocked', while the IRC calls for an automatically opening gravity or electric damper.",
+   "fixed": {
+    "q": "Under IRC M1503.6, where a natural-draft fuel-burning appliance is located inside the dwelling's air barrier, a range hood requires makeup air when it can exhaust more than:",
+    "why": "Exhaust systems over 400 cfm need makeup air at about the exhaust rate through an automatically opening damper, but only where a fuel-burning appliance that is neither direct-vent nor mechanical-draft is inside the air barrier."
+   }
+  },
+  {
+   "i": 76,
+   "action": "fix",
+   "reason": "The 3-2-10 rule in 503.5.4 applies to chimneys for residential-type or low-heat appliances.",
+   "fixed": {
+    "q": "A chimney serving residential-type or low-heat appliances must extend at least 3 ft above the roof penetration and at least how far above any part of the building within 10 ft?"
+   }
+  },
+  {
+   "i": 111,
+   "action": "fix",
+   "reason": "Table 1 depends on the recovery equipment date. 25 mm Hg absolute applies to equipment made on or after Nov 15, 1993; older equipment requires 25 in Hg vacuum.",
+   "fixed": {
+    "q": "Using recovery equipment made on or after November 15, 1993, the required evacuation level for a low-pressure (R-123) chiller is:",
+    "why": "Low-pressure appliances must be evacuated to 25 mm Hg absolute with post-1993 recovery equipment (25 in Hg vacuum with older equipment)."
+   }
+  }
+ ]
+}

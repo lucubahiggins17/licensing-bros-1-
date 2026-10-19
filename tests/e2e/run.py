@@ -619,6 +619,13 @@ def knowledge_library(browser):
     page.get_by_role("button", name="Search your library").click()
     page.wait_for_timeout(800)
     check("search tester shows the passage and its citation", page.get_by_text("Tenn. Code Ann. 66-11-112").first.count() > 0)
+    # Accuracy check grades the tutor against the verified bank
+    page.get_by_role("button", name="Run the accuracy check").click()
+    page.wait_for_timeout(2500)
+    shot(page, "knowledge-accuracy")
+    check("accuracy check runs in batches of 5", getattr(fake, "accuracy_calls", 0) == 4, str(getattr(fake, "accuracy_calls", 0)))
+    check("accuracy check shows a score out of 20", page.get_by_text("of 20 right", exact=False).first.count() > 0)
+    check("misses show the right answer and what the tutor picked", page.get_by_text("no clear answer", exact=False).first.count() > 0 or page.locator("details").count() > 0)
     check("knowledge page has no sideways scroll", no_overflow(page))
     check("knowledge page ran without errors", not errors, "; ".join(errors[:3]))
     ctx.close()

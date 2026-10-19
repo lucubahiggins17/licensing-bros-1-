@@ -440,6 +440,11 @@ class FakeBackend:
                 n = min(8, getattr(self, "embed_left", 0))
                 self.embed_left = getattr(self, "embed_left", 0) - n
                 return 200, {"done": n, "remaining": self.embed_left, "available": True}
+            if a == "accuracy_check":
+                qs = body.get("questions") or []
+                self.accuracy_calls = getattr(self, "accuracy_calls", 0) + 1
+                # Picks A every time, except no clear answer on the very first question
+                return 200, {"results": [{"pick": None if (self.accuracy_calls == 1 and i == 0) else 0, "why": "worked it out"} for i, _ in enumerate(qs)]}
             if a == "search":
                 return 200, {"hits": [{"id": "h1", "doc_id": "d1", "ref": "Tenn. Code Ann. 66-11-112", "text": "A lien must be recorded within 90 days after the improvement is complete or abandoned.", "score": 0.03}]}
             return 400, {"error": "Unknown action.", "code": "bad_request"}

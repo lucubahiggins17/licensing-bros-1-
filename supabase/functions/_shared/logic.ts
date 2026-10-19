@@ -1018,3 +1018,11 @@ export function nudgeNote(s: { name: string; days_to_exam: number | null; weakes
     link: "/learn/#review"
   };
 }
+
+/** The letter a model picked in a multiple-choice answer ("ANSWER: C" on the last line), as an index 0-3. */
+export function pickFromAnswer(text: string): number | null {
+  const m = [...String(text || "").matchAll(/ANSWER\s*[:\-]\s*\(?([A-D])\)?/gi)].pop();
+  if (m) return "ABCD".indexOf(m[1].toUpperCase());
+  const tail = String(text || "").trim().slice(-40).match(/\b([A-D])[.)]?\s*$/);
+  return tail ? "ABCD".indexOf(tail[1]) : null;
+}
