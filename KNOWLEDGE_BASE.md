@@ -1,9 +1,23 @@
 # Licensing Bro's knowledge base
 
-Generated 2026-10-19. **1010 facts** (821 verified, 75 corrected, 114 flagged as unconfirmed) and **317 new practice questions** (113 Business & Law, shown to every trade; 204 General Contractor).
+Generated 2026-10-19. **2788 facts** (2517 verified, 75 corrected, 196 flagged as unconfirmed) and **789 new practice questions** (113 Business & Law, shown to every trade; 204 General Contractor; 169 Electrical; 151 Plumbing; 152 HVAC).
+
+| Trade | Facts |
+|---|---|
+| General contractor | 700 |
+| Business & Law | 640 |
+| Electrical | 613 |
+| Plumbing | 439 |
+| HVAC / Mechanical | 396 |
+
+State-specific rules: 51 jurisdictions, 518 facts.
 
 ## Where it came from
-Seven student-made NASCLA study sets (about 2,000 flashcards on OSHA safety, building codes, construction practice and contractor business law) were used only as a map of which topics the exam covers. Nothing was copied. Each card's underlying fact was checked against the actual source (OSHA 29 CFR 1926/1904, IBC 2021, IRC 2021, ADA 2010 Standards, IRS, DOL, USCIS, EPA and FAR rules, AIA A201, and accounting and contract-law fundamentals), then rewritten in original wording. A second, independent review then rechecked every question and every verified or corrected fact, and changed 48 facts and several questions.
+**Rounds 1–3 (General Contractor, Business & Law, Georgia).** Seven student-made NASCLA study sets (about 2,000 flashcards on OSHA safety, building codes, construction practice and contractor business law) were used only as a map of which topics the exam covers. Nothing was copied. Each card's underlying fact was checked against the actual source (OSHA 29 CFR 1926/1904, IBC 2021, IRC 2021, ADA 2010 Standards, IRS, DOL, USCIS, EPA and FAR rules, AIA A201, and accounting and contract-law fundamentals), then rewritten in original wording. A second, independent review then rechecked every question and every verified or corrected fact, correcting the ones that needed it.
+
+**Round 4 (October 2026: Electrical, Plumbing, HVAC and all 50 states plus DC).** Written in original wording from the model codes and regulations (NEC 2023 with 2020 differences noted, IPC 2021 with UPC 2021 differences, IMC and IFGC 2021, EPA 40 CFR Part 82 Subpart F, OSHA) and, for state rules, from state licensing boards, statutes and PSI/Prometric candidate bulletins. Each batch was then checked by a separate reviewer who had not written it, which corrected, removed or flagged items before they were added. Files: `knowledge/rounds/round4/` and `knowledge/audits/result_round4_*.json`.
+
+In all, 141 facts were changed in review.
 
 - **verified**: confirmed correct as written.
 - **corrected**: the flashcard's answer was wrong or outdated; the fact states the correct rule, and the note says what the card claimed.
@@ -14,59 +28,233 @@ Figures that change every year (OSHA penalty maximums, payroll tax wage bases, i
 ## How the app uses it
 - **AI tutor**: before answering, it looks up the most relevant facts for the student's question, trade and state (`supabase/functions/_shared/kb.ts`) and builds the answer on them, citing their source.
 - **AI-written exams and flashcards**: the generator is handed a random spread of checked facts and must build most questions on them.
-- **Verified question bank**: the 317 questions in `lib/kb-questions.json` are added to the built-in bank, so they work offline.
-- State-specific facts (currently Georgia lien, licensing and tax rules) only appear for students who pick that state.
+- **Verified question bank**: the 789 questions in `lib/kb-questions.json` are added to the built-in bank, so they work offline.
+- State-specific facts (licensing thresholds, exams, lien deadlines and more for every state) only appear for students who pick that state. Plumbing answers rank the student's own code (IPC or UPC) first.
 
 ## Coverage by topic
 | Topic | Facts |
 |---|---|
-| Business & Law · Bonds & insurance | 38 |
+| Business & Law · Bonds & insurance | 31 |
 | Business & Law · Business & Law | 4 |
-| Business & Law · Business organization | 36 |
+| Business & Law · Business organization | 22 |
 | Business & Law · Business planning | 4 |
-| Business & Law · Contracts & liens | 64 |
+| Business & Law · Contracts & liens | 55 |
 | Business & Law · Environmental | 19 |
 | Business & Law · Estimating & bidding | 23 |
 | Business & Law · Financial management | 43 |
-| Business & Law · Labor law | 40 |
-| Business & Law · Payroll & tax | 50 |
+| Business & Law · Labor law | 39 |
+| Business & Law · Payroll & tax | 45 |
 | Business & Law · Project management | 28 |
 | Business & Law · Risk management | 3 |
 | Business & Law · Safety (OSHA) | 1 |
 | Business & Law · Safety recordkeeping | 13 |
+| Electrical · Air conditioning (Art. 440) | 8 |
+| Electrical · Appliances & space heating | 9 |
+| Electrical · Boxes & enclosures | 21 |
+| Electrical · Boxes | 1 |
+| Electrical · Branch circuits | 19 |
+| Electrical · Cables & raceways | 23 |
+| Electrical · Conductor identification | 4 |
+| Electrical · Conductors & ampacity | 21 |
+| Electrical · Conductors | 1 |
+| Electrical · Conduit fill (Chapter 9) | 12 |
+| Electrical · Definitions (Art. 90/100) | 24 |
+| Electrical · Electrical theory | 40 |
+| Electrical · Emergency & standby | 10 |
+| Electrical · Feeders & load calculations | 51 |
+| Electrical · GFCI / AFCI | 22 |
+| Electrical · General requirements (Art. 110) | 21 |
+| Electrical · Generators & transformers | 10 |
+| Electrical · Grounding & bonding | 47 |
+| Electrical · Hazardous & health care | 13 |
+| Electrical · Luminaires | 6 |
+| Electrical · Motors (Art. 430) | 20 |
+| Electrical · OSHA electrical safety | 24 |
+| Electrical · Overcurrent protection | 14 |
+| Electrical · Pools, spas & tubs (Art. 680) | 23 |
+| Electrical · Receptacle layout | 31 |
+| Electrical · Services & outside wiring | 24 |
+| Electrical · Solar PV & EV charging | 10 |
+| Electrical · Switches & panelboards | 11 |
+| Electrical · Wiring methods (Art. 300) | 23 |
+| Electrical · Working space | 2 |
 | General contractor · Accessibility | 26 |
-| General contractor · Boxes | 1 |
-| General contractor · Branch circuits | 2 |
 | General contractor · Building code (IBC) | 45 |
-| General contractor · Condensate | 1 |
-| General contractor · Conductors | 1 |
-| General contractor · DFU / sizing | 1 |
 | General contractor · Doors, windows & glazing | 5 |
-| General contractor · Drainage | 2 |
 | General contractor · Drywall & finishes | 17 |
-| General contractor · EPA 608 | 4 |
-| General contractor · Electrical theory | 3 |
 | General contractor · Energy & environmental | 17 |
 | General contractor · Estimating | 20 |
 | General contractor · Fire protection | 36 |
-| General contractor · GFCI / AFCI | 1 |
-| General contractor · Grounding & bonding | 1 |
-| General contractor · Load & airflow | 2 |
 | General contractor · Masonry | 14 |
 | General contractor · Plan reading | 9 |
 | General contractor · Project management | 16 |
-| General contractor · Receptacle layout | 2 |
-| General contractor · Refrigeration cycle | 2 |
 | General contractor · Residential code | 32 |
 | General contractor · Roofing | 21 |
 | General contractor · Safety (OSHA) | 186 |
-| General contractor · Site work & concrete | 104 |
+| General contractor · Site work & concrete | 103 |
 | General contractor · Steel & trusses | 46 |
-| General contractor · Traps | 1 |
-| General contractor · Water heaters | 1 |
-| General contractor · Water supply | 2 |
 | General contractor · Wood framing | 21 |
-| General contractor · Working space | 2 |
+| HVAC / Mechanical · A2L refrigerants | 1 |
+| HVAC / Mechanical · AIM Act / Technology Transitions | 2 |
+| HVAC / Mechanical · Access & service space | 4 |
+| HVAC / Mechanical · Attic access | 5 |
+| HVAC / Mechanical · Boilers | 5 |
+| HVAC / Mechanical · Chimney & vent termination | 7 |
+| HVAC / Mechanical · Combustion air | 16 |
+| HVAC / Mechanical · Commercial kitchen | 14 |
+| HVAC / Mechanical · Compressors | 3 |
+| HVAC / Mechanical · Condensate | 15 |
+| HVAC / Mechanical · Diagnostics | 3 |
+| HVAC / Mechanical · Dryer exhaust | 13 |
+| HVAC / Mechanical · Duct design | 2 |
+| HVAC / Mechanical · Duct systems | 11 |
+| HVAC / Mechanical · EPA 608 Type I | 3 |
+| HVAC / Mechanical · EPA 608 Type II | 1 |
+| HVAC / Mechanical · EPA 608 Type III | 3 |
+| HVAC / Mechanical · EPA 608 certification | 6 |
+| HVAC / Mechanical · EPA 608 cylinders | 5 |
+| HVAC / Mechanical · EPA 608 definitions | 1 |
+| HVAC / Mechanical · EPA 608 disposal | 3 |
+| HVAC / Mechanical · EPA 608 equipment | 1 |
+| HVAC / Mechanical · EPA 608 evacuation | 9 |
+| HVAC / Mechanical · EPA 608 leak repair | 9 |
+| HVAC / Mechanical · EPA 608 pressure classes | 2 |
+| HVAC / Mechanical · EPA 608 reclamation | 1 |
+| HVAC / Mechanical · EPA 608 recordkeeping | 1 |
+| HVAC / Mechanical · EPA 608 recovery practice | 2 |
+| HVAC / Mechanical · EPA 608 sales restriction | 4 |
+| HVAC / Mechanical · EPA 608 venting | 4 |
+| HVAC / Mechanical · EPA 608 | 4 |
+| HVAC / Mechanical · EPA ER&R (HFC) | 4 |
+| HVAC / Mechanical · Efficiency standards | 9 |
+| HVAC / Mechanical · Efficiency | 1 |
+| HVAC / Mechanical · Electrical for HVAC | 10 |
+| HVAC / Mechanical · Energy code (controls) | 2 |
+| HVAC / Mechanical · Energy code (ducts) | 6 |
+| HVAC / Mechanical · Energy code (piping) | 1 |
+| HVAC / Mechanical · Equipment location | 8 |
+| HVAC / Mechanical · Exhaust termination | 6 |
+| HVAC / Mechanical · Fan laws | 3 |
+| HVAC / Mechanical · Fire & smoke dampers | 4 |
+| HVAC / Mechanical · Fuel gas piping | 15 |
+| HVAC / Mechanical · Fuel gas sizing | 4 |
+| HVAC / Mechanical · Fuel gas testing | 6 |
+| HVAC / Mechanical · Fuel gas | 3 |
+| HVAC / Mechanical · Heat fundamentals | 2 |
+| HVAC / Mechanical · Heat pumps | 3 |
+| HVAC / Mechanical · Hydronics | 7 |
+| HVAC / Mechanical · IMC definitions | 8 |
+| HVAC / Mechanical · Kitchen exhaust | 2 |
+| HVAC / Mechanical · Listing & installation | 2 |
+| HVAC / Mechanical · Load & airflow | 11 |
+| HVAC / Mechanical · Load calculation | 7 |
+| HVAC / Mechanical · Metering devices | 4 |
+| HVAC / Mechanical · Ozone & regulation history | 3 |
+| HVAC / Mechanical · Plenums | 2 |
+| HVAC / Mechanical · Pressure units | 2 |
+| HVAC / Mechanical · Psychrometrics | 8 |
+| HVAC / Mechanical · Refrigerant safety groups | 3 |
+| HVAC / Mechanical · Refrigerants | 4 |
+| HVAC / Mechanical · Refrigeration code | 8 |
+| HVAC / Mechanical · Refrigeration cycle | 12 |
+| HVAC / Mechanical · Refrigeration practice | 2 |
+| HVAC / Mechanical · Return air | 2 |
+| HVAC / Mechanical · Roof access | 5 |
+| HVAC / Mechanical · Smoke detection | 3 |
+| HVAC / Mechanical · Space heating | 1 |
+| HVAC / Mechanical · Static pressure | 2 |
+| HVAC / Mechanical · System components | 1 |
+| HVAC / Mechanical · Under-floor access | 3 |
+| HVAC / Mechanical · Vent connectors | 8 |
+| HVAC / Mechanical · Ventilation | 14 |
+| HVAC / Mechanical · Venting categories | 2 |
+| HVAC / Mechanical · Venting | 4 |
+| Plumbing · Accessibility | 13 |
+| Plumbing · Backflow | 16 |
+| Plumbing · Backwater valves | 2 |
+| Plumbing · Cleanouts | 8 |
+| Plumbing · Combustion air | 6 |
+| Plumbing · Condensate | 2 |
+| Plumbing · DFU / sizing | 1 |
+| Plumbing · Definitions | 30 |
+| Plumbing · Disinfection | 2 |
+| Plumbing · Drainage | 27 |
+| Plumbing · Fixture counts | 11 |
+| Plumbing · Fixtures | 30 |
+| Plumbing · Flow rates | 2 |
+| Plumbing · Fuel gas | 35 |
+| Plumbing · General regulations | 14 |
+| Plumbing · Hot water | 7 |
+| Plumbing · Indirect waste | 11 |
+| Plumbing · Interceptors | 7 |
+| Plumbing · Medical gas | 3 |
+| Plumbing · Nonpotable water | 3 |
+| Plumbing · Pipe support | 11 |
+| Plumbing · Plumbing math | 16 |
+| Plumbing · Storm drainage | 12 |
+| Plumbing · Sumps & ejectors | 6 |
+| Plumbing · Testing | 10 |
+| Plumbing · Traps | 9 |
+| Plumbing · Trench safety | 14 |
+| Plumbing · UPC differences | 12 |
+| Plumbing · Venting | 42 |
+| Plumbing · Water heaters | 21 |
+| Plumbing · Water supply | 21 |
+
+## State-specific facts by state
+| State | Facts |
+|---|---|
+| Alabama | 13 |
+| Alaska | 11 |
+| Arizona | 11 |
+| Arkansas | 13 |
+| California | 10 |
+| Colorado | 9 |
+| Connecticut | 9 |
+| Delaware | 9 |
+| District of Columbia | 8 |
+| Florida | 10 |
+| Georgia | 37 |
+| Hawaii | 8 |
+| Idaho | 9 |
+| Illinois | 7 |
+| Indiana | 6 |
+| Iowa | 7 |
+| Kansas | 6 |
+| Kentucky | 7 |
+| Louisiana | 11 |
+| Maine | 9 |
+| Maryland | 10 |
+| Massachusetts | 11 |
+| Michigan | 11 |
+| Minnesota | 8 |
+| Mississippi | 9 |
+| Missouri | 7 |
+| Montana | 8 |
+| Nebraska | 7 |
+| Nevada | 10 |
+| New Hampshire | 7 |
+| New Jersey | 8 |
+| New Mexico | 8 |
+| New York | 8 |
+| North Carolina | 9 |
+| North Dakota | 8 |
+| Ohio | 12 |
+| Oklahoma | 10 |
+| Oregon | 10 |
+| Pennsylvania | 9 |
+| Rhode Island | 8 |
+| South Carolina | 11 |
+| South Dakota | 9 |
+| Tennessee | 37 |
+| Texas | 12 |
+| Utah | 10 |
+| Vermont | 8 |
+| Virginia | 9 |
+| Washington | 10 |
+| West Virginia | 9 |
+| Wisconsin | 7 |
+| Wyoming | 8 |
 
 ## Wrong or outdated answers found in the flashcards (75)
 These are worth knowing as a selling point: the free study sets your competitors' students use contain these errors.
@@ -149,7 +337,7 @@ These are worth knowing as a selling point: the free study sets your competitors
 | PAYR-042 | The IRS groups federal business taxes into income tax, estimated tax, self-employment tax, employment taxes and excise taxes. Property tax is not a federal tax, but state and local governments levy it, and businesses owning real estate (and in many states equipment and other tangible business personal property) must pay it. | Card says property tax is generally not a business tax. It is not one of the federal business tax categories, but businesses routinely owe state/local property tax on real property and, in many states including Tennessee, on tangible business personal property. |
 | PAYR-045 | IRS Pub 15-T gives two manual withholding methods: the wage bracket method (look up the pay-period wage in tables by filing status; covers wages up to about $100,000 a year) and the percentage method (works for any wage). Separate tables apply to Forms W-4 from 2020 or later, which use no allowances, and to older W-4s still on file that claim allowances; table amounts change every year. | Card asks for withholding for a married employee with '3 exemptions' and gives $32 from an older Circular E table. Withholding tables now live in Pub 15-T and change annually, and the 2020 and later Form W-4 has no exemptions or allowances, so that dollar answer cannot be reused; always use the current year's tables. |
 
-## Flagged for review (114)
+## Flagged for review (196)
 Have a licensed reviewer (or the state bulletin) confirm these, then change `status` to `verified` for that ID in `supabase/functions/_shared/kb.json` (or in the CSV, then copy back) and run `node scripts/kb-report.mjs`.
 
 | ID | State | Fact | Why it's flagged |
@@ -268,6 +456,88 @@ Have a licensed reviewer (or the state bulletin) confirm these, then change `sta
 | STEE-046 | — | Small penetrations through steel deck (about 6 in, removing one rib) may need no reinforcing or only a light plate, somewhat larger holes get thicker reinforcing plates, and large openings must be framed with members extending past the opening as designed by the project engineer. | Card gives a specific schedule (0.045-in and 0.057-in plates, framing above 13 in) and a C4x5.4 frame detail for 24-in openings; these are handbook or manufacturer details, not code, so the figures could not be confirmed. |
 | PROJ-043 | — | In the NASCLA guide's description of project roles, the project manager is responsible for monitoring the project's compliance with building and safety codes. | Based on the practice-test answer key, not confirmed against the guide text. On real jobs this duty is shared: the superintendent and safety staff enforce day-to-day compliance on site and the building official inspects, with the PM overseeing at the project level. |
 | CONT-057 | — | When drawings and specifications conflict, the NASCLA guide teaches following the stricter (more demanding) requirement; in practice the contract's order-of-precedence clause controls, and the contractor should report the conflict to the architect and get a written clarification. | Contract dependent. AIA A201-2017 1.2.1 treats the contract documents as complementary with no order of precedence, and 3.2.2 requires the contractor to report inconsistencies it finds; many general conditions say specifications govern over drawings or that the more stringent requirement applies. |
+| ROOF-025 | — | Permanent equipment-access ladders are required to have rungs spaced no more than 14 inches on center, at least 18 inches between rails, and at least 6 inches of toe clearance behind the rungs. | Recalled values; could not confirm the full ladder list against 2021 text. |
+| EXHA-004 | — | Exhaust outlets for ducts carrying explosive or flammable vapors, fumes or dusts must be at least 30 ft from property lines, 10 ft from operable openings, 6 ft from exterior walls and roofs, 30 ft from combustible walls or openings in the discharge direction, and 10 ft above grade. | Recalled list; not confirmed against 2021 text. |
+| COMM-014 | — | Unlisted wall-mounted canopy hoods are commonly required to exhaust 200 cfm per linear foot for light-duty, 300 for medium-duty, 400 for heavy-duty and 550 for extra-heavy-duty appliances. | Recalled table values; not confirmed for the 2021 edition, and listed hoods (UL 710) use their listed rates. |
+| ENER-025 | — | The thermostat for a dwelling's primary heating or cooling system must be programmable by time and day, and is initially set by the manufacturer to no higher than 70 degrees F for heating and no lower than 78 degrees F for cooling. | Programmable-thermostat requirement confirmed for 2021; the 70/78 initial set points are from prior editions and were not re-confirmed. |
+| VENT-027 | — | A vent connector entering a masonry chimney must enter at least 12 inches above the lowest portion of the interior of the chimney flue and may not extend past the inner face of the chimney liner. | Could not confirm a 12-inch-above-flue-bottom entry rule in IFGC 503.10. The code text says the connector must enter above the extreme bottom of the chimney to avoid stoppage and must not extend so far that it restricts the flue. |
+| CHIM-006 | — | Mechanical draft vent terminals must be at least 12 inches above finished grade and at least 7 ft above grade where located next to public walkways. | The 12-inch-above-grade rule is in IFGC 503.8. The 7-ft public-walkway rule comes from NFPA 54, and I could not confirm it in the 2021 IFGC text. |
+| HYDR-002 | — | Ground-source heat pump loop piping must be pressure tested with water at 100 psi for 15 minutes with no observed leaks before trenches are backfilled. | Confirmed for the 2024 IMC (1210.10); not confirmed for the 2021 edition. |
+| AIMA-002 | — | A final rule published May 26, 2026 removed the installation deadline (originally January 1, 2026) for residential and light commercial AC and heat pump systems with GWP of 700 or more that were manufactured or imported before January 1, 2025, so remaining legacy R-410A systems may still be installed. | As reported by Holland & Knight, May 2026; check for later changes. |
+| REFR-011 | — | The allowable refrigerant charge for an occupied space is the table limit (pounds per 1,000 cubic feet) times the room volume divided by 1,000. Example: R-410A at 26 lb per 1,000 cu ft in a 20 x 20 x 10 ft (4,000 cu ft) room allows 26 x 4,000 / 1,000 = 104 lb. | Calculation method confirmed; the R-410A table value (26 lb/1,000 cu ft) was confirmed only from a 2024-edition study source. |
+| ALRE-001 | — | Many A2L split systems (R-454B, R-32) are required by their UL 60335-2-40 listing to include a refrigerant leak detection system that, when it senses a leak, runs the indoor blower to dilute the refrigerant and disables the compressor and other potential ignition sources. | Requirement depends on charge size and equipment type; follow the listing and manufacturer instructions. |
+| LOAD-018 | — | Manual S generally limits single-speed air conditioners and heat pumps (cooling) to a total capacity of 90 to 115 percent of the calculated total cooling load, with larger allowances for multi-stage and variable-speed equipment. | Limits vary by Manual S edition and equipment type; confirm with the current Manual S. |
+| EFFI-010 | — | DOE's December 2023 rule sets a 95 percent AFUE minimum for non-weatherized and mobile home gas furnaces made on or after December 18, 2028; as of May 2026 DOE was taking comment on a petition to delay compliance to at least January 1, 2030. | Status in flux; confirm the current compliance date before relying on it. |
+| STAT-013 | Alabama | HVAC and refrigeration contractors in Alabama are certified by testing through the State Board of Heating, Air Conditioning and Refrigeration Contractors. | Board name confirmed in Ala. Code 34-31-18 (https://law.justia.com/codes/alabama/title-34/chapter-31/section-34-31-18/), but the board website blocked fetching, so certification classes, exam provider and CE were not confirmed. |
+| STAT-022 | Arizona | Arizona licenses electrical (e.g., R-11, C-11, CR-11), plumbing (R-37, C-37, CR-37) and HVAC (R-39, C-39, CR-39) work as ROC contractor classifications with residential (R), commercial (C) and dual (CR) versions. Arizona does not issue a statewide journeyman or master electrician or plumber license; individual worker certification, if any, is local. | Classification codes R-11/C-11/CR-11 are confirmed on https://azroc.gov/applying-for-a-license; the plumbing/HVAC codes and the absence of state journeyman licensing come from general knowledge and were not confirmed on an official page this session. |
+| STAT-026 | Arizona | An Arizona contractor license is suspended by law the business day after its renewal date unless a renewal with a valid bond and fee was received or mailed by that date. A suspended license may be renewed within one year (with an added fee); after one year a new application is required. Arizona ROC licenses renew every two years and there is no continuing education requirement. | Suspension and one-year reactivation rules confirmed at https://www.azleg.gov/ars/32/01125.htm ; the two-year renewal cycle and no-CE statement were not confirmed on an official page this session. |
+| STAT-036 | Arkansas | Plumbers in Arkansas are licensed by the Arkansas Department of Health (Plumbing and Natural Gas Section), not the Contractors Licensing Board, with master and journeyman plumber licenses. | The Department of Health page could not be fetched this session; based on general knowledge and secondary sites. |
+| STAT-046 | California | California licenses electrical, plumbing and HVAC businesses as CSLB specialty contractors (C-10 Electrical, C-36 Plumbing, C-20 Warm-Air HVAC). Workers doing electrical work for a C-10 contractor must also hold a state electrician certification from the Department of Industrial Relations (e.g., General Electrician), or be registered apprentices. There is no statewide journeyman plumber or HVAC license. | Classification codes and the DIR certification rule are from general knowledge; the CSLB classification page and DIR pages failed to load this session, so details (and hour requirements) were not confirmed. |
+| STAT-050 | Colorado | Colorado has no statewide general contractor license. General, building and specialty contractors are licensed or registered by cities and counties (for example Denver, Colorado Springs/Pikes Peak Regional Building Department), often with ICC exams, while the state (DORA) licenses only electricians and plumbers among the construction trades. | Consistent across many secondary sources and with DORA's program list, but no official state page saying 'no state GC license' was confirmed this session. |
+| STAT-056 | Colorado | Colorado does not issue a state HVAC or mechanical license; mechanical contractors are licensed by local jurisdictions where required. | Based on DORA's program list (only electrical and plumbing boards) and secondary sources; not confirmed on an official page this session. |
+| STAT-065 | Connecticut | Connecticut plumbers are licensed by the Department of Consumer Protection (Plumbing and Piping Work Examining Board) as P-1 Unlimited Plumbing and Piping Contractor or P-2 Unlimited Journeyperson, with limited categories as well; exams are given by PSI. | Board name and the P-1/P-2 codes are from general knowledge and secondary sites; the PSI plumbing bulletin was not located this session. |
+| STAT-082 | District of Columbia | DC master electrician applicants generally need several years of experience as a licensed journeyman, and electrical exams are open book based on the NEC; electrical contractors must designate a DC-licensed master electrician. | Master/contractor structure confirmed at https://dlcp.dc.gov/node/1619081 , but the specific experience years and exam format for electricians could not be confirmed (DLCP electrical guide did not load). |
+| STAT-088 | Florida | Florida CILB exams are registered through Professional Testing, Inc. (PTI), with the Business and Finance exam given by Pearson VUE. Per the DBPR FAQ, Business and Finance has 120 questions (84 correct = 70% to pass) and candidates may bring approved reference books; scores are not rounded. | https://www2.myfloridalicense.com/servop/testing/documents/cilb_faq.pdf is dated 2012; vendors, question counts and timing may have changed since. Confirm with the current PTI/Pearson VUE candidate bulletin. |
+| STAT-091 | Florida | Florida electrical and alarm system contractors are licensed separately from the CILB, by the Electrical Contractors' Licensing Board. Exam eligibility options include 4 years as a supervisor or contractor in the trade within the past 8 years, 3 years of management experience within 6 years, or 6 years of combined training/education/supervisory experience within 12 years. Florida has no statewide journeyman electrician license. | Experience options verified in statute: http://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0400-0499/0489/Sections/0489.511.html ; the board name and 'no state journeyman license' are from general knowledge (the section does not name the board). |
+| STAT-101 | Hawaii | Electricians and plumbers in Hawaii are licensed by the Board of Electricians and Plumbers, on 3-year renewal cycles ending June 30: electrician licenses renew in 2026, 2029 and 2032, and plumber licenses in 2027, 2030 and 2033. Electrical and plumbing contractors also need a C-13 or C-37 specialty license from the Contractors License Board. | Renewal cycles verified at https://cca.hawaii.gov/pvl/boards/electrician/ (the page itself has an inconsistent plumber period). The C-13/C-37 contractor codes and license tiers (journeyworker, supervising electrician, master plumber) were not confirmed this session. |
+| STAT-112 | Illinois | Illinois has no statewide general contractor license; general contractors are licensed or registered by municipalities (Chicago, for example, licenses general contractors by class). Electrical and HVAC licensing is also local, while the state licenses roofers (IDFPR) and plumbers (IDPH). | Widely reported and consistent with the state statutes reviewed, but no official state page stating 'no state GC license' was confirmed this session. |
+| STAT-119 | Indiana | Indiana has no statewide general contractor license; general contractors, electricians and HVAC contractors are licensed or registered by cities and counties (for example Indianapolis/Marion County). Plumbing is the main construction trade licensed statewide. | Consistent with Indiana PLA's profession list and widely reported, but not confirmed on an official page stating there is no state GC license. |
+| STAT-127 | Iowa | Iowa licenses electricians statewide through the Electrical Examining Board: class A master and journeyman, residential master, residential electrician, special electrician and apprentice. A class A journeyman typically completes a registered 4-year apprenticeship and scores at least 70 on the exam; a class A master needs one year as a licensed journeyman plus a 70 on the master exam. An electrical contractor must hold or employ an active master. | Rule text via Cornell LII: https://www.law.cornell.edu/regulations/iowa/Iowa-Admin-Code-r-661-502-2 . Iowa renumbered these rules after the 2023 agency reorganization (now under DIAL, 481 IAC), so the version shown may not be current. |
+| STAT-132 | Kansas | Kansas has no statewide general contractor license, and electrical, plumbing and HVAC licenses are also issued locally by cities and counties (for example Wichita/Sedgwick County or Johnson County), commonly using ICC exams. Roofing contractors are the notable statewide registration. | Widely reported and consistent with the Kansas statutes reviewed, but not confirmed on an official state page stating there is no state GC or trade license. |
+| STAT-138 | Kentucky | Kentucky has no statewide general contractor license; general and residential contractors are licensed or registered locally (for example by Louisville Metro or Lexington-Fayette). The state Department of Housing, Buildings and Construction (HBC) licenses electricians, plumbers, HVAC, boiler and fire sprinkler/alarm contractors. | HBC's trade list is on https://dhbc.ky.gov/ , but no official page stating there is no state GC license was found this session. |
+| STAT-140 | Kentucky | Kentucky electrical licenses are valid for one year and renew by the last day of the licensee's birth month, with annual continuing education required under 815 KAR 2:010. | From 815 KAR 35:060 (Dec. 5, 2023 version), which the legislature site marks as superseded: https://apps.legislature.ky.gov/law/kar/titles/815/035/060/14586/ . Confirm against the current version; CE hours were not stated. |
+| STAT-162 | Louisiana | Every Louisiana license applicant files an LSLBC Financial Statement prepared by a CPA, bookkeeper or accountant and dated within 12 months of the application. The board form lists minimum net worth of $50,000 for residential and commercial applicants (other than commercial labor-only) and $25,000 for home improvement, mold remediation and commercial labor-only applicants. | Net worth figures came from https://lslbc.gov/wp-content/uploads/Financial-Statement.pdf; a newer 2025 version of the form would not load, and older sources cite a lower $10,000 commercial figure. Confirm the current minimum with LSLBC. |
+| STAT-177 | Maryland | Maryland does not issue a statewide license for commercial general contractors or new home builders; commercial GC requirements are set by individual counties and cities. New home builders register separately with the Office of the Attorney General. | Found only on secondary sites (e.g., harborcompliance.com, staterequirement.com). The new home builder registration with the Attorney General's Home Builder Registration Unit should also be confirmed. |
+| STAT-198 | Michigan | Michigan has no statewide license for commercial general contractors; the state builder license covers residential work, and commercial work depends on local permitting plus state trade licenses for electrical, plumbing, and mechanical work. | Article 24 covers residential builders and M&A contractors only; no official page stating 'no commercial GC license' was found. |
+| STAT-223 | Mississippi | A Mississippi construction lien must be recorded with the chancery clerk in the county where the property is located within 90 days after the claimant's last work or materials. The lien is void unless a payment action is filed within 180 days after the lien is filed. | Taken from a law-firm summary of the 2014 lien law rewrite (https://bakerdonelson.com/summary-of-senate-bill-2622---mississippis-construction-lien-law-03-26-2014); the official statute text was not reached. |
+| STAT-224 | Mississippi | On Mississippi projects other than single-family residential construction, a claimant who has no contract with the general contractor (or with the owner, if there is no contractor) must give the contractor (or owner) written pre-lien notice within 30 days after first delivering labor, services or materials, or it forfeits its lien right. On single-family residential projects, a subcontractor, supplier or design professional with no contract with the owner must give the owner a pre-lien notice at least 10 days before filing a lien, and the owner's payments to the contractor made before receiving that notice are a defense. | https://law.justia.com/codes/mississippi/title-85/chapter-7/article-21/section-85-7-407/ ; https://law.justia.com/codes/mississippi/title-85/chapter-7/article-21/section-85-7-409/ |
+| STAT-225 | Missouri | Missouri has no statewide license for general or building contractors. Licensing is handled locally, so requirements vary by city and county (for example Kansas City, St. Louis County, and Springfield), and contractors must check each jurisdiction where they work. | Widely reported on secondary sites (e.g., adaptdigitalsolutions.com); no official state page stating 'no license' was found. The Missouri Division of Professional Registration licenses no general contractors. |
+| STAT-226 | Missouri | Missouri has no statewide plumber or HVAC license. Plumbing and mechanical licenses (master, journeyman, contractor) are issued by local jurisdictions such as Kansas City, St. Louis City, and St. Louis County. | Based on secondary sources; confirm with local jurisdictions. Electrical is the only trade with a (voluntary) statewide contractor license. |
+| STAT-239 | Montana | Montana has no statewide HVAC or mechanical contractor license; HVAC businesses with employees hold the general Construction Contractor License, and some cities add local requirements. | No official state page confirming the absence of an HVAC license was found; based on secondary sources. |
+| STAT-244 | Nebraska | Nebraska has no statewide plumbing or HVAC license; plumbers and mechanical contractors are licensed by cities such as Omaha and Lincoln. | Based on secondary sources; no official state page confirming the absence of a plumbing license was found. |
+| STAT-256 | Nevada | In Nevada, a lien claimant other than one who contracted directly with the owner (or a laborer) generally must deliver a notice of right to lien to the owner within 31 days after first furnishing materials or performing work, to preserve its lien rights. | The 31-day figure is widely reported but the NRS 108.245 text could not be loaded in this session; confirm deadline and exemptions in the statute. |
+| STAT-257 | New Hampshire | New Hampshire has no statewide license for general or building contractors. Licensing at the state level applies to trades such as electricians, plumbers, and gas fitters, and some towns set their own local requirements. | No official statement found; inferred from OPLC licensing only trade boards (electricians, mechanical) and from secondary sources such as adaptdigitalsolutions.com. |
+| STAT-259 | New Hampshire | A New Hampshire journeyman electrician needs four years (8,000 hours) of practical experience as an apprentice to a licensed electrician plus four years of schooling in electricity (150 hours per year), and must pass a written exam administered by PROV. Journeymen work under the direction of a master electrician. | Official state publication but dated 2021 (https://www.nhes.nh.gov/elmi/products/licertocc/documents/electjou.pdf); confirm current requirements with the Electricians' Board. The same document lists reciprocity with Maine, Massachusetts, Vermont and several other states. |
+| STAT-261 | New Hampshire | New Hampshire plumbers are licensed by the Mechanical Safety and Licensing Board under OPLC, which also licenses fuel gas fitters. A master plumber must be at least 18, hold a journeyman plumber license for at least six months, and pass a written exam. Plumbing licenses renew every two years with 6 hours of continuing education per cycle (3 hours per year). | Official state publication dated 2021 (https://www.nhes.nh.gov/elmi/products/licertocc/documents/plumbmas.pdf); RSA 153:27 (https://gc.nh.gov/rsa/html/XII/153/153-27.htm) confirms the board and plumber classes but not the experience or CE figures. |
+| STAT-262 | New Hampshire | A New Hampshire mechanic's lien arises automatically for labor or materials worth $15 or more but lasts only 120 days after the services are performed or materials furnished. To keep it, the claimant must sue and secure the lien by a court attachment of the property within that 120-day window. | From a law-firm compendium (https://www.alfainternational.com/compendium/construction/new-hampshire/); the official RSA 447 pages on gencourt.state.nh.us were rate-limited (HTTP 429) in this session. |
+| STAT-263 | New Hampshire | In New Hampshire, a subcontractor or supplier without a contract with the owner should give the owner written notice that it will claim a lien before it performs the labor or furnishes the materials, and then give the owner a written account of labor and materials furnished at least every 30 days while the work continues. A sub that gives notice later generally gets less protection, so check RSA 447:5 to 447:8 for the exact rules. | From a law-firm compendium (https://www.alfainternational.com/compendium/construction/new-hampshire/); verify timing rules in RSA 447:5-447:8. |
+| STAT-267 | New Jersey | New Jersey licenses electrical contractors through the Board of Examiners of Electrical Contractors. An applicant needs at least five years in electrical construction, including four years in a U.S. Department of Labor-approved apprenticeship and one year as a Class A journeyman, and must pass the electrical contractor exam (with a six-month wait before a retake). | Statute text read on Justia (https://law.justia.com/codes/new-jersey/title-45/section-45-5a-9/); the board's njconsumeraffairs.gov pages would not load to confirm. |
+| STAT-268 | New Jersey | New Jersey's State Board of Master Plumbers licenses master plumbers. An applicant must be at least 21 with five years in the plumbing trade, including four years in a DOL-accredited apprenticeship and one year as a journeyman, or hold an accredited bachelor's degree in mechanical, plumbing or sanitary engineering plus one year of practical work, and must pass the exam. | Statute text read on Justia (https://law.justia.com/codes/new-jersey/title-45/section-45-14c-15/); the board site would not load to confirm. |
+| STAT-269 | New Jersey | New Jersey licenses master HVACR contractors through the State Board of Examiners of Master HVACR Contractors, and HVACR contracting work must be done under a licensed master HVACR contractor. | Board existence is well established, but its njconsumeraffairs.gov page would not load in this session to confirm scope and requirements. |
+| STAT-270 | New Jersey | Under the New Jersey Construction Lien Law, a lien claim on non-residential work must be lodged within 90 days after the claimant last provided work, services, materials or equipment. On residential construction, the claimant must first file a Notice of Unpaid Balance and Right to File Lien and go through arbitration, then lodge the lien within 10 days after the arbitrator's decision and within 120 days after last providing work or materials. | Statute text read on Justia (https://law.justia.com/codes/new-jersey/title-2a/section-2a-44a-6/ and .../section-2a-44a-20/). The residential Notice of Unpaid Balance filing deadline (60 days in the statutory form) should be confirmed in 2A:44A-20/21. |
+| STAT-271 | New Jersey | A New Jersey lien claimant must file suit in Superior Court to enforce the lien within one year after last providing work or materials. If the owner or contractor serves written notice demanding suit, the claimant has only 30 days after receiving that notice. | Statute text read on Justia (https://law.justia.com/codes/new-jersey/title-2a/section-2a-44a-14/); the official NJ statute site was not checked. |
+| STAT-275 | New Mexico | New Mexico qualifying parties take a Business and Law exam through PSI in addition to the trade exam: 50 questions in 130 minutes, 75% to pass, covering licensing, estimating, business and financial management, taxes, labor law, lien law, contracts, risk management, and safety. An approved roughly 16-hour Business and Law course is reported to be accepted in place of the exam. | Details come from a course provider (https://www.theselfemployed.com/new-mexico-construction-industries-division-business-and-law-exam/); 14.6.3 NMAC does not mention a business and law exam. Confirm with CID and the PSI New Mexico bulletin. |
+| STAT-278 | New Mexico | In New Mexico, an original contractor must file its claim of lien within 120 days after completing its contract, and everyone else must file within 90 days after the building or improvement is completed. A lien expires two years after it is filed unless enforcement proceedings are started in court or binding arbitration within that time. | Statute text read on Justia (https://law.justia.com/codes/new-mexico/chapter-48/article-2/section-48-2-6/ and .../section-48-2-10/); the official NMOneSource text was not checked. |
+| STAT-279 | New Mexico | In New Mexico, a lien claimant owed more than $5,000 who did not contract directly with the owner or the original contractor (for example a sub-subcontractor or a supplier to a subcontractor) must send written preliminary notice to the owner or the original contractor within 60 days after first furnishing work or materials. A late notice covers only work furnished from 30 days before it was given. The rule does not apply to original contractors, to subcontractors and suppliers who contracted directly with the original contractor, or to residential property with four or fewer units. | Statute text (2025 code) via Justia: https://law.justia.com/codes/new-mexico/chapter-48/article-2/section-48-2-2-1/ ; confirm in the official NMOneSource text. |
+| STAT-280 | New York | New York State has no statewide general contractor license and no statewide electrician or plumber license. Contractor and trade licensing is done locally, for example by New York City, Nassau, Suffolk, Westchester, and Rockland counties, and by individual cities. | No official state page stating this was found; based on secondary sources and on the existence of city and county licensing programs. Confirm with the local jurisdiction. |
+| STAT-285 | New York | In New York City, the Department of Buildings licenses master electricians and master plumbers. Each license requires years of documented experience under a licensed master plus written and practical exams, and only licensed masters may pull permits for electrical or plumbing work in the city. | NYC DOB master electrician and master plumber pages would not load in this session; experience-year requirements were left out on purpose and should be confirmed with DOB. |
+| STAT-290 | North Carolina | North Carolina GC applicants must prove financial responsibility through working capital or a surety bond. The 2018 rule set minimum working capital of $17,000 (or $80,000 net worth) for Limited, $75,000 for Intermediate, and $150,000 for Unlimited, or alternatively a surety bond of $350,000, $1,000,000, or $2,000,000 respectively. | Figures are from the 2018 rule filing (https://www.oah.nc.gov/documents/rules/rrc/43160-follow-tab-c-general-contractors/open). The statute's project limits have since been raised, so these amounts may have changed; check the current 21 NCAC 12 .0204. |
+| STAT-325 | Oklahoma | An Oklahoma subcontractor or supplier must send a pre-lien notice to the original contractor and the owner no later than 75 days after the last date it supplied labor or materials. Notice is not required for claims under $10,000 total or on non-owner-occupied residential projects of four or fewer units, but it is required for owner-occupied homes. | Read on Justia's 2025 Oklahoma Statutes https://law.justia.com/codes/oklahoma/title-42/section-42-142-6/ , which flags an amendment (Laws 2025, c. 486) effective January 1, 2026; confirm the current thresholds and timing on OSCN before relying on them. |
+| STAT-341 | Pennsylvania | Pennsylvania's HICPA limits deposits on home improvement contracts: a contractor generally may not take a deposit of more than one-third of the contract price plus the cost of special-order materials. | The AG FAQ (https://www.attorneygeneral.gov/?p=6380) says a one-third down payment is generally appropriate but does not quote the cap; the exact contract-size trigger (commonly cited as contracts over $1,000) could not be confirmed on the statute text, which was not fetchable. |
+| STAT-342 | Pennsylvania | Pennsylvania does not issue statewide electrician, plumber or HVAC licenses; trade licensing is handled by municipalities and counties such as Philadelphia, Pittsburgh and Allegheny County, so requirements vary by location. | Consistent across secondary licensing guides, but no official state page stating this was found in this session. |
+| STAT-343 | Pennsylvania | In Pennsylvania, a lien claim must be at least $500 and must be filed with the court within 6 months after the claimant's last work; subcontractors must first give the owner formal written notice of intent to lien at least 30 days before filing. Notice of the filing must be served on the owner within 1 month, and the claim must be enforced within 2 years of filing. | From a secondary legal compendium https://www.alfainternational.com/compendium/construction/pennsylvania/ ; the PA legislature statute site was not reachable to confirm. |
+| STAT-344 | Pennsylvania | On Pennsylvania projects over $1,500,000 where the owner files a notice of commencement in the State Construction Notices Directory, subcontractors and suppliers must file a notice of furnishing within 45 days after first providing labor or materials to keep lien rights. | From secondary source https://www.alfainternational.com/compendium/construction/pennsylvania/ ; not confirmed on the statute. |
+| STAT-345 | Pennsylvania | Under Pennsylvania's CASPA, a contractor must pay its subcontractor the amount received for the sub's work within 14 days after receiving each progress or final payment (or 14 days after the sub's invoice, if later). Late payments carry interest, and wrongful withholding can bring a 1% per month penalty plus attorney fees. | From secondary source https://www.alfainternational.com/compendium/construction/pennsylvania/ ; statute not fetchable this session. |
+| STAT-365 | South Dakota | South Dakota does not issue a statewide general contractor or HVAC license; general contractors are regulated locally by cities and counties, while electricians and plumbers are licensed by state commissions. | Commonly reported by licensing guides; no official state page explicitly stating the absence of a GC license was found this session. Electrical and plumbing commissions confirmed on dlr.sd.gov. |
+| STAT-411 | Texas | Texas has no statewide general contractor or residential builder license; the former Texas Residential Construction Commission was abolished in 2009. Some cities require local registration, while electricians and air conditioning contractors are licensed by TDLR and plumbers by the Texas State Board of Plumbing Examiners. | Widely reported, but no official state page explicitly stating the absence of a GC license was retrieved this session. TDLR and TSBPE roles confirmed on https://www.tdlr.texas.gov/electricians/elec.htm , https://www.tdlr.texas.gov/acr/acr.htm and https://tsbpe.texas.gov/ |
+| STAT-462 | West Virginia | West Virginia trade exams through PSI are open book with a 70% passing score: General Building 80 questions (56 correct, mainly IBC), Residential 80 questions (56 correct, mainly IRC), Electrical Contractor 75 questions (53 correct, NEC 2017/2020), Plumbing Contractor 100 questions (70 correct, IPC) and HVAC Contractor 80 questions (56 correct, IMC). | https://test-takers.psiexams.com/api/content/bulletin/10551 . Code editions listed (IBC/IRC 2015/2018) may be updated in newer bulletins. |
+| STAT-472 | Wisconsin | To become a Wisconsin Dwelling Contractor Qualifier, an applicant completes a 12-hour DSPS-approved initial education course rather than passing a state exam. | Commonly stated requirement, but the DSPS qualifier page reviewed this session did not show the initial course hours and the SPS 305 text could not be retrieved; confirm with DSPS. |
+| STAT-474 | Wisconsin | On Wisconsin residential projects of four or fewer units, a prime contractor that uses subcontractors or suppliers must give the owner a lien notice, either in the written contract or served within 10 days after first furnishing labor or materials. Subcontractors and suppliers must serve their own notice of right to lien within 60 days after first furnishing. | From secondary sources (law firm article https://www.boardmanclark.com/publications/business-minute/prime-contractor-lien-guidelines-for-wisconsin-residential-small-projects-private-small-projects and https://www.siteline.com/mechanics-lien-rights/wisconsin ); the Wisconsin statutes site blocked automated access. |
+| STAT-475 | Wisconsin | In Wisconsin, a lien claimant must give the owner a written notice of intent to file a lien at least 30 days before filing, and must file the lien claim with the clerk of circuit court within 6 months after last furnishing labor or materials. An action to enforce must be filed within 2 years after the lien claim is filed. | From a law firm summary dated 2018 https://www.boardmanclark.com/publications/business-minute/prime-contractor-lien-guidelines-for-wisconsin-residential-small-projects-private-small-projects ; statute text not retrievable this session. |
+| STAT-476 | Wyoming | Wyoming has no statewide general contractor, plumbing or HVAC license; those are licensed by cities and counties (for example Cheyenne and Casper). Electrical work is the main construction trade licensed statewide, through the Wyoming State Fire Marshal's Electrical Safety program. | Reported consistently by licensing guides; electrical licensing confirmed on https://wsfm.wyo.gov/electrical-safety/licensing , but no official page explicitly stating the absence of state GC/plumbing/HVAC licenses was retrieved. |
+| FIXT-020 | — | Bathtub waste outlets must be at least 1-1/2 in in diameter with an approved stopper. Starting with the 2021 IPC, bathtubs are no longer required to have overflow outlets. | 2021 significant change on overflows. |
+| WATE-019 | — | A plastic drain pan may not be installed under a gas-fired water heater. | Recalled from 2018/2021 IPC 504.7 text, but not confirmed in a source this round. |
+| WATE-028 | — | Table 604.3 sets the minimum flow rate and flowing pressure each fixture supply outlet must receive. Many fixtures (lavatories, sinks, hose bibbs) need 8 psi flowing pressure, tank-type water closets, bathtubs and showers need 20 psi, and flushometer valves need more. | Exact gpm/psi values changed between editions (for example, the lavatory dropped to 0.8 gpm, and flushometer pressures were raised). The 8 psi / 20 psi pattern was not checked against the 2021 table. |
+| BACK-016 | — | The relief port discharge from a reduced pressure principle backflow preventer must go through an air gap, and the installation must be arranged so relief discharge does not flood the area or submerge the device. | 2021 added rules for relief opening discharge (608.15.2.1). Exact wording and location limits not confirmed. |
+| CLEA-008 | — | Under the 2021 IPC, a fixture trap that can be removed without disturbing concealed piping may serve as a cleanout in some cases. | Listed as a 2021 significant change ('removable fixture traps serving as cleanouts'). Exact conditions not confirmed. |
+| UPCD-008 | — | Under the UPC, a cleanout is required at the upper end of each horizontal drain and at least every 100 ft. An extra cleanout is required for each aggregate horizontal change of direction exceeding 135 degrees, instead of the IPC's 45-degree / 40-ft rule. | Confirmed only in a source describing the 2009 UPC. Check UPC 2021 707.4. |
+| UPCD-009 | — | UPC cleanout clearance: at least 12 in in front of cleanouts on pipes 2 in and smaller, and 18 in for larger pipes. | Confirmed only in a source describing the 2009 UPC. Check UPC 2021 707.9. |
+| UPCD-010 | — | UPC clothes washer standpipes must extend at least 18 in but no more than 30 in above the trap weir. The IPC allows up to 42 in. | Recalled but not confirmed in a source this round. |
+| UPCD-011 | — | Under the UPC, water pipe may share a trench with a building sewer of clay or other materials not approved for use inside a building only if the bottom of the water pipe is at least 12 in above the top of the sewer and the water pipe sits on a solid shelf at least 12 in horizontally from the sewer. | Recalled UPC text. Not confirmed this round. |
+| UPCD-012 | — | Some UPC-based codes (for example, California) require water closets to average no more than 1.28 gallons per flush, compared with the IPC's 1.6 gpf. | California's 1.28 gpf rule (CPC 411.2) is confirmed. Whether the base UPC 2021 body requires 1.28 or 1.6 gpf was not confirmed. |
+| RECE-019 | — | In other than one- and two-family dwellings, a 125 V, 15 or 20 A receptacle outlet must be within 25 ft of indoor service equipment, in the same room or area, and within 25 ft of indoor equipment needing dedicated equipment space under 110.26(E) (such as panelboards, switchboards and MCCs), in the same room or area and not on the load side of that equipment's disconnect. These rules entered as 210.63(B)(1) and (B)(2) in NEC 2020; NEC 2017 210.64 required only one receptacle within 50 ft of the service equipment. | 25 ft confirmed from a Mike Holt 2023 summary; the one-/two-family dwelling exclusion and exact (B)(1)/(B)(2) wording were not confirmed against the code text. |
+| POOL-016 | — | For an indoor spa or hot tub, receptacles must be at least 6 ft from the inside walls; at least one 125 V, 15/20 A receptacle must be between 6 ft and 10 ft away; and 125 V receptacles rated 30 A or less within 10 ft require GFCI. | Based on NEC 2017/2020 680.43(A) text; NEC 2023 reorganized GFCI rules into 680.5, so confirm 2023 wording. |
+| POOL-018 | — | Spas and hot tubs (other than at single-family dwellings) need a clearly labeled emergency shutoff for the recirculation and jet motors, readily accessible to users, at least 5 ft away, adjacent to and within sight of the spa. | Cited from NEC 2020; NEC 2023 reorganized parts of Article 680, so confirm the 2023 section number. |
 
 ## Adding or fixing content
 - The live files are `supabase/functions/_shared/kb.json` (facts) and `lib/kb-questions.json` (questions). Small fixes: edit them directly.

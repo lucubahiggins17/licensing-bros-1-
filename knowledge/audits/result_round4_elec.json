@@ -1,0 +1,256 @@
+{
+ "facts": [
+  {
+   "id": "E1",
+   "action": "fix",
+   "reason": "The 'roughly 800 definitions' count could not be confirmed and is trivia an exam would not test; the substance (definitions consolidated into Article 100) is correct.",
+   "fixed": {
+    "fact": "In the 2023 NEC, almost all definitions that used to sit in the .2 section of individual articles were moved into Article 100, so Article 100 is now the single alphabetical list of defined terms. In NEC 2020 many definitions were still found inside their own articles."
+   }
+  },
+  {
+   "id": "E42",
+   "action": "fix",
+   "reason": "Elevation guarding is not a flat 8 ft. 110.27(A)(4) requires 8 ft for 50-300 V, 8 ft 6 in for 301-600 V, and 8 ft 7 in for 601-1000 V.",
+   "fixed": {
+    "fact": "Live parts operating at 50 V or more must be guarded against accidental contact by an approved enclosure, a room or vault accessible only to qualified persons, permanent partitions or screens, location on a balcony or platform that excludes unqualified persons, or elevation above the floor or working surface of at least 8 ft for 50-300 V, 8 ft 6 in for 301-600 V, and 8 ft 7 in for 601-1000 V."
+   }
+  },
+  {
+   "id": "E64",
+   "action": "fix",
+   "reason": "The dedicated garage receptacle circuit was added in NEC 2017, not 2020. The fact also omits that the circuit may serve no other outlets except readily accessible outdoor receptacle outlets.",
+   "fixed": {
+    "fact": "A dwelling needs at least one 120 V, 20 A branch circuit for the receptacle outlets required in attached garages and in detached garages that have power. The circuit may have no other outlets, except that it may supply readily accessible outdoor receptacle outlets. This has been required since NEC 2017; NEC 2023 clarifies that additional 15 A or larger garage circuits are allowed for other receptacles."
+   }
+  },
+  {
+   "id": "E76",
+   "action": "fix",
+   "reason": "Outdated trigger. Since NEC 2020 the rule covers balconies, decks and porches within 4 in horizontally of the dwelling unit; the old 'attached to and accessible from inside the dwelling' wording was deleted.",
+   "fixed": {
+    "fact": "Balconies, decks and porches within 4 in horizontally of a dwelling unit must have at least one receptacle outlet accessible from (within the perimeter of) the balcony, deck or porch, not more than 6-1/2 ft above its walking surface. NEC 2020 replaced the older 'attached to and accessible from inside the dwelling' trigger with the 4 in test."
+   }
+  },
+  {
+   "id": "E83",
+   "action": "fix",
+   "reason": "Wrong 2020 comparison. The 25 ft rule (indoor service equipment and indoor equipment needing dedicated space) was added as 210.63(B)(1)/(B)(2) in NEC 2020; the 50 ft rule in 210.64 was NEC 2017.",
+   "fixed": {
+    "fact": "In other than one- and two-family dwellings, a 125 V, 15 or 20 A receptacle outlet must be within 25 ft of indoor service equipment, in the same room or area, and within 25 ft of indoor equipment needing dedicated equipment space under 110.26(E) (such as panelboards, switchboards and MCCs), in the same room or area and not on the load side of that equipment's disconnect. These rules entered as 210.63(B)(1) and (B)(2) in NEC 2020; NEC 2017 210.64 required only one receptacle within 50 ft of the service equipment.",
+    "source": "NEC 2023 210.63(B) (added in NEC 2020; 210.64 in NEC 2017)"
+   }
+  },
+  {
+   "id": "E106",
+   "action": "fix",
+   "reason": "Misleading as worded: ranges/dryers were not on the 2020 210.8(D) list, but a 240 V dryer receptacle in a dwelling laundry area already needed GFCI under 2020 210.8(A)(10) because the 2020 dwelling scope covered 125-250 V receptacles.",
+   "fixed": {
+    "fact": "Under NEC 2020, 210.8(D) required GFCI protection only for outlets supplying dwelling dishwashers; ranges, ovens, cooktops, dryers and microwaves were added to 210.8(D) in NEC 2023. Even under 2020, though, a 240 V dryer receptacle in a dwelling laundry area needed GFCI under 210.8(A)(10), because the 2020 dwelling scope covered 125-250 V receptacles. Range receptacles did not, because 2020 kitchen GFCI covered only receptacles serving countertops."
+   }
+  },
+  {
+   "id": "E110",
+   "action": "fix",
+   "reason": "210.8(C) applies to crawl-space lighting outlets in all occupancies, not just dwellings.",
+   "fixed": {
+    "fact": "Lighting outlets not exceeding 120 V installed in crawl spaces require GFCI protection. The rule is not limited to dwellings."
+   }
+  },
+  {
+   "id": "E124",
+   "action": "fix",
+   "reason": "Wrong 2020 location. NEC 2020 removed dwelling units from Table 220.12 and put the 3 VA/sq ft dwelling load in 220.14(J); NEC 2023 moved it to 220.41.",
+   "fixed": {
+    "fact": "The minimum general lighting and general-use receptacle load for dwelling units is 3 VA per sq ft. NEC 2023 puts this in 220.41; in NEC 2020 it was in 220.14(J) (dwelling units had been removed from Table 220.12, which now covers only non-dwelling occupancies).",
+    "source": "NEC 2023 220.41 (220.14(J) in NEC 2020)"
+   }
+  },
+  {
+   "id": "E141",
+   "action": "fix",
+   "reason": "Misses the NEC 2023 threshold: the 75% factor now applies only to fastened-in-place appliances each rated 1/4 hp or more, or 500 W or more.",
+   "fixed": {
+    "fact": "In dwellings, four or more fastened-in-place appliances, each rated 1/4 hp or more or 500 W or more, served by the same feeder or service may be calculated at 75% of their combined nameplate rating. The 1/4 hp / 500 W threshold is new in NEC 2023. Excluded: household cooking equipment fastened in place, clothes dryers, space heating, air conditioning, and (new in 2023) EVSE."
+   }
+  },
+  {
+   "id": "E160",
+   "action": "fix",
+   "reason": "Heat pump rule misstated: it is 100% of the compressor plus 65% (not 100%) of supplemental electric heat; the thermal-storage item is also missing.",
+   "fixed": {
+    "fact": "Optional method heating/AC: use the largest of (1) 100% of air conditioning/cooling; (2) 100% of a heat pump without supplemental electric heat; (3) 100% of the heat pump compressor plus 65% of the supplemental electric heat for central space heating (the compressor need not be added if it cannot run at the same time as the supplemental heat); (4) 65% of electric space heating with fewer than four separately controlled units; (5) 40% with four or more separately controlled units; (6) 100% of electric thermal storage and other heating expected to run continuously at full nameplate."
+   }
+  },
+  {
+   "id": "E163",
+   "action": "fix",
+   "reason": "220.84(A) requires that no unit be supplied by more than one feeder; it does not say the feeder must be 3-wire 120/240 or 208Y/120 V.",
+   "fixed": {
+    "fact": "The multifamily optional calculation (Table 220.84) applies to a building with three or more dwelling units where no unit is supplied by more than one feeder, each unit has electric cooking equipment (with an exception), and each unit has electric space heating, air conditioning or both. House loads are calculated separately under Part III and added."
+   }
+  },
+  {
+   "id": "E186",
+   "action": "fix",
+   "reason": "The '(added in NEC 2020)' edition claim could not be confirmed; service barrier requirements date to the 2017 cycle (408.3(A)(2)). The rule itself is correct, so the unsupported date is dropped.",
+   "fixed": {
+    "fact": "Service equipment must have barriers placed so that no uninsulated, ungrounded service busbar or service terminal (which stays energized on the line side when the service disconnect is open) is exposed to accidental contact by persons or maintenance equipment while load terminations are being serviced."
+   }
+  },
+  {
+   "id": "E223",
+   "action": "fix",
+   "reason": "Since NEC 2020 the PVC and RTRC options for protecting a GEC are limited to Schedule 80 PVC and RTRC-XW. Plain 'PVC, RTRC' is incorrect.",
+   "fixed": {
+    "fact": "A 6 AWG or larger copper GEC may run along a building surface without protection if securely fastened and not exposed to physical damage. A GEC smaller than 6 AWG, or one exposed to physical damage, must be protected in RMC, IMC, Schedule 80 PVC, RTRC-XW, EMT or cable armor."
+   }
+  },
+  {
+   "id": "E244",
+   "action": "fix",
+   "reason": "250.92(B) says standard locknuts or bushings may never be the only means of service bonding. The rule is not limited to impaired knockouts; for those, bonding jumpers are required.",
+   "fixed": {
+    "fact": "Service raceways and enclosures must be bonded using one or more of these: bonding to the grounded service conductor, threaded couplings or listed threaded hubs made up wrenchtight, threadless couplings/connectors made up tight, or other listed devices (bonding locknuts, bonding bushings, bushings with bonding jumpers). Bonding jumpers are required around impaired concentric or eccentric knockouts, and standard locknuts or bushings alone may never be the only bonding means at a service."
+   }
+  },
+  {
+   "id": "E311",
+   "action": "fix",
+   "reason": "Incomplete: NEC 2023 314.27(C) lets a dwelling habitable-room ceiling box in a fan-acceptable location EITHER be listed for sole fan support OR be installed so structural framing that can support a fan is directly accessible through the box without removing it.",
+   "fixed": {
+    "fact": "Boxes used as the sole support of ceiling-suspended (paddle) fans must be listed and marked for that use and may not support fans over 70 lb; boxes for fans over 35 lb must be marked with the maximum weight. Under NEC 2023, ceiling outlet boxes in habitable rooms of dwellings, in a location acceptable for a paddle fan, must either be listed for sole support of a paddle fan or be installed so structural framing capable of supporting a fan can be reached directly through the box without removing it."
+   }
+  },
+  {
+   "id": "E315",
+   "action": "fix",
+   "reason": "The 1/2 in minimum applies only to boxes that do not enclose devices or utilization equipment. Boxes that enclose devices need more depth (for example 15/16 in for 12/14 AWG), and the 1-7/8 in projection rule is in 314.24(B)(1).",
+   "fixed": {
+    "fact": "Outlet boxes that do not enclose devices or utilization equipment must be at least 1/2 in deep inside. Boxes that enclose devices need more depth: where the equipment projects more than 1-7/8 in rearward from the mounting plane, the depth must be the equipment depth plus 1/4 in, and other minimums apply by conductor size (for example 15/16 in for 12 or 14 AWG conductors).",
+    "source": "NEC 2023 314.24(A), (B)"
+   }
+  },
+  {
+   "id": "E369",
+   "action": "fix",
+   "reason": "NEC 2023 also applies this disconnect rule to LED luminaires and drivers that replace double-ended fluorescent lamps (the rule moved from 410.71 to 410.130(G) because LED drivers were added).",
+   "fixed": {
+    "fact": "In indoor locations other than dwellings, fluorescent luminaires with double-ended lamps and ballasts that can be serviced in place need a disconnecting means (internal or external to each luminaire), so ballasts can be replaced without working on energized parts. NEC 2023 extends this to LED luminaires whose drivers can be serviced in place and that use double-ended lamps (for example, LED tubes replacing fluorescent lamps)."
+   }
+  },
+  {
+   "id": "E370",
+   "action": "fix",
+   "reason": "Range hood cord limit has been 18 in to 4 ft (not 36 in) since NEC 2020, and it also covers over-the-range microwaves with integral range hoods.",
+   "fixed": {
+    "fact": "Cord lengths: in-sink waste disposers 18 to 36 in; built-in dishwashers and trash compactors 3 to 4 ft (measured from the plug face to the plane of the rear of the appliance); range hoods and over-the-range microwave ovens with integral range hoods 18 in to 4 ft (since NEC 2020; NEC 2017 was 18 to 36 in). Receptacles must be accessible and located to avoid damage to the cord."
+   }
+  },
+  {
+   "id": "E417",
+   "action": "fix",
+   "reason": "Omits the key 450.21(A) exception: the 12 in rule does not apply to transformers of 1000 V or less that are completely enclosed except for ventilating openings. Also omits the 1-hour room rating and the 6 ft/12 ft spacing alternative.",
+   "fixed": {
+    "fact": "Indoor dry-type transformers rated 112.5 kVA or less must be at least 12 in from combustible material unless separated by a fire-resistant, heat-insulating barrier. This does not apply to transformers of 1000 V or less that are completely enclosed except for ventilating openings. Transformers over 112.5 kVA must be in a 1-hour fire-resistant transformer room, unless they have Class 155 or higher insulation and are separated from combustibles by a fire-resistant, heat-insulating barrier or by at least 6 ft horizontally and 12 ft vertically."
+   }
+  },
+  {
+   "id": "E435",
+   "action": "fix",
+   "reason": "NEC 2023 680.22(A)(4) covers all receptacles rated 125-250 V, 60 A or less, within 20 ft (not only 15/20 A), with GFCI per 680.5(B) or SPGFCI per 680.5(C) as applicable. NEC 2020 covered only 15/20 A, single-phase, 125 V receptacles.",
+   "fixed": {
+    "fact": "Under NEC 2023, all receptacles rated 125 V through 250 V and 60 A or less within 20 ft of the inside walls of a pool need GFCI protection per 680.5(B), or SPGFCI protection per 680.5(C) where applicable (higher-voltage circuits). NEC 2020 applied this only to 15 A and 20 A, single-phase, 125 V receptacles.",
+    "source": "NEC 2023 680.22(A)(4); 680.5"
+   }
+  },
+  {
+   "id": "E444",
+   "action": "fix",
+   "reason": "Outdated (NEC 2017 680.10 rule). Since NEC 2020, 680.11 permits underground wiring within 5 ft of the pool using listed methods; only wiring under the pool is limited to wiring that supplies pool equipment. Cover depths come from Table 300.5.",
+   "fixed": {
+    "fact": "Underground wiring within 5 ft horizontally of a pool's inside wall is permitted using RMC, IMC, PVC, RTRC, jacketed Type MC listed for burial, or liquidtight flexible metal or nonmetallic conduit listed for direct burial. Underground wiring under the pool is not permitted unless it supplies pool equipment allowed by Article 680. Minimum cover follows Table 300.5 (for example, 6 in for RMC/IMC and 18 in for nonmetallic raceway listed for direct burial).",
+    "source": "NEC 2023 680.11 (680.10 in NEC 2017)"
+   }
+  },
+  {
+   "id": "E450",
+   "action": "unverify",
+   "reason": "Rule is correct for NEC 2020 680.41, but its NEC 2023 section number and wording were not confirmed (2023 Article 680 was reorganized, and one source describes the spa emergency switch as a 'new section' in 2023). Confirm in a 2023 code book."
+  },
+  {
+   "id": "E530",
+   "action": "fix",
+   "reason": "OSHA's 10 ft + 4 in per 10 kV rule is based on voltage to ground. The 138 kV example only works if 138 kV is the voltage to ground; a common 138 kV phase-to-phase line is about 80 kV to ground.",
+   "fixed": {
+    "fact": "Unqualified persons (and the longest conductive object they handle) must stay at least 10 ft from unguarded energized overhead lines with a voltage to ground of 50 kV or less, plus 4 in for every 10 kV over 50 kV to ground. Example: a line at 138 kV to ground requires 10 ft + (88 / 10 x 4 in = 35.2 in), about 12 ft 11 in."
+   }
+  },
+  {
+   "id": "E531",
+   "action": "fix",
+   "reason": "Correct, but the 20 ft / 50 ft alternative comes from 1926.1408(a)(2) Option 2 together with 1926.1409 (over 350 kV), not Table A alone.",
+   "fixed": {
+    "source": "OSHA 29 CFR 1926.1408 Table A; 1926.1408(a)(2); 1926.1409"
+   }
+  },
+  {
+   "id": "E534",
+   "action": "fix",
+   "reason": "Incomplete: 1910.333(b)(2)(iii)(C) also allows a tag without a lock when the employer can show tagging gives safety equivalent to a lock; a tag used alone always needs at least one more safety measure.",
+   "fixed": {
+    "fact": "A lock and a tag go on each disconnecting means. A tag may be used without a lock only if a lock cannot be applied or the employer can show tagging gives equivalent safety, and then it must be supplemented by at least one more safety measure, such as removing an isolating circuit element, blocking a controlling switch, or opening an extra disconnecting device."
+   }
+  }
+ ],
+ "questions": [
+  {
+   "i": 46,
+   "action": "fix",
+   "reason": "NEC 2023 220.53 applies the 75% factor only to appliances each rated 1/4 hp or 500 W or more; the stem should say so.",
+   "fixed": {
+    "q": "A dwelling has four fastened-in-place appliances (water heater, dishwasher, disposal, compactor), each rated over 500 W, totaling 7,600 VA. The demand load per 220.53 is:",
+    "why": "Four or more fastened-in-place appliances, each rated 1/4 hp or 500 W or more (2023 threshold), may be taken at 75%: 7,600 x 0.75 = 5,700 VA."
+   }
+  },
+  {
+   "i": 83,
+   "action": "fix",
+   "reason": "Since NEC 2020 the permitted nonmetallic protection for a GEC is Schedule 80 PVC and RTRC-XW, not any PVC or RTRC.",
+   "fixed": {
+    "c": [
+     "Nothing if stapled to the wall",
+     "RMC, IMC, Schedule 80 PVC, RTRC-XW, EMT or cable armor",
+     "Only PVC",
+     "Only a steel plate"
+    ],
+    "why": "GECs smaller than 6 AWG must be protected in RMC, IMC, Schedule 80 PVC, RTRC-XW, EMT or cable armor; 6 AWG and larger may run exposed if not subject to physical damage."
+   }
+  },
+  {
+   "i": 125,
+   "action": "fix",
+   "reason": "'Why' gives the pre-2020 range hood cord limit; since NEC 2020 range hood cords may be 18 in to 4 ft.",
+   "fixed": {
+    "why": "Dishwasher and trash compactor cords are 3 to 4 ft. Disposer cords are 18 to 36 in, and range hood (and over-the-range microwave/hood) cords are 18 in to 4 ft."
+   }
+  },
+  {
+   "i": 142,
+   "action": "fix",
+   "reason": "'Why' should note the 450.21(A) exception for completely enclosed (ventilated) transformers of 1000 V or less, which covers most commercial dry-types.",
+   "fixed": {
+    "why": "450.21(A) requires 12 in unless a fire-resistant, heat-insulating barrier is used. The rule does not apply to transformers of 1000 V or less that are completely enclosed except for ventilating openings."
+   }
+  },
+  {
+   "i": 149,
+   "action": "fix",
+   "reason": "NEC 2023 680.22(A)(4) is not limited to 15/20 A receptacles; it covers all 125-250 V receptacles rated 60 A or less. The answer (20 ft) is unchanged.",
+   "fixed": {
+    "q": "Under NEC 2023, receptacles rated 125-250 V and 60 A or less within what distance of a pool's inside walls require GFCI (or SPGFCI) protection?",
+    "why": "680.22(A)(4) requires GFCI (680.5(B)) or SPGFCI (680.5(C)) protection for these receptacles within 20 ft of the pool. NEC 2020 covered only 15/20 A, 125 V receptacles."
+   }
+  }
+ ]
+}
