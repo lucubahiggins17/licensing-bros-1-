@@ -721,3 +721,300 @@ export function clampInt(v: unknown, min: number, max: number, d: number): numbe
   const n = Math.round(Number(v));
   return Number.isFinite(n) ? Math.min(max, Math.max(min, n)) : d;
 }
+
+// ---------------------------------------------------------------------------------------------
+// Knowledge library: turning documents into searchable passages
+// ---------------------------------------------------------------------------------------------
+export type Passage = { seq: number; ref: string | null; text: string };
+
+const HEADING = /^(#{1,6}\s+.+|(chapter|article|section|part|subpart|appendix|table|rule)\s+[\w.\-()]+.*|\d{1,4}(\.\d+)+(\([a-z0-9]+\))*\s+[A-Z][^.]{2,80}|[A-Z0-9][A-Z0-9 ,&'()\/.-]{3,80})$/i;
+
+function isHeading(line: string): boolean {
+  const t = line.trim();
+  if (t.length < 3 || t.length > 100) return false;
+  if (/[.;,:]$/.test(t) && !/^#/.test(t)) return false;
+  if (/^#{1,6}\s/.test(t)) return true;
+  if (/^(chapter|article|section|part|subpart|appendix|rule)\s+[\w.\-()]+/i.test(t)) return true;
+  if (/^\d{1,4}(\.\d+)+(\([a-z0-9]+\))*\s+[A-Z]/.test(t) && t.split(/\s+/).length <= 14) return true;
+  // ALL CAPS lines that look like titles
+  return t === t.toUpperCase() && /[A-Z]{3}/.test(t) && t.split(/\s+/).length <= 12 && HEADING.test(t);
+}
+
+function sentences(p: string): string[] {
+  return p.match(/[^.!?]+(?:[.!?]+(?=\s|$)|$)/g)?.map((s) => s.trim()).filter(Boolean) || [p];
+}
+
+/**
+ * Splits a document into passages of about `target` characters, on paragraph and sentence boundaries, never more
+ * than `max`. Each passage remembers the nearest heading above it (used as its citation), and starts with the last
+ * sentence of the passage before it so a rule split across two passages can still be found.
+ */
+export function chunkText(raw: string, o: { target?: number; max?: number; overlap?: boolean } = {}): Passage[] {
+  const target = o.target ?? 1000, max = o.max ?? 3500, overlap = o.overlap ?? true;
+  const text = String(raw || "").replace(/\r\n?/g, "\n").replace(/ /g, " ").replace(/[ \t]+/g, " ").replace(/\n{3,}/g, "\n\n").trim();
+  if (!text) return [];
+  const out: Passage[] = [];
+  let heading: string | null = null;
+  let buf: string[] = [];
+  let bufHeading: string | null = null;
+  let carry = "";
+  const flush = () => {
+    const body = buf.join("\n").trim();
+    if (body) {
+      const withCarry = carry && overlap ? `${carry} ${body}` : body;
+      out.push({ seq: out.length, ref: bufHeading, text: withCarry.slice(0, max) });
+      const last = sentences(body).pop() || "";
+      carry = last.length <= 300 ? last : "";
+    }
+    buf = [];
+  };
+  const size = () => buf.reduce((n, s) => n + s.length + 1, 0);
+  for (const block of text.split(/\n\s*\n|\n(?=#{1,6}\s)/)) {
+    const lines = block.split("\n").map((l) => l.trim()).filter(Boolean);
+    if (!lines.length) continue;
+    if (isHeading(lines[0])) {
+      flush();
+      carry = "";
+      heading = lines[0].replace(/^#{1,6}\s+/, "").slice(0, 140);
+      lines.shift();
+      if (!lines.length) { bufHeading = heading; continue; }
+    }
+    if (!buf.length) bufHeading = heading;
+    const para = lines.join(" ");
+    if (para.length > target * 1.5) {
+      // A long paragraph: split by sentences
+      for (const s of sentences(para)) {
+        if (size() + s.length > target && buf.length) { flush(); bufHeading = heading; }
+        buf.push(s.length > max ? s.slice(0, max) : s);
+      }
+      continue;
+    }
+    if (size() + para.length > target && buf.length) { flush(); bufHeading = heading; }
+    buf.push(para);
+  }
+  flush();
+  return out;
+}
+
+const ENTITIES: Record<string, string> = { amp: "&", lt: "<", gt: ">", quot: '"', apos: "'", nbsp: " ", ndash: "–", mdash: "—", deg: "°", sect: "§", frac12: "½", frac14: "¼", frac34: "¾", rsquo: "’", lsquo: "‘", rdquo: "”", ldquo: "“", hellip: "…", times: "×" };
+
+/** Readable text from a web page: drops scripts, styles, menus and footers, keeps headings and paragraphs. */
+export function htmlToText(html: string): { title: string; text: string } {
+  const src = String(html || "");
+  const title = (src.match(/<title[^>]*>([\s\S]*?)<\/title>/i)?.[1] || "").replace(/\s+/g, " ").trim();
+  let s = src
+    .replace(/<!--[\s\S]*?-->/g, " ")
+    .replace(/<(head|script|style|noscript|svg|nav|header|footer|form|iframe|template)\b[\s\S]*?<\/\1>/gi, " ")
+    .replace(/<h([1-6])[^>]*>([\s\S]*?)<\/h\1>/gi, (_m, n, inner) => `\n\n${"#".repeat(Number(n))} ${inner.replace(/<[^>]+>/g, " ").trim()}\n\n`)
+    .replace(/<(br|hr)\s*\/?>/gi, "\n")
+    .replace(/<\/(p|div|section|article|li|tr|table|ul|ol|blockquote|pre)>/gi, "\n\n")
+    .replace(/<li[^>]*>/gi, "\n- ")
+    .replace(/<(td|th)[^>]*>/gi, " | ")
+    .replace(/<[^>]+>/g, " ");
+  s = s.replace(/&(#x?[0-9a-f]+|[a-z0-9]+);/gi, (m, e: string) => {
+    if (e[0] === "#") {
+      const code = e[1].toLowerCase() === "x" ? parseInt(e.slice(2), 16) : parseInt(e.slice(1), 10);
+      return Number.isFinite(code) && code > 0 && code < 0x110000 ? String.fromCodePoint(code) : " ";
+    }
+    return ENTITIES[e.toLowerCase()] ?? m;
+  });
+  const text = s.replace(/[ \t]+/g, " ").replace(/ *\n */g, "\n").replace(/\n{3,}/g, "\n\n").trim();
+  return { title, text };
+}
+
+// ---------------------------------------------------------------------------------------------
+// Command center: how each student is doing, and who needs help
+// ---------------------------------------------------------------------------------------------
+export type StudentRow = {
+  id: string; email: string | null; full_name: string | null; state: string | null; trade: string | null;
+  created_at: string; last_sign_in_at: string | null; role?: string | null; paid: boolean; enrolled: number;
+  // deno-lint-ignore no-explicit-any
+  progress: any; progress_updated_at: string | null;
+};
+export type StudentSummary = {
+  id: string; name: string; email: string; state: string; trade: string; paid: boolean; role: string;
+  joined: string; last_active: string | null; days_inactive: number | null;
+  answered: number; accuracy: number | null; mock_exams: number; last_mock: number | null;
+  exam_date: string | null; days_to_exam: number | null;
+  weakest: { topic: string; pct: number; attempts: number }[];
+  risk: "high" | "medium" | "low" | "new";
+  reasons: string[];
+};
+
+export function summarizeStudent(r: StudentRow, now = Date.now()): StudentSummary {
+  const p = r.progress && typeof r.progress === "object" ? r.progress : {};
+  const trade = String(p.trade || r.trade || "gc");
+  const stats = (p.stats && typeof p.stats === "object" ? p.stats[trade] : null) || {};
+  let c = 0, a = 0;
+  const topics: { topic: string; pct: number; attempts: number }[] = [];
+  for (const [topic, v] of Object.entries(stats as Record<string, { c?: number; a?: number }>)) {
+    const tc = Number(v?.c) || 0, ta = Number(v?.a) || 0;
+    c += tc; a += ta;
+    if (ta >= 4) topics.push({ topic, pct: Math.round((tc / ta) * 100), attempts: ta });
+  }
+  topics.sort((x, y) => x.pct - y.pct || y.attempts - x.attempts);
+  const hist = Array.isArray(p.hist) ? p.hist : [];
+  const mocks = hist.filter((h: { kind?: string }) => h?.kind === "Mock exam");
+  const lastMockDetail = mocks.length ? String(mocks.reduce((x: { at?: number }, y: { at?: number }) => ((y?.at || 0) > (x?.at || 0) ? y : x))?.detail || "") : "";
+  const mockPct = lastMockDetail.match(/(\d{1,3})\s*%/);
+  const days: string[] = Array.isArray(p.days) ? p.days.filter((d: unknown) => typeof d === "string") : [];
+  const lastDay = days.length ? Math.max(...days.map((d) => new Date(`${d}T12:00:00Z`).getTime()).filter(Number.isFinite)) : 0;
+  const lastHist = hist.length ? Math.max(...hist.map((h: { at?: number }) => Number(h?.at) || 0)) : 0;
+  const candidates = [r.last_sign_in_at ? Date.parse(r.last_sign_in_at) : 0, r.progress_updated_at ? Date.parse(r.progress_updated_at) : 0, lastDay, lastHist].filter((x) => x > 0);
+  const lastActive = candidates.length ? Math.max(...candidates) : 0;
+  const examDate = typeof p.examDate === "string" && /^\d{4}-\d{2}-\d{2}$/.test(p.examDate) ? p.examDate : null;
+  const daysToExam = examDate ? Math.ceil((Date.parse(`${examDate}T14:00:00Z`) - now) / DAY) : null;
+  const daysInactive = lastActive ? Math.floor((now - lastActive) / DAY) : null;
+  const accuracy = a ? Math.round((c / a) * 100) : null;
+  const lastMock = mockPct ? Number(mockPct[1]) : null;
+  const joinedDays = Math.floor((now - Date.parse(r.created_at)) / DAY);
+
+  const reasons: string[] = [];
+  let risk: StudentSummary["risk"] = "low";
+  const soon = daysToExam !== null && daysToExam >= 0 && daysToExam <= 30;
+  if (!a && !mocks.length) {
+    risk = joinedDays >= 7 ? "medium" : "new";
+    reasons.push(joinedDays >= 7 ? `hasn't started practicing (joined ${joinedDays} days ago)` : "just joined");
+    if (soon) { risk = "high"; reasons.push(`exam in ${daysToExam} days`); }
+  } else {
+    if (soon && accuracy !== null && accuracy < 70) reasons.push(`${accuracy}% correct with the exam in ${daysToExam} days`);
+    if (soon && a < 150) reasons.push(`only ${a} practice questions with the exam in ${daysToExam} days`);
+    if (soon && lastMock !== null && lastMock < 70) reasons.push(`last mock exam ${lastMock}%`);
+    if (reasons.length) risk = "high";
+    if (daysInactive !== null && daysInactive >= 10 && (r.paid || (daysToExam !== null && daysToExam >= 0 && daysToExam <= 60))) {
+      reasons.push(`inactive for ${daysInactive} days`);
+      risk = risk === "high" || (daysToExam !== null && daysToExam >= 0 && daysToExam <= 30) ? "high" : "medium";
+    }
+    if (risk === "low" && accuracy !== null && accuracy < 65 && a >= 50) { risk = "medium"; reasons.push(`${accuracy}% correct overall`); }
+    if (risk === "low" && topics.length && topics[0].pct < 55) reasons.push(`weak on ${topics[0].topic} (${topics[0].pct}%)`);
+  }
+  return {
+    id: r.id, name: (r.full_name || "").trim() || (r.email || "").split("@")[0] || "Student", email: r.email || "", state: String(p.state || r.state || ""),
+    trade, paid: !!r.paid, role: r.role || "student", joined: r.created_at, last_active: lastActive ? new Date(lastActive).toISOString() : null,
+    days_inactive: daysInactive, answered: a, accuracy, mock_exams: mocks.length, last_mock: lastMock, exam_date: examDate, days_to_exam: daysToExam,
+    weakest: topics.slice(0, 3), risk, reasons
+  };
+}
+
+export type Segment = "all" | "at_risk" | "inactive" | "exam_soon" | "paid" | "free" | "new" | "top";
+
+/** Students in a segment, most urgent first. Staff accounts are left out. */
+export function segmentStudents(rows: StudentSummary[], segment: Segment, o: { trade?: string; state?: string; search?: string } = {}): StudentSummary[] {
+  const q = (o.search || "").trim().toLowerCase();
+  let list = rows.filter((s) => s.role === "student"
+    && (!o.trade || s.trade === o.trade) && (!o.state || s.state === o.state)
+    && (!q || s.name.toLowerCase().includes(q) || s.email.toLowerCase().includes(q)));
+  const rank = { high: 0, medium: 1, new: 2, low: 3 } as const;
+  switch (segment) {
+    case "at_risk": list = list.filter((s) => s.risk === "high" || s.risk === "medium").sort((x, y) => rank[x.risk] - rank[y.risk] || (x.days_to_exam ?? 999) - (y.days_to_exam ?? 999)); break;
+    case "inactive": list = list.filter((s) => s.days_inactive === null || s.days_inactive >= 7).sort((x, y) => (y.days_inactive ?? 9999) - (x.days_inactive ?? 9999)); break;
+    case "exam_soon": list = list.filter((s) => s.days_to_exam !== null && s.days_to_exam >= 0 && s.days_to_exam <= 30).sort((x, y) => (x.days_to_exam ?? 0) - (y.days_to_exam ?? 0)); break;
+    case "paid": list = list.filter((s) => s.paid); break;
+    case "free": list = list.filter((s) => !s.paid); break;
+    case "new": list = list.filter((s) => Date.now() - Date.parse(s.joined) <= 7 * DAY).sort((x, y) => Date.parse(y.joined) - Date.parse(x.joined)); break;
+    case "top": list = list.filter((s) => s.accuracy !== null && s.answered >= 30).sort((x, y) => (y.accuracy ?? 0) - (x.accuracy ?? 0)); break;
+  }
+  return list;
+}
+
+// deno-lint-ignore no-explicit-any
+type Msg = { role: "user" | "assistant"; content: any[] };
+
+/**
+ * The command center's conversation as the client sends it back: only text, tool calls and tool results survive,
+ * the oldest turns are dropped to stay under the size limit, old tool results are shortened, and every tool call
+ * keeps its result (the API rejects a call without one).
+ */
+export function cleanHistory(raw: unknown, o: { maxMessages?: number; maxChars?: number } = {}): Msg[] {
+  const maxMessages = o.maxMessages ?? 40, maxChars = o.maxChars ?? 120_000;
+  const out: Msg[] = [];
+  for (const m of Array.isArray(raw) ? raw : []) {
+    if (!m || (m.role !== "user" && m.role !== "assistant")) continue;
+    const blocks = typeof m.content === "string" ? [{ type: "text", text: m.content }] : Array.isArray(m.content) ? m.content : [];
+    // deno-lint-ignore no-explicit-any
+    const clean: any[] = [];
+    for (const b of blocks) {
+      if (b?.type === "text" && typeof b.text === "string" && b.text.trim()) clean.push({ type: "text", text: b.text.slice(0, 8000) });
+      else if (m.role === "assistant" && b?.type === "tool_use" && typeof b.id === "string" && typeof b.name === "string") clean.push({ type: "tool_use", id: b.id.slice(0, 100), name: b.name.slice(0, 60), input: b.input && typeof b.input === "object" ? b.input : {} });
+      else if (m.role === "user" && b?.type === "tool_result" && typeof b.tool_use_id === "string") clean.push({ type: "tool_result", tool_use_id: b.tool_use_id.slice(0, 100), content: typeof b.content === "string" ? b.content.slice(0, 12000) : JSON.stringify(b.content ?? "").slice(0, 12000), ...(b.is_error ? { is_error: true } : {}) });
+    }
+    if (!clean.length) continue;
+    const prev = out[out.length - 1];
+    if (prev && prev.role === m.role) prev.content.push(...clean); // merge same-role turns
+    else out.push({ role: m.role, content: clean });
+  }
+  // Every tool_use must be answered in the very next user turn; drop unanswered calls (and orphan results)
+  for (let i = 0; i < out.length; i++) {
+    const m = out[i];
+    if (m.role !== "assistant") continue;
+    const next = out[i + 1];
+    const answered = new Set((next?.role === "user" ? next.content : []).filter((b) => b.type === "tool_result").map((b) => b.tool_use_id));
+    m.content = m.content.filter((b) => b.type !== "tool_use" || answered.has(b.id));
+  }
+  for (let i = 0; i < out.length; i++) {
+    const m = out[i];
+    if (m.role !== "user") continue;
+    const prev = out[i - 1];
+    const asked = new Set((prev?.role === "assistant" ? prev.content : []).filter((b) => b.type === "tool_use").map((b) => b.id));
+    m.content = m.content.filter((b) => b.type !== "tool_result" || asked.has(b.tool_use_id));
+  }
+  let list = out.filter((m) => m.content.length);
+  // Re-merge in case filtering left two turns from the same side next to each other
+  list = list.reduce<Msg[]>((acc, m) => { const p = acc[acc.length - 1]; if (p && p.role === m.role) p.content.push(...m.content); else acc.push(m); return acc; }, []);
+  // Shorten tool results except in the last few turns
+  list.forEach((m, i) => { if (i < list.length - 4) for (const b of m.content) if (b.type === "tool_result" && b.content.length > 1500) b.content = b.content.slice(0, 1500) + " …(shortened)"; });
+  // Size limits: drop from the front, then make sure it starts with a plain user message
+  const size = () => JSON.stringify(list).length;
+  while (list.length > maxMessages || (list.length > 1 && size() > maxChars)) list.shift();
+  while (list.length && (list[0].role !== "user" || list[0].content.some((b) => b.type === "tool_result"))) list.shift();
+  return list;
+}
+
+// ---------------------------------------------------------------------------------------------
+// Automations: when each job is due, and the study nudges students get
+// ---------------------------------------------------------------------------------------------
+export type AutomationKind = "weekly_digest" | "at_risk_alert" | "inactive_nudge" | "exam_countdown" | "new_signup_alert";
+
+export function localParts(at: number, tz: string): { ymd: string; weekday: number; hour: number } {
+  let zone = tz;
+  try { new Intl.DateTimeFormat("en-US", { timeZone: zone }); } catch { zone = "America/Chicago"; }
+  const parts = Object.fromEntries(new Intl.DateTimeFormat("en-US", { timeZone: zone, year: "numeric", month: "2-digit", day: "2-digit", hour: "2-digit", hourCycle: "h23", weekday: "short" })
+    .formatToParts(new Date(at)).map((p) => [p.type, p.value]));
+  const weekday = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"].indexOf(parts.weekday);
+  return { ymd: `${parts.year}-${parts.month}-${parts.day}`, weekday, hour: Number(parts.hour) % 24 };
+}
+
+/** Whether an automation should run now: weekly and daily jobs once per local day after their hour; signup alerts hourly. */
+export function isDue(kind: AutomationKind, config: { weekday?: number; hour?: number; tz?: string }, lastRunAt: string | null, now = Date.now()): boolean {
+  const tz = config.tz || "America/Chicago";
+  const last = lastRunAt ? Date.parse(lastRunAt) : 0;
+  if (kind === "new_signup_alert") return !last || now - last >= 55 * 60_000;
+  const here = localParts(now, tz);
+  const hour = Number.isFinite(Number(config.hour)) ? Number(config.hour) : 8;
+  if (here.hour < hour) return false;
+  if (kind === "weekly_digest" && here.weekday !== (Number.isFinite(Number(config.weekday)) ? Number(config.weekday) : 1)) return false;
+  return !last || localParts(last, tz).ymd !== here.ymd;
+}
+
+/** The exam countdown message for a student, or null when today isn't a countdown day. */
+export function countdownNote(days: number | null, weakest?: string): { title: string; body: string; link: string } | null {
+  switch (days) {
+    case 14: return { title: "Two weeks to your exam", body: "Take a full-length mock exam this week to see where you stand. Your missed questions go straight into Smart Review.", link: "/learn/#exam" };
+    case 7: return { title: "One week to go", body: weakest ? `Spend 20 minutes a day on ${weakest}, your toughest topic right now, then take one more mock exam.` : "Spend 20 minutes a day on your weakest topic, then take one more mock exam.", link: "/learn/#review" };
+    case 3: return { title: "3 days out", body: "Tab your code books where the tables are, and clear your Smart Review list. Know where answers live, not just the answers.", link: "/learn/#review" };
+    case 1: return { title: "Exam tomorrow. You've got this.", body: "Light review only. Sleep well, bring your ID and your allowed books, and read every answer choice before you pick.", link: "/learn/" };
+    default: return null;
+  }
+}
+
+/** A friendly nudge for a student who's gone quiet. */
+export function nudgeNote(s: { name: string; days_to_exam: number | null; weakest: { topic: string }[]; days_inactive: number | null }): { title: string; body: string; link: string } {
+  const first = s.name.split(/\s+/)[0] || "there";
+  const topic = s.weakest[0]?.topic;
+  const exam = s.days_to_exam !== null && s.days_to_exam >= 0 ? `Your exam is in ${s.days_to_exam} day${s.days_to_exam === 1 ? "" : "s"}. ` : "";
+  return {
+    title: s.days_to_exam !== null && s.days_to_exam >= 0 && s.days_to_exam <= 30 ? `${first}, ${s.days_to_exam} days to go: 10 minutes today?` : `${first}, pick up where you left off`,
+    body: `${exam}A quick 10-question Smart Review${topic ? ` on ${topic}` : ""} keeps it fresh.`,
+    link: "/learn/#review"
+  };
+}

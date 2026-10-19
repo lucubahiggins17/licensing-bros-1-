@@ -6,7 +6,7 @@ Usage (from the repo root, after `NEXT_PUBLIC_SUPABASE_URL=https://example.supab
 import json, os, sys, time, threading, http.server, socketserver, functools, traceback, argparse
 from playwright.sync_api import sync_playwright
 sys.path.insert(0, os.path.dirname(__file__))
-from fakebackend import FakeBackend, ADMIN_ID, PAID_ID, FREE_ID, C_FREE, C_PAID, L_FREE1, L_PAID1, L_PREV, LIVE_NOW, LIVE_SOON, POST1, DECK1
+from fakebackend import FakeBackend, ADMIN_ID, PAID_ID, FREE_ID, TEACH_ID, C_FREE, C_PAID, L_FREE1, L_PAID1, L_PREV, LIVE_NOW, LIVE_SOON, POST1, DECK1
 
 ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", ".."))
 OUT = os.path.join(ROOT, "out")
@@ -578,6 +578,179 @@ def ai_not_set_up(browser):
     page.route(f"{SUPA}/auth/v1/settings", lambda r: r.abort())
     ask(page)
     check("no internet still says offline", page.get_by_text("You're offline").first.count() > 0)
+    ctx.close()
+
+@scenario
+def knowledge_library(browser):
+    fake = FakeBackend(user_id=ADMIN_ID)
+    ctx, page, errors = new_page(browser, fake)
+    goto(page, "/admin/#knowledge")
+    page.wait_for_timeout(1200)
+    shot(page, "knowledge-library")
+    check("Knowledge section opens from the admin sidebar", page.get_by_role("heading", name="Knowledge library").count() > 0 or page.get_by_text("What the AI knows").first.count() > 0)
+    check("built-in verified facts are counted by trade", page.get_by_text("2,140").first.count() > 0 and page.get_by_text("Built-in verified facts").first.count() > 0)
+    check("existing documents are listed", page.get_by_text("Tennessee BC bulletin").first.count() > 0)
+    # Paste text
+    page.get_by_role("button", name="Paste text").click()
+    page.fill("textarea", "# Retainage\n\nTennessee caps retainage at 5 percent of the contract price on qualifying private projects, held in a separate escrow account.\n\n" * 3)
+    page.get_by_label("Title").fill("My retainage notes")
+    page.get_by_role("button", name="Add to the AI’s knowledge").click()
+    page.wait_for_timeout(1800)
+    check("pasted notes are added and indexed for meaning search", ("library", "add_text") in fake.calls and ("library", "embed") in fake.calls, str([c for c in fake.calls if c[0] == "library"]))
+    check("the new document shows in the list", page.get_by_text("My retainage notes").first.count() > 0)
+    # Upload a real PDF: the text is read in the browser and sent as text
+    page.get_by_role("button", name="Upload a file").click()
+    page.set_input_files("input[type=file]", os.path.join(os.path.dirname(__file__), "sample-notice.pdf"))
+    title_val = page.get_by_label("Title").input_value()
+    check("choosing a file fills in the title", title_val == "sample notice", title_val)
+    page.get_by_role("button", name="Add to the AI’s knowledge").click()
+    page.wait_for_timeout(4000)
+    sent = getattr(fake, "last_library_text", "")
+    shot(page, "knowledge-pdf")
+    check("PDF text is read in the browser (heading and sentences kept)", "Notice of Nonpayment" in sent and "within 90 days" in sent, sent[:200])
+    # Web page
+    page.get_by_role("button", name="Web page").click()
+    page.fill("input[type=url]", "https://www.tn.gov/commerce/regboards/contractors.html")
+    page.get_by_role("button", name="Add to the AI’s knowledge").click()
+    page.wait_for_timeout(1500)
+    check("a web page can be added by link", ("library", "add_url") in fake.calls)
+    # Search tester
+    page.get_by_placeholder("How long do I have to file a lien in Tennessee?").fill("lien deadline tennessee")
+    page.get_by_role("button", name="Search your library").click()
+    page.wait_for_timeout(800)
+    check("search tester shows the passage and its citation", page.get_by_text("Tenn. Code Ann. 66-11-112").first.count() > 0)
+    check("knowledge page has no sideways scroll", no_overflow(page))
+    check("knowledge page ran without errors", not errors, "; ".join(errors[:3]))
+    ctx.close()
+    # Phone layout
+    ctx, page, errors = new_page(browser, FakeBackend(user_id=ADMIN_ID), width=390, height=844, mobile=True)
+    goto(page, "/admin/#knowledge")
+    page.wait_for_timeout(1000)
+    shot(page, "knowledge-phone")
+    check("knowledge page fits a phone", no_overflow(page))
+    ctx.close()
+
+@scenario
+def command_center(browser):
+    fake = FakeBackend(user_id=ADMIN_ID)
+    ctx, page, errors = new_page(browser, fake)
+    goto(page, "/admin/#assistant")
+    page.wait_for_timeout(900)
+    shot(page, "command-empty")
+    check("command center opens with suggestions", page.get_by_text("Bro").first.count() > 0 and page.get_by_role("button", name="Who's at risk of failing their exam this month?").count() > 0)
+    page.get_by_role("button", name="Who's at risk of failing their exam this month?").click()
+    page.wait_for_timeout(1500)
+    shot(page, "command-risk")
+    check("lookups show as progress chips", page.get_by_text("Looking up students").first.count() > 0)
+    check("student results show as a card with names", page.get_by_text("Bo Behind").first.count() > 0 and page.get_by_text("cy@x.com").first.count() > 0)
+    check("reply streams in with formatting", page.locator(".msg.ai b, .msg.ai strong", has_text="Bo Behind").count() > 0)
+    sent = fake.assistant_bodies[-1]
+    check("sends the browser's time zone", isinstance(sent.get("tz"), str) and "/" in sent.get("tz", ""), str(sent.get("tz")))
+    # Follow-up carries the conversation
+    page.fill("#cmd-input", "Schedule a free lien law Q&A next Tuesday at 7 PM")
+    page.locator("#cmd-input").press("Enter")
+    page.wait_for_timeout(1500)
+    check("follow-up sends the conversation so far", len(fake.assistant_bodies[-1].get("history") or []) >= 2)
+    check("actions wait for confirmation", page.get_by_text("Needs your OK").first.count() > 0 and page.get_by_role("button", name="Confirm").count() > 0)
+    page.get_by_role("button", name="Confirm").first.click()
+    page.wait_for_timeout(1200)
+    shot(page, "command-confirmed")
+    check("confirming runs it and shows the result", ("assistant", "confirm") in fake.calls and page.get_by_text("Studio: /live/studio/").first.count() > 0)
+    check("the action card is marked done", page.get_by_text("Done", exact=True).first.count() > 0)
+    # Next message tells the AI what happened
+    page.fill("#cmd-input", "Now build a 25-question Tennessee lien law test")
+    page.locator("#cmd-input").press("Enter")
+    page.wait_for_timeout(1500)
+    check("the next message tells the AI the action was confirmed", "[Update: Confirmed and done" in fake.assistant_bodies[-1].get("message", ""), fake.assistant_bodies[-1].get("message", "")[:120])
+    check("drafts show a link to review them", page.get_by_role("link", name="Review in AI builder").count() > 0)
+    # Cancel path
+    page.fill("#cmd-input", "schedule another one")
+    page.locator("#cmd-input").press("Enter")
+    page.wait_for_timeout(1300)
+    page.get_by_role("button", name="Cancel").last.click()
+    page.wait_for_timeout(900)
+    check("cancelling sends nothing and says so", ("assistant", "cancel") in fake.calls and page.get_by_text("Nothing was sent or changed").first.count() > 0)
+    # Errors are explained
+    page.fill("#cmd-input", "make it fail")
+    page.locator("#cmd-input").press("Enter")
+    page.wait_for_timeout(1000)
+    check("errors are explained in plain words", page.get_by_text("The AI is busy right now").first.count() > 0)
+    # Survives a reload in the same tab, and New chat clears it
+    goto(page, "/admin/#assistant")
+    page.wait_for_timeout(900)
+    check("the conversation survives a reload", page.get_by_text("Bo Behind").first.count() > 0)
+    page.get_by_role("button", name="New chat").click()
+    page.wait_for_timeout(300)
+    check("New chat starts fresh", page.get_by_text("Bo Behind").count() == 0)
+    check("command center has no sideways scroll", no_overflow(page))
+    check("command center ran without errors", not errors, "; ".join(errors[:3]))
+    ctx.close()
+    # Phone
+    ctx, page, errors = new_page(browser, FakeBackend(user_id=ADMIN_ID), width=390, height=844, mobile=True)
+    goto(page, "/admin/#assistant")
+    page.wait_for_timeout(800)
+    page.get_by_role("button", name="How is the site doing this week?").click()
+    page.wait_for_timeout(1200)
+    shot(page, "command-phone")
+    check("command center works on a phone", page.get_by_text("128").first.count() > 0 and no_overflow(page))
+    ctx.close()
+
+@scenario
+def automations_page(browser):
+    fake = FakeBackend(user_id=ADMIN_ID)
+    ctx, page, errors = new_page(browser, fake)
+    goto(page, "/admin/#automations")
+    page.wait_for_timeout(1000)
+    shot(page, "automations")
+    check("automations section lists the five jobs", all(page.get_by_text(t, exact=True).count() > 0 for t in ["Weekly team digest", "At-risk alerts", "Study nudges", "Exam countdown", "New signup alerts"]))
+    check("opening the admin area runs whatever is due", ("automations", "run_due") in fake.calls)
+    check("shows the last run and result", page.get_by_text("email isn't set up", exact=False).first.count() > 0)
+    page.get_by_role("switch", name="Off").first.click()
+    page.wait_for_timeout(500)
+    row = next(r for r in fake.db["automations"] if r["kind"] == "new_signup_alert")
+    check("switching one on saves it", row["enabled"] is True)
+    nudge = page.locator("section, div").filter(has_text="Study nudges").last
+    sel = page.get_by_label("Nudge after")
+    sel.select_option("7")
+    page.wait_for_timeout(500)
+    check("changing an option saves it", next(r for r in fake.db["automations"] if r["kind"] == "inactive_nudge")["config"].get("days") == 7)
+    page.get_by_role("button", name="Run now").nth(2).click()
+    page.wait_for_timeout(900)
+    check("Run now runs the job and shows the result", ("automations", "run_now") in fake.calls and page.get_by_text("Study nudges: 3 students.").first.count() > 0)
+    check("automations page has no sideways scroll", no_overflow(page))
+    check("automations page ran without errors", not errors, "; ".join(errors[:3]))
+    ctx.close()
+
+@scenario
+def instructor_tools(browser):
+    fake = FakeBackend(user_id=TEACH_ID)
+    ctx, page, errors = new_page(browser, fake)
+    goto(page, "/")
+    page.wait_for_timeout(600)
+    check("instructors get an Instructor link in the header", page.get_by_role("link", name="INSTRUCTOR").count() > 0)
+    goto(page, "/admin/")
+    page.wait_for_timeout(1000)
+    shot(page, "instructor-tools")
+    check("instructors land in Instructor tools on the command center", page.get_by_text("Instructor tools").first.count() > 0 or page.get_by_text("Teaching tools").first.count() > 0)
+    side = page.locator("nav[aria-label='Admin sections']")
+    for name in ["Command center", "Live classes", "AI builder", "Knowledge", "Announcements"]:
+        check(f"instructors see {name}", side.get_by_text(name, exact=True).count() > 0)
+    for name in ["Dashboard", "Courses", "Students", "Settings", "Automations"]:
+        check(f"instructors don't see {name}", side.get_by_text(name, exact=True).count() == 0)
+    goto(page, "/admin/#settings")
+    page.wait_for_timeout(700)
+    check("typing an owner-only address shows the command center instead", page.get_by_text("Admin code", exact=False).count() == 0 and page.get_by_role("button", name="Who's at risk of failing their exam this month?").count() > 0)
+    check("instructor suggestions skip owner tasks", page.get_by_role("button", name="How is the site doing this week?").count() == 0)
+    goto(page, "/admin/#knowledge")
+    page.wait_for_timeout(900)
+    check("instructors can open the knowledge library", page.get_by_text("Tennessee BC bulletin").first.count() > 0)
+    check("instructor pages ran without errors", not errors, "; ".join(errors[:3]))
+    ctx.close()
+    # Students still can't get in
+    ctx, page, errors = new_page(browser, FakeBackend(user_id=FREE_ID))
+    goto(page, "/admin/")
+    page.wait_for_timeout(900)
+    check("students still see the admin code gate", page.get_by_text("Admin", exact=False).first.count() > 0 and page.get_by_role("link", name="Command center").count() == 0)
     ctx.close()
 
 FAKE_TTS = """

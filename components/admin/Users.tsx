@@ -145,18 +145,21 @@ function UserPanel({ user, onChanged }: { user: AdminUser; onChanged: () => void
   const [grant, setGrant] = useState("");
   const [granting, setGranting] = useState(false);
   const [isAdmin, setIsAdmin] = useState(user.is_admin);
+  const [isInstructor, setIsInstructor] = useState(false);
   const [dev, setDev] = useState({ device: user.device, city: user.device_city, last_seen: user.last_seen, home: place(user.home_city, user.home_region) });
 
   const load = useCallback(async () => {
     setErr("");
     const sb = supabase();
     try {
-      const [e, c, p] = await Promise.all([
+      const [e, c, p, r] = await Promise.all([
         q(sb.from("enrollments").select("course_id,source,created_at,courses(title)").eq("user_id", user.id).order("created_at", { ascending: false })),
         q(sb.from("courses").select("id,title,published").order("title", { ascending: true })),
-        q(sb.from("progress").select("data").eq("user_id", user.id).maybeSingle())
+        q(sb.from("progress").select("data").eq("user_id", user.id).maybeSingle()),
+        sb.from("user_roles").select("role").eq("user_id", user.id).maybeSingle().then((x) => x.data)
       ]);
       if (!mounted.current) return;
+      setIsInstructor((r as any)?.role === "instructor");
       setEnr(((e as any[]) || []).map((r) => {
         const co = Array.isArray(r.courses) ? r.courses[0] : r.courses;
         return { course_id: r.course_id, source: r.source, created_at: r.created_at, title: co?.title || "Deleted course" };
@@ -201,6 +204,7 @@ function UserPanel({ user, onChanged }: { user: AdminUser; onChanged: () => void
           <div className={s.wrapText}><b>{user.email}</b></div>
           <div className="row" style={{ gap: 4, marginTop: 4 }}>
             {isAdmin && <span className="badge ai">Admin</span>}
+            {isInstructor && <span className="badge ai">Instructor</span>}
             {user.paid ? <span className="badge paid">Paid access</span> : <span className="badge free">Free account</span>}
             <span className="badge">Joined {fmtDate(user.created_at)}</span>
           </div>
@@ -320,6 +324,30 @@ function UserPanel({ user, onChanged }: { user: AdminUser; onChanged: () => void
           </div>
         )}
       </section>
+
+      {/* Instructor */}
+      {!isAdmin && (
+        <section className={s.panel}>
+          <h3 className={s.panelTitle}><GraduationCap aria-hidden="true" />Instructor</h3>
+          {isInstructor ? (
+            <div className={s.actionRow}>
+              <div><b>This person is an instructor</b><p className="note" style={{ margin: 0 }}>They can use the AI command center, build tests and games, add to the knowledge library, host live classes, send announcements and see student progress. They can&rsquo;t change prices, settings or roles.</p></div>
+              <ConfirmButton className="btn sm danger" confirmLabel="Yes, remove" busyLabel="Removing…" message="They'll go back to a regular student account."
+                onConfirm={async () => { if (await rpc("admin_set_instructor", { p_user: user.id, p_on: false }, "Instructor access removed.")) setIsInstructor(false); }}>
+                Remove instructor
+              </ConfirmButton>
+            </div>
+          ) : (
+            <div className={s.actionRow}>
+              <div><b>Make this person an instructor</b><p className="note" style={{ margin: 0 }}>For teachers on your team: they get the teaching tools and full course access, without owner controls.</p></div>
+              <ConfirmButton className="btn sm" confirmLabel="Yes, make instructor" busyLabel="Saving…" message={`Make ${user.email} an instructor?`}
+                onConfirm={async () => { if (await rpc("admin_set_instructor", { p_user: user.id, p_on: true }, "They're an instructor now. They'll see Instructor tools in their menu.")) setIsInstructor(true); }}>
+                <GraduationCap aria-hidden="true" />Make instructor
+              </ConfirmButton>
+            </div>
+          )}
+        </section>
+      )}
     </div>
   );
 }

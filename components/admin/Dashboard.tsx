@@ -83,8 +83,9 @@ export default function Dashboard() {
       <div className={`plate ${s.quick}`}>
         <span className="label">Quick actions</span>
         <div className={s.quickGrid}>
+          <button type="button" className="btn navy" onClick={() => nav("assistant")}><Sparkles aria-hidden="true" />Ask Bro Command</button>
           <button type="button" className="btn primary" onClick={() => nav("courses", { action: "new" })}><Plus aria-hidden="true" />New course</button>
-          <button type="button" className="btn navy" onClick={() => nav("lives", { action: "new" })}><CalendarPlus aria-hidden="true" />Schedule live</button>
+          <button type="button" className="btn" onClick={() => nav("lives", { action: "new" })}><CalendarPlus aria-hidden="true" />Schedule live</button>
           <button type="button" className="btn" onClick={() => nav("tests", { action: "new" })}><Sparkles aria-hidden="true" />Build a test with AI</button>
           <button type="button" className="btn" onClick={() => nav("tests", { action: "new-deck" })}><Gamepad2 aria-hidden="true" />Build a game with AI</button>
           <Link className="btn" href={routes.status}><ShieldCheck aria-hidden="true" />Setup check</Link>

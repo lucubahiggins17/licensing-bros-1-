@@ -1,5 +1,5 @@
 // Access to a live class: LiveKit token, embed link, replay or "waiting" until it starts.
-import { adminClient, handler, HttpError, isAdmin, isUuid, json, readBody, requirePaidAccess, requireUser } from "../_shared/common.ts";
+import { adminClient, handler, HttpError, isUuid, json, readBody, requirePaidAccess, requireUser, staffRole } from "../_shared/common.ts";
 import { livekitEnv, signLiveKitToken } from "../_shared/livekit.ts";
 
 Deno.serve(handler(async (req) => {
@@ -9,14 +9,16 @@ Deno.serve(handler(async (req) => {
   const role: "host" | "viewer" = body.role === "host" ? "host" : "viewer";
   const db = adminClient();
 
-  const [{ data: live }, admin] = await Promise.all([
+  const [{ data: live }, staff] = await Promise.all([
     db.from("lives").select("*").eq("id", body.live_id).maybeSingle(),
-    isAdmin(user.id)
+    staffRole(user.id)
   ]);
+  // Admins and instructors host classes and can watch every class
+  const admin = staff !== null;
   if (!live) throw new HttpError(404, "not_found", "That live class isn't available.");
 
   if (role === "host") {
-    if (!admin) throw new HttpError(403, "forbidden", "Only the host can open the studio.");
+    if (!admin) throw new HttpError(403, "forbidden", "Only admins and instructors can open the studio.");
   } else {
     const { data: allowed, error } = await db.rpc("can_view_live", { p_live: live.id, p_user: user.id });
     if (error) throw new HttpError(500, "server_error", "Couldn't check your access. Try again.");

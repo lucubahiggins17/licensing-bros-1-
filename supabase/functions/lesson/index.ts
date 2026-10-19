@@ -1,6 +1,6 @@
 // Protected lesson content. Free courses and preview lessons need only a sign-in; paid lessons need
 // an enrollment (or admin) plus the current device session and the home-area rule.
-import { adminClient, handler, HttpError, isAdmin, isUuid, json, parseVideoUrl, readBody, requirePaidAccess, requireUser } from "../_shared/common.ts";
+import { adminClient, handler, HttpError, staffRole, isUuid, json, parseVideoUrl, readBody, requirePaidAccess, requireUser } from "../_shared/common.ts";
 
 const BUCKET = "course-media";
 const SIGNED_SECONDS = 7200;
@@ -20,7 +20,7 @@ Deno.serve(handler(async (req) => {
   if (!lesson) throw new HttpError(404, "not_found", "That lesson isn't available.");
   const [{ data: course }, admin] = await Promise.all([
     db.from("courses").select("id, title, slug, is_free, published").eq("id", lesson.course_id).maybeSingle(),
-    isAdmin(user.id)
+    staffRole(user.id).then((r) => r !== null)
   ]);
   if (!course || (!course.published && !admin)) throw new HttpError(404, "not_found", "That lesson isn't available.");
 

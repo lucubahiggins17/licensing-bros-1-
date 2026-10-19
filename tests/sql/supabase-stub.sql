@@ -6,6 +6,10 @@ grant usage on schema public to anon, authenticated, service_role;
 alter default privileges in schema public grant all on tables to anon, authenticated, service_role;
 alter default privileges in schema public grant all on functions to anon, authenticated, service_role;
 
+-- Supabase keeps extensions (like pgvector) in their own schema
+create schema if not exists extensions;
+grant usage on schema extensions to anon, authenticated, service_role;
+
 create schema auth;
 grant usage on schema auth to anon, authenticated, service_role;
 create table auth.users (

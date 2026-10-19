@@ -8,7 +8,8 @@ The contractor-licensing education platform for General Contractor, Electrical, 
 - **Free accounts** get free courses, free live classes, the community, and limited study tools (5 AI questions a day and 10-question practice exams). Buying a course unlocks all of it, plus the full study tools.
 - **Courses**: catalog with the "Find your course" state and trade finder, course pages with Stripe checkout, a lesson player (video with resume and speed, reading, quizzes, downloads, notes), and completion certificates anyone can verify at `/verify`.
 - **Live classes**: watch in the browser or app, with live chat, offers that pop up during class, polls and replays.
-- **Talk to Bro**: a voice AI tutor. Students talk, Bro answers out loud and then listens again, hands-free. Text chat and photo questions work too. Answers are built on **1,010 checked facts** (see `KNOWLEDGE_BASE.md`) and cite the code section. When a rule can differ by state (licensing, liens, bonds, code editions), Bro searches official sources for the student's state first and lists them.
+- **Talk to Bro**: a voice AI tutor. Students talk, Bro answers out loud and then listens again, hands-free. Text chat and photo questions work too. Answers are built on the **checked knowledge base** (see `KNOWLEDGE_BASE.md`) plus anything you add to the knowledge library, and cite the code section. When a rule can differ by state (licensing, liens, bonds, code editions), Bro searches official sources for the student's state first (skipping public flashcard and Q&A sites) and lists them.
+  - **Fast and exact**: quick questions and voice go to a fast model, calculations and explanations to the strongest one, and every multi-step calculation runs through an exact calculator instead of the AI's head. The tutor answers first, never guesses a number, and names the section to check when it isn't sure.
 - **Study tools**: timed mock exams (verified question bank, AI sets for each state, and sets you publish), Smart Review that brings back missed questions, games (Code Match, Speed Round, Calc Sprint) that can use the decks and tests you publish, spaced-repetition flashcards, field calculators, the **readiness score**, streaks, XP and badges.
 - **Community Q&A** with "Ask AI Bro" answers, plus a notification bell.
 
@@ -19,6 +20,10 @@ The contractor-licensing education platform for General Contractor, Electrical, 
 - All of this is enforced on the server and adjustable in **Admin → Settings**.
 
 **For you (Admin control center at `/admin`)**
+- **Bro Command (command center)**: your AI chief of staff. Ask in plain words or by voice: "Who's at risk of failing this month?", "Build a 25-question Tennessee lien law test", "Plan Thursday's live class around what students miss", "Email my instructors a summary". It looks up students, stats and topic trends, builds draft tests, game decks and class plans, and prepares announcements, emails, live classes, publishing and automation changes, which only happen after you tap **Confirm**.
+- **Knowledge library**: add PDFs (candidate bulletins, board rules, your notes), pasted text or web pages. They're split into cited passages that the tutor, the builders and Bro Command search by keyword and by meaning. Includes a "test what the AI finds" box.
+- **Automations**: a weekly team digest, at-risk alerts, study nudges for students who go quiet, exam countdown tips, and new signup alerts. Switch each on or off and pick when it runs and who hears about it.
+- **Instructors**: make a teammate an instructor (Students → open them). Instructors get Bro Command, the AI builder, the knowledge library, live classes, announcements and community moderation, without prices, settings, roles or payments.
 - **Dashboard**: students, paying students, revenue, who's online, AI use, signups chart, and the topics students miss most.
 - **Courses**: modules, lessons, video uploads or YouTube/Vimeo links, markdown lessons, and quizzes, with an AI quiz writer.
 - **Live classes**: schedule them, then go live from your browser in the **Live studio** (camera, mic, screen share). During class, push course offers with promo codes, links, polls and messages.
@@ -74,7 +79,11 @@ A free token from https://ipinfo.io raises the lookup limits. Without one, locat
    - `STRIPE_SECRET_KEY`
    - `STRIPE_WEBHOOK_SECRET`
    - `LIVEKIT_URL`, `LIVEKIT_API_KEY`, `LIVEKIT_API_SECRET`
+   - `AUTOMATION_SECRET` (any long random text; lets the hourly **Run automations** workflow start the automations)
+   - `RESEND_API_KEY` and `EMAIL_FROM` (optional; team emails from Bro Command and automations, e.g. `Licensing Bro's <team@yourdomain.com>` from a domain you verified at resend.com)
    - `IPINFO_TOKEN` (optional)
+
+   **Optional AI variables:** `ANTHROPIC_MODEL` (main model, default `claude-sonnet-5-5`), `ANTHROPIC_FAST_MODEL` (quick answers and voice, default `claude-haiku-5-5`), `ANTHROPIC_ROUTING` (`off` sends everything to the main model).
 3. Open **Actions → Build Android app → Run workflow**. It tests and deploys the backend, then builds the APK. Download it from the finished run under **Artifacts**. Push a tag (`git tag v1.0.0 && git push --tags`) to publish the APK on a Releases page.
 
 ### 7. Website (GitHub Pages)
@@ -107,7 +116,10 @@ Open `https://YOUR-SITE/status/` (or Admin → Dashboard → **Setup check**) an
 - **Build a test with AI**: Admin → AI builder → Build a test with AI. Review every question before publishing. Mark it Free to share it with free accounts.
 - **Build a game with AI**: Admin → AI builder → Build a game with AI. Pick trade, state and a topic (or leave it empty), choose how many cards, and let the AI write them. Edit or replace any card, then Publish. Students pick it under Games → Code Match and in Flashcards.
 - **Add an admin**: Admin → Settings → Admin code → Copy invite message, and send it. They sign in, open `/admin`, and enter the code. Make a new code (or switch it off) when you're done adding people. Remove admins in Students.
-- **Help a student**: Admin → Students → open them. Grant a course, sign out their device, or reset their home area if they moved.
+- **Help a student**: Admin → Students → open them. Grant a course, sign out their device, or reset their home area if they moved. Or ask Bro Command for their report and a study plan.
+- **Add an instructor**: Admin → Students → open them → Make instructor. They see **Instructor tools** in their menu.
+- **Teach the AI your material**: Admin → Knowledge → upload a PDF, paste text or add a web page. Only add material you have the right to use.
+- **Put follow-ups on autopilot**: Admin → Automations. Add the `AUTOMATION_SECRET` secret once so they run every hour.
 - **Change limits and rules**: Admin → Settings covers free/Pro limits, home radius, travel passes, and the homepage text and stats. Keep the stats true.
 
 ## Payments in the Android app
@@ -115,10 +127,10 @@ Google requires its own billing for digital goods sold inside Android apps, so t
 
 ## Tests
 `bash tests/run-all.sh` runs every suite:
-- **Database security** against real Postgres in-process: 95 checks (paid content can't be self-unlocked, admin powers and the admin code are protected, older projects upgrade in place, and so on).
-- **Backend logic**: 60 Deno tests covering location rules, device sessions, Stripe signatures, LiveKit tokens, video links and AI output checks.
+- **Database security** against real Postgres in-process (with pgvector): 145 checks (paid content can't be self-unlocked, admin powers and the admin code are protected, instructors get teaching tools but not owner controls, the knowledge library search and its privacy, command center and automations permissions, older projects upgrade in place, and so on).
+- **Backend logic**: 79 Deno tests covering location rules, device sessions, Stripe signatures, LiveKit tokens, video links, AI output checks, model routing, the exact calculator, the tutor's answer loop against a fake AI server, document splitting, student risk scoring and automation schedules.
 - **Production build.**
-- **Browser tests**: 111 checks that click through the site as a visitor, a free student, a paying student and the admin, on desktop and phone.
+- **Browser tests**: 184 checks that click through the site as a visitor, a free student, a paying student, an instructor and the admin, on desktop and phone, including voice playback, the knowledge library (with a real PDF), Bro Command and automations.
 - **GitHub Pages subfolder**: builds the site for `you.github.io/licensing-bros` and checks every file and link stays inside the subfolder (13 checks).
 - **Device sweep**: opens all 25 main screens on 8 screen sizes (small phone, phone, iPad mini, iPad Air, iPad landscape, iPad Pro landscape, laptop, 1920 desktop) and fails on sideways scrolling, content wider than the screen, or errors.
 
@@ -134,7 +146,7 @@ Google requires its own billing for digital goods sold inside Android apps, so t
 | `components/Workspace.tsx` + study components | My Learning: tutor, exams, review, games, flashcards, calculators, progress |
 | `components/shell` | Navigation, one-device and travel dialogs |
 | `supabase/schema.sql` | Database, security rules, admin tools |
-| `supabase/functions` | Backend: `tutor`, `generate`, `session`, `lesson`, `live-token`, `stripe-checkout`, `stripe-webhook` |
+| `supabase/functions` | Backend: `tutor`, `generate`, `session`, `lesson`, `live-token`, `stripe-checkout`, `stripe-webhook`, `library` (knowledge library), `assistant` (Bro Command), `automations` |
 | `supabase/functions/_shared/kb.json`, `lib/kb-questions.json` | Knowledge base and verified questions (`KNOWLEDGE_BASE.md`) |
 | `mobile/` | Android app (Capacitor) |
 | `tests/` | All automated tests |

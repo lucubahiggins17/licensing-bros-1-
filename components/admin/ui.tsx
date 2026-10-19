@@ -5,7 +5,7 @@ import { createContext, useContext, useEffect, useRef, useState } from "react";
 import { X } from "lucide-react";
 import s from "./admin.module.css";
 
-export type SectionKey = "dashboard" | "courses" | "lives" | "tests" | "users" | "community" | "notify" | "settings";
+export type SectionKey = "dashboard" | "assistant" | "courses" | "lives" | "tests" | "knowledge" | "users" | "community" | "notify" | "automations" | "settings";
 export type Intent = { action: "new" } | { action: "new-deck" } | { action: "edit"; id: string } | null;
 export type ToastKind = "ok" | "bad" | "info";
 
@@ -18,6 +18,8 @@ type AdminCtx = {
   guardLeave: (go: () => void) => void;
   /** Switch admin section (updates the URL hash). */
   nav: (section: SectionKey, intent?: Intent) => void;
+  /** Admins see everything; instructors get the teaching sections. */
+  role: "admin" | "instructor";
 };
 
 export const AdminContext = createContext<AdminCtx | null>(null);

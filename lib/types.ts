@@ -23,7 +23,7 @@ export type Profile = {
 export type Limits = { ai_daily: number; exam_max_questions: number; ai_exams: boolean; practice_sets: boolean };
 
 /** Result of the my_account() RPC */
-export type Account = { is_admin: boolean; paid: boolean; enrolled: string[]; limits: Limits };
+export type Account = { is_admin: boolean; is_staff?: boolean; role?: "admin" | "instructor" | "student"; paid: boolean; enrolled: string[]; limits: Limits };
 
 export type Course = {
   id: string;

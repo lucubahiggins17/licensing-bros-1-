@@ -52,7 +52,7 @@ const qt = qs.map((q) => norm(q.q + " " + q.c[q.a]));
 let addedQ = 0;
 round.questions.forEach((q, i) => {
   if (dropQ.has(i)) return;
-  const ok = ["gc", "law"].includes(q.t) && Array.isArray(q.c) && q.c.length === 4 && new Set(q.c.map((x) => String(x).trim().toLowerCase())).size === 4 && Number.isInteger(q.a) && q.a >= 0 && q.a <= 3 && q.ref && q.why;
+  const ok = ["gc", "law", "elec", "plumb", "hvac"].includes(q.t) && Array.isArray(q.c) && q.c.length === 4 && new Set(q.c.map((x) => String(x).trim().toLowerCase())).size === 4 && Number.isInteger(q.a) && q.a >= 0 && q.a <= 3 && q.ref && q.why;
   if (!ok) return;
   const t = norm(q.q + " " + q.c[q.a]);
   if (qt.some((x) => jac(x, t) > 0.75)) return;

@@ -12,7 +12,7 @@ import {
   formatSources,
   handler,
   HttpError,
-  isAdmin,
+  staffRole,
   MODEL,
   needsStateCheck,
   planLimits,
@@ -48,7 +48,8 @@ Deno.serve(handler(async (req) => {
   if (!turns.length || turns[turns.length - 1].role !== "user") throw new HttpError(400, "bad_request", "Ask a question first.");
 
   // Signed in on the current device (location is not checked for the tutor); checks run side by side
-  const [, admin, limits] = await Promise.all([requireActiveSession(req, user.id), isAdmin(user.id), planLimits(user.id)]);
+  const [, role, limits] = await Promise.all([requireActiveSession(req, user.id), staffRole(user.id), planLimits(user.id)]);
+  const admin = role !== null; // staff questions don't count against a daily limit
   const client = anthropic(); // 503 before counting usage when the AI isn't configured
   await useAiCredit(user.id, limits, admin);
 

@@ -2,7 +2,6 @@
 // lesson quizzes, community answers, and account deletion.
 import {
   adminClient,
-  aiError,
   anthropic,
   clampInt,
   cleanContext,
@@ -12,7 +11,7 @@ import {
   ROUTING_ON,
   handler,
   HttpError,
-  isAdmin,
+  staffRole,
   isUuid,
   json,
   lessonQuizPrompt,
@@ -29,21 +28,9 @@ import {
   validateQuiz
 } from "../_shared/common.ts";
 import { formatFacts, sampleFacts, searchFacts } from "../_shared/kb.ts";
+import { askModel, buildDeck, buildTest } from "../_shared/builders.ts";
 
-async function ask(model: string, prompt: string, maxTokens: number, system?: string) {
-  try {
-    const msg = await anthropic().messages.create({
-      model,
-      max_tokens: maxTokens,
-      ...(system ? { system } : {}),
-      messages: [{ role: "user", content: prompt }]
-    });
-    // deno-lint-ignore no-explicit-any
-    return msg.content.filter((b: any) => b.type === "text").map((b: any) => b.text).join("");
-  } catch (e) {
-    throw aiError(e);
-  }
-}
+const ask = askModel;
 
 const PARTS = ["trade", "law", "mix"];
 
@@ -61,7 +48,9 @@ Deno.serve(handler(async (req) => {
     return json({ deleted: true });
   }
 
-  const [admin, limits] = await Promise.all([isAdmin(user.id), planLimits(user.id)]);
+  const [role, limits] = await Promise.all([staffRole(user.id), planLimits(user.id)]);
+  const admin = role === "admin";
+  const staff = role !== null;
 
   // Setup check for the /status page: which server keys are present (never their values). Admins only.
   if (kind === "health") {
@@ -74,6 +63,7 @@ Deno.serve(handler(async (req) => {
       stripe_webhook: has("STRIPE_WEBHOOK_SECRET"),
       livekit: has("LIVEKIT_URL") && has("LIVEKIT_API_KEY") && has("LIVEKIT_API_SECRET"),
       ipinfo: has("IPINFO_TOKEN"),
+      email: has("RESEND_API_KEY") && has("EMAIL_FROM"),
       site_url: (Deno.env.get("SITE_URL") || "").replace(/\/+$/, "") || null,
       model: MODEL(),
       fast_model: ROUTING_ON() ? FAST_MODEL() : null
@@ -102,21 +92,13 @@ Deno.serve(handler(async (req) => {
 
     // ---------------------------------------------------------------------------------------
     case "admin_test": {
-      if (!admin) throw new HttpError(403, "forbidden", "Only admins can build tests.");
-      const part = PARTS.includes(body.part) ? body.part : "mix";
-      const count = clampInt(body.count, 1, 50, 20);
-      const topic = typeof body.topic === "string" ? body.topic.trim().slice(0, 80) : "";
+      if (!staff) throw new HttpError(403, "forbidden", "Only admins and instructors can build tests.");
       anthropic();
       await useAiCredit(user.id, limits, true);
       // "All states" (state null/empty) = national material only: no state-specific facts, prompt says "any state"
-      const national = !(typeof body.state === "string" && body.state.trim());
-      const factState = national ? "__national__" : state;
-      const promptState = national ? "any U.S. state (national model codes and federal rules only; skip state-specific rules)" : state;
-      const facts = formatFacts(sampleFacts({ trade, state: factState, part, count: Math.min(80, count * 2), topic }));
-      const text = await ask(MODEL(), examPrompt(count, part, promptState, tradeName, refs, facts, topic), Math.min(16000, 600 + count * 340));
-      const questions = validateQuestions(parseJSON(text), { trade, part }).slice(0, count);
-      if (!questions.length) throw new HttpError(502, "ai_error", "The AI test came back malformed. Try again.");
-      return json({ questions });
+      const r = await buildTest({ trade: body.trade, state: body.state, part: body.part, topic: body.topic, count: clampInt(body.count, 1, 50, 20) });
+      if (!r.questions.length) throw new HttpError(502, "ai_error", "The AI test came back malformed. Try again.");
+      return json({ questions: r.questions });
     }
 
     // ---------------------------------------------------------------------------------------
@@ -185,20 +167,13 @@ Deno.serve(handler(async (req) => {
     // ---------------------------------------------------------------------------------------
     // Admin game deck builder: term/meaning pairs for Code Match and Flashcards, reviewed before publishing
     case "admin_pairs": {
-      if (!admin) throw new HttpError(403, "forbidden", "Only admins can build game decks.");
-      const count = clampInt(body.count, 1, 40, 12);
-      const topic = typeof body.topic === "string" ? body.topic.trim().slice(0, 80) : "";
-      const avoid = Array.isArray(body.avoid) ? body.avoid.slice(0, 200).map((x: unknown) => String(x).slice(0, 60)) : [];
+      if (!staff) throw new HttpError(403, "forbidden", "Only admins and instructors can build game decks.");
       anthropic();
       await useAiCredit(user.id, limits, true);
-      const national = !(typeof body.state === "string" && body.state.trim());
-      const factState = national ? "__national__" : state;
-      const promptState = national ? "any U.S. state (national model codes and federal rules only; skip state-specific rules)" : state;
-      const facts = formatFacts(sampleFacts({ trade, state: factState, part: "mix", count: Math.min(60, count * 3), topic }));
-      const text = await ask(MODEL(), pairsPrompt(count, promptState, tradeName, refs, avoid, facts, topic), Math.min(8000, 600 + count * 110));
-      const pairs = validatePairs(parseJSON(text), { max: count, avoid, kMax: 60, vMax: 220 });
-      if (!pairs.length) throw new HttpError(502, "ai_error", "The AI deck came back malformed. Try again.");
-      return json({ pairs });
+      const avoid = Array.isArray(body.avoid) ? body.avoid.slice(0, 200).map((x: unknown) => String(x).slice(0, 60)) : [];
+      const r = await buildDeck({ trade: body.trade, state: body.state, topic: body.topic, count: clampInt(body.count, 1, 40, 12), avoid });
+      if (!r.pairs.length) throw new HttpError(502, "ai_error", "The AI deck came back malformed. Try again.");
+      return json({ pairs: r.pairs });
     }
 
     // ---------------------------------------------------------------------------------------

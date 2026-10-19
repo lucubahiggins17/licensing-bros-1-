@@ -21,7 +21,7 @@ export default function LiveListPage() {
   const [courses, setCourses] = useState<Record<string, CourseLite>>({});
   const [err, setErr] = useState("");
   const [showAllReplays, setShowAllReplays] = useState(false);
-  const isAdmin = !!account?.is_admin;
+  const isAdmin = !!(account?.is_admin || account?.is_staff); // admins and instructors host classes
 
   const load = useCallback(async () => {
     setErr("");

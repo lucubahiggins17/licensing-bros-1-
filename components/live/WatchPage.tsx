@@ -363,7 +363,7 @@ export default function WatchPage() {
             <div className="row">
               {live.status === "scheduled" && <button type="button" className="btn sm" onClick={addToCalendar}><CalendarPlus aria-hidden="true" /> Add to calendar</button>}
               {course && <Link className="btn sm" href={routes.course(course.id)}><BookOpen aria-hidden="true" /> {course.title}</Link>}
-              {account?.is_admin && <Link className="btn sm navy" href={routes.studio(live.id)}><Settings2 aria-hidden="true" /> Open studio</Link>}
+              {(account?.is_admin || account?.is_staff) && <Link className="btn sm navy" href={routes.studio(live.id)}><Settings2 aria-hidden="true" /> Open studio</Link>}
             </div>
           </section>
         </div>

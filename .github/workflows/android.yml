@@ -66,13 +66,17 @@ jobs:
           LIVEKIT_API_KEY: ${{ secrets.LIVEKIT_API_KEY }}
           LIVEKIT_API_SECRET: ${{ secrets.LIVEKIT_API_SECRET }}
           IPINFO_TOKEN: ${{ secrets.IPINFO_TOKEN }}
+          RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
+          AUTOMATION_SECRET: ${{ secrets.AUTOMATION_SECRET }}
+          EMAIL_FROM: ${{ secrets.EMAIL_FROM || vars.EMAIL_FROM }}
           SITE_URL: ${{ secrets.SITE_URL || vars.SITE_URL }}
           ANTHROPIC_MODEL: ${{ vars.ANTHROPIC_MODEL }}
           ANTHROPIC_FAST_MODEL: ${{ vars.ANTHROPIC_FAST_MODEL }}
+          ANTHROPIC_ROUTING: ${{ vars.ANTHROPIC_ROUTING }}
           DAILY_AI_LIMIT: ${{ vars.DAILY_AI_LIMIT }}
         run: |
           args=()
-          for name in ANTHROPIC_API_KEY STRIPE_SECRET_KEY STRIPE_WEBHOOK_SECRET LIVEKIT_URL LIVEKIT_API_KEY LIVEKIT_API_SECRET IPINFO_TOKEN SITE_URL ANTHROPIC_MODEL ANTHROPIC_FAST_MODEL DAILY_AI_LIMIT; do
+          for name in ANTHROPIC_API_KEY STRIPE_SECRET_KEY STRIPE_WEBHOOK_SECRET LIVEKIT_URL LIVEKIT_API_KEY LIVEKIT_API_SECRET IPINFO_TOKEN RESEND_API_KEY EMAIL_FROM AUTOMATION_SECRET SITE_URL ANTHROPIC_MODEL ANTHROPIC_FAST_MODEL ANTHROPIC_ROUTING DAILY_AI_LIMIT; do
             value="${!name}"
             if [ -n "$value" ]; then
               args+=("$name=$value")
@@ -88,11 +92,13 @@ jobs:
       - name: Deploy functions
         if: steps.check.outputs.run == 'true'
         run: |
-          for fn in tutor generate session lesson live-token stripe-checkout; do
+          for fn in tutor generate session lesson live-token stripe-checkout library assistant; do
             supabase functions deploy "$fn" --project-ref "$PROJECT_REF"
           done
           # Stripe signs its webhook calls; they carry no Supabase sign-in
           supabase functions deploy stripe-webhook --no-verify-jwt --project-ref "$PROJECT_REF"
+          # The hourly scheduler has no sign-in; the function checks AUTOMATION_SECRET itself
+          supabase functions deploy automations --no-verify-jwt --project-ref "$PROJECT_REF"
 
   android:
     name: Build APK

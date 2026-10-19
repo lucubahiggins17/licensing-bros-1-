@@ -29,7 +29,7 @@ const writeSince = (id: string, t: number | null) => { try { t ? localStorage.se
 function hostErrorText(e: any): string {
   switch (e?.code) {
     case "not_configured": return "Live video isn't set up yet. Add LIVEKIT_URL, LIVEKIT_API_KEY and LIVEKIT_API_SECRET in Supabase (Edge Functions → Secrets), then try again.";
-    case "forbidden": return "Only admins can host a class.";
+    case "forbidden": return "Only admins and instructors can host a class.";
     case "signed_out": return "Your sign-in expired. Sign in again, then go live.";
     case "offline": return "You're offline. Check your connection and try again.";
     case "not_found": return "This class no longer exists.";
@@ -40,7 +40,7 @@ function hostErrorText(e: any): string {
 export default function StudioPage() {
   const id = useQueryParam("id");
   const { ready, user, account } = useAuth();
-  const isAdmin = !!account?.is_admin;
+  const isAdmin = !!(account?.is_admin || account?.is_staff); // admins and instructors host classes
   const { live, setLive, missing, error: rowError, reload } = useLiveRow(isAdmin ? id : null);
   const lk = useLiveRoom();
 

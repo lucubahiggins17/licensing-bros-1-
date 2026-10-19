@@ -19,7 +19,7 @@ create table if not exists public.profiles (
   created_at timestamptz not null default now()
 );
 
--- Admins are listed here. Only the service role or another admin can add one.
+-- Admins and instructors are listed here. Only the service role or an admin can add one.
 create table if not exists public.user_roles (
   user_id uuid primary key references auth.users(id) on delete cascade,
   role text not null check (role in ('admin')),
@@ -30,6 +30,23 @@ create or replace function public.is_admin(p_user uuid default auth.uid())
 returns boolean language sql stable security definer set search_path = public as $$
   select exists (select 1 from public.user_roles where user_id = p_user and role = 'admin');
 $$;
+
+-- Staff = admins and instructors. Instructors teach (knowledge library, tests and games, live classes,
+-- announcements, student progress); only admins change settings, prices, roles and payments.
+alter table public.user_roles drop constraint if exists user_roles_role_check;
+alter table public.user_roles add constraint user_roles_role_check check (role in ('admin','instructor'));
+
+create or replace function public.is_staff(p_user uuid default auth.uid())
+returns boolean language sql stable security definer set search_path = public as $$
+  select exists (select 1 from public.user_roles where user_id = p_user and role in ('admin','instructor'));
+$$;
+grant execute on function public.is_staff(uuid) to authenticated, service_role;
+
+create or replace function public.my_role()
+returns text language sql stable security definer set search_path = public as $$
+  select coalesce((select role from public.user_roles where user_id = auth.uid()), 'student');
+$$;
+grant execute on function public.my_role() to authenticated;
 
 -- Create a profile automatically for every new account
 create or replace function public.handle_new_user()
@@ -357,7 +374,7 @@ grant execute on function public.bump_ai_usage(uuid) to service_role;
 -- -------------------------------------------------------------------------------------
 create or replace function public.has_paid_plan(p_user uuid default auth.uid())
 returns boolean language sql stable security definer set search_path = public as $$
-  select public.is_admin(p_user) or exists (
+  select public.is_staff(p_user) or exists (
     select 1 from public.enrollments e join public.courses c on c.id = e.course_id
     where e.user_id = p_user and (e.source <> 'free' and not c.is_free)
   );
@@ -366,7 +383,7 @@ $$;
 create or replace function public.can_access_course(p_course uuid, p_user uuid default auth.uid())
 returns boolean language sql stable security definer set search_path = public as $$
   select p_user is not null and (
-    public.is_admin(p_user)
+    public.is_staff(p_user)
     or exists (select 1 from public.courses where id = p_course and is_free and published)
     or exists (select 1 from public.enrollments where course_id = p_course and user_id = p_user)
   );
@@ -376,7 +393,7 @@ create or replace function public.can_view_live(p_live uuid, p_user uuid default
 returns boolean language sql stable security definer set search_path = public as $$
   select p_user is not null and exists (
     select 1 from public.lives l where l.id = p_live and (
-      public.is_admin(p_user) or l.is_free
+      public.is_staff(p_user) or l.is_free
       or (l.course_id is not null and exists (select 1 from public.enrollments e where e.course_id = l.course_id and e.user_id = p_user))
       or (l.course_id is null and public.has_paid_plan(p_user))
     )
@@ -432,51 +449,51 @@ select pg_temp.pol('site_settings','settings read','create policy "settings read
 select pg_temp.pol('site_settings','settings admin','create policy "settings admin" on public.site_settings for all to authenticated using (public.is_admin()) with check (public.is_admin())');
 
 -- catalog: published courses and their outline are public; admins see and edit everything
-select pg_temp.pol('courses','courses read','create policy "courses read" on public.courses for select using (published or public.is_admin())');
+select pg_temp.pol('courses','courses read','create policy "courses read" on public.courses for select using (published or public.is_staff())');
 select pg_temp.pol('courses','courses admin','create policy "courses admin" on public.courses for all to authenticated using (public.is_admin()) with check (public.is_admin())');
-select pg_temp.pol('modules','modules read','create policy "modules read" on public.modules for select using (exists (select 1 from public.courses c where c.id = course_id and (c.published or public.is_admin())))');
+select pg_temp.pol('modules','modules read','create policy "modules read" on public.modules for select using (exists (select 1 from public.courses c where c.id = course_id and (c.published or public.is_staff())))');
 select pg_temp.pol('modules','modules admin','create policy "modules admin" on public.modules for all to authenticated using (public.is_admin()) with check (public.is_admin())');
-select pg_temp.pol('lessons','lessons read','create policy "lessons read" on public.lessons for select using (exists (select 1 from public.courses c where c.id = course_id and (c.published or public.is_admin())))');
+select pg_temp.pol('lessons','lessons read','create policy "lessons read" on public.lessons for select using (exists (select 1 from public.courses c where c.id = course_id and (c.published or public.is_staff())))');
 select pg_temp.pol('lessons','lessons admin','create policy "lessons admin" on public.lessons for all to authenticated using (public.is_admin()) with check (public.is_admin())');
 select pg_temp.pol('lesson_content','content admin','create policy "content admin" on public.lesson_content for all to authenticated using (public.is_admin()) with check (public.is_admin())');
 
-select pg_temp.pol('enrollments','enrollments read own','create policy "enrollments read own" on public.enrollments for select to authenticated using (user_id = auth.uid() or public.is_admin())');
+select pg_temp.pol('enrollments','enrollments read own','create policy "enrollments read own" on public.enrollments for select to authenticated using (user_id = auth.uid() or public.is_staff())');
 select pg_temp.pol('enrollments','enrollments admin','create policy "enrollments admin" on public.enrollments for all to authenticated using (public.is_admin()) with check (public.is_admin())');
 select pg_temp.pol('payments','payments read','create policy "payments read" on public.payments for select to authenticated using (user_id = auth.uid() or public.is_admin())');
 
 select pg_temp.pol('lesson_progress','progress own','create policy "progress own" on public.lesson_progress for all to authenticated using (user_id = auth.uid()) with check (user_id = auth.uid() and public.can_access_course(course_id))');
-select pg_temp.pol('lesson_progress','progress admin read','create policy "progress admin read" on public.lesson_progress for select to authenticated using (public.is_admin())');
+select pg_temp.pol('lesson_progress','progress admin read','create policy "progress admin read" on public.lesson_progress for select to authenticated using (public.is_staff())');
 
 select pg_temp.pol('certificates','certs read own','create policy "certs read own" on public.certificates for select to authenticated using (user_id = auth.uid() or public.is_admin())');
 
 -- lives: the schedule is public; stream links go through the live-token function
 select pg_temp.pol('lives','lives read','create policy "lives read" on public.lives for select using (true)');
-select pg_temp.pol('lives','lives admin','create policy "lives admin" on public.lives for all to authenticated using (public.is_admin()) with check (public.is_admin())');
-select pg_temp.pol('live_private','live private admin','create policy "live private admin" on public.live_private for all to authenticated using (public.is_admin()) with check (public.is_admin())');
+select pg_temp.pol('lives','lives admin','create policy "lives admin" on public.lives for all to authenticated using (public.is_staff()) with check (public.is_staff())');
+select pg_temp.pol('live_private','live private admin','create policy "live private admin" on public.live_private for all to authenticated using (public.is_staff()) with check (public.is_staff())');
 select pg_temp.pol('live_ctas','ctas read','create policy "ctas read" on public.live_ctas for select to authenticated using (public.can_view_live(live_id))');
-select pg_temp.pol('live_ctas','ctas admin','create policy "ctas admin" on public.live_ctas for all to authenticated using (public.is_admin()) with check (public.is_admin())');
+select pg_temp.pol('live_ctas','ctas admin','create policy "ctas admin" on public.live_ctas for all to authenticated using (public.is_staff()) with check (public.is_staff())');
 select pg_temp.pol('poll_votes','votes own','create policy "votes own" on public.poll_votes for insert to authenticated with check (user_id = auth.uid() and exists (select 1 from public.live_ctas c where c.id = cta_id and c.kind = ''poll'' and c.active and public.can_view_live(c.live_id)))');
-select pg_temp.pol('poll_votes','votes read','create policy "votes read" on public.poll_votes for select to authenticated using (user_id = auth.uid() or public.is_admin())');
+select pg_temp.pol('poll_votes','votes read','create policy "votes read" on public.poll_votes for select to authenticated using (user_id = auth.uid() or public.is_staff())');
 select pg_temp.pol('live_messages','chat read','create policy "chat read" on public.live_messages for select to authenticated using (public.can_view_live(live_id))');
-select pg_temp.pol('live_messages','chat write','create policy "chat write" on public.live_messages for insert to authenticated with check (user_id = auth.uid() and public.can_view_live(live_id) and (not is_host or public.is_admin()))');
-select pg_temp.pol('live_messages','chat admin','create policy "chat admin" on public.live_messages for delete to authenticated using (public.is_admin())');
+select pg_temp.pol('live_messages','chat write','create policy "chat write" on public.live_messages for insert to authenticated with check (user_id = auth.uid() and public.can_view_live(live_id) and (not is_host or public.is_staff()))');
+select pg_temp.pol('live_messages','chat admin','create policy "chat admin" on public.live_messages for delete to authenticated using (public.is_staff())');
 
 -- community: signed-in users read and post; authors and admins edit/delete
 select pg_temp.pol('community_posts','posts read','create policy "posts read" on public.community_posts for select to authenticated using (true)');
 select pg_temp.pol('community_posts','posts insert','create policy "posts insert" on public.community_posts for insert to authenticated with check (user_id = auth.uid() and not pinned and reply_count = 0 and upvotes = 0)');
-select pg_temp.pol('community_posts','posts own','create policy "posts own" on public.community_posts for delete to authenticated using (user_id = auth.uid() or public.is_admin())');
-select pg_temp.pol('community_posts','posts admin','create policy "posts admin" on public.community_posts for update to authenticated using (public.is_admin()) with check (public.is_admin())');
+select pg_temp.pol('community_posts','posts own','create policy "posts own" on public.community_posts for delete to authenticated using (user_id = auth.uid() or public.is_staff())');
+select pg_temp.pol('community_posts','posts admin','create policy "posts admin" on public.community_posts for update to authenticated using (public.is_staff()) with check (public.is_staff())');
 select pg_temp.pol('community_replies','replies read','create policy "replies read" on public.community_replies for select to authenticated using (true)');
-select pg_temp.pol('community_replies','replies insert','create policy "replies insert" on public.community_replies for insert to authenticated with check (user_id = auth.uid() and not is_ai and (not is_staff or public.is_admin()))');
-select pg_temp.pol('community_replies','replies own','create policy "replies own" on public.community_replies for delete to authenticated using (user_id = auth.uid() or public.is_admin())');
+select pg_temp.pol('community_replies','replies insert','create policy "replies insert" on public.community_replies for insert to authenticated with check (user_id = auth.uid() and not is_ai and (not is_staff or public.is_staff()))');
+select pg_temp.pol('community_replies','replies own','create policy "replies own" on public.community_replies for delete to authenticated using (user_id = auth.uid() or public.is_staff())');
 select pg_temp.pol('community_votes','cvotes own','create policy "cvotes own" on public.community_votes for all to authenticated using (user_id = auth.uid()) with check (user_id = auth.uid())');
 
 select pg_temp.pol('notifications','notes read','create policy "notes read" on public.notifications for select to authenticated using (user_id is null or user_id = auth.uid())');
-select pg_temp.pol('notifications','notes admin','create policy "notes admin" on public.notifications for all to authenticated using (public.is_admin()) with check (public.is_admin())');
+select pg_temp.pol('notifications','notes admin','create policy "notes admin" on public.notifications for all to authenticated using (public.is_staff()) with check (public.is_staff())');
 select pg_temp.pol('notification_reads','reads own','create policy "reads own" on public.notification_reads for all to authenticated using (user_id = auth.uid()) with check (user_id = auth.uid())');
 
-select pg_temp.pol('practice_sets','sets read','create policy "sets read" on public.practice_sets for select to authenticated using (public.is_admin() or (published and (is_free or public.has_paid_plan())))');
-select pg_temp.pol('practice_sets','sets admin','create policy "sets admin" on public.practice_sets for all to authenticated using (public.is_admin()) with check (public.is_admin())');
+select pg_temp.pol('practice_sets','sets read','create policy "sets read" on public.practice_sets for select to authenticated using (public.is_staff() or (published and (is_free or public.has_paid_plan())))');
+select pg_temp.pol('practice_sets','sets admin','create policy "sets admin" on public.practice_sets for all to authenticated using (public.is_staff()) with check (public.is_staff())');
 
 -- your own device/location record is readable (account page); only edge functions write it
 select pg_temp.pol('active_sessions','sessions read own','create policy "sessions read own" on public.active_sessions for select to authenticated using (user_id = auth.uid() or public.is_admin())');
@@ -485,7 +502,7 @@ select pg_temp.pol('account_locations','locations read own','create policy "loca
 select pg_temp.pol('progress','read own progress','create policy "read own progress" on public.progress for select using (auth.uid() = user_id)');
 select pg_temp.pol('progress','insert own progress','create policy "insert own progress" on public.progress for insert with check (auth.uid() = user_id)');
 select pg_temp.pol('progress','update own progress','create policy "update own progress" on public.progress for update using (auth.uid() = user_id) with check (auth.uid() = user_id)');
-select pg_temp.pol('progress','admin read progress','create policy "admin read progress" on public.progress for select to authenticated using (public.is_admin())');
+select pg_temp.pol('progress','admin read progress','create policy "admin read progress" on public.progress for select to authenticated using (public.is_staff())');
 -- ai_usage: no policies (server only)
 
 -- -------------------------------------------------------------------------------------
@@ -545,6 +562,8 @@ create or replace function public.my_account()
 returns jsonb language sql stable security definer set search_path = public as $$
   select jsonb_build_object(
     'is_admin', public.is_admin(),
+    'is_staff', public.is_staff(),
+    'role', public.my_role(),
     'paid', public.has_paid_plan(),
     'enrolled', coalesce((select jsonb_agg(course_id) from public.enrollments where user_id = auth.uid()), '[]'::jsonb),
     'limits', (select value from public.site_settings where key = case when public.has_paid_plan() then 'paid_limits' else 'free_limits' end)
@@ -796,6 +815,176 @@ begin
   begin execute 'alter publication supabase_realtime add table public.lives'; exception when others then null; end;
   begin execute 'alter publication supabase_realtime add table public.notifications'; exception when others then null; end;
 end $$;
+
+-- -------------------------------------------------------------------------------------
+-- Instructors (see is_staff near the top)
+-- -------------------------------------------------------------------------------------
+
+-- Admins make someone an instructor (or a student again). Admin accounts are changed with admin_set_admin.
+create or replace function public.admin_set_instructor(p_user uuid, p_on boolean)
+returns void language plpgsql security definer set search_path = public as $$
+begin
+  if not public.is_admin() then raise exception 'admins only'; end if;
+  if exists (select 1 from public.user_roles where user_id = p_user and role = 'admin') then
+    raise exception 'that account is an admin; remove admin access first';
+  end if;
+  if p_on then
+    insert into public.user_roles (user_id, role) values (p_user, 'instructor') on conflict (user_id) do update set role = 'instructor';
+  else
+    delete from public.user_roles where user_id = p_user and role = 'instructor';
+  end if;
+end; $$;
+grant execute on function public.admin_set_instructor(uuid, boolean) to authenticated;
+
+-- -------------------------------------------------------------------------------------
+-- Knowledge library: documents staff add (bulletins, board rules, their own notes, web pages),
+-- split into passages the AI searches by keywords and by meaning (384-number gte-small vectors,
+-- made inside the edge function). Students never read these tables directly.
+-- -------------------------------------------------------------------------------------
+create extension if not exists vector with schema extensions;
+
+create table if not exists public.kb_docs (
+  id uuid primary key default gen_random_uuid(),
+  title text not null check (char_length(title) between 1 and 200),
+  kind text not null default 'notes' check (kind in ('notes','bulletin','rules','code','lesson','web','other')),
+  trade text check (trade in ('gc','elec','plumb','hvac','law')),
+  state text,
+  source_url text,
+  status text not null default 'processing' check (status in ('processing','ready','error')),
+  error text,
+  chunk_count int not null default 0,
+  char_count int not null default 0,
+  created_by uuid references auth.users(id) on delete set null,
+  created_at timestamptz not null default now(),
+  updated_at timestamptz not null default now()
+);
+create table if not exists public.kb_chunks (
+  id uuid primary key default gen_random_uuid(),
+  doc_id uuid not null references public.kb_docs(id) on delete cascade,
+  seq int not null,
+  ref text,
+  content text not null check (char_length(content) between 1 and 4000),
+  trade text,
+  state text,
+  embedding extensions.vector(384),
+  fts tsvector generated always as (to_tsvector('english', coalesce(ref, '') || ' ' || content)) stored,
+  created_at timestamptz not null default now(),
+  unique (doc_id, seq)
+);
+create index if not exists kb_chunks_fts_idx on public.kb_chunks using gin (fts);
+create index if not exists kb_chunks_doc_idx on public.kb_chunks (doc_id, seq);
+create index if not exists kb_chunks_embedding_idx on public.kb_chunks using hnsw (embedding extensions.vector_cosine_ops);
+create index if not exists kb_docs_created_idx on public.kb_docs (created_at desc);
+
+alter table public.kb_docs enable row level security;
+alter table public.kb_chunks enable row level security;
+select pg_temp.pol('kb_docs','kb docs staff','create policy "kb docs staff" on public.kb_docs for all to authenticated using (public.is_staff()) with check (public.is_staff())');
+select pg_temp.pol('kb_chunks','kb chunks staff read','create policy "kb chunks staff read" on public.kb_chunks for select to authenticated using (public.is_staff())');
+revoke insert, update, delete on public.kb_chunks from anon, authenticated;
+
+-- Hybrid search: keyword matches (any word) and meaning matches, merged by reciprocal rank.
+-- p_embedding is the question's vector as text ('[0.1, ...]') or null for keywords only.
+create or replace function public.kb_search(p_query text, p_embedding text default null, p_trade text default null, p_state text default null, p_limit int default 6)
+returns table (id uuid, doc_id uuid, ref text, content text, score double precision)
+language sql stable security definer set search_path = public, extensions as $$
+  with q as (
+    select (select to_tsquery('simple', string_agg(quote_literal(w), ' | '))
+              from unnest(tsvector_to_array(to_tsvector('english', left(coalesce(p_query, ''), 2000)))) w) as tsq,
+           case when p_embedding is null or p_embedding = '' then null else p_embedding::extensions.vector(384) end as emb
+  ),
+  pool as (
+    select c.id, c.fts, c.embedding
+    from public.kb_chunks c join public.kb_docs d on d.id = c.doc_id
+    where d.status = 'ready'
+      and (c.trade is null or p_trade is null or c.trade = p_trade or c.trade = 'law')
+      and (c.state is null or c.state = p_state)
+  ),
+  kw as (
+    select p.id, row_number() over (order by ts_rank_cd(p.fts, q.tsq) desc) as r
+    from pool p, q where q.tsq is not null and p.fts @@ q.tsq
+    order by ts_rank_cd(p.fts, q.tsq) desc limit 40
+  ),
+  sem as (
+    select p.id, row_number() over (order by p.embedding <=> q.emb) as r
+    from pool p, q where q.emb is not null and p.embedding is not null
+    order by p.embedding <=> q.emb limit 40
+  ),
+  fused as (
+    select x.id, sum(1.0 / (60 + x.r)) as score from (select kw.id, kw.r from kw union all select sem.id, sem.r from sem) x group by x.id
+  )
+  select c.id, c.doc_id, coalesce(nullif(c.ref, ''), d.title) as ref, c.content, f.score::double precision
+  from fused f join public.kb_chunks c on c.id = f.id join public.kb_docs d on d.id = c.doc_id
+  order by f.score desc, c.seq
+  limit greatest(1, least(coalesce(p_limit, 6), 20));
+$$;
+revoke execute on function public.kb_search(text, text, text, text, int) from public, anon, authenticated;
+grant execute on function public.kb_search(text, text, text, text, int) to service_role;
+
+-- -------------------------------------------------------------------------------------
+-- AI command center (admins and instructors). Actions that reach people or change the site
+-- (announcements, emails, scheduling, publishing, roles) wait here until the person taps Confirm.
+-- Server only: no policies, so the app can't read or change these rows directly.
+-- -------------------------------------------------------------------------------------
+create table if not exists public.assistant_actions (
+  id uuid primary key default gen_random_uuid(),
+  created_by uuid not null references auth.users(id) on delete cascade,
+  kind text not null,
+  summary text not null,
+  payload jsonb not null default '{}'::jsonb,
+  status text not null default 'pending' check (status in ('pending','done','cancelled','failed')),
+  result jsonb,
+  created_at timestamptz not null default now(),
+  decided_at timestamptz
+);
+create index if not exists assistant_actions_user_idx on public.assistant_actions (created_by, created_at desc);
+alter table public.assistant_actions enable row level security;
+
+-- One row per student with what the command center needs to spot who's on track (server only)
+create or replace function public.staff_student_rows(p_limit int default 2000)
+returns table (id uuid, email text, full_name text, state text, trade text, created_at timestamptz, last_sign_in_at timestamptz,
+               role text, paid boolean, enrolled bigint, progress jsonb, progress_updated_at timestamptz)
+language sql stable security definer set search_path = public, auth as $$
+  select u.id, u.email::text, p.full_name, p.state, p.trade, u.created_at, u.last_sign_in_at,
+         coalesce(r.role, 'student'), public.has_paid_plan(u.id),
+         (select count(*) from public.enrollments e where e.user_id = u.id),
+         pr.data, pr.updated_at
+  from auth.users u
+  left join public.profiles p on p.id = u.id
+  left join public.user_roles r on r.user_id = u.id
+  left join public.progress pr on pr.user_id = u.id
+  order by u.created_at desc
+  limit greatest(1, least(coalesce(p_limit, 2000), 10000));
+$$;
+revoke execute on function public.staff_student_rows(int) from public, anon, authenticated;
+grant execute on function public.staff_student_rows(int) to service_role;
+
+-- -------------------------------------------------------------------------------------
+-- Automations: jobs that run on their own (weekly team digest, at-risk alerts, study nudges,
+-- exam countdowns, new-signup alerts). Admins switch them on and off; the automations function
+-- runs whatever is due (called every hour by GitHub Actions, and when staff open the admin area).
+-- -------------------------------------------------------------------------------------
+create table if not exists public.automations (
+  kind text primary key check (kind in ('weekly_digest','at_risk_alert','inactive_nudge','exam_countdown','new_signup_alert')),
+  enabled boolean not null default false,
+  config jsonb not null default '{}'::jsonb,
+  state jsonb not null default '{}'::jsonb,
+  last_run_at timestamptz,
+  last_result text,
+  updated_at timestamptz not null default now()
+);
+alter table public.automations enable row level security;
+select pg_temp.pol('automations','automations staff read','create policy "automations staff read" on public.automations for select to authenticated using (public.is_staff())');
+select pg_temp.pol('automations','automations admin','create policy "automations admin" on public.automations for update to authenticated using (public.is_admin()) with check (public.is_admin())');
+insert into public.automations (kind, enabled, config) values
+  ('weekly_digest',    true,  '{"weekday":1,"hour":8,"audience":"staff","email":true}'),
+  ('at_risk_alert',    true,  '{"hour":8,"audience":"instructors","email":true}'),
+  ('inactive_nudge',   true,  '{"hour":18,"days":5,"email":false}'),
+  ('exam_countdown',   true,  '{"hour":9,"email":false}'),
+  ('new_signup_alert', false, '{"audience":"admins","email":true}')
+on conflict (kind) do nothing;
+-- Admins change only the switch and the options; run times and results are written by the server
+revoke insert, update, delete on public.automations from anon, authenticated;
+grant update (enabled, config, updated_at) on public.automations to authenticated;
 
 -- -------------------------------------------------------------------------------------
 -- Storage: course videos (private) and public images

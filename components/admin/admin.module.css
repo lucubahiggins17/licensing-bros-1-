@@ -511,3 +511,7 @@
 .deckCard{border-left-color:var(--orange)}
 .deckFields{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,2fr);gap:12px}
 @media (max-width:720px){.builderHelp{grid-template-columns:1fr}.deckFields{grid-template-columns:1fr}}
+
+/* ---------- Knowledge library ---------- */
+.kbModes button{display:inline-flex;align-items:center;gap:6px}
+.kbModes button svg{width:16px;height:16px;flex:none}

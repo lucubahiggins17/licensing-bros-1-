@@ -113,6 +113,16 @@ export async function requireUser(req: Request): Promise<{ user: User; jwtPayloa
   return { user: data.user, jwtPayload: decodeJwtPayload(token), token };
 }
 
+export type StaffRole = "admin" | "instructor" | null;
+
+/** "admin", "instructor", or null for students. Instructors teach (library, tests and games, live classes,
+ * announcements, student progress); only admins change settings, prices, roles and payments. */
+export async function staffRole(userId: string): Promise<StaffRole> {
+  const { data, error } = await adminClient().from("user_roles").select("role").eq("user_id", userId).maybeSingle();
+  if (error) throw new HttpError(500, "server_error", "Couldn't check your account. Try again.");
+  return data?.role === "admin" ? "admin" : data?.role === "instructor" ? "instructor" : null;
+}
+
 export async function isAdmin(userId: string): Promise<boolean> {
   const { data, error } = await adminClient().rpc("is_admin", { p_user: userId });
   if (error) throw new HttpError(500, "server_error", "Couldn't check your account. Try again.");

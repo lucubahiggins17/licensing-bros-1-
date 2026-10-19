@@ -14,7 +14,7 @@ import {
   handler,
   hasHome,
   HttpError,
-  isAdmin,
+  staffRole,
   isUuid,
   json,
   loadLocationRecord,
@@ -43,7 +43,8 @@ Deno.serve(handler(async (req) => {
   const body = await readBody(req);
   const action = String(body.action || "");
   const db = adminClient();
-  const [settings, admin] = await Promise.all([getSettings(), isAdmin(user.id)]);
+  // Staff (admins and instructors) skip the home-area and one-device rules
+  const [settings, admin] = await Promise.all([getSettings(), staffRole(user.id).then((r) => r !== null)]);
   const rules: LocationRules = settings.location_rules;
   const now = new Date();
   const sid = isUuid(body.session_id) ? body.session_id : (isUuid(req.headers.get("x-session-id")) ? req.headers.get("x-session-id") : null);

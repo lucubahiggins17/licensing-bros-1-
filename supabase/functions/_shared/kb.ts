@@ -144,3 +144,16 @@ export function formatFacts(facts: Fact[]): string {
 }
 
 export const KB_SIZE = FACTS.length;
+
+/** What the built-in knowledge base covers: facts by trade, verified share, and states with their own facts. */
+export function kbStats() {
+  const byTrade: Record<string, number> = {};
+  const states = new Set<string>();
+  let verified = 0;
+  for (const f of FACTS) {
+    byTrade[f.trade] = (byTrade[f.trade] || 0) + 1;
+    if (f.status !== "unverified") verified++;
+    if (f.state) states.add(f.state);
+  }
+  return { facts: FACTS.length, verified, byTrade, states: [...states].sort() };
+}

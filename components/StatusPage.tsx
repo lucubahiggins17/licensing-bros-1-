@@ -151,6 +151,8 @@ export default function StatusPage() {
           fix: h.stripe && h.stripe_webhook ? undefined : "Add the Stripe secrets in GitHub and rerun Build Android app (guide Step 5)." });
         push({ id: "live", title: "Live classes", level: h.livekit ? "pass" : "warn", detail: h.livekit ? "LiveKit is connected for going live from the browser." : "LiveKit keys aren't set. Classes can still use a YouTube or StreamYard stream link.",
           fix: h.livekit ? undefined : "Add LIVEKIT_URL, LIVEKIT_API_KEY and LIVEKIT_API_SECRET in GitHub and rerun Build Android app." });
+        push({ id: "mail", title: "Email from the server", level: h.email ? "pass" : "warn", detail: h.email ? "Set up. The command center and automations can send email." : "RESEND_API_KEY and EMAIL_FROM aren't set, so the command center and automations can't send email. In-app announcements still work.",
+          fix: h.email ? undefined : "Create a Resend account (resend.com), verify your domain, then add the RESEND_API_KEY secret and EMAIL_FROM (for example Licensing Bro's <team@yourdomain.com>) in GitHub and rerun Build Android app." });
         const siteOk = !!h.site_url && h.site_url.replace(/\/+$/, "") === here.replace(/\/+$/, "");
         push({ id: "site", title: "Website address on the server", level: siteOk ? "pass" : "warn",
           detail: siteOk ? `SITE_URL matches this site (${here}).` : `SITE_URL is ${h.site_url ? `"${h.site_url}"` : "not set"}, but this site is ${here}. Payment and email links use SITE_URL.`,

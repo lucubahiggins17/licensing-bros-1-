@@ -21,7 +21,7 @@ export default function PostView({ postId, onBack }: { postId: string; onBack: (
   const { user, profile, account } = useAuth();
   const { paid } = usePlanLimits();
   const uid = user?.id;
-  const isAdmin = !!account?.is_admin;
+  const isAdmin = !!(account?.is_admin || account?.is_staff);
   const [post, setPost] = useState<CommunityPost | null | undefined>(undefined); // null = not found
   const [replies, setReplies] = useState<CommunityReply[]>([]);
   const [voted, setVoted] = useState(false);

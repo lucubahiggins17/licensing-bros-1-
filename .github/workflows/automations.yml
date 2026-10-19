@@ -1,0 +1,40 @@
+# Runs Licensing Bro's automations (weekly team digest, at-risk alerts, study nudges, exam countdown,
+# new signup alerts) every hour. Each job decides for itself whether it's due.
+# Needs: the AUTOMATION_SECRET secret (any long random text, also sent to Supabase by Build Android app)
+# and the SUPABASE_PROJECT_REF variable. Without them this run just explains what's missing.
+name: Run automations
+
+on:
+  schedule:
+    - cron: "17 * * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Run what's due
+        env:
+          AUTOMATION_SECRET: ${{ secrets.AUTOMATION_SECRET }}
+          PROJECT_REF: ${{ vars.SUPABASE_PROJECT_REF }}
+        run: |
+          if [ -z "$AUTOMATION_SECRET" ] || [ -z "$PROJECT_REF" ]; then
+            echo "::notice::Automations are skipped. Add the AUTOMATION_SECRET secret and SUPABASE_PROJECT_REF variable, then run Build Android app once so Supabase gets the secret too."
+            exit 0
+          fi
+          code=$(curl -sS -o result.json -w "%{http_code}" -X POST "https://${PROJECT_REF}.supabase.co/functions/v1/automations" \
+            -H "x-automation-key: ${AUTOMATION_SECRET}" -H "content-type: application/json" -d '{}' || echo 000)
+          echo "HTTP $code"
+          cat result.json 2>/dev/null || true
+          echo
+          if [ "$code" = "401" ]; then
+            echo "::warning::Supabase rejected the automation key. Run Build Android app so it saves the same AUTOMATION_SECRET in Supabase."
+          elif [ "$code" = "404" ]; then
+            echo "::warning::The automations function isn't deployed yet. Run Build Android app."
+          elif [ "$code" != "200" ]; then
+            echo "::warning::Automations answered with HTTP $code."
+          fi

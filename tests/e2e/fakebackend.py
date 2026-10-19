@@ -13,6 +13,7 @@ def now_iso(delta_minutes=0):
 ADMIN_ID = "00000000-0000-0000-0000-00000000000a"
 PAID_ID = "00000000-0000-0000-0000-00000000000b"
 FREE_ID = "00000000-0000-0000-0000-00000000000c"
+TEACH_ID = "00000000-0000-0000-0000-00000000000d"
 C_FREE = "10000000-0000-0000-0000-000000000001"
 C_PAID = "10000000-0000-0000-0000-000000000002"
 L_FREE1 = "20000000-0000-0000-0000-000000000001"
@@ -31,6 +32,7 @@ USERS = {
     ADMIN_ID: {"email": "owner@licensingbros.test", "name": "LuCuba Higgins", "admin": True},
     PAID_ID: {"email": "paid@licensingbros.test", "name": "Marcus Paid", "admin": False},
     FREE_ID: {"email": "free@licensingbros.test", "name": "Tasha Free", "admin": False},
+    TEACH_ID: {"email": "teach@licensingbros.test", "name": "Ivy Instructor", "admin": False, "instructor": True},
 }
 
 def seed():
@@ -47,7 +49,7 @@ def seed():
             {"id": uid, "full_name": u["name"], "avatar_url": None, "state": "Tennessee", "trade": "gc", "exam_date": (datetime.now() + timedelta(days=40)).date().isoformat(), "created_at": now_iso(-60*24*20)}
             for uid, u in USERS.items()
         ],
-        "user_roles": [{"user_id": ADMIN_ID, "role": "admin", "created_at": now_iso()}],
+        "user_roles": [{"user_id": ADMIN_ID, "role": "admin", "created_at": now_iso()}, {"user_id": TEACH_ID, "role": "instructor", "created_at": now_iso()}],
         "courses": [
             {"id": C_FREE, "slug": "osha-basics", "title": "OSHA Safety Basics for Contractors", "subtitle": "The safety rules every licensing exam tests", "description": "Fall protection, ladders, scaffolds, trenching and recordkeeping, explained with jobsite examples.", "trade": "all", "states": [], "level": "Beginner", "price_cents": 0, "is_free": True, "published": True, "cover_url": None, "est_hours": 2, "what_you_learn": ["When fall protection is required", "Trench protective systems", "OSHA 300 log rules"], "sort": 1, "created_at": now_iso(-9000), "updated_at": now_iso(-9000)},
             {"id": C_PAID, "slug": "tn-gc-master", "title": "Tennessee GC Exam Master Course", "subtitle": "Business & Law plus the Tennessee BC-A trade exam", "description": "A complete course for the Tennessee general contractor exam: NASCLA business and law, IBC/IRC code navigation, estimating math and OSHA.", "trade": "gc", "states": ["Tennessee"], "level": "Exam prep", "price_cents": 29900, "is_free": False, "published": True, "cover_url": None, "est_hours": 24, "what_you_learn": ["Tab and navigate your open-book references", "Lien law, bonds and contracts", "Estimating and markup math"], "sort": 2, "created_at": now_iso(-8000), "updated_at": now_iso(-8000)},
@@ -96,6 +98,16 @@ def seed():
             {"id": str(uuid.uuid4()), "title": "Tennessee GC Warm-up", "kind": "test", "topic": "", "pairs": [], "trade": "gc", "state": "Tennessee", "part": "mix", "questions": [{"t": "gc", "topic": "Safety (OSHA)", "q": "At what height does OSHA require fall protection on construction walking surfaces?", "c": ["4 ft", "6 ft", "8 ft", "10 ft"], "a": 1, "ref": "29 CFR 1926.501(b)(1)", "why": "Construction's trigger height is 6 feet."}], "is_free": True, "published": True, "created_by": ADMIN_ID, "created_at": now_iso(-50)},
             {"id": DECK1, "title": "Lien Law Lingo", "kind": "game", "topic": "Lien law", "trade": "gc", "state": None, "part": "mix", "questions": [], "pairs": [{"k": "Retainage", "v": "Part of each payment held back until the job is finished."}, {"k": "Lien waiver", "v": "A paper giving up lien rights for a payment."}, {"k": "Notice to owner", "v": "Early notice that a sub or supplier may file a lien."}, {"k": "Conditional waiver", "v": "Only takes effect once the payment actually clears."}, {"k": "Unconditional waiver", "v": "Takes effect when signed, paid or not."}, {"k": "Mechanic's lien", "v": "A claim on the property for unpaid work or materials."}, {"k": "Bond claim", "v": "Payment claim on public jobs, where liens aren't allowed."}], "is_free": True, "published": True, "created_by": ADMIN_ID, "created_at": now_iso(-40)},
         ],
+        "automations": [
+            {"kind": "weekly_digest", "enabled": True, "config": {"weekday": 1, "hour": 8, "audience": "staff", "email": True, "tz": "America/Chicago"}, "last_run_at": now_iso(-3000), "last_result": "Weekly digest: notified 2 in the app (email isn't set up)."},
+            {"kind": "at_risk_alert", "enabled": True, "config": {"hour": 8, "audience": "instructors", "email": True}, "last_run_at": None, "last_result": None},
+            {"kind": "inactive_nudge", "enabled": True, "config": {"hour": 18, "days": 5, "email": False}, "last_run_at": None, "last_result": None},
+            {"kind": "exam_countdown", "enabled": True, "config": {"hour": 9, "email": False}, "last_run_at": None, "last_result": None},
+            {"kind": "new_signup_alert", "enabled": False, "config": {"audience": "admins", "email": True}, "last_run_at": None, "last_result": None},
+        ],
+        "kb_docs": [
+            {"id": str(uuid.uuid4()), "title": "Tennessee BC bulletin", "kind": "bulletin", "trade": "law", "state": "Tennessee", "source_url": None, "status": "ready", "error": None, "chunk_count": 42, "char_count": 38000, "created_at": now_iso(-900)},
+        ],
         "active_sessions": [],
         "account_locations": [{"user_id": PAID_ID, "home_lat": 36.16, "home_lon": -86.78, "home_city": "Nashville", "home_region": "Tennessee", "home_country": "US", "home_set_at": now_iso(-5000), "away_lat": None, "away_lon": None, "away_city": None, "away_region": None, "away_until": None, "away_history": []}],
         "progress": [{"user_id": PAID_ID, "data": {"state": "Tennessee", "trade": "gc", "examDate": (datetime.now() + timedelta(days=40)).date().isoformat(), "stats": {"gc": {"Safety (OSHA)": {"c": 18, "a": 22}, "Contracts & liens": {"c": 6, "a": 12}, "Payroll & tax": {"c": 9, "a": 10}}}, "hist": [{"kind": "Mock exam", "detail": "78% · 39/50", "trade": "gc", "state": "Tennessee", "at": int(time.time()*1000) - 86400000}], "cards": {}, "extraPairs": [], "extraBank": [], "best": {}}, "updated_at": now_iso(-60)}],
@@ -118,6 +130,9 @@ class FakeBackend:
         if self.user_id in self.extra_admins:
             return True
         return (not self.no_admins) and self.user_id in USERS and USERS[self.user_id]["admin"]
+
+    def is_staff(self):
+        return self.is_admin() or (self.user_id in USERS and USERS[self.user_id].get("instructor", False))
 
     def has_admin(self):
         return bool(self.extra_admins) or not self.no_admins
@@ -297,7 +312,7 @@ class FakeBackend:
         return {
             "site_settings": ["key"], "enrollments": ["user_id", "course_id"], "lesson_progress": ["user_id", "lesson_id"],
             "notification_reads": ["user_id"], "poll_votes": ["cta_id", "user_id"], "community_votes": ["post_id", "user_id"],
-            "progress": ["user_id"], "lesson_content": ["lesson_id"], "live_private": ["live_id"], "user_roles": ["user_id"],
+            "progress": ["user_id"], "lesson_content": ["lesson_id"], "automations": ["kind"], "live_private": ["live_id"], "user_roles": ["user_id"],
             "account_locations": ["user_id"], "active_sessions": ["user_id"], "profiles": ["id"],
         }.get(table, ["id"])
 
@@ -306,7 +321,7 @@ class FakeBackend:
         self.calls.append(("rpc", name))
         if name == "my_account":
             lim = self.settings("paid_limits" if self.paid() else "free_limits")
-            return 200, {"is_admin": self.is_admin(), "paid": self.paid(), "enrolled": self.enrolled(), "limits": lim}
+            return 200, {"is_admin": self.is_admin(), "is_staff": self.is_staff(), "role": "admin" if self.is_admin() else "instructor" if self.is_staff() else "student", "paid": self.paid() or self.is_staff(), "enrolled": self.enrolled(), "limits": lim}
         if name == "unread_notifications":
             return 200, len([n for n in self.db["notifications"] if n["user_id"] in (None, self.user_id)])
         if name == "verify_certificate":
@@ -387,6 +402,47 @@ class FakeBackend:
 
     def fn(self, name, body):
         self.calls.append(("fn", name))
+        if name == "assistant":
+            return self.assistant(body)
+        if name == "automations":
+            if not self.is_staff():
+                return 403, {"error": "Only staff can run automations.", "code": "forbidden"}
+            self.calls.append(("automations", body.get("action")))
+            if body.get("action") == "run_now":
+                row = next(r for r in self.db["automations"] if r["kind"] == body.get("kind"))
+                row["last_run_at"] = now_iso(); row["last_result"] = "Study nudges: 3 students."
+                return 200, {"ran": ["Study nudges: 3 students."]}
+            return 200, {"ran": []}
+        if name == "library":
+            if not self.is_staff():
+                return 403, {"error": "Only admins and instructors can manage the knowledge library.", "code": "forbidden"}
+            a = body.get("action")
+            self.calls.append(("library", a))
+            if a == "stats":
+                return 200, {"builtin": {"facts": 2140, "verified": 1890, "byTrade": {"gc": 640, "law": 520, "elec": 330, "plumb": 300, "hvac": 350}, "states": ["Georgia", "Tennessee"]},
+                             "library": {"docs": len(self.db["kb_docs"]), "passages": sum(d["chunk_count"] for d in self.db["kb_docs"]), "unindexed": 0}}
+            if a in ("add_text", "add_url"):
+                text = body.get("text") or ""
+                if a == "add_text" and len(text.strip()) < 20:
+                    return 400, {"error": "Add some text (at least a sentence).", "code": "bad_request"}
+                self.last_library_text = text
+                title = body.get("title") or ("tn.gov page" if a == "add_url" else "")
+                passages = max(1, len(text) // 900 + 1) if a == "add_text" else 3
+                doc = {"id": str(uuid.uuid4()), "title": title, "kind": body.get("kind") or "notes", "trade": body.get("trade"), "state": body.get("state"),
+                       "source_url": body.get("url"), "status": "ready", "error": None, "chunk_count": passages, "char_count": len(text), "created_at": now_iso()}
+                self.db["kb_docs"].insert(0, doc)
+                self.embed_left = passages
+                out = {"doc_id": doc["id"], "passages": passages}
+                if a == "add_url":
+                    out["title"] = title
+                return 200, out
+            if a == "embed":
+                n = min(8, getattr(self, "embed_left", 0))
+                self.embed_left = getattr(self, "embed_left", 0) - n
+                return 200, {"done": n, "remaining": self.embed_left, "available": True}
+            if a == "search":
+                return 200, {"hits": [{"id": "h1", "doc_id": "d1", "ref": "Tenn. Code Ann. 66-11-112", "text": "A lien must be recorded within 90 days after the improvement is complete or abandoned.", "score": 0.03}]}
+            return 400, {"error": "Unknown action.", "code": "bad_request"}
         if name == "session":
             a = body.get("action")
             if a in ("claim", "heartbeat"):
@@ -492,6 +548,48 @@ class FakeBackend:
     def user_obj(self):
         u = USERS[self.user_id]
         return {"id": self.user_id, "aud": "authenticated", "role": "authenticated", "email": u["email"], "app_metadata": {}, "user_metadata": {"full_name": u["name"]}, "created_at": now_iso(-9000)}
+
+    def assistant(self, body):
+        """Scripted command center replies, streamed as newline-delimited JSON like the real function."""
+        if not self.is_staff():
+            return 403, {"error": "The command center is for admins and instructors.", "code": "forbidden"}
+        a = body.get("action")
+        if a in ("confirm", "cancel"):
+            self.calls.append(("assistant", a))
+            if a == "cancel":
+                return 200, {"ok": True, "status": "cancelled", "message": "Cancelled. Nothing was sent or changed."}
+            return 200, {"ok": True, "status": "done", "message": "Scheduled \"Lien Law Q&A\" for Tue, Oct 27, 7:00 PM CDT. Studio: /live/studio/?id=abc"}
+        self.assistant_bodies = getattr(self, "assistant_bodies", []) + [body]
+        msg = str(body.get("message", "")).strip().split("\n")[-1].lower()  # the person's words, after any [Update: …] lines
+        ev = []
+        if "risk" in msg:
+            ev += [{"t": "tool", "id": "t1", "name": "find_students", "label": "Looking up students", "status": "start"},
+                   {"t": "tool", "id": "t1", "name": "find_students", "label": "Looking up students", "status": "done"},
+                   {"t": "card", "card": {"kind": "students", "title": "2 at risk students", "rows": [
+                       {"name": "Bo Behind", "email": "bo@x.com", "risk": "high", "detail": "50% · 60 Qs · exam in 5d"},
+                       {"name": "Cy Stalled", "email": "cy@x.com", "risk": "medium", "detail": "83% · 60 Qs · active 20d ago"}]}},
+                   {"t": "text", "d": "Two students need help: **Bo Behind** (exam in 5 days, 50% correct) "},
+                   {"t": "text", "d": "and **Cy Stalled** (inactive 20 days). Want me to email them a study plan?"}]
+        elif "schedule" in msg:
+            ev += [{"t": "tool", "id": "t2", "name": "schedule_live_class", "label": "Preparing a live class", "status": "start"},
+                   {"t": "tool", "id": "t2", "name": "schedule_live_class", "label": "Preparing a live class", "status": "done"},
+                   {"t": "action", "action": {"id": "act-1", "kind": "schedule_live_class", "summary": "Schedule \"Lien Law Q&A\" for Tue, Oct 27, 7:00 PM CDT (free)", "details": ["Bring your lien and waiver questions.", "All trades · Free for everyone signed in"]}},
+                   {"t": "text", "d": "The class is ready. It goes on the schedule when you tap Confirm."}]
+        elif "test" in msg:
+            ev += [{"t": "tool", "id": "t3", "name": "create_practice_test", "label": "Writing a practice test", "status": "start"},
+                   {"t": "tool", "id": "t3", "name": "create_practice_test", "label": "Writing a practice test", "status": "done"},
+                   {"t": "card", "card": {"kind": "created", "title": "Draft test: Lien law practice test (Tennessee)", "detail": "25 questions · General Contractor · Tennessee · not published yet", "link": "/admin/#tests", "linkLabel": "Review in AI builder"}},
+                   {"t": "text", "d": "Done: a 25-question lien law draft. Review it, then I can publish it for you."}]
+        elif "fail" in msg:
+            ev += [{"t": "error", "message": "The AI is busy right now. Try again in a minute."}]
+        else:
+            ev += [{"t": "tool", "id": "t4", "name": "site_overview", "label": "Checking how the site is doing", "status": "start"},
+                   {"t": "tool", "id": "t4", "name": "site_overview", "label": "Checking how the site is doing", "status": "done"},
+                   {"t": "card", "card": {"kind": "stats", "title": "Site at a glance", "items": [{"label": "Students", "value": "128"}, {"label": "New this week", "value": "14"}, {"label": "At risk", "value": "6"}]}},
+                   {"t": "text", "d": "128 students, 14 new this week, 6 at risk."}]
+        history = list(body.get("history") or []) + [{"role": "user", "content": [{"type": "text", "text": body.get("message", "")}]}, {"role": "assistant", "content": [{"type": "text", "text": "ok"}]}]
+        ev.append({"t": "done", "history": history})
+        return 200, "\n".join(json.dumps(e) for e in ev) + "\n"
 
     def session_obj(self):
         return {"access_token": "test-token", "token_type": "bearer", "expires_in": 3600, "expires_at": int(time.time()) + 3600, "refresh_token": "test-refresh", "user": self.user_obj()}

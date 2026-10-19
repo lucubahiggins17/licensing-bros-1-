@@ -2,6 +2,7 @@
 // Usage: cd tests && npm install && node sql/run.mjs
 import { PGlite } from "@electric-sql/pglite";
 import { pgcrypto } from "@electric-sql/pglite/contrib/pgcrypto";
+import { vector } from "@electric-sql/pglite-pgvector";
 import fs from "node:fs";
 import path from "node:path";
 
@@ -9,7 +10,7 @@ const here = path.dirname(new URL(import.meta.url).pathname);
 const schema = fs.readFileSync(path.join(here, "../../supabase/schema.sql"), "utf8");
 const stub = fs.readFileSync(path.join(here, "supabase-stub.sql"), "utf8");
 
-const db = new PGlite({ extensions: { pgcrypto } });
+const db = new PGlite({ extensions: { pgcrypto, vector } });
 let pass = 0, fail = 0;
 const ok = (name, cond, extra = "") => { if (cond) { pass++; console.log("  ✓", name); } else { fail++; console.log("  ✗", name, extra); } };
 
@@ -263,6 +264,98 @@ console.log("\nadmin code");
   ok("first person with the code becomes the first admin", claim?.ok === true && claim.first_admin === true, JSON.stringify(claim));
   await db.query(`update public.admin_code set enabled = true`);
   ok("the claimed admin has full admin powers", !(await one(ids.admin, `select public.admin_stats()`)).error);
+}
+
+console.log("\ninstructors");
+{
+  const one = async (u, sql, params) => as(u, "authenticated", () => tryQ(sql, params));
+  const r = await db.query(`insert into auth.users (email) values ('teach@test.com') returning id`);
+  ids.teacher = r.rows[0].id;
+  ok("students can't make themselves instructors", !!(await one(ids.free, `select public.admin_set_instructor($1, true)`, [ids.free])).error);
+  ok("admins can make someone an instructor", !(await one(ids.admin, `select public.admin_set_instructor($1, true)`, [ids.teacher])).error);
+  ok("instructor role is saved", (await one(ids.teacher, `select public.my_role() r`)).rows[0]?.r === "instructor");
+  ok("instructors count as staff", (await db.query(`select public.is_staff($1) s`, [ids.teacher])).rows[0].s === true);
+  ok("instructors are not admins", (await db.query(`select public.is_admin($1) a`, [ids.teacher])).rows[0].a === false);
+  ok("students are not staff", (await db.query(`select public.is_staff($1) s`, [ids.free])).rows[0].s === false);
+  ok("students see their role as student", (await one(ids.free, `select public.my_role() r`)).rows[0]?.r === "student");
+  ok("instructors can't make other instructors", !!(await one(ids.teacher, `select public.admin_set_instructor($1, true)`, [ids.other])).error);
+  ok("an admin can't be turned into an instructor by accident", !!(await one(ids.admin, `select public.admin_set_instructor($1, true)`, [ids.admin])).error);
+  // What instructors can and can't do
+  const acct = (await one(ids.teacher, `select public.my_account() a`)).rows[0]?.a;
+  ok("account summary says instructor and staff", acct?.role === "instructor" && acct?.is_staff === true && acct?.is_admin === false, JSON.stringify(acct));
+  ok("instructors have full study access (paid plan)", acct?.paid === true);
+  ok("instructors can build practice tests", !(await one(ids.teacher, `insert into public.practice_sets (title, trade, part, questions, created_by) values ('Teacher quiz', 'gc', 'mix', '[]', $1)`, [ids.teacher])).error);
+  ok("instructors can schedule live classes", !(await one(ids.teacher, `insert into public.lives (title, is_free) values ('Teacher live', true)`)).error);
+  ok("instructors can send announcements", !(await one(ids.teacher, `insert into public.notifications (title, body) values ('Class tonight', 'See you at 7')`)).error);
+  ok("instructors can read student progress", !(await one(ids.teacher, `select * from public.progress`)).error);
+  ok("instructors can see draft courses", (await one(ids.teacher, `select slug from public.courses where slug = 'draft'`)).rows.length === 1);
+  ok("instructors can open paid lessons", (await db.query(`select public.can_access_course($1, $2) a`, [course["gc-master"], ids.teacher])).rows[0].a === true);
+  ok("instructors can't change site settings", (await one(ids.teacher, `update public.site_settings set value = '{}' where key = 'free_limits' returning key`)).rows.length === 0);
+  ok("instructors can't edit course prices", (await one(ids.teacher, `update public.courses set price_cents = 1 returning id`)).rows.length === 0);
+  ok("instructors can't see other people's payments", (await one(ids.teacher, `select * from public.payments where user_id <> $1`, [ids.teacher])).rows.length === 0);
+  ok("instructors can't hand out admin", !!(await one(ids.teacher, `select public.admin_set_admin($1, true)`, [ids.teacher])).error);
+  ok("instructors can't edit roles directly", !!(await one(ids.teacher, `update public.user_roles set role = 'admin' where user_id = $1 returning user_id`, [ids.teacher])).error || (await db.query(`select role from public.user_roles where user_id = $1`, [ids.teacher])).rows[0].role === "instructor");
+  ok("instructors can't run admin stats", !!(await one(ids.teacher, `select public.admin_stats()`)).error);
+}
+
+console.log("\nknowledge library");
+{
+  const one = async (u, sql, params) => as(u, "authenticated", () => tryQ(sql, params));
+  const vec = (hot) => "[" + Array.from({ length: 384 }, (_, i) => (i === hot ? 1 : 0)).join(",") + "]";
+  const d = await one(ids.teacher, `insert into public.kb_docs (title, kind, trade, state, status) values ('TN bulletin', 'bulletin', 'law', 'Tennessee', 'ready'), ('Grounding notes', 'notes', 'elec', null, 'ready'), ('Draft doc', 'notes', null, null, 'processing') returning id, title`);
+  ok("instructors can add library documents", d.rows.length === 3, d.error);
+  const doc = Object.fromEntries(d.rows.map((x) => [x.title, x.id]));
+  await db.query(`insert into public.kb_chunks (doc_id, seq, ref, content, trade, state, embedding) values
+    ($1, 0, 'TN Board Rule 0680-01', 'A Tennessee contractor license is required for projects of twenty-five thousand dollars or more.', 'law', 'Tennessee', $4),
+    ($2, 0, 'NEC 250.66', 'The grounding electrode conductor is sized from Table 250.66 based on the largest service-entrance conductor.', 'elec', null, $5),
+    ($2, 1, 'NEC 250.122', 'Equipment grounding conductors are sized from Table 250.122 using the rating of the overcurrent device.', 'elec', null, $6),
+    ($3, 0, 'Draft', 'Unfinished grounding electrode notes that should never show up.', null, null, $5)`,
+    [doc["TN bulletin"], doc["Grounding notes"], doc["Draft doc"], vec(1), vec(2), vec(3)]);
+  let s = await db.query(`select ref, score from public.kb_search($1, null, 'elec', 'Ohio', 5)`, ["how do I size the grounding electrode conductor?"]);
+  ok("keyword search finds the right passage first", s.rows[0]?.ref === "NEC 250.66", JSON.stringify(s.rows));
+  ok("documents still processing are never searched", !s.rows.some((x) => x.ref === "Draft"));
+  ok("other states' rules are left out", !s.rows.some((x) => x.ref === "TN Board Rule 0680-01"));
+  s = await db.query(`select ref from public.kb_search($1, null, 'elec', 'Tennessee', 5)`, ["contractor license thousand dollars"]);
+  ok("a student's own state rules are found (business & law shows for every trade)", s.rows[0]?.ref === "TN Board Rule 0680-01", JSON.stringify(s.rows));
+  s = await db.query(`select ref from public.kb_search($1, $2, 'elec', null, 5)`, ["zzqx nothing matches these words", vec(3)]);
+  ok("meaning search finds a passage with no shared words", s.rows[0]?.ref === "NEC 250.122", JSON.stringify(s.rows));
+  s = await db.query(`select ref from public.kb_search($1, $2, 'plumb', null, 5)`, ["grounding electrode conductor", vec(2)]);
+  ok("trade filter leaves out other trades' passages", s.rows.length === 0, JSON.stringify(s.rows));
+  s = await db.query(`select count(*)::int n from public.kb_search('', null, null, null, 5)`);
+  ok("an empty question returns nothing instead of failing", s.rows[0].n === 0);
+  ok("students can't run library search directly", !!(await one(ids.paid, `select * from public.kb_search('grounding', null, null, null, 5)`)).error);
+  ok("students can't read library passages", (await one(ids.paid, `select * from public.kb_chunks`)).rows.length === 0);
+  ok("students can't read library documents", (await one(ids.paid, `select * from public.kb_docs`)).rows.length === 0);
+  ok("students can't add library documents", !!(await one(ids.paid, `insert into public.kb_docs (title) values ('x')`)).error);
+  ok("staff can read passages", (await one(ids.teacher, `select * from public.kb_chunks`)).rows.length === 4);
+  ok("staff can't write passages directly (only the server indexes them)", !!(await one(ids.teacher, `insert into public.kb_chunks (doc_id, seq, content) values ($1, 9, 'x')`, [doc["TN bulletin"]])).error);
+  await one(ids.admin, `delete from public.kb_docs where id = $1`, [doc["Grounding notes"]]);
+  ok("deleting a document removes its passages", (await db.query(`select count(*)::int n from public.kb_chunks where doc_id = $1`, [doc["Grounding notes"]])).rows[0].n === 0);
+}
+
+console.log("\ncommand center");
+{
+  const one = async (u, sql, params) => as(u, "authenticated", () => tryQ(sql, params));
+  await db.query(`insert into public.assistant_actions (created_by, kind, summary, payload) values ($1, 'send_email', 'Email 3 instructors', '{"to":["a@b.com"]}')`, [ids.teacher]);
+  ok("staff can't read prepared actions directly (server only)", (await one(ids.teacher, `select * from public.assistant_actions`)).rows.length === 0);
+  ok("nobody can mark an action confirmed from the app", (await one(ids.admin, `update public.assistant_actions set status = 'done' returning id`)).rows.length === 0);
+  ok("students can't list everyone's progress", !!(await one(ids.paid, `select * from public.staff_student_rows(10)`)).error);
+  ok("instructors can't call the server-only student list either", !!(await one(ids.teacher, `select * from public.staff_student_rows(10)`)).error);
+  const rows = (await db.query(`select * from public.staff_student_rows(100)`)).rows;
+  ok("the server's student list includes roles, paid status and progress", rows.some((r) => r.role === "instructor") && rows.some((r) => r.role === "admin") && rows.some((r) => r.paid === true) && rows.every((r) => "progress" in r));
+}
+
+console.log("\nautomations");
+{
+  const one = async (u, sql, params) => as(u, "authenticated", () => tryQ(sql, params));
+  ok("five automations come set up", (await db.query(`select count(*)::int n from public.automations`)).rows[0].n === 5);
+  ok("instructors can see automations", (await one(ids.teacher, `select kind from public.automations`)).rows.length === 5);
+  ok("students can't see automations", (await one(ids.paid, `select kind from public.automations`)).rows.length === 0);
+  ok("admins can switch an automation on or off", (await one(ids.admin, `update public.automations set enabled = true where kind = 'new_signup_alert' returning kind`)).rows.length === 1);
+  ok("instructors can't switch automations", (await one(ids.teacher, `update public.automations set enabled = false where kind = 'weekly_digest' returning kind`)).rows.length === 0);
+  ok("nobody can fake a run from the app", !!(await one(ids.admin, `update public.automations set last_run_at = now() where kind = 'weekly_digest'`)).error);
+  await db.exec(schema);
+  ok("re-running schema.sql keeps admins' automation choices", (await db.query(`select enabled from public.automations where kind = 'new_signup_alert'`)).rows[0].enabled === true);
 }
 
 console.log("\nupgrading an older project");

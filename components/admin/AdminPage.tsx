@@ -1,11 +1,11 @@
 "use client";
 // Admin control center: one place for the owner to run Licensing Bro's.
-// Sections are synced to the URL hash: #dashboard #courses #lives #tests #users #community #notify #settings.
+// Sections are synced to the URL hash: #dashboard #assistant #courses #lives #tests #knowledge #users #community #notify #automations #settings.
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import Link from "next/link";
 import {
   LayoutDashboard, BookOpen, Radio, ClipboardList, Users, MessagesSquare, Megaphone, Settings,
-  Lock, KeyRound, PlugZap, TriangleAlert, CircleCheck, CircleAlert, Info, ExternalLink
+  Lock, KeyRound, PlugZap, TriangleAlert, CircleCheck, CircleAlert, Info, ExternalLink, Brain, Sparkles, Workflow
 } from "lucide-react";
 import AppShell from "@/components/shell/AppShell";
 import { useAuth, displayName } from "@/lib/auth";
@@ -15,6 +15,10 @@ import Dashboard from "./Dashboard";
 import Courses from "./Courses";
 import Lives from "./Lives";
 import Tests from "./Tests";
+import Knowledge from "./Knowledge";
+import Command from "./Command";
+import Automations from "./Automations";
+import { callFn } from "@/lib/api";
 import UsersSection from "./Users";
 import Community from "./Community";
 import Notify from "./Notify";
@@ -22,20 +26,26 @@ import SettingsSection from "./Settings";
 import { RedeemAdminCode, useHasAdmin } from "./AdminCode";
 import s from "./admin.module.css";
 
-const SECTIONS: { key: SectionKey; label: string; hint: string; Icon: any }[] = [
+// staff: instructors see it too (admins see everything)
+const SECTIONS: { key: SectionKey; label: string; hint: string; Icon: any; staff?: boolean }[] = [
   { key: "dashboard", label: "Dashboard", hint: "How it's going", Icon: LayoutDashboard },
+  { key: "assistant", label: "Command center", hint: "Your AI chief of staff", Icon: Sparkles, staff: true },
   { key: "courses", label: "Courses", hint: "Lessons & videos", Icon: BookOpen },
-  { key: "lives", label: "Live classes", hint: "Schedule & go live", Icon: Radio },
-  { key: "tests", label: "AI builder", hint: "Tests & game decks", Icon: ClipboardList },
+  { key: "lives", label: "Live classes", hint: "Schedule & go live", Icon: Radio, staff: true },
+  { key: "tests", label: "AI builder", hint: "Tests & game decks", Icon: ClipboardList, staff: true },
+  { key: "knowledge", label: "Knowledge", hint: "What the AI knows", Icon: Brain, staff: true },
   { key: "users", label: "Students", hint: "Accounts & access", Icon: Users },
-  { key: "community", label: "Community", hint: "Posts & replies", Icon: MessagesSquare },
-  { key: "notify", label: "Announcements", hint: "Send a message", Icon: Megaphone },
+  { key: "community", label: "Community", hint: "Posts & replies", Icon: MessagesSquare, staff: true },
+  { key: "notify", label: "Announcements", hint: "Send a message", Icon: Megaphone, staff: true },
+  { key: "automations", label: "Automations", hint: "Runs on its own", Icon: Workflow },
   { key: "settings", label: "Settings", hint: "Rules & admin code", Icon: Settings }
 ];
-const isSection = (h: string): h is SectionKey => SECTIONS.some((x) => x.key === h);
-const hashSection = (): SectionKey => {
+type StaffKind = "admin" | "instructor";
+const sectionsFor = (role: StaffKind) => SECTIONS.filter((x) => role === "admin" || x.staff);
+const hashSection = (role: StaffKind): SectionKey => {
+  const list = sectionsFor(role);
   const h = (typeof window === "undefined" ? "" : window.location.hash.slice(1)).split(/[?/&]/)[0];
-  return isSection(h) ? h : "dashboard";
+  return list.some((x) => x.key === h) ? (h as SectionKey) : list[0].key;
 };
 
 export default function AdminPage() {
@@ -98,6 +108,7 @@ function AdminGate() {
       </Gate>
     );
   }
+  if (!account.is_admin && account.is_staff) return <AdminConsole userId={user.id} name={displayName(profile, user)} role="instructor" />;
   if (!account.is_admin) {
     return hasAdmin === false ? (
       <Gate icon={KeyRound} title="Claim" accent="your site" wide action={<RedeemAdminCode hasAdmin={false} />}>
@@ -110,13 +121,14 @@ function AdminGate() {
       </Gate>
     );
   }
-  return <AdminConsole userId={user.id} name={displayName(profile, user)} />;
+  return <AdminConsole userId={user.id} name={displayName(profile, user)} role="admin" />;
 }
 
 type Toast = { id: number; msg: string; kind: ToastKind };
 
-function AdminConsole({ userId, name }: { userId: string; name: string }) {
-  const [section, setSection] = useState<SectionKey>("dashboard");
+function AdminConsole({ userId, name, role }: { userId: string; name: string; role: StaffKind }) {
+  const visible = useMemo(() => sectionsFor(role), [role]);
+  const [section, setSection] = useState<SectionKey>(visible[0].key);
   const [navKey, setNavKey] = useState(0);
   const [intent, setIntent] = useState<Intent>(null);
   const [toasts, setToasts] = useState<Toast[]>([]);
@@ -147,9 +159,9 @@ function AdminConsole({ userId, name }: { userId: string; name: string }) {
 
   // URL hash → section (first load, back/forward buttons, typed hashes)
   useEffect(() => {
-    setSection(hashSection());
+    setSection(hashSection(role));
     const onHash = () => {
-      const target = hashSection();
+      const target = hashSection(role);
       if (target === sectionRef.current) return;
       if (dirty.current.size) {
         history.replaceState(null, "", `#${sectionRef.current}`);
@@ -162,7 +174,7 @@ function AdminConsole({ userId, name }: { userId: string; name: string }) {
     };
     window.addEventListener("hashchange", onHash);
     return () => window.removeEventListener("hashchange", onHash);
-  }, [show]);
+  }, [show, role]);
 
   // Unsaved changes: warn when closing the tab or following a link to another page
   useEffect(() => {
@@ -182,6 +194,16 @@ function AdminConsole({ userId, name }: { userId: string; name: string }) {
     return () => { window.removeEventListener("beforeunload", beforeUnload); document.removeEventListener("click", onClick, true); };
   }, []);
 
+  // Run any automations that are due (at most every 30 minutes per browser); the hourly scheduler does it too
+  useEffect(() => {
+    try {
+      const last = Number(localStorage.getItem("lb.auto.ping") || 0);
+      if (Date.now() - last < 30 * 60_000) return;
+      localStorage.setItem("lb.auto.ping", String(Date.now()));
+    } catch { return; }
+    callFn("automations", { action: "run_due" }).catch(() => { /* not deployed yet: nothing to do */ });
+  }, []);
+
   // On phones the section list scrolls sideways: keep the current section visible
   const sideList = useRef<HTMLUListElement>(null);
   useEffect(() => {
@@ -190,18 +212,21 @@ function AdminConsole({ userId, name }: { userId: string; name: string }) {
     if (list && el && list.scrollWidth > list.clientWidth) list.scrollLeft = Math.max(0, el.offsetLeft - (list.clientWidth - el.offsetWidth) / 2);
   }, [section]);
 
-  const ctx = useMemo(() => ({ userId, toast, setDirty, guardLeave, nav }), [userId, toast, setDirty, guardLeave, nav]);
+  const ctx = useMemo(() => ({ userId, toast, setDirty, guardLeave, nav, role }), [userId, toast, setDirty, guardLeave, nav, role]);
 
   let body: React.ReactNode;
   switch (section) {
     case "courses": body = <Courses key={navKey} intent={intent} />; break;
     case "lives": body = <Lives key={navKey} intent={intent} />; break;
     case "tests": body = <Tests key={navKey} intent={intent} />; break;
+    case "knowledge": body = <Knowledge key={navKey} />; break;
+    case "assistant": body = <Command key={navKey} />; break;
+    case "automations": body = <Automations key={navKey} />; break;
     case "users": body = <UsersSection key={navKey} />; break;
     case "community": body = <Community key={navKey} />; break;
     case "notify": body = <Notify key={navKey} />; break;
     case "settings": body = <SettingsSection key={navKey} />; break;
-    default: body = <Dashboard key={navKey} />;
+    default: body = role === "admin" ? <Dashboard key={navKey} /> : <Command key={navKey} />;
   }
 
   return (
@@ -209,8 +234,8 @@ function AdminConsole({ userId, name }: { userId: string; name: string }) {
       <div className={s.band}>
         <div className={`wrap ${s.bandInner}`}>
           <div style={{ minWidth: 0 }}>
-            <div className={s.bandEyebrow}>Licensing Bro&rsquo;s · Owner tools</div>
-            <h1 className={s.bandTitle}>Admin <span>control center</span></h1>
+            <div className={s.bandEyebrow}>Licensing Bro&rsquo;s · {role === "admin" ? "Owner tools" : "Teaching tools"}</div>
+            <h1 className={s.bandTitle}>{role === "admin" ? <>Admin <span>control center</span></> : <>Instructor <span>tools</span></>}</h1>
           </div>
           <div className={s.bandMeta}>
             <span>Signed in as <b>{name}</b></span>
@@ -224,7 +249,7 @@ function AdminConsole({ userId, name }: { userId: string; name: string }) {
         <nav className={s.side} aria-label="Admin sections">
           <div className={s.sideHead}><span className="label">Sections</span></div>
           <ul className={s.sideList} ref={sideList}>
-            {SECTIONS.map(({ key, label, hint, Icon }) => (
+            {visible.map(({ key, label, hint, Icon }) => (
               <li key={key}>
                 <a href={`#${key}`} className={s.sideItem} aria-current={section === key ? "page" : undefined}
                   onClick={(e) => { e.preventDefault(); nav(key); }}>

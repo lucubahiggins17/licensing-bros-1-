@@ -186,7 +186,7 @@ export function toPlayable(raw: string | null | undefined, opts: { autoplay?: bo
 export type AccessHint = { label: string; tone: "free" | "paid" | "ok"; detail: string };
 
 export function accessHint(live: Live, course: Pick<Course, "id" | "title"> | null | undefined, account: Account | null, signedIn: boolean): AccessHint {
-  if (account?.is_admin) return { label: "Admin", tone: "ok", detail: "You can watch every class." };
+  if (account?.is_admin || account?.is_staff) return { label: account?.is_admin ? "Admin" : "Instructor", tone: "ok", detail: "You can watch every class." };
   if (live.is_free) return { label: "Free", tone: "free", detail: signedIn ? "Free class. Just show up." : "Free with a Licensing Bro's account." };
   if (live.course_id) {
     const name = course?.title || "its course";

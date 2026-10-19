@@ -60,7 +60,7 @@ export default function AppShell({ children, active, bare = false, blueprint = f
             {user ? (
               <>
                 <NotificationBell />
-                {account?.is_admin && <Link href="/admin/" className="admin-pill">ADMIN</Link>}
+                {account?.is_admin ? <Link href="/admin/" className="admin-pill">ADMIN</Link> : account?.is_staff && <Link href="/admin/" className="admin-pill">INSTRUCTOR</Link>}
                 <div className="usermenu" ref={menuRef}>
                   <button onClick={() => setMenu((m) => !m)} aria-expanded={menu} aria-haspopup="menu">
                     <span className="avatar">{profile?.avatar_url ? <img src={profile.avatar_url} alt="" /> : name.charAt(0).toUpperCase()}</span>
@@ -78,7 +78,8 @@ export default function AppShell({ children, active, bare = false, blueprint = f
                       <Link href={routes.account("devices")} role="menuitem"><MapPin size={16} />Devices &amp; home location</Link>
                       <Link href={routes.account("purchases")} role="menuitem"><CreditCard size={16} />Purchases</Link>
                       <Link href={routes.account("certificates")} role="menuitem"><Award size={16} />Certificates</Link>
-                      {account?.is_admin && <Link href="/admin/" role="menuitem"><Shield size={16} />Admin control center</Link>}
+                      {account?.is_admin ? <Link href="/admin/" role="menuitem"><Shield size={16} />Admin control center</Link>
+                        : account?.is_staff && <Link href="/admin/" role="menuitem"><Shield size={16} />Instructor tools</Link>}
                       <button role="menuitem" onClick={() => signOut()}><LogOut size={16} />Sign out</button>
                     </div>
                   )}
