@@ -1,0 +1,122 @@
+{
+ "facts": [
+  {
+   "id": "SA2",
+   "action": "fix",
+   "reason": "The board's law page (reflecting the 2024 amendments) states the pool trigger as '$5,000 or more'; the fact said 'over $5,000'. A $5,000 pool job would be wrongly treated as exempt. Use the stricter board wording.",
+   "fixed": {
+    "fact": "In Alabama, anyone who builds, supervises, repairs or renovates a swimming pool for compensation must hold a general contractor license from the Alabama Licensing Board for General Contractors when the work is $5,000 or more, a much lower threshold than the $100,000 rule for other commercial work.",
+    "note": "Board law page: https://genconbd.alabama.gov/law/ ('Swimming Pool construction of $5,000 or more'); older code text on Justia says 'exceeding $5,000': https://law.justia.com/codes/alabama/title-34/chapter-8/section-34-8-1/"
+   }
+  },
+  {
+   "id": "SA6",
+   "action": "fix",
+   "reason": "Board reciprocity page does not state a 1-year licensure minimum; it requires a license in good standing in a comparable classification held by the same qualifier. Removed the unsupported '(licensed 1 year)'.",
+   "fixed": {
+    "fact": "Alabama's general contractor board has reciprocity with Arkansas, Louisiana, Mississippi, North Carolina and Tennessee. A licensee in good standing in a comparable classification in one of those states (qualified by the same person) may have the trade exam waived on written certification from that state, but the Business and Law exam is never waived, and the application must be on file 30 days before a reciprocal license issues."
+   }
+  },
+  {
+   "id": "SA9",
+   "action": "fix",
+   "reason": "Board notice says '2027 is a CE year' and electrical contractors need 14 hours; CE is tied to designated CE years rather than every renewal. Reworded so students do not assume 14 hours every year.",
+   "fixed": {
+    "fact": "Electrical work in Alabama is licensed statewide by the Alabama Electrical Contractors Board, which issues electrical contractor licenses and journeyman electrician licenses. The board has announced that 2027 is a continuing education year in which electrical contractors must complete 14 hours of CE; check the board for the journeyman requirement and which years are CE years."
+   }
+  },
+  {
+   "id": "SA16",
+   "action": "fix",
+   "reason": "Internal contradiction: the ROC page says the SRE 'cannot be waived' and that the qualifying party must complete it, but the fact also said it is required only for those not listed as a qualifying party in the last five years. The five-year rule on the ROC page applies to waiving the trade exam, not the SRE. Removed the unsupported SRE exemption.",
+   "fixed": {
+    "fact": "Arizona applicants take the Statutes and Rules Exam (SRE), an online ROC training course plus exam delivered only through Gmetrix, which the ROC says cannot be waived, and a trade exam through PSI (online or at a test center). The qualifying party must pass the required exams with at least 70%."
+   }
+  },
+  {
+   "id": "SA51",
+   "action": "fix",
+   "reason": "Time-sensitive wording goes stale: as of October 2026 the September 30, 2026 expiration has already passed and the November 30, 2026 renewal window closes within weeks. Rewritten so it stays true after this cycle.",
+   "fixed": {
+    "fact": "Colorado Residential Wiremen, Journeyman and Master Electricians must complete 24 hours of continuing education during each 3-year license period, from board-attested providers. Licenses run on 3-year periods ending September 30 (the most recent period ended September 30, 2026, with late renewal allowed through November 30, 2026); check the board for the current deadline."
+   }
+  },
+  {
+   "id": "SA57",
+   "action": "fix",
+   "reason": "C.G.S. 29-276b thresholds are incomplete: the statute also covers a clear span of 150 feet and use-group limits (e.g., jails 150 beds, hotels 200 rooms, multifamily 100 units, parking 1,000 cars, S-1/S-2 storage 250,000 sq ft). A student could wrongly conclude a low-rise hotel or apartment job needs no Major Contractor registration.",
+   "fixed": {
+    "fact": "Connecticut has no general 'GC license' by dollar amount; instead the Department of Consumer Protection registers Major Contractors, who build, structurally alter or demolish structures at or above the thresholds in C.G.S. 29-276b (four stories, 60 feet tall, a 150-foot clear span, 150,000 sq ft of gross floor area, or occupancy of 1,000 persons, plus use-group limits such as a hotel with 200 rooms, a multifamily building with 100 units, a parking structure for 1,000 cars, or a jail with 150 beds), and subs doing structural work for them. Major Contractor registrations expire annually on June 30."
+   }
+  },
+  {
+   "id": "SA147",
+   "action": "fix",
+   "reason": "AS 08.18.101(a)(2): the liability-insurance exemption is not handyman-specific; it applies to any applicant whose projects each have an aggregate contract price of $2,500 or less. The quick-facts sheet lists the same insurance amounts for handymen.",
+   "fixed": {
+    "fact": "Alaska contractors must carry public liability and property damage insurance of at least $20,000 property damage, $50,000 for injury or death of one person, and $100,000 for injury or death of more than one person, plus workers' compensation as required by AS 23.30. The liability insurance requirement does not apply to a contractor whose work is only on projects that each total $2,500 or less, including labor and materials."
+   }
+  },
+  {
+   "id": "SA93",
+   "action": "fix",
+   "reason": "HRS 444-2(4) says 'not more than $1,500', but the Contractors License Board's own Jan 2026 FAQ tells the public the limit is $1,000 including taxes and no permit. A student acting on $1,500 could be cited by the board; the fact must state the conflict and advise the stricter figure. Note also contained an internal 'reviewer should confirm' instruction.",
+   "fixed": {
+    "fact": "Hawaii contractors are licensed by the Contractors License Board (DCCA Professional and Vocational Licensing), and a license is required to bid on or perform any residential, commercial or public construction. The statute (HRS 444-2(4)) exempts projects whose total labor and materials price is not more than $1,500, but the board's own 2026 FAQ states the limit as $1,000 including taxes. The exemption never applies when a building permit is required or when a project is split to evade the law, so treat $1,000 as the safe limit and confirm with the board.",
+    "note": "https://data.capitol.hawaii.gov/hrscurrent/Vol10_Ch0436-0474/HRS0444/HRS_0444-0002.htm ; https://cca.hawaii.gov/wp-content/uploads/2026/01/Contractor_FAQ-18.pdf"
+   }
+  },
+  {
+   "id": "SB69",
+   "action": "fix",
+   "reason": "Checked Miss. Code 85-7-407 and 85-7-409 (2025 code via Justia). The 30-day notice goes to the contractor (or the owner if there is no contractor), comes from claimants with no privity with the contractor, and applies to every project except single-family residential (so multifamily is covered too, not just 'non-residential'). Missing the notice forfeits the lien.",
+   "fixed": {
+    "fact": "On Mississippi projects other than single-family residential construction, a claimant who has no contract with the general contractor (or with the owner, if there is no contractor) must give the contractor (or owner) written pre-lien notice within 30 days after first delivering labor, services or materials, or it forfeits its lien right. On single-family residential projects, a subcontractor, supplier or design professional with no contract with the owner must give the owner a pre-lien notice at least 10 days before filing a lien, and the owner's payments to the contractor made before receiving that notice are a defense.",
+    "source": "Miss. Code 85-7-407(2), (4) and 85-7-409",
+    "note": "https://law.justia.com/codes/mississippi/title-85/chapter-7/article-21/section-85-7-407/ ; https://law.justia.com/codes/mississippi/title-85/chapter-7/article-21/section-85-7-409/"
+   }
+  },
+  {
+   "id": "SB46",
+   "action": "fix",
+   "reason": "MCL 339.2404b(2)(c)-(d): the reduced 3-hour requirement applies only to licensees with no disciplinary action (pre-2009 licensees held no more than two cycles, or anyone past two 3-year cycles). The fact dropped the no-discipline condition, so a disciplined licensee could under-complete CE.",
+   "fixed": {
+    "fact": "Michigan residential builder and M&A licenses run on a 3-year cycle. Licensees first licensed on or after January 1, 2009 must complete at least 21 hours of continuing competency each cycle, including at least 3 hours in each calendar year of their first six years of licensure and at least 3 hours on codes and laws, safety, and changes in construction and business law. Licensees with no disciplinary action who were first licensed before January 1, 2009, or who have held a license for more than two 3-year cycles, need only 3 hours per cycle (1 hour each of codes, safety, and legal issues)."
+   }
+  },
+  {
+   "id": "SB93",
+   "action": "fix",
+   "reason": "NRS 624.031(6) has two more exceptions the fact left out: work in any classification the Board has designated as significantly affecting public health, safety and welfare, and work done by a licensee or its employee. A student could rely on the $1,000 exemption for work the Board has excluded.",
+   "fixed": {
+    "fact": "Nevada exempts repair or maintenance work valued under $1,000 including labor and materials from licensing, but the exemption does not apply if a building permit is required. It also does not apply to plumbing, electrical, refrigeration, heating, or air-conditioning work, to work in any classification the Board has designated as significantly affecting public health, safety and welfare, or to work that is part of a larger project worth $500 or more (or split into contracts under $500 to evade the law)."
+   }
+  },
+  {
+   "id": "SB108",
+   "action": "fix",
+   "reason": "Vague on the key timing rule. Under RSA 447:5 a sub or supplier without a contract with the owner protects its full lien by giving the owner written notice before it performs the labor or furnishes the materials; 'must give notice' with no deadline invites a student to send it after the fact. Official RSA pages and Justia could not be loaded to confirm, so status stays unverified.",
+   "fixed": {
+    "fact": "In New Hampshire, a subcontractor or supplier without a contract with the owner should give the owner written notice that it will claim a lien before it performs the labor or furnishes the materials, and then give the owner a written account of labor and materials furnished at least every 30 days while the work continues. A sub that gives notice later generally gets less protection, so check RSA 447:5 to 447:8 for the exact rules."
+   }
+  },
+  {
+   "id": "SB147",
+   "action": "fix",
+   "reason": "N.D.C.C. 43-18-17.1 sets plumbing CE at a minimum of 2 and a maximum of 4 credit hours within a two-year period; the fact implied 2 hours per (annual) renewal.",
+   "fixed": {
+    "fact": "The North Dakota State Board of Plumbing licenses master and journeyman plumbers and registers apprentices, with qualifications set by board rule. Licenses expire December 31 of the year issued, and renewal requires plumbing continuing education of at least 2 credit hours (the board may require up to 4) within each two-year period."
+   }
+  },
+  {
+   "id": "SB124",
+   "action": "fix",
+   "reason": "Overstated: the fact said every subcontractor or supplier owed over $5,000 must send notice, but NMSA 48-2-2.1 (2025 code via Justia) also exempts subcontractors and suppliers who contracted directly with the original contractor. The notice duty falls on lower-tier claimants only.",
+   "fixed": {
+    "fact": "In New Mexico, a lien claimant owed more than $5,000 who did not contract directly with the owner or the original contractor (for example a sub-subcontractor or a supplier to a subcontractor) must send written preliminary notice to the owner or the original contractor within 60 days after first furnishing work or materials. A late notice covers only work furnished from 30 days before it was given. The rule does not apply to original contractors, to subcontractors and suppliers who contracted directly with the original contractor, or to residential property with four or fewer units.",
+    "note": "Statute text (2025 code) via Justia: https://law.justia.com/codes/new-mexico/chapter-48/article-2/section-48-2-2-1/ ; confirm in the official NMOneSource text."
+   }
+  }
+ ],
+ "questions": []
+}
