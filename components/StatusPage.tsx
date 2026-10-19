@@ -161,8 +161,15 @@ export default function StatusPage() {
         push({ id: "fn", title: "Backend functions", level: "warn", detail: `They answered with an error (${r.status}).`, fix: "Rerun the Build Android app workflow and check its Deploy functions step." });
       }
     } catch {
-      push({ id: "fn", title: "Backend functions", level: "warn", detail: user ? "Couldn't reach them." : "Couldn't tell from here. Sign in as the admin and check again.",
-        fix: "If they're missing, add SUPABASE_ACCESS_TOKEN and SUPABASE_PROJECT_REF in GitHub and run the Build Android app workflow." });
+      // Browsers can't read Supabase's "function not found" answer (it has no CORS headers), so it shows up as a network
+      // failure. If the project itself answered above, a missing deploy is the explanation.
+      if (settings) {
+        push({ id: "fn", title: "Backend functions", level: "fail", detail: "The backend functions aren't deployed, so the AI tutor, AI builders, lessons, checkout and live classes can't work yet.",
+          fix: "In GitHub, add the SUPABASE_ACCESS_TOKEN secret (from supabase.com/dashboard/account/tokens) and the SUPABASE_PROJECT_REF variable, plus the ANTHROPIC_API_KEY secret, then run the Build Android app workflow; it deploys them." });
+      } else {
+        push({ id: "fn", title: "Backend functions", level: "warn", detail: "Couldn't reach them.",
+          fix: "Fix the Supabase connection first (see above). If they're missing, add SUPABASE_ACCESS_TOKEN and SUPABASE_PROJECT_REF in GitHub and run the Build Android app workflow." });
+      }
     }
 
     push({ id: "urls", title: "Email links", level: "warn", detail: `Confirmation links bring students back to ${here}. The website can't read Supabase's allowed addresses.`,

@@ -40,6 +40,26 @@ async function toError(res: Response): Promise<ApiError> {
   return new ApiError(msg, res.status, code, data);
 }
 
+/** Message shown when the site's server functions haven't been deployed yet (owner setup, not the student's internet). */
+export const NOT_SET_UP_MSG = "This part of the site isn't switched on yet. The site owner still needs to finish setup.";
+
+/**
+ * A request to a function failed before any answer came back. That's either no internet, or the function was never
+ * deployed (Supabase answers a missing function without the headers browsers need, so it looks like a network error).
+ * Asking Supabase's sign-in settings page tells the two apart: if that answers, the internet is fine.
+ */
+async function networkError(offlineMsg: string): Promise<ApiError> {
+  if (typeof navigator !== "undefined" && navigator.onLine === false) return new ApiError(offlineMsg, 0, "offline");
+  try {
+    const ctrl = new AbortController();
+    const t = setTimeout(() => ctrl.abort(), 6000);
+    const r = await fetch(`${SUPABASE_URL}/auth/v1/settings`, { headers: { apikey: SUPABASE_KEY }, signal: ctrl.signal });
+    clearTimeout(t);
+    if (r.status < 500) return new ApiError(NOT_SET_UP_MSG, 0, "not_set_up");
+  } catch { /* really can't reach the internet */ }
+  return new ApiError(offlineMsg, 0, "offline");
+}
+
 /** POST to an edge function and return its JSON. Throws ApiError with a student-friendly message. */
 export async function callFn<T = any>(name: string, body: unknown = {}, opts: { signal?: AbortSignal; auth?: boolean } = {}): Promise<T> {
   let res: Response;
@@ -48,7 +68,7 @@ export async function callFn<T = any>(name: string, body: unknown = {}, opts: { 
   } catch (e: any) {
     if (e?.name === "AbortError") throw e;
     if (e instanceof ApiError) throw e;
-    throw new ApiError("You're offline. Check your connection and try again.", 0, "offline");
+    throw await networkError("You're offline. Check your connection and try again.");
   }
   if (!res.ok) throw await toError(res);
   return res.json();
@@ -62,7 +82,7 @@ export async function streamFn(name: string, body: unknown, onText: (text: strin
   } catch (e: any) {
     if (e?.name === "AbortError") throw e;
     if (e instanceof ApiError) throw e;
-    throw new ApiError("You're offline. The AI needs internet; practice exams, games and calculators still work.", 0, "offline");
+    throw await networkError("You're offline. The AI needs internet; practice exams, games and calculators still work.");
   }
   if (!res.ok || !res.body) throw await toError(res);
   const reader = res.body.getReader();

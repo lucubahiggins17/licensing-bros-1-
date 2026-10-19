@@ -536,6 +536,50 @@ def setup_check(browser):
     check("admin setup check warns when LiveKit is missing", page.get_by_text("LiveKit keys aren't set", exact=False).first.count() > 0)
     ctx.close()
 
+@scenario
+def ai_not_set_up(browser):
+    """Functions never deployed: Supabase answers without CORS headers, so the browser sees a network failure."""
+    def ask(page):
+        goto(page, "/learn/#tutor")
+        page.wait_for_timeout(800)
+        box = page.locator("textarea#ask")
+        box.fill("How high is a guardrail?")
+        box.press("Enter")
+        page.wait_for_timeout(2500)
+    # Student: told the owner is finishing setup, not that their internet is down
+    fake = FakeBackend(user_id=FREE_ID)
+    ctx, page, errors = new_page(browser, fake)
+    page.route(f"{SUPA}/functions/v1/**", lambda r: r.abort())
+    ask(page)
+    shot(page, "ai-not-set-up-student")
+    check("missing functions aren't blamed on the student's internet", page.get_by_text("You're offline").count() == 0, "still says offline")
+    check("student sees the AI isn't switched on yet", page.get_by_text("The AI isn't switched on yet").first.count() > 0)
+    check("student is told the owner is finishing setup", page.get_by_text("site owner is still finishing setup", exact=False).first.count() > 0)
+    ctx.close()
+    # Admin: pointed at the setup check, which says the functions aren't deployed
+    fake = FakeBackend(user_id=ADMIN_ID)
+    ctx, page, errors = new_page(browser, fake)
+    page.route(f"{SUPA}/functions/v1/**", lambda r: r.abort())
+    ask(page)
+    shot(page, "ai-not-set-up-admin")
+    link = page.get_by_role("link", name="Open Setup check")
+    check("admin gets a link to the setup check", link.count() > 0)
+    if link.count():
+        link.first.click()
+        page.wait_for_timeout(2500)
+        shot(page, "ai-not-set-up-status")
+        check("setup check says the functions aren't deployed", page.get_by_text("backend functions aren't deployed", exact=False).first.count() > 0)
+        check("setup check names the GitHub settings to add", page.get_by_text("SUPABASE_ACCESS_TOKEN", exact=False).first.count() > 0)
+    ctx.close()
+    # Really offline (Supabase unreachable too): still says offline
+    fake = FakeBackend(user_id=FREE_ID)
+    ctx, page, errors = new_page(browser, fake)
+    page.route(f"{SUPA}/functions/v1/**", lambda r: r.abort())
+    page.route(f"{SUPA}/auth/v1/settings", lambda r: r.abort())
+    ask(page)
+    check("no internet still says offline", page.get_by_text("You're offline").first.count() > 0)
+    ctx.close()
+
 # ---------------------------------------------------------------------------------------------------------------------
 if __name__ == "__main__":
     httpd = serve()

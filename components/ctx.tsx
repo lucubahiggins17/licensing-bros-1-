@@ -1,7 +1,7 @@
 "use client";
 import { createContext, useContext } from "react";
 import Link from "next/link";
-import { ExternalLink, ShieldCheck, Sparkles, WifiOff, LockKeyhole, LogIn, TriangleAlert } from "lucide-react";
+import { ExternalLink, ShieldCheck, Sparkles, WifiOff, LockKeyhole, LogIn, TriangleAlert, Wrench } from "lucide-react";
 import { Progress } from "@/lib/progress";
 import type { Question } from "@/lib/data";
 import type { Limits } from "@/lib/types";
@@ -88,7 +88,7 @@ export function SourceList({ sources, state, tone = "light" }: { sources: Source
 /** Friendly explanation for an AI error, with the right next step (upgrade, sign in, try again). */
 export function AiErrorNote({ error, tone = "light", onRetry }: { error: any; tone?: "light" | "dark"; onRetry?: () => void }) {
   const { limits, paid } = usePlan();
-  const { settings } = useAuth();
+  const { settings, account } = useAuth();
   const code: string = error?.code || "error";
   const data = error?.data || {};
   const proDaily = settings.paid_limits?.ai_daily;
@@ -125,6 +125,14 @@ export function AiErrorNote({ error, tone = "light", onRetry }: { error: any; to
   } else if (code === "offline") {
     Icon = WifiOff;
     title = "You're offline";
+  } else if (code === "not_set_up") {
+    Icon = Wrench;
+    title = "The AI isn't switched on yet";
+    body = account?.is_admin
+      ? "The server functions haven't been deployed to Supabase yet, so the AI has nothing to talk to. Open Setup check to see what's missing."
+      : "The site owner is still finishing setup. Practice exams, games and calculators work now; check back soon for the AI.";
+    if (account?.is_admin) cta = { href: routes.status, label: "Open Setup check" };
+    retry = false;
   } else if (code === "session_replaced" || code === "no_session" || code === "in_use") {
     title = "Paused on this device";
     body = "Your account is open on another device. Choose \"Use it here instead\" to keep going.";
