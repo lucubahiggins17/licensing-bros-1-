@@ -153,6 +153,8 @@ export default function StatusPage() {
           fix: h.livekit ? undefined : "Add LIVEKIT_URL, LIVEKIT_API_KEY and LIVEKIT_API_SECRET in GitHub and rerun Build Android app." });
         push({ id: "mail", title: "Email from the server", level: h.email ? "pass" : "warn", detail: h.email ? "Set up. The command center and automations can send email." : "RESEND_API_KEY and EMAIL_FROM aren't set, so the command center and automations can't send email. In-app announcements still work.",
           fix: h.email ? undefined : "Create a Resend account (resend.com), verify your domain, then add the RESEND_API_KEY secret and EMAIL_FROM (for example Licensing Bro's <team@yourdomain.com>) in GitHub and rerun Build Android app." });
+        push({ id: "voice", title: "Bro's studio voice (optional)", level: "pass", detail: h.voice ? "A voice server is set. Switch it on in Admin → Settings → Bro's voice, and use Check the voice server there to test it." : "Not set, so Bro uses each phone's built-in voice. That works fine.",
+          fix: h.voice ? undefined : "For one natural voice for everyone (or a cloned voice), run VoiceStudio or another OpenAI-compatible speech server, add VOICE_API_URL (and VOICE_API_KEY) in GitHub, rerun Build Android app, then switch it on in Admin → Settings." });
         const siteOk = !!h.site_url && h.site_url.replace(/\/+$/, "") === here.replace(/\/+$/, "");
         push({ id: "site", title: "Website address on the server", level: siteOk ? "pass" : "warn",
           detail: siteOk ? `SITE_URL matches this site (${here}).` : `SITE_URL is ${h.site_url ? `"${h.site_url}"` : "not set"}, but this site is ${here}. Payment and email links use SITE_URL.`,

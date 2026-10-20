@@ -5,6 +5,7 @@ import type { User } from "@supabase/supabase-js";
 import { supabase } from "@/lib/supabaseClient";
 import type { Account, Profile, SiteSettings } from "@/lib/types";
 import { claimSession, releaseSession } from "@/lib/session";
+import { setSiteStudioVoice } from "@/lib/voiceFlag";
 
 type AuthCtx = {
   ready: boolean;              // first check finished
@@ -35,7 +36,11 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
   const loadSettings = useCallback(async () => {
     try {
       const { data } = await supabase().from("site_settings").select("key,value");
-      if (data) setSettings(Object.fromEntries(data.map((r: any) => [r.key, r.value])));
+      if (data) {
+        const next = Object.fromEntries(data.map((r: any) => [r.key, r.value])) as Partial<SiteSettings>;
+        setSiteStudioVoice(!!next.voice?.studio);
+        setSettings(next);
+      }
     } catch { /* offline */ }
   }, []);
 

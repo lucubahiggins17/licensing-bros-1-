@@ -217,6 +217,8 @@ export type SiteSettings = {
     session_timeout_seconds: number;
   };
   support: { email: string; phone: string };
+  /** Bro's studio voice (the school's voice server) on or off */
+  voice?: { studio?: boolean };
 };
 
 export const money = (cents: number) =>

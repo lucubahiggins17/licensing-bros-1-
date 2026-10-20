@@ -74,9 +74,14 @@ jobs:
           ANTHROPIC_FAST_MODEL: ${{ vars.ANTHROPIC_FAST_MODEL }}
           ANTHROPIC_ROUTING: ${{ vars.ANTHROPIC_ROUTING }}
           DAILY_AI_LIMIT: ${{ vars.DAILY_AI_LIMIT }}
+          VOICE_API_URL: ${{ secrets.VOICE_API_URL || vars.VOICE_API_URL }}
+          VOICE_API_KEY: ${{ secrets.VOICE_API_KEY }}
+          VOICE_NAME: ${{ vars.VOICE_NAME }}
+          VOICE_MODEL: ${{ vars.VOICE_MODEL }}
+          VOICE_FORMAT: ${{ vars.VOICE_FORMAT }}
         run: |
           args=()
-          for name in ANTHROPIC_API_KEY STRIPE_SECRET_KEY STRIPE_WEBHOOK_SECRET LIVEKIT_URL LIVEKIT_API_KEY LIVEKIT_API_SECRET IPINFO_TOKEN RESEND_API_KEY EMAIL_FROM AUTOMATION_SECRET SITE_URL ANTHROPIC_MODEL ANTHROPIC_FAST_MODEL ANTHROPIC_ROUTING DAILY_AI_LIMIT; do
+          for name in ANTHROPIC_API_KEY STRIPE_SECRET_KEY STRIPE_WEBHOOK_SECRET LIVEKIT_URL LIVEKIT_API_KEY LIVEKIT_API_SECRET IPINFO_TOKEN RESEND_API_KEY EMAIL_FROM AUTOMATION_SECRET SITE_URL ANTHROPIC_MODEL ANTHROPIC_FAST_MODEL ANTHROPIC_ROUTING DAILY_AI_LIMIT VOICE_API_URL VOICE_API_KEY VOICE_NAME VOICE_MODEL VOICE_FORMAT; do
             value="${!name}"
             if [ -n "$value" ]; then
               args+=("$name=$value")
@@ -92,7 +97,7 @@ jobs:
       - name: Deploy functions
         if: steps.check.outputs.run == 'true'
         run: |
-          for fn in tutor generate session lesson live-token stripe-checkout library assistant; do
+          for fn in tutor generate session lesson live-token stripe-checkout library assistant research voice; do
             supabase functions deploy "$fn" --project-ref "$PROJECT_REF"
           done
           # Stripe signs its webhook calls; they carry no Supabase sign-in

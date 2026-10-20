@@ -2,24 +2,25 @@
 // Automations: jobs that run on their own. Admins switch them on, pick when they run and who hears about it,
 // and can run one now to see what it does.
 import { useCallback, useEffect, useState } from "react";
-import { BellRing, CalendarClock, Clock, Play, Sparkles, UserPlus, Users } from "lucide-react";
+import { BellRing, CalendarClock, Clock, FlaskConical, Play, Sparkles, UserPlus, Users } from "lucide-react";
 import { supabase } from "@/lib/supabaseClient";
 import { callFn } from "@/lib/api";
 import { errMsg, fmtDateTime, q } from "./format";
 import { useAdmin, useMounted, ErrorBox, FormPanel, Loading, SectionHead, Toggle } from "./ui";
 import s from "./admin.module.css";
 
-type Kind = "weekly_digest" | "at_risk_alert" | "inactive_nudge" | "exam_countdown" | "new_signup_alert";
+type Kind = "weekly_digest" | "at_risk_alert" | "inactive_nudge" | "exam_countdown" | "new_signup_alert" | "knowledge_research";
 type Row = { kind: Kind; enabled: boolean; config: Record<string, any>; last_run_at: string | null; last_result: string | null };
 
-const META: Record<Kind, { title: string; what: string; Icon: any; who?: boolean; weekly?: boolean; days?: boolean; hourly?: boolean; studentEmail?: boolean }> = {
+const META: Record<Kind, { title: string; what: string; Icon: any; who?: boolean; weekly?: boolean; days?: boolean; hourly?: boolean; studentEmail?: boolean; research?: boolean }> = {
+  knowledge_research: { title: "Bro's research desk", what: "Keeps the knowledge base learning: studies questions students asked that Bro couldn't answer well, then license, exam and code-adoption rules for your students' states, from official sources. A second, independent check confirms every finding before it reaches the library. Each topic uses AI and web searches, so the daily limit keeps the cost predictable.", Icon: FlaskConical, research: true, hourly: true },
   weekly_digest: { title: "Weekly team digest", what: "Every week: new signups, who's studying, who's at risk and why, the toughest topics across students, and next week's live classes.", Icon: Sparkles, who: true, weekly: true },
   at_risk_alert: { title: "At-risk alerts", what: "Each morning, tells your team about students who newly look likely to fail (exam soon with low scores, few practice questions, or gone quiet). Each student once a week at most.", Icon: BellRing, who: true },
   inactive_nudge: { title: "Study nudges", what: "A friendly in-app nudge to students who stopped studying, pointing them at their weakest topic. Each student once a week at most.", Icon: Users, days: true, studentEmail: true },
   exam_countdown: { title: "Exam countdown", what: "Tips for each student 14, 7, 3 and 1 day(s) before the exam date they set.", Icon: CalendarClock, studentEmail: false },
   new_signup_alert: { title: "New signup alerts", what: "Every hour, tells admins who just created an account.", Icon: UserPlus, who: true, hourly: true }
 };
-const ORDER: Kind[] = ["weekly_digest", "at_risk_alert", "inactive_nudge", "exam_countdown", "new_signup_alert"];
+const ORDER: Kind[] = ["knowledge_research", "weekly_digest", "at_risk_alert", "inactive_nudge", "exam_countdown", "new_signup_alert"];
 const DAYS = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 const ZONES = ["America/New_York", "America/Chicago", "America/Denver", "America/Phoenix", "America/Los_Angeles", "America/Anchorage", "Pacific/Honolulu"];
 const hourLabel = (h: number) => `${((h + 11) % 12) + 1}:00 ${h < 12 ? "AM" : "PM"}`;
@@ -117,6 +118,20 @@ export default function Automations() {
                   </select>
                 </label>
               )}
+              {m.research && (
+                <label className="field">How often
+                  <select value={c.every_hours ?? 6} onChange={(e) => save(r, { config: { every_hours: Number(e.target.value) } }, "Saved.")}>
+                    {[2, 4, 6, 12, 24].map((h) => <option key={h} value={h}>Every {h} hours</option>)}
+                  </select>
+                </label>
+              )}
+              {m.research && (
+                <label className="field">Topics a day (at most)
+                  <select value={c.daily_cap ?? 4} onChange={(e) => save(r, { config: { daily_cap: Number(e.target.value) } }, "Saved.")}>
+                    {[1, 2, 4, 6, 8, 12].map((n) => <option key={n} value={n}>{n} topic{n === 1 ? "" : "s"}</option>)}
+                  </select>
+                </label>
+              )}
               {m.days && (
                 <label className="field">Nudge after
                   <select value={c.days ?? 5} onChange={(e) => save(r, { config: { days: Number(e.target.value) } }, "Saved.")}>
@@ -125,6 +140,11 @@ export default function Automations() {
                 </label>
               )}
             </div>
+            {m.research && (
+              <Toggle small checked={c.review_first === true} label="Hold every finding for an admin to approve"
+                hint="Off: findings confirmed by an official source go straight to the library; disputed ones still wait for you."
+                onChange={(v) => save(r, { config: { review_first: v } }, "Saved.")} />
+            )}
             {(m.who || m.studentEmail) && (
               <Toggle small checked={m.who ? c.email !== false : c.email === true} label={m.who ? "Send by email (otherwise in-app)" : "Also email students"}
                 hint={m.who ? undefined : "In-app nudges always go out. Email only if students expect it."}

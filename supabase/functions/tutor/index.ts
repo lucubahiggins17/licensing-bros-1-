@@ -28,6 +28,8 @@ import {
 } from "../_shared/common.ts";
 import { formatFacts, searchFacts } from "../_shared/kb.ts";
 import { searchLibrary } from "../_shared/library.ts";
+import { gapReason } from "../_shared/researchLogic.ts";
+import { background, logGap } from "../_shared/research.ts";
 import { streamAnswer } from "../_shared/answer.ts";
 
 type Turn = { role: "user" | "assistant"; content: string };
@@ -68,6 +70,11 @@ Deno.serve(handler(async (req) => {
   ]);
   const webSearch = needsStateCheck(`${question} ${context}`, facts);
   const lastQuestion = turns[turns.length - 1].content;
+  // Questions the notes didn't cover well go on the research desk's list (the question only, nothing about the student)
+  if (!admin && !hasImage && !context) {
+    const reason = gapReason({ question: lastQuestion, facts, library, state, stateSensitive: needsStateCheck(lastQuestion) });
+    if (reason) background(logGap(lastQuestion, trade, state, reason));
+  }
   const route = ROUTING_ON() ? routeTutor({ question: lastQuestion, voice, image: hasImage, webSearch, turns: turns.length }) : "main";
   const notesText = [formatFacts(facts), library.map((p) => `[${p.ref}] ${p.text}`).join("\n")].filter(Boolean).join("\n");
   // The student's study record (sent by the app) lets Bro tailor examples and suggest what to practice

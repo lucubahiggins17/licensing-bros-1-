@@ -65,6 +65,7 @@ Deno.serve(handler(async (req) => {
       livekit: has("LIVEKIT_URL") && has("LIVEKIT_API_KEY") && has("LIVEKIT_API_SECRET"),
       ipinfo: has("IPINFO_TOKEN"),
       email: has("RESEND_API_KEY") && has("EMAIL_FROM"),
+      voice: has("VOICE_API_URL"),
       site_url: (Deno.env.get("SITE_URL") || "").replace(/\/+$/, "") || null,
       model: MODEL(),
       fast_model: ROUTING_ON() ? FAST_MODEL() : null

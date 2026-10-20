@@ -25,6 +25,12 @@ verify_jwt = true
 [functions.assistant]
 verify_jwt = true
 
+[functions.research]
+verify_jwt = true
+
+[functions.voice]
+verify_jwt = true
+
 # The hourly scheduler calls this without a user sign-in; it checks the x-automation-key header or the user itself.
 [functions.automations]
 verify_jwt = false

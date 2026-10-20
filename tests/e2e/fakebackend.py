@@ -99,6 +99,7 @@ def seed():
             {"id": DECK1, "title": "Lien Law Lingo", "kind": "game", "topic": "Lien law", "trade": "gc", "state": None, "part": "mix", "questions": [], "pairs": [{"k": "Retainage", "v": "Part of each payment held back until the job is finished."}, {"k": "Lien waiver", "v": "A paper giving up lien rights for a payment."}, {"k": "Notice to owner", "v": "Early notice that a sub or supplier may file a lien."}, {"k": "Conditional waiver", "v": "Only takes effect once the payment actually clears."}, {"k": "Unconditional waiver", "v": "Takes effect when signed, paid or not."}, {"k": "Mechanic's lien", "v": "A claim on the property for unpaid work or materials."}, {"k": "Bond claim", "v": "Payment claim on public jobs, where liens aren't allowed."}], "is_free": True, "published": True, "created_by": ADMIN_ID, "created_at": now_iso(-40)},
         ],
         "automations": [
+            {"kind": "knowledge_research", "enabled": True, "config": {"every_hours": 6, "per_run": 1, "daily_cap": 4, "review_first": False}, "last_run_at": now_iso(-7200), "last_result": "Research desk: studying \"Georgia mechanic's lien law\"."},
             {"kind": "weekly_digest", "enabled": True, "config": {"weekday": 1, "hour": 8, "audience": "staff", "email": True, "tz": "America/Chicago"}, "last_run_at": now_iso(-3000), "last_result": "Weekly digest: notified 2 in the app (email isn't set up)."},
             {"kind": "at_risk_alert", "enabled": True, "config": {"hour": 8, "audience": "instructors", "email": True}, "last_run_at": None, "last_result": None},
             {"kind": "inactive_nudge", "enabled": True, "config": {"hour": 18, "days": 5, "email": False}, "last_run_at": None, "last_result": None},
@@ -113,6 +114,15 @@ def seed():
         "progress": [{"user_id": PAID_ID, "data": {"state": "Tennessee", "trade": "gc", "examDate": (datetime.now() + timedelta(days=40)).date().isoformat(), "stats": {"gc": {"Safety (OSHA)": {"c": 18, "a": 22}, "Contracts & liens": {"c": 6, "a": 12}, "Payroll & tax": {"c": 9, "a": 10}}}, "hist": [{"kind": "Mock exam", "detail": "78% · 39/50", "trade": "gc", "state": "Tennessee", "at": int(time.time()*1000) - 86400000}], "cards": {}, "extraPairs": [], "extraBank": [], "best": {}}, "updated_at": now_iso(-60)}],
     }
     return db
+
+def silent_wav(seconds=0.2):
+    """A short silent WAV file, standing in for the voice server's audio."""
+    import io, wave
+    buf = io.BytesIO()
+    with wave.open(buf, "wb") as w:
+        w.setnchannels(1); w.setsampwidth(1); w.setframerate(8000)
+        w.writeframes(b"\x80" * int(8000 * seconds))
+    return buf.getvalue()
 
 class FakeBackend:
     def __init__(self, user_id=None, location_state="home", no_admins=False):
@@ -413,6 +423,15 @@ class FakeBackend:
                 row["last_run_at"] = now_iso(); row["last_result"] = "Study nudges: 3 students."
                 return 200, {"ran": ["Study nudges: 3 students."]}
             return 200, {"ran": []}
+        if name == "research":
+            return self.research(body)
+        if name == "voice":
+            if body.get("action") == "health":
+                return 200, {"configured": True, "ok": not getattr(self, "voice_down", False), "ms": 640, "voice": "bro-clone"} if not getattr(self, "voice_down", False) else {"configured": True, "ok": False, "ms": 20000, "voice": "bro-clone", "error": "The voice server didn't answer within 20 seconds."}
+            self.voice_texts = getattr(self, "voice_texts", []) + [body.get("text") or ""]
+            if getattr(self, "voice_down", False):
+                return 502, {"error": "Bro's studio voice is offline right now.", "code": "voice_unavailable"}
+            return 200, silent_wav()
         if name == "library":
             if not self.is_staff():
                 return 403, {"error": "Only admins and instructors can manage the knowledge library.", "code": "forbidden"}
@@ -555,6 +574,66 @@ class FakeBackend:
     def user_obj(self):
         u = USERS[self.user_id]
         return {"id": self.user_id, "aud": "authenticated", "role": "authenticated", "email": u["email"], "app_metadata": {}, "user_metadata": {"full_name": u["name"]}, "created_at": now_iso(-9000)}
+
+    def research(self, body):
+        """Bro's research desk: a published study, one waiting for review, and two questions the tutor couldn't answer."""
+        if not self.is_staff():
+            return 403, {"error": "Only admins and instructors can use the research desk.", "code": "forbidden"}
+        a = body.get("action") or "list"
+        self.calls.append(("research", a))
+        if not hasattr(self, "rs"):
+            self.rs = {
+                "gaps": [
+                    {"id": "gap-1", "question": "What is the retainage limit on private jobs in Georgia?", "trade": "gc", "state": "Georgia", "hits": 7, "reason": "state", "last_seen": now_iso(-600)},
+                    {"id": "gap-2", "question": "Do I need a separate license for low-voltage work in Tennessee?", "trade": "elec", "state": "Tennessee", "hits": 3, "reason": "state", "last_seen": now_iso(-4000)},
+                ],
+                "studies": [
+                    {"id": "st-review", "topic": "Georgia mechanic's lien law: notice requirements and filing deadlines", "trade": "gc", "state": "Georgia", "origin": "schedule", "status": "review", "summary": "Georgia lien rules from the statute.", "flags": 2, "tokens": 41000, "error": None, "created_at": now_iso(-3600), "finished_at": now_iso(-3400),
+                     "claims": [
+                         {"claim": "A Georgia lien must be filed within 90 days after the last work.", "source_url": "https://www.legis.ga.gov/lien", "source_title": "O.C.G.A. 44-14-361.1", "verdict": "confirmed", "correction": None, "note": None, "conflicts": [], "official": True, "kept": False},
+                         {"claim": "Georgia requires a notice of commencement on every residential job.", "source_url": "https://www.legis.ga.gov/noc", "source_title": "O.C.G.A. 44-14-361.5", "verdict": "disputed", "correction": None, "note": "Only required for certain projects", "conflicts": [], "official": True, "kept": False},
+                         {"claim": "Georgia lien actions must start within 180 days of filing.", "source_url": "https://www.legis.ga.gov/action", "source_title": "O.C.G.A. 44-14-361.1(a)(3)", "verdict": "confirmed", "correction": None, "note": None, "conflicts": ["law-ga-02"], "official": True, "kept": False},
+                     ]},
+                    {"id": "st-pub", "topic": "Tennessee contractor license renewal period and continuing education requirements", "trade": "gc", "state": "Tennessee", "origin": "gap", "status": "published", "summary": "Tennessee renews every two years.", "flags": 0, "tokens": 30000, "error": None, "created_at": now_iso(-90000), "finished_at": now_iso(-89800),
+                     "claims": [
+                         {"claim": "Tennessee contractor licenses renew every two years.", "source_url": "https://www.tn.gov/commerce/regboards/contractors.html", "source_title": "TN Board for Licensing Contractors", "verdict": "confirmed", "correction": None, "note": None, "conflicts": [], "official": True, "kept": True},
+                         {"claim": "Tennessee requires 8 hours of CE per year.", "source_url": "https://www.tn.gov/commerce/ce", "source_title": "TN rules", "verdict": "corrected", "correction": "Tennessee has no continuing education requirement for contractor license renewal.", "note": None, "conflicts": [], "official": True, "kept": True},
+                     ]},
+                ],
+            }
+        rs = self.rs
+        if a == "list":
+            return 200, {"studies": rs["studies"], "gaps": [g for g in rs["gaps"] if g.get("status", "open") == "open"],
+                         "automation": next((r for r in self.db["automations"] if r["kind"] == "knowledge_research"), None),
+                         "stats": {"studies_week": 6, "learned_week": 14, "flags_week": 2, "tokens_week": 210000, "open_gaps": len([g for g in rs["gaps"] if g.get("status", "open") == "open"]), "waiting_review": len([x for x in rs["studies"] if x["status"] == "review"]), "published_total": 11},
+                         "role": "admin" if self.user_id == ADMIN_ID else "instructor"}
+        if a in ("queue", "research_gap"):
+            topic = body.get("topic")
+            if a == "research_gap":
+                g = next(x for x in rs["gaps"] if x["id"] == body.get("gap_id"))
+                g["status"] = "queued"; topic = g["question"]
+            if not topic or len(topic) < 8:
+                return 400, {"error": "Say what to research in a few words.", "code": "bad_request"}
+            st = {"id": str(uuid.uuid4()), "topic": topic, "trade": body.get("trade") or "gc", "state": body.get("state"), "origin": "gap" if a == "research_gap" else "staff", "status": "running", "summary": None, "flags": 0, "tokens": 0, "error": None, "created_at": now_iso(), "finished_at": None, "claims": []}
+            rs["studies"].insert(0, st)
+            self.research_topic = topic
+            return 200, {"study": st}
+        if a == "dismiss_gap":
+            next(x for x in rs["gaps"] if x["id"] == body.get("gap_id"))["status"] = "dismissed"
+            return 200, {"ok": True}
+        if a in ("approve", "reject"):
+            if self.user_id != ADMIN_ID:
+                return 403, {"error": "Only admins can publish or discard research.", "code": "forbidden"}
+            st = next(x for x in rs["studies"] if x["id"] == body.get("id"))
+            if a == "reject":
+                st["status"] = "rejected"
+                return 200, {"ok": True}
+            keep = set(body.get("keep") or [])
+            self.approved_keep = sorted(keep)
+            for i, c in enumerate(st["claims"]): c["kept"] = i in keep
+            st["status"] = "published" if keep else "rejected"; st["flags"] = 0
+            return 200, {"study": st}
+        return 400, {"error": "Unknown action.", "code": "bad_request"}
 
     def assistant(self, body):
         """Scripted command center replies, streamed as newline-delimited JSON like the real function."""

@@ -26,11 +26,12 @@ export type AnswerOptions = {
   maxRounds?: number;
 };
 
-export async function streamAnswer(o: AnswerOptions): Promise<{ sources: Source[]; calculations: number; text: string }> {
+export async function streamAnswer(o: AnswerOptions): Promise<{ sources: Source[]; calculations: number; text: string; tokens: number }> {
   const sources: Source[] = [];
   let msgs = o.messages;
   let calculations = 0;
   let text = "";
+  let tokens = 0;
   const out = (t: string) => { if (t) { text += t; o.send(t); } };
   for (let round = 0; round < (o.maxRounds ?? 6) && !o.cancelled?.(); round++) {
     const s = o.client.messages.stream({
@@ -45,6 +46,7 @@ export async function streamAnswer(o: AnswerOptions): Promise<{ sources: Source[
       if (ev.type === "content_block_delta" && ev.delta?.type === "text_delta") out(ev.delta.text);
     }
     const final = await s.finalMessage();
+    tokens += (Number(final.usage?.input_tokens) || 0) + (Number(final.usage?.output_tokens) || 0) + (Number(final.usage?.cache_read_input_tokens) || 0) + (Number(final.usage?.cache_creation_input_tokens) || 0);
     sources.push(...collectSources(final.content as unknown[], 10));
     if (final.stop_reason === "pause_turn") {
       msgs = [...msgs, { role: "assistant", content: final.content }];
@@ -66,5 +68,5 @@ export async function streamAnswer(o: AnswerOptions): Promise<{ sources: Source[
     }
     break;
   }
-  return { sources, calculations, text };
+  return { sources, calculations, text, tokens };
 }

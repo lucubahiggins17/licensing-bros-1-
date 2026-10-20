@@ -96,3 +96,12 @@ export async function streamFn(name: string, body: unknown, onText: (text: strin
   }
   return text;
 }
+
+/** POST to an edge function that answers with audio (Bro's studio voice); returns the audio as a Blob. */
+export async function audioFn(name: string, body: unknown, signal?: AbortSignal): Promise<Blob> {
+  const res = await fetch(`${FUNCTIONS_URL()}/${name}`, { method: "POST", headers: await fnHeaders(), body: JSON.stringify(body), signal });
+  if (!res.ok) throw await toError(res);
+  const type = res.headers.get("content-type") || "";
+  if (!type.startsWith("audio")) throw new ApiError("The voice server didn't send audio.", 502, "voice_unavailable");
+  return res.blob();
+}

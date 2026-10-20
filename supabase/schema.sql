@@ -857,7 +857,7 @@ create extension if not exists vector with schema extensions;
 create table if not exists public.kb_docs (
   id uuid primary key default gen_random_uuid(),
   title text not null check (char_length(title) between 1 and 200),
-  kind text not null default 'notes' check (kind in ('notes','bulletin','rules','code','lesson','web','other')),
+  kind text not null default 'notes' check (kind in ('notes','bulletin','rules','code','lesson','web','research','other')),
   trade text check (trade in ('gc','elec','plumb','hvac','law')),
   state text,
   source_url text,
@@ -886,6 +886,9 @@ create index if not exists kb_chunks_fts_idx on public.kb_chunks using gin (fts)
 create index if not exists kb_chunks_doc_idx on public.kb_chunks (doc_id, seq);
 create index if not exists kb_chunks_embedding_idx on public.kb_chunks using hnsw (embedding extensions.vector_cosine_ops);
 create index if not exists kb_docs_created_idx on public.kb_docs (created_at desc);
+-- Databases set up before the research desk: allow its documents
+alter table public.kb_docs drop constraint if exists kb_docs_kind_check;
+alter table public.kb_docs add constraint kb_docs_kind_check check (kind in ('notes','bulletin','rules','code','lesson','web','research','other'));
 
 alter table public.kb_docs enable row level security;
 alter table public.kb_chunks enable row level security;
@@ -975,7 +978,7 @@ grant execute on function public.staff_student_rows(int) to service_role;
 -- runs whatever is due (called every hour by GitHub Actions, and when staff open the admin area).
 -- -------------------------------------------------------------------------------------
 create table if not exists public.automations (
-  kind text primary key check (kind in ('weekly_digest','at_risk_alert','inactive_nudge','exam_countdown','new_signup_alert')),
+  kind text primary key check (kind in ('weekly_digest','at_risk_alert','inactive_nudge','exam_countdown','new_signup_alert','knowledge_research')),
   enabled boolean not null default false,
   config jsonb not null default '{}'::jsonb,
   state jsonb not null default '{}'::jsonb,
@@ -983,6 +986,8 @@ create table if not exists public.automations (
   last_result text,
   updated_at timestamptz not null default now()
 );
+alter table public.automations drop constraint if exists automations_kind_check;
+alter table public.automations add constraint automations_kind_check check (kind in ('weekly_digest','at_risk_alert','inactive_nudge','exam_countdown','new_signup_alert','knowledge_research'));
 alter table public.automations enable row level security;
 select pg_temp.pol('automations','automations staff read','create policy "automations staff read" on public.automations for select to authenticated using (public.is_staff())');
 select pg_temp.pol('automations','automations admin','create policy "automations admin" on public.automations for update to authenticated using (public.is_admin()) with check (public.is_admin())');
@@ -991,11 +996,80 @@ insert into public.automations (kind, enabled, config) values
   ('at_risk_alert',    true,  '{"hour":8,"audience":"instructors","email":true}'),
   ('inactive_nudge',   true,  '{"hour":18,"days":5,"email":false}'),
   ('exam_countdown',   true,  '{"hour":9,"email":false}'),
-  ('new_signup_alert', false, '{"audience":"admins","email":true}')
+  ('new_signup_alert', false, '{"audience":"admins","email":true}'),
+  ('knowledge_research', true, '{"every_hours":6,"per_run":1,"daily_cap":4,"review_first":false,"gaps_first":true}')
 on conflict (kind) do nothing;
 -- Admins change only the switch and the options; run times and results are written by the server
 revoke insert, update, delete on public.automations from anon, authenticated;
 grant update (enabled, config, updated_at) on public.automations to authenticated;
+
+-- -------------------------------------------------------------------------------------
+-- Bro's research desk: the knowledge base keeps learning. The tutor logs questions its notes didn't cover
+-- well (the question only: nothing about who asked). The research desk studies those and state topics on the
+-- web, an independent second check confirms each finding against official sources, and confirmed findings
+-- become library documents the tutor uses. Disputed findings wait for an admin. Server-written; staff read.
+-- -------------------------------------------------------------------------------------
+create table if not exists public.kb_gaps (
+  id uuid primary key default gen_random_uuid(),
+  key text not null unique,
+  question text not null check (char_length(question) between 3 and 300),
+  trade text,
+  state text,
+  reason text not null default 'weak' check (reason in ('weak','state')),
+  hits int not null default 1,
+  status text not null default 'open' check (status in ('open','queued','researched','dismissed')),
+  first_seen timestamptz not null default now(),
+  last_seen timestamptz not null default now()
+);
+create index if not exists kb_gaps_open_idx on public.kb_gaps (status, hits desc, last_seen desc);
+
+create table if not exists public.kb_research (
+  id uuid primary key default gen_random_uuid(),
+  topic text not null check (char_length(topic) between 3 and 300),
+  trade text check (trade in ('gc','elec','plumb','hvac','law')),
+  state text,
+  origin text not null default 'schedule' check (origin in ('schedule','gap','staff')),
+  gap_id uuid references public.kb_gaps(id) on delete set null,
+  status text not null default 'queued' check (status in ('queued','running','published','review','rejected','nothing','failed')),
+  claims jsonb not null default '[]'::jsonb,
+  summary text,
+  doc_id uuid references public.kb_docs(id) on delete set null,
+  flags int not null default 0,
+  tokens int not null default 0,
+  error text,
+  requested_by uuid references auth.users(id) on delete set null,
+  reviewed_by uuid references auth.users(id) on delete set null,
+  created_at timestamptz not null default now(),
+  started_at timestamptz,
+  finished_at timestamptz,
+  reviewed_at timestamptz
+);
+create index if not exists kb_research_created_idx on public.kb_research (created_at desc);
+create index if not exists kb_research_status_idx on public.kb_research (status);
+
+alter table public.kb_gaps enable row level security;
+alter table public.kb_research enable row level security;
+select pg_temp.pol('kb_gaps','kb gaps staff read','create policy "kb gaps staff read" on public.kb_gaps for select to authenticated using (public.is_staff())');
+select pg_temp.pol('kb_research','kb research staff read','create policy "kb research staff read" on public.kb_research for select to authenticated using (public.is_staff())');
+revoke insert, update, delete on public.kb_gaps from anon, authenticated;
+revoke insert, update, delete on public.kb_research from anon, authenticated;
+
+-- Logs (or counts again) a question the tutor's notes didn't cover. A dismissed question stays dismissed;
+-- one researched over 60 days ago opens again when students keep asking it.
+create or replace function public.kb_log_gap(p_key text, p_question text, p_trade text, p_state text, p_reason text default 'weak')
+returns void language sql security definer set search_path = public as $$
+  insert into public.kb_gaps (key, question, trade, state, reason)
+  values (left(p_key, 400), left(p_question, 300),
+          case when p_trade in ('gc','elec','plumb','hvac','law') then p_trade end,
+          left(p_state, 40),
+          case when p_reason = 'state' then 'state' else 'weak' end)
+  on conflict (key) do update set
+    hits = public.kb_gaps.hits + 1,
+    last_seen = now(),
+    status = case when public.kb_gaps.status = 'researched' and public.kb_gaps.last_seen < now() - interval '60 days' then 'open' else public.kb_gaps.status end;
+$$;
+revoke execute on function public.kb_log_gap(text, text, text, text, text) from public, anon, authenticated;
+grant execute on function public.kb_log_gap(text, text, text, text, text) to service_role;
 
 -- -------------------------------------------------------------------------------------
 -- Storage: course videos (private) and public images

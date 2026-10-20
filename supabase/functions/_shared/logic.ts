@@ -973,7 +973,7 @@ export function cleanHistory(raw: unknown, o: { maxMessages?: number; maxChars?:
 // ---------------------------------------------------------------------------------------------
 // Automations: when each job is due, and the study nudges students get
 // ---------------------------------------------------------------------------------------------
-export type AutomationKind = "weekly_digest" | "at_risk_alert" | "inactive_nudge" | "exam_countdown" | "new_signup_alert";
+export type AutomationKind = "weekly_digest" | "at_risk_alert" | "inactive_nudge" | "exam_countdown" | "new_signup_alert" | "knowledge_research";
 
 export function localParts(at: number, tz: string): { ymd: string; weekday: number; hour: number } {
   let zone = tz;
@@ -984,11 +984,18 @@ export function localParts(at: number, tz: string): { ymd: string; weekday: numb
   return { ymd: `${parts.year}-${parts.month}-${parts.day}`, weekday, hour: Number(parts.hour) % 24 };
 }
 
-/** Whether an automation should run now: weekly and daily jobs once per local day after their hour; signup alerts hourly. */
-export function isDue(kind: AutomationKind, config: { weekday?: number; hour?: number; tz?: string }, lastRunAt: string | null, now = Date.now()): boolean {
+/**
+ * Whether an automation should run now: weekly and daily jobs once per local day after their hour; signup alerts
+ * hourly; the research desk every few hours (`every_hours`, default 6).
+ */
+export function isDue(kind: AutomationKind, config: { weekday?: number; hour?: number; tz?: string; every_hours?: number }, lastRunAt: string | null, now = Date.now()): boolean {
   const tz = config.tz || "America/Chicago";
   const last = lastRunAt ? Date.parse(lastRunAt) : 0;
   if (kind === "new_signup_alert") return !last || now - last >= 55 * 60_000;
+  if (kind === "knowledge_research") {
+    const every = Math.max(1, Math.min(48, Number(config.every_hours) || 6));
+    return !last || now - last >= every * 3600_000 - 5 * 60_000;
+  }
   const here = localParts(now, tz);
   const hour = Number.isFinite(Number(config.hour)) ? Number(config.hour) : 8;
   if (here.hour < hour) return false;

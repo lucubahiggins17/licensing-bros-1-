@@ -2,6 +2,7 @@
 // Voice engine for "Talk to Bro": speech-to-text and text-to-speech on the web and in the Android app,
 // plus helpers that turn a streaming tutor answer into speakable sentences.
 import { hasPlugin, isApp, SpeechRecognition, TextToSpeech } from "@/lib/native";
+import { setSiteStudioVoice, siteStudioVoice } from "@/lib/voiceFlag";
 
 export type SttKind = "web" | "native" | null;
 export type TtsKind = "web" | "native" | null;
@@ -20,7 +21,7 @@ export function voiceSupport(): { stt: SttKind; tts: TtsKind } {
 // ---------------------------------------------------------------------------------------------
 // Preferences (per device)
 // ---------------------------------------------------------------------------------------------
-const K = { rate: "lb.voice.rate", loop: "lb.voice.loop", webVoice: "lb.voice", nativeVoice: "lb.voice.native" };
+const K = { rate: "lb.voice.rate", loop: "lb.voice.loop", webVoice: "lb.voice", nativeVoice: "lb.voice.native", studio: "lb.voice.studio" };
 function getPref(key: string): string | null {
   try { return localStorage.getItem(key); } catch { return null; }
 }
@@ -102,6 +103,10 @@ async function resolveNativeVoice(): Promise<number | undefined> {
 export type VoiceOption = { id: string; label: string };
 /** English voices for the picker, most natural first. */
 export async function voiceOptions(kind: TtsKind): Promise<VoiceOption[]> {
+  const device = await deviceVoiceOptions(kind);
+  return siteStudioVoice() ? [{ id: STUDIO, label: "Bro's studio voice (recommended)" }, ...device] : device;
+}
+async function deviceVoiceOptions(kind: TtsKind): Promise<VoiceOption[]> {
   if (kind === "web") {
     return (await webVoices()).filter((v) => rankVoice(v) >= 0).sort((a, b) => rankVoice(b) - rankVoice(a))
       .map((v) => ({ id: v.voiceURI, label: `${v.name.replace(/^Microsoft\s+/, "").replace(/\s+-\s+English.*$/, "")} (${v.lang})` }));
@@ -114,12 +119,15 @@ export async function voiceOptions(kind: TtsKind): Promise<VoiceOption[]> {
   return [];
 }
 export async function currentVoiceId(kind: TtsKind): Promise<string> {
+  if (siteStudioVoice() && studioPref()) return STUDIO;
   if (kind === "web") return (await resolveWebVoice())?.voiceURI || "";
   if (kind === "native") { const i = await resolveNativeVoice(); return i === undefined ? "" : nativeVoices?.[i]?.voiceURI || ""; }
   return "";
 }
 /** Remembers the student's voice choice on this device ("" = automatic). */
 export async function chooseVoice(kind: TtsKind, id: string) {
+  if (id === STUDIO) { setPref(K.studio, "1"); studioDownUntil = 0; return; }
+  if (siteStudioVoice()) setPref(K.studio, "0");
   setPref(kind === "native" ? K.nativeVoice : K.webVoice, id);
   if (kind === "web") await resolveWebVoice();
   if (kind === "native") await resolveNativeVoice();
@@ -128,6 +136,7 @@ export async function chooseVoice(kind: TtsKind, id: string) {
 /** Call from a tap/click before speaking later (iOS Safari only allows speech that starts from a user gesture). */
 let primed = false;
 export function primeSpeech() {
+  unlockAudio();
   if (primed || typeof window === "undefined" || isApp() || !("speechSynthesis" in window)) return;
   primed = true;
   const synth = window.speechSynthesis;
@@ -237,8 +246,98 @@ function nativeSay(text: string, rate: number): Promise<void> {
   });
 }
 
+// ---------------------------------------------------------------------------------------------
+// Bro's studio voice: the school's own voice server (VoiceStudio, or any server with the OpenAI audio API), when an
+// admin switched it on. Every answer tries it first; if it can't be reached (the computer running it is asleep, say),
+// Bro uses the device voice for a couple of minutes, then tries the studio again.
+// ---------------------------------------------------------------------------------------------
+const STUDIO = "studio";
+let studioDownUntil = 0;
+/** Set from the site settings: an admin switched the studio voice on. */
+export const setStudioVoice = setSiteStudioVoice;
+export const studioAvailable = siteStudioVoice;
+/** The student's choice on this device (on unless they picked a device voice). */
+export const studioPref = () => getPref(K.studio) !== "0";
+export function studioOn(): boolean {
+  return siteStudioVoice() && studioPref() && Date.now() >= studioDownUntil && typeof window !== "undefined" && typeof Audio !== "undefined";
+}
+
+const audioCache = new Map<string, Promise<Blob>>();
+const studioKey = (text: string, rate: number) => `${rate}|${text}`;
+async function fetchAudio(text: string, rate: number): Promise<Blob> {
+  const { audioFn } = await import("@/lib/api");
+  return audioFn("voice", { text, speed: rate });
+}
+/** Starts fetching a sentence's audio while the one before it plays, so there's no gap between sentences. */
+export function prefetchSpeech(text: string, rate = 1) {
+  if (!studioOn() || !text.trim()) return;
+  const k = studioKey(text, rate);
+  if (audioCache.has(k)) return;
+  const p = fetchAudio(text, rate);
+  p.catch(() => {}); // handled when it's played
+  audioCache.set(k, p);
+  while (audioCache.size > 8) audioCache.delete(audioCache.keys().next().value as string);
+}
+
+let audioEl: HTMLAudioElement | null = null;
+function player(): HTMLAudioElement {
+  if (!audioEl) { audioEl = new Audio(); audioEl.preload = "auto"; }
+  return audioEl;
+}
+// A tenth of a second of silence: playing it from a tap lets iPhones play Bro's audio later without another tap
+const SILENCE = "data:audio/wav;base64,UklGRigAAABXQVZFZm10IBAAAAABAAEAQB8AAEAfAAABAAgAZGF0YQQAAACAgICA";
+let audioUnlocked = false;
+function unlockAudio() {
+  if (audioUnlocked || !siteStudioVoice() || typeof Audio === "undefined" || isApp()) return;
+  audioUnlocked = true;
+  try { const el = player(); el.src = SILENCE; el.play().catch(() => { audioUnlocked = false; }); } catch { audioUnlocked = false; }
+}
+
+function studioSay(text: string, rate: number): Promise<void> {
+  return new Promise<void>((resolve, reject) => {
+    const k = studioKey(text, rate);
+    const pending = audioCache.get(k) || fetchAudio(text, rate);
+    audioCache.delete(k);
+    let finished = false;
+    let url = "";
+    let watch: ReturnType<typeof setTimeout> | undefined;
+    const el = player();
+    function done(err?: unknown) {
+      if (finished) return;
+      finished = true;
+      clearTimeout(watch);
+      if (stopCurrent === stop) stopCurrent = null;
+      el.onended = el.onerror = null;
+      if (url) { try { el.pause(); } catch { /* ignore */ } URL.revokeObjectURL(url); }
+      err ? reject(err) : resolve();
+    }
+    const stop = () => done();
+    stopCurrent = stop;
+    pending.then((blob) => {
+      if (finished) return;
+      url = URL.createObjectURL(blob);
+      el.onended = () => done();
+      el.onerror = () => done(new Error("audio error"));
+      el.src = url;
+      el.play().then(() => {
+        const secs = Number.isFinite(el.duration) && el.duration > 0 ? el.duration : text.length / 12;
+        watch = setTimeout(() => done(), secs * 1000 + 4000);
+      }, (e: any) => done(e?.name === "NotAllowedError" ? new SpeechError("blocked") : e));
+    }, (e) => done(e));
+  });
+}
+
 export async function say(kind: TtsKind, text: string, rate = 1): Promise<void> {
-  if (!kind || !text.trim()) return;
+  if (!text.trim()) return;
+  if (studioOn()) {
+    try { return await studioSay(text, rate); }
+    catch (e) {
+      if (e instanceof SpeechError) throw e; // the browser wants a tap: the device voice would be blocked too
+      studioDownUntil = Date.now() + 120_000;
+      audioCache.clear();
+    }
+  }
+  if (!kind) return;
   if (kind === "web") { if (!webVoice) await resolveWebVoice(); return webSay(text, rate); }
   if (nativeVoices === null) await resolveNativeVoice();
   try { return await nativeSay(text, rate); }
@@ -255,6 +354,7 @@ export async function say(kind: TtsKind, text: string, rate = 1): Promise<void> 
 export function stopSpeaking(kind: TtsKind) {
   const s = stopCurrent;
   stopCurrent = null;
+  if (audioEl) { try { audioEl.pause(); } catch { /* ignore */ } }
   if (kind === "web") { try { window.speechSynthesis.cancel(); lastCancel = Date.now(); } catch { /* ignore */ } }
   if (kind === "native") TextToSpeech.stop().catch(() => {});
   s?.();
@@ -296,7 +396,7 @@ export class Speaker {
   private dead = false;
   constructor(private kind: TtsKind, private rate: () => number) {}
   push(text: string) {
-    if (!this.kind || !text.trim() || this.dead) return;
+    if ((!this.kind && !studioOn()) || !text.trim() || this.dead) return;
     this.q.push(...splitLong(text));
     if (!this.busy) this.run(this.gen);
   }
@@ -304,6 +404,8 @@ export class Speaker {
     this.busy = true;
     while (g === this.gen && this.q.length) {
       const t = this.q.shift() as string;
+      prefetchSpeech(t, this.rate());
+      if (this.q.length) prefetchSpeech(this.q[0], this.rate());
       try { await say(this.kind, t, this.rate()); }
       catch (e) {
         if (g !== this.gen) return;

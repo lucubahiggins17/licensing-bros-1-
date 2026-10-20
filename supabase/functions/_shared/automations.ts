@@ -4,11 +4,13 @@
 //   inactive_nudge    — a friendly in-app nudge to students who've gone quiet (once a week at most)
 //   exam_countdown    — tips 14, 7, 3 and 1 day(s) before each student's exam
 //   new_signup_alert  — tells admins about new accounts
+//   knowledge_research — Bro's research desk studies the next topics (see research.ts); runs in the background
 // Messages go by email when the job's "email" option is on and email is set up; otherwise as in-app notifications.
 import { adminClient } from "./common.ts";
 import { type AutomationKind, countdownNote, isDue, localParts, nudgeNote, type StudentSummary } from "./logic.ts";
 import { allStudents } from "./assistant.ts";
 import { emailReady, sendEmails } from "./email.ts";
+import { background, nextBatch, researchOne, researchStats } from "./research.ts";
 
 export type AutomationRow = { kind: AutomationKind; enabled: boolean; config: Record<string, any>; state: Record<string, any>; last_run_at: string | null; last_result: string | null };
 const DAY = 864e5;
@@ -50,6 +52,12 @@ function toughestTopics(students: StudentSummary[], n = 4) {
 async function run(row: AutomationRow, now: number): Promise<{ result: string; state: Record<string, any> }> {
   const cfg = row.config || {};
   const state = { ...(row.state || {}) };
+  if (row.kind === "knowledge_research") {
+    const { rows, note } = await nextBatch(cfg, now);
+    if (!rows.length) return { result: `Research desk: ${note}.`, state };
+    background(Promise.all(rows.map((r) => researchOne(r, { reviewFirst: cfg.review_first === true }))));
+    return { result: `Research desk: studying ${rows.map((r) => `"${r.topic.slice(0, 60)}"`).join(", ")}.`.slice(0, 300), state };
+  }
   const all = await allStudents();
   const students = all.filter((s) => s.role === "student");
   const link = site() ? `${site()}/admin/#assistant` : "/admin/#assistant";
@@ -64,6 +72,7 @@ async function run(row: AutomationRow, now: number): Promise<{ result: string; s
       const { data: lives } = await db.from("lives").select("title, starts_at").neq("status", "ended").gte("starts_at", new Date(now).toISOString()).lte("starts_at", new Date(now + 7 * DAY).toISOString()).order("starts_at").limit(5);
       const tz = cfg.tz || "America/Chicago";
       const topics = toughestTopics(students);
+      const rs = await researchStats(now).catch(() => null);
       const lines = [
         `Here's your week at Licensing Bro's.`,
         "",
@@ -73,6 +82,7 @@ async function run(row: AutomationRow, now: number): Promise<{ result: string; s
         `- ${risky.length} at risk of failing`,
         ...(risky.length ? ["", "Who needs help first:", ...risky.slice(0, 8).map((s) => `- ${s.name} (${s.email}): ${s.reasons.join("; ")}`)] : []),
         ...(topics.length ? ["", "Toughest topics across students:", ...topics.map((t) => `- ${t.topic}: ${t.pct}% correct`)] : []),
+        ...(rs && rs.studies_week ? ["", `Bro's research desk: ${rs.studies_week} topic${rs.studies_week === 1 ? "" : "s"} studied, ${rs.learned_week} new fact${rs.learned_week === 1 ? "" : "s"} checked and added to the library${rs.waiting_review ? `, ${rs.waiting_review} stud${rs.waiting_review === 1 ? "y" : "ies"} waiting for your review` : ""}.`] : []),
         ...(lives && lives.length ? ["", "Live classes this week:", ...lives.map((l: { title: string; starts_at: string }) => `- ${l.title}, ${new Date(l.starts_at).toLocaleString("en-US", { timeZone: tz, weekday: "short", month: "short", day: "numeric", hour: "numeric", minute: "2-digit" })}`)] : ["", "No live classes on the schedule this week. A review class on the toughest topic above would help."]),
         "",
         `Ask Bro Command to act on any of this: ${link}`

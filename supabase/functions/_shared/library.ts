@@ -51,7 +51,7 @@ const MAX_TEXT = 2_000_000;
 export type DocFields = { title: string; trade: string | null; state: string | null; kind: string; source_url: string | null };
 
 /** Saves a document as cited passages. Searchable by keywords right away; call embedPending to add meaning search. */
-export async function saveLibraryDocument(userId: string, f: DocFields, text: string) {
+export async function saveLibraryDocument(userId: string | null, f: DocFields, text: string) {
   if (!f.title) throw new HttpError(400, "bad_request", "Give the document a title.");
   const clean = text.slice(0, MAX_TEXT);
   const passages = chunkText(clean);

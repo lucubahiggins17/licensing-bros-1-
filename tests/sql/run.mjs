@@ -358,14 +358,42 @@ console.log("\ncommand center");
 console.log("\nautomations");
 {
   const one = async (u, sql, params) => as(u, "authenticated", () => tryQ(sql, params));
-  ok("five automations come set up", (await db.query(`select count(*)::int n from public.automations`)).rows[0].n === 5);
-  ok("instructors can see automations", (await one(ids.teacher, `select kind from public.automations`)).rows.length === 5);
+  ok("six automations come set up, the research desk switched on", (await db.query(`select count(*)::int n, bool_or(kind = 'knowledge_research' and enabled) r from public.automations`)).rows[0].n === 6 && (await db.query(`select bool_or(kind = 'knowledge_research' and enabled) r from public.automations`)).rows[0].r === true);
+  ok("instructors can see automations", (await one(ids.teacher, `select kind from public.automations`)).rows.length === 6);
   ok("students can't see automations", (await one(ids.paid, `select kind from public.automations`)).rows.length === 0);
   ok("admins can switch an automation on or off", (await one(ids.admin, `update public.automations set enabled = true where kind = 'new_signup_alert' returning kind`)).rows.length === 1);
   ok("instructors can't switch automations", (await one(ids.teacher, `update public.automations set enabled = false where kind = 'weekly_digest' returning kind`)).rows.length === 0);
   ok("nobody can fake a run from the app", !!(await one(ids.admin, `update public.automations set last_run_at = now() where kind = 'weekly_digest'`)).error);
   await db.exec(schema);
   ok("re-running schema.sql keeps admins' automation choices", (await db.query(`select enabled from public.automations where kind = 'new_signup_alert'`)).rows[0].enabled === true);
+}
+
+console.log("\nresearch desk");
+{
+  const one = async (u, sql, params) => as(u, "authenticated", () => tryQ(sql, params));
+  const log = (key, q) => as(null, "service_role", () => tryQ(`select public.kb_log_gap($1, $2, 'gc', 'Georgia', 'state')`, [key, q]));
+  await log("gc|Georgia|lien notice", "What is the lien notice deadline in Georgia?");
+  await log("gc|Georgia|lien notice", "What's the lien notice deadline in Georgia?");
+  let g = await db.query(`select hits, status, reason, trade, state from public.kb_gaps where key = 'gc|Georgia|lien notice'`);
+  ok("the tutor's missed questions are counted, not duplicated", g.rows.length === 1 && g.rows[0].hits === 2 && g.rows[0].reason === "state" && g.rows[0].state === "Georgia");
+  ok("students can't log or read missed questions", !!(await one(ids.paid, `select public.kb_log_gap('x', 'y question here', null, null)`)).error && (await one(ids.paid, `select id from public.kb_gaps`)).rows.length === 0);
+  ok("instructors can read missed questions", (await one(ids.teacher, `select id from public.kb_gaps`)).rows.length === 1);
+  ok("nobody can edit them from the app", (await one(ids.admin, `update public.kb_gaps set status = 'dismissed' returning id`)).rows.length === 0 || !!(await one(ids.admin, `update public.kb_gaps set status = 'dismissed' returning id`)).error);
+  await db.query(`update public.kb_gaps set status = 'dismissed'`);
+  await log("gc|Georgia|lien notice", "Georgia lien notice deadline?");
+  ok("a dismissed question stays dismissed", (await db.query(`select status from public.kb_gaps where key = 'gc|Georgia|lien notice'`)).rows[0].status === "dismissed");
+  await db.query(`update public.kb_gaps set status = 'researched', last_seen = now() - interval '90 days'`);
+  await log("gc|Georgia|lien notice", "Georgia lien notice deadline?");
+  ok("one researched long ago opens again when students keep asking", (await db.query(`select status from public.kb_gaps where key = 'gc|Georgia|lien notice'`)).rows[0].status === "open");
+  const gid = (await db.query(`select id from public.kb_gaps limit 1`)).rows[0].id;
+  const doc = await db.query(`insert into public.kb_docs (title, kind, trade, state, status) values ('Bro''s research: Georgia lien notices', 'research', 'gc', 'Georgia', 'ready') returning id`);
+  ok("research documents are allowed in the library", doc.rows.length === 1);
+  await db.query(`insert into public.kb_research (topic, trade, state, origin, gap_id, status, claims, doc_id, flags) values ('Georgia lien notices', 'gc', 'Georgia', 'gap', $1, 'published', '[{"claim":"x","kept":true}]', $2, 1)`, [gid, doc.rows[0].id]);
+  ok("instructors can follow the research desk", (await one(ids.teacher, `select status from public.kb_research`)).rows.length === 1);
+  ok("students can't see the research desk", (await one(ids.paid, `select id from public.kb_research`)).rows.length === 0);
+  ok("nobody can queue research from the app directly", !!(await one(ids.admin, `insert into public.kb_research (topic) values ('sneaky topic')`)).error);
+  await db.query(`delete from public.kb_docs where id = $1`, [doc.rows[0].id]);
+  ok("deleting a research document keeps the study record", (await db.query(`select doc_id from public.kb_research`)).rows[0].doc_id === null);
 }
 
 console.log("\nupgrading an older project");

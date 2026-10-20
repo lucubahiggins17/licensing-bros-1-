@@ -11,6 +11,7 @@ import { buildDeck, buildTest } from "./builders.ts";
 import { emailReady, sendEmails } from "./email.ts";
 import { askModel } from "./builders.ts";
 import { MODEL } from "./common.ts";
+import { background, queueStudies, researchOne } from "./research.ts";
 
 export type Role = "admin" | "instructor";
 export type ToolCtx = { userId: string; role: Role; name: string; tz: string };
@@ -73,7 +74,7 @@ async function topicTrends(trade?: string, state?: string): Promise<{ topic: str
   return [...agg].filter(([, v]) => v.a >= 10).map(([topic, v]) => ({ topic, pct: Math.round((v.c / v.a) * 100), attempts: v.a, students: v.n })).sort((x, y) => x.pct - y.pct);
 }
 
-const AUTO_LABEL: Record<string, string> = { weekly_digest: "Weekly team digest", at_risk_alert: "At-risk alerts", inactive_nudge: "Study nudges", exam_countdown: "Exam countdown", new_signup_alert: "New signup alerts" };
+const AUTO_LABEL: Record<string, string> = { weekly_digest: "Weekly team digest", at_risk_alert: "At-risk alerts", inactive_nudge: "Study nudges", exam_countdown: "Exam countdown", new_signup_alert: "New signup alerts", knowledge_research: "Research desk" };
 
 function studentLine(s: StudentSummary): string {
   const bits = [
@@ -475,13 +476,13 @@ Plain text with short headings and dashes, under 450 words.`, 1600);
   },
   {
     name: "set_automation", mode: "confirm", label: "Preparing an automation change", adminOnly: true,
-    description: "Admins only: switch an automation on or off or change its options: hour (0-23, local), weekday (0=Sun..6=Sat, weekly digest only), email (true/false), audience (staff|instructors|admins), days (inactivity days for nudges), tz (IANA zone). Waits for confirmation.",
-    input_schema: { type: "object", properties: { kind: { type: "string", enum: ["weekly_digest", "at_risk_alert", "inactive_nudge", "exam_countdown", "new_signup_alert"] }, enabled: { type: "boolean" }, hour: { type: "integer", minimum: 0, maximum: 23 }, weekday: { type: "integer", minimum: 0, maximum: 6 }, email: { type: "boolean" }, audience: { type: "string", enum: ["staff", "instructors", "admins"] }, days: { type: "integer", minimum: 3, maximum: 30 }, tz: { type: "string" } }, required: ["kind"] },
+    description: "Admins only: switch an automation on or off or change its options: hour (0-23, local), weekday (0=Sun..6=Sat, weekly digest only), email (true/false), audience (staff|instructors|admins), days (inactivity days for nudges), tz (IANA zone). Research desk (knowledge_research): every_hours (1-48), daily_cap (topics a day, 0-48), review_first (true holds every finding for an admin). Waits for confirmation.",
+    input_schema: { type: "object", properties: { kind: { type: "string", enum: ["weekly_digest", "at_risk_alert", "inactive_nudge", "exam_countdown", "new_signup_alert", "knowledge_research"] }, enabled: { type: "boolean" }, hour: { type: "integer", minimum: 0, maximum: 23 }, weekday: { type: "integer", minimum: 0, maximum: 6 }, email: { type: "boolean" }, audience: { type: "string", enum: ["staff", "instructors", "admins"] }, days: { type: "integer", minimum: 3, maximum: 30 }, tz: { type: "string" }, every_hours: { type: "integer", minimum: 1, maximum: 48 }, daily_cap: { type: "integer", minimum: 0, maximum: 48 }, review_first: { type: "boolean" } }, required: ["kind"] },
     prepare: async (i, ctx) => {
       const { data: row } = await adminClient().from("automations").select("kind, enabled, config").eq("kind", String(i.kind)).maybeSingle();
       if (!row) throw new HttpError(404, "not_found", "That automation doesn't exist. Run the latest schema.sql.");
       const config = { ...(row.config || {}) };
-      for (const k of ["hour", "weekday", "email", "audience", "days", "tz"]) if (i[k] !== undefined) config[k] = i[k];
+      for (const k of ["hour", "weekday", "email", "audience", "days", "tz", "every_hours", "daily_cap", "review_first"]) if (i[k] !== undefined) config[k] = i[k];
       if (config.tz) { try { new Intl.DateTimeFormat("en-US", { timeZone: String(config.tz) }); } catch { throw new HttpError(400, "bad_request", "That time zone isn't valid (use one like America/Chicago)."); } }
       else config.tz = ctx.tz;
       const enabled = typeof i.enabled === "boolean" ? i.enabled : row.enabled;
@@ -492,6 +493,37 @@ Plain text with short headings and dashes, under 450 words.`, 1600);
       const { error } = await adminClient().from("automations").update({ enabled: p.enabled, config: p.config, updated_at: new Date().toISOString() }).eq("kind", p.kind);
       if (error) throw new HttpError(500, "server_error", "Couldn't save the automation.");
       return `${AUTO_LABEL[p.kind]} is ${p.enabled ? "on" : "off"}.`;
+    }
+  },
+  {
+    name: "knowledge_gaps", mode: "read", label: "Checking what Bro couldn't answer",
+    description: "The research desk: questions students asked that the knowledge base couldn't answer well (most asked first), recent studies with how many findings were confirmed and published, and anything waiting for an admin's review.",
+    input_schema: { type: "object", properties: {} },
+    run: async () => {
+      const db = adminClient();
+      const [{ data: gaps }, { data: studies }] = await Promise.all([
+        db.from("kb_gaps").select("question, trade, state, hits, last_seen").eq("status", "open").order("hits", { ascending: false }).limit(12),
+        db.from("kb_research").select("topic, state, status, claims, flags, created_at").order("created_at", { ascending: false }).limit(8)
+      ]);
+      // deno-lint-ignore no-explicit-any
+      const g = ((gaps || []) as any[]).map((x) => `"${x.question}" (${TRADE_NAME[x.trade] || "any trade"}${x.state ? `, ${x.state}` : ""}) asked ${x.hits}×`);
+      // deno-lint-ignore no-explicit-any
+      const st = ((studies || []) as any[]).map((x) => `${x.topic}${x.state ? ` (${x.state})` : ""}: ${x.status}, ${(x.claims || []).filter((c: any) => c.kept).length} published${x.flags ? `, ${x.flags} to check` : ""}`);
+      const items = [...g.map((x) => `Gap: ${x}`), ...st.map((x) => `Study: ${x}`)];
+      return { text: [`Open questions the knowledge base missed:`, ...(g.length ? g : ["none"]), "", "Recent studies:", ...(st.length ? st : ["none yet"])].join("\n"), card: { kind: "list", title: "Research desk", items: items.length ? items.slice(0, 14) : ["No gaps logged and no studies yet"] } };
+    }
+  },
+  {
+    name: "research_topic", mode: "auto", label: "Starting a research study",
+    description: "Send Bro's research desk to study a topic on the web right now (for example a state's lien deadlines or which NEC edition a state adopted). It searches official sources, an independent second check confirms each finding, and confirmed findings go into the knowledge library within a few minutes; anything disputed waits for an admin. Use when someone asks you to learn, research or update knowledge on something.",
+    input_schema: { type: "object", properties: { topic: { type: "string" }, trade: { type: "string", enum: TRADE_KEYS }, state: { type: "string" } }, required: ["topic"] },
+    run: async (i, ctx) => {
+      const topic = str(i.topic, 300);
+      if (topic.length < 8) throw new HttpError(400, "bad_request", "Say what to research in a few words.");
+      const [row] = await queueStudies([{ topic, trade: tradeOf(i.trade) || null, state: stateOf(i.state) || null, origin: "staff" }], ctx.userId);
+      const { data: auto } = await adminClient().from("automations").select("config").eq("kind", "knowledge_research").maybeSingle();
+      background(researchOne(row, { reviewFirst: auto?.config?.review_first === true }));
+      return { text: `Research started on "${topic}". Findings that pass the independent check land in the knowledge library in a few minutes; the Knowledge section shows progress.`, card: { kind: "created", title: "Research started", detail: topic, link: "/admin/#knowledge", linkLabel: "Watch it in Knowledge" } };
     }
   },
   {
@@ -524,7 +556,7 @@ export function commandSystem(ctx: ToolCtx, nowLocal: string, voice: boolean): s
   return `You are Bro Command, the AI chief of staff for Licensing Bro's, an exam-prep platform for U.S. contractor licensing exams (General Contractor, Electrical, Plumbing, HVAC, plus Business & Law, all 50 states). You work for the people who run it.
 You're talking with ${ctx.name}, ${ctx.role === "admin" ? "an admin (owner tools: full access)" : "an instructor (teaching tools; no prices, settings or roles)"}. It is ${nowLocal} in ${ctx.tz}.
 
-You can look things up (site_overview, find_students, student_report, topic_trends, list_live_classes, list_practice_sets, list_courses, list_staff, list_automations, search_knowledge), build things right away (create_practice_test, create_game_deck, class_prep), and prepare actions that wait for the person's OK (send_announcement, send_email, schedule_live_class, publish_practice_set, add_knowledge${ctx.role === "admin" ? ", set_instructor, set_automation" : ""}).
+You can look things up (site_overview, find_students, student_report, topic_trends, list_live_classes, list_practice_sets, list_courses, list_staff, list_automations, search_knowledge, knowledge_gaps), build things right away (create_practice_test, create_game_deck, class_prep, research_topic), and prepare actions that wait for the person's OK (send_announcement, send_email, schedule_live_class, publish_practice_set, add_knowledge${ctx.role === "admin" ? ", set_instructor, set_automation" : ""}).
 
 How you work:
 1. Act, don't just advise. When asked to do something, use the tools, and chain steps on your own (for example: find at-risk students, then prepare a personal email to each group, then schedule a review class).

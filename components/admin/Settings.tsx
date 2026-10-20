@@ -2,7 +2,8 @@
 import { useAuth } from "@/lib/auth";
 // Settings: homepage text and stats, plan limits, location rules, admin code and support contact.
 import { useCallback, useEffect, useState } from "react";
-import { Plus, Trash2, TriangleAlert } from "lucide-react";
+import { CheckCircle2, Mic, Play, Plus, Trash2, TriangleAlert } from "lucide-react";
+import { audioFn, callFn } from "@/lib/api";
 import { supabase } from "@/lib/supabaseClient";
 import type { Limits, SiteSettings } from "@/lib/types";
 import { errMsg, q } from "./format";
@@ -20,7 +21,8 @@ const DEFAULTS: SiteSettings = {
   free_limits: { ai_daily: 5, exam_max_questions: 10, ai_exams: false, practice_sets: false },
   paid_limits: { ai_daily: 60, exam_max_questions: 50, ai_exams: true, practice_sets: true },
   location_rules: { enforce: true, home_radius_miles: 100, home_change_days: 30, away_max_days: 30, away_default_days: 14, away_passes_per_90_days: 3, session_timeout_seconds: 120 },
-  support: { email: "", phone: "" }
+  support: { email: "", phone: "" },
+  voice: { studio: false }
 };
 type Key = keyof SiteSettings;
 
@@ -57,6 +59,7 @@ export default function SettingsSection() {
             <LimitsCard k="paid_limits" title="Paid student limits" code="Form ST-4 · Paid plan" initial={data.paid_limits}
               intro="What students get once they've bought any course." />
           </div>
+          <VoiceCard initial={data.voice || { studio: false }} />
           <LocationCard initial={data.location_rules} />
           <AdminCodeCard />
           <SupportCard initial={data.support} />
@@ -267,6 +270,55 @@ function SupportCard({ initial }: { initial: SiteSettings["support"] }) {
         </label>
       </div>
       <Actions dirty={st.dirty} saving={st.saving} onSave={() => st.save((x) => ({ email: x.email.trim(), phone: x.phone.trim() }))} onDiscard={st.discard} problem={st.problem} />
+    </FormPanel>
+  );
+}
+
+// ------------------------------------------------------------------------------------------------
+type VoiceHealth = { configured: boolean; ok: boolean; ms?: number; voice?: string; error?: string };
+function VoiceCard({ initial }: { initial: NonNullable<SiteSettings["voice"]> }) {
+  const { toast } = useAdmin();
+  const st = useSetting("voice", { studio: !!initial.studio });
+  const [health, setHealth] = useState<VoiceHealth | null>(null);
+  const [busy, setBusy] = useState<"" | "check" | "play">("");
+
+  async function check() {
+    setBusy("check");
+    try { setHealth(await callFn<VoiceHealth>("voice", { action: "health" })); }
+    catch (e) { setHealth({ configured: false, ok: false, error: errMsg(e, "Couldn't reach the voice function. Run Build Android app to deploy it.") }); }
+    setBusy("");
+  }
+  async function play() {
+    setBusy("play");
+    try {
+      const blob = await audioFn("voice", { text: "Hey, I'm Bro. Let's get you licensed. Ask me anything about your exam." });
+      const url = URL.createObjectURL(blob);
+      const a = new Audio(url);
+      a.onended = () => URL.revokeObjectURL(url);
+      await a.play();
+    } catch (e) { toast(errMsg(e, "The voice server didn't answer."), "bad"); }
+    setBusy("");
+  }
+
+  return (
+    <FormPanel code="Form ST-7 · Voice" title="Bro's voice">
+      <p className="note" style={{ margin: 0 }}>
+        By default Bro talks with each phone&rsquo;s built-in voice. Switch on the studio voice to use your own voice server instead, so every student hears the same natural voice (you can even clone one with VoiceStudio). It works with VoiceStudio, Kokoro-FastAPI, OpenAI&rsquo;s speech API or any server with the same <code>/v1/audio/speech</code> format. Set <b>VOICE_API_URL</b> (and <b>VOICE_API_KEY</b>, <b>VOICE_NAME</b> if needed) in GitHub, then run Build Android app. If the server can&rsquo;t be reached, students automatically hear the phone&rsquo;s voice instead.
+      </p>
+      <div className="row" style={{ gap: 8, flexWrap: "wrap" }}>
+        <button type="button" className="btn sm" onClick={check} disabled={!!busy}><Mic aria-hidden="true" />{busy === "check" ? "Checking…" : "Check the voice server"}</button>
+        <button type="button" className="btn sm" onClick={play} disabled={!!busy}><Play aria-hidden="true" />{busy === "play" ? "Loading…" : "Play a sample"}</button>
+      </div>
+      {health && (
+        <p className={health.ok ? "note" : "err"} role="status" style={{ margin: 0, display: "flex", gap: 6, alignItems: "flex-start" }}>
+          {health.ok ? <CheckCircle2 aria-hidden="true" style={{ width: 16, height: 16, color: "var(--ok)", flex: "none", marginTop: 2 }} /> : <TriangleAlert aria-hidden="true" style={{ width: 16, height: 16, flex: "none", marginTop: 2 }} />}
+          <span>{health.ok ? `Voice server is working (voice "${health.voice}", ${((health.ms || 0) / 1000).toFixed(1)}s for a sample sentence).` : health.error || "The voice server isn't working."}</span>
+        </p>
+      )}
+      <Toggle checked={st.value.studio} label="Use Bro's studio voice for students"
+        hint="Students can still pick a phone voice in Talk to Bro's voice settings."
+        onChange={(v) => st.setValue({ studio: v })} />
+      <Actions dirty={st.dirty} saving={st.saving} onSave={() => st.save()} onDiscard={st.discard} problem={st.problem} />
     </FormPanel>
   );
 }

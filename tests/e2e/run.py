@@ -67,6 +67,8 @@ def wire(page, fake):
             if path.startswith("/functions/v1/"):
                 name = path[len("/functions/v1/"):].split("?")[0]
                 status, data = fake.fn(name, body or {})
+                if isinstance(data, (bytes, bytearray)):
+                    return route.fulfill(status=status, headers={**cors, "content-type": "audio/wav"}, body=bytes(data))
                 if isinstance(data, str):
                     return route.fulfill(status=status, headers={**cors, "content-type": "text/plain; charset=utf-8"}, body=data)
                 return route.fulfill(status=status, headers={**cors, "content-type": "application/json"}, body=json.dumps(data))
@@ -725,10 +727,13 @@ def automations_page(browser):
     goto(page, "/admin/#automations")
     page.wait_for_timeout(1000)
     shot(page, "automations")
-    check("automations section lists the five jobs", all(page.get_by_text(t, exact=True).count() > 0 for t in ["Weekly team digest", "At-risk alerts", "Study nudges", "Exam countdown", "New signup alerts"]))
+    check("automations section lists the six jobs", all(page.get_by_text(t, exact=True).count() > 0 for t in ["Bro's research desk", "Weekly team digest", "At-risk alerts", "Study nudges", "Exam countdown", "New signup alerts"]))
+    page.get_by_label("Topics a day (at most)").select_option("2")
+    page.wait_for_timeout(400)
+    check("the research desk's daily limit is adjustable", next(r for r in fake.db["automations"] if r["kind"] == "knowledge_research")["config"].get("daily_cap") == 2)
     check("opening the admin area runs whatever is due", ("automations", "run_due") in fake.calls)
     check("shows the last run and result", page.get_by_text("email isn't set up", exact=False).first.count() > 0)
-    page.get_by_role("switch", name="Off").first.click()
+    page.get_by_role("switch", name="Off", exact=True).first.click()
     page.wait_for_timeout(500)
     row = next(r for r in fake.db["automations"] if r["kind"] == "new_signup_alert")
     check("switching one on saves it", row["enabled"] is True)
@@ -869,6 +874,112 @@ def voice_playback(browser):
     else:
         check("tutor has a Read aloud button", False)
     check("voice screens ran without errors", not errors, "; ".join(errors[:3]))
+    ctx.close()
+
+# Audio elements that "play" instantly (headless browsers have no speakers); each play is logged
+FAKE_AUDIO = """
+(() => {
+  window.__audio = [];
+  HTMLMediaElement.prototype.play = function () {
+    const src = this.src || "";
+    if (!src.startsWith("data:")) window.__audio.push(src.slice(0, 20));
+    setTimeout(() => this.dispatchEvent(new Event("ended")), 60);
+    return Promise.resolve();
+  };
+  HTMLMediaElement.prototype.pause = function () {};
+})();
+"""
+
+@scenario
+def studio_voice(browser):
+    fake = FakeBackend(user_id=FREE_ID)
+    fake.db["site_settings"].append({"key": "voice", "value": {"studio": True}})
+    ctx, page, errors = new_page(browser, fake)
+    ctx.add_init_script(FAKE_TTS % json.dumps({"mode": "ok"}))
+    ctx.add_init_script(FAKE_AUDIO)
+    goto(page, "/learn/#tutor")
+    page.get_by_role("button", name="Talk to Bro").first.click()
+    page.wait_for_timeout(600)
+    def ask(q):
+        page.fill("#talk-typed", q)
+        page.locator("#talk-typed").press("Enter")
+        page.wait_for_timeout(4000)
+        return [e for e in page.evaluate("window.__tts || []") if e["t"] == "spoke"]
+    spoke = ask("How high is a guardrail?")
+    texts = getattr(fake, "voice_texts", [])
+    audio = page.evaluate("window.__audio")
+    check("with the studio voice on, Bro's answer is spoken by the voice server", len(texts) >= 2 and len(audio) >= 2, f"{len(texts)} texts, {len(audio)} plays")
+    check("the phone's voice stays quiet while the studio voice works", not spoke, json.dumps(spoke)[:200])
+    check("sources aren't sent to the voice server", not any("osha.gov" in t or "Sources" in t for t in texts), json.dumps(texts)[:300])
+    fake.voice_down = True
+    spoke = ask("What about stair rails?")
+    check("when the voice server is down, Bro switches to the phone's voice", len(spoke) >= 1, json.dumps(spoke)[:200])
+    check("and no error is shown", page.get_by_text("couldn't play Bro's voice", exact=False).count() == 0)
+    page.get_by_role("button", name="Voice settings").click()
+    page.wait_for_timeout(500)
+    check("voice settings offer Bro's studio voice, picked by default", page.locator("#talk-voice").input_value() == "studio" and page.locator("#talk-voice option", has_text="Bro's studio voice").count() == 1)
+    page.locator("#talk-voice").select_option("Microsoft David")
+    check("a student can switch back to a phone voice", page.evaluate("localStorage.getItem('lb.voice.studio')") == "0")
+    check("studio voice ran without errors", not errors, "; ".join(errors[:3]))
+    ctx.close()
+    # Admin: check the server from Settings
+    fake = FakeBackend(user_id=ADMIN_ID)
+    ctx, page, errors = new_page(browser, fake)
+    goto(page, "/admin/#settings")
+    page.wait_for_selector("text=Bro's voice", timeout=8000)
+    page.get_by_role("button", name="Check the voice server").click()
+    page.wait_for_timeout(600)
+    check("admins can check the voice server from Settings", page.get_by_text("Voice server is working", exact=False).count() == 1)
+    page.get_by_role("switch", name="Use Bro's studio voice for students").click()
+    page.get_by_role("button", name="Save", exact=True).click()
+    page.wait_for_timeout(600)
+    check("switching the studio voice on saves the site setting", any(r["key"] == "voice" and r["value"].get("studio") is True for r in fake.db["site_settings"]))
+    check("voice settings ran without errors", not errors, "; ".join(errors[:3]))
+    ctx.close()
+
+# ---------------------------------------------------------------------------------------------------------------------
+@scenario
+def research_desk(browser):
+    fake = FakeBackend(user_id=ADMIN_ID)
+    ctx, page, errors = new_page(browser, fake)
+    goto(page, "/admin/#knowledge")
+    page.wait_for_selector("text=Bro's research desk", timeout=8000)
+    page.wait_for_timeout(600)
+    check("research desk shows what Bro learned this week", page.get_by_text("facts learned this week", exact=False).count() == 1 and page.get_by_text("waiting for review", exact=False).count() >= 1)
+    check("questions Bro couldn't answer are listed, most asked first", page.get_by_text("retainage limit on private jobs in Georgia", exact=False).count() == 1 and page.get_by_text("asked 7×", exact=False).count() == 1)
+    page.get_by_role("button", name="Research", exact=True).first.click()
+    page.wait_for_timeout(800)
+    check("Research sends a student question to the desk", ("research", "research_gap") in fake.calls and page.get_by_text("Researching", exact=True).count() >= 1)
+    page.get_by_label("Research something now").fill("Ohio electrical license exam passing score")
+    page.locator("form").filter(has=page.get_by_label("Research something now")).locator("select").nth(1).select_option("Ohio")
+    page.get_by_role("button", name="Research it").click()
+    page.wait_for_timeout(800)
+    check("staff can send the desk to research anything", getattr(fake, "research_topic", "") == "Ohio electrical license exam passing score")
+    page.get_by_role("button", name="Georgia mechanic's lien law", exact=False).click()
+    page.wait_for_timeout(400)
+    check("each finding shows its verdict and official source", page.get_by_text("Disputed", exact=False).count() >= 1 and page.get_by_role("link", name="O.C.G.A. 44-14-361.1", exact=False).count() >= 1)
+    check("a finding that disagrees with a built-in fact is called out", page.get_by_text("Disagrees with built-in fact law-ga-02", exact=False).count() == 1)
+    boxes = page.get_by_role("checkbox", name="Publish finding", exact=False)
+    check("admins pick which findings to publish (confirmed ones preselected, disputed and conflicting ones not)", boxes.count() == 3 and boxes.nth(0).is_checked() and not boxes.nth(1).is_checked() and not boxes.nth(2).is_checked())
+    boxes.nth(2).check()
+    page.get_by_role("button", name="Publish 2 selected").click()
+    page.wait_for_timeout(800)
+    check("publishing sends only the chosen findings", getattr(fake, "approved_keep", None) == [0, 2], str(getattr(fake, "approved_keep", None)))
+    page.get_by_role("button", name="Tennessee contractor license renewal", exact=False).click()
+    page.wait_for_timeout(300)
+    check("corrected findings show what was fixed", page.get_by_text("no continuing education requirement", exact=False).count() == 1)
+    shot(page, "research-desk")
+    check("research desk has no sideways scroll", no_overflow(page))
+    check("research desk ran without errors", not errors, "; ".join(errors[:3]))
+    ctx.close()
+    # Instructors follow along but can't publish
+    fake = FakeBackend(user_id=TEACH_ID)
+    ctx, page, errors = new_page(browser, fake)
+    goto(page, "/admin/#knowledge")
+    page.wait_for_selector("text=Bro's research desk", timeout=8000)
+    page.get_by_role("button", name="Georgia mechanic's lien law", exact=False).click()
+    page.wait_for_timeout(300)
+    check("instructors see the findings but not the publish controls", page.get_by_role("checkbox", name="Publish finding", exact=False).count() == 0 and page.get_by_role("button", name="Discard").count() == 0)
     ctx.close()
 
 # ---------------------------------------------------------------------------------------------------------------------

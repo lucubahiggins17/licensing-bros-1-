@@ -10,13 +10,14 @@ import { BANK, STATES, type Question } from "@/lib/data";
 import { errMsg, fmtDate, num, plural, q } from "./format";
 import { useAdmin, useDirty, useMounted, ConfirmButton, Empty, ErrorBox, FormPanel, Loading, SectionHead, Step } from "./ui";
 import s from "./admin.module.css";
+import ResearchDesk from "./Research";
 
 type Doc = { id: string; title: string; kind: string; trade: string | null; state: string | null; source_url: string | null; status: string; error: string | null; chunk_count: number; char_count: number; created_at: string };
 type Stats = { builtin: { facts: number; verified: number; byTrade: Record<string, number>; states: string[] }; library: { docs: number; passages: number; unindexed: number } };
 type Hit = { id: string; ref: string; text: string; score: number };
 
 export const KB_TRADES: Record<string, string> = { gc: "General Contractor", elec: "Electrical", plumb: "Plumbing", hvac: "HVAC / Mechanical", law: "Business & Law" };
-const KINDS: Record<string, string> = { notes: "Study notes", bulletin: "Candidate bulletin", rules: "Board rules or statute", code: "Code summary", lesson: "Lesson material", web: "Web page", other: "Other" };
+const KINDS: Record<string, string> = { notes: "Study notes", bulletin: "Candidate bulletin", rules: "Board rules or statute", code: "Code summary", lesson: "Lesson material", web: "Web page", research: "Bro's research", other: "Other" };
 type Mode = "file" | "paste" | "url";
 
 export default function Knowledge() {
@@ -74,6 +75,7 @@ export default function Knowledge() {
       </div>
       {b && b.states.length > 0 && <p className="note" style={{ margin: 0 }}>State-specific facts built in for: {b.states.join(", ")}. Students only see their own state&rsquo;s rules.</p>}
 
+      <ResearchDesk />
       <AddKnowledge onAdded={load} />
       <SearchTester />
       <AccuracyCheck />
