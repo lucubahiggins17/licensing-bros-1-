@@ -177,16 +177,16 @@
    "topic": "Venting",
    "trade": "plumb",
    "state": null,
-   "source": "IPC 2021 906.1, Table 906.1 (ICC 2021 Plumbing Venting brochure; ICC Building Safety Journal, Methods of Venting in the 2021 IPC)",
-   "fact": "Stack vents and vent stacks are sized from IPC 2021 Table 906.1 using the drainage stack size, the DFU connected and the vent's developed length. Example: a 3 in stack carrying 102 DFU may use a 1-1/2 in vent only up to 25 ft of developed length; a longer vent must be larger.",
+   "source": "IPC 2021 906.1 (ICC 2021 Plumbing Venting brochure; 2006 Virginia Plumbing Code 916.1, the same IPC rule under its older number)",
+   "fact": "A stack vent or vent stack may never be smaller than one-half the diameter of the drainage stack it serves, and never smaller than 1-1/4 in, even where Table 906.1 lengths look generous. For example, a 4 in stack needs at least a 2 in vent stack.",
    "status": "verified",
-   "note": "In the 2015 and earlier IPC this table was numbered 916.1, and Table 906.1 was the trap-to-vent table.",
+   "note": "In the 2015 and earlier IPC, vent pipe sizing was Section 916 (Table 916.1); since 2018 it is 906.1 and Table 906.1, while the trap-to-vent table is now 909.1.",
    "keywords": [
-    "Table 906.1",
-    "stack vent sizing",
+    "stack vent size",
     "vent stack",
-    "developed length",
-    "102 DFU"
+    "one-half",
+    "906.1",
+    "4 in stack"
    ]
   },
   {
