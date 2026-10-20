@@ -1,1 +1,107 @@
-{"facts": [], "questions": [], "existing": []}
+{
+  "facts": [
+    {
+      "id": "S5B-6",
+      "action": "fix",
+      "reason": "Says the Nebraska code leaves out the IRC's 'plumbing, mechanical and electrical chapters (25-33)'. In the 2018 IRC, chapters 25-33 are the plumbing chapters only; mechanical is chapters 12-23, fuel gas is chapter 24 and electrical is chapters 34-43, and Neb. Rev. Stat. 71-6403(1) excludes only section R313 and chapters 25-33. So the IRC's mechanical and fuel gas chapters are part of the state code for one- and two-family dwellings. 71-6406 lets localities adopt plumbing, electrical, fire prevention or 'other standard' codes; it does not name mechanical codes. Checked nebraskalegislature.gov 71-6403 and 71-6406 (Oct. 2026).",
+      "fixed": {
+        "fact": "Nebraska's state building code (Neb. Rev. Stat. 71-6403) adopts no International Mechanical Code or International Fuel Gas Code. It adopts the 2018 IRC without section R313 and chapters 25-33, which are the IRC's plumbing chapters (plumbing comes from the 2018 UPC instead), so the IRC's mechanical and fuel gas chapters do apply to one- and two-family dwellings under the state code. For other buildings, mechanical codes and HVAC licensing are left to cities, villages and counties, which under 71-6406 may adopt plumbing, electrical, fire prevention or other standard codes."
+      }
+    },
+    {
+      "id": "S5B-7",
+      "action": "fix",
+      "reason": "Content confirmed on the official Nevada Legislature copy of NAC 624.200 (C-2a through C-2g with the same names). Source changed from the Cornell copy to the official NAC text.",
+      "fixed": {
+        "source": "NAC 624.200, Classification C-2: Electrical contracting, Nevada Legislature, https://www.leg.state.nv.us/NAC/NAC-624.html"
+      }
+    },
+    {
+      "id": "S5B-8",
+      "action": "fix",
+      "reason": "Content confirmed on the official Nevada Legislature copy of NAC 624.190 (C-1a through C-1k, same names). Source changed from the Cornell copy to the official NAC text.",
+      "fixed": {
+        "source": "NAC 624.190, Classification C-1: Plumbing and heating contracting, Nevada Legislature, https://www.leg.state.nv.us/NAC/NAC-624.html"
+      }
+    },
+    {
+      "id": "S5B-12",
+      "action": "fix",
+      "reason": "Content is correct, but the only source was the Cornell copy. The State Public Works Division's 2024 Adopted Codes sheet (official) lists the 2024 UPC and 2024 UMC and no IPC/IMC; NAC 341.045 was last amended by R072-24A, effective 11/15/2024. Added the official source.",
+      "fixed": {
+        "source": "NAC 341.045, Standards for design (amended by R072-24A, eff. 11/15/2024), https://www.law.cornell.edu/regulations/nevada/NAC-341-045 ; Nevada State Public Works Division, 2024 Adopted Codes, https://publicworks.nv.gov/uploadedFiles/publicworksnvgov/content/Documents/Permitting_Code_Enforcement/2024%20Adopted_Codes.pdf"
+      }
+    },
+    {
+      "id": "S5B-16",
+      "action": "fix",
+      "reason": "Incomplete for the piping installer. RSA 153:28, I(a)(4) requires 1,000 hours within a 60-month period for a fuel gas piping installer too, and up to 500 of them may be heating-oil appliance work, the same as the installation technician. Checked gc.nh.gov RSA 153:28.",
+      "fixed": {
+        "fact": "New Hampshire licenses fuel gas workers through the Mechanical Safety and Licensing Board (OPLC). Under RSA 153:28, I(a), a fuel gas installation technician needs 1,000 hours of field experience within 60 months (up to 500 hours may be heating oil work). A fuel gas service technician needs 2,000 hours within 60 months (up to 750 hours of oil work). A fuel gas piping installer needs 1,000 hours of gas piping experience within 60 months (up to 500 hours of oil work)."
+      }
+    },
+    {
+      "id": "S5B-24",
+      "action": "fix",
+      "reason": "Out of date. CID replaced the 2021 code: 14.8.2 NMAC is now the 2024 New Mexico Plumbing Code, which adopts the 2024 UPC and all appendices with state amendments. It took effect August 1, 2026 (NM Register Vol. XXXVII, Issue 12, June 23, 2026). Permits may be issued under either the 2021 or the 2024 code until January 1, 2027, and only under the 2024 code after that. Checked the RLD/CID Rules, Laws and Building Codes page and the rule text (14.8.2.5 and 14.8.2.8 NMAC).",
+      "fixed": {
+        "fact": "New Mexico uses the Uniform Plumbing Code. 14.8.2 NMAC, the 2024 New Mexico Plumbing Code, adopts the 2024 UPC and all its appendices with state amendments and took effect August 1, 2026, replacing the 2021 New Mexico Plumbing Code (2021 UPC). Until January 1, 2027, permits may be issued under either the 2021 or the 2024 code. After January 1, 2027, permits may be issued only under the 2024 code.",
+        "source": "14.8.2 NMAC, 2024 New Mexico Plumbing Code (eff. 08/01/2026), via NM RLD Construction Industries Division, Rules, Laws and Building Codes, https://www.rld.nm.gov/construction-industries/rules-laws-and-building-codes/ ; New Mexico Register Vol. XXXVII, Issue 12 (June 23, 2026)",
+        "keywords": ["New Mexico plumbing code", "2024 UPC", "2024 New Mexico Plumbing Code", "14.8.2 NMAC", "August 1 2026", "January 1 2027"]
+      }
+    },
+    {
+      "id": "S5B-25",
+      "action": "fix",
+      "reason": "Out of date. 14.9.2 NMAC is now the 2024 New Mexico Mechanical Code, which adopts the 2024 UMC with state amendments, effective August 1, 2026. Permits may be issued under either the 2021 or the 2024 code until January 1, 2027. Checked the CID rules page and the rule text (14.9.2.5 and 14.9.2.8 NMAC).",
+      "fixed": {
+        "fact": "New Mexico uses the Uniform Mechanical Code. 14.9.2 NMAC, the 2024 New Mexico Mechanical Code, adopts the 2024 UMC with state amendments and took effect August 1, 2026, replacing the 2021 New Mexico Mechanical Code (2021 UMC). Permits may be issued under either code until January 1, 2027, and only under the 2024 code after that.",
+        "source": "14.9.2 NMAC, 2024 New Mexico Mechanical Code (eff. 08/01/2026), via NM RLD Construction Industries Division, Rules, Laws and Building Codes, https://www.rld.nm.gov/construction-industries/rules-laws-and-building-codes/ ; New Mexico Register Vol. XXXVII, Issue 12 (June 23, 2026)",
+        "keywords": ["New Mexico mechanical code", "2024 UMC", "2024 New Mexico Mechanical Code", "14.9.2 NMAC", "August 1 2026"]
+      }
+    },
+    {
+      "id": "S5B-26",
+      "action": "fix",
+      "reason": "Out of date. The 14.6.6 NMAC amendment effective 08/01/2026 (NM Register Vol. XXXVII, Issue 12) deleted MM-2 (natural gas fitting) and MM-4 (hydronic heating, cooling and process piping). MM-1 is now plumbing and fuel gas piping systems, MM-3 is HVAC, hydronics, fuel gas piping and process piping, and MM-98 is MM-1 plus MM-3 (with MS-3 and MS-6; MS-12 and MS-14 were removed). Each still requires four years. Checked the adopted amendment text (14.6.6amend, Register Issue 12).",
+      "fixed": {
+        "fact": "Since August 1, 2026, New Mexico's mechanical license classifications (14.6.6.11 NMAC) are MM-1 plumbing and fuel gas piping systems, MM-3 HVAC, hydronics, fuel gas piping and process piping, and MM-98 mechanical, which covers all of MM-1 and MM-3. Each requires four years of experience for the qualifying party. The former MM-2 (natural gas fitting) and MM-4 (hydronic heating, cooling and process piping) classifications were deleted.",
+        "source": "14.6.6.11 NMAC as amended effective 08/01/2026, New Mexico Register Vol. XXXVII, Issue 12 (June 23, 2026), https://prod-rf-lambda.rtssaas.com/PublicFiles/d89c47bd0d70402dba89b03a22bda6d1/237350a0-0b32-4b00-91f5-8dcba2b54065/14.6.6amend.html",
+        "keywords": ["New Mexico mechanical license", "MM-1", "MM-3", "MM-98", "HVAC license New Mexico", "CID classifications", "2026 amendment"]
+      }
+    },
+    {
+      "id": "S5B-27",
+      "action": "fix",
+      "reason": "Out of date. Since the 08/01/2026 amendment to 14.6.6.11 NMAC, MM-1 covers plumbing and fuel gas piping systems and MM-2 no longer exists. The JPG is now 'journeyman plumber and gas fitter' and may work under an MM-1, MM-3 or MM-98 license. MM-1 still requires four years and JPG two years (journeyman default). Checked the adopted 14.6.6 amendment and 14.6.4 NMAC (amended 08/01/2026).",
+      "fixed": {
+        "fact": "In New Mexico, the MM-1 classification (plumbing and fuel gas piping systems) requires four years of experience for the qualifying party. The JPG journeyman certificate (journeyman plumber and gas fitter) requires two years of experience, and since August 1, 2026 the holder may work under an MM-1, MM-3 or MM-98 licensee.",
+        "source": "14.6.6.11 NMAC as amended effective 08/01/2026 (NM Register Vol. XXXVII, Issue 12) ; 14.6.4 NMAC (amended 08/01/2026)",
+        "keywords": ["New Mexico plumbing license", "MM-1", "JPG journeyman", "journeyman plumber and gas fitter", "four years experience"]
+      }
+    }
+  ],
+  "questions": [
+    {
+      "i": 8,
+      "action": "fix",
+      "reason": "Answer (UPC) is still right, but the explanation describes the replaced 2021 code. Since August 1, 2026, 14.8.2 NMAC is the 2024 New Mexico Plumbing Code (2024 UPC).",
+      "fixed": {
+        "why": "The 2024 New Mexico Plumbing Code (14.8.2 NMAC, effective August 1, 2026) adopts the 2024 Uniform Plumbing Code with state amendments. It replaced the 2021 New Mexico Plumbing Code, which was also UPC-based."
+      }
+    },
+    {
+      "i": 9,
+      "action": "fix",
+      "reason": "The 14.6.6 NMAC amendment effective 08/01/2026 deleted MM-2 and MM-4 and changed MM-1's scope, so the distractors and explanation are out of date. MM-3 is still the HVAC classification. It now also covers hydronics, fuel gas piping and process piping.",
+      "fixed": {
+        "q": "Since August 1, 2026, which New Mexico mechanical classification covers HVAC, hydronics, fuel gas piping and process piping?",
+        "c": ["MM-1", "MM-3", "EE-98", "GB-98"],
+        "a": 1,
+        "ref": "14.6.6.11 NMAC (amended eff. 08/01/2026)",
+        "why": "MM-3 is HVAC, hydronics, fuel gas piping and process piping. MM-1 is plumbing and fuel gas piping, MM-98 combines MM-1 and MM-3, EE-98 is electrical and GB-98 is general building. MM-2 and MM-4 were eliminated on August 1, 2026."
+      }
+    }
+  ],
+  "existing": []
+}
