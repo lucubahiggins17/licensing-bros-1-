@@ -1,12 +1,12 @@
 # Licensing Bro's knowledge base
 
-Generated 2026-10-20. **2940 facts** (2616 verified, 75 corrected, 249 flagged as unconfirmed) and **834 new practice questions** (113 Business & Law, shown to every trade; 204 General Contractor; 214 Electrical; 151 Plumbing; 152 HVAC).
+Generated 2026-10-20. **3092 facts** (2766 verified, 75 corrected, 251 flagged as unconfirmed) and **879 new practice questions** (128 Business & Law, shown to every trade; 234 General Contractor; 214 Electrical; 151 Plumbing; 152 HVAC).
 
 | Trade | Facts |
 |---|---|
+| General contractor | 807 |
 | Electrical | 765 |
-| General contractor | 700 |
-| Business & Law | 640 |
+| Business & Law | 685 |
 | Plumbing | 439 |
 | HVAC / Mechanical | 396 |
 
@@ -17,7 +17,7 @@ State-specific rules: 51 jurisdictions, 518 facts.
 
 **Round 4 (October 2026: Electrical, Plumbing, HVAC and all 50 states plus DC).** Written in original wording from the model codes and regulations (NEC 2023 with 2020 differences noted, IPC 2021 with UPC 2021 differences, IMC and IFGC 2021, EPA 40 CFR Part 82 Subpart F, OSHA) and, for state rules, from state licensing boards, statutes and PSI/Prometric candidate bulletins. Each batch was then checked by a separate reviewer who had not written it, which corrected, removed or flagged items before they were added. Files: `knowledge/rounds/round4/` and `knowledge/audits/result_round4_*.json`.
 
-In all, 172 facts were changed in review.
+In all, 185 facts were changed in review.
 
 - **verified**: confirmed correct as written.
 - **corrected**: the flashcard's answer was wrong or outdated; the fact states the correct rule, and the note says what the card claimed.
@@ -28,26 +28,26 @@ Figures that change every year (OSHA penalty maximums, payroll tax wage bases, i
 ## How the app uses it
 - **AI tutor**: before answering, it looks up the most relevant facts for the student's question, trade and state (`supabase/functions/_shared/kb.ts`) and builds the answer on them, citing their source.
 - **AI-written exams and flashcards**: the generator is handed a random spread of checked facts and must build most questions on them.
-- **Verified question bank**: the 834 questions in `lib/kb-questions.json` are added to the built-in bank, so they work offline.
+- **Verified question bank**: the 879 questions in `lib/kb-questions.json` are added to the built-in bank, so they work offline.
 - State-specific facts (licensing thresholds, exams, lien deadlines and more for every state) only appear for students who pick that state. Plumbing answers rank the student's own code (IPC or UPC) first.
 
 ## Coverage by topic
 | Topic | Facts |
 |---|---|
-| Business & Law · Bonds & insurance | 31 |
+| Business & Law · Bonds & insurance | 35 |
 | Business & Law · Business & Law | 4 |
 | Business & Law · Business organization | 22 |
 | Business & Law · Business planning | 4 |
-| Business & Law · Contracts & liens | 55 |
+| Business & Law · Contracts & liens | 69 |
 | Business & Law · Environmental | 19 |
 | Business & Law · Estimating & bidding | 23 |
-| Business & Law · Financial management | 43 |
-| Business & Law · Labor law | 39 |
-| Business & Law · Payroll & tax | 45 |
+| Business & Law · Financial management | 46 |
+| Business & Law · Labor law | 49 |
+| Business & Law · Payroll & tax | 53 |
 | Business & Law · Project management | 28 |
 | Business & Law · Risk management | 3 |
 | Business & Law · Safety (OSHA) | 1 |
-| Business & Law · Safety recordkeeping | 13 |
+| Business & Law · Safety recordkeeping | 19 |
 | Electrical · Air conditioning (Art. 440) | 11 |
 | Electrical · Appliances & space heating | 9 |
 | Electrical · Boxes & enclosures | 31 |
@@ -78,22 +78,22 @@ Figures that change every year (OSHA penalty maximums, payroll tax wage bases, i
 | Electrical · Switches & panelboards | 11 |
 | Electrical · Wiring methods (Art. 300) | 28 |
 | Electrical · Working space | 2 |
-| General contractor · Accessibility | 26 |
-| General contractor · Building code (IBC) | 45 |
-| General contractor · Doors, windows & glazing | 5 |
-| General contractor · Drywall & finishes | 17 |
+| General contractor · Accessibility | 34 |
+| General contractor · Building code (IBC) | 66 |
+| General contractor · Doors, windows & glazing | 10 |
+| General contractor · Drywall & finishes | 20 |
 | General contractor · Energy & environmental | 17 |
-| General contractor · Estimating | 20 |
-| General contractor · Fire protection | 36 |
-| General contractor · Masonry | 14 |
-| General contractor · Plan reading | 9 |
+| General contractor · Estimating | 25 |
+| General contractor · Fire protection | 51 |
+| General contractor · Masonry | 16 |
+| General contractor · Plan reading | 12 |
 | General contractor · Project management | 16 |
-| General contractor · Residential code | 32 |
-| General contractor · Roofing | 21 |
+| General contractor · Residential code | 65 |
+| General contractor · Roofing | 26 |
 | General contractor · Safety (OSHA) | 186 |
-| General contractor · Site work & concrete | 103 |
+| General contractor · Site work & concrete | 109 |
 | General contractor · Steel & trusses | 46 |
-| General contractor · Wood framing | 21 |
+| General contractor · Wood framing | 22 |
 | HVAC / Mechanical · A2L refrigerants | 1 |
 | HVAC / Mechanical · AIM Act / Technology Transitions | 2 |
 | HVAC / Mechanical · Access & service space | 4 |
@@ -337,7 +337,7 @@ These are worth knowing as a selling point: the free study sets your competitors
 | PAYR-042 | The IRS groups federal business taxes into income tax, estimated tax, self-employment tax, employment taxes and excise taxes. Property tax is not a federal tax, but state and local governments levy it, and businesses owning real estate (and in many states equipment and other tangible business personal property) must pay it. | Card says property tax is generally not a business tax. It is not one of the federal business tax categories, but businesses routinely owe state/local property tax on real property and, in many states including Tennessee, on tangible business personal property. |
 | PAYR-045 | IRS Pub 15-T gives two manual withholding methods: the wage bracket method (look up the pay-period wage in tables by filing status; covers wages up to about $100,000 a year) and the percentage method (works for any wage). Separate tables apply to Forms W-4 from 2020 or later, which use no allowances, and to older W-4s still on file that claim allowances; table amounts change every year. | Card asks for withholding for a married employee with '3 exemptions' and gives $32 from an older Circular E table. Withholding tables now live in Pub 15-T and change annually, and the 2020 and later Form W-4 has no exemptions or allowances, so that dollar answer cannot be reused; always use the current year's tables. |
 
-## Flagged for review (249)
+## Flagged for review (251)
 Have a licensed reviewer (or the state bulletin) confirm these, then change `status` to `verified` for that ID in `supabase/functions/_shared/kb.json` (or in the CSV, then copy back) and run `node scripts/kb-report.mjs`.
 
 | ID | State | Fact | Why it's flagged |
@@ -591,6 +591,8 @@ Have a licensed reviewer (or the state bulletin) confirm these, then change `sta
 | HAZA-022 | — | NEC 2023 501.15(C)(6): the cross-sectional area of conductors in a conduit seal may not exceed 25% of the area of rigid metal conduit of the same trade size, unless the seal is identified for a higher fill. | From the NEC 2023 text from memory. |
 | EMER-016 | — | NEC 2023 700.7(A): a sign at the service entrance must show the type and location of each on-site emergency power source. 700.4(B): when an alternate source also serves other loads, load shedding must keep priority in this order: emergency, then legally required standby, then optional standby. | From the NEC 2023 text from memory. |
 | EMER-017 | — | NEC 2023 695.4(B)(2)(a)(1): the overcurrent device(s) for an individual fire pump power source must be rated to carry indefinitely the sum of the locked-rotor current of the largest fire pump motor plus the full-load current of all other pump motors (such as pressure maintenance pumps) and the accessory equipment, so the device will not open during a fire. | From the NEC 2023 text from memory. |
+| ROOF-031 | — | A roof recover (new roofing over an old roof) is not allowed when the existing roof is water-soaked or deteriorated, is slate, clay, cement or asbestos-cement tile, or already has two or more layers of roof covering. | Taken from the IRC R908.3.1.1 text as commonly published; could not reach the 2021 code text to confirm wording. |
+| PLAN-012 | — | On construction drawings, a section or detail callout bubble shows the drawing number on top and the sheet number where that drawing appears on the bottom; for example, 3 over A-501 means detail 3 on sheet A-501. The arrow or flag on a section cut shows the direction you are looking. | Common drafting convention; individual offices sometimes arrange callouts differently, so check the sheet legend. |
 
 ## Adding or fixing content
 - The live files are `supabase/functions/_shared/kb.json` (facts) and `lib/kb-questions.json` (questions). Small fixes: edit them directly.
