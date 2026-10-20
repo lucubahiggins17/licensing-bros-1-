@@ -712,6 +712,7 @@ def tutor_knows_the_student(browser):
     ctx, page, errors = new_page(browser, fake)
     goto(page, "/learn/#tutor")
     page.wait_for_timeout(1500)
+    check("Bro opens with the student's weakest topic", page.get_by_text("on Contracts & liens", exact=False).count() >= 1 and page.locator("button.chip.hot", has_text="Teach me Contracts & liens").count() == 1)
     page.locator("textarea#ask").fill("What should I study next?")
     page.locator("textarea#ask").press("Enter")
     page.wait_for_timeout(2000)

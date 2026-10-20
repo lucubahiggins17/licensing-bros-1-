@@ -12,6 +12,8 @@ The contractor-licensing education platform for General Contractor, Electrical, 
 - **Talk to Bro**: a voice AI tutor. Students talk, Bro answers out loud and then listens again, hands-free. Text chat and photo questions work too. Answers are built on the **checked knowledge base** (see `KNOWLEDGE_BASE.md`) plus anything you add to the knowledge library, and cite the code section. When a rule can differ by state (licensing, liens, bonds, code editions), Bro searches official sources for the student's state first (skipping public flashcard and Q&A sites) and lists them.
   - **Fast and exact**: quick questions and voice go to a fast model, calculations and explanations to the strongest one, and every multi-step calculation runs through an exact calculator instead of the AI's head. The tutor answers first, never guesses a number, and names the section to check when it isn't sure.
 - **Study tools**: timed mock exams (verified question bank, AI sets for each state, and sets you publish), Smart Review that brings back missed questions, games (Code Match, Speed Round, Calc Sprint) that can use the decks and tests you publish, spaced-repetition flashcards, field calculators, the **readiness score**, streaks, XP and badges.
+- **Today's plan**: a proactive coach on the home screen with a daily question goal (more as the exam gets close), review questions that are due, the weakest topic to drill, when to take a mock exam, and a one-tap lesson from Bro. Hitting the goal or earning a badge sets off confetti. Bro's tutor also opens with the student's weakest topic and suggests what to do next.
+- **Android app onboarding**: the app opens with a launch screen and swipeable, app-style onboarding (meet Bro, adaptive practice, pick trade, state and exam date) instead of the website's landing page. The picks carry into the new account. Signed-in students land on their dashboard; visitors get an app welcome screen with three real exam questions to try.
 - **Community Q&A** with "Ask AI Bro" answers, plus a notification bell.
 
 **Account protection (like Netflix)**
@@ -23,7 +25,9 @@ The contractor-licensing education platform for General Contractor, Electrical, 
 **For you (Admin control center at `/admin`)**
 - **Bro Command (command center)**: your AI chief of staff. Ask in plain words or by voice: "Who's at risk of failing this month?", "Build a 25-question Tennessee lien law test", "Plan Thursday's live class around what students miss", "Email my instructors a summary". It looks up students, stats and topic trends, builds draft tests, game decks and class plans, and prepares announcements, emails, live classes, publishing and automation changes, which only happen after you tap **Confirm**.
 - **Knowledge library**: add PDFs (candidate bulletins, board rules, your notes), pasted text or web pages. They're split into cited passages that the tutor, the builders and Bro Command search by keyword and by meaning. Includes a "test what the AI finds" box.
-- **Automations**: a weekly team digest, at-risk alerts, study nudges for students who go quiet, exam countdown tips, and new signup alerts. Switch each on or off and pick when it runs and who hears about it.
+- **Bro's research desk (always learning)**: the tutor notes questions its knowledge didn't cover well (just the question, nothing about the student). Every few hours the research desk studies the most-asked ones, then the license, exam and code-adoption rules for the states and trades your students study, on the open web from official sources. A second, independent AI check re-verifies every finding, corrects wrong numbers and compares it with the built-in facts. Confirmed findings go straight into the knowledge library the tutor uses; anything disputed or that contradicts a built-in fact waits for you in **Knowledge → Bro's research desk** (or switch on "review first" to approve everything). Staff and Bro Command can also send it to research anything on demand. The daily topic limit keeps AI and search costs predictable.
+- **Bro's studio voice (optional)**: give Bro one natural voice for every student, even a cloned one, by connecting your own voice server: VoiceStudio (free, open source), Kokoro-FastAPI, OpenAI's speech API, or anything with the same `/v1/audio/speech` format. If the server is offline, students hear their phone's voice instead. See "Bro's studio voice" below.
+- **Automations**: Bro's research desk, a weekly team digest, at-risk alerts, study nudges for students who go quiet, exam countdown tips, and new signup alerts. Switch each on or off and pick when it runs and who hears about it.
 - **Instructors**: make a teammate an instructor (Students → open them). Instructors get Bro Command, the AI builder, the knowledge library, live classes, announcements and community moderation, without prices, settings, roles or payments.
 - **Dashboard**: students, paying students, revenue, who's online, AI use, signups chart, and the topics students miss most.
 - **Courses**: modules, lessons, video uploads or YouTube/Vimeo links, markdown lessons, and quizzes, with an AI quiz writer.
@@ -84,6 +88,8 @@ A free token from https://ipinfo.io raises the lookup limits. Without one, locat
    - `RESEND_API_KEY` and `EMAIL_FROM` (optional; team emails from Bro Command and automations, e.g. `Licensing Bro's <team@yourdomain.com>` from a domain you verified at resend.com)
    - `IPINFO_TOKEN` (optional)
 
+   **Optional studio voice:** secret `VOICE_API_URL` (and `VOICE_API_KEY` if your server needs one); variables `VOICE_NAME` (the voice, default `alloy`), `VOICE_MODEL` (default `tts-1`), `VOICE_FORMAT` (default `mp3`). See "Bro's studio voice" below.
+
    **Optional AI variables:** `ANTHROPIC_MODEL` (main model, default `claude-sonnet-5-5`), `ANTHROPIC_FAST_MODEL` (quick answers and voice, default `claude-haiku-5-5`), `ANTHROPIC_ROUTING` (`off` sends everything to the main model).
 3. Open **Actions → Build Android app → Run workflow**. It tests and deploys the backend, then builds the APK. Download it from the finished run under **Artifacts**. Push a tag (`git tag v1.0.0 && git push --tags`) to publish the APK on a Releases page.
 
@@ -103,6 +109,16 @@ Add a signing key so the workflow also builds the Play Store bundle (`.aab`):
 Back up the key. Play also needs a privacy policy link; in-app account deletion is already built in.
 
 ---
+
+### 9. Bro's studio voice (optional)
+Out of the box Bro talks with each phone's built-in voice. To give everyone the same natural voice (or a clone of your own voice), run a speech server that speaks the OpenAI audio format and point the app at it:
+1. **VoiceStudio** (free, open source, https://voicestudio.sh). On a Windows PC: `powershell -ep bypass -c "irm https://voicestudio.sh/install.ps1|iex"`. Its speech API listens on port 3900 (`/v1/audio/speech`). Clone a voice you have the rights to (your own) in its Voice Cloning section and note its name.
+2. **Make it reachable from the internet.** Students' phones reach it through your Supabase function, so it needs a public https address:
+   - *Your own computer* (free; only works while it's on and awake): install Cloudflare's `cloudflared` and run `cloudflared tunnel --url http://localhost:3900`. It prints an address like `https://something.trycloudflare.com` (a named tunnel keeps the same address after restarts). Add that address to VoiceStudio's allowed hosts if it asks.
+   - *A server* (always on): VoiceStudio has a Docker image and a one-click Railway template (CPU, a paid plan with about 5 GB of storage; slower than a GPU). A cloud GPU is fastest. Any host works as long as it gives you an https address.
+3. In GitHub add the secret `VOICE_API_URL` (that address), `VOICE_API_KEY` (VoiceStudio's API key, if set), and the variable `VOICE_NAME` (your cloned voice's name, or `alloy`). Run **Build Android app**.
+4. In **Admin → Settings → Bro's voice**, click **Check the voice server**, then **Play a sample**, switch on **Use Bro's studio voice for students**, and Save.
+If the server goes offline, students automatically hear the phone's voice and Bro tries the studio voice again a couple of minutes later. VoiceStudio's free app is AGPL-3.0: running it unmodified as your voice server is fine; if you change its code and offer it over the internet, you must share those changes.
 
 ## Setup check
 Open `https://YOUR-SITE/status/` (or Admin → Dashboard → **Setup check**) any time. It tests the site's Supabase address and key, whether sign-ups are allowed, whether `schema.sql` ran, whether an admin exists and whether the backend functions are deployed. Signed in as the admin, it also checks the AI, Stripe and LiveKit keys and the `SITE_URL`. Each line says what to fix. The GitHub workflows also tidy and test the Supabase variables before every build and show the result on the run's page.
@@ -128,17 +144,20 @@ Google requires its own billing for digital goods sold inside Android apps, so t
 
 ## Tests
 `bash tests/run-all.sh` runs every suite:
-- **Database security** against real Postgres in-process (with pgvector): 145 checks (paid content can't be self-unlocked, admin powers and the admin code are protected, instructors get teaching tools but not owner controls, the knowledge library search and its privacy, command center and automations permissions, older projects upgrade in place, and so on).
-- **Backend logic**: 81 Deno tests covering location rules, device sessions, Stripe signatures, LiveKit tokens, video links, AI output checks, model routing, the exact calculator, the tutor's answer loop against a fake AI server, document splitting, student risk scoring and automation schedules.
+- **Database security** against real Postgres in-process (with pgvector): 158 checks (paid content can't be self-unlocked, admin powers and the admin code are protected, instructors get teaching tools but not owner controls, the knowledge library search and its privacy, the research desk's privacy, command center and automations permissions, onboarding picks at sign-up, older projects upgrade in place, and so on).
+- **Backend logic**: 94 Deno tests covering location rules, device sessions, Stripe signatures, LiveKit tokens, video links, AI output checks, model routing, the exact calculator, the tutor's answer loop against a fake AI server, document splitting, student risk scoring, automation schedules, the research desk (topic planning, gap detection, the publish-only-what-checks-out rule) and the studio voice requests.
 - **Production build.**
-- **Browser tests**: 191 checks that click through the site as a visitor, a free student, a paying student, an instructor and the admin, on desktop and phone, including voice playback, the knowledge library (with a real PDF), Bro Command and automations.
+- **Browser tests**: 220+ checks that click through the site as a visitor, a free student, a paying student, an instructor and the admin, on desktop and phone, including voice playback and the studio voice fallback, the knowledge library (with a real PDF), the research desk, Bro Command, automations, today's plan and the scroll animations.
+- **Android app build**: builds the app version and checks the launch screen, swipeable onboarding, picks carried into sign-up, the app welcome screen and the signed-in app home (29 checks).
 - **GitHub Pages subfolder**: builds the site for `you.github.io/licensing-bros` and checks every file and link stays inside the subfolder (13 checks).
 - **Device sweep**: opens all 25 main screens on 8 screen sizes (small phone, phone, iPad mini, iPad Air, iPad landscape, iPad Pro landscape, laptop, 1920 desktop) and fails on sideways scrolling, content wider than the screen, or errors.
 
 ## Project map
 | Path | What it is |
 |---|---|
-| `components/home` | Home page in your design, plus the signed-in dashboard |
+| `components/home` | Home page in your design, plus the signed-in dashboard and today's plan |
+| `components/app` | Android app launch screen, onboarding and app home |
+| `components/motion.tsx` | Scroll reveal, count-ups and confetti (off for people who prefer reduced motion) |
 | `components/courses` | Catalog, course page, lesson player, certificates |
 | `components/live` | Live list, watch page with chat and offers, host studio |
 | `components/voice` | Talk to Bro voice mode |
@@ -147,7 +166,7 @@ Google requires its own billing for digital goods sold inside Android apps, so t
 | `components/Workspace.tsx` + study components | My Learning: tutor, exams, review, games, flashcards, calculators, progress |
 | `components/shell` | Navigation, one-device and travel dialogs |
 | `supabase/schema.sql` | Database, security rules, admin tools |
-| `supabase/functions` | Backend: `tutor`, `generate`, `session`, `lesson`, `live-token`, `stripe-checkout`, `stripe-webhook`, `library` (knowledge library), `assistant` (Bro Command), `automations` |
+| `supabase/functions` | Backend: `tutor`, `generate`, `session`, `lesson`, `live-token`, `stripe-checkout`, `stripe-webhook`, `library` (knowledge library), `assistant` (Bro Command), `automations`, `research` (research desk), `voice` (studio voice) |
 | `supabase/functions/_shared/kb.json`, `lib/kb-questions.json` | Knowledge base and verified questions (`KNOWLEDGE_BASE.md`) |
 | `mobile/` | Android app (Capacitor) |
 | `tests/` | All automated tests |

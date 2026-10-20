@@ -1,5 +1,5 @@
 "use client";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import Link from "next/link";
 import { Mic, Sparkles, Volume2, Square } from "lucide-react";
 import { useApp, PanelHead, AiErrorNote, SourceList, usePlan } from "./ctx";
@@ -8,7 +8,7 @@ import { md, shrinkImage, splitSources, streamTutor, useAiUsage } from "@/lib/ai
 import { isApp, SpeechRecognition } from "@/lib/native";
 import { routes } from "@/lib/nav";
 import { askForTravelMode } from "@/components/shell/SessionGuard";
-import { coachNote } from "@/lib/progress";
+import { coachNote, proactiveStarters } from "@/lib/progress";
 import { forSpeech, prefs, primeSpeech, Speaker, takeSentences, voiceErrorText, voiceSupport } from "@/components/voice/speech";
 import s from "./Study.module.css";
 
@@ -26,6 +26,9 @@ export default function Tutor({ draft, clearDraft }: { draft: string; clearDraft
   const { limits, paid } = usePlan();
   const usage = useAiUsage();
   const tradeName = TRADES[p.trade];
+  // Suggestions from the student's own record come first (weakest topic, missed questions, exam countdown)
+  const pro = useMemo(() => proactiveStarters(p), [p]);
+  const starters = useMemo(() => [...pro.prompts, ...STARTERS[p.trade]].filter((x, i, a) => a.indexOf(x) === i).slice(0, 5), [pro, p.trade]);
   const [msgs, setMsgs] = useState<Msg[]>([]);
   const [input, setInput] = useState("");
   const [busy, setBusy] = useState(false);
@@ -152,11 +155,11 @@ export default function Tutor({ draft, clearDraft }: { draft: string; clearDraft
         </p>
       )}
       <div className="row">
-        {STARTERS[p.trade].map((x) => <button key={x} className="chip" onClick={() => send(x)} disabled={busy}>{x}</button>)}
+        {starters.map((x, i) => <button key={x} className={`chip${i < pro.prompts.length ? " hot" : ""}`} onClick={() => send(x)} disabled={busy}>{x}</button>)}
       </div>
       <div className="card">
         <div className="chat" ref={chatRef} aria-live="polite">
-          <div className="msg ai" dangerouslySetInnerHTML={{ __html: md(`I'm set up for the **${p.state} ${tradeName}** exam. Ask me a code question, a calculation, or say "quiz me on" any topic.`) }} />
+          <div className="msg ai" dangerouslySetInnerHTML={{ __html: md(`I'm set up for the **${p.state} ${tradeName}** exam.${pro.greeting || ` Ask me a code question, a calculation, or say "quiz me on" any topic.`}`) }} />
           {msgs.map((m, i) => {
             if (m.role === "user") return <div key={i} className="msg me">{m.content}</div>;
             if (m.error) return <div key={i} className="msg ai" style={{ background: "transparent", border: 0, padding: 0, maxWidth: "100%" }}><AiErrorNote error={m.error} onRetry={retry} /></div>;

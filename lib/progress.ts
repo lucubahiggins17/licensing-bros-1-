@@ -350,3 +350,19 @@ export function todayPlan(p: Progress, now = Date.now()): Plan {
 
   return { goal, done, due, streak: st, studiedToday: studiedToday(p), daysLeft: left, headline, steps: steps.slice(0, 3) };
 }
+
+/** Tutor suggestions built from the student's record (weakest topics, review due, exam coming up), most useful first. */
+export function proactiveStarters(p: Progress, now = Date.now()): { prompts: string[]; greeting: string } {
+  const prompts: string[] = [];
+  const weak = weakTopics(p, 2);
+  const due = dueMissed(p, now).length;
+  const left = daysLeft(p.examDate);
+  if (weak[0]) prompts.push(`Teach me ${weak[0].topic}`);
+  if (due > 0) prompts.push(`Quiz me on what I've been missing`);
+  if (left !== null && left > 0 && left <= 30) prompts.push(`Make me a study plan for the next ${left} day${left === 1 ? "" : "s"}`);
+  if (weak[1] && prompts.length < 3) prompts.push(`Quiz me on ${weak[1].topic}`);
+  let greeting = "";
+  if (weak[0]) greeting = ` You're at ${weak[0].pct}% on **${weak[0].topic}**${left !== null && left > 0 ? ` with ${left} day${left === 1 ? "" : "s"} to go` : ""}. Want a quick lesson on it?`;
+  else if (left !== null && left > 0 && left <= 14) greeting = ` Your exam is in ${left} day${left === 1 ? "" : "s"}. Want a plan for the time left?`;
+  return { prompts: prompts.slice(0, 3), greeting };
+}

@@ -116,6 +116,8 @@ h3,h4{font-family:var(--heading);font-weight:800;letter-spacing:0}
 .chip{border:1.5px solid var(--line);background:#fff;border-radius:999px;padding:6px 12px;font-size:13.5px;font-weight:600;color:var(--ink)}
 .chip:hover{border-color:var(--orange);color:var(--orange-2)}
 .chip[aria-pressed="true"]{background:var(--navy);border-color:var(--navy);color:#fff}
+.chip.hot{border-color:var(--orange);background:var(--orange-soft);color:var(--orange-2)}
+.chip.hot::before{content:"★ ";font-size:11px}
 .badge{display:inline-flex;align-items:center;gap:4px;font-size:11px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;padding:3px 8px;border-radius:999px;background:var(--surface);border:1px solid var(--line);color:var(--muted);font-family:var(--heading);white-space:nowrap}
 .badge.ai{background:var(--orange-soft);border-color:#fbd5bd;color:var(--orange-2)}
 .badge.v,.badge.ok{background:var(--ok-soft);border-color:#b8e3c8;color:var(--ok)}
