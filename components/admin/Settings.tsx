@@ -9,6 +9,8 @@ import type { Limits, SiteSettings } from "@/lib/types";
 import { errMsg, q } from "./format";
 import { useAdmin, useDirty, ErrorBox, FormPanel, Loading, SectionHead, Toggle } from "./ui";
 import { MoveButtons } from "./fields";
+import { STATES } from "@/lib/data";
+import { cleanFormats, type ExamFormat } from "@/lib/examSim";
 import { AdminCodeCard } from "./AdminCode";
 import s from "./admin.module.css";
 
@@ -22,7 +24,8 @@ const DEFAULTS: SiteSettings = {
   paid_limits: { ai_daily: 60, exam_max_questions: 50, ai_exams: true, practice_sets: true },
   location_rules: { enforce: true, home_radius_miles: 100, home_change_days: 30, away_max_days: 30, away_default_days: 14, away_passes_per_90_days: 3, session_timeout_seconds: 120 },
   support: { email: "", phone: "" },
-  voice: { studio: false }
+  voice: { studio: false },
+  exam_formats: []
 };
 type Key = keyof SiteSettings;
 
@@ -59,6 +62,7 @@ export default function SettingsSection() {
             <LimitsCard k="paid_limits" title="Paid student limits" code="Form ST-4 · Paid plan" initial={data.paid_limits}
               intro="What students get once they've bought any course." />
           </div>
+          <ExamFormatsCard initial={data.exam_formats || []} />
           <VoiceCard initial={data.voice || { studio: false }} />
           <LocationCard initial={data.location_rules} />
           <AdminCodeCard />
@@ -319,6 +323,54 @@ function VoiceCard({ initial }: { initial: NonNullable<SiteSettings["voice"]> })
         hint="Students can still pick a phone voice in Talk to Bro's voice settings."
         onChange={(v) => st.setValue({ studio: v })} />
       <Actions dirty={st.dirty} saving={st.saving} onSave={() => st.save()} onDiscard={st.discard} problem={st.problem} />
+    </FormPanel>
+  );
+}
+
+// ------------------------------------------------------------------------------------------------
+const TRADE_OPTS: [ExamFormat["trade"], string][] = [["gc", "General Contractor"], ["elec", "Electrical"], ["plumb", "Plumbing"], ["hvac", "HVAC / Mechanical"], ["all", "Any trade"]];
+const PART_OPTS: [ExamFormat["part"], string][] = [["trade", "Trade exam"], ["law", "Business & Law"], ["mix", "Combined"]];
+function ExamFormatsCard({ initial }: { initial: ExamFormat[] }) {
+  const st = useSetting<ExamFormat[]>("exam_formats", cleanFormats(initial), (v) =>
+    v.some((f) => !f.name.trim()) ? "Every exam format needs a name." :
+    v.some((f) => f.questions < 5 || f.minutes < 5) ? "Questions and minutes must be at least 5." : "");
+  const list = st.value;
+  const set = (i: number, patch: Partial<ExamFormat>) => st.setValue(list.map((f, k) => (k === i ? { ...f, ...patch } : f)));
+  return (
+    <FormPanel code="Form ST-8 · Mock exams" title="Real exam formats">
+      <p className="note" style={{ margin: 0 }}>
+        Mock exams use these to match the real test: number of questions, time limit and passing score. Copy them from the testing company&rsquo;s candidate bulletin (PSI, Prometric or the state board) for each exam your students take. Leave the state empty for a format that&rsquo;s the same everywhere. Without one, students see typical timing and can enter their own numbers. Bro Command can add these for you too.
+      </p>
+      {list.length === 0 && <p className="note" style={{ margin: 0 }}>No formats yet.</p>}
+      {list.map((f, i) => (
+        <div key={f.id} style={{ display: "grid", gap: 8, gridTemplateColumns: "repeat(auto-fit,minmax(150px,1fr))", alignItems: "end", borderTop: "1px solid var(--line)", paddingTop: 10 }}>
+          <label className="field" style={{ gridColumn: "1 / -1" }}>Exam name
+            <input value={f.name} maxLength={80} onChange={(e) => set(i, { name: e.target.value })} placeholder="e.g. Tennessee Business and Law (PSI)" />
+          </label>
+          <label className="field">Trade
+            <select value={f.trade} onChange={(e) => set(i, { trade: e.target.value as ExamFormat["trade"] })}>{TRADE_OPTS.map(([k, l]) => <option key={k} value={k}>{l}</option>)}</select>
+          </label>
+          <label className="field">Section
+            <select value={f.part} onChange={(e) => set(i, { part: e.target.value as ExamFormat["part"] })}>{PART_OPTS.map(([k, l]) => <option key={k} value={k}>{l}</option>)}</select>
+          </label>
+          <label className="field">State
+            <select value={f.state || ""} onChange={(e) => set(i, { state: e.target.value || null })}><option value="">Every state</option>{STATES.map((x) => <option key={x}>{x}</option>)}</select>
+          </label>
+          <NumField label="Questions" value={f.questions} min={5} max={250} onChange={(n) => set(i, { questions: n })} />
+          <NumField label="Time limit" suffix="min" value={f.minutes} min={5} max={600} onChange={(n) => set(i, { minutes: n })} />
+          <NumField label="Passing score" suffix="%" value={f.pass_pct} min={50} max={100} onChange={(n) => set(i, { pass_pct: n })} />
+          <label className="field" style={{ gridColumn: "1 / -1" }}>Notes for students (optional)
+            <input value={f.notes || ""} maxLength={300} onChange={(e) => set(i, { notes: e.target.value })} placeholder="e.g. Open book: IBC 2018, NASCLA guide. Source: PSI bulletin, Jan 2026" />
+          </label>
+          <div style={{ gridColumn: "1 / -1", display: "flex", justifyContent: "flex-end" }}>
+            <button type="button" className="btn sm ghost" onClick={() => st.setValue(list.filter((_, k) => k !== i))}><Trash2 aria-hidden="true" />Remove</button>
+          </div>
+        </div>
+      ))}
+      <div>
+        <button type="button" className="btn sm" onClick={() => st.setValue([...list, { id: `f${Date.now().toString(36)}`, name: "", trade: "gc", part: "law", state: null, questions: 50, minutes: 120, pass_pct: 70 }])}><Plus aria-hidden="true" />Add an exam format</button>
+      </div>
+      <Actions dirty={st.dirty} saving={st.saving} onSave={() => st.save((v) => cleanFormats(v.map((f) => ({ ...f, name: f.name.trim(), notes: f.notes?.trim() || undefined }))))} onDiscard={st.discard} problem={st.problem} />
     </FormPanel>
   );
 }

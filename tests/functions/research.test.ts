@@ -139,3 +139,31 @@ Deno.test("isDue: the research desk runs every few hours", () => {
   assert.equal(isDue("knowledge_research", { every_hours: 6 }, new Date(now - 6 * 3600e3 + 60e3).toISOString(), now), true); // a few minutes early is fine
   assert.equal(isDue("knowledge_research", {}, new Date(now - 5 * 3600e3).toISOString(), now), false); // default 6 hours
 });
+
+import { dropDuplicates, duplicateOf, numbersIn } from "../../supabase/functions/_shared/researchLogic.ts";
+Deno.test("no duplicates: the same rule with the same numbers isn't published twice; a different number or state is new", () => {
+  assert.deepEqual(numbersIn("A license is required for jobs of $25,000 or more, within 30 days"), ["25000", "30"]);
+  const known = [
+    { ref: "TN-LIC-01", text: "Tennessee requires a contractor license for projects of $25,000 or more.", state: "Tennessee" },
+    { ref: "OSHA-12", text: "Portable ladders must extend at least 3 feet above the upper landing surface.", state: null }
+  ];
+  // Same rule, same number, same state
+  assert.equal(duplicateOf("In Tennessee a contractor license is required for projects of $25,000 or more.", "Tennessee", known), "TN-LIC-01");
+  // Different number: new information (or a change), not a duplicate
+  assert.equal(duplicateOf("Tennessee requires a contractor license for projects of $50,000 or more.", "Tennessee", known), null);
+  // Different state: not a duplicate of Tennessee's rule
+  assert.equal(duplicateOf("Georgia requires a contractor license for projects of $25,000 or more.", "Georgia", known), null);
+  // A state finding that just repeats the national rule is a duplicate
+  assert.equal(duplicateOf("Portable ladders must extend at least 3 feet above the upper landing surface.", "Ohio", known), "OSHA-12");
+  const claims = [
+    { claim: "In Tennessee a contractor license is required for projects of $25,000 or more.", kept: true },
+    { claim: "Tennessee contractor licenses renew every 2 years.", kept: true },
+    { claim: "Not kept anyway.", kept: false }
+  ].map((c) => ({ source_url: null, source_title: null, verdict: "confirmed" as const, conflicts: [], official: true, ...c }));
+  const d = dropDuplicates(claims, "Tennessee", () => known);
+  assert.equal(d.duplicates, 1);
+  assert.equal(d.kept, 1);
+  assert.equal(d.claims[0].duplicate, "TN-LIC-01");
+  assert.equal(d.claims[0].kept, false);
+  assert.equal(d.claims[1].kept, true);
+});

@@ -219,6 +219,8 @@ export type SiteSettings = {
   support: { email: string; phone: string };
   /** Bro's studio voice (the school's voice server) on or off */
   voice?: { studio?: boolean };
+  /** Real exam formats (questions, minutes, passing score) instructors verified from candidate bulletins */
+  exam_formats?: import("./examSim").ExamFormat[];
 };
 
 export const money = (cents: number) =>

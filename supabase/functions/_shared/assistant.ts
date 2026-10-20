@@ -496,6 +496,30 @@ Plain text with short headings and dashes, under 450 words.`, 1600);
     }
   },
   {
+    name: "set_exam_format", mode: "confirm", label: "Preparing an exam format", adminOnly: true,
+    description: "Admins only: save the real format of a licensing exam (from the candidate bulletin) so mock exams match it: number of questions, time limit in minutes and passing score, for a trade (gc, elec, plumb, hvac or all), a section (trade, law or mix) and a state (omit for every state). Replaces an existing format with the same trade, section and state. Only use numbers the person gave you or that you confirmed from an official bulletin; say where they came from in notes. Waits for confirmation.",
+    input_schema: { type: "object", properties: { name: { type: "string" }, trade: { type: "string", enum: [...TRADE_KEYS, "all"] }, part: { type: "string", enum: ["trade", "law", "mix"] }, state: { type: "string" }, questions: { type: "integer", minimum: 5, maximum: 250 }, minutes: { type: "integer", minimum: 5, maximum: 600 }, pass_pct: { type: "integer", minimum: 50, maximum: 100 }, notes: { type: "string" } }, required: ["name", "trade", "part", "questions", "minutes"] },
+    prepare: async (i) => {
+      const f = {
+        id: `f${Date.now().toString(36)}`, name: str(i.name, 80), trade: [...TRADE_KEYS, "all"].includes(String(i.trade)) ? String(i.trade) : "all",
+        part: ["trade", "law", "mix"].includes(String(i.part)) ? String(i.part) : "trade", state: stateOf(i.state) || null,
+        questions: Math.max(5, Math.min(250, Math.round(Number(i.questions) || 0))), minutes: Math.max(5, Math.min(600, Math.round(Number(i.minutes) || 0))),
+        pass_pct: Math.max(50, Math.min(100, Math.round(Number(i.pass_pct) || 70))), ...(str(i.notes, 300) ? { notes: str(i.notes, 300) } : {})
+      };
+      if (!f.name) throw new HttpError(400, "bad_request", "Give the exam a name.");
+      return { summary: `Save exam format: ${f.name}`, details: [`${f.questions} questions · ${f.minutes} minutes · ${f.pass_pct}% to pass`, `${TRADE_NAME[f.trade]} · ${f.part === "law" ? "Business & Law" : f.part === "mix" ? "Combined" : "Trade"} · ${f.state || "every state"}`, ...(f.notes ? [f.notes] : [])], payload: f };
+    },
+    execute: async (f) => {
+      const db = adminClient();
+      const { data } = await db.from("site_settings").select("value").eq("key", "exam_formats").maybeSingle();
+      // deno-lint-ignore no-explicit-any
+      const list = (Array.isArray(data?.value) ? data!.value : []).filter((x: any) => !(x?.trade === f.trade && x?.part === f.part && (x?.state || null) === f.state));
+      const { error } = await db.from("site_settings").upsert({ key: "exam_formats", value: [...list, f], updated_at: new Date().toISOString() }, { onConflict: "key" });
+      if (error) throw new HttpError(500, "server_error", "Couldn't save the exam format.");
+      return `Saved. Mock exams for ${f.name} now use ${f.questions} questions, ${f.minutes} minutes and ${f.pass_pct}% to pass.`;
+    }
+  },
+  {
     name: "knowledge_gaps", mode: "read", label: "Checking what Bro couldn't answer",
     description: "The research desk: questions students asked that the knowledge base couldn't answer well (most asked first), recent studies with how many findings were confirmed and published, and anything waiting for an admin's review.",
     input_schema: { type: "object", properties: {} },
@@ -556,7 +580,7 @@ export function commandSystem(ctx: ToolCtx, nowLocal: string, voice: boolean): s
   return `You are Bro Command, the AI chief of staff for Licensing Bro's, an exam-prep platform for U.S. contractor licensing exams (General Contractor, Electrical, Plumbing, HVAC, plus Business & Law, all 50 states). You work for the people who run it.
 You're talking with ${ctx.name}, ${ctx.role === "admin" ? "an admin (owner tools: full access)" : "an instructor (teaching tools; no prices, settings or roles)"}. It is ${nowLocal} in ${ctx.tz}.
 
-You can look things up (site_overview, find_students, student_report, topic_trends, list_live_classes, list_practice_sets, list_courses, list_staff, list_automations, search_knowledge, knowledge_gaps), build things right away (create_practice_test, create_game_deck, class_prep, research_topic), and prepare actions that wait for the person's OK (send_announcement, send_email, schedule_live_class, publish_practice_set, add_knowledge${ctx.role === "admin" ? ", set_instructor, set_automation" : ""}).
+You can look things up (site_overview, find_students, student_report, topic_trends, list_live_classes, list_practice_sets, list_courses, list_staff, list_automations, search_knowledge, knowledge_gaps), build things right away (create_practice_test, create_game_deck, class_prep, research_topic), and prepare actions that wait for the person's OK (send_announcement, send_email, schedule_live_class, publish_practice_set, add_knowledge${ctx.role === "admin" ? ", set_instructor, set_automation, set_exam_format" : ""}).
 
 How you work:
 1. Act, don't just advise. When asked to do something, use the tools, and chain steps on your own (for example: find at-risk students, then prepare a personal email to each group, then schedule a review class).

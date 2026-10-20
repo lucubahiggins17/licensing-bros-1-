@@ -170,3 +170,23 @@
 .srcPick select{width:auto;flex:1 1 240px;max-width:520px;min-height:40px}
 .srcNote{flex:1 1 100%}
 .srcNote p{margin:0}
+
+/* ---------- Exam-day simulator setup and score report ---------- */
+.resume{display:flex;gap:12px;align-items:center;flex-wrap:wrap;border:2px solid var(--orange);background:var(--orange-soft);margin-bottom:12px}
+.resume>svg{width:28px;height:28px;color:var(--orange);flex:none}
+.resume>div:nth-child(2){display:flex;flex-direction:column;flex:1 1 220px;min-width:0}
+.resume span{font-size:13.5px;color:var(--muted)}
+.format{margin-top:14px;border:1.5px solid var(--line);border-radius:10px;padding:12px;background:var(--surface)}
+.formatHead{display:grid;grid-template-columns:auto minmax(0,1fr);gap:2px 8px;align-items:center}
+.formatHead svg{width:18px;height:18px;color:var(--ok);grid-row:1 / span 2}
+.formatHead b{font-size:14.5px}
+.formatHead span{grid-column:2;font-size:13px;color:var(--muted);line-height:1.4}
+.formatRow{display:flex;flex-wrap:wrap;gap:10px;margin-top:10px}
+.formatRow :global(.field){margin:0;flex:1 1 160px}
+.report{display:flex;flex-wrap:wrap;gap:18px;align-items:flex-end;justify-content:space-between;border-left:8px solid var(--bad);padding-left:14px}
+.report[data-pass="1"]{border-left-color:var(--ok)}
+.reportMain{display:flex;flex-direction:column;gap:4px;min-width:0;flex:1 1 260px}
+.verdict{font-family:var(--display);font-size:clamp(40px,8vw,64px);line-height:1;color:var(--bad)}
+.report[data-pass="1"] .verdict{color:var(--ok)}
+.reportLine{margin:0;font-size:15px}
+.reportWarn{margin:0;font-size:13.5px;color:var(--warn);font-weight:600}

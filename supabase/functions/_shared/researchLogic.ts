@@ -19,6 +19,8 @@ export type Claim = {
   official: boolean;
   /** Published to the library */
   kept: boolean;
+  /** Already in the knowledge base (the fact id or library passage it repeats); not published again */
+  duplicate?: string | null;
 };
 
 // ---------------------------------------------------------------------------------------------------------------
@@ -315,3 +317,43 @@ export function researchDocText(topic: string, state: string | null, claims: Cla
 
 /** Title for the library document. */
 export const researchTitle = (topic: string) => `Bro's research: ${topic.replace(/\s+/g, " ").trim()}`.slice(0, 200);
+
+// ---------------------------------------------------------------------------------------------------------------
+// No duplicates: a finding the knowledge base already has (same rule, same numbers, same state or national) isn't
+// published again. A different number, or a state rule that differs from the national one, is new information.
+// ---------------------------------------------------------------------------------------------------------------
+/** The numbers in a sentence, normalized ("$25,000" → "25000", "1/2" kept as is). */
+export function numbersIn(text: string): string[] {
+  return [...new Set(((text || "").match(/\d[\d,]*(?:\.\d+)?(?:\/\d+)?/g) || []).map((n) => n.replace(/,/g, "").replace(/\.0+$/, "")))];
+}
+
+export type Known = { ref: string; text: string; state: string | null };
+
+/**
+ * The existing fact or passage a finding repeats, or null. Repeats means: nearly all of the finding's meaningful
+ * words appear in it, every number in the finding appears in it, and it applies to the same state or nationally.
+ */
+export function duplicateOf(text: string, state: string | null, known: Known[]): string | null {
+  const nums = numbersIn(text);
+  for (const k of known) {
+    if (!(k.state === state || k.state === null)) continue;
+    if (coverage(text, [k.text]) < 0.8) continue;
+    const theirs = new Set(numbersIn(k.text));
+    if (nums.some((n) => !theirs.has(n))) continue;
+    return k.ref;
+  }
+  return null;
+}
+
+/** Marks findings the knowledge base already has: they stay on the study record but aren't published again. */
+export function dropDuplicates(claims: Claim[], state: string | null, knownFor: (c: Claim) => Known[]): { claims: Claim[]; kept: number; duplicates: number } {
+  let duplicates = 0;
+  const out = claims.map((c) => {
+    if (!c.kept) return c;
+    const d = duplicateOf(finalText(c), state, knownFor(c));
+    if (!d) return c;
+    duplicates++;
+    return { ...c, kept: false, duplicate: d };
+  });
+  return { claims: out, kept: out.filter((c) => c.kept).length, duplicates };
+}

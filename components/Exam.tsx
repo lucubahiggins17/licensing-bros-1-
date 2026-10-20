@@ -1,20 +1,27 @@
 "use client";
-import { useEffect, useRef, useState } from "react";
-import { LockKeyhole, Volume2, MessageCircle, RotateCcw } from "lucide-react";
+// Mock exam: set up an exam that matches the real one (verified format from your instructors, or the numbers from your
+// candidate bulletin), take it in the full-screen exam-day simulator, then get a score report like the testing center's
+// plus a question-by-question review with the code references.
+import { useEffect, useMemo, useState } from "react";
+import { LockKeyhole, Volume2, MessageCircle, RotateCcw, ShieldCheck, Clock, Timer, PlayCircle, Trash2 } from "lucide-react";
 import { useApp, TopicBar, PanelHead, AiErrorNote, ProNote, usePlan } from "./ctx";
+import { useAuth, displayName } from "@/lib/auth";
 import { Question, TRADES } from "@/lib/data";
-import { fmtTime, Part, pool, questionContext, shuffle, withAnswer, withExamDone, withSession } from "@/lib/progress";
+import { Part, pool, questionContext, withAnswer, withExamDone, withSession } from "@/lib/progress";
+import { cleanFormats, defaultMinutes, examPick, fmtClock, formatFor, loadRun, paceReport, saveRun, type SimRun, timeLeft } from "@/lib/examSim";
 import { generate } from "@/lib/ai";
 import { supabase } from "@/lib/supabaseClient";
+import { celebrate } from "@/components/motion";
+import ExamSimulator from "@/components/exam/ExamSimulator";
 import type { PracticeSet } from "@/lib/types";
 import s from "./Study.module.css";
 
 type Src = "bank" | "sets" | "ai";
-type Run = { qs: Question[]; ans: (number | null)[]; flags: boolean[]; i: number; t0: number; limit: number; src: Src; label: string };
-type Done = { qs: Question[]; ans: (number | null)[]; secs: number; src: Src; label: string };
+type Done = { run: SimRun; timedOut: boolean; secs: number };
 type SetRow = Pick<PracticeSet, "id" | "title" | "trade" | "state" | "part" | "is_free"> & { questions: Question[] };
+type TimeMode = "exam" | "custom" | "untimed";
 
-const COUNTS = [10, 25, 50];
+const COUNTS = [10, 25, 50, 75, 100];
 const PART_LABEL: Record<Part, string> = { trade: "Trade", law: "Business & Law", mix: "Trade + Business & Law" };
 const L = "ABCD";
 
@@ -28,31 +35,39 @@ function Seg({ value, onChange, opts, label }: { value: string; onChange: (v: an
 export default function Exam() {
   const { p, update, askTutor, talk } = useApp();
   const { limits, paid } = usePlan();
+  const { settings, profile, user } = useAuth();
   const [src, setSrc] = useState<Src>("bank");
   const [part, setPart] = useState<Part>("trade");
   const [n, setN] = useState(10);
-  const [run, setRun] = useState<Run | null>(null);
+  const [timeMode, setTimeMode] = useState<TimeMode>("exam");
+  const [customMin, setCustomMin] = useState(60);
+  const [passPct, setPassPct] = useState(70);
+  const [run, setRun] = useState<SimRun | null>(null);
+  const [saved, setSaved] = useState<SimRun | null>(null);
   const [done, setDone] = useState<Done | null>(null);
   const [loading, setLoading] = useState(false);
   const [err, setErr] = useState<any>(null);
-  const [now, setNow] = useState(Date.now());
-  const [confirmEnd, setConfirmEnd] = useState(false);
   const [sets, setSets] = useState<SetRow[] | null>(null);
   const [setsErr, setSetsErr] = useState("");
   const [setId, setSetId] = useState("");
   const [reload, setReload] = useState(0);
-  const runRef = useRef<Run | null>(null);
-  runRef.current = run;
 
   const max = Math.max(1, limits.exam_max_questions || 10);
-  const allowed = COUNTS.filter((c) => c <= max);
-  const counts = allowed.length ? COUNTS : [max];
-  const locked = COUNTS.filter((c) => c > max);
+  const formats = useMemo(() => cleanFormats((settings as any)?.exam_formats), [settings]);
+  const verified = formatFor(formats, p.trade, p.state, part);
+  const counts = [...new Set([...COUNTS.filter((c) => c <= Math.max(max, 10)), ...(verified ? [verified.questions] : [])])].sort((a, b) => a - b);
   const available = pool(p, part).length;
   const chosenSet = sets?.find((x) => x.id === setId) || null;
 
-  // Keep choices inside the plan
-  useEffect(() => { if (n > max) setN(allowed.length ? allowed[allowed.length - 1] : max); }, [max]); // eslint-disable-line react-hooks/exhaustive-deps
+  // An exam in progress on this device (closed app, refresh)
+  useEffect(() => { setSaved(loadRun()); }, []);
+
+  // The verified format sets the defaults for this section
+  useEffect(() => {
+    if (verified) { setN(Math.min(verified.questions, max)); setPassPct(verified.pass_pct); setTimeMode("exam"); }
+    else setPassPct(70);
+  }, [verified?.id, part]); // eslint-disable-line react-hooks/exhaustive-deps
+  useEffect(() => { if (n > max) setN(Math.min(max, counts.filter((c) => c <= max).pop() || max)); }, [max]); // eslint-disable-line react-hooks/exhaustive-deps
   useEffect(() => { if (src === "ai" && !limits.ai_exams) setSrc("bank"); }, [limits.ai_exams, src]);
 
   // Licensing Bro's sets for this trade (or all trades) and this state (or every state). RLS hides sets the plan doesn't include.
@@ -85,26 +100,22 @@ export default function Exam() {
     return () => { alive = false; };
   }, [src, p.trade, p.state, reload]);
 
-  useEffect(() => {
-    if (!run) return;
-    const id = setInterval(() => setNow(Date.now()), 1000);
-    return () => clearInterval(id);
-  }, [run]);
-
-  const left = run ? Math.max(0, run.limit - Math.floor((now - run.t0) / 1000)) : 0;
-  useEffect(() => { if (run && left <= 0) finish(); }, [left]); // eslint-disable-line react-hooks/exhaustive-deps
+  const count = Math.min(n, max);
+  // Time limit: the verified format's pace, scaled when the exam is shorter than the real one
+  const examSecs = (q: number) => verified ? Math.round((verified.minutes * 60 * q) / verified.questions) : defaultMinutes(q) * 60;
+  const limitFor = (q: number) => (timeMode === "untimed" ? 0 : timeMode === "custom" ? Math.max(1, customMin) * 60 : examSecs(q));
+  const fullLength = !!verified && count >= verified.questions;
 
   async function start() {
     setErr(null);
-    const count = Math.min(n, max);
     let qs: Question[] = [];
     let label = "";
     if (src === "bank") {
-      qs = shuffle(pool(p, part)).slice(0, count).map((q) => ({ ...q, src: "bank" as const }));
+      qs = examPick(pool(p, part), count).map((q) => ({ ...q, src: "bank" as const }));
       label = "verified bank";
     } else if (src === "sets") {
       if (!chosenSet) { setErr({ message: "Pick a set first." }); return; }
-      qs = shuffle(chosenSet.questions).slice(0, count).map((q) => ({ ...q, src: "set" as const }));
+      qs = examPick(chosenSet.questions, count).map((q) => ({ ...q, src: "set" as const }));
       label = chosenSet.title;
     } else {
       if (!limits.ai_exams) return;
@@ -117,14 +128,16 @@ export default function Exam() {
       label = "AI set";
     }
     if (!qs.length) { setErr({ message: "No questions are available for that choice yet. Try another source." }); return; }
-    setDone(null); setConfirmEnd(false);
-    setRun({ qs, ans: Array(qs.length).fill(null), flags: Array(qs.length).fill(false), i: 0, t0: Date.now(), limit: Math.round(qs.length * 108), src, label });
-    setNow(Date.now());
-    window.scrollTo({ top: 0 });
+    const name = verified && fullLength ? verified.name : `${p.state} ${TRADES[p.trade]} · ${PART_LABEL[part]}${verified && !fullLength ? " (shortened)" : ""}`;
+    const r: SimRun = {
+      v: 1, qs, ans: Array(qs.length).fill(null), flags: Array(qs.length).fill(false), struck: qs.map(() => []), spent: Array(qs.length).fill(0),
+      i: 0, t0: null, limit: limitFor(qs.length), passPct, name, verified: !!verified && timeMode === "exam", src, label, leaves: 0
+    };
+    saveRun(r);
+    setSaved(null); setDone(null); setRun(r);
   }
 
-  function finish() {
-    const r = runRef.current; if (!r) return;
+  function score(r: SimRun, timedOut: boolean) {
     const right = r.qs.filter((q, i) => r.ans[i] === q.a).length;
     const pct = Math.round((100 * right) / r.qs.length);
     update((prev) => {
@@ -134,130 +147,53 @@ export default function Exam() {
         const known = new Set(next.extraBank.map((b) => b.q));
         next = { ...next, extraBank: [...next.extraBank, ...r.qs.filter((q) => !known.has(q.q))].slice(-300) };
       }
-      return withSession(withExamDone(next), "Mock exam", `${pct}% · ${right}/${r.qs.length} · ${r.label}`);
+      return withSession(withExamDone(next), "Mock exam", `${pct}% · ${right}/${r.qs.length} · ${pct >= r.passPct ? "pass" : "below passing"} · ${r.label}`);
     });
-    setDone({ qs: r.qs, ans: r.ans, secs: Math.floor((Date.now() - r.t0) / 1000), src: r.src, label: r.label });
-    setRun(null);
+    const secs = r.t0 ? Math.min(r.limit || Infinity, Math.floor((Date.now() - r.t0) / 1000)) : 0;
+    setDone({ run: r, timedOut, secs });
+    setRun(null); setSaved(null);
     window.scrollTo({ top: 0 });
+    if (pct >= r.passPct) setTimeout(celebrate, 300);
   }
 
-  const setRunP = (f: (r: Run) => Run) => setRun((r) => (r ? f(r) : r));
-  const srcBadge = (q: Question) => q.src === "ai" ? <span className="badge ai">AI</span> : q.src === "set" ? <span className="badge paid">Bro&rsquo;s set</span> : <span className="badge v">Verified</span>;
-
-  if (run) {
-    const q = run.qs[run.i], total = run.qs.length;
-    return (
-      <section className="panel">
-        <div className="card">
-          <div className="qhead">
-            <span className="eyebrow">Question {run.i + 1} of {total} · {q.topic} {srcBadge(q)}</span>
-            <span className="timer" aria-label="Time left">{fmtTime(left)}</span>
-          </div>
-          <div className="bar" style={{ margin: "10px 0" }}><i style={{ width: `${(run.i / total) * 100}%` }} /></div>
-          <p className="q">{q.q}</p>
-          <div className="opts">
-            {q.c.map((c, k) => (
-              <button key={k} className="opt" aria-pressed={run.ans[run.i] === k}
-                onClick={() => setRunP((r) => { const ans = [...r.ans]; ans[r.i] = k; return { ...r, ans }; })}>
-                <b>{L[k]}</b><span>{c}</span>
-              </button>
-            ))}
-          </div>
-          <div className={s.examFoot}>
-            <div>
-              <button className="btn" disabled={!run.i} onClick={() => setRunP((r) => ({ ...r, i: r.i - 1 }))}>Back</button>
-              <button className="btn" onClick={() => setRunP((r) => { const flags = [...r.flags]; flags[r.i] = !flags[r.i]; return { ...r, flags }; })}>{run.flags[run.i] ? "Unflag" : "Flag"}</button>
-            </div>
-            <div>
-              <button className="btn" onClick={() => (confirmEnd ? finish() : setConfirmEnd(true))}>{confirmEnd ? "Tap again to end" : "End exam"}</button>
-              <button className="btn primary" onClick={() => (run.i === total - 1 ? finish() : setRunP((r) => ({ ...r, i: r.i + 1 })))}>{run.i === total - 1 ? "Finish" : "Next"}</button>
-            </div>
-          </div>
-          <p className="note" style={{ marginTop: 8 }}>
-            {run.ans.filter((a) => a !== null).length} of {total} answered · {run.flags.filter(Boolean).length} flagged
-          </p>
-          <div className="row" style={{ gap: 6, marginTop: 6 }}>
-            {run.qs.map((_, i) => (
-              <button key={i} className="btn sm" aria-label={`Go to question ${i + 1}`} aria-current={i === run.i ? "step" : undefined} onClick={() => setRunP((r) => ({ ...r, i }))}
-                style={{ minWidth: 36, background: i === run.i ? "var(--navy)" : run.flags[i] ? "var(--accent-soft)" : run.ans[i] !== null ? "var(--ok-soft)" : undefined, color: i === run.i ? "#fff" : undefined }}>{i + 1}</button>
-            ))}
-          </div>
-        </div>
-      </section>
-    );
+  function resume() {
+    const r = saved;
+    if (!r) return;
+    if (r.t0 && r.limit && timeLeft(r) <= 0) { saveRun(null); score(r, true); return; }
+    setRun(r); setSaved(null);
   }
 
-  if (done) {
-    const right = done.qs.filter((q, i) => done.ans[i] === q.a).length;
-    const pct = Math.round((100 * right) / done.qs.length), pass = pct >= 70;
-    const byT: Record<string, { c: number; a: number }> = {};
-    done.qs.forEach((q, i) => { const t = (byT[q.topic] ||= { c: 0, a: 0 }); t.a++; if (done.ans[i] === q.a) t.c++; });
-    const missed = done.qs.filter((q, i) => done.ans[i] !== q.a);
-    const xp = done.qs.length * 2 + right * 10 + 50;
-    return (
-      <section className="panel">
-        <div className="card">
-          <div className="row" style={{ gap: 20, alignItems: "flex-end" }}>
-            <div><div className="eyebrow">Score</div><div className={`score ${pass ? "pass" : "fail"}`}>{pct}%</div></div>
-            <div className="stat">
-              <div><b>{right}/{done.qs.length}</b><span>Correct</span></div>
-              <div><b>{fmtTime(done.secs)}</b><span>Time</span></div>
-              <div><b>+{xp}</b><span>XP earned</span></div>
-              <div><b>{pass ? "Pass" : "Below 70"}</b><span>Most states pass at 70%</span></div>
-            </div>
-          </div>
-          <h3 style={{ fontSize: 22, marginTop: 18 }}>By topic</h3>
-          <div style={{ display: "flex", flexDirection: "column", gap: 6, marginTop: 8 }}>
-            {Object.entries(byT).map(([k, v]) => <TopicBar key={k} name={k} {...v} />)}
-          </div>
-          <div className="row" style={{ marginTop: 16 }}>
-            <button className="btn primary" onClick={() => setDone(null)}>New exam</button>
-            {missed.length > 0 && (
-              <a className="btn" href="#review" onClick={() => window.scrollTo({ top: 0 })}><RotateCcw aria-hidden="true" />Fix my {missed.length} misses in Smart Review</a>
-            )}
-            <button className="btn" onClick={() => askTutor(missed.length
-              ? "I missed these on my mock exam. Teach me the concepts behind them and where to find each in the book:\n" + missed.slice(0, 6).map((q) => `- ${q.q} (Correct: ${q.c[q.a]}, ${q.ref})`).join("\n")
-              : "I aced my mock exam. Give me 3 harder questions on my trade.")}>Ask tutor about my misses</button>
-          </div>
-          <h3 style={{ fontSize: 22, marginTop: 18 }}>Review</h3>
-          <div className="review">
-            {done.qs.map((q, i) => {
-              const ok = done.ans[i] === q.a;
-              return (
-                <div key={i} className={`rv ${ok ? "ok" : "no"}`}>
-                  <div className="eyebrow">{i + 1}. {q.topic} · {ok ? "Correct" : done.ans[i] === null ? "Skipped" : "Missed"}</div>
-                  <p style={{ margin: "4px 0", fontWeight: 600 }}>{q.q}</p>
-                  {!ok && <p className="note" style={{ margin: "2px 0" }}>Your answer: {done.ans[i] === null ? "none" : q.c[done.ans[i] as number]}</p>}
-                  <p style={{ margin: "2px 0" }}>Correct: <b>{q.c[q.a]}</b> {q.ref && <span className="ref">{q.ref}</span>}</p>
-                  {q.why && <p className="note" style={{ margin: "2px 0" }}>{q.why}</p>}
-                  <div className="row" style={{ gap: 8, marginTop: 6 }}>
-                    <button className="btn sm" onClick={() => talk({ title: `Explaining question ${i + 1}: ${q.topic}`, context: questionContext(q, done.ans[i]), initialQuestion: "Explain this question to me out loud: why the right answer is right, why my pick was wrong if I missed it, and how to find it fast in the book." })}>
-                      <Volume2 aria-hidden="true" />Explain out loud
-                    </button>
-                    <button className="btn sm" onClick={() => askTutor(`Explain this practice question and how to find it fast in the code book:\n${q.q}\nChoices: ${q.c.map((c, k) => L[k] + ") " + c).join("; ")}\nCorrect: ${q.c[q.a]} (${q.ref})`)}>
-                      <MessageCircle aria-hidden="true" />Explain in chat
-                    </button>
-                  </div>
-                </div>
-              );
-            })}
-          </div>
-        </div>
-      </section>
-    );
-  }
+  const candidate = displayName(profile, user);
+  if (run) return <ExamSimulator initial={run} candidate={candidate} onFinish={score} onQuit={() => { saveRun(null); setRun(null); }} />;
 
-  const count = Math.min(n, max);
+  if (done) return <ScoreReport done={done} onNew={() => setDone(null)} askTutor={askTutor} talk={talk} />;
+
   const srcOpts: { k: Src; title: string; desc: string; lockedOut?: boolean }[] = [
-    { k: "bank", title: "Verified bank", desc: `${available} checked questions for ${TRADES[p.trade]}. Starts instantly.` },
+    { k: "bank", title: "Verified bank", desc: `${available} checked questions for ${TRADES[p.trade]}, spread across topics like the real exam.` },
     { k: "sets", title: "Licensing Bro’s sets", desc: `Practice sets from our instructors for ${TRADES[p.trade]} and ${p.state}.` },
     { k: "ai", title: "AI for my state", desc: `Fresh questions aimed at the ${p.state} exam, each with a code citation.`, lockedOut: !limits.ai_exams }
   ];
+  const limitSecs = limitFor(count);
 
   return (
     <section className="panel">
-      <PanelHead eyebrow="Mock Exam" title="Timed" accent="mock exam"
-        lede="Run the verified question bank instantly, take a Licensing Bro's practice set, or have the AI write a fresh set aimed at your state. Every answer comes with its code reference." />
+      <PanelHead eyebrow="Mock Exam" title="Exam-day" accent="simulator"
+        lede="A full-screen test that works like the computer-based exam at the testing center: the real time limit, flag for review, cross out choices, the on-screen calculator, a review screen before you end, and no answers until it's scored." />
+
+      {saved && (
+        <div className={`card ${s.resume}`} role="status">
+          <PlayCircle aria-hidden="true" />
+          <div>
+            <b>You have an exam in progress</b>
+            <span>{saved.name} · {saved.ans.filter((a) => a !== null).length} of {saved.qs.length} answered{saved.t0 && saved.limit ? ` · ${timeLeft(saved) > 0 ? `${fmtClock(timeLeft(saved))} left` : "time ran out"}` : ""}</span>
+          </div>
+          <div className="row" style={{ gap: 8 }}>
+            <button type="button" className="btn primary" onClick={resume}>{saved.t0 && saved.limit && timeLeft(saved) <= 0 ? "See my score" : "Resume"}</button>
+            <button type="button" className="btn ghost" onClick={() => { saveRun(null); setSaved(null); }} aria-label="Discard the exam in progress"><Trash2 aria-hidden="true" /></button>
+          </div>
+        </div>
+      )}
+
       <div className="card">
         <div className="eyebrow" id="src-label">Question source</div>
         <div className={s.srcGrid} role="radiogroup" aria-labelledby="src-label">
@@ -290,12 +226,39 @@ export default function Exam() {
             </div>
           </div>
         </div>
-        {locked.length > 0 && !paid && <ProNote>Pro unlocks {locked.join(" and ")}-question exams.</ProNote>}
+        {counts.some((c) => c > max) && !paid && <ProNote>Your plan allows {max}-question exams. Pro unlocks full-length exams{verified ? ` (${verified.questions} questions, like the real ${verified.name})` : ""}.</ProNote>}
+
+        <div className={s.format}>
+          <div className={s.formatHead}>
+            {verified ? <><ShieldCheck aria-hidden="true" /><b>Real exam format</b><span>{verified.name}: {verified.questions} questions in {verified.minutes} minutes, {verified.pass_pct}% to pass. Verified by your instructors{verified.notes ? `. ${verified.notes}` : "."}</span></>
+              : <><Clock aria-hidden="true" /><b>Exam format</b><span>Your instructors haven&rsquo;t posted the verified format for the {p.state} {PART_LABEL[part]} exam yet. Times below are typical for open-book licensing exams; set the numbers from your candidate bulletin so practice matches test day.</span></>}
+          </div>
+          <div className={s.formatRow}>
+            <label className="field">Time limit
+              <select value={timeMode} onChange={(e) => setTimeMode(e.target.value as TimeMode)}>
+                <option value="exam">{verified ? "Real exam pace" : "Typical exam pace"} ({fmtClock(examSecs(count))})</option>
+                <option value="custom">Set my own</option>
+                <option value="untimed">Untimed (practice)</option>
+              </select>
+            </label>
+            {timeMode === "custom" && (
+              <label className="field">Minutes
+                <input type="number" min={5} max={600} value={customMin} onChange={(e) => setCustomMin(Math.max(5, Math.min(600, Number(e.target.value) || 5)))} />
+              </label>
+            )}
+            <label className="field">Passing score
+              <select value={passPct} onChange={(e) => setPassPct(Number(e.target.value))}>
+                {[60, 65, 70, 72, 75, 80].map((v) => <option key={v} value={v}>{v}%</option>)}
+              </select>
+            </label>
+          </div>
+          {verified && !fullLength && <p className="note" style={{ margin: "6px 0 0" }}>Shorter than the real exam, so the time limit is scaled to the same pace per question.</p>}
+        </div>
 
         <div style={{ margin: "14px 0" }}>
           {src === "bank" && (
             <p className="note" style={{ margin: 0 }}>
-              <span className="badge v">Verified</span> {available} questions for {TRADES[p.trade]}{count > available ? `, so this exam will use all ${available}` : ""}. About {Math.round(Math.min(count, available) * 1.8)} minutes. Questions you take from AI sets are added here too.
+              <span className="badge v">Verified</span> {available} questions for {TRADES[p.trade]}{count > available ? `, so this exam will use all ${available}` : ""}. <Timer aria-hidden="true" style={{ width: 14, height: 14, verticalAlign: -2 }} /> {limitSecs ? `${fmtClock(limitSecs)} on the clock.` : "No time limit."}
             </p>
           )}
           {src === "ai" && (
@@ -321,13 +284,83 @@ export default function Exam() {
                   ))}
                 </div>
               )}
-              {chosenSet && <p className="note" style={{ margin: "10px 0 0" }}>This exam uses {Math.min(count, chosenSet.questions.length)} of the set&rsquo;s {chosenSet.questions.length} questions in random order. About {Math.round(Math.min(count, chosenSet.questions.length) * 1.8)} minutes.</p>}
+              {chosenSet && <p className="note" style={{ margin: "10px 0 0" }}>This exam uses {Math.min(count, chosenSet.questions.length)} of the set&rsquo;s {chosenSet.questions.length} questions. {limitSecs ? `${fmtClock(limitFor(Math.min(count, chosenSet.questions.length)))} on the clock.` : "No time limit."}</p>}
               {!limits.practice_sets && sets !== null && !setsErr && <ProNote>Free sets are shown. Any paid course unlocks every Licensing Bro&rsquo;s set.</ProNote>}
             </>
           )}
         </div>
         {err && (err.code ? <div style={{ marginBottom: 12 }}><AiErrorNote error={err} onRetry={start} /></div> : <p className="err">{err.message}</p>)}
-        <button className="btn primary big" onClick={start} disabled={loading || (src === "sets" && !chosenSet)}>{loading ? "Writing your exam…" : "Start exam"}</button>
+        <button className="btn primary big" onClick={start} disabled={loading || (src === "sets" && !chosenSet)}>{loading ? "Writing your exam…" : "Go to the exam"}</button>
+      </div>
+    </section>
+  );
+}
+
+function ScoreReport({ done, onNew, askTutor, talk }: { done: Done; onNew: () => void; askTutor: (t: string) => void; talk: (o?: any) => void }) {
+  const r = done.run;
+  const right = r.qs.filter((q, i) => r.ans[i] === q.a).length;
+  const pct = Math.round((100 * right) / r.qs.length), pass = pct >= r.passPct;
+  const byT: Record<string, { c: number; a: number }> = {};
+  r.qs.forEach((q, i) => { const t = (byT[q.topic] ||= { c: 0, a: 0 }); t.a++; if (r.ans[i] === q.a) t.c++; });
+  const missed = r.qs.filter((q, i) => r.ans[i] !== q.a);
+  const pace = paceReport(r);
+  const xp = r.qs.length * 2 + right * 10 + 50;
+  const need = Math.ceil((r.passPct / 100) * r.qs.length);
+  return (
+    <section className="panel">
+      <div className="card">
+        <div className={s.report} data-pass={pass ? "1" : "0"}>
+          <div className={s.reportMain}>
+            <span className="eyebrow">Score report · {r.name}</span>
+            <div className={s.verdict}>{pass ? "PASS" : "NOT YET"}</div>
+            <p className={s.reportLine}>You scored <b>{pct}%</b> ({right} of {r.qs.length}). Passing is {r.passPct}% ({need} correct){pass ? "." : `, so ${need - right} more correct would have passed.`}</p>
+            {done.timedOut && <p className={s.reportWarn}>Time ran out and the exam was scored automatically, like at the testing center.</p>}
+          </div>
+          <div className="stat">
+            <div><b>{fmtClock(done.secs)}</b><span>{r.limit ? `of ${fmtClock(r.limit)}` : "Time used"}</span></div>
+            <div><b>{fmtClock(pace.avg)}</b><span>Per question{pace.allowed ? ` (pace ${fmtClock(pace.allowed)})` : ""}</span></div>
+            <div><b>{pace.unanswered}</b><span>Unanswered</span></div>
+            <div><b>+{xp}</b><span>XP earned</span></div>
+          </div>
+        </div>
+        {(pace.allowed > 0 && pace.avg > pace.allowed) && <p className="note">You ran behind the pace you&rsquo;ll need on test day. Your slowest topics: {pace.slowest.map((x) => `${x.topic} (${fmtClock(x.avg)} each)`).join(", ")}. Tabbing those sections in your code book is the fastest fix.</p>}
+        {r.leaves > 0 && <p className="note">You left the exam screen {r.leaves} time{r.leaves === 1 ? "" : "s"}. At the testing center you can&rsquo;t, so practice staying on it start to finish.</p>}
+        <h3 style={{ fontSize: 22, marginTop: 18 }}>By topic</h3>
+        <div style={{ display: "flex", flexDirection: "column", gap: 6, marginTop: 8 }}>
+          {Object.entries(byT).sort((a, b) => a[1].c / a[1].a - b[1].c / b[1].a).map(([k, v]) => <TopicBar key={k} name={k} {...v} />)}
+        </div>
+        <div className="row" style={{ marginTop: 16 }}>
+          <button className="btn primary" onClick={onNew}>New exam</button>
+          {missed.length > 0 && (
+            <a className="btn" href="#review" onClick={() => window.scrollTo({ top: 0 })}><RotateCcw aria-hidden="true" />Fix my {missed.length} misses in Smart Review</a>
+          )}
+          <button className="btn" onClick={() => askTutor(missed.length
+            ? "I missed these on my mock exam. Teach me the concepts behind them and where to find each in the book:\n" + missed.slice(0, 6).map((q) => `- ${q.q} (Correct: ${q.c[q.a]}, ${q.ref})`).join("\n")
+            : "I aced my mock exam. Give me 3 harder questions on my trade.")}>Ask tutor about my misses</button>
+        </div>
+        <h3 style={{ fontSize: 22, marginTop: 18 }}>Review</h3>
+        <div className="review">
+          {r.qs.map((q, i) => {
+            const ok = r.ans[i] === q.a;
+            return (
+              <div key={i} className={`rv ${ok ? "ok" : "no"}`}>
+                <div className="eyebrow">{i + 1}. {q.topic} · {ok ? "Correct" : r.ans[i] === null ? "Unanswered" : "Missed"}{r.flags[i] ? " · you flagged this" : ""}{r.spent[i] ? ` · ${fmtClock(r.spent[i])}` : ""}</div>
+                <p style={{ margin: "4px 0", fontWeight: 600 }}>{q.q}</p>
+                {!ok && <p className="note" style={{ margin: "2px 0" }}>Your answer: {r.ans[i] === null ? "none" : q.c[r.ans[i] as number]}</p>}
+                <p style={{ margin: "2px 0" }}>Correct: <b>{q.c[q.a]}</b> {q.ref && <span className="ref">{q.ref}</span>}</p>
+                {q.why && <p className="note" style={{ margin: "2px 0" }}>{q.why}</p>}
+                <div className="row" style={{ gap: 8, marginTop: 6 }}>
+                  <button className="btn sm" onClick={() => talk({ title: `Explaining question ${i + 1}: ${q.topic}`, context: questionContext(q, r.ans[i]), initialQuestion: "Explain this question to me out loud: why the right answer is right, why my pick was wrong if I missed it, and how to find it fast in the book." })}>
+                    <Volume2 aria-hidden="true" />Explain out loud
+                  </button>
+                  <button className="btn sm" onClick={() => askTutor(`Explain this practice question and how to find it fast in the code book:\n${q.q}\nChoices: ${q.c.map((c, k) => L[k] + ") " + c).join("; ")}\nCorrect: ${q.c[q.a]} (${q.ref})`)}>
+                    <MessageCircle aria-hidden="true" />Explain in chat
+                  </button>
+                </div>
+              </div>
+            );
+          })}
+        </div>
       </div>
     </section>
   );

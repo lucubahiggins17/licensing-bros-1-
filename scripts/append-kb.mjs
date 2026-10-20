@@ -51,11 +51,19 @@ const existing = kb.facts.map((f) => ({ f, t: norm(f.fact) }));
 const prefix = (t) => t.replace(/[^A-Za-z]/g, "").slice(0, 4).toUpperCase();
 const counters = {};
 for (const f of kb.facts) { const [p, n] = f.id.split("-"); counters[p] = Math.max(counters[p] || 0, Number(n)); }
+// Same rule twice (same trade, same state or both national, nearly the same words AND the same numbers) is a duplicate.
+// Nearly the same words with different numbers is a conflict: not added, listed for a person to check.
+const nums = (s) => [...new Set((String(s || "").match(/\d[\d,]*(?:\.\d+)?(?:\/\d+)?/g) || []).map((n) => n.replace(/,/g, "")))].sort().join(" ");
 let addedF = 0, skippedF = 0;
+const conflicts = [];
 for (const f of round.facts) {
   if (dropF.has(f.id)) continue;
   const t = norm(f.fact);
-  if (existing.some((e) => e.f.trade === f.trade && (e.f.state || null) === (f.state || null) && jac(e.t, t) > 0.7)) { skippedF++; continue; }
+  const near = existing.find((e) => e.f.trade === f.trade && (e.f.state || null) === (f.state || null) && jac(e.t, t) > 0.7);
+  if (near) {
+    if (nums(near.f.fact) !== nums(f.fact)) conflicts.push({ new: f.fact, existing: `${near.f.id}: ${near.f.fact}` });
+    skippedF++; continue;
+  }
   const p = prefix(f.topic); counters[p] = (counters[p] || 0) + 1;
   const nf = { id: `${p}-${String(counters[p]).padStart(3, "0")}`, topic: f.topic, trade: f.trade, state: f.state || null, source: String(f.source || ""), fact: String(f.fact).trim(), status: f.status, note: String(f.note || ""), keywords: (f.keywords || []).map(String).slice(0, 10) };
   if (f.reviewed) nf.reviewed = f.reviewed;
@@ -78,4 +86,5 @@ round.questions.forEach((q, i) => {
 kb.generated = new Date().toISOString().slice(0, 10);
 fs.writeFileSync(KB, JSON.stringify(kb));
 fs.writeFileSync(QF, JSON.stringify(qs));
-console.log(JSON.stringify({ addedFacts: addedF, skippedDuplicateFacts: skippedF, fixedExistingFacts: fixedExisting, addedQuestions: addedQ, totalFacts: kb.facts.length, totalQuestions: qs.length }));
+if (conflicts.length) console.error(`${conflicts.length} new fact(s) disagree with an existing fact on a number; not added, check them:\n` + conflicts.map((c) => `- NEW: ${c.new}\n  HAVE ${c.existing}`).join("\n"));
+console.log(JSON.stringify({ addedFacts: addedF, skippedDuplicateFacts: skippedF, numberConflicts: conflicts.length, fixedExistingFacts: fixedExisting, addedQuestions: addedQ, totalFacts: kb.facts.length, totalQuestions: qs.length }));

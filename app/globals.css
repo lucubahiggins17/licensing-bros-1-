@@ -358,7 +358,7 @@ h3,h4{font-family:var(--heading);font-weight:800;letter-spacing:0}
 .motion [data-reveal="zoom"]:not([data-in]){transform:scale(.94)}
 .motion [data-reveal-child]{transition:opacity .5s ease,transform .6s cubic-bezier(.2,.8,.2,1)}
 .motion [data-reveal]:not([data-in]) [data-reveal-child]{opacity:0;transform:translateY(14px)}
-.page{animation:pageIn .38s cubic-bezier(.2,.8,.2,1) both}
+.page{animation:pageIn .38s cubic-bezier(.2,.8,.2,1) backwards}
 @keyframes pageIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
 .btn.primary:hover{transform:translateY(-1px);box-shadow:0 12px 24px -10px rgba(242,106,27,.85)}
 .btn.primary:active{transform:translateY(1px) scale(.99)}

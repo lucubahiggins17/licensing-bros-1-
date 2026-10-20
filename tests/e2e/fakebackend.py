@@ -44,6 +44,7 @@ def seed():
             {"key": "paid_limits", "value": {"ai_daily": 60, "exam_max_questions": 50, "ai_exams": True, "practice_sets": True}},
             {"key": "location_rules", "value": {"enforce": True, "home_radius_miles": 100, "home_change_days": 30, "away_max_days": 30, "away_default_days": 14, "away_passes_per_90_days": 3, "session_timeout_seconds": 120}},
             {"key": "support", "value": {"email": "help@licensingbros.test", "phone": "(615) 555-0100"}},
+            {"key": "exam_formats", "value": [{"id": "f1", "name": "Tennessee Business and Law (test format)", "trade": "gc", "part": "law", "state": "Tennessee", "questions": 50, "minutes": 120, "pass_pct": 70, "notes": "Open book"}]},
         ],
         "profiles": [
             {"id": uid, "full_name": u["name"], "avatar_url": None, "state": "Tennessee", "trade": "gc", "exam_date": (datetime.now() + timedelta(days=40)).date().isoformat(), "created_at": now_iso(-60*24*20)}

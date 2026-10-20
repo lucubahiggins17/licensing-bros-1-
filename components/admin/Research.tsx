@@ -12,7 +12,7 @@ import { KB_TRADES } from "./Knowledge";
 import r from "./Research.module.css";
 
 type Verdict = "confirmed" | "corrected" | "disputed" | "unclear";
-type Claim = { claim: string; source_url: string | null; source_title: string | null; verdict: Verdict; correction?: string | null; note?: string | null; conflicts: string[]; official: boolean; kept: boolean };
+type Claim = { claim: string; source_url: string | null; source_title: string | null; verdict: Verdict; correction?: string | null; note?: string | null; conflicts: string[]; official: boolean; kept: boolean; duplicate?: string | null };
 type Study = { id: string; topic: string; trade: string | null; state: string | null; origin: "schedule" | "gap" | "staff"; status: string; claims: Claim[]; summary: string | null; flags: number; tokens: number; error: string | null; created_at: string; finished_at: string | null };
 type Gap = { id: string; question: string; trade: string | null; state: string | null; hits: number; reason: string; last_seen: string };
 type Stats = { studies_week: number; learned_week: number; flags_week: number; tokens_week: number; open_gaps: number; waiting_review: number; published_total: number };
@@ -170,7 +170,7 @@ function StudyRow({ x, open, onToggle, admin, busy, act }: { x: Study; open: boo
                       <input type="checkbox" aria-label={`Publish finding ${i + 1}`} checked={pick.has(i)} onChange={(e) => setPick((p) => { const n = new Set(p); e.target.checked ? n.add(i) : n.delete(i); return n; })} />
                     )}
                     <div className={r.claimBody}>
-                      <span className={r.verdict} data-tone={v.tone}><v.Icon aria-hidden="true" />{v.label}{c.kept ? " · in the library" : ""}{!c.official && c.source_url ? " · not an official source" : ""}</span>
+                      <span className={r.verdict} data-tone={v.tone}><v.Icon aria-hidden="true" />{v.label}{c.kept ? " · in the library" : ""}{c.duplicate ? ` · already known (${c.duplicate})` : ""}{!c.official && c.source_url ? " · not an official source" : ""}</span>
                       <p className={r.claimText}>{c.verdict === "corrected" && c.correction ? <><s className={r.struck}>{c.claim}</s> {c.correction}</> : c.claim}</p>
                       {c.note && <small className={r.noteLine}>{c.note}</small>}
                       {c.conflicts.length > 0 && <small className={r.conflict}><AlertTriangle aria-hidden="true" />Disagrees with built-in fact {c.conflicts.join(", ")}. If this finding is right, that fact may be out of date.</small>}

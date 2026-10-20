@@ -14,7 +14,7 @@ import { formatFacts, searchFacts } from "./kb.ts";
 import { embedPending, saveLibraryDocument, searchLibrary } from "./library.ts";
 import { UNRELIABLE_DOMAINS } from "./logic.ts";
 import {
-  type Claim, finalText, gapKey, mergeVerdicts, parseJsonBlock, planResearch, readClaims, researchDocText, researchKey,
+  type Claim, dropDuplicates, finalText, gapKey, type Known, mergeVerdicts, parseJsonBlock, planResearch, readClaims, researchDocText, researchKey,
   type ResearchPick, researchTitle, scrubQuestion
 } from "./researchLogic.ts";
 
@@ -156,11 +156,23 @@ export async function researchOne(rowIn: ResearchRow, o: ResearchOptions = {}): 
     if (!verdicts) throw new Error("The checker's reply couldn't be read.");
     const merged = mergeVerdicts(found.claims, verdicts, { reviewFirst: o.reviewFirst, knownFactIds: new Set(facts.map((f) => f.id)) });
 
-    // 3. Publish what passed; hold the rest for a person
-    const docId = merged.kept ? await publishStudy({ ...row, summary: found.summary }, merged.claims) : null;
-    const usable = merged.claims.some((x) => x.verdict === "confirmed" || x.verdict === "corrected");
-    const status = merged.kept ? "published" : usable || merged.flags ? "review" : "nothing";
-    return await finish({ status, summary: found.summary, claims: merged.claims, flags: merged.flags, doc_id: docId });
+    // 3. Skip what the knowledge base already has (same rule and numbers, same state or national)
+    const knownBy = new Map<number, Known[]>();
+    await Promise.all(merged.claims.map(async (cl, i) => {
+      if (!cl.kept) return;
+      const text = finalText(cl);
+      const f = searchFacts(text, { trade: row.trade || "gc", state: row.state || "", limit: 6 }).map((x) => ({ ref: x.id, text: x.fact, state: x.state }));
+      const l = (await searchLibrary(text, { trade: row.trade || undefined, state: row.state || undefined, limit: 4 }).catch(() => [])).map((p) => ({ ref: `library: ${p.ref}`, text: p.text, state: row.state }));
+      knownBy.set(i, [...f, ...l]);
+    }));
+    const deduped = dropDuplicates(merged.claims, row.state, (cl) => knownBy.get(merged.claims.indexOf(cl)) || []);
+
+    // 4. Publish what passed; hold the rest for a person
+    const docId = deduped.kept ? await publishStudy({ ...row, summary: found.summary }, deduped.claims) : null;
+    const usable = deduped.claims.some((x) => (x.verdict === "confirmed" || x.verdict === "corrected") && !x.duplicate);
+    const status = deduped.kept ? "published" : usable || merged.flags ? "review" : "nothing";
+    const summary = !deduped.kept && deduped.duplicates && !usable ? `${found.summary} Everything confirmed is already in the knowledge base.`.trim() : found.summary;
+    return await finish({ status, summary, claims: deduped.claims, flags: merged.flags, doc_id: docId });
   } catch (e) {
     return await finish({ status: "failed", error: String((e as Error)?.message || e).slice(0, 300) });
   }
