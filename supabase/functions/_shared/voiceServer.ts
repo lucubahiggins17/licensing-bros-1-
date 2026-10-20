@@ -51,3 +51,63 @@ export function speechRequest(c: VoiceConfig, text: string, speed: number, forma
 }
 
 export const AUDIO_TYPES: Record<string, string> = { mp3: "audio/mpeg", wav: "audio/wav", opus: "audio/ogg", aac: "audio/aac", flac: "audio/flac" };
+
+// ---------------------------------------------------------------------------------------------
+// Clear-voice listening: speech-to-text on the same kind of server (POST /v1/audio/transcriptions, the OpenAI audio
+// format). VoiceStudio has it on the same port as its voices; OpenAI's Whisper works too. Settings: STT_API_URL
+// (defaults to VOICE_API_URL), STT_API_KEY (defaults to VOICE_API_KEY when the URL is the same), STT_MODEL
+// (default "whisper-1").
+// ---------------------------------------------------------------------------------------------
+export type SttConfig = { base: string; key: string; model: string };
+
+export function sttConfig(env: (k: string) => string | undefined = (k) => Deno.env.get(k)): SttConfig | null {
+  const own = (env("STT_API_URL") || "").trim();
+  const raw = own || (env("VOICE_API_URL") || "").trim();
+  if (!raw) return null;
+  let base: string;
+  try {
+    const u = new URL(raw);
+    if (!/^https?:$/.test(u.protocol)) return null;
+    base = u.toString().replace(/\/+$/, "");
+  } catch { return null; }
+  return {
+    base,
+    key: ((own ? env("STT_API_KEY") : env("STT_API_KEY") || env("VOICE_API_KEY")) || "").trim(),
+    model: (env("STT_MODEL") || "whisper-1").trim()
+  };
+}
+
+export function transcriptionUrl(base: string): string {
+  if (/\/audio\/transcriptions$/.test(base)) return base;
+  const root = base.replace(/\/audio\/speech$/, "").replace(/\/v1$/, "");
+  return `${root}/v1/audio/transcriptions`;
+}
+
+/** Words that come up on licensing exams, so the transcriber spells them right (NEC, GFCI, retainage...). */
+export const STT_HINT = "Contractor licensing exam prep with Bro. NEC, GFCI, AFCI, IBC, IRC, IPC, UPC, IMC, IFGC, OSHA, EPA 608, PSI, Prometric, ampacity, conduit fill, box fill, voltage drop, grounding electrode, bonding, fixture units, trap arm, vent stack, backflow, BTU, CFM, superheat, subcooling, refrigerant, mechanic's lien, retainage, bid bond, performance bond, workers' comp, markup, margin.";
+
+const EXT: Record<string, string> = { "audio/webm": "webm", "audio/ogg": "ogg", "audio/mp4": "mp4", "audio/mpeg": "mp3", "audio/wav": "wav", "audio/x-wav": "wav", "audio/aac": "aac", "audio/m4a": "m4a", "audio/x-m4a": "m4a" };
+
+/** The multipart request for one recorded question. */
+export function transcriptionRequest(c: SttConfig, audio: Uint8Array<ArrayBuffer>, mime: string): RequestInit {
+  const type = (mime || "audio/webm").split(";")[0].trim().toLowerCase();
+  const form = new FormData();
+  form.append("file", new Blob([audio], { type }), `question.${EXT[type] || "webm"}`);
+  form.append("model", c.model);
+  form.append("language", "en");
+  form.append("response_format", "json");
+  form.append("prompt", STT_HINT);
+  form.append("temperature", "0");
+  return { method: "POST", headers: c.key ? { authorization: `Bearer ${c.key}` } : {}, body: form };
+}
+
+/** Text from a transcription reply (JSON {text} or plain text), with the usual hallucinations on silence removed. */
+export function transcriptText(raw: string): string {
+  let t = raw;
+  try { const j = JSON.parse(raw); t = typeof j?.text === "string" ? j.text : ""; } catch { /* plain text */ }
+  t = t.replace(/\s+/g, " ").trim();
+  // Whisper-style models invent these on silence or noise
+  if (/^(thanks for watching|thank you for watching|please subscribe|you|bye|\.+|\[.*\]|\(.*\))[.!]?$/i.test(t)) return "";
+  if (t.includes("Contractor licensing exam prep with Bro")) return "";
+  return t.slice(0, 2000);
+}

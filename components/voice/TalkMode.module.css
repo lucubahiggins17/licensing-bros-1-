@@ -151,3 +151,8 @@
 @media (max-height:560px){
   .orbWrap{width:96px}
 }
+
+/* Clear-voice listening: the orb follows the student's voice level */
+.orbWrap{--lvl:0}
+.screen[data-phase="listening"] .orbWrap[data-hearing="1"] .orb{transform:scale(calc(1.05 + var(--lvl) * .2));transition:transform .08s linear}
+.hint{display:block;font-size:12px;font-weight:500;opacity:.8;line-height:1.35;margin:0}

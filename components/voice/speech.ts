@@ -21,7 +21,7 @@ export function voiceSupport(): { stt: SttKind; tts: TtsKind } {
 // ---------------------------------------------------------------------------------------------
 // Preferences (per device)
 // ---------------------------------------------------------------------------------------------
-const K = { rate: "lb.voice.rate", loop: "lb.voice.loop", webVoice: "lb.voice", nativeVoice: "lb.voice.native", studio: "lb.voice.studio" };
+const K = { rate: "lb.voice.rate", loop: "lb.voice.loop", webVoice: "lb.voice", nativeVoice: "lb.voice.native", studio: "lb.voice.studio", clear: "lb.voice.clear" };
 function getPref(key: string): string | null {
   try { return localStorage.getItem(key); } catch { return null; }
 }
@@ -33,7 +33,10 @@ export const prefs = {
   rate(): number { const r = Number(getPref(K.rate)); return RATES.includes(r) ? r : 1; },
   setRate(r: number) { setPref(K.rate, String(r)); },
   loop(): boolean { return getPref(K.loop) !== "0"; },
-  setLoop(on: boolean) { setPref(K.loop, on ? "1" : "0"); }
+  setLoop(on: boolean) { setPref(K.loop, on ? "1" : "0"); },
+  /** Clear-voice listening (noise-filtered mic + the voice server's transcription), on unless turned off */
+  clear(): boolean { return getPref(K.clear) !== "0"; },
+  setClear(on: boolean) { setPref(K.clear, on ? "1" : "0"); }
 };
 
 // ---------------------------------------------------------------------------------------------
@@ -262,11 +265,24 @@ export function studioOn(): boolean {
   return siteStudioVoice() && studioPref() && Date.now() >= studioDownUntil && typeof window !== "undefined" && typeof Audio !== "undefined";
 }
 
+/** Why the studio voice last failed (shown in Talk to Bro), and who wants to hear about it. */
+let studioProblem = "";
+const studioListeners = new Set<(why: string) => void>();
+export function onStudioFallback(fn: (why: string) => void): () => void { studioListeners.add(fn); return () => { studioListeners.delete(fn); }; }
+export function studioStatus(): { site: boolean; pref: boolean; down: boolean; problem: string } {
+  return { site: siteStudioVoice(), pref: studioPref(), down: Date.now() < studioDownUntil, problem: studioProblem };
+}
+
 const audioCache = new Map<string, Promise<Blob>>();
 const studioKey = (text: string, rate: number) => `${rate}|${text}`;
+/** A sentence's audio from the studio voice. Gives up after 15 seconds (a slow server on a CPU) so Bro isn't silent. */
 async function fetchAudio(text: string, rate: number): Promise<Blob> {
   const { audioFn } = await import("@/lib/api");
-  return audioFn("voice", { text, speed: rate });
+  const ctl = new AbortController();
+  const t = setTimeout(() => ctl.abort(), 15000);
+  try { return await audioFn("voice", { text, speed: rate }, ctl.signal); }
+  catch (e: any) { throw e?.name === "AbortError" ? new Error("The voice server took more than 15 seconds for one sentence (a GPU makes VoiceStudio much faster).") : e; }
+  finally { clearTimeout(t); }
 }
 /** Starts fetching a sentence's audio while the one before it plays, so there's no gap between sentences. */
 export function prefetchSpeech(text: string, rate = 1) {
@@ -335,6 +351,8 @@ export async function say(kind: TtsKind, text: string, rate = 1): Promise<void> 
       if (e instanceof SpeechError) throw e; // the browser wants a tap: the device voice would be blocked too
       studioDownUntil = Date.now() + 120_000;
       audioCache.clear();
+      studioProblem = String((e as Error)?.message || "The voice server couldn't be reached.").slice(0, 240);
+      studioListeners.forEach((fn) => { try { fn(studioProblem); } catch { /* listener gone */ } });
     }
   }
   if (!kind) return;
@@ -549,6 +567,7 @@ export function forSpeech(text: string): string {
   if (cut >= 0) s = s.slice(0, cut);
   return s
     .replace(/\[The answer was interrupted\. Try again\.\]/g, "")
+    .replace(/\[Staff note:[^\]]*\]/g, "")
     .replace(/\]\([^)\s]*\)?/g, "")
     .replace(/\(?\bhttps?:\/\/[^\s)]*\)?/g, "")
     .replace(/\bwww\.[^\s)]+/g, "")
@@ -589,4 +608,19 @@ export function takeSentences(s: string, from: number, final: boolean): { chunks
     start = s.length;
   }
   return { chunks, upTo: start };
+}
+
+/** The tutor's "interrupted" ending (it already retried on the server), so the app can try once more by itself. */
+export const wasInterrupted = (text: string) => /\[The answer was interrupted\. Try again\.\]/.test(text);
+
+/**
+ * Whether what the microphone heard is just Bro's own voice coming back from the speaker: most of its words are in
+ * what Bro just said. Lets hands-free mode ignore its own echo instead of answering itself.
+ */
+export function isEcho(heard: string, recentlySpoken: string[]): boolean {
+  const words = (heard || "").toLowerCase().replace(/[^a-z0-9' ]+/g, " ").split(/\s+/).filter((w) => w.length > 2);
+  if (words.length < 3) return false;
+  const said = new Set(recentlySpoken.join(" ").toLowerCase().replace(/[^a-z0-9' ]+/g, " ").split(/\s+/).filter((w) => w.length > 2));
+  if (!said.size) return false;
+  return words.filter((w) => said.has(w)).length / words.length >= 0.75;
 }

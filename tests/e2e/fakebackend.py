@@ -427,6 +427,12 @@ class FakeBackend:
         if name == "research":
             return self.research(body)
         if name == "voice":
+            if body.get("action") == "transcribe":
+                self.transcribed = getattr(self, "transcribed", 0) + 1
+                self.stt_mimes = getattr(self, "stt_mimes", []) + [body.get("mime")]
+                if getattr(self, "stt_down", False):
+                    return 502, {"error": "The voice server couldn't understand that recording (500).", "code": "stt_unavailable"}
+                return 200, {"text": getattr(self, "stt_text", "How deep can a trench be before it needs a protective system?")}
             if body.get("action") == "health":
                 return 200, {"configured": True, "ok": not getattr(self, "voice_down", False), "ms": 640, "voice": "bro-clone"} if not getattr(self, "voice_down", False) else {"configured": True, "ok": False, "ms": 20000, "voice": "bro-clone", "error": "The voice server didn't answer within 20 seconds."}
             self.voice_texts = getattr(self, "voice_texts", []) + [body.get("text") or ""]
@@ -541,6 +547,9 @@ class FakeBackend:
             return 400, {"error": "Unknown request.", "code": "bad_request"}
         if name == "tutor":
             self.tutor_bodies = getattr(self, "tutor_bodies", []) + [body]
+            script = getattr(self, "tutor_script", None)
+            if script:
+                return 200, script.pop(0)
             return 200, "In Tennessee, a guardrail top rail sits at 42 inches, plus or minus 3 inches, above the walking surface (29 CFR 1926.502(b)(1)).\n\nTry this: What is the midrail height?\nAnswer: About 21 inches.\n\nSources:\n- OSHA 1926.502 — https://www.osha.gov/laws-regs/regulations/standardnumber/1926/1926.502"
         return 404, {"error": "Unknown function", "code": "not_found"}
 

@@ -279,10 +279,10 @@ function SupportCard({ initial }: { initial: SiteSettings["support"] }) {
 }
 
 // ------------------------------------------------------------------------------------------------
-type VoiceHealth = { configured: boolean; ok: boolean; ms?: number; voice?: string; error?: string };
+type VoiceHealth = { configured: boolean; ok: boolean; ms?: number; voice?: string; error?: string; stt?: boolean };
 function VoiceCard({ initial }: { initial: NonNullable<SiteSettings["voice"]> }) {
   const { toast } = useAdmin();
-  const st = useSetting("voice", { studio: !!initial.studio });
+  const st = useSetting("voice", { studio: !!initial.studio, ears: !!initial.ears });
   const [health, setHealth] = useState<VoiceHealth | null>(null);
   const [busy, setBusy] = useState<"" | "check" | "play">("");
 
@@ -319,9 +319,15 @@ function VoiceCard({ initial }: { initial: NonNullable<SiteSettings["voice"]> })
           <span>{health.ok ? `Voice server is working (voice "${health.voice}", ${((health.ms || 0) / 1000).toFixed(1)}s for a sample sentence).` : health.error || "The voice server isn't working."}</span>
         </p>
       )}
+      {health && health.stt !== undefined && (
+        <p className="note" style={{ margin: 0 }}>Clear-voice listening: {health.stt ? "the transcription server is set (it uses VOICE_API_URL unless STT_API_URL is set)." : "add VOICE_API_URL (or STT_API_URL) to use it."}</p>
+      )}
       <Toggle checked={st.value.studio} label="Use Bro's studio voice for students"
         hint="Students can still pick a phone voice in Talk to Bro's voice settings."
-        onChange={(v) => st.setValue({ studio: v })} />
+        onChange={(v) => st.setValue({ ...st.value, studio: v })} />
+      <Toggle checked={!!st.value.ears} label="Clear-voice listening"
+        hint="Bro hears the student, not the room: the mic filters background noise and echo, a voice detector ignores steady noise, and your voice server (VoiceStudio has this built in) writes down what they said. Falls back to the device's recognizer if the server can't be reached."
+        onChange={(v) => st.setValue({ ...st.value, ears: v })} />
       <Actions dirty={st.dirty} saving={st.saving} onSave={() => st.save()} onDiscard={st.discard} problem={st.problem} />
     </FormPanel>
   );

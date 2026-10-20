@@ -89,13 +89,24 @@ export async function streamFn(name: string, body: unknown, onText: (text: strin
   const dec = new TextDecoder();
   let text = "";
   for (;;) {
-    const { done, value } = await reader.read();
-    if (done) break;
-    text += dec.decode(value, { stream: true });
+    let chunk: ReadableStreamReadResult<Uint8Array>;
+    try { chunk = await reader.read(); }
+    catch (e: any) {
+      if (e?.name === "AbortError" || signal?.aborted) throw e;
+      throw new ApiError("The connection dropped while Bro was answering. Try again.", 0, "stream_cut");
+    }
+    if (chunk.done) break;
+    text += dec.decode(chunk.value, { stream: true });
+    // The server starts the answer over (a retry after a hiccup): drop what was shown so far
+    const reset = text.lastIndexOf(STREAM_RESET);
+    if (reset >= 0) text = text.slice(reset + 1);
     onText(text);
   }
   return text;
 }
+
+/** Sent by the tutor when it restarts an answer after a hiccup; everything before it is dropped. */
+export const STREAM_RESET = "\u001e";
 
 /** POST to an edge function that answers with audio (Bro's studio voice); returns the audio as a Blob. */
 export async function audioFn(name: string, body: unknown, signal?: AbortSignal): Promise<Blob> {

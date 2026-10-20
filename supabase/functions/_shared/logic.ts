@@ -1033,3 +1033,20 @@ export function pickFromAnswer(text: string): number | null {
   const tail = String(text || "").trim().slice(-40).match(/\b([A-D])[.)]?\s*$/);
   return tail ? "ABCD".indexOf(tail[1]) : null;
 }
+
+/**
+ * One line describing a failed AI call, for logs and for staff ("404 not_found_error: model: claude-x").
+ * Works with the Anthropic SDK's errors (status + error body) and plain errors.
+ */
+// deno-lint-ignore no-explicit-any
+export function describeAiError(e: any): string {
+  const status = Number(e?.status) || 0;
+  const body = e?.error?.error || e?.error || {};
+  const type = typeof body?.type === "string" && body.type !== "error" ? body.type : (e?.name && e.name !== "Error" ? e.name : "");
+  const msg = String(body?.message || e?.message || "unknown error").replace(/\s+/g, " ").trim().slice(0, 220);
+  return `${status ? `${status} ` : ""}${type ? `${type}: ` : ""}${msg}`;
+}
+
+/** Whether a failed AI call is worth retrying after a short pause (busy, overloaded, rate limited, network). */
+// deno-lint-ignore no-explicit-any
+export const retryableAiError = (e: any) => [408, 409, 429, 500, 502, 503, 504, 529].includes(Number(e?.status)) || /network|timeout|socket|ECONNRESET|terminated/i.test(String(e?.message || ""));

@@ -9,7 +9,7 @@ import { isApp, SpeechRecognition } from "@/lib/native";
 import { routes } from "@/lib/nav";
 import { askForTravelMode } from "@/components/shell/SessionGuard";
 import { coachNote, proactiveStarters } from "@/lib/progress";
-import { forSpeech, prefs, primeSpeech, Speaker, takeSentences, voiceErrorText, voiceSupport } from "@/components/voice/speech";
+import { forSpeech, prefs, primeSpeech, Speaker, takeSentences, voiceErrorText, voiceSupport, wasInterrupted } from "@/components/voice/speech";
 import s from "./Study.module.css";
 
 type Msg = { role: "user" | "assistant"; content: string; error?: any };
@@ -81,12 +81,22 @@ export default function Tutor({ draft, clearDraft }: { draft: string; clearDraft
     let image;
     try { if (photo) image = await shrinkImage(photo); } catch { setStatus("That photo couldn't be read. Try another."); }
     setPhoto(null); if (fileRef.current) fileRef.current.value = "";
+    const once = () => streamTutor(
+      { state: p.state, trade: p.trade, messages: history.slice(-16).map(({ role, content }) => ({ role, content })), image, coach: coachNote(p) || undefined },
+      (t) => setMsgs([...history, { role: "assistant", content: t }]),
+      ctl.current!.signal
+    );
     try {
-      const full = await streamTutor(
-        { state: p.state, trade: p.trade, messages: history.slice(-16).map(({ role, content }) => ({ role, content })), image, coach: coachNote(p) || undefined },
-        (t) => setMsgs([...history, { role: "assistant", content: t }]),
-        ctl.current.signal
-      );
+      let full: string;
+      // An answer cut off by a hiccup gets one automatic retry before the student sees an error
+      try { full = await once(); }
+      catch (e: any) {
+        if (!["stream_cut", "ai_error", "ai_busy"].includes(e?.code)) throw e;
+        setStatus("That got cut off. Trying again…");
+        full = await once();
+      }
+      if (wasInterrupted(full)) { setStatus("That got cut off. Trying again…"); setMsgs([...history, { role: "assistant", content: "" }]); full = await once(); }
+      setStatus("");
       setMsgs([...history, { role: "assistant", content: full }]);
       if (autoSpeak) readAloud(history.length, full);
     } catch (e: any) {

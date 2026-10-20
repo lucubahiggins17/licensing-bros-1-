@@ -1084,6 +1084,77 @@ def exam_simulator(browser):
     ctx.close()
 
 # ---------------------------------------------------------------------------------------------------------------------
+@scenario
+def talk_reliability(browser):
+    INTERRUPTED = "Starting to answer\n\n[The answer was interrupted. Try again.]"
+    def open_talk(user=FREE_ID, ears=False):
+        fake = FakeBackend(user_id=user)
+        if ears: fake.db["site_settings"].append({"key": "voice", "value": {"ears": True}})
+        ctx, page, errors = new_page(browser, fake)
+        ctx.add_init_script(FAKE_TTS % json.dumps({"mode": "ok"}))
+        goto(page, "/learn/#tutor")
+        page.get_by_role("button", name="Talk to Bro").first.click()
+        page.wait_for_timeout(700)
+        return fake, ctx, page, errors
+    def ask(page, q):
+        page.fill("#talk-typed", q)
+        page.locator("#talk-typed").press("Enter")
+        page.wait_for_timeout(3500)
+    caps = lambda page: page.locator("[aria-live=polite]").all_inner_texts()
+    # The server restarts an answer after a hiccup: only the fresh answer is shown and spoken
+    fake, ctx, page, errors = open_talk()
+    fake.tutor_script = ["Half an answer that di\u001eTrench protection is required at 5 feet deep. Try this: what depth? Answer: 5 feet."]
+    ask(page, "When does a trench need protection?")
+    text = " ".join(caps(page))
+    check("a restarted answer replaces the partial one", "required at 5 feet" in text and "Half an answer" not in text, text[:200])
+    spoke = " ".join(e["text"] for e in page.evaluate("window.__tts || []") if e["t"] == "spoke")
+    check("and only the fresh answer is spoken", "required at 5 feet" in spoke and "Half an answer" not in spoke, spoke[:200])
+    # Cut off once: Bro tries again by itself
+    n = len(fake.tutor_bodies)
+    fake.tutor_script = [INTERRUPTED]
+    ask(page, "How high is a guardrail?")
+    page.wait_for_timeout(1500)
+    text = " ".join(caps(page))
+    check("an interrupted answer is retried automatically", len(fake.tutor_bodies) - n == 2 and "42 inches" in text and "interrupted" not in text.lower(), f"{len(fake.tutor_bodies) - n} calls · {text[:200]}")
+    check("Talk to Bro stayed error-free", not errors, "; ".join(errors[:3]))
+    ctx.close()
+    # Staff see why it failed when the retry fails too
+    fake, ctx, page, errors = open_talk(ADMIN_ID)
+    note = "\n\n[The answer was interrupted. Try again.]\n[Staff note: 404 not_found_error: model: claude-x]"
+    fake.tutor_script = [note, note]
+    ask(page, "How high is a guardrail?")
+    page.wait_for_timeout(1500)
+    check("when it fails twice, staff see the reason", page.get_by_text("Staff note: 404 not_found_error", exact=False).count() >= 1)
+    ctx.close()
+    # Clear-voice listening: noise-filtered mic, then the voice server writes down the question
+    fake, ctx, page, errors = open_talk(ears=True)
+    check("with clear-voice listening on, Bro listens even where the browser has no speech recognition", page.get_by_role("button", name="Done talking").count() == 1)
+    page.wait_for_timeout(1200)
+    page.get_by_role("button", name="Done talking").click()
+    page.wait_for_timeout(4000)
+    text = " ".join(caps(page))
+    check("the recording is transcribed on the voice server", getattr(fake, "transcribed", 0) == 1 and (fake.stt_mimes[0] or "").startswith("audio/"), str(getattr(fake, "stt_mimes", None)))
+    check("and the transcribed question gets answered", "protective system" in text and len(fake.tutor_bodies) == 1, text[:200])
+    # Bro's own voice coming back through the mic is ignored, not answered
+    fake.stt_text = "a guardrail top rail sits at 42 inches plus or minus 3 inches above the walking surface"
+    page.wait_for_timeout(1500)
+    if page.get_by_role("button", name="Done talking").count():
+        page.get_by_role("button", name="Done talking").click()
+        page.wait_for_timeout(2500)
+    check("Bro ignores its own voice picked up by the mic", getattr(fake, "transcribed", 0) == 2 and len(fake.tutor_bodies) == 1, f"{getattr(fake, 'transcribed', 0)} transcribed, {len(fake.tutor_bodies)} tutor calls")
+    # The voice server can't transcribe: say so and fall back
+    fake.stt_down = True
+    if page.get_by_role("button", name="Done talking").count():
+        page.get_by_role("button", name="Done talking").click()
+        page.wait_for_timeout(2500)
+    check("if the voice server can't transcribe, Bro says so", page.get_by_text("Clear-voice listening isn't available right now", exact=False).count() >= 1)
+    page.get_by_role("button", name="Voice settings").click(); page.wait_for_timeout(300)
+    check("students can switch clear-voice listening off", page.get_by_role("switch", name="Clear-voice listening", exact=False).count() == 1)
+    shot(page, "talk-clear-voice")
+    check("clear-voice listening ran without errors", not errors, "; ".join(errors[:3]))
+    ctx.close()
+
+# ---------------------------------------------------------------------------------------------------------------------
 if __name__ == "__main__":
     httpd = serve()
     with sync_playwright() as p:

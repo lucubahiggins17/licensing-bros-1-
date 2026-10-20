@@ -167,3 +167,37 @@ Deno.test("no duplicates: the same rule with the same numbers isn't published tw
   assert.equal(d.claims[0].kept, false);
   assert.equal(d.claims[1].kept, true);
 });
+
+import { describeAiError, retryableAiError } from "../../supabase/functions/_shared/logic.ts";
+import { sttConfig, transcriptionRequest, transcriptionUrl, transcriptText } from "../../supabase/functions/_shared/voiceServer.ts";
+Deno.test("describeAiError: staff see the real reason an answer failed", () => {
+  const sdk = { status: 404, error: { type: "error", error: { type: "not_found_error", message: "model: claude-x" } }, message: "404 {...}" };
+  assert.equal(describeAiError(sdk), "404 not_found_error: model: claude-x");
+  assert.equal(describeAiError(new Error("socket hang up")), "socket hang up");
+  assert.equal(describeAiError({ status: 529, error: { error: { type: "overloaded_error", message: "Overloaded" } } }), "529 overloaded_error: Overloaded");
+  assert.equal(retryableAiError({ status: 529 }), true);
+  assert.equal(retryableAiError({ status: 400 }), false);
+  assert.equal(retryableAiError(new Error("network timeout")), true);
+});
+
+Deno.test("clear-voice listening: transcription settings, address and reply cleanup", () => {
+  const env = (m: Record<string, string>) => (k: string) => m[k];
+  assert.equal(sttConfig(env({})), null);
+  // Same server as the studio voice by default, with its key
+  assert.deepEqual(sttConfig(env({ VOICE_API_URL: "https://bro.trycloudflare.com/", VOICE_API_KEY: "k1" })), { base: "https://bro.trycloudflare.com", key: "k1", model: "whisper-1" });
+  // Its own server: the studio voice key isn't sent there
+  assert.deepEqual(sttConfig(env({ VOICE_API_URL: "https://a.example", VOICE_API_KEY: "k1", STT_API_URL: "https://api.openai.com/v1", STT_MODEL: "gpt-4o-mini-transcribe" })), { base: "https://api.openai.com/v1", key: "", model: "gpt-4o-mini-transcribe" });
+  assert.equal(transcriptionUrl("https://x.example"), "https://x.example/v1/audio/transcriptions");
+  assert.equal(transcriptionUrl("https://api.openai.com/v1"), "https://api.openai.com/v1/audio/transcriptions");
+  assert.equal(transcriptionUrl("https://x.example/v1/audio/speech"), "https://x.example/v1/audio/transcriptions");
+  const req = transcriptionRequest({ base: "https://x", key: "k", model: "whisper-1" }, new Uint8Array([1, 2, 3]), "audio/webm;codecs=opus");
+  const form = req.body as FormData;
+  assert.equal((form.get("file") as File).name, "question.webm");
+  assert.equal(form.get("model"), "whisper-1");
+  assert.ok(String(form.get("prompt")).includes("GFCI"));
+  assert.equal((req.headers as Record<string, string>).authorization, "Bearer k");
+  assert.equal(transcriptText('{"text":"  How deep is a trench?  "}'), "How deep is a trench?");
+  assert.equal(transcriptText("plain words here"), "plain words here");
+  assert.equal(transcriptText('{"text":"Thanks for watching!"}'), "");
+  assert.equal(transcriptText('{"text":"Contractor licensing exam prep with Bro. NEC, GFCI"}'), "");
+});

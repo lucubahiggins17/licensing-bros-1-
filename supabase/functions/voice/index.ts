@@ -1,9 +1,10 @@
 // Bro's studio voice for signed-in students and staff:
 //   {text, speed?}       -> audio (mp3 by default), spoken by the school's voice server
-//   {action: "health"}   -> {configured, ok, ms, voice, error?}   (is the voice server reachable right now?)
+//   {action: "health"}   -> {configured, ok, ms, voice, error?, stt}   (is the voice server reachable right now?)
+//   {action: "transcribe", audio: base64, mime} -> {text}   (clear-voice listening: the student's recorded question)
 // The server's address and key stay here as function secrets; the app never sees them.
 import { cors, handler, HttpError, json, readBody, requireUser } from "../_shared/common.ts";
-import { AUDIO_TYPES, speakable, speechRequest, speechUrl, voiceConfig } from "../_shared/voiceServer.ts";
+import { AUDIO_TYPES, speakable, speechRequest, speechUrl, sttConfig, transcriptionRequest, transcriptionUrl, transcriptText, voiceConfig } from "../_shared/voiceServer.ts";
 
 const NOT_SET = "Bro's studio voice isn't set up. Add VOICE_API_URL in GitHub (see the Launch Guide), or keep using the phone's voice.";
 
@@ -23,16 +24,32 @@ Deno.serve(handler(async (req) => {
     return { res, format };
   };
 
+  if (body.action === "transcribe") {
+    const sc = sttConfig();
+    if (!sc) throw new HttpError(503, "stt_not_set_up", "Clear-voice listening isn't set up. Add VOICE_API_URL (or STT_API_URL) in GitHub.");
+    const b64 = typeof body.audio === "string" ? body.audio : "";
+    if (!b64 || b64.length > 14_000_000) throw new HttpError(400, "bad_request", "That recording is missing or too long.");
+    let audio: Uint8Array<ArrayBuffer>;
+    try { const bin = atob(b64); audio = new Uint8Array(bin.length); for (let i = 0; i < bin.length; i++) audio[i] = bin.charCodeAt(i); } catch { throw new HttpError(400, "bad_request", "That recording couldn't be read."); }
+    let res: Response;
+    try { res = await fetch(transcriptionUrl(sc.base), { ...transcriptionRequest(sc, audio, String(body.mime || "audio/webm")), signal: AbortSignal.timeout(30000) }); }
+    catch (e) { throw new HttpError(502, "stt_unavailable", (e as Error)?.name === "TimeoutError" ? "The voice server took too long to understand that." : "Couldn't reach the voice server to understand that."); }
+    const raw = await res.text();
+    if (!res.ok) { console.error("transcribe", res.status, raw.slice(0, 300)); throw new HttpError(502, "stt_unavailable", `The voice server couldn't understand that recording (${res.status}).`); }
+    return json({ text: transcriptText(raw) });
+  }
+
   if (body.action === "health") {
-    if (!c) return json({ configured: false, ok: false, error: NOT_SET });
+    const stt = !!sttConfig();
+    if (!c) return json({ configured: false, ok: false, error: NOT_SET, stt });
     const t0 = Date.now();
     try {
       const { res } = await speak("Hey, it's Bro. Ready when you are.", 1, 20000);
       const ok = res.ok && (res.headers.get("content-type") || "").startsWith("audio");
       await res.body?.cancel();
-      return json({ configured: true, ok, ms: Date.now() - t0, voice: c.voice, ...(ok ? {} : { error: `The voice server answered ${res.status}.` }) });
+      return json({ configured: true, ok, ms: Date.now() - t0, voice: c.voice, stt, ...(ok ? {} : { error: `The voice server answered ${res.status}.` }) });
     } catch (e) {
-      return json({ configured: true, ok: false, ms: Date.now() - t0, voice: c.voice, error: (e as Error)?.name === "TimeoutError" ? "The voice server didn't answer within 20 seconds. Is the computer running it on, and the tunnel up?" : "Couldn't reach the voice server." });
+      return json({ configured: true, ok: false, ms: Date.now() - t0, voice: c.voice, stt, error: (e as Error)?.name === "TimeoutError" ? "The voice server didn't answer within 20 seconds. Is the computer running it on, and the tunnel up?" : "Couldn't reach the voice server." });
     }
   }
 

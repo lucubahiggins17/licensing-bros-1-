@@ -31,9 +31,12 @@ import { searchLibrary } from "../_shared/library.ts";
 import { gapReason } from "../_shared/researchLogic.ts";
 import { background, logGap } from "../_shared/research.ts";
 import { streamAnswer } from "../_shared/answer.ts";
+import { describeAiError, retryableAiError } from "../_shared/logic.ts";
 
 type Turn = { role: "user" | "assistant"; content: string };
 const INTERRUPTED = "\n\n[The answer was interrupted. Try again.]";
+/** Tells the app to drop the partial answer it has shown: a fresh attempt follows. */
+const RESET = "\u001e";
 const CACHE = { type: "ephemeral" } as const;
 
 Deno.serve(handler(async (req) => {
@@ -124,22 +127,25 @@ Deno.serve(handler(async (req) => {
         });
         sources.push(...r.sources);
       };
-
-      const primary = route === "fast" ? FAST_MODEL() : MODEL();
-      try {
-        await run(primary, webSearch);
-      } catch (e) {
-        if (!cancelled) {
-          if (!emitted) {
-            // e.g. web search not enabled for this API key, or the fast model isn't available: answer without them
-            console.warn("tutor: retrying on the main model without web search", (e as Error)?.message);
-            try { await run(MODEL(), false); } catch { send(INTERRUPTED); }
-          } else {
-            console.error("tutor stream", (e as Error)?.message);
-            send(INTERRUPTED);
-          }
+      // Up to three tries: the routed model (with web search when needed), then the main model without web search,
+      // then the other model. A try that fails partway tells the app to drop what it showed before the next one.
+      let lastErr = "";
+      const attempt = async (model: string, useWeb: boolean, n: number): Promise<boolean> => {
+        try { await run(model, useWeb); return true; }
+        catch (e) {
+          if (cancelled) return true;
+          lastErr = describeAiError(e);
+          console.error(`tutor try ${n} (${model}${useWeb ? ", web search" : ""}${voice ? ", voice" : ""}): ${lastErr}`);
+          if (emitted) { send(RESET); emitted = false; sources.length = 0; }
+          if (retryableAiError(e)) await new Promise((r) => setTimeout(r, 900 * n));
+          return false;
         }
-      }
+      };
+      const primary = route === "fast" ? FAST_MODEL() : MODEL();
+      let ok = await attempt(primary, webSearch, 1);
+      if (!ok && !cancelled) ok = await attempt(MODEL(), false, 2);
+      if (!ok && !cancelled && FAST_MODEL() !== MODEL()) ok = await attempt(primary === FAST_MODEL() ? MODEL() : FAST_MODEL(), false, 3);
+      if (!ok && !cancelled) send(INTERRUPTED + (admin ? `\n[Staff note: ${lastErr.replace(/[[\]]/g, "")}]` : ""));
       // Voice replies are read aloud, so links are left out there
       if (!voice && sources.length) send(formatSources(dedupeSources(sources, 5)));
       try { controller.close(); } catch { /* already closed */ }

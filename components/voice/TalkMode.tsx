@@ -11,9 +11,11 @@ import { TRADES, TradeKey } from "@/lib/data";
 import { onBackButton } from "@/lib/native";
 import { coachNote } from "@/lib/progress";
 import {
-  chooseVoice, currentVoiceId, forSpeech, Listening, ListenError, prefs, primeSpeech, RATES, say, Speaker,
-  startListening, takeSentences, voiceErrorText, voiceOptions, VoiceOption, voiceSupport
+  chooseVoice, currentVoiceId, forSpeech, isEcho, Listening, ListenError, onStudioFallback, prefs, primeSpeech, RATES, say, Speaker,
+  startListening, studioStatus, takeSentences, voiceErrorText, voiceOptions, VoiceOption, voiceSupport, wasInterrupted
 } from "./speech";
+import { clearListen, clearVoiceAvailable } from "./clearVoice";
+import { siteClearVoice } from "@/lib/voiceFlag";
 
 const NO_VOICE = "This device can't speak answers out loud, so Bro's replies are shown as captions. On a computer or phone browser, Chrome, Edge and Safari can talk.";
 import s from "./TalkMode.module.css";
@@ -51,7 +53,8 @@ const LISTEN_ERRORS: Record<ListenError, string> = {
 
 export default function TalkMode({ open, onClose, context, title, initialQuestion }: TalkModeProps) {
   const app = useContext(AppCtx);
-  const { profile } = useAuth();
+  const { profile, account } = useAuth();
+  const staff = !!account?.is_staff;
   const state = app?.p.state || profile?.state || "Tennessee";
   const trade = ((app?.p.trade || profile?.trade || "gc") as TradeKey);
 
@@ -61,20 +64,23 @@ export default function TalkMode({ open, onClose, context, title, initialQuestio
   const [heard, setHeard] = useState("");
   const [notice, setNotice] = useState("");
   const [error, setError] = useState<any>(null);
-  const [typing, setTypingState] = useState(!support.stt);
+  const [typing, setTypingState] = useState(() => !support.stt && !(siteClearVoice() && prefs.clear() && clearVoiceAvailable()));
   const [typed, setTyped] = useState("");
   const [loop, setLoopState] = useState(true);
   const [rate, setRateState] = useState(1);
   const [settingsOpen, setSettingsOpen] = useState(false);
   const [voices, setVoices] = useState<VoiceOption[] | null>(null);
   const [voiceId, setVoiceId] = useState("");
+  const [clearOn, setClearOn] = useState(true);
+  const [stage, setStage] = useState<"" | "hearing" | "understanding">("");
+  const [level, setLevel] = useState(0);
 
   // Refs: async callbacks (speech, streaming) always read the latest values through these
   const phaseRef = useRef<Phase>("idle");
   const msgsRef = useRef<Msg[]>([]);
   const loopRef = useRef(true);
   const rateRef = useRef(1);
-  const typingRef = useRef(!support.stt);
+  const typingRef = useRef(!support.stt && !(siteClearVoice() && prefs.clear() && clearVoiceAvailable()));
   const micBlocked = useRef(false);
   const openRef = useRef(open);
   const gen = useRef(0);
@@ -85,6 +91,11 @@ export default function TalkMode({ open, onClose, context, title, initialQuestio
   const spoken = useRef(0);
   const misses = useRef(0);
   const sessionKey = useRef<string | null>(null);
+  const clearDown = useRef(false);
+  const recentSpoken = useRef<string[]>([]);
+  const lastText = useRef("");
+  const retried = useRef(false);
+  const studioNoted = useRef(false);
   const ctxRef = useRef({ state, trade, context });
   ctxRef.current = { state, trade, context };
   openRef.current = open;
@@ -102,6 +113,7 @@ export default function TalkMode({ open, onClose, context, title, initialQuestio
   useEffect(() => {
     const l = prefs.loop(), r = prefs.rate();
     loopRef.current = l; setLoopState(l);
+    setClearOn(prefs.clear());
     rateRef.current = r; setRateState(r);
   }, []);
 
@@ -113,8 +125,17 @@ export default function TalkMode({ open, onClose, context, title, initialQuestio
     sp.onIdle = () => { if (streamDone.current) afterSpeechRef.current(gen.current); };
     sp.onError = (e) => setNotice(voiceErrorText(e, support.tts));
     speakerRef.current = sp;
-    return () => { sp.cancel(); speakerRef.current = null; };
-  }, [support.tts]);
+    const off = onStudioFallback((why) => {
+      if (studioNoted.current) return;
+      studioNoted.current = true;
+      setNotice(staff ? `Using the device voice: Bro's studio voice failed (${why}). Check Admin → Settings → Bro's voice.` : "Bro's studio voice is offline, so you're hearing your device's voice for now.");
+    });
+    return () => { sp.cancel(); speakerRef.current = null; off(); };
+  }, [support.tts, staff]);
+
+  /** Clear-voice listening is on for this site, this device and this browser. */
+  const useClear = () => siteClearVoice() && prefs.clear() && clearVoiceAvailable() && !clearDown.current;
+  const canListen = () => !!support.stt || useClear();
 
   /** Stops listening, thinking and speaking; ignores any late callbacks from them. */
   function halt() {
@@ -125,7 +146,7 @@ export default function TalkMode({ open, onClose, context, title, initialQuestio
     listenRef.current = null;
     speakerRef.current?.cancel();
     streamDone.current = false;
-    setHeard("");
+    setHeard(""); setStage(""); setLevel(0);
   }
   function stop() { halt(); setPhase("idle"); }
 
@@ -133,21 +154,50 @@ export default function TalkMode({ open, onClose, context, title, initialQuestio
   async function listen(auto = false) {
     halt();
     setNotice(""); setError(null);
-    if (!support.stt || micBlocked.current) { setTyping(true); setPhase("idle"); setTimeout(() => inputRef.current?.focus(), 50); return; }
+    if (!canListen() || micBlocked.current) { setTyping(true); setPhase("idle"); setTimeout(() => inputRef.current?.focus(), 50); return; }
     const g = gen.current;
     setPhase("listening");
+    const heardText = (t: string) => {
+      if (g !== gen.current) return;
+      listenRef.current = null;
+      setHeard(""); setStage(""); setLevel(0);
+      // Bro's own voice coming back from the speaker: ignore it and keep listening
+      if (t && isEcho(t, recentSpoken.current)) { recentSpoken.current = []; listen(true); return; }
+      if (t) { misses.current = 0; ask(t); return; }
+      misses.current++;
+      if (loopRef.current && misses.current < 2) { listen(true); return; }
+      setPhase("idle");
+      setNotice("I didn't catch that. Tap the orb and talk, or type your question.");
+    };
+    if (useClear()) {
+      const l = await clearListen({
+        onFinal: heardText,
+        onLevel: (v) => { if (g === gen.current) setLevel(v); },
+        onStage: (st) => { if (g === gen.current) setStage(st === "listening" ? "" : st); },
+        onError: (e, detail) => {
+          if (g !== gen.current) return;
+          listenRef.current = null;
+          setStage(""); setLevel(0);
+          // The voice server or the microphone stream didn't work: use the device's own recognizer from now on
+          clearDown.current = true;
+          if (e === "stt") {
+            setPhase("idle");
+            setNotice(`${staff && detail ? `Clear-voice listening failed (${detail}). ` : "Clear-voice listening isn't available right now. "}Switched to your device's speech recognition. Please say that again.`);
+            if (support.stt) setTimeout(() => { if (g === gen.current) listen(true); }, 600);
+            return;
+          }
+          if (support.stt) { listen(auto); return; }
+          setPhase("idle");
+          setNotice(LISTEN_ERRORS[e as ListenError] || LISTEN_ERRORS.error);
+          if (e === "denied" || e === "no-mic") { micBlocked.current = true; setTyping(true); }
+        }
+      });
+      if (g === gen.current) listenRef.current = l; else l.abort();
+      return;
+    }
     const l = await startListening(support.stt, {
       onPartial: (t) => { if (g === gen.current) setHeard(t); },
-      onFinal: (t) => {
-        if (g !== gen.current) return;
-        listenRef.current = null;
-        setHeard("");
-        if (t) { misses.current = 0; ask(t); return; }
-        misses.current++;
-        if (loopRef.current && misses.current < 2) { listen(true); return; }
-        setPhase("idle");
-        setNotice("I didn't catch that. Tap the orb and talk, or type your question.");
-      },
+      onFinal: heardText,
       onError: (e) => {
         if (g !== gen.current) return;
         listenRef.current = null;
@@ -163,10 +213,11 @@ export default function TalkMode({ open, onClose, context, title, initialQuestio
     if (g === gen.current) listenRef.current = l; else l.abort();
   }
 
-  async function ask(text: string) {
+  async function ask(text: string, isRetry = false) {
     const q = text.trim();
     if (!q) return;
     halt();
+    if (!isRetry) retried.current = false;
     setNotice(""); setError(null); setSettingsOpen(false);
     const g = gen.current;
     const base = msgsRef.current.filter((m) => m.content.trim());
@@ -175,14 +226,29 @@ export default function TalkMode({ open, onClose, context, title, initialQuestio
     setMsgs([...history, { role: "assistant", content: "" }]);
     setPhase("thinking");
     spoken.current = 0;
+    lastText.current = "";
+    recentSpoken.current = [];
     const ctl = new AbortController();
     abortRef.current = ctl;
     const { state: st, trade: tr, context: cx } = ctxRef.current;
+    /** One more automatic try when an answer gets cut off, so the student doesn't have to ask again. */
+    const retry = () => {
+      if (retried.current || g !== gen.current) return false;
+      retried.current = true;
+      speakerRef.current?.cancel();
+      setMsgs(history);
+      setNotice("That got cut off. Trying again…");
+      setTimeout(() => { if (g === gen.current) ask(q, true); }, 900);
+      return true;
+    };
     try {
       const full = await streamTutor(
         { state: st, trade: tr, context: cx || undefined, voice: true, messages: history.slice(-12), coach: app?.p ? coachNote(app.p) || undefined : undefined },
         (t) => {
           if (g !== gen.current) return;
+          // The server restarted the answer after a hiccup: start speaking over from the new text
+          if (t.length < lastText.current.length || !t.startsWith(lastText.current)) { speakerRef.current?.cancel(); spoken.current = 0; }
+          lastText.current = t;
           setMsgs([...history, { role: "assistant", content: t }]);
           feed(t, false, g);
         },
@@ -190,11 +256,13 @@ export default function TalkMode({ open, onClose, context, title, initialQuestio
       );
       if (g !== gen.current) return;
       abortRef.current = null;
+      if (wasInterrupted(full) && retry()) return;
       setMsgs([...history, { role: "assistant", content: full }]);
       feed(full, true, g);
     } catch (e: any) {
       if (g !== gen.current || e?.name === "AbortError") return;
       abortRef.current = null;
+      if (["stream_cut", "ai_error", "ai_busy"].includes(e?.code) && retry()) return;
       setMsgs(history);
       setError(e);
       setPhase("idle");
@@ -214,6 +282,7 @@ export default function TalkMode({ open, onClose, context, title, initialQuestio
     const { chunks, upTo } = takeSentences(forSpeech(text), spoken.current, final);
     spoken.current = upTo;
     chunks.forEach((c) => sp.push(c));
+    if (chunks.length) recentSpoken.current = [...recentSpoken.current, ...chunks].slice(-4);
     if (chunks.length && phaseRef.current === "thinking") setPhase("speaking");
     if (final) {
       streamDone.current = true;
@@ -224,9 +293,9 @@ export default function TalkMode({ open, onClose, context, title, initialQuestio
   function afterSpeech(g: number) {
     if (g !== gen.current) return;
     streamDone.current = false;
-    if (loopRef.current && support.stt && !typingRef.current && !micBlocked.current && openRef.current) {
-      // brief pause so the mic doesn't catch the end of Bro's voice
-      setTimeout(() => { if (g === gen.current && openRef.current) listen(true); }, 350);
+    if (loopRef.current && canListen() && !typingRef.current && !micBlocked.current && openRef.current) {
+      // a pause so the mic doesn't catch the tail of Bro's voice (speakers keep playing a moment after "done")
+      setTimeout(() => { if (g === gen.current && openRef.current) listen(true); }, 700);
     }
     setPhase("idle");
   }
@@ -278,7 +347,7 @@ export default function TalkMode({ open, onClose, context, title, initialQuestio
     const focusT = setTimeout(() => mainRef.current?.focus(), 40);
     const startT = setTimeout(() => {
       if (fresh && initialQuestion) ask(initialQuestion);
-      else if (support.stt && !micBlocked.current) listen(true);
+      else if (canListen() && !micBlocked.current) listen(true);
       else setTyping(true);
     }, 160);
     const offBack = onBackButton(() => { onClose(); return true; });
@@ -323,7 +392,10 @@ export default function TalkMode({ open, onClose, context, title, initialQuestio
 
   if (!open) return null;
 
-  const statusText = phase === "listening" ? "Listening…" : phase === "thinking" ? "Thinking…" : phase === "speaking" ? (support.tts ? "Speaking…" : "Answering…") : support.stt && !micBlocked.current ? "Tap to talk" : "Type below";
+  const mic = canListen() && !micBlocked.current;
+  const statusText = phase === "listening" ? (stage === "understanding" ? "Understanding…" : stage === "hearing" ? "Hearing you…" : "Listening…") : phase === "thinking" ? "Thinking…" : phase === "speaking" ? (support.tts ? "Speaking…" : "Answering…") : mic ? "Tap to talk" : "Type below";
+  const studio = studioStatus();
+  const clearAvailable = siteClearVoice() && clearVoiceAvailable();
   const orbLabel = phase === "idle" ? "Start talking" : phase === "listening" ? "Done talking" : phase === "thinking" ? "Stop" : "Interrupt and talk";
   const busy = phase !== "idle";
   const starters = context ? CONTEXT_STARTERS : STARTERS[trade] || STARTERS.gc;
@@ -361,12 +433,20 @@ export default function TalkMode({ open, onClose, context, title, initialQuestio
               </div>
             </div>
             <button type="button" className="btn sm" onClick={() => { primeSpeech(); setNotice(""); say(support.tts, "Hey, I'm Bro. Let's get you licensed.", rateRef.current).catch((e) => setNotice(voiceErrorText(e, support.tts))); }}>Test voice</button>
+            {clearAvailable && (
+              <button type="button" role="switch" aria-checked={clearOn} className={s.switch} onClick={() => { const v = !clearOn; setClearOn(v); prefs.setClear(v); if (v) clearDown.current = false; }}>
+                <span className={s.track} aria-hidden="true" />
+                <span>Clear-voice listening <small className={s.hint}>Filters out background noise and Bro&rsquo;s own voice</small></span>
+              </button>
+            )}
+            {studio.site && studio.down && <p className={s.hint} role="status">Studio voice is offline right now{staff && studio.problem ? `: ${studio.problem}` : ""}. Using the device voice.</p>}
+            {!studio.site && staff && <p className={s.hint}>Bro&rsquo;s studio voice is switched off. Turn it on in Admin → Settings → Bro&rsquo;s voice.</p>}
           </div>
         )}
       </div>
 
       <div className={s.stage}>
-        <div className={s.orbWrap}>
+        <div className={s.orbWrap} style={{ "--lvl": level } as React.CSSProperties} data-hearing={stage === "hearing" ? "1" : "0"}>
           <span className={s.ripple} aria-hidden="true" />
           <span className={s.ripple} aria-hidden="true" />
           <span className={s.ripple} aria-hidden="true" />
@@ -419,7 +499,7 @@ export default function TalkMode({ open, onClose, context, title, initialQuestio
       <div className={s.controls}>
         <div className={s.controlsInner}>
           <div className={s.side}>
-            {support.stt && !micBlocked.current && (
+            {mic && (
               <button type="button" role="switch" aria-checked={loop} className={s.switch} onClick={toggleLoop}>
                 <span className={s.track} aria-hidden="true" />
                 <span>Hands-free</span>
@@ -428,16 +508,16 @@ export default function TalkMode({ open, onClose, context, title, initialQuestio
           </div>
           <div className={s.mainCol}>
             <button ref={mainRef} type="button" className={`${s.main}${busy ? ` ${s.stop}` : ""}`} onClick={busy ? stop : orbTap}
-              aria-label={busy ? "Stop" : support.stt && !micBlocked.current ? "Tap to talk" : "Type your question"}>
-              {busy ? <Square aria-hidden="true" /> : support.stt && !micBlocked.current ? <Mic aria-hidden="true" /> : <Keyboard aria-hidden="true" />}
+              aria-label={busy ? "Stop" : mic ? "Tap to talk" : "Type your question"}>
+              {busy ? <Square aria-hidden="true" /> : mic ? <Mic aria-hidden="true" /> : <Keyboard aria-hidden="true" />}
             </button>
-            <span className={s.mainLabel} aria-hidden="true">{busy ? "Stop" : support.stt && !micBlocked.current ? "Talk" : "Type"}</span>
+            <span className={s.mainLabel} aria-hidden="true">{busy ? "Stop" : mic ? "Talk" : "Type"}</span>
           </div>
           <div className={`${s.side} ${s.right}`}>
             {support.tts && (
               <button type="button" className={s.pill} onClick={cycleRate} aria-label={`Speaking speed ${rate} times. Tap to change.`}>{rate}×</button>
             )}
-            {support.stt && !micBlocked.current && (
+            {mic && (
               <button type="button" className={s.pill} aria-pressed={typing} aria-label="Type instead"
                 onClick={() => { const on = !typingRef.current; setTyping(on); if (on) { if (phaseRef.current === "listening") stop(); setTimeout(() => inputRef.current?.focus(), 50); } }}>
                 <Keyboard aria-hidden="true" />
