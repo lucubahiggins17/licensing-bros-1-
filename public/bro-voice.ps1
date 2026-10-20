@@ -156,7 +156,10 @@ while ($true) {
   $connected = $false
   for ($try = 1; $try -le 5 -and -not $connected; $try++) {
     try {
-      $r = Invoke-RestMethod -Uri "$($cfg.supabase)/functions/v1/voice-connect" -Method Post -ContentType "application/json" -Body $body -TimeoutSec 60 -Headers @{ apikey = $cfg.anon; Authorization = "Bearer $($cfg.anon)" }
+      # New-style publishable keys (sb_publishable_...) go only in apikey; older JWT keys also as a Bearer token
+      $hdr = @{ apikey = $cfg.anon }
+      if ("$($cfg.anon)".StartsWith("eyJ")) { $hdr.Authorization = "Bearer $($cfg.anon)" }
+      $r = Invoke-RestMethod -Uri "$($cfg.supabase)/functions/v1/voice-connect" -Method Post -ContentType "application/json" -Body $body -TimeoutSec 60 -Headers $hdr
       $connected = $true
     } catch {
       $msg = $_.Exception.Message
