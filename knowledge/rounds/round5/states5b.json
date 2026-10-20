@@ -798,7 +798,7 @@
    "trade": "elec",
    "state": "Ohio",
    "source": "Union County (OH) Building Regulation, Current Ohio Code References (1/28/2026), https://www.unioncountyohio.gov/media/Officials/Engineer/building-regulation/BuildingInUnionCo_UsefulInfo/Current%20Ohio%20Code%20References.pdf ; OAC 4101:1-27-01 (eff. 3/1/2024)",
-   "fact": "Ohio enforces the 2023 National Electrical Code for commercial buildings under the Ohio Building Code since March 1, 2024, and for one-, two- and three-family homes under the Residential Code of Ohio since April 15, 2024. Before that, Ohio used the 2017 NEC.",
+   "fact": "Ohio enforces the 2023 National Electrical Code for commercial buildings under the Ohio Building Code since March 1, 2024, and for homes built under the Residential Code of Ohio since April 15, 2024. Before that, Ohio used the 2017 NEC.",
    "status": "verified",
    "note": "Confirmed on a county building department page and consistent with the OCILB electrical exam, which uses the 2023 NEC (STAT-309). A Board of Building Standards page naming the edition was not reached.",
    "keywords": [
