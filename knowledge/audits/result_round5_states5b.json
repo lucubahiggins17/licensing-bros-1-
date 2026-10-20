@@ -41,13 +41,63 @@
       }
     },
     {
+      "id": "S5B-18",
+      "action": "fix",
+      "reason": "Edition, TIAs and the August 17, 2026 adoption date are correct (DCA Current Construction Codes page, checked Oct. 2026). The grace period was only described as 'usual practice'. N.J.A.C. 5:23-1.6(a) sets it: for six months after a subcode revision's operative date, a complete permit application with all prior approvals may be reviewed under the prior code. DCA's adoption notice for the 2024 model codes (effective August 17, 2026) also refers to the six-month grace period. The fact now says what applies until about February 17, 2027.",
+      "fixed": {
+        "fact": "New Jersey's Uniform Construction Code electrical subcode (N.J.A.C. 5:23-3.16) adopts the 2023 National Electrical Code (NFPA 70) with TIAs 1-13, effective August 17, 2026. It replaced the 2020 NEC, which had been adopted September 6, 2022. Under the grace period in N.J.A.C. 5:23-1.6, for six months after August 17, 2026 (until about February 17, 2027), a complete permit application with all prior approvals may still be reviewed under the 2020 NEC.",
+        "source": "NJ DCA, Current Construction Codes (N.J.A.C. 5:23-3.16), https://www.nj.gov/dca/codes/codreg/current.shtml ; NJ DCA, Previously Adopted UCC Model Codes, https://www.nj.gov/dca/codes/codreg/previous.shtml ; DCA 2024 model codes adoption notice (eff. 08/17/2026), https://www.nj.gov/dca/codes/codreg/pdf_rule_adoptions/model_codes_2024_adopt.pdf ; N.J.A.C. 5:23-1.6 (grace period)",
+        "keywords": [
+          "New Jersey electrical code",
+          "2023 NEC",
+          "N.J.A.C. 5:23-3.16",
+          "UCC electrical subcode",
+          "grace period",
+          "August 17 2026"
+        ]
+      }
+    },
+    {
+      "id": "S5B-19",
+      "action": "fix",
+      "reason": "The edition and the August 17, 2026 date are correct (DCA Current Construction Codes page). The note only said a grace period had been DCA's usual practice. N.J.A.C. 5:23-1.6(a) sets a six-month grace period after a subcode revision, and the DCA Previously Adopted Codes page lists the 2021 NSPC (adopted Sept. 19, 2022) as the prior edition. The fact now says what applies until about February 17, 2027.",
+      "fixed": {
+        "fact": "New Jersey uses neither the IPC nor the UPC. Its UCC plumbing subcode (N.J.A.C. 5:23-3.15) adopts the National Standard Plumbing Code, 2024 edition (New Jersey edition), effective August 17, 2026, replacing the 2021 NSPC. For six months after August 17, 2026 (until about February 17, 2027), a complete permit application with all prior approvals may still be reviewed under the 2021 NSPC (N.J.A.C. 5:23-1.6).",
+        "source": "NJ DCA, Current Construction Codes (N.J.A.C. 5:23-3.15), https://www.nj.gov/dca/codes/codreg/current.shtml ; NJ DCA, Previously Adopted UCC Model Codes, https://www.nj.gov/dca/codes/codreg/previous.shtml ; N.J.A.C. 5:23-1.6 (grace period)",
+        "keywords": [
+          "New Jersey plumbing code",
+          "National Standard Plumbing Code",
+          "NSPC 2024",
+          "N.J.A.C. 5:23-3.15",
+          "grace period",
+          "August 17 2026"
+        ]
+      }
+    },
+    {
+      "id": "S5B-20",
+      "action": "fix",
+      "reason": "The editions and the August 17, 2026 date are correct (DCA Current Construction Codes page). The fact did not mention the six-month grace period in N.J.A.C. 5:23-1.6, during which complete applications may still use the prior 2021 IMC and IFGC (adopted Sept. 6, 2022, per DCA's Previously Adopted Codes page). Added it.",
+      "fixed": {
+        "fact": "Under New Jersey's Uniform Construction Code, the mechanical subcode (N.J.A.C. 5:23-3.20) adopts the 2024 International Mechanical Code, and the fuel gas subcode (N.J.A.C. 5:23-3.22) adopts the 2024 International Fuel Gas Code, both effective August 17, 2026 and replacing the 2021 editions. For six months after that date (until about February 17, 2027), a complete permit application with all prior approvals may still be reviewed under the 2021 IMC and IFGC (N.J.A.C. 5:23-1.6).",
+        "source": "NJ DCA, Current Construction Codes (N.J.A.C. 5:23-3.20 and 3.22), https://www.nj.gov/dca/codes/codreg/current.shtml ; NJ DCA, Previously Adopted UCC Model Codes, https://www.nj.gov/dca/codes/codreg/previous.shtml ; N.J.A.C. 5:23-1.6 (grace period)"
+      }
+    },
+    {
       "id": "S5B-24",
       "action": "fix",
       "reason": "Out of date. CID replaced the 2021 code: 14.8.2 NMAC is now the 2024 New Mexico Plumbing Code, which adopts the 2024 UPC and all appendices with state amendments. It took effect August 1, 2026 (NM Register Vol. XXXVII, Issue 12, June 23, 2026). Permits may be issued under either the 2021 or the 2024 code until January 1, 2027, and only under the 2024 code after that. Checked the RLD/CID Rules, Laws and Building Codes page and the rule text (14.8.2.5 and 14.8.2.8 NMAC).",
       "fixed": {
         "fact": "New Mexico uses the Uniform Plumbing Code. 14.8.2 NMAC, the 2024 New Mexico Plumbing Code, adopts the 2024 UPC and all its appendices with state amendments and took effect August 1, 2026, replacing the 2021 New Mexico Plumbing Code (2021 UPC). Until January 1, 2027, permits may be issued under either the 2021 or the 2024 code. After January 1, 2027, permits may be issued only under the 2024 code.",
         "source": "14.8.2 NMAC, 2024 New Mexico Plumbing Code (eff. 08/01/2026), via NM RLD Construction Industries Division, Rules, Laws and Building Codes, https://www.rld.nm.gov/construction-industries/rules-laws-and-building-codes/ ; New Mexico Register Vol. XXXVII, Issue 12 (June 23, 2026)",
-        "keywords": ["New Mexico plumbing code", "2024 UPC", "2024 New Mexico Plumbing Code", "14.8.2 NMAC", "August 1 2026", "January 1 2027"]
+        "keywords": [
+          "New Mexico plumbing code",
+          "2024 UPC",
+          "2024 New Mexico Plumbing Code",
+          "14.8.2 NMAC",
+          "August 1 2026",
+          "January 1 2027"
+        ]
       }
     },
     {
@@ -57,7 +107,13 @@
       "fixed": {
         "fact": "New Mexico uses the Uniform Mechanical Code. 14.9.2 NMAC, the 2024 New Mexico Mechanical Code, adopts the 2024 UMC with state amendments and took effect August 1, 2026, replacing the 2021 New Mexico Mechanical Code (2021 UMC). Permits may be issued under either code until January 1, 2027, and only under the 2024 code after that.",
         "source": "14.9.2 NMAC, 2024 New Mexico Mechanical Code (eff. 08/01/2026), via NM RLD Construction Industries Division, Rules, Laws and Building Codes, https://www.rld.nm.gov/construction-industries/rules-laws-and-building-codes/ ; New Mexico Register Vol. XXXVII, Issue 12 (June 23, 2026)",
-        "keywords": ["New Mexico mechanical code", "2024 UMC", "2024 New Mexico Mechanical Code", "14.9.2 NMAC", "August 1 2026"]
+        "keywords": [
+          "New Mexico mechanical code",
+          "2024 UMC",
+          "2024 New Mexico Mechanical Code",
+          "14.9.2 NMAC",
+          "August 1 2026"
+        ]
       }
     },
     {
@@ -67,7 +123,15 @@
       "fixed": {
         "fact": "Since August 1, 2026, New Mexico's mechanical license classifications (14.6.6.11 NMAC) are MM-1 plumbing and fuel gas piping systems, MM-3 HVAC, hydronics, fuel gas piping and process piping, and MM-98 mechanical, which covers all of MM-1 and MM-3. Each requires four years of experience for the qualifying party. The former MM-2 (natural gas fitting) and MM-4 (hydronic heating, cooling and process piping) classifications were deleted.",
         "source": "14.6.6.11 NMAC as amended effective 08/01/2026, New Mexico Register Vol. XXXVII, Issue 12 (June 23, 2026), https://prod-rf-lambda.rtssaas.com/PublicFiles/d89c47bd0d70402dba89b03a22bda6d1/237350a0-0b32-4b00-91f5-8dcba2b54065/14.6.6amend.html",
-        "keywords": ["New Mexico mechanical license", "MM-1", "MM-3", "MM-98", "HVAC license New Mexico", "CID classifications", "2026 amendment"]
+        "keywords": [
+          "New Mexico mechanical license",
+          "MM-1",
+          "MM-3",
+          "MM-98",
+          "HVAC license New Mexico",
+          "CID classifications",
+          "2026 amendment"
+        ]
       }
     },
     {
@@ -77,7 +141,212 @@
       "fixed": {
         "fact": "In New Mexico, the MM-1 classification (plumbing and fuel gas piping systems) requires four years of experience for the qualifying party. The JPG journeyman certificate (journeyman plumber and gas fitter) requires two years of experience, and since August 1, 2026 the holder may work under an MM-1, MM-3 or MM-98 licensee.",
         "source": "14.6.6.11 NMAC as amended effective 08/01/2026 (NM Register Vol. XXXVII, Issue 12) ; 14.6.4 NMAC (amended 08/01/2026)",
-        "keywords": ["New Mexico plumbing license", "MM-1", "JPG journeyman", "journeyman plumber and gas fitter", "four years experience"]
+        "keywords": [
+          "New Mexico plumbing license",
+          "MM-1",
+          "JPG journeyman",
+          "journeyman plumber and gas fitter",
+          "four years experience"
+        ]
+      }
+    },
+    {
+      "id": "S5B-35",
+      "action": "fix",
+      "reason": "Misleading by omission. The OSFM State Electrical Code page lists the 2020 State Electrical Code (effective Nov. 1, 2021) as 'excluding one- and two-family dwellings, see Amendments 10.1 & 10.2'. OSFM's Nov. 1, 2021 interpretation says one- and two-family dwellings, and townhouses up to three stories with separate egress, are regulated by the 2017 State Electrical Code. Because the 2024 code package, including the 2023 NC Electrical Code, is still delayed (OSFM March 2026 engineering newsletter: enforcement is ongoing under the 2018 NC codes), the 2017 code still governs those homes. Checked ncosfm.gov State Electrical Code page and interpretation (Oct. 2026).",
+      "fixed": {
+        "fact": "North Carolina's current State Electrical Code is the 2020 NEC with state amendments, in effect since November 1, 2021. By NC amendment (sections 10.1 and 10.2) it does not apply to one- and two-family dwellings or townhouses up to three stories, which are still regulated by the 2017 NC State Electrical Code (2017 NEC with NC amendments). The 2023 NEC with NC amendments was set for January 1, 2025, but Session Law 2025-2 (House Bill 47) delayed it with no set date.",
+        "source": "NC Office of State Fire Marshal, State Electrical Code and Interpretations, https://ncosfm.gov/codes/state-electrical-division/state-electrical-code-and-interpretations ; OSFM interpretation on the 2020 State Electrical Code and one- and two-family dwellings (Nov. 1, 2021), https://ncosfm.gov/media/2495/open",
+        "keywords": [
+          "North Carolina electrical code",
+          "2020 NEC",
+          "2017 NEC one- and two-family",
+          "2023 NEC delayed",
+          "S.L. 2025-2",
+          "NC State Electrical Code"
+        ]
+      }
+    },
+    {
+      "id": "S5B-38",
+      "action": "fix",
+      "reason": "Content is correct but was sourced only to the Cornell copy. Confirmed in the NC Rules Review Commission filing for 21 NCAC 18B .0201 (OAH, Jan. 30, 2023): Limited 3,000 hours (2,000 primary), Intermediate 5,750 (5,000 primary), Unlimited 9,000 (8,000 primary), plus written statements from two people knowledgeable of an Unlimited applicant's experience. Added the official source.",
+      "fixed": {
+        "source": "21 NCAC 18B .0201, Requirements for all examination applicants (via Cornell LII), https://law.cornell.edu/regulations/north-carolina/21-N-C-Admin-Code-18B-0201 ; NC Rules Review Commission filing for 21 NCAC 18B .0201 (Jan. 2023), https://www.oah.nc.gov/media/14214/open"
+      }
+    },
+    {
+      "id": "S5B-45",
+      "action": "fix",
+      "reason": "Content is correct, but the source was a county page. Confirmed on official Ohio sources. OAC 4101:1-27-01 (OBC electrical) is effective March 1, 2024 and OAC 4101:8-34-01 (RCO electrical) is effective April 15, 2024 (codes.ohio.gov). The BBS CSI memo of Nov. 8, 2023 says the RCO rules were amended to reference the 2023 NEC. The Board of Building Standards' October 2025 OMC amendments list NFPA 70-23 in Chapter 15. Added the official sources.",
+      "fixed": {
+        "source": "Ohio Adm. Code 4101:1-27-01 (eff. 3/1/2024) and 4101:8-34-01 (eff. 4/15/2024), https://codes.ohio.gov/ohio-administrative-code/rule-4101:8-34-01 ; Ohio Board of Building Standards CSI recommendation memo (Nov. 8, 2023), https://dam.assets.ohio.gov/image/upload/com.ohio.gov/documents/CSI%20REC%20BBS%2011-8-23.pdf ; Union County (OH) Building Regulation, Current Ohio Code References (1/28/2026), https://www.unioncountyohio.gov/media/Officials/Engineer/building-regulation/BuildingInUnionCo_UsefulInfo/Current%20Ohio%20Code%20References.pdf"
+      }
+    },
+    {
+      "id": "S5B-46",
+      "action": "fix",
+      "reason": "The second sentence is wrong. The Ohio BBS 'Ohio Plumbing Code Summary of Significant Changes - 2017 to 2024' has a 'Source of change' column. Its 403.2 row ('Modified - Added small business exception') is sourced to the 2018 IPC, so the small-business exception came from the model code, not from an Ohio amendment. The edition (2021 IPC, adopted by reference) and the March 1, 2024 date are correct (ICC release and BBS summary).",
+      "fixed": {
+        "fact": "The 2024 Ohio Plumbing Code, which applies to commercial buildings, adopts the 2021 International Plumbing Code by reference with Ohio changes. It took effect March 1, 2024 and replaced the 2017 Ohio Plumbing Code.",
+        "source": "Ohio Board of Building Standards, Ohio Plumbing Code Summary of Significant Changes - 2017 to 2024, https://dam.assets.ohio.gov/image/upload/com.ohio.gov/documents/2024%20OPC%20Summary%20of%20Changes%20-%20BBS%20letterhead.pdf ; ICC news release, Ohio adopts 2021 International Plumbing, Building and Mechanical Codes, https://www.iccsafe.org/about/periodicals-and-newsroom/ohio-strengthens-building-safety-and-resilience-by-adopting-international-plumbing-building-and-mechanical-codes"
+      }
+    },
+    {
+      "id": "S5B-47",
+      "action": "fix",
+      "reason": "Out of date by omission. The Board of Building Standards' Group 105 amendments to the Ohio Mechanical Code took effect October 15, 2025 (certified Sept. 30, 2025). OMC 101.1 now incorporates the 2021 IMC Chapters 2-10 and 12-15 and the 2024 IMC Chapter 11 (Refrigeration), which updates the refrigerant quantity limits, including for A2L refrigerants. The 2021 IFGC for commercial fuel gas work is supported by the county code list and the PSI OCILB bulletin (HVAC exam: 2021 IFGC). Checked the BBS OMC amendments document (October 2025).",
+      "fixed": {
+        "fact": "Ohio's commercial mechanical code is the 2024 Ohio Mechanical Code, based on the 2021 International Mechanical Code and effective March 1, 2024. Amendments effective October 15, 2025 replaced its Chapter 11 (Refrigeration) with Chapter 11 of the 2024 IMC, which brings in the newer refrigerant (including A2L) limits. Commercial fuel gas work follows the 2021 International Fuel Gas Code.",
+        "source": "Ohio Board of Building Standards, OMC amendments effective Oct. 15, 2025, https://dam.assets.ohio.gov/image/upload/com.ohio.gov/DICO/BBS/Rule%20Docs/dico_bbs_omc_amendments_october_2025.pdf ; Union County (OH) Current Ohio Code References (1/28/2026), https://www.unioncountyohio.gov/media/Officials/Engineer/building-regulation/BuildingInUnionCo_UsefulInfo/Current%20Ohio%20Code%20References.pdf ; PSI Ohio OCILB Candidate Information Bulletin (HVAC exam references the 2021 IFGC)",
+        "keywords": [
+          "Ohio Mechanical Code",
+          "2021 IMC",
+          "2024 IMC Chapter 11",
+          "A2L refrigerants",
+          "2021 IFGC",
+          "Ohio HVAC code"
+        ]
+      }
+    },
+    {
+      "id": "S5B-57",
+      "action": "fix",
+      "reason": "Incomplete. Oregon BCD Form 440-2570i says the 16,000-hour out-of-state route for the General Journeyman (J) also needs at least 2,000 hours each in residential, commercial and industrial work. The rest checks out: 576 classroom hours plus 8,000 hours with 1,000 per category, S needs 8,000 more journeyman hours, and LR needs 288 classroom hours plus 4,000 residential hours or 8,000 residential hours.",
+      "fixed": {
+        "fact": "An Oregon General Journeyman Electrician (J) license requires an approved Oregon apprenticeship, or 576 hours of classroom training plus 8,000 hours of out-of-state experience (at least 1,000 each in residential, commercial and industrial work), or 16,000 hours of out-of-state experience (at least 2,000 each in residential, commercial and industrial work). A General Supervising Electrician (S) needs a journeyman license (or its qualifications) plus another 8,000 hours of journeyman experience. A Limited Residential Electrician (LR) needs an apprenticeship, 288 classroom hours plus 4,000 residential hours, or 8,000 residential hours."
+      }
+    },
+    {
+      "id": "S5B-59",
+      "action": "fix",
+      "reason": "Content is correct, but the only sources were city pages. The PA Department of Labor & Industry UCC page (official) says the Triennial Update was approved by IRRC on October 16, 2025 and 'The effective date is January 1, 2026.' Philadelphia L&I Bulletin B-2501 and the City of York list the 2021 IPC as part of that update. Added the DLI source.",
+      "fixed": {
+        "source": "PA Department of Labor & Industry, Uniform Construction Code (Triennial Update effective January 1, 2026), https://www.pa.gov/agencies/dli/programs-services/labor-management-relations/bureau-of-occupational-and-industrial-safety/uniform-construction-code-home ; City of Philadelphia L&I Code Bulletin B-2501, https://www.phila.gov/media/20251021080549/B-2501-Implementation-of-2021-International-Codes.pdf ; City of York, 2021 UCC Code Update, https://www.yorkcity.org/2021ucc"
+      }
+    },
+    {
+      "id": "S5B-60",
+      "action": "fix",
+      "reason": "Same as S5B-59: the January 1, 2026 effective date of the UCC Triennial Update is confirmed on the PA DLI UCC page, and the editions are listed by Philadelphia L&I and the City of York. Added the DLI source.",
+      "fixed": {
+        "source": "PA Department of Labor & Industry, Uniform Construction Code (Triennial Update effective January 1, 2026), https://www.pa.gov/agencies/dli/programs-services/labor-management-relations/bureau-of-occupational-and-industrial-safety/uniform-construction-code-home ; City of Philadelphia L&I Code Bulletin B-2501, https://www.phila.gov/media/20251021080549/B-2501-Implementation-of-2021-International-Codes.pdf ; City of York, 2021 UCC Code Update, https://www.yorkcity.org/2021ucc"
+      }
+    },
+    {
+      "id": "S5B-61",
+      "action": "fix",
+      "reason": "Content is correct. Philadelphia L&I Bulletin B-2501 lists '2020 NFPA 70' as the referenced standard, and the 2021 IBC/IRC reference NFPA 70-20. The January 1, 2026 effective date is confirmed on the PA DLI UCC page. Added the DLI source.",
+      "fixed": {
+        "source": "PA Department of Labor & Industry, Uniform Construction Code (Triennial Update effective January 1, 2026), https://www.pa.gov/agencies/dli/programs-services/labor-management-relations/bureau-of-occupational-and-industrial-safety/uniform-construction-code-home ; City of Philadelphia L&I Code Bulletin B-2501, https://www.phila.gov/media/20251021080549/B-2501-Implementation-of-2021-International-Codes.pdf ; City of York, 2021 UCC Code Update, https://www.yorkcity.org/2021ucc"
+      }
+    },
+    {
+      "id": "S5B-74",
+      "action": "fix",
+      "reason": "Slightly incomplete. The SC LLR Residential Builders Commission licensure page lists the trade exam waiver states by trade: electrical (RBE) and plumbing (RBP) from North Carolina and Mississippi, and HVAC (RBH) from Alabama, North Carolina and Mississippi. The rest checks out: PSI exam, one year of verifiable supervised experience, NASCLA electrical accepted, and the RBS registration needing one year in the past five years per trade.",
+      "fixed": {
+        "fact": "South Carolina's Residential Builders Commission issues residential specialty licenses for electrical (RBE), HVAC (RBH) and plumbing (RBP) work. Licensure by exam requires passing the PSI exam and one year of verifiable experience under a licensed person in that trade. Licensees from North Carolina and Mississippi (and, for HVAC, Alabama) may get a trade exam waiver but must still pass the SC Business Management and Law exam."
+      }
+    },
+    {
+      "id": "S5B-83",
+      "action": "unverify",
+      "reason": "Can't confirm the edition is still current. The Texas Register of Aug. 14, 2026 published a TSBPE proposal to amend 22 TAC 367.2 from the 2018 to the 2021 UPC and IPC (with the 2021 IFGC and IRC), with the earliest possible adoption date September 13, 2026. That proposal confirms 2018 was the edition in force in August 2026. No adoption notice was found, so whether the 2021 editions took effect by October 2026 is unknown. Rewrote the fact to state both the edition and the pending change, and replaced the Cornell-only source with the official Texas Register notice.",
+      "fixed": {
+        "fact": "The Texas State Board of Plumbing Examiners adopts both the Uniform Plumbing Code and the International Plumbing Code in 22 TAC 367.2. In unincorporated areas or other places with no local plumbing code, licensed plumbing work must follow one of these state-adopted codes. The rule has used the 2018 editions, and in August 2026 TSBPE proposed moving to the 2021 UPC and IPC (earliest possible adoption September 13, 2026).",
+        "source": "22 Tex. Admin. Code 367.2, Code Requirements (via Cornell LII), https://www.law.cornell.edu/regulations/texas/22-Tex-Admin-Code-SS-367-2 ; Texas Register, Aug. 14, 2026, TSBPE proposed amendment to 22 TAC 367.2, https://www.sos.state.tx.us/texreg/archive/August142026/Proposed%20Rules/22.EXAMINING%20BOARDS.html",
+        "keywords": [
+          "Texas plumbing code",
+          "TSBPE",
+          "22 TAC 367.2",
+          "Uniform Plumbing Code",
+          "International Plumbing Code",
+          "2021 UPC proposal"
+        ]
+      }
+    },
+    {
+      "id": "S5B-84",
+      "action": "fix",
+      "reason": "Misleading by omission, and the start date was missing. 2025 HB 313 (enrolled) changed 15A-2-103(1)(g) from the 2020 to the 2023 NEC effective July 1, 2025. It also amended 15A-3-601: 'The IRC provisions are adopted as the residential electrical standards applicable to residential installations under the IRC... All other installations shall comply with the adopted NEC.' So homes built under the 2021 IRC follow the IRC electrical chapters, which are based on the 2020 NEC, not the 2023 NEC. IAEI's adoption map also lists Utah as 2023 NEC for commercial and 2020 for residential. The 15A-2-103 version effective July 1, 2026 still lists the 2023 NEC.",
+      "fixed": {
+        "fact": "Utah's State Construction Code (Utah Code 15A-2-103) adopts the 2023 National Electrical Code, effective July 1, 2025, along with the 2024 IBC, IPC, IMC, IFGC and IECC. The residential code stays at the 2021 IRC. Under Utah Code 15A-3-601, residential installations under the IRC follow the IRC's electrical chapters (as amended by Utah) instead of the NEC, and all other installations follow the 2023 NEC.",
+        "source": "Utah Code 15A-2-103 (version effective July 1, 2026), https://le.utah.gov/xcode/Title15A/Chapter2/C15A-2-S103_2026050620260701.pdf ; 2025 HB 313 (enrolled), amending 15A-2-103 and 15A-3-601, eff. July 1, 2025, https://le.utah.gov/Session/2025/bills/enrolled/HB0313.pdf",
+        "keywords": [
+          "Utah electrical code",
+          "2023 NEC",
+          "Utah Code 15A-2-103",
+          "15A-3-601",
+          "IRC electrical residential",
+          "State Construction Code"
+        ]
+      }
+    },
+    {
+      "id": "S5B-87",
+      "action": "fix",
+      "reason": "The fact is correct, but the note is wrong. Utah Code 58-55-302(3)(i) lets a residential journeyman electrician qualify with two years of approved training OR four years of supervised practical experience, not training plus experience. The current version is effective May 7, 2025, and a new version takes effect January 1, 2027.",
+      "fixed": {
+        "note": "A residential journeyman electrician needs two years in an approved training program or four years of practical experience under a licensed electrician. Expedited licensure under commission rules is also possible. A new version of 58-55-302 takes effect January 1, 2027, so check it for changes."
+      }
+    },
+    {
+      "id": "S5B-89",
+      "action": "unverify",
+      "reason": "Content matches the Cornell LII copy of R156-55a-301 (last amendment shown: Bulletin 2023-02, eff. 1/3/2023). It covers the S350 scope, the E200/E201, P200/P201 and RMGA restrictions, and the S351-S353 conversion effective July 22, 2019. I couldn't reach the official Utah Administrative Code site (adminrules.utah.gov) or a DOPL page listing the S350 scope to confirm it's the current rule text."
+    },
+    {
+      "id": "S5B-92",
+      "action": "fix",
+      "reason": "Slightly misleading. On the Division of Fire Safety licensing ledger (Trade Licenses portal, firesafety.vermont.gov/node/852), A1 Automatic Gas/Oil Heating and C3 Refrigeration and Air Conditioning are listed in the electrical block (after EM/EJ/ES), while P2 Heating System Specialist is in the plumbing block. The fact presented them as a single HVAC-type list. Clarified, and added C3. That Vermont has no general HVAC license is consistent with the Trade Licensing page (node/80), which lists no such program.",
+      "fixed": {
+        "fact": "Vermont has no general HVAC license. Instead, the Division of Fire Safety runs separate Gas Certification and Oil Burner Installer programs. Its licensing ledger lists related classes under the electrical licenses, such as A1 Automatic Gas/Oil Heating and C3 Refrigeration and Air Conditioning, and under the plumbing licenses, such as P2 Heating System Specialist.",
+        "source": "Vermont Division of Fire Safety, Trade Licensing and Certifications, https://firesafety.vermont.gov/node/80 ; Trade Licenses, Certification and Renewals portal (Licensing Ledger), https://firesafety.vermont.gov/node/852"
+      }
+    },
+    {
+      "id": "S5B-101",
+      "action": "fix",
+      "reason": "Content is correct, but the only source was the Cornell copy. Confirmed in the official WAC 296-46B-945 (app.leg.wa.gov), Table 945-1: 06A needs 4,000 hours, 06B allows the exam at 1,000 hours and certification at 2,000, and note 7 lets 06B hours count as 2,000 toward 06A but not toward the general (01) electrician exam. Replaced the source.",
+      "fixed": {
+        "source": "WAC 296-46B-945, Table 945-1, https://app.leg.wa.gov/wac/default.aspx?cite=296-46B-945"
+      }
+    },
+    {
+      "id": "S5B-103",
+      "action": "unverify",
+      "reason": "Still not confirmed on an official page, and possibly out of date. The WV Secretary of State's Code of State Rules listing for 87-04 shows the version effective 8/1/2022 as the active one and a newer version as 'Legislative, In Progress' with no effective date. But a Buckhannon ordinance passed Aug. 20, 2026 adopts the 2024 I-codes and the 2023 NEC 'as modified by' 87 CSR 4 and says the Fire Commission's changes to 87 CSR 4 took effect July 29, 2026. I couldn't open the rule text to confirm editions or dates. The fact now says the update may have taken effect.",
+      "fixed": {
+        "fact": "West Virginia's State Building Code is State Fire Commission rule 87 CSR 4. The version effective August 1, 2022, still listed as active by the Secretary of State in October 2026, adopts the 2020 NEC along with the 2018 IBC, IRC, IPC and IMC. A newer version is listed as in progress, and some 2026 city ordinances say a 2024-edition update with the 2023 NEC took effect July 29, 2026, so confirm the current edition with the State Fire Marshal.",
+        "source": "WV Secretary of State, Code of State Rules, 87-04 version list, https://apps.sos.wv.gov/adlaw/csr/rule.aspx?rule=87-04 ; ICC-NTA, West Virginia State Fire Commission Has Adopted New Codes (May 16, 2022), https://www.icc-nta.org/code-update/west-virginia-state-fire-commission-adopted-new-codes/ ; City of Buckhannon Ordinance 480 (Aug. 2026), https://buckhannonwv.org/wp-content/uploads/2026/08/480-State-Building-Code-Update-Adoption-2024-Edition.pdf"
+      }
+    },
+    {
+      "id": "S5B-104",
+      "action": "unverify",
+      "reason": "Same issue as S5B-103. The SOS rule listing still shows the 8/1/2022 version of 87 CSR 4 as active, with a newer version in progress. A Buckhannon ordinance passed Aug. 20, 2026 adopts the 2024 IPC and IMC 'as modified by' 87 CSR 4 and says the state changes took effect July 29, 2026. Not confirmed on the rule text, so the fact now says the update may have taken effect.",
+      "fixed": {
+        "fact": "The August 1, 2022 version of West Virginia's State Building Code (87 CSR 4) adopted the 2018 International Plumbing Code and 2018 International Mechanical Code. The Secretary of State still listed that version as active in October 2026, but some 2026 city ordinances say a 2024-edition update (2024 IPC and IMC) took effect July 29, 2026, so confirm the current edition with the State Fire Marshal.",
+        "source": "WV Secretary of State, Code of State Rules, 87-04 version list, https://apps.sos.wv.gov/adlaw/csr/rule.aspx?rule=87-04 ; ICC-NTA, West Virginia State Fire Commission Has Adopted New Codes (May 16, 2022), https://www.icc-nta.org/code-update/west-virginia-state-fire-commission-adopted-new-codes/ ; City of Buckhannon Ordinance 480 (Aug. 2026), https://buckhannonwv.org/wp-content/uploads/2026/08/480-State-Building-Code-Update-Adoption-2024-Edition.pdf"
+      }
+    },
+    {
+      "id": "S5B-116",
+      "action": "fix",
+      "reason": "The note left open whether the DOL route survived. The TSBPE Master Plumber license page (checked Oct. 2026) settles it. A candidate needs a journeyman license held at least two years, or at least one year plus completion of a U.S. DOL Office of Apprenticeship-approved training program. The fact now includes the DOL route.",
+      "fixed": {
+        "fact": "Effective September 1, 2025, Texas reduced the experience needed to take the master plumber exam from four years to two years as a licensed journeyman plumber. A journeyman who has completed a U.S. Department of Labor Office of Apprenticeship-approved training program still needs only one year as a licensed journeyman.",
+        "source": "Texas State Board of Plumbing Examiners, Important Notice: Upcoming Change to Master Plumber Requirements, https://tsbpe.texas.gov/important-notice-upcoming-change-to-master-plumber-requirements ; TSBPE, Master Plumber license page, https://tsbpe.texas.gov/license-types/master/",
+        "note": ""
+      }
+    },
+    {
+      "id": "S5B-117",
+      "action": "fix",
+      "reason": "The only source was MTAS, a University of Tennessee advisory service that summarizes the statute. Content matches MTAS, and the State Fire Marshal's own rule, Tenn. Comp. R. & Regs. 0780-02-02-.05, deems a local body compliant if it adopted a standard 'within seven (7) years of the most current published edition'. Added the SFMO rule as a source.",
+      "fixed": {
+        "source": "T.C.A. 68-120-101 et seq. as summarized by University of Tennessee MTAS, Statewide Building Standards, https://www.mtas.tennessee.edu/reference/statewide-building-standards ; Tenn. Comp. R. & Regs. 0780-02-02-.05, Local Ordinances (State Fire Marshal), https://www.law.cornell.edu/regulations/tennessee/Tenn-Comp-R-Regs-0780-02-02-.05"
       }
     }
   ],
@@ -96,10 +365,51 @@
       "reason": "The 14.6.6 NMAC amendment effective 08/01/2026 deleted MM-2 and MM-4 and changed MM-1's scope, so the distractors and explanation are out of date. MM-3 is still the HVAC classification. It now also covers hydronics, fuel gas piping and process piping.",
       "fixed": {
         "q": "Since August 1, 2026, which New Mexico mechanical classification covers HVAC, hydronics, fuel gas piping and process piping?",
-        "c": ["MM-1", "MM-3", "EE-98", "GB-98"],
+        "c": [
+          "MM-1",
+          "MM-3",
+          "EE-98",
+          "GB-98"
+        ],
         "a": 1,
         "ref": "14.6.6.11 NMAC (amended eff. 08/01/2026)",
         "why": "MM-3 is HVAC, hydronics, fuel gas piping and process piping. MM-1 is plumbing and fuel gas piping, MM-98 combines MM-1 and MM-3, EE-98 is electrical and GB-98 is general building. MM-2 and MM-4 were eliminated on August 1, 2026."
+      }
+    },
+    {
+      "i": 12,
+      "action": "fix",
+      "reason": "Two defensible answers. The 2020 NC State Electrical Code excludes one- and two-family dwellings (NC Amendments 10.1 and 10.2), which are still regulated by the 2017 NC State Electrical Code (OSFM interpretation, Nov. 1, 2021). So the distractor '2017 NEC' is also correct for homes. The question is now limited to buildings other than one- and two-family dwellings.",
+      "fixed": {
+        "q": "As of 2026, North Carolina's State Electrical Code for commercial and multifamily buildings (everything except one- and two-family dwellings) is based on which NEC edition?",
+        "ref": "NC OSFM State Electrical Code page",
+        "why": "The 2020 NC State Electrical Code (2020 NEC with amendments) has applied since November 1, 2021, except to one- and two-family dwellings, which still use the 2017 NC State Electrical Code. The 2023 code was delayed indefinitely by S.L. 2025-2."
+      }
+    },
+    {
+      "i": 35,
+      "action": "fix",
+      "reason": "The answer (both UPC and IPC) is still right. But the explanation said 'currently 2018 editions', and TSBPE published a proposal in the Aug. 14, 2026 Texas Register to move to the 2021 editions (earliest adoption Sept. 13, 2026), so the edition may have changed by October 2026.",
+      "fixed": {
+        "why": "TSBPE adopts both the Uniform Plumbing Code and the International Plumbing Code by rule, and plumbing in areas with no local code must follow one of them. The rule has used the 2018 editions, and a 2026 proposal would move it to the 2021 editions."
+      }
+    },
+    {
+      "i": 37,
+      "action": "fix",
+      "reason": "The answer (2023 NEC) is right for 15A-2-103. But under Utah Code 15A-3-601 (amended by 2025 HB 313), residential installations under the IRC use the IRC electrical provisions instead, and the explanation should say so to avoid teaching that homes are on the 2023 NEC.",
+      "fixed": {
+        "why": "Utah Code 15A-2-103 adopts the 2023 NEC (effective July 1, 2025), along with the 2024 IBC, IPC, IMC and IFGC and the 2021 IRC. Homes built under the IRC follow the IRC's electrical chapters instead (15A-3-601)."
+      }
+    },
+    {
+      "i": 52,
+      "action": "fix",
+      "reason": "Two defensible answers. The TSBPE Master Plumber page says one year as a licensed journeyman is enough with a DOL Office of Apprenticeship-approved training program, so 'One year' is also correct as written. The question now specifies the route without a DOL program.",
+      "fixed": {
+        "q": "Since September 1, 2025, how long must a Texas journeyman plumber without a DOL-approved apprenticeship program hold the journeyman license to qualify for the master plumber exam?",
+        "ref": "TSBPE Master Plumber page; TSBPE notice",
+        "why": "TSBPE cut the standard requirement from four years to two years as a licensed journeyman, effective September 1, 2025. With a DOL Office of Apprenticeship-approved program, one year is enough."
       }
     }
   ],

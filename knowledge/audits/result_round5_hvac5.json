@@ -1,1 +1,276 @@
-{"facts":[],"questions":[],"existing":[]}
+{
+ "facts": [
+  {
+   "id": "H5-10",
+   "action": "fix",
+   "reason": "The '30 inches on the control side' setback is a Seattle amendment, not model IFGC text. Seattle's 2021 Fuel Gas Code tags 303.7 with [S] (its Seattle-amendment marker, used on 301.1, 301.6, 618.3, etc.), and the model text (e.g., 2012 NC Fuel Gas Code reproduction of IFGC 303.7) has only the 12 in setback, the 4 in masonry lining above grade and flood protection.",
+   "fixed": {
+    "fact": "Under IFGC 2021 303.7, an appliance installed in a pit or excavation may not touch the surrounding soil, and the pit sides must be held back at least 12 inches from the appliance. Where the pit is more than 12 inches deep below adjoining grade, its walls must be lined with concrete or masonry that extends at least 4 inches above grade and resists collapse, and the appliance must be protected from flooding.",
+    "note": "Seattle's local code adds a 30-inch control-side setback ([S] amendment); that is not in the model IFGC.",
+    "keywords": [
+     "pit location",
+     "appliance in pit",
+     "12 inches",
+     "4 inches above grade",
+     "flooding"
+    ]
+   }
+  },
+  {
+   "id": "H5-13",
+   "action": "fix",
+   "reason": "Correct as far as it goes, but omits the commonly tested limit on the arc-resistant option: per 2021 IFGC 310.3 (Seattle 2021 SFGC text, untagged) and ICC CodeNotes on 2021 CSST bonding, if any segment of the system is non-arc-resistant CSST (or no appliance has an equipment grounding conductor), the system must be bonded per 310.2.",
+   "fixed": {
+    "fact": "In the 2021 IFGC, CSST that is not listed with an arc-resistant jacket must be bonded to the electrical service grounding electrode system (or lightning protection electrode system) with a jumper of at least 6 AWG copper, no longer than 75 ft, using UL 467 listed clamps (310.2). Arc-resistant CSST (ARCSST) only has to be electrically continuous and bonded to an effective ground-fault current path like other gas piping (310.3), but if any part of the system is non-arc-resistant CSST, the 310.2 direct-bond jumper is required."
+   }
+  },
+  {
+   "id": "H5-20",
+   "action": "fix",
+   "reason": "Table 503.4 does not assign UL 1738 special gas vents to Category II/III appliances; it says Category II, III and IV appliances are vented 'as specified or furnished by manufacturers of listed appliances'. The plastic-pipe rule is in 503.4.1 (which Seattle amends, [S]); model text requires the appliance to be listed for plastic venting, the instructions to name the material, and the pipe to be labeled to the appliance maker's specified standard or listed to UL 1738.",
+   "fixed": {
+    "fact": "Under the 2021 IFGC, Category II, III and IV appliances are vented with the system specified or furnished by the listed appliance's manufacturer (Table 503.4); special gas vents must be listed to UL 1738 (503.4.2), and Type B and BW vents are listed to UL 441. Where plastic pipe is used, the appliance must be listed for it, its instructions must name the specific plastic material, and the pipe must be labeled to the standard the appliance manufacturer specifies or listed to UL 1738 (503.4.1). Any required primer must be a contrasting color so joints can be inspected (503.4.1.1).",
+    "source": "IFGC 2021 502.1; Table 503.4; 503.4.1; 503.4.1.1; 503.4.2"
+   }
+  },
+  {
+   "id": "H5-62",
+   "action": "fix",
+   "reason": "Wrong example. R-123 boils at about 82 F at atmospheric pressure, so it is in the 'at or below 85 F' group, where nitrogen or other methods needing later purging may not be used. The 'above 85 F' group is refrigerants like R-113 (boils about 118 F). Rule text confirmed on eCFR 40 CFR 82.156(a)(1)(ii).",
+   "fixed": {
+    "fact": "Under 40 CFR 82.156(a)(1)(ii), for a non-major repair, a low-pressure appliance must be pressurized to no higher than 0 psig before opening. For refrigerants that boil at or below 85 F at 29.9 in. Hg (such as R-11 and R-123), methods that require later purging, such as nitrogen, may not be used. For refrigerants that boil above 85 F (such as R-113), heat should be used to raise the pressure, and nitrogen may be used only to raise the pressure from the level heat can reach up to atmospheric."
+   }
+  },
+  {
+   "id": "H5-65",
+   "action": "fix",
+   "reason": "Facts are right, but the second sentence (sale to another owner requires reclamation by a certified reclaimer) comes from 40 CFR 82.154(d) 'Sale of used refrigerant' and the 82.152 definition of reclaim (AHRI 700), not 82.156(h). Verified on eCFR.",
+   "fixed": {
+    "source": "40 CFR 82.156(h); 82.154(d); 82.152 (reclaim); IMC 2021 1102.2.2"
+   }
+  },
+  {
+   "id": "H5-71",
+   "action": "fix",
+   "reason": "The 'same method' rule is per operating facility, not across all of an owner's facilities. 40 CFR 84.102 (leak rate definition, eCFR): 'The same method must be used for all appliances subject to the leak repair requirements located at an operating facility.' Other values (quarterly/annual inspections, 125 percent chronic leaker report by March 1, January 1, 2026 start) confirmed on eCFR 84.106.",
+   "fixed": {
+    "fact": "Under the HFC leak repair rule (40 CFR 84.106, effective January 1, 2026), owners calculate the leak rate each time refrigerant is added using either the annualizing method or the rolling average method, and the same method must be used for all covered appliances at an operating facility. After an exceedance, commercial refrigeration and industrial process systems of 500 lb or more get quarterly leak inspections, while those of 15 to under 500 lb and comfort cooling systems get annual inspections, and any appliance of 15 lb or more that leaks 125 percent of its charge in a calendar year must be reported to EPA by March 1 of the next year.",
+    "source": "40 CFR 84.106; 84.102 (leak rate)"
+   }
+  },
+  {
+   "id": "H5-76",
+   "action": "fix",
+   "reason": "84.54(b) runs from each subsector's compliance date in paragraph (a), not from the product's manufacture date: 'Effective three years after the dates listed for each subsector in paragraph (a)...' (40 CFR 84.54(b), eCFR/LII).",
+   "fixed": {
+    "fact": "Under 40 CFR 84.54(a), since January 1, 2025 self-contained residential and light commercial AC and heat pumps, residential dehumidifiers and comfort-cooling chillers may not be manufactured or imported with refrigerant of GWP 700 or more, and household refrigerators and freezers are limited to GWP below 150. Under 84.54(b), starting three years after each of those compliance dates (January 1, 2028 for products with a January 1, 2025 date), no one may sell, distribute, offer for sale or export products that use the restricted refrigerants.",
+    "keywords": [
+     "GWP 150",
+     "household refrigerator",
+     "dehumidifier",
+     "chiller",
+     "sell-through 2028"
+    ]
+   }
+  },
+  {
+   "id": "H5-82",
+   "action": "fix",
+   "reason": "The 'locker rooms 0.5 cfm per sq ft' value could not be confirmed as model IMC text: Seattle's Table 403.3.1.1 tags the locker/dressing room and sports locker room rows as Seattle amendments ([S]) and Washington rewrote those rows. The other values (kitchens 0.7 exhaust with 20/1000, 7.5 cfm/person, 0.12 cfm/sq ft; janitor closets 1.0; parking garages 0.75) are consistent with the model table and ASHRAE 62.1.",
+   "fixed": {
+    "fact": "IMC 2021 Table 403.3.1.1 exhaust rates include: commercial cooking kitchens 0.7 cfm per sq ft, janitor closets, trash rooms and recycling rooms 1.0 cfm per sq ft, and enclosed parking garages and repair garages 0.75 cfm per sq ft. Commercial kitchens also need 7.5 cfm per person plus 0.12 cfm per sq ft of outdoor air (default 20 people per 1,000 sq ft).",
+    "keywords": [
+     "exhaust rate",
+     "janitor closet",
+     "commercial kitchen",
+     "parking garage exhaust",
+     "0.7 cfm"
+    ]
+   }
+  },
+  {
+   "id": "H5-85",
+   "action": "fix",
+   "reason": "Fact is not self-contained ('Additional ...') and the citation is wrong: the Ez table in the 2021 IMC is Table 403.3.1.1.1.2 under 403.3.1.1.1.2 'Zone air distribution effectiveness' (numbering as printed, untagged, in Seattle's 2021 Mechanical Code; Washington-tagged subsections differ). Values 0.7 and 0.5 are correct.",
+   "fixed": {
+    "fact": "IMC 2021 zone air distribution effectiveness (Ez) values include 0.7 for floor supply of warm air with a ceiling return and 0.5 when makeup air is drawn in near the exhaust or return location (cool air supplied at the ceiling or floor is 1.0). Lower Ez means more outdoor air: Voz = Vbz / Ez, so 100 cfm / 0.7 = about 143 cfm.",
+    "source": "IMC 2021 403.3.1.1.1.2; Table 403.3.1.1.1.2; 403.3.1.1.1.3"
+   }
+  },
+  {
+   "id": "H5-90",
+   "action": "fix",
+   "reason": "Citation only: in the 2021 IMC, 603.4.1 is 'Minimum fasteners' (three equally spaced screws or rivets); the 1-inch crimp-joint lap with the male end in the direction of airflow is a separate subsection (603.4.2 as printed in Seattle's untagged 2021 Mechanical Code text). Fact text is correct.",
+   "fixed": {
+    "source": "IMC 2021 603.4.1; 603.4.2; IRC 2021 M1601.4.1; M1601.4.2"
+   }
+  },
+  {
+   "id": "H5-104",
+   "action": "fix",
+   "reason": "Wrong section: 908.1 is the general/listing provision; the plume location rule (5 ft above or 20 ft from a ventilation inlet) is 908.3 'Location' (Seattle 2021 Mechanical Code, untagged model text). 908.6 is correct.",
+   "fixed": {
+    "fact": "Under the 2021 IMC, cooling towers, evaporative condensers and fluid coolers must be located so the plume discharges at least 5 ft above or 20 ft away from any ventilation inlet to a building (908.3), and their drains, overflows and blowdown must be indirectly connected to an approved disposal location (908.6).",
+    "source": "IMC 2021 908.3; 908.6"
+   }
+  },
+  {
+   "id": "H5-107",
+   "action": "fix",
+   "reason": "Math is right (4.8 x 1,152 / 1,000 = 5.53 lb; 26 x 1.152 = 29.95 lb), but saying the circuit 'may hold at most' 5.5 lb is misleading: exceeding the Table 1103.1 amount triggers the machinery-room/outdoor requirement of 1104.2, and 1104.2 Exception 1 exempts listed equipment with 6.6 lb or less regardless of refrigerant (confirmed in Seattle 2018 SMC Ch. 11, untagged).",
+   "fixed": {
+    "fact": "Worked example using IMC Table 1103.1: for an R-32 circuit serving only a 12 x 12 x 8 ft room (1,152 cubic feet), the Table 1103.1 limit is 4.8 x 1,152 / 1,000 = about 5.5 lb; with R-410A (26 lb per 1,000 cubic feet) it would be about 30 lb. Above the limit, Section 1104.2 requires the refrigerant-containing parts to be in a machinery room or outdoors, except that listed equipment holding 6.6 lb or less is exempt."
+   }
+  },
+  {
+   "id": "H5-113",
+   "action": "fix",
+   "reason": "Seattle tags 1105.6.3.1 and its 'unoccupied' subsection 1105.6.3.1.1 as Seattle amendments ([S]) in both its 2018 and current Mechanical Codes. The model IMC wording is the larger of (1) 0.5 cfm/sq ft or 20 cfm per person and (2) the 18 F temperature-rise airflow; the unoccupied 0.25 cfm/sq ft reduction could not be confirmed as model text. Core numbers kept; unoccupied sentence removed.",
+   "fixed": {
+    "fact": "IMC 2021 1105.6.3.1: during occupied conditions, normal ventilation of a refrigeration machinery room (non-ammonia) must exhaust the larger of (1) at least 0.5 cfm per sq ft of machinery room area or 20 cfm per person, or (2) the airflow needed to limit the room temperature rise to 18 F, counting the heat from all machinery in the room.",
+    "status": "unverified",
+    "note": "Numbers agree with Seattle's code and ASHRAE 15, but Seattle amends this section ([S]); model 2021 IMC wording not seen directly. Seattle's unoccupied 0.25 cfm/sq ft rate is not confirmed as model text.",
+    "keywords": [
+     "machinery room ventilation",
+     "18 F rise",
+     "0.5 cfm per sq ft",
+     "20 cfm per person",
+     "1105.6.3"
+    ]
+   }
+  },
+  {
+   "id": "H5-128",
+   "action": "fix",
+   "reason": "Misleading by omission: Manual S is also an ANSI standard (ANSI/ACCA 3 Manual S), alongside ANSI/ACCA 1 Manual D and ANSI/ACCA 2 Manual J. Saying only J and D are ANSI-approved is wrong.",
+   "fixed": {
+    "fact": "ACCA manuals: Manual J = residential load calculation, Manual S = residential equipment selection, Manual D = residential duct design, Manual T = air distribution basics (choosing supply outlets and returns to avoid drafts and stagnant air), Manual N = commercial load calculation, Manual Q = commercial low-pressure duct design, Manual Zr = residential zoning, Manual B = testing, adjusting and balancing, Manual H = heat pump systems, and Manual P = psychrometrics. Manuals J, S and D are ANSI-approved standards (ANSI/ACCA 2, 3 and 1)."
+   }
+  },
+  {
+   "id": "H5-132",
+   "action": "fix",
+   "reason": "Numbers are right (16 x 1.75 = 28 A; 16 x 2.25 = 36 A) but students may round up: NEC 440.22(A) sets a maximum and, unlike 430.52, has no next-higher-standard-size allowance, so the breaker is the next standard size at or below the limit. Also the limit is based on RLA or branch-circuit selection current, whichever is greater.",
+   "fixed": {
+    "fact": "Under NEC 440.22(A), the branch-circuit fuse or breaker for a hermetic motor-compressor may not exceed 175 percent of its rated-load current (or branch-circuit selection current, if greater), and may be raised to no more than 225 percent if the motor will not start; there is no round-up to the next standard size. Example: a 16 A RLA compressor allows at most 28 A (a 25 A standard breaker), or up to 36 A (35 A standard) if needed to start. The equipment nameplate MOCP must never be exceeded (NEC 110.3(B))."
+   }
+  },
+  {
+   "id": "H5-148",
+   "action": "fix",
+   "reason": "The 2-meter exclusion is measured from a support surface, not the ground: eCFR 40 CFR 82.157(g) excludes components where 'personnel must be elevated more than two meters above a support surface' (a rooftop unit reachable from the roof is not excluded).",
+   "fixed": {
+    "fact": "Under 40 CFR 82.157(g), required leak inspections cover all visible and accessible components, but need not include components that are insulated, underground, behind walls, iced over or otherwise inaccessible, components where personnel would have to be elevated more than 2 meters (about 6.5 ft) above a support surface, or components site personnel judge unsafe to inspect."
+   }
+  }
+ ],
+ "questions": [
+  {
+   "i": 5,
+   "action": "fix",
+   "reason": "The 30 in control-side setback is a Seattle amendment (303.7 tagged [S] in Seattle's code); model IFGC 2021 303.7 requires only a 12 in setback on all sides. Rewritten to test the model value.",
+   "fixed": {
+    "q": "Under IFGC 2021 303.7, the sides of a pit must be held back at least how far from a gas appliance installed in the pit?",
+    "c": [
+     "6 in",
+     "12 in",
+     "18 in",
+     "24 in"
+    ],
+    "a": 1,
+    "why": "Pit sides must be at least 12 in from the appliance, and pits deeper than 12 in below grade need concrete or masonry walls extending at least 4 in above grade."
+   }
+  },
+  {
+   "i": 28,
+   "action": "fix",
+   "reason": "Choice c says 'the same method at all facilities'; 40 CFR 84.102 (leak rate definition) requires the same method for all covered appliances at an operating facility.",
+   "fixed": {
+    "c": [
+     "Only the annualizing method",
+     "Only the rolling average method",
+     "Either annualizing or rolling average, using the same method for all covered appliances at a facility",
+     "Any method the technician chooses for each event"
+    ],
+    "ref": "40 CFR 84.102 (leak rate); 84.106(b)",
+    "why": "Owners may use the annualizing or rolling average method, but the same method must be used for all appliances subject to leak repair at an operating facility."
+   }
+  },
+  {
+   "i": 36,
+   "action": "fix",
+   "reason": "Math is right, but 'may a single circuit hold' ignores 1104.2 Exception 1 (listed equipment with 6.6 lb or less needs no machinery room), so a listed 6 lb R-32 unit could serve this room. Reworded to ask for the Table 1103.1 limit.",
+   "fixed": {
+    "q": "Using IMC Table 1103.1 (R-32 = 4.8 lb per 1,000 cubic feet), what is the Table 1103.1 quantity limit for a single R-32 circuit serving only a 12 x 12 x 8 ft room?",
+    "why": "12 x 12 x 8 = 1,152 cubic feet; 4.8 x 1,152 / 1,000 = about 5.5 lb. Above this, 1104.2 requires a machinery room or outdoor location, except for listed equipment holding 6.6 lb or less."
+   }
+  }
+ ],
+ "existing": [
+  {
+   "id": "DUCT-012",
+   "action": "fix",
+   "reason": "Wrong interval. 2021 IMC 604.7 and 2021 IRC M1601.3 both require marking at intervals not greater than 36 inches (Seattle 2021 Mechanical Code 604.7 and Seattle 2021 Residential Code M1601.3, both untagged model text; 10 ft is not in either code).",
+   "fixed": {
+    "fact": "Under the 2021 IMC (604.7) and IRC (M1601.3), external duct insulation and factory-insulated flexible duct must be legibly printed or identified at intervals of no more than 36 inches with the manufacturer's name, the installed R-value, and the flame spread and smoke-developed indexes.",
+    "source": "IMC 2021 604.7; IRC 2021 M1601.3",
+    "keywords": [
+     "insulation label",
+     "R-value",
+     "36 inches",
+     "flex duct marking"
+    ]
+   }
+  },
+  {
+   "id": "FUEL-019",
+   "action": "fix",
+   "reason": "Section number and note are wrong. In the 2021 IFGC the CSST direct-bond rule is 310.2 (CSST not listed with an arc-resistant jacket), with arc-resistant CSST in 310.3; 310.1.1 was the 2018 numbering (ICC CodeNotes 'Bonding of CSST', 2021 IFGC 310.2/IRC G2411.2; Seattle 2021 SFGC 310.2 and 310.3, untagged). Values (6 AWG, 75 ft, UL 467) are correct.",
+   "fixed": {
+    "fact": "Under the 2021 IFGC (310.2), CSST that is not listed with an arc-resistant jacket must be bonded to the electrical service grounding electrode system (or the lightning protection electrode system, where provided) with a bonding jumper no smaller than 6 AWG copper (or equivalent), no longer than 75 ft, attached to a metallic pipe, pipe fitting or CSST fitting with a UL 467 listed clamp. Arc-resistant CSST falls under 310.3 instead.",
+    "source": "IFGC 2021 310.2 (IRC 2021 G2411.2)",
+    "note": "The 2018 IFGC numbered this rule 310.1.1; the 2021 edition uses 310.2 (standard CSST) and 310.3 (arc-resistant CSST)."
+   }
+  },
+  {
+   "id": "VENT-027",
+   "action": "fix",
+   "reason": "The 12-inch rule exists but is in 2021 IFGC 501.9 'Chimney entrance' ('Connectors shall connect to a masonry chimney flue at a point not less than 12 inches above the lowest portion of the interior of the chimney flue'), not 503.10 (Seattle 2021 SFGC 501.9, untagged model text). The 'not past the inner face of the liner' wording is not IFGC text; IFGC 503.10.11 'Chimney connection' says the connector must not enter so far that it restricts the space between its end and the opposite wall of the flue.",
+   "fixed": {
+    "fact": "Under the 2021 IFGC, a vent connector must connect to a masonry chimney flue at a point at least 12 inches above the lowest portion of the interior of the chimney flue (501.9). The connector must be installed above the extreme bottom of the chimney to avoid stoppage, and it must not extend so far into the flue that it restricts the space between its end and the opposite wall of the chimney flue (503.10.11).",
+    "source": "IFGC 2021 501.9; 503.10.11",
+    "status": "verified",
+    "note": ""
+   }
+  },
+  {
+   "id": "AIMA-002",
+   "action": "fix",
+   "reason": "Now verifiable on official sources: Federal Register Doc. 2026-10387, 'Phasedown of Hydrofluorocarbons: Reconsideration of Certain Regulatory Requirements...', published May 26, 2026 at 91 FR 31284 (amendatory text cited in the CFR source note as 91 FR 31329), effective July 27, 2026, removes the installation deadline for residential/light commercial AC and heat pump systems whose specified components were all manufactured or imported before January 1, 2025; eCFR/LII 40 CFR 84.54(c)(1) now sets no deadline. 'Originally January 1, 2026' is imprecise: the 2023 rule's date was January 1, 2025, which an interim final rule extended to January 1, 2026.",
+   "fixed": {
+    "fact": "An EPA final rule published May 26, 2026 (effective July 27, 2026) removed the installation deadline for residential and light commercial AC and heat pump systems using refrigerant with a GWP of 700 or more (such as R-410A) when all specified components were manufactured or imported before January 1, 2025. That deadline had been January 1, 2026 (extended from January 1, 2025 by an earlier interim final rule), so legacy R-410A systems built before 2025 may still be installed under 40 CFR 84.54(c)(1).",
+    "source": "91 FR 31284 (May 26, 2026), FR Doc. 2026-10387; 40 CFR 84.54(c)(1)",
+    "status": "verified",
+    "note": "Confirmed on federalregister.gov and the current 40 CFR 84.54 text (source note lists 91 FR 31329)."
+   }
+  },
+  {
+   "id": "COMM-006",
+   "action": "fix",
+   "reason": "Wrong thicknesses for the IMC. IMC 506.3.1.1 requires steel of at least 0.0575 inch (No. 16 gage) or stainless steel of at least 0.0450 inch (No. 18 gage); shown untagged (model text) in Seattle's 2018 and 2021 Mechanical Codes. 0.055/0.044 in are older/NFPA 96-style values.",
+   "fixed": {
+    "fact": "Under IMC 2021 506.3.1.1, grease ducts serving Type I hoods must be steel at least 0.0575 inch (No. 16 gage) thick or stainless steel at least 0.0450 inch (No. 18 gage) thick. Listed factory-built grease ducts (UL 1978) are an exception."
+   }
+  },
+  {
+   "id": "ROOF-025",
+   "action": "fix",
+   "reason": "Values check out for the model code: the Dallas ordinance amending the 2021 IMC restates 306.5 with rung spacing not to exceed 14 inches and toe spacing not less than 6 inches, and states such as Minnesota and Washington/Seattle amend these to 12 in and 7 in (Seattle's 306.5 is tagged [W][S]). 18 in between rails is unchanged in all versions. Can be marked verified, citing the list items.",
+   "fixed": {
+    "source": "IMC 2021 306.5 Items 2-4",
+    "status": "verified",
+    "note": "Washington/Seattle and Minnesota amend the rung spacing to 12 in and toe space to 7 in; the model IMC values are 14 in and 6 in."
+   }
+  }
+ ]
+}

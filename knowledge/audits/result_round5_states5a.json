@@ -1,5 +1,326 @@
 {
-  "facts": [],
-  "questions": [],
+  "facts": [
+    {
+      "id": "S5A-12",
+      "action": "fix",
+      "reason": "Content confirmed on the agency's own Mechanical Administrator statutes and regulations PDF (Alaska CBPL, rev. 04/16/2023): 12 AAC 39 Article 2 lists the seven categories and 12 AAC 39.322 requires journeyman residential HVAC experience in 2 of the 4 years before applying. Source upgraded from the Cornell copy to the agency document.",
+      "fixed": {
+        "source": "12 AAC 39 Article 2 and 12 AAC 39.322, in Alaska CBPL Mechanical Administrator Statutes and Regulations (rev. 04/16/2023) - https://www.commerce.alaska.gov/web/portals/5/pub/MechStatutes.pdf; CBPL Mechanical Administrators page - https://www.commerce.alaska.gov/web/cbpl/ProfessionalLicensing/MechanicalAdministrators.aspx"
+      }
+    },
+    {
+      "id": "S5A-18",
+      "action": "fix",
+      "reason": "Out of date. Arkansas never finalized the 2024 proposal to move to the 2023 NEC; an August 2025 markup of 17 CAR Part 210 struck '2020' and inserted '2026', and the DOLL-posted final 17 CAR Part 210 (labor.arkansas.gov/wp-content/uploads/17CARpt-210-Final.pdf) adopts the 2026 NEC with Arkansas amendments (e.g., AFCI/GFCI not required on dwelling-unit circuits over 130 volts except as required by Articles 680/682). Mike Holt lists the 2026 NEC effective 9/3/2026; no official page read states the effective date, so status stays unverified.",
+      "fixed": {
+        "fact": "Arkansas adopts the NEC statewide through the Board of Electrical Examiners (17 CAR Part 210, formerly Rule 010.13-008). The board's final rule adopts the 2026 NEC with Arkansas amendments (for example, AFCI and GFCI protection is not required on dwelling-unit circuits over 130 volts except where Articles 680 and 682 require it). A trade reference lists it effective September 3, 2026; before that Arkansas used the 2020 NEC with state amendments (effective August 1, 2022).",
+        "source": "Arkansas DOLL, 17 CAR Part 210 final rule text - https://labor.arkansas.gov/wp-content/uploads/17CARpt-210-Final.pdf; 17 CAR Part 210 markup (draft 08/14/2025) - https://labor.arkansas.gov/wp-content/uploads/17CARpt.-210-Markup.pdf; Mike Holt NEC Adoption List - https://www.mikeholt.com/necadoptionlist.php",
+        "keywords": [
+          "arkansas nec",
+          "2026 nec arkansas",
+          "arkansas electrical code",
+          "board of electrical examiners",
+          "17 CAR 210",
+          "arkansas code adoption"
+        ]
+      }
+    },
+    {
+      "id": "S5A-19",
+      "action": "fix",
+      "reason": "The ADH page says the Department of Health licenses plumbers and gas fitters; the State Committee of Plumbing Examiners establishes and administers the codes. Fact wrongly said the Committee licenses plumbers. The 2018 code edition is confirmed by the ADH-hosted Plumbing_Code_2018.pdf and the state's Jan. 2023 current-codes list (2018 Arkansas Plumbing Code, 9th Edition).",
+      "fixed": {
+        "fact": "Arkansas plumbing and gas work follows state codes administered by the Arkansas Department of Health: the 2018 Arkansas Plumbing Code (a state code published by ICC) and the 2018 Arkansas Fuel Gas Code, established by the State Committee of Plumbing Examiners. The Department of Health licenses plumbers, plumbing inspectors and gas fitters.",
+        "source": "Arkansas Dept. of Health, Plumbing and Natural Gas - https://healthy.arkansas.gov/programs-services/licensing-military-member-licensure-permits-plan-reviews/plumbing-natural-gas-health-code/; ADH 2018 Arkansas Plumbing Code - https://healthy.arkansas.gov/wp-content/uploads/Plumbing_Code_2018.pdf; Arkansas Current Codes (rev. Jan. 2023) - https://sas.arkansas.gov/wp-content/uploads/CurrentCodes072023.pdf"
+      }
+    },
+    {
+      "id": "S5A-22",
+      "action": "fix",
+      "reason": "2021 IMC adoption confirmed, but the section number differs between the two DOLL-posted versions of 17 CAR Part 261 (261-121(a) in the 08/14/2025 draft clean copy, 261-122(a) in 17CARpt.261.pdf). Citation generalized so it is not wrong either way.",
+      "fixed": {
+        "source": "17 CAR Part 261 (HVACR Licensing Board), IMC adoption section (261-121(a) in the 2025 draft clean copy; 261-122(a) in the other DOLL-posted text) - https://labor.arkansas.gov/wp-content/uploads/17CARpt.261-Clean.pdf and https://labor.arkansas.gov/wp-content/uploads/17CARpt.261.pdf; Arkansas Current Codes - https://sas.arkansas.gov/wp-content/uploads/CurrentCodes072023.pdf"
+      }
+    },
+    {
+      "id": "S5A-28",
+      "action": "fix",
+      "reason": "Correct, but omits a CSLB point that is specific to C-20: the same CSLB document states all C-20 applicants must provide a CFC (EPA refrigerant) certification. Added.",
+      "fixed": {
+        "fact": "California HVAC businesses are licensed by CSLB as C-20 Warm-Air Heating, Ventilating and Air-Conditioning contractors. As with every CSLB classification, the qualifier needs at least 4 years of journey-level experience in the trade within the last 10 years and must pass the exams, and every C-20 applicant must also provide a CFC (refrigerant handling) certification.",
+        "keywords": [
+          "california hvac license",
+          "C-20",
+          "cslb",
+          "warm-air heating",
+          "journey-level experience",
+          "CFC certification"
+        ]
+      }
+    },
+    {
+      "id": "S5A-29",
+      "action": "fix",
+      "reason": "Out of date. DORA confirms the board's May 27, 2026 rulemaking to revise Rule 1.5 'to adopt the current 2026 National Electrical Code'. Larimer County's building page says it enforces the 2026 NEC effective August 1, 2026 to align with the State of Colorado's adoption, and Mike Holt lists the Colorado 2026 NEC effective 8/1/2026. Two independent references agree, so the 2026 NEC is now in force.",
+      "fixed": {
+        "fact": "The Colorado State Electrical Board adopts the NEC statewide by rule (3 CCR 710-1, Rule 1.5, incorporation by reference), and the state runs electrical inspections where there is no local enforcement. After a May 27, 2026 rulemaking hearing, Colorado moved from the 2023 NEC to the 2026 NEC, effective August 1, 2026.",
+        "source": "Colorado State Electrical Board (DORA) homepage - https://dpo.colorado.gov/Electrical; Larimer County Building Division - https://larimer.gov/building; Mike Holt NEC Adoption List - https://www.mikeholt.com/necadoptionlist.php",
+        "status": "verified",
+        "note": "DORA confirms the hearing to adopt the 2026 NEC; Larimer County (aligning with the state adoption) and Mike Holt both give August 1, 2026.",
+        "keywords": [
+          "colorado nec",
+          "2026 nec colorado",
+          "colorado electrical board",
+          "rule 1.5",
+          "august 1 2026",
+          "colorado electrical code"
+        ]
+      }
+    },
+    {
+      "id": "S5A-32",
+      "action": "fix",
+      "reason": "Still current, but the DAS code adoption page (Building and Fire Code Adoption Process) says the next code, based on the 2024 I-Codes and the 2023 NEC, was expected July 1, 2026 and has been delayed awaiting Legislative Regulation Review Committee approval. Students need to know the 2022 code still applies.",
+      "fixed": {
+        "fact": "Connecticut's statewide building code is the 2022 Connecticut State Building Code, which applies to permit applications filed on or after October 1, 2022. It adopts the 2020 NEC (NFPA 70) for electrical work. A new code based on the 2023 NEC was expected July 1, 2026 but is delayed pending legislative approval, so the 2020 NEC still applies.",
+        "source": "CT DAS Office of State Building Inspector, Connecticut State Building Code - https://portal.ct.gov/en/DAS/Office-of-State-Building-Inspector/Connecticut-State-Building-Code/Regulations; DAS Building and Fire Code Adoption Process - https://portal.ct.gov/en/DAS/Office-of-State-Building-Inspector/Building-and-Fire-Code-Adoption-Process"
+      }
+    },
+    {
+      "id": "S5A-33",
+      "action": "fix",
+      "reason": "Still current, but the next code (2024 IPC) was expected July 1, 2026 and is delayed pending Legislative Regulation Review Committee approval per the DAS code adoption page; added so students know the 2021 IPC still applies.",
+      "fixed": {
+        "fact": "The 2022 Connecticut State Building Code (permit applications filed from October 1, 2022) adopts the 2021 International Plumbing Code as Connecticut's statewide plumbing code. A new code based on the 2024 IPC was expected July 1, 2026 but is delayed pending legislative approval, so the 2021 IPC still applies.",
+        "source": "CT DAS Office of State Building Inspector, Connecticut State Building Code - https://portal.ct.gov/en/DAS/Office-of-State-Building-Inspector/Connecticut-State-Building-Code/Regulations; DAS Building and Fire Code Adoption Process - https://portal.ct.gov/en/DAS/Office-of-State-Building-Inspector/Building-and-Fire-Code-Adoption-Process"
+      }
+    },
+    {
+      "id": "S5A-34",
+      "action": "fix",
+      "reason": "Still current, but the next code (2024 IMC) was expected July 1, 2026 and is delayed pending Legislative Regulation Review Committee approval per the DAS code adoption page; added so students know the 2021 IMC still applies.",
+      "fixed": {
+        "fact": "The 2022 Connecticut State Building Code (permit applications filed from October 1, 2022) adopts the 2021 International Mechanical Code, along with the 2021 IBC, IRC, IEBC and IECC. A new code based on the 2024 I-Codes was expected July 1, 2026 but is delayed pending legislative approval, so the 2021 IMC still applies.",
+        "source": "CT DAS Office of State Building Inspector, Connecticut State Building Code - https://portal.ct.gov/en/DAS/Office-of-State-Building-Inspector/Connecticut-State-Building-Code/Regulations; DAS Building and Fire Code Adoption Process - https://portal.ct.gov/en/DAS/Office-of-State-Building-Inspector/Building-and-Fire-Code-Adoption-Process"
+      }
+    },
+    {
+      "id": "S5A-42",
+      "action": "fix",
+      "reason": "Content confirmed on DOB pages; the 2024-code timeline (listening sessions summer 2026, final codes late 2027) is on DOB's own Construction Code Development page, so the source now cites the agency instead of only a news report.",
+      "fixed": {
+        "source": "DC Department of Buildings, 2017 DC Construction Codes - https://dob.dc.gov/node/1615636; DOB Construction Code Development - https://dob.dc.gov/page/construction-code-development"
+      }
+    },
+    {
+      "id": "S5A-46",
+      "action": "fix",
+      "reason": "The DLCP guide requires employer letters signed by a master only for master applicants; journeyman applicants submit tax records and an employment verification letter. Wording tightened.",
+      "fixed": {
+        "fact": "DC plumbers and gasfitters are licensed as apprentice, journeyman and master. A journeyman needs 4 years (8,000 work hours) and a master needs 8 years (16,000 hours), documented with tax records and employment verification letters (for a master, letters signed by a master). Completing a nationally certified apprenticeship can waive the journeyman exam, and the exams are open book on the IPC and IFGC."
+      }
+    },
+    {
+      "id": "S5A-49",
+      "action": "fix",
+      "reason": "The 9th Edition's effective date (Dec. 31, 2026) is still in the future, and the fact did not say what applies until then. The Commission's 8th Edition workplan confirms the 8th Edition (2023) FBC, effective 12/31/2023, is based on the 2021 I-Codes (and 2020 NEC); the 2026 workplan confirms the 9th Edition date and 2024 IMC/IFGC basis.",
+      "fixed": {
+        "fact": "The Florida Building Code - Mechanical and - Fuel Gas apply statewide. Until December 30, 2026, the 8th Edition (2023) FBC, based on the 2021 International Mechanical Code and 2021 International Fuel Gas Code, applies. The 9th Edition (2026) FBC, based on the 2024 IMC and 2024 IFGC, takes effect December 31, 2026.",
+        "source": "Florida Building Commission, 2026 FBC Workplan (Aug. 2026) - https://www.floridabuilding.org/fbc/commission/FBC_0726/Commission/2026_FBC_Workplan_August_2026.pdf; 8th Edition (2023) FBC Code Update workplan - https://www.floridabuilding.org/fbc/Commission/FBC_0423/Commission/FBC-Workplan.htm",
+        "keywords": [
+          "florida mechanical code",
+          "florida fuel gas code",
+          "9th edition",
+          "8th edition",
+          "2024 IMC",
+          "december 31 2026"
+        ]
+      }
+    },
+    {
+      "id": "S5A-64",
+      "action": "fix",
+      "reason": "Misleading by omission of the edition actually in force. The current IDAPA 24.39.20 PDF (files.dfm.idaho.gov) shows section 600 adopts the 2015 Uniform Plumbing Code as the Idaho State Plumbing Code (3-28-23), and the DOPL plumbing rules page says the board did no rulemaking in 2025-2026 and is not doing any for 2026-2027. The 2024-UPC discussion the writer noted never became a rule.",
+      "fixed": {
+        "fact": "Idaho law requires plumbing to follow the Uniform Plumbing Code (UPC) published by IAPMO, adopted with amendments by the Idaho Plumbing Board as the Idaho State Plumbing Code; a newly adopted edition takes effect January 1 of the year after the board adopts it. The edition currently adopted (IDAPA 24.39.20.600) is the 2015 UPC, and the board had no rulemaking under way for 2026-2027.",
+        "source": "Idaho Code 54-2601 - https://legislature.idaho.gov/statutesrules/idstat/Title54/T54CH26/SECT54-2601; IDAPA 24.39.20.600 - https://files.dfm.idaho.gov/dfm-admin-website/rules/current/24/243920.pdf; DOPL Plumbing statutes, rules and guidance - https://dopl.idaho.gov/plb/plb-statutes-rules-and-guidance/",
+        "status": "verified",
+        "note": "Edition read in the current IDAPA 24.39.20 rule file; DOPL page confirms no rulemaking in 2025-2026 or planned for 2026-2027.",
+        "keywords": [
+          "idaho plumbing code",
+          "2015 UPC",
+          "idaho state plumbing code",
+          "uniform plumbing code idaho",
+          "IDAPA 24.39.20",
+          "idaho plumbing board"
+        ]
+      }
+    },
+    {
+      "id": "S5A-65",
+      "action": "fix",
+      "reason": "Confirmed on the current official IDAPA 24.39.70 rule file (section 600, 2018 IMC with appendix A, 2018 IFGC with appendices A-D, 2018 IRC Parts V and VI; all marked 3-28-23), and the DOPL HVAC page says no rulemaking in 2025-2026 or 2026-2027. Source upgraded from the Justia copy.",
+      "fixed": {
+        "source": "IDAPA 24.39.70.600 (Idaho HVAC Board, adopted codes) - https://files.dfm.idaho.gov/dfm-admin-website/rules/current/24/243970.pdf; DOPL HVAC statutes, rules and guidance - https://dopl.idaho.gov/hvac/hvac-statutes-rules-and-guidance/"
+      }
+    },
+    {
+      "id": "S5A-70",
+      "action": "fix",
+      "reason": "The IDHS FPBSC rules page (secure.in.gov/dhs/boards-and-commissions/fpbsc-rules) lists the Indiana Electrical Code, 2009 Edition (2008 NEC) effective 8/26/2009 and the 2020 Indiana Residential Code (2018 IRC) effective 12/26/2019 as in effect, with no 2026 code listed as effective. The DHS rulemaking docket (LSA #26-62, updated Aug. 18, 2026) shows the Commission adopted the 2026 Indiana Electrical Code (2023 NEC) on Aug. 4, 2026, with AG and Governor approval, filing and effective date all 'TBD'. Status can be verified; text updated to the 2026 status and to describe the residential rule accurately.",
+      "fixed": {
+        "fact": "Indiana's statewide electrical code for commercial buildings is the Indiana Electrical Code, 2009 Edition (675 IAC 17-1.8), based on the 2008 NEC and effective August 26, 2009. One- and two-family dwellings follow the electrical chapters of the 2020 Indiana Residential Code (based on the 2018 IRC), effective December 26, 2019. The Fire Prevention and Building Safety Commission adopted a 2026 Indiana Electrical Code based on the 2023 NEC on August 4, 2026, but it still needed state approvals and had no effective date as of August 2026, so the 2009 code applies until it takes effect.",
+        "source": "Indiana DHS, Fire Prevention and Building Safety Commission rules page - https://secure.in.gov/dhs/boards-and-commissions/fpbsc-rules; Indiana DHS Rulemaking Docket - Electrical Code (LSA #26-62, updated Aug. 18, 2026) - https://www.in.gov/dhs/files/Rulemaking Docket - Electrical Code_updated.pdf",
+        "status": "verified",
+        "note": "Current codes read on the IDHS FPBSC rules page; 2026 code status from the DHS docket (adopted 8/4/2026, effective date TBD). Recheck before relying on the 2009 code after late 2026.",
+        "keywords": [
+          "indiana electrical code",
+          "2008 nec indiana",
+          "675 IAC 17",
+          "2026 indiana electrical code",
+          "2023 nec indiana",
+          "indiana residential code"
+        ]
+      }
+    },
+    {
+      "id": "S5A-71",
+      "action": "fix",
+      "reason": "Model-code basis and effective date confirmed on the official IDHS FPBSC rules page (2012 Indiana Plumbing Code, 675 IAC 16-1.4, IPC 2006 second printing, effective 12/24/2012); the DHS docket (LSA #26-128, updated Aug. 17, 2026) confirms amendments were proposed (hearing June 25, 2026) with adoption and effective date TBD. Source upgraded from the city copy.",
+      "fixed": {
+        "source": "Indiana DHS, Fire Prevention and Building Safety Commission rules page - https://secure.in.gov/dhs/boards-and-commissions/fpbsc-rules; Indiana DHS Rulemaking Docket - Plumbing Code (LSA #26-128, updated Aug. 17, 2026) - https://www.in.gov/dhs/files/Rulemaking%20Docket - Plumbing Code.pdf"
+      }
+    },
+    {
+      "id": "S5A-72",
+      "action": "fix",
+      "reason": "Now confirmable on official pages: the IDHS FPBSC rules page lists the 2014 Indiana Mechanical Code (675 IAC 18-1.6, 2012 IMC) and 2014 Indiana Fuel Gas Code (675 IAC 25-3, 2012 IFGC), both effective 12/1/2014, with no newer edition in effect; the Indiana Professional Licensing Agency's profession list includes plumbing but no HVAC, mechanical or electrician license. Status upgraded and source replaced.",
+      "fixed": {
+        "source": "Indiana DHS, Fire Prevention and Building Safety Commission rules page - https://secure.in.gov/dhs/boards-and-commissions/fpbsc-rules; Indiana Professional Licensing Agency, Professions - https://www.in.gov/pla/professions/",
+        "status": "verified",
+        "note": "Codes read on the IDHS rules page; the state PLA profession list has no HVAC/mechanical license (plumbing is the only construction trade listed)."
+      }
+    },
+    {
+      "id": "S5A-74",
+      "action": "fix",
+      "reason": "Content correct (ARC 8913C adopted the 2024 UPC effective 3/26/2025; the prior code was the 2021 UPC per ARC 5626C), but Iowa transferred the plumbing rules from 641 IAC ch. 25 to 481 IAC ch. 425 (IAC Supplement 4/2/25). 481-425.1 and 425.2 confirm the 2024 UPC and the local-amendment rule.",
+      "fixed": {
+        "source": "Iowa Plumbing and Mechanical Systems Board, ARC 8913C (adopted Jan. 29, 2025) - https://rules.iowa.gov/Notice/Details/8913C; 481 IAC 425.1 and 425.2 (formerly 641 IAC 25.1-25.2) - https://www.legis.iowa.gov/docs/iac/chapter/481.425.pdf"
+      }
+    },
+    {
+      "id": "S5A-75",
+      "action": "fix",
+      "reason": "Content correct, but 641-61.2 was transferred to 481 IAC 426.2 (IAC Supplement 4/2/25). The official 481-426.2 text adopts Sections 101-102 and Chapters 2-15 of the 2024 IMC (ARC 8914C, effective 3/26/25). Citation updated from the Cornell copy of the old number.",
+      "fixed": {
+        "source": "481 IAC 426.2 (state mechanical code, formerly 641-61.2; ARC 8914C, eff. 3/26/2025) - https://www.legis.iowa.gov/docs/iac/rule/481.426.2.pdf"
+      }
+    },
+    {
+      "id": "S5A-80",
+      "action": "fix",
+      "reason": "Confirmed; DHBC's July 15, 2026 memo states 210.52(C), 230.67 and 314.27(C) became fully enforceable July 15, 2026 while 210.8(A) and 210.8(D)(8)-(11) remain delayed. Wording updated now that July 15, 2026 has passed, and the memo added as a source.",
+      "fixed": {
+        "fact": "Kentucky began mandatory enforcement of the 2023 NEC on January 1, 2025. For one- and two-family dwellings and townhouses, NEC 210.52(C), 230.67 and 314.27(C) were delayed and became enforceable July 15, 2026, while certain GFCI rules in 210.8(A) and 210.8(D)(8)-(11) remain on hold until the related UL standards are revised.",
+        "source": "Kentucky DHBC, 2023 NEC Update Announcement (Oct. 7, 2024) - https://dhbc.ky.gov/Documents/2023 NEC Update Announcement.pdf; DHBC July 15, 2026 Memo - https://dhbc.ky.gov/Documents/July 15 2026 Memo.pdf"
+      }
+    },
+    {
+      "id": "S5A-83",
+      "action": "fix",
+      "reason": "Confirmed on the LUCCC sheet (rev. 08/06/2026: 2020 NEC effective 1/1/2023) and LUCCC homepage (proposed rule in the August 20, 2026 Louisiana Register). The sheet also lists the 2023 NEC and 2024 ICC editions for the next cycle and says the ICC editions will become effective January 1, 2027; added so the fact says what applies until then.",
+      "fixed": {
+        "fact": "Louisiana enforces the 2020 NEC statewide as part of the Louisiana State Uniform Construction Code, effective January 1, 2023. A proposed rule to move to the 2023 NEC and the 2024 I-Codes was published in the August 20, 2026 Louisiana Register (the council plans the new ICC editions for January 1, 2027); until a new rule takes effect, the 2020 NEC applies."
+      }
+    },
+    {
+      "id": "S5A-84",
+      "action": "fix",
+      "reason": "Confirmed on the LUCCC sheet (rev. 08/06/2026). Added the pending change: the council lists the 2024 ICC editions for the next cycle, effective January 1, 2027, under a rule proposed in the August 20, 2026 Louisiana Register.",
+      "fixed": {
+        "fact": "Louisiana's statewide plumbing code is the International Plumbing Code, which replaced the old Louisiana State Plumbing Code on January 1, 2016. The current Uniform Construction Code uses the 2021 ICC codes, including the 2021 IPC, with Louisiana amendments, effective January 1, 2023. A rule proposed in August 2026 would move to the 2024 IPC, planned for January 1, 2027."
+      }
+    },
+    {
+      "id": "S5A-85",
+      "action": "fix",
+      "reason": "Confirmed on the LUCCC sheet (rev. 08/06/2026). Added the pending change so the fact says what applies until then (2024 ICC editions planned for January 1, 2027 under the August 2026 proposed rule).",
+      "fixed": {
+        "fact": "Louisiana's Uniform Construction Code includes the 2021 International Mechanical Code and 2021 International Fuel Gas Code, effective January 1, 2023, with mandatory statewide enforcement. A rule proposed in August 2026 would move to the 2024 editions, planned for January 1, 2027; until then the 2021 editions apply."
+      }
+    },
+    {
+      "id": "S5A-86",
+      "action": "fix",
+      "reason": "La. R.S. 37:1367 (as amended through Acts 2024, No. 721) says a master plumber must currently hold or have held a journeyman license in order to perform journeyman work; the fact stated it as a general master-license prerequisite. Apprentices must be under 'direct, constant, on-the-job supervision' of a licensed journeyman. Wording corrected.",
+      "fixed": {
+        "fact": "Under La. R.S. 37:1367, a Louisiana journeyman plumber must hold a board license and may work only while employed by a licensed master plumber, and apprentices must work under the direct, constant, on-the-job supervision of a licensed journeyman. A master plumber who does journeyman work must hold or have held a journeyman license. Journeymen who worked independently before January 1, 2024 got five years to pass the master exam."
+      }
+    },
+    {
+      "id": "S5A-87",
+      "action": "fix",
+      "reason": "The LSLBC Types of Licenses page (official) states a license is required for electrical/mechanical/plumbing projects exceeding $10,000 including labor and materials; added. The no-statewide-electrician-license point is still supported only by IAEI, so status stays unverified.",
+      "fixed": {
+        "fact": "Louisiana does not license individual electricians statewide; worker licensing is set locally (for example, New Orleans requires ICC certifications). Electrical contracting businesses are licensed by the Louisiana State Licensing Board for Contractors, which requires a license for electrical, mechanical or plumbing projects over $10,000 including labor and materials.",
+        "source": "IAEI Louisiana page - https://www.iaei.org/page/louisiana-electrical-ceus; LSLBC Types of Licenses - https://lslbc.louisiana.gov/types-of-licenses",
+        "note": "The $10,000 LSLBC threshold is from the board's page; the no-statewide-electrician-license point rests on one trade reference (IAEI)."
+      }
+    },
+    {
+      "id": "S5A-88",
+      "action": "fix",
+      "reason": "Out of date. The board's adopted Chapter 120 (repeal and replace) posted on maine.gov incorporates the 2026 NEC (NFPA 70-2026) for installations commencing on or after July 1, 2026, with Maine amendments (e.g., 210.8(A)(7) kitchen GFCI with appliance exceptions, 334.10(3) thermal barrier for NM cable in certain Type III-V buildings, 406.9(C)(1)). Mike Holt also lists 2026 NEC effective 7/1/2026. Verified.",
+      "fixed": {
+        "fact": "The Maine Electricians' Examining Board adopts the NEC statewide by rule (Chapter 120). Electrical installations begun on or after July 1, 2026 must follow the 2026 NEC with Maine amendments, such as GFCI changes in 210.8 and a thermal-barrier rule for NM cable in 334.10(3). Installations begun from July 1, 2024 through June 30, 2026 followed the 2023 NEC.",
+        "source": "Maine Electricians' Examining Board, Adopted Chapter 120 (repeal and replace) - https://www.maine.gov/pfr/professionallicensing/sites/maine.gov.pfr.professionallicensing/files/inline-files/Adopted%20Chapter%20120%20%28repeal%20and%20replace%29_0.pdf; Mike Holt NEC Adoption List - https://www.mikeholt.com/necadoptionlist.php",
+        "status": "verified",
+        "note": "Applicability date and 2026 edition read in the board's adopted Chapter 120.",
+        "keywords": [
+          "maine nec",
+          "2026 nec maine",
+          "maine electrical code",
+          "chapter 120",
+          "electricians examining board",
+          "july 1 2026"
+        ]
+      }
+    },
+    {
+      "id": "S5A-111",
+      "action": "fix",
+      "reason": "Ala. Admin. Code r. 440-X-3-.04 says an applicant who fails the first time may, on request, take an equivalent practical exam, and that practical exam must be taken within six months of the failed attempt; the fact implied a general retake-or-practical option both within six months.",
+      "fixed": {
+        "fact": "Alabama HVACR certification can be earned by exam or by reciprocity (for licensees from reciprocal states with no past or pending discipline). An applicant who fails the written exam the first time may ask to take an equivalent practical exam instead, which must be taken within six months of the failed attempt."
+      }
+    },
+    {
+      "id": "S5A-116",
+      "action": "fix",
+      "reason": "Confirmed on the Idaho Legislature's own bill page: H0478 'amends existing law to provide for local enforcement of the Idaho electrical code and the Idaho plumbing code', signed March 18, 2024 (Session Law Chapter 54), effective March 18, 2024. Source upgraded from LegiScan.",
+      "fixed": {
+        "source": "Idaho Legislature, H0478 (2024), Session Law Chapter 54, signed and effective March 18, 2024 - https://legislature.idaho.gov/sessioninfo/2024/legislation/H0478/; Idaho Code 54-2601"
+      }
+    },
+    {
+      "id": "S5A-118",
+      "action": "fix",
+      "reason": "Both DOLL-posted versions of 17 CAR 261-103(e) give Class L limits of 15 tons cooling or 1,000,000 BTUH heating input per unit and 15 hp refrigeration, and bar installing original equipment or replacing existing equipment; the fact omitted the heating limit and the no-install rule.",
+      "fixed": {
+        "fact": "Arkansas offers a Class L lifetime HVACR license for service and maintenance only, on air conditioning of 15 tons or less (or heating of 1,000,000 BTUH input or less) per unit and refrigeration of 15 hp or less per unit; a Class L holder may not install original equipment or replace existing equipment. To get it, a licensee must be at least 65 and have held a board license for 10 consecutive years."
+      }
+    }
+  ],
+  "questions": [
+    {
+      "i": 30,
+      "action": "fix",
+      "reason": "Answer correct, but 641-61.2 was transferred to 481 IAC 426.2 (IAC Supplement 4/2/25).",
+      "fixed": {
+        "ref": "481 IAC 426.2 (formerly 641-61.2)"
+      }
+    }
+  ],
   "existing": []
 }

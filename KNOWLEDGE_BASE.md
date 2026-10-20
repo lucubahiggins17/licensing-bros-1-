@@ -1,23 +1,23 @@
 # Licensing Bro's knowledge base
 
-Generated 2026-10-20. **3092 facts** (2766 verified, 75 corrected, 251 flagged as unconfirmed) and **879 new practice questions** (128 Business & Law, shown to every trade; 234 General Contractor; 214 Electrical; 151 Plumbing; 152 HVAC).
+Generated 2026-10-20. **3209 facts** (2877 verified, 75 corrected, 257 flagged as unconfirmed) and **933 new practice questions** (128 Business & Law, shown to every trade; 234 General Contractor; 238 Electrical; 170 Plumbing; 163 HVAC).
 
 | Trade | Facts |
 |---|---|
+| Electrical | 808 |
 | General contractor | 807 |
-| Electrical | 765 |
 | Business & Law | 685 |
-| Plumbing | 439 |
-| HVAC / Mechanical | 396 |
+| Plumbing | 478 |
+| HVAC / Mechanical | 431 |
 
-State-specific rules: 51 jurisdictions, 518 facts.
+State-specific rules: 51 jurisdictions, 635 facts.
 
 ## Where it came from
 **Rounds 1–3 (General Contractor, Business & Law, Georgia).** Seven student-made NASCLA study sets (about 2,000 flashcards on OSHA safety, building codes, construction practice and contractor business law) were used only as a map of which topics the exam covers. Nothing was copied. Each card's underlying fact was checked against the actual source (OSHA 29 CFR 1926/1904, IBC 2021, IRC 2021, ADA 2010 Standards, IRS, DOL, USCIS, EPA and FAR rules, AIA A201, and accounting and contract-law fundamentals), then rewritten in original wording. A second, independent review then rechecked every question and every verified or corrected fact, correcting the ones that needed it.
 
 **Round 4 (October 2026: Electrical, Plumbing, HVAC and all 50 states plus DC).** Written in original wording from the model codes and regulations (NEC 2023 with 2020 differences noted, IPC 2021 with UPC 2021 differences, IMC and IFGC 2021, EPA 40 CFR Part 82 Subpart F, OSHA) and, for state rules, from state licensing boards, statutes and PSI/Prometric candidate bulletins. Each batch was then checked by a separate reviewer who had not written it, which corrected, removed or flagged items before they were added. Files: `knowledge/rounds/round4/` and `knowledge/audits/result_round4_*.json`.
 
-In all, 185 facts were changed in review.
+In all, 217 facts were changed in review.
 
 - **verified**: confirmed correct as written.
 - **corrected**: the flashcard's answer was wrong or outdated; the fact states the correct rule, and the note says what the card claimed.
@@ -28,7 +28,7 @@ Figures that change every year (OSHA penalty maximums, payroll tax wage bases, i
 ## How the app uses it
 - **AI tutor**: before answering, it looks up the most relevant facts for the student's question, trade and state (`supabase/functions/_shared/kb.ts`) and builds the answer on them, citing their source.
 - **AI-written exams and flashcards**: the generator is handed a random spread of checked facts and must build most questions on them.
-- **Verified question bank**: the 879 questions in `lib/kb-questions.json` are added to the built-in bank, so they work offline.
+- **Verified question bank**: the 933 questions in `lib/kb-questions.json` are added to the built-in bank, so they work offline.
 - State-specific facts (licensing thresholds, exams, lien deadlines and more for every state) only appear for students who pick that state. Plumbing answers rank the student's own code (IPC or UPC) first.
 
 ## Coverage by topic
@@ -231,30 +231,30 @@ Figures that change every year (OSHA penalty maximums, payroll tax wage bases, i
 | Mississippi | 9 |
 | Missouri | 7 |
 | Montana | 8 |
-| Nebraska | 7 |
-| Nevada | 10 |
-| New Hampshire | 7 |
-| New Jersey | 8 |
-| New Mexico | 8 |
-| New York | 8 |
-| North Carolina | 9 |
-| North Dakota | 8 |
-| Ohio | 12 |
-| Oklahoma | 10 |
-| Oregon | 10 |
-| Pennsylvania | 9 |
-| Rhode Island | 8 |
-| South Carolina | 11 |
-| South Dakota | 9 |
-| Tennessee | 37 |
-| Texas | 12 |
-| Utah | 10 |
-| Vermont | 8 |
-| Virginia | 9 |
-| Washington | 10 |
-| West Virginia | 9 |
-| Wisconsin | 7 |
-| Wyoming | 8 |
+| Nebraska | 13 |
+| Nevada | 16 |
+| New Hampshire | 12 |
+| New Jersey | 13 |
+| New Mexico | 14 |
+| New York | 14 |
+| North Carolina | 15 |
+| North Dakota | 12 |
+| Ohio | 16 |
+| Oklahoma | 15 |
+| Oregon | 15 |
+| Pennsylvania | 14 |
+| Rhode Island | 14 |
+| South Carolina | 16 |
+| South Dakota | 12 |
+| Tennessee | 41 |
+| Texas | 17 |
+| Utah | 16 |
+| Vermont | 11 |
+| Virginia | 14 |
+| Washington | 15 |
+| West Virginia | 13 |
+| Wisconsin | 12 |
+| Wyoming | 11 |
 
 ## Wrong or outdated answers found in the flashcards (75)
 These are worth knowing as a selling point: the free study sets your competitors' students use contain these errors.
@@ -337,7 +337,7 @@ These are worth knowing as a selling point: the free study sets your competitors
 | PAYR-042 | The IRS groups federal business taxes into income tax, estimated tax, self-employment tax, employment taxes and excise taxes. Property tax is not a federal tax, but state and local governments levy it, and businesses owning real estate (and in many states equipment and other tangible business personal property) must pay it. | Card says property tax is generally not a business tax. It is not one of the federal business tax categories, but businesses routinely owe state/local property tax on real property and, in many states including Tennessee, on tangible business personal property. |
 | PAYR-045 | IRS Pub 15-T gives two manual withholding methods: the wage bracket method (look up the pay-period wage in tables by filing status; covers wages up to about $100,000 a year) and the percentage method (works for any wage). Separate tables apply to Forms W-4 from 2020 or later, which use no allowances, and to older W-4s still on file that claim allowances; table amounts change every year. | Card asks for withholding for a married employee with '3 exemptions' and gives $32 from an older Circular E table. Withholding tables now live in Pub 15-T and change annually, and the 2020 and later Form W-4 has no exemptions or allowances, so that dollar answer cannot be reused; always use the current year's tables. |
 
-## Flagged for review (251)
+## Flagged for review (257)
 Have a licensed reviewer (or the state bulletin) confirm these, then change `status` to `verified` for that ID in `supabase/functions/_shared/kb.json` (or in the CSV, then copy back) and run `node scripts/kb-report.mjs`.
 
 | ID | State | Fact | Why it's flagged |
@@ -593,6 +593,12 @@ Have a licensed reviewer (or the state bulletin) confirm these, then change `sta
 | EMER-017 | — | NEC 2023 695.4(B)(2)(a)(1): the overcurrent device(s) for an individual fire pump power source must be rated to carry indefinitely the sum of the locked-rotor current of the largest fire pump motor plus the full-load current of all other pump motors (such as pressure maintenance pumps) and the accessory equipment, so the device will not open during a fire. | From the NEC 2023 text from memory. |
 | ROOF-031 | — | A roof recover (new roofing over an old roof) is not allowed when the existing roof is water-soaked or deteriorated, is slate, clay, cement or asbestos-cement tile, or already has two or more layers of roof covering. | Taken from the IRC R908.3.1.1 text as commonly published; could not reach the 2021 code text to confirm wording. |
 | PLAN-012 | — | On construction drawings, a section or detail callout bubble shows the drawing number on top and the sheet number where that drawing appears on the bottom; for example, 3 over A-501 means detail 3 on sheet A-501. The arrow or flag on a section cut shows the direction you are looking. | Common drafting convention; individual offices sometimes arrange callouts differently, so check the sheet legend. |
+| STAT-515 | New York | Outside New York City, electrical installations fall under the NYS Uniform Code, which points to NFPA 70. The 2025 Uniform Code (effective December 31, 2025) is based on the 2024 ICC codes, which reference the 2023 NEC, so the 2023 NEC is likely the edition now in force statewide. | No official NYS page that names the NEC edition in the 2025 Uniform Code was found. The 2023 NEC is inferred from the 2024 ICC base codes. New York has no statewide electrician license (see STAT-280). |
+| STAT-566 | Texas | The Texas State Board of Plumbing Examiners adopts both the Uniform Plumbing Code and the International Plumbing Code in 22 TAC 367.2. In unincorporated areas or other places with no local plumbing code, licensed plumbing work must follow one of these state-adopted codes. The rule has used the 2018 editions, and in August 2026 TSBPE proposed moving to the 2021 UPC and IPC (earliest possible adoption September 13, 2026). | In July 2026 TSBPE proposed moving to the 2021 UPC and IPC, with the earliest possible adoption date September 13, 2026. Check whether the update has taken effect. |
+| STAT-572 | Utah | Utah licenses HVAC work at the contractor level under specialty classification S350 (HVAC Contractor), which covers complete warm-air heating, air conditioning and ventilating systems and refrigeration equipment. An S350 contractor may not do electrical, plumbing or natural gas work itself; it must hire or subcontract a licensed E200/E201 electrical, P200/P201 plumbing or RMGA-certified gas contractor. | The old S351, S352 and S353 classes were converted into S350 effective July 22, 2019. Utah has no separate individual HVAC technician license (not confirmed on a DOPL page). |
+| STAT-586 | West Virginia | West Virginia's State Building Code is State Fire Commission rule 87 CSR 4. The version effective August 1, 2022, still listed as active by the Secretary of State in October 2026, adopts the 2020 NEC along with the 2018 IBC, IRC, IPC and IMC. A newer version is listed as in progress, and some 2026 city ordinances say a 2024-edition update with the 2023 NEC took effect July 29, 2026, so confirm the current edition with the State Fire Marshal. | Not confirmed on an official state code page. Some 2026 local ordinances (e.g., Buckhannon) cite a 2024-edition update of 87 CSR 4 with the 2023 NEC, but the state effective date could not be confirmed. Electrical exams still use the 2020 NEC. |
+| STAT-587 | West Virginia | The August 1, 2022 version of West Virginia's State Building Code (87 CSR 4) adopted the 2018 International Plumbing Code and 2018 International Mechanical Code. The Secretary of State still listed that version as active in October 2026, but some 2026 city ordinances say a 2024-edition update (2024 IPC and IMC) took effect July 29, 2026, so confirm the current edition with the State Fire Marshal. | Not confirmed on an official state code page. A 2024-edition update (2024 IPC and IMC) appears in some 2026 local ordinances, but the state effective date was not confirmed. The plumbing contractor exam references the IPC (STAT-462). |
+| STAT-592 | Wyoming | The Wyoming State Fire Marshal's electrical safety page lists the 2026 National Electrical Code as the electrical code that applies in Wyoming. Before that, Wyoming used the 2023 NEC, effective July 1, 2023. | The official page lists the 2026 NEC but gives no effective date. The July 1, 2023 date for the 2023 NEC is from IAEI (https://www.iaei.org/wyoming-electrical-ceus). Check the current exam edition with the State Fire Marshal or PSI. |
 
 ## Adding or fixing content
 - The live files are `supabase/functions/_shared/kb.json` (facts) and `lib/kb-questions.json` (questions). Small fixes: edit them directly.
