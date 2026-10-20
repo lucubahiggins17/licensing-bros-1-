@@ -1296,6 +1296,276 @@
     "675 IAC 18",
     "local hvac license"
    ]
+  },
+  {
+   "id": "S5A-73",
+   "topic": "State code adoption",
+   "trade": "elec",
+   "state": "Iowa",
+   "source": "Iowa DIAL, Electrical Permits and Inspections (Adoption Notice of the 2023 NEC effective July 1, 2025; HF 2800 notice) - https://dial.iowa.gov/electrical-permits-inspections",
+   "fact": "Iowa enforces the NEC statewide for all electrical installations. The 2023 NEC took effect July 1, 2025, and House File 2800 (signed and effective June 2, 2026) removed the earlier state amendments in 481 IAC 404.3, so Iowa now uses the 2023 NEC without those amendments (apart from exclusions written into HF 2800) until the 2026 NEC is adopted.",
+   "status": "verified",
+   "note": "Read on the DIAL electrical permits page in October 2026.",
+   "keywords": [
+    "iowa NEC edition",
+    "2023 NEC iowa",
+    "HF 2800",
+    "DIAL",
+    "july 1 2025",
+    "iowa electrical amendments"
+   ]
+  },
+  {
+   "id": "S5A-74",
+   "topic": "State code adoption",
+   "trade": "plumb",
+   "state": "Iowa",
+   "source": "Iowa Plumbing and Mechanical Systems Board, ARC 8913C (adopted Jan. 29, 2025) - https://rules.iowa.gov/Notice/Details/8913C; 641 IAC 25.2",
+   "fact": "Iowa's state plumbing code is the 2024 Uniform Plumbing Code (UPC) with Iowa amendments, effective March 26, 2025 (replacing the 2021 UPC). The state code applies to plumbing throughout Iowa; local jurisdictions may not adopt a different plumbing code and may add amendments only if they are stricter.",
+   "status": "verified",
+   "note": "Adoption and effective date from ARC 8913C; local-amendment rule from 641 IAC 25.2.",
+   "keywords": [
+    "iowa plumbing code",
+    "2024 UPC iowa",
+    "uniform plumbing code",
+    "march 26 2025",
+    "641 IAC 25",
+    "local amendments"
+   ]
+  },
+  {
+   "id": "S5A-75",
+   "topic": "State code adoption",
+   "trade": "hvac",
+   "state": "Iowa",
+   "source": "Iowa Admin. Code r. 641-61.2 (state mechanical code, eff. 3/26/2025) - https://www.law.cornell.edu/regulations/iowa/Iowa-Admin-Code-r-641-61.2",
+   "fact": "Iowa's state mechanical code adopts Sections 101 and 102 and Chapters 2 through 15 of the 2024 International Mechanical Code by reference, effective March 26, 2025.",
+   "status": "verified",
+   "note": "",
+   "keywords": [
+    "iowa mechanical code",
+    "2024 IMC iowa",
+    "641 IAC 61",
+    "march 26 2025",
+    "state mechanical code",
+    "iowa hvac"
+   ]
+  },
+  {
+   "id": "S5A-76",
+   "topic": "State licensing",
+   "trade": "elec",
+   "state": "Kansas",
+   "source": "K.S.A. 12-1525 - https://ksrevisor.gov/statutes/chapters/ch12/012_015_0025.html; K.S.A. 12-1526 - https://codes.findlaw.com/ks/chapter-12-cities-and-municipalities/ks-st-sect-12-1526/",
+   "fact": "Kansas has no state electrician license; counties and cities that choose to license electricians do so under K.S.A. 12-1525 and 12-1526, using standard exams from ICC, IAPMO or Prometric with a 75% passing score. Journeyman and residential certificates need 2 years of supervised field experience (no more than 1 year from trade school of at least 930 hours), and a master needs a journeyman certificate held at least 2 years. A license is valid in any other Kansas city or county that requires licensure.",
+   "status": "verified",
+   "note": "A 2026 bill for statewide electrician licensing (HB 2588) died in the Legislature.",
+   "keywords": [
+    "kansas electrician license",
+    "local licensing",
+    "K.S.A. 12-1526",
+    "ICC exam",
+    "75 percent",
+    "journeyman 2 years"
+   ]
+  },
+  {
+   "id": "S5A-77",
+   "topic": "State licensing",
+   "trade": "plumb",
+   "state": "Kansas",
+   "source": "Kansas Statutes Chapter 12, Article 15 (K.S.A. 12-1508 to 12-1511) - https://kslegislature.gov/laws/012_000_0000_chapter/012_015_0000_article/; Kansas AG Opinion 1999-42",
+   "fact": "Kansas does not license plumbers statewide. Cities and counties that require plumber licensing use the standard competency exams designated by K.S.A. 12-1508, and a Kansas Attorney General opinion (1999-42) says a city may not use home rule to add licensing requirements for plumbers, electricians or mechanical contractors.",
+   "status": "verified",
+   "note": "Based on statute section titles and the AG opinion summary listed with K.S.A. 12-1525; full plumbing section text not read.",
+   "keywords": [
+    "kansas plumber license",
+    "local plumbing license",
+    "K.S.A. 12-1508",
+    "home rule",
+    "standard exam",
+    "kansas plumbing"
+   ]
+  },
+  {
+   "id": "S5A-78",
+   "topic": "State licensing",
+   "trade": "hvac",
+   "state": "Kansas",
+   "source": "Kansas Statutes Chapter 12, Article 15 (K.S.A. 12-1540 to 12-1544) - https://kslegislature.gov/laws/012_000_0000_chapter/012_015_0000_article/",
+   "fact": "Kansas has no state HVAC license. K.S.A. 12-1540 to 12-1544 set the framework for cities and counties that license mechanical (heating, ventilation and air conditioning) contractors, masters and journeymen, including designated standard exams, field experience and reciprocal agreements.",
+   "status": "verified",
+   "note": "Based on statute section titles; full text not read.",
+   "keywords": [
+    "kansas hvac license",
+    "mechanical contractor kansas",
+    "K.S.A. 12-1541",
+    "local licensing",
+    "journeyman",
+    "master"
+   ]
+  },
+  {
+   "id": "S5A-79",
+   "topic": "State code adoption",
+   "trade": "elec",
+   "state": "Kansas",
+   "source": "Mike Holt NEC Adoption List - https://www.mikeholt.com/necadoptionlist.php; IAEI Code Adoption by State - https://www.iaei.org/page/nec-code-adoption",
+   "fact": "Kansas has no statewide NEC adoption for private buildings; each city or county adopts and enforces its own electrical code edition. The state adopted an NEC edition only for state-owned buildings.",
+   "status": "verified",
+   "note": "Mike Holt and IAEI agree (state-owned building adoption dated 2011, 2008 NEC per Mike Holt).",
+   "keywords": [
+    "kansas NEC",
+    "no statewide electrical code",
+    "local adoption",
+    "state-owned buildings",
+    "kansas electrical code",
+    "city county"
+   ]
+  },
+  {
+   "id": "S5A-80",
+   "topic": "State code adoption",
+   "trade": "elec",
+   "state": "Kentucky",
+   "source": "Kentucky Dept. of Housing, Buildings and Construction, 2023 NEC Update Announcement (Oct. 7, 2024) - https://dhbc.ky.gov/Documents/2023 NEC Update Announcement.pdf",
+   "fact": "Kentucky began mandatory enforcement of the 2023 NEC on January 1, 2025. For one- and two-family dwellings and townhouses, NEC 210.52(C), 230.67 and 314.27(C) were not mandatory until July 15, 2026, and certain GFCI rules in 210.8(A) and 210.8(D)(8)-(11) are on hold until the related UL standards are revised.",
+   "status": "verified",
+   "note": "",
+   "keywords": [
+    "kentucky NEC edition",
+    "2023 NEC kentucky",
+    "january 1 2025",
+    "230.67 surge",
+    "GFCI delay",
+    "DHBC"
+   ]
+  },
+  {
+   "id": "S5A-81",
+   "topic": "State code adoption",
+   "trade": "plumb",
+   "state": "Kentucky",
+   "source": "Kentucky DHBC, Find Currently Enforced Code - https://dhbc.ky.gov/Documents/Find Currently Enforced Code.pdf",
+   "fact": "Kentucky does not use the IPC or UPC. Its statewide plumbing rules are the Kentucky State Plumbing Law, Regulations and Code in 815 KAR Chapter 20, a state-written code enforced by the Department of Housing, Buildings and Construction.",
+   "status": "verified",
+   "note": "",
+   "keywords": [
+    "kentucky plumbing code",
+    "815 KAR 20",
+    "state plumbing code",
+    "DHBC",
+    "kentucky",
+    "not IPC"
+   ]
+  },
+  {
+   "id": "S5A-82",
+   "topic": "State code adoption",
+   "trade": "hvac",
+   "state": "Kentucky",
+   "source": "Kentucky DHBC, Find Currently Enforced Code - https://dhbc.ky.gov/Documents/Find Currently Enforced Code.pdf; 815 KAR 7:125",
+   "fact": "Kentucky's currently enforced codes list the 2015 International Mechanical Code and the 2012 NFPA 54 National Fuel Gas Code, alongside the 2018 Kentucky Building Code and 2018 Kentucky Residential Code (both based on the 2015 I-Codes).",
+   "status": "verified",
+   "note": "From the undated DHBC 'currently enforced code' list; DHBC has a task force working on newer building and residential codes, so check for updates.",
+   "keywords": [
+    "kentucky mechanical code",
+    "2015 IMC",
+    "NFPA 54 2012",
+    "kentucky building code 2018",
+    "fuel gas kentucky",
+    "DHBC"
+   ]
+  },
+  {
+   "id": "S5A-83",
+   "topic": "State code adoption",
+   "trade": "elec",
+   "state": "Louisiana",
+   "source": "Louisiana Uniform Construction Code Council, Louisiana Construction Code Information (rev. Aug. 6, 2026) - http://luccc.louisiana.gov/wp-content/uploads/2025/11/LSUCCC_Louisiana-Construction-Code-Information.pdf; LUCCC homepage",
+   "fact": "Louisiana enforces the 2020 NEC statewide as part of the Louisiana State Uniform Construction Code, effective January 1, 2023. A proposed rule to move to the 2023 NEC and the 2024 I-Codes was published in the August 20, 2026 Louisiana Register.",
+   "status": "verified",
+   "note": "",
+   "keywords": [
+    "louisiana NEC edition",
+    "2020 NEC louisiana",
+    "uniform construction code",
+    "LUCCC",
+    "january 1 2023",
+    "2023 NEC proposed"
+   ]
+  },
+  {
+   "id": "S5A-84",
+   "topic": "State code adoption",
+   "trade": "plumb",
+   "state": "Louisiana",
+   "source": "Louisiana Uniform Construction Code Council, Louisiana Construction Code Information (rev. Aug. 6, 2026) - http://luccc.louisiana.gov/wp-content/uploads/2025/11/LSUCCC_Louisiana-Construction-Code-Information.pdf",
+   "fact": "Louisiana's statewide plumbing code is the International Plumbing Code, which replaced the old Louisiana State Plumbing Code on January 1, 2016. The current Uniform Construction Code uses the 2021 ICC codes with Louisiana amendments, effective January 1, 2023.",
+   "status": "verified",
+   "note": "The LUCCC sheet lists the 2021 IPC under the 2021 ICC codes without a separate date; Jan. 1, 2023 is the date for the 2021 ICC package.",
+   "keywords": [
+    "louisiana plumbing code",
+    "IPC louisiana",
+    "2021 IPC",
+    "louisiana state plumbing code replaced",
+    "2016",
+    "LUCCC"
+   ]
+  },
+  {
+   "id": "S5A-85",
+   "topic": "State code adoption",
+   "trade": "hvac",
+   "state": "Louisiana",
+   "source": "Louisiana Uniform Construction Code Council, Louisiana Construction Code Information (rev. Aug. 6, 2026) - http://luccc.louisiana.gov/wp-content/uploads/2025/11/LSUCCC_Louisiana-Construction-Code-Information.pdf",
+   "fact": "Louisiana's Uniform Construction Code includes the 2021 International Mechanical Code and 2021 International Fuel Gas Code, effective January 1, 2023, with mandatory statewide enforcement.",
+   "status": "verified",
+   "note": "",
+   "keywords": [
+    "louisiana mechanical code",
+    "2021 IMC louisiana",
+    "2021 IFGC",
+    "uniform construction code",
+    "january 1 2023",
+    "LUCCC"
+   ]
+  },
+  {
+   "id": "S5A-86",
+   "topic": "State licensing",
+   "trade": "plumb",
+   "state": "Louisiana",
+   "source": "La. R.S. 37:1367 - https://legis.la.gov/legis/LawPrint.aspx?d=93229",
+   "fact": "Under La. R.S. 37:1367, a Louisiana journeyman plumber must hold a board license and work for a licensed master plumber, apprentices must work under a licensed journeyman, and a master plumber must hold or have held a journeyman plumber license. Journeymen who worked independently before January 1, 2024 got five years to pass the master exam.",
+   "status": "verified",
+   "note": "Licensing moves to the LSLBC plumbing subcommittee on Jan. 1, 2027 under Act 908 of 2026 (see existing KB fact STAT-159).",
+   "keywords": [
+    "louisiana plumber license",
+    "journeyman plumber louisiana",
+    "master plumber",
+    "R.S. 37:1367",
+    "apprentice supervision",
+    "louisiana"
+   ]
+  },
+  {
+   "id": "S5A-87",
+   "topic": "State licensing",
+   "trade": "elec",
+   "state": "Louisiana",
+   "source": "IAEI Louisiana page - https://www.iaei.org/page/louisiana-electrical-ceus",
+   "fact": "Louisiana does not license individual electricians statewide; requirements are set locally (for example, New Orleans requires ICC certifications). Electrical contracting businesses are licensed by the Louisiana State Licensing Board for Contractors.",
+   "status": "unverified",
+   "note": "Only one trade reference (IAEI) read for the no-state-license point; LSLBC dollar thresholds for electrical work not confirmed.",
+   "keywords": [
+    "louisiana electrician license",
+    "no state license",
+    "new orleans",
+    "LSLBC",
+    "ICC certification",
+    "local licensing"
+   ]
   }
  ],
  "questions": [
@@ -1564,6 +1834,62 @@
    "a": 1,
    "ref": "IAEI Indiana page; Mike Holt (IN)",
    "why": "Indiana has no statewide electrician license; local jurisdictions such as Indianapolis handle licensing."
+  },
+  {
+   "t": "plumb",
+   "topic": "State code adoption",
+   "q": "Which plumbing code became Iowa's state plumbing code on March 26, 2025?",
+   "c": [
+    "2021 International Plumbing Code",
+    "2024 International Plumbing Code",
+    "2021 Uniform Plumbing Code",
+    "2024 Uniform Plumbing Code"
+   ],
+   "a": 3,
+   "ref": "Iowa ARC 8913C",
+   "why": "Iowa's board adopted the 2024 UPC with amendments, effective March 26, 2025, replacing the 2021 UPC."
+  },
+  {
+   "t": "elec",
+   "topic": "State licensing",
+   "q": "Under K.S.A. 12-1526, what minimum score is needed to pass a Kansas local electrician licensing exam?",
+   "c": [
+    "70%",
+    "72%",
+    "75%",
+    "80%"
+   ],
+   "a": 2,
+   "ref": "K.S.A. 12-1526",
+   "why": "Kansas sets a 75% minimum passing score for the designated standard electrician exams."
+  },
+  {
+   "t": "elec",
+   "topic": "State code adoption",
+   "q": "When did Kentucky begin mandatory enforcement of the 2023 NEC?",
+   "c": [
+    "October 1, 2024",
+    "January 1, 2025",
+    "July 15, 2026",
+    "January 1, 2026"
+   ],
+   "a": 1,
+   "ref": "KY DHBC 2023 NEC Update Announcement",
+   "why": "Enforcement began January 1, 2025; a few dwelling rules (like 230.67) were delayed to July 15, 2026."
+  },
+  {
+   "t": "plumb",
+   "topic": "State code adoption",
+   "q": "In 2016, what replaced the Louisiana State Plumbing Code as Louisiana's plumbing code?",
+   "c": [
+    "The Uniform Plumbing Code",
+    "The International Plumbing Code",
+    "The National Standard Plumbing Code",
+    "Each parish's own code"
+   ],
+   "a": 1,
+   "ref": "LUCCC Louisiana Construction Code Info",
+   "why": "The LUCCC states that on January 1, 2016 the ICC's IPC replaced the Louisiana State Plumbing Code."
   }
  ]
 }

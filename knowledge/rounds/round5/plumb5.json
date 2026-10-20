@@ -109,8 +109,8 @@
    "topic": "Definitions",
    "trade": "plumb",
    "state": null,
-   "source": "IPC 2021 Chapter 2 definition (ICC 2021 IPC/UPC Essentials, Session 54, iccsafe.org)",
-   "fact": "Low head back pressure, as used for hose connection devices, means a back pressure of 4.33 psi or less, which equals a 10 ft column of water.",
+   "source": "Term used in IPC 2021 Table 608.1 (ICC 2021 IPC/UPC Essentials, Session 54)",
+   "fact": "Low head back pressure, the rating used in IPC Table 608.1 for hose connection devices, means a back pressure of 4.33 psi or less, which equals a 10 ft column of water.",
    "status": "verified",
    "note": "",
    "keywords": [
@@ -2597,7 +2597,7 @@
     "10 psi"
    ],
    "a": 2,
-   "ref": "IPC 2021 Ch. 2 definitions",
+   "ref": "IPC 2021 Table 608.1",
    "why": "Low head back pressure is 4.33 psi or less, equal to a 10 ft column of water."
   },
   {

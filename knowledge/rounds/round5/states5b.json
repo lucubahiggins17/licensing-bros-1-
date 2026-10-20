@@ -1997,6 +1997,114 @@
     "State Fire Marshal",
     "code adoption"
    ]
+  },
+  {
+   "id": "S5B-112",
+   "topic": "State licensing",
+   "trade": "plumb",
+   "state": "Washington",
+   "source": "WA L&I, Becoming a Plumber, https://lni.wa.gov/licensing-permits/plumbing/plumber-certification/",
+   "fact": "A Washington journey level plumber (PL01) certificate requires at least four years (8,000 hours) as a plumber trainee, with at least 4,000 hours of commercial or industrial work under a certified journey level plumber. A residential service plumber (PL04) needs at least 4,000 hours as a trainee, and a residential specialty plumber (PL02) needs at least 6,000 hours in the specialty.",
+   "status": "verified",
+   "note": "For PL04, the first 2,000 hours must be under direct supervision. Other certificates include pump and irrigation (4,000 hours) and domestic well (2,000 hours).",
+   "keywords": [
+    "Washington journey plumber",
+    "PL01",
+    "8,000 hours",
+    "residential service plumber",
+    "trainee",
+    "L&I"
+   ]
+  },
+  {
+   "id": "S5B-113",
+   "topic": "State licensing",
+   "trade": "elec",
+   "state": "Wisconsin",
+   "source": "Wis. Admin. Code SPS 305.43-305.44, https://docs.legis.wisconsin.gov/code/admin_code/sps/safety_and_buildings_and_environment/301_319/305/iv/435",
+   "fact": "A Wisconsin journeyman electrician license requires completion of a construction electrician apprenticeship of at least 3 years approved by the U.S. DOL or the Department of Workforce Development, or at least 48 months and 8,000 hours of experience. A master electrician needs 12 months as a licensed journeyman, at least 10,000 hours over at least 60 months, or a degree in electrical engineering.",
+   "status": "verified",
+   "note": "A two-year electrical degree or diploma counts as 12 months and 2,000 hours toward the journeyman experience route. A residential master needs at least 1,000 hours a year for 5 years.",
+   "keywords": [
+    "Wisconsin journeyman electrician",
+    "master electrician",
+    "8,000 hours",
+    "apprenticeship",
+    "10,000 hours",
+    "SPS 305.44"
+   ]
+  },
+  {
+   "id": "S5B-114",
+   "topic": "State licensing",
+   "trade": "plumb",
+   "state": "Wisconsin",
+   "source": "Wis. Admin. Code SPS 305.91 and 305.93, https://docs.legis.wisconsin.gov/code/admin_code/sps/safety_and_buildings_and_environment/301_319/305/ix/91",
+   "fact": "A Wisconsin journeyman plumber license requires completion of a plumbing apprenticeship recognized under Chapter 106 of the statutes. A master plumber needs at least 1,000 hours of plumbing work per year for at least 3 years as a licensed journeyman, or a degree from an accredited plumbing-related engineering program.",
+   "status": "verified",
+   "note": "Restricted service and restricted appliance plumber licenses have their own, shorter requirements.",
+   "keywords": [
+    "Wisconsin journeyman plumber",
+    "master plumber",
+    "apprenticeship",
+    "1,000 hours",
+    "three years",
+    "SPS 305.91"
+   ]
+  },
+  {
+   "id": "S5B-115",
+   "topic": "State licensing",
+   "trade": "hvac",
+   "state": "Texas",
+   "source": "TDLR, Air Conditioning and Refrigeration Contractors program, https://www.tdlr.texas.gov/acr/acr.htm",
+   "fact": "In Texas, a business that does air conditioning, refrigeration or heating work needs a TDLR license, and an ACR company must employ a licensed ACR contractor at each of its permanent business locations.",
+   "status": "verified",
+   "note": "TDLR also issues technician registrations and technician certifications (see TDLR for details).",
+   "keywords": [
+    "Texas ACR",
+    "HVAC contractor",
+    "TDLR",
+    "permanent location",
+    "business license",
+    "air conditioning"
+   ]
+  },
+  {
+   "id": "S5B-116",
+   "topic": "State licensing",
+   "trade": "plumb",
+   "state": "Texas",
+   "source": "Texas State Board of Plumbing Examiners, Important Notice: Upcoming Change to Master Plumber Requirements, https://tsbpe.texas.gov/important-notice-upcoming-change-to-master-plumber-requirements",
+   "fact": "Effective September 1, 2025, Texas reduced the experience needed for a master plumber license from four years to two years as a licensed journeyman plumber. Before that, the requirement was four years as a journeyman, or one year with a DOL apprenticeship program certificate.",
+   "status": "verified",
+   "note": "Whether the one-year DOL certificate route still applies after the change was not stated on the notice.",
+   "keywords": [
+    "Texas master plumber",
+    "TSBPE",
+    "two years",
+    "journeyman plumber",
+    "September 1 2025",
+    "experience"
+   ]
+  },
+  {
+   "id": "S5B-117",
+   "topic": "State code adoption",
+   "trade": "plumb",
+   "state": "Tennessee",
+   "source": "University of Tennessee MTAS, Statewide Building Standards (T.C.A. 68-120-101 et seq.), https://www.mtas.tennessee.edu/reference/statewide-building-standards",
+   "fact": "In Tennessee, the State Fire Marshal's statewide building codes (including the plumbing, mechanical and fuel gas codes) apply in a city whose own codes are not current within seven years of the latest edition, unless the State Fire Marshal approves otherwise. They also apply if the Fire Marshal finds, after notice and a hearing, that a city is not enforcing its codes adequately.",
+   "status": "verified",
+   "note": "Cities that adopt and enforce their own codes can be exempt, and a city may exempt one- and two-family dwellings by a two-thirds vote. MTAS is a University of Tennessee advisory service that summarizes the statute.",
+   "keywords": [
+    "Tennessee code adoption",
+    "seven years",
+    "local codes",
+    "State Fire Marshal",
+    "68-120-101",
+    "statewide standards"
+   ]
   }
  ],
  "questions": [
@@ -2713,6 +2821,48 @@
    "a": 2,
    "ref": "Wyoming State Fire Marshal Rules and Statutes",
    "why": "Wyoming adopted the 2024 International Codes, including the 2024 IMC and IFGC, on June 28, 2024."
+  },
+  {
+   "t": "plumb",
+   "topic": "State licensing",
+   "q": "How many trainee hours does Washington require for a journey level plumber (PL01) certificate?",
+   "c": [
+    "4,000 hours",
+    "6,000 hours",
+    "8,000 hours",
+    "10,000 hours"
+   ],
+   "a": 2,
+   "ref": "WA L&I Becoming a Plumber",
+   "why": "PL01 requires at least 8,000 hours (four years) as a trainee, including at least 4,000 commercial or industrial hours."
+  },
+  {
+   "t": "plumb",
+   "topic": "State licensing",
+   "q": "Since September 1, 2025, how long must a Texas journeyman plumber be licensed before qualifying for a master plumber license?",
+   "c": [
+    "One year",
+    "Two years",
+    "Four years",
+    "Six years"
+   ],
+   "a": 1,
+   "ref": "TSBPE notice, master plumber change",
+   "why": "TSBPE cut the requirement from four years to two years as a licensed journeyman, effective September 1, 2025."
+  },
+  {
+   "t": "elec",
+   "topic": "State licensing",
+   "q": "Which is one way to qualify for a Wisconsin master electrician license?",
+   "c": [
+    "6 months as a licensed journeyman",
+    "12 months as a licensed journeyman",
+    "4,000 hours of any experience",
+    "Passing the exam with no experience"
+   ],
+   "a": 1,
+   "ref": "Wis. Admin. Code SPS 305.43",
+   "why": "Wisconsin accepts 12 months as a licensed journeyman, 10,000 hours over 60 months, or an electrical engineering degree."
   }
  ]
 }
