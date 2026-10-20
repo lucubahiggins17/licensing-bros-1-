@@ -60,7 +60,7 @@ function webSearch(state: string | null, maxUses: number) {
 
 async function ask(model: string, system: string, prompt: string, state: string | null, maxUses: number) {
   return await streamAnswer({
-    client: anthropic(), model, maxTokens: 3000, send: () => {}, maxRounds: 6,
+    client: anthropic(), model, maxTokens: 4000, send: () => {}, maxRounds: 6,
     system: [{ type: "text", text: system }],
     messages: [{ role: "user", content: prompt }],
     tools: [webSearch(state, maxUses)]
@@ -137,8 +137,8 @@ export async function researchOne(rowIn: ResearchRow, o: ResearchOptions = {}): 
     // 1. Writer (fast model first; the main model if the fast one can't search)
     const w = writerPrompts(row, today);
     let written;
-    try { written = await ask(FAST_MODEL(), w.system, w.prompt, row.state, 5); }
-    catch { written = await ask(MODEL(), w.system, w.prompt, row.state, 5); }
+    try { written = await ask(FAST_MODEL(), w.system, w.prompt, row.state, 4); }
+    catch { written = await ask(MODEL(), w.system, w.prompt, row.state, 4); }
     tokens += written.tokens;
     const found = readClaims(parseJsonBlock(written.text));
     // The writer must point at real pages it saw; fill a missing link from its cited sources when there's only one
@@ -150,7 +150,7 @@ export async function researchOne(rowIn: ResearchRow, o: ResearchOptions = {}): 
     const lib = await searchLibrary(row.topic, { trade: row.trade || undefined, state: row.state || undefined, limit: 4 }).catch(() => []);
     const known = [formatFacts(facts), lib.map((p) => `[library: ${p.ref}] ${p.text.slice(0, 600)}`).join("\n")].filter(Boolean).join("\n");
     const c = checkerPrompts(row, found.claims, known, today);
-    const checked = await ask(MODEL(), c.system, c.prompt, row.state, 6);
+    const checked = await ask(MODEL(), c.system, c.prompt, row.state, 5);
     tokens += checked.tokens;
     const verdicts = parseJsonBlock(checked.text);
     if (!verdicts) throw new Error("The checker's reply couldn't be read.");
