@@ -1,4 +1,7 @@
 {
-  "facts": [],
+  "facts": [
+    {"id": "G5-8", "action": "fix", "reason": "In the 2021 IRC the handrail subsections were renumbered: R311.7.8.2 is now Handrail projection and continuity is R311.7.8.4 (Montana DLI 2021 IRC means of egress training lists R311.7.8.1 height, .2 projection, .3 clearance, .4 continuity, .5 grip size).",
+     "fixed": {"source": "IRC 2021 R311.7.8; R311.7.8.4"}}
+  ],
   "questions": []
 }
