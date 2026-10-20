@@ -1,195 +1,368 @@
 {
-  "facts": [
-    {
-      "id": "E5-65",
-      "action": "fix",
-      "reason": "Wrong basis for the 25 ft tap. NEC 430.28(2) requires the 25 ft motor feeder tap to have an ampacity of at least one-third of the FEEDER CONDUCTORS' ampacity (not one-third of the feeder overcurrent device rating), and to be protected from physical damage or enclosed in a raceway. The 10 ft tap (430.28(1)) must be in an enclosed controller or raceway, and for field installations the feeder OCPD may not exceed 1000% of the tap ampacity (i.e., tap ampacity at least 1/10 of the feeder OCPD). Checked against NEC 430.28 text (Mike Holt / NFPA free access).",
-      "fixed": {
-        "fact": "NEC 2023 430.28 motor feeder taps: a tap not over 10 ft long must be enclosed by a controller or raceway and, for field installations, the feeder overcurrent device may not exceed 1000% of the tap ampacity (so the tap needs at least 1/10 of the feeder OCPD rating); a tap not over 25 ft long needs an ampacity of at least one-third of the feeder conductors' ampacity and must be protected from physical damage or enclosed in a raceway. Either way the tap must meet Part II ampacity rules and end in a motor branch-circuit protective device.",
-        "keywords": ["motor feeder tap", "430.28", "10 ft", "25 ft", "one third of feeder conductors", "1000 percent"]
-      }
-    },
-    {
-      "id": "E5-74",
-      "action": "fix",
-      "reason": "Misleading by omission. 647.4(D) has two sets of limits: (D)(1) fixed equipment 1.5% branch / 2.5% combined, and (D)(2) cord-connected equipment, where receptacle branch circuits are limited to 1% (load taken as 50% of the branch-circuit rating) and 2.0% combined. The fact gave only the fixed-equipment numbers as if they applied to all branch circuits.",
-      "fixed": {
-        "fact": "Unlike the informational-note recommendations elsewhere, NEC 2023 647.4(D) makes voltage drop limits mandatory for sensitive electronic equipment on 60/120 V technical power systems: for fixed equipment, 1.5% on branch circuits and 2.5% combined feeder plus branch circuit; for cord-connected equipment, 1% on receptacle branch circuits (figured with the receptacle load at 50% of the branch-circuit rating) and 2% combined.",
-        "keywords": ["voltage drop", "647.4", "sensitive electronic equipment", "1.5 percent", "2.5 percent", "1 percent", "technical power"]
-      }
-    },
-    {
-      "id": "E5-85",
-      "action": "fix",
-      "reason": "Omits the condition that makes the rule work: 110.26(A)(1)(b) allows smaller working spaces only BY SPECIAL PERMISSION (AHJ written consent) where exposed live parts operate at not more than 30 V rms, 42 V peak or 60 V dc.",
-      "fixed": {
-        "fact": "NEC 2023 110.26(A)(1)(b): by special permission (written consent of the AHJ), smaller working spaces are allowed where all exposed live parts operate at not more than 30 V RMS, 42 V peak or 60 V DC."
-      }
-    },
-    {
-      "id": "E5-130",
-      "action": "fix",
-      "reason": "The 'unless it is a 15 A or 20 A receptacle also covered by the wet-location rule' clause is not in 406.9(A) and is confusing. 406.9(A) says the damp-location enclosure must be weatherproof with the plug removed and covers closed, that an installation suitable for wet locations is also suitable for damp locations, defines 'protected from the weather' (roofed open porches, canopies, marquees not subject to beating rain or runoff), and requires all 15 A and 20 A, 125 V and 250 V nonlocking receptacles there to be listed weather-resistant.",
-      "fixed": {
-        "fact": "NEC 2023 406.9(A): a receptacle in a damp location (such as under a roofed open porch, canopy or marquee not subject to beating rain or water runoff) needs an enclosure that is weatherproof when the receptacle is covered (no plug inserted and covers closed); an installation suitable for wet locations also satisfies the damp-location rule. All 15 A and 20 A, 125 V and 250 V nonlocking receptacles in damp locations must be listed weather-resistant."
-      }
-    },
-    {
-      "id": "E5-140",
-      "action": "fix",
-      "reason": "Omits the key condition in 230.90(A) Exception No. 3: the sum of two to six breakers or fuse sets may exceed the service conductor ampacity only if the calculated load does not exceed the conductor ampacity. Also Exception No. 2 allows ratings complying with 240.4(B) or (C) and 240.6.",
-      "fixed": {
-        "fact": "NEC 2023 230.70(A)(2): the service disconnect may not be installed in a bathroom. 230.90(A): each ungrounded service conductor needs overload protection rated no higher than the conductor ampacity, except that a rating complying with 240.4(B) or (C) and 240.6 (such as the next higher standard size up to 800 A) is allowed, and the sum of two to six breakers or sets of fuses may exceed the conductor ampacity provided the calculated load does not exceed the conductor ampacity."
-      }
-    },
-    {
-      "id": "E5-29",
-      "action": "fix",
-      "reason": "HDPE is not in the list. 310.15(C)(1)(c) names only rigid metal conduit, intermediate metal conduit, rigid PVC conduit and RTRC (not over 10 ft, not more than four conductors). Checked against the 2023 baseline text reproduced in NFPA's 2026 NEC Panel 6 First Draft report (docinfofiles.nfpa.org, 70_A2025_NEC_P06_FD).",
-      "fixed": {
-        "fact": "NEC 2023 310.15(C)(1)(c): adjustment factors do not apply to underground conductors entering or leaving an outdoor trench if they are protected by rigid metal conduit, intermediate metal conduit, rigid PVC conduit or RTRC no longer than 10 ft and there are no more than four conductors."
-      }
-    },
-    {
-      "id": "E5-107",
-      "action": "fix",
-      "reason": "Outdated occupancy list (this is the old 2008-era wording). NEC 2023 700.10(D)(1) applies to (1) assembly occupancies for not less than 1000 persons, (2) buildings above 75 ft in height (any occupancy), and (3) educational occupancies with more than 300 occupants. 700.10(D)(2) feeder-circuit wiring must be in spaces fully protected by an approved automatic fire protection system, or a listed electrical circuit protective system (2-hour), a listed fire-resistive cable system (2-hour), a listed 2-hour fire-rated assembly containing only emergency circuits, or encased in at least 2 in of concrete. Checked against ICC Session 95 Emergency Systems slides quoting the 2023 NEC.",
-      "fixed": {
-        "fact": "NEC 2023 700.10(D): in assembly occupancies for not less than 1000 persons, buildings above 75 ft in height, and educational occupancies with more than 300 occupants, emergency feeder-circuit wiring must be in spaces fully protected by an approved automatic fire protection system (sprinklers), or be a listed 2-hour electrical circuit protective system, a listed 2-hour fire-resistive cable system, inside a listed 2-hour fire-rated assembly containing only emergency circuits, or encased in at least 2 in of concrete.",
-        "keywords": ["emergency feeder", "2 hour", "700.10", "fire rating", "high rise", "assembly", "educational 300"]
-      }
-    },
-    {
-      "id": "E5-60",
-      "action": "fix",
-      "reason": "Table renumbered in the 2023 edition: Table 430.52 became Table 430.52(C)(1) (EC&M 'NEC Requirements for Motors - Part 2 of 2', 2023 NEC: 'you now use Table 430.52(C)(1) instead of Table 430.52'). Percentages are correct.",
-      "fixed": {
-        "fact": "NEC 2023 Table 430.52(C)(1) (called Table 430.52 in NEC 2020) for wound-rotor motors: nontime-delay fuse 150%, dual-element fuse 150%, instantaneous-trip breaker 800%, inverse-time breaker 150%. For DC (constant-voltage) motors: 150%, 150%, 250% and 150%.",
-        "source": "NEC 2023 Table 430.52(C)(1)",
-        "keywords": ["430.52(C)(1)", "Table 430.52", "wound rotor", "DC motor", "fuse sizing", "breaker sizing", "percent of FLC"]
-      }
-    },
-    {
-      "id": "E5-61",
-      "action": "fix",
-      "reason": "Table renumbered in the 2023 edition: Table 430.52 is now Table 430.52(C)(1) (EC&M, 2023 NEC motors article). Values are correct.",
-      "fixed": {
-        "fact": "In NEC 2023 Table 430.52(C)(1) (Table 430.52 in NEC 2020), polyphase Design B energy-efficient premium motors get an 1100% maximum for instantaneous-trip breakers (other columns are the same as standard motors: 300%, 175% and 250%).",
-        "source": "NEC 2023 Table 430.52(C)(1)",
-        "keywords": ["instantaneous trip", "1100 percent", "design B energy efficient", "430.52(C)(1)", "premium efficiency", "motor"]
-      }
-    },
-    {
-      "id": "E5-63",
-      "action": "fix",
-      "reason": "Citation only: in NEC 2023 the motor short-circuit/ground-fault table is Table 430.52(C)(1), and the next-size-up permission is 430.52(C)(1) Exception No. 1. Math is correct.",
-      "fixed": {
-        "source": "NEC 2023 240.4(G); 430.22; Table 430.52(C)(1) and 430.52(C)(1) Exc. 1; Table 430.250"
-      }
-    },
-    {
-      "id": "E5-64",
-      "action": "fix",
-      "reason": "Citation only: in NEC 2023 the table is Table 430.52(C)(1) (renumbered from Table 430.52), with the next-size-up rule in 430.52(C)(1) Exception No. 1. Math is correct.",
-      "fixed": {
-        "source": "NEC 2023 430.22; Table 430.52(C)(1) and 430.52(C)(1) Exc. 1; Table 430.250"
-      }
-    },
-    {
-      "id": "E5-41",
-      "action": "fix",
-      "reason": "Imprecise on the key rule. 220.83(B) takes 100% of the LARGER connected load of air conditioning or space heating (not both), covering air-conditioning equipment, central electric space heating, or fewer than four separately controlled space-heating units, for existing plus new loads, then 100% of the first 8 kVA of all other loads and 40% of the remainder. 'The new AC or space heating load' wrongly suggests only the added unit counts at 100%. Checked against EC&M 220.83(B) commentary; NEC 2023 still uses the (A)/(B) structure (it was rewritten only in NEC 2026 as Table 120.83).",
-      "fixed": {
-        "fact": "NEC 2023 220.83(B): for an existing dwelling where air conditioning or electric space heating is being added, use 100% of the larger of the air-conditioning load or the space-heating load (central electric heat, or fewer than four separately controlled space-heating units), not both, counting existing and new equipment; then add 100% of the first 8 kVA of all other loads and 40% of the remainder."
-      }
-    },
-    {
-      "id": "E5-43",
-      "action": "fix",
-      "reason": "Wrong subsection letter for NEC 2023. The dwelling-occupancy subsection was removed from 220.14 in 2023 (dwelling unit loads moved to 220.41), so 220.14(J) is now Office Buildings and Other Outlets became 220.14(K) (it was 220.14(L) in NEC 2020). A 2023 NEC quote on Mike Holt's forum shows 220.14(J) as the office-building receptacle rule. The 180 VA and luminaire rules themselves are correct.",
-      "fixed": {
-        "fact": "NEC 2023 220.14(D): a luminaire outlet is calculated at the maximum VA rating of the equipment and lamps it is rated for. 220.14(K) (220.14(L) in NEC 2020): other outlets not covered elsewhere in 220.14 are calculated at 180 VA per outlet.",
-        "source": "NEC 2023 220.14(D), (K)"
-      }
-    },
-    {
-      "id": "E5-66",
-      "action": "fix",
-      "reason": "Misstates the formula and mixes in 440.34. 440.33 is the sum of (1) the rated-load current or branch-circuit selection current, whichever is larger, of ALL motor-compressors, (2) the full-load currents of all other motors, and (3) 25% of the highest motor-compressor OR motor current in the group (which may be a fan motor, not necessarily a compressor). Other non-motor loads are added under 440.34, not 440.33. Checked against EC&M 'NEC: Air Conditioning and Refrigerating Equipment, Part 4'.",
-      "fixed": {
-        "fact": "NEC 2023 440.33: conductors supplying more than one motor-compressor (with or without other motors) must have an ampacity of at least the sum of the rated-load or branch-circuit selection currents (whichever is larger) of all motor-compressors, plus the full-load currents of all other motors, plus 25% of the highest motor-compressor or motor current in the group. Other non-motor loads are added under 440.34.",
-        "keywords": ["multiple compressors", "440.33", "440.34", "feeder", "rated load current", "25 percent", "HVAC"]
-      }
-    },
-    {
-      "id": "E5-77",
-      "action": "fix",
-      "reason": "Incomplete in a commonly tested way: the 1-hour allowance for sprinkler, water spray, CO2 or halon protection applies to vault DOORS too (450.43(A) Exception), not only walls, roofs and floors. Also 450.42 requires floors in contact with the earth to be concrete at least 4 in thick, and stud-and-wallboard construction is not permitted.",
-      "fixed": {
-        "fact": "NEC 2023 450.42 and 450.43: transformer vault walls and roofs (and floors not on earth) must have a 3-hour fire rating, floors on earth must be concrete at least 4 in thick, and stud-and-wallboard construction is not allowed. Each doorway from the building interior needs a tight-fitting door with a 3-hour rating and a sill or curb at least 4 in high. Where the transformers are protected by automatic sprinkler, water spray, CO2 or halon, 1-hour construction and a 1-hour door are permitted."
-      }
-    },
-    {
-      "id": "E5-129",
-      "action": "fix",
-      "reason": "Wrong subsection for NEC 2023: controlled receptacle marking is 406.3(F) (406.3(E) is isolated ground receptacles). NFPA's 2026 NEC Panel 18 First Draft shows the 2023 lettering being changed from (F) to (D). The 2023 text also requires the marking on the receptacle face, visible after installation, and exempts wall-switched receptacles that provide the required room lighting outlet under 210.70.",
-      "fixed": {
-        "fact": "NEC 2023 406.3(F): 125 V, 15 A and 20 A nonlocking receptacles controlled by an automatic control device (for energy management or building automation) must be permanently marked with the controlled-receptacle (power) symbol and the word 'controlled', on the receptacle face and visible after installation. Receptacles controlled by a wall switch to provide the required room lighting outlet (210.70) are exempt.",
-        "source": "NEC 2023 406.3(F)",
-        "keywords": ["controlled receptacle", "406.3(F)", "energy management", "marking", "automatic control", "receptacle"]
-      }
-    },
-    {
-      "id": "E5-135",
-      "action": "fix",
-      "reason": "590.4(J) contains no 10 ft support interval: cables and cords must be supported at intervals that protect them from physical damage, using staples, cable ties, straps or similar fittings. The floor/ground ban applies to cable assemblies and cords installed as branch circuits or feeders; extension cords are exempt from 590.4(J). Checked against EC&M 'Temporary Installations' (Mike Holt) and 590.4(J) text quoted on Mike Holt's forum.",
-      "fixed": {
-        "fact": "NEC 2023 590.4: temporary branch circuits and feeders may use NM, NMC and SE cable (no height or construction-type limits) and hard- or extra-hard-usage cords. Under 590.4(J), cables and cords must be supported at intervals that protect them from physical damage (staples, cable ties, straps or similar fittings; no fixed spacing is given) and, when used as branch circuits or feeders, may not lie on the floor or ground (extension cords are exempt). Receptacles may not be on branch circuits that supply temporary lighting (590.4(D)).",
-        "keywords": ["temporary wiring", "590.4", "cable support", "extension cord", "temporary lighting", "construction"]
-      }
-    },
-    {
-      "id": "E5-137",
-      "action": "fix",
-      "reason": "Scope is wrong: the 125 V and 125/250 V, 15/20/30 A wording is 590.6(A)(3) (temporary installations), not 445.20. 445.20 requires listed GFCI protection, integral to the generator or receptacle, on the 125 V, 15 A and 20 A receptacle outlets of 15 kW or smaller portable generators; on unbonded (floating-neutral) generators it is not required if those 125 V receptacles are interlocked so they cannot be used while any 125/250 V receptacle is in use. Checked against EC&M code quiz on unbonded generators and FOH Online's quotes of 445.20 and 590.6(A)(3).",
-      "fixed": {
-        "fact": "NEC 2023 445.20: the 125 V, single-phase, 15 A and 20 A receptacle outlets on a portable generator rated 15 kW or less must have listed GFCI protection built into the generator or the receptacle. On an unbonded (floating-neutral) generator, GFCI is not required if those 125 V receptacles are interlocked so they cannot be used while any 125/250 V receptacle is in use. For temporary installations, 590.6(A)(3) goes further and requires GFCI on all 125 V and 125/250 V, 15, 20 and 30 A receptacles on such generators."
-      }
-    }
-  ],
-  "questions": [
-    {
-      "i": 15,
-      "action": "fix",
-      "reason": "Ref only: the NEC 2023 table is Table 430.52(C)(1) (renumbered from Table 430.52); the next-size-up permission is 430.52(C)(1) Exception No. 1. Answer (90 A) confirmed: 34 x 2.5 = 85 A, next standard size 90 A.",
-      "fixed": {
-        "ref": "NEC 2023 Table 430.250; Table 430.52(C)(1); 430.52(C)(1) Exc. 1"
-      }
-    },
-    {
-      "i": 16,
-      "action": "fix",
-      "reason": "Ref and why cite the old table number; in NEC 2023 it is Table 430.52(C)(1). Answer (150%) confirmed.",
-      "fixed": {
-        "ref": "NEC 2023 Table 430.52(C)(1)",
-        "why": "Table 430.52(C)(1) (Table 430.52 in NEC 2020) limits inverse-time breakers to 150% for wound-rotor motors; 250% applies to standard squirrel-cage motors."
-      }
-    },
-    {
-      "i": 17,
-      "action": "fix",
-      "reason": "Ref only: NEC 2023 table is Table 430.52(C)(1). Answer (30 A) confirmed: 10.6 x 2.5 = 26.5 A, next standard size 30 A.",
-      "fixed": {
-        "ref": "NEC 2023 240.4(G); Table 430.52(C)(1); 430.52(C)(1) Exc. 1"
-      }
-    },
-    {
-      "i": 38,
-      "action": "fix",
-      "reason": "Ref only: NEC 2023 table is Table 430.52(C)(1). Answer (80 A) confirmed: 30.8 x 2.5 = 77 A, next standard size 80 A.",
-      "fixed": {
-        "ref": "NEC 2023 Table 430.250; Table 430.52(C)(1); 430.52(C)(1) Exc. 1"
-      }
-    }
-  ]
+ "facts": [
+  {
+   "id": "E5-29",
+   "action": "fix",
+   "reason": "HDPE is not in the list. 310.15(C)(1)(c) names only rigid metal conduit, intermediate metal conduit, rigid PVC conduit and RTRC (not over 10 ft, not more than four conductors). Checked against the 2023 baseline text reproduced in NFPA's 2026 NEC Panel 6 First Draft report (docinfofiles.nfpa.org, 70_A2025_NEC_P06_FD).",
+   "fixed": {
+    "fact": "NEC 2023 310.15(C)(1)(c): adjustment factors do not apply to underground conductors entering or leaving an outdoor trench if they are protected by rigid metal conduit, intermediate metal conduit, rigid PVC conduit or RTRC no longer than 10 ft and there are no more than four conductors."
+   }
+  },
+  {
+   "id": "E5-41",
+   "action": "fix",
+   "reason": "Imprecise on the key rule. 220.83(B) takes 100% of the LARGER connected load of air conditioning or space heating (not both), covering air-conditioning equipment, central electric space heating, or fewer than four separately controlled space-heating units, for existing plus new loads, then 100% of the first 8 kVA of all other loads and 40% of the remainder. 'The new AC or space heating load' wrongly suggests only the added unit counts at 100%. Checked against EC&M 220.83(B) commentary; NEC 2023 still uses the (A)/(B) structure (it was rewritten only in NEC 2026 as Table 120.83).",
+   "fixed": {
+    "fact": "NEC 2023 220.83(B): for an existing dwelling where air conditioning or electric space heating is being added, use 100% of the larger of the air-conditioning load or the space-heating load (central electric heat, or fewer than four separately controlled space-heating units), not both, counting existing and new equipment; then add 100% of the first 8 kVA of all other loads and 40% of the remainder."
+   }
+  },
+  {
+   "id": "E5-43",
+   "action": "fix",
+   "reason": "Wrong subsection letter for NEC 2023. The dwelling-occupancy subsection was removed from 220.14 in 2023 (dwelling unit loads moved to 220.41), so 220.14(J) is now Office Buildings and Other Outlets became 220.14(K) (it was 220.14(L) in NEC 2020). A 2023 NEC quote on Mike Holt's forum shows 220.14(J) as the office-building receptacle rule. The 180 VA and luminaire rules themselves are correct.",
+   "fixed": {
+    "fact": "NEC 2023 220.14(D): a luminaire outlet is calculated at the maximum VA rating of the equipment and lamps it is rated for. 220.14(K) (220.14(L) in NEC 2020): other outlets not covered elsewhere in 220.14 are calculated at 180 VA per outlet.",
+    "source": "NEC 2023 220.14(D), (K)"
+   }
+  },
+  {
+   "id": "E5-56",
+   "action": "fix",
+   "reason": "Misleading by omission. 250.30(A)(6)(a) lets the common GEC be a wire (unspliced, at least 3/0 AWG copper or 250 kcmil aluminum), an interior metal water pipe within 5 ft of entry (250.68(C)(1)), or the building's metal frame (250.68(C)(2)); the Exception says that where the only electrodes are the 250.66(A), (B) or (C) types, the common GEC need not be larger than those sections require. Taps are sized from Table 250.66 on the largest derived ungrounded conductor. Checked against EC&M 'NEC Requirements for Grounding of Separately Derived Systems' (Oct. 2025).",
+   "fixed": {
+    "fact": "NEC 2023 250.30(A)(6): several separately derived systems may tap to a common grounding electrode conductor. If the common GEC is a wire, it must be an unspliced conductor of at least 3/0 AWG copper or 250 kcmil aluminum; interior metal water pipe within 5 ft of the building entrance or the building's metal frame may also serve. Each tap is sized from Table 250.66 based on that system's largest derived ungrounded conductor. Exception: where the only electrodes are rods, pipes, plates, concrete-encased electrodes or ground rings, the common GEC need not be larger than 250.66(A), (B) or (C) requires.",
+    "keywords": [
+     "common grounding electrode conductor",
+     "250.30(A)(6)",
+     "separately derived",
+     "3/0 copper",
+     "transformer",
+     "GEC tap"
+    ]
+   }
+  },
+  {
+   "id": "E5-60",
+   "action": "fix",
+   "reason": "Table renumbered in the 2023 edition: Table 430.52 became Table 430.52(C)(1) (EC&M 'NEC Requirements for Motors - Part 2 of 2', 2023 NEC: 'you now use Table 430.52(C)(1) instead of Table 430.52'). Percentages are correct.",
+   "fixed": {
+    "fact": "NEC 2023 Table 430.52(C)(1) (called Table 430.52 in NEC 2020) for wound-rotor motors: nontime-delay fuse 150%, dual-element fuse 150%, instantaneous-trip breaker 800%, inverse-time breaker 150%. For DC (constant-voltage) motors: 150%, 150%, 250% and 150%.",
+    "source": "NEC 2023 Table 430.52(C)(1)",
+    "keywords": [
+     "430.52(C)(1)",
+     "Table 430.52",
+     "wound rotor",
+     "DC motor",
+     "fuse sizing",
+     "breaker sizing",
+     "percent of FLC"
+    ]
+   }
+  },
+  {
+   "id": "E5-61",
+   "action": "fix",
+   "reason": "Table renumbered in the 2023 edition: Table 430.52 is now Table 430.52(C)(1) (EC&M, 2023 NEC motors article). Values are correct.",
+   "fixed": {
+    "fact": "In NEC 2023 Table 430.52(C)(1) (Table 430.52 in NEC 2020), polyphase Design B energy-efficient premium motors get an 1100% maximum for instantaneous-trip breakers (other columns are the same as standard motors: 300%, 175% and 250%).",
+    "source": "NEC 2023 Table 430.52(C)(1)",
+    "keywords": [
+     "instantaneous trip",
+     "1100 percent",
+     "design B energy efficient",
+     "430.52(C)(1)",
+     "premium efficiency",
+     "motor"
+    ]
+   }
+  },
+  {
+   "id": "E5-63",
+   "action": "fix",
+   "reason": "Citation only: in NEC 2023 the motor short-circuit/ground-fault table is Table 430.52(C)(1), and the next-size-up permission is 430.52(C)(1) Exception No. 1. Math is correct.",
+   "fixed": {
+    "source": "NEC 2023 240.4(G); 430.22; Table 430.52(C)(1) and 430.52(C)(1) Exc. 1; Table 430.250"
+   }
+  },
+  {
+   "id": "E5-64",
+   "action": "fix",
+   "reason": "Citation only: in NEC 2023 the table is Table 430.52(C)(1) (renumbered from Table 430.52), with the next-size-up rule in 430.52(C)(1) Exception No. 1. Math is correct.",
+   "fixed": {
+    "source": "NEC 2023 430.22; Table 430.52(C)(1) and 430.52(C)(1) Exc. 1; Table 430.250"
+   }
+  },
+  {
+   "id": "E5-65",
+   "action": "fix",
+   "reason": "Wrong basis for the 25 ft tap. NEC 430.28(2) requires the 25 ft motor feeder tap to have an ampacity of at least one-third of the FEEDER CONDUCTORS' ampacity (not one-third of the feeder overcurrent device rating), and to be protected from physical damage or enclosed in a raceway. The 10 ft tap (430.28(1)) must be in an enclosed controller or raceway, and for field installations the feeder OCPD may not exceed 1000% of the tap ampacity (i.e., tap ampacity at least 1/10 of the feeder OCPD). Checked against NEC 430.28 text (Mike Holt / NFPA free access).",
+   "fixed": {
+    "fact": "NEC 2023 430.28 motor feeder taps: a tap not over 10 ft long must be enclosed by a controller or raceway and, for field installations, the feeder overcurrent device may not exceed 1000% of the tap ampacity (so the tap needs at least 1/10 of the feeder OCPD rating); a tap not over 25 ft long needs an ampacity of at least one-third of the feeder conductors' ampacity and must be protected from physical damage or enclosed in a raceway. Either way the tap must meet Part II ampacity rules and end in a motor branch-circuit protective device.",
+    "keywords": [
+     "motor feeder tap",
+     "430.28",
+     "10 ft",
+     "25 ft",
+     "one third of feeder conductors",
+     "1000 percent"
+    ]
+   }
+  },
+  {
+   "id": "E5-66",
+   "action": "fix",
+   "reason": "Misstates the formula and mixes in 440.34. 440.33 is the sum of (1) the rated-load current or branch-circuit selection current, whichever is larger, of ALL motor-compressors, (2) the full-load currents of all other motors, and (3) 25% of the highest motor-compressor OR motor current in the group (which may be a fan motor, not necessarily a compressor). Other non-motor loads are added under 440.34, not 440.33. Checked against EC&M 'NEC: Air Conditioning and Refrigerating Equipment, Part 4'.",
+   "fixed": {
+    "fact": "NEC 2023 440.33: conductors supplying more than one motor-compressor (with or without other motors) must have an ampacity of at least the sum of the rated-load or branch-circuit selection currents (whichever is larger) of all motor-compressors, plus the full-load currents of all other motors, plus 25% of the highest motor-compressor or motor current in the group. Other non-motor loads are added under 440.34.",
+    "keywords": [
+     "multiple compressors",
+     "440.33",
+     "440.34",
+     "feeder",
+     "rated load current",
+     "25 percent",
+     "HVAC"
+    ]
+   }
+  },
+  {
+   "id": "E5-74",
+   "action": "fix",
+   "reason": "Misleading by omission. 647.4(D) has two sets of limits: (D)(1) fixed equipment 1.5% branch / 2.5% combined, and (D)(2) cord-connected equipment, where receptacle branch circuits are limited to 1% (load taken as 50% of the branch-circuit rating) and 2.0% combined. The fact gave only the fixed-equipment numbers as if they applied to all branch circuits.",
+   "fixed": {
+    "fact": "Unlike the informational-note recommendations elsewhere, NEC 2023 647.4(D) makes voltage drop limits mandatory for sensitive electronic equipment on 60/120 V technical power systems: for fixed equipment, 1.5% on branch circuits and 2.5% combined feeder plus branch circuit; for cord-connected equipment, 1% on receptacle branch circuits (figured with the receptacle load at 50% of the branch-circuit rating) and 2% combined.",
+    "keywords": [
+     "voltage drop",
+     "647.4",
+     "sensitive electronic equipment",
+     "1.5 percent",
+     "2.5 percent",
+     "1 percent",
+     "technical power"
+    ]
+   }
+  },
+  {
+   "id": "E5-75",
+   "action": "fix",
+   "reason": "Outdated wording for the running limit. Since the 2014 NEC, 695.7 measures the 5% running voltage drop at the LOAD terminals of the fire pump controller (with the motor at 115% of FLC), not at the motor terminals. The starting limit (15% at the controller line terminals) is correct. Checked against EC&M 'Article 695 and Fire Pumps' (2016) and EC&M 'NEC Requirements for Fire Pumps' (2023 NEC, which places the running rule at the controller load terminals).",
+   "fixed": {
+    "fact": "NEC 2023 695.7: during fire pump motor starting, the voltage at the fire pump controller line terminals may not drop more than 15% below normal (controller-rated voltage). While the motor runs at 115% of its full-load current, the voltage at the controller's load terminals may not drop more than 5% below the motor's rated voltage."
+   }
+  },
+  {
+   "id": "E5-77",
+   "action": "fix",
+   "reason": "Incomplete in a commonly tested way: the 1-hour allowance for sprinkler, water spray, CO2 or halon protection applies to vault DOORS too (450.43(A) Exception), not only walls, roofs and floors. Also 450.42 requires floors in contact with the earth to be concrete at least 4 in thick, and stud-and-wallboard construction is not permitted.",
+   "fixed": {
+    "fact": "NEC 2023 450.42 and 450.43: transformer vault walls and roofs (and floors not on earth) must have a 3-hour fire rating, floors on earth must be concrete at least 4 in thick, and stud-and-wallboard construction is not allowed. Each doorway from the building interior needs a tight-fitting door with a 3-hour rating and a sill or curb at least 4 in high. Where the transformers are protected by automatic sprinkler, water spray, CO2 or halon, 1-hour construction and a 1-hour door are permitted."
+   }
+  },
+  {
+   "id": "E5-85",
+   "action": "fix",
+   "reason": "Omits the condition that makes the rule work: 110.26(A)(1)(b) allows smaller working spaces only BY SPECIAL PERMISSION (AHJ written consent) where exposed live parts operate at not more than 30 V rms, 42 V peak or 60 V dc.",
+   "fixed": {
+    "fact": "NEC 2023 110.26(A)(1)(b): by special permission (written consent of the AHJ), smaller working spaces are allowed where all exposed live parts operate at not more than 30 V RMS, 42 V peak or 60 V DC."
+   }
+  },
+  {
+   "id": "E5-93",
+   "action": "fix",
+   "reason": "Misleading by omission. 680.43(B)(1)(c) also allows luminaires less than 7 ft 6 in over an indoor spa or hot tub if they are GFCI protected and are recessed (glass or plastic lens, nonmetallic or isolated metal trim) or surface-mounted (glass or plastic globe, nonmetallic or isolated metal body) and suitable for damp locations. This third tier is commonly tested.",
+   "fixed": {
+    "fact": "NEC 2023 680.43(B)(1): luminaires, lighting outlets and ceiling-suspended (paddle) fans over an indoor spa or hot tub, or within 5 ft of its inside walls, must be at least 12 ft above the maximum water level without GFCI protection, or at least 7 ft 6 in with GFCI protection. Below 7 ft 6 in, only GFCI-protected recessed luminaires (glass or plastic lens, nonmetallic or electrically isolated metal trim) or surface-mounted luminaires (glass or plastic globe, nonmetallic or isolated metal body) suitable for damp locations are allowed."
+   }
+  },
+  {
+   "id": "E5-97",
+   "action": "fix",
+   "reason": "The lockable-open requirement is not limited to remote disconnects. 625.43 (2023) says the disconnect for EVSE rated more than 60 A or more than 150 V to ground must be readily accessible and lockable open per 110.25; the 'remote' condition triggers only a plaque on the equipment showing where the disconnect is. Checked against 625.43 text quoted in EC&M's article on proposed TIA 1767 for the 2023 NEC and on Mike Holt's forum.",
+   "fixed": {
+    "fact": "NEC 2023 625.43: EVSE rated more than 60 A or more than 150 V to ground needs a disconnecting means installed in a readily accessible location and lockable open per 110.25. If the disconnect is installed remote from the EVSE, a plaque on the equipment must show where the disconnect is."
+   }
+  },
+  {
+   "id": "E5-101",
+   "action": "fix",
+   "reason": "Citation only: the 5.0 mA alarm threshold is 517.160(B)(1), but the orange/brown conductor identification is 517.160(A)(5). Content is correct.",
+   "fixed": {
+    "source": "NEC 2023 517.160(A)(5); 517.160(B)(1)"
+   }
+  },
+  {
+   "id": "E5-107",
+   "action": "fix",
+   "reason": "Outdated occupancy list (this is the old 2008-era wording). NEC 2023 700.10(D)(1) applies to (1) assembly occupancies for not less than 1000 persons, (2) buildings above 75 ft in height (any occupancy), and (3) educational occupancies with more than 300 occupants. 700.10(D)(2) feeder-circuit wiring must be in spaces fully protected by an approved automatic fire protection system, or a listed electrical circuit protective system (2-hour), a listed fire-resistive cable system (2-hour), a listed 2-hour fire-rated assembly containing only emergency circuits, or encased in at least 2 in of concrete. Checked against ICC Session 95 Emergency Systems slides quoting the 2023 NEC.",
+   "fixed": {
+    "fact": "NEC 2023 700.10(D): in assembly occupancies for not less than 1000 persons, buildings above 75 ft in height, and educational occupancies with more than 300 occupants, emergency feeder-circuit wiring must be in spaces fully protected by an approved automatic fire protection system (sprinklers), or be a listed 2-hour electrical circuit protective system, a listed 2-hour fire-resistive cable system, inside a listed 2-hour fire-rated assembly containing only emergency circuits, or encased in at least 2 in of concrete.",
+    "keywords": [
+     "emergency feeder",
+     "2 hour",
+     "700.10",
+     "fire rating",
+     "high rise",
+     "assembly",
+     "educational 300"
+    ]
+   }
+  },
+  {
+   "id": "E5-122",
+   "action": "fix",
+   "reason": "Incomplete and slightly wrong on the angle-pull basis. 314.71(A) requires 48x the outside diameter of the largest shielded or lead-covered conductor/cable, OR 32x the outside diameter of the largest nonshielded conductor/cable, for straight pulls. 314.71(B) angle/U pulls use 36x the outside diameter (over sheath) of the largest cable or conductor (shielded or not), increased by the sum of the diameters of other entries on the same wall. 314.71(A) 48x wording confirmed in EC&M Code Quiz (2023 NEC).",
+   "fixed": {
+    "fact": "For pull and junction boxes over 1000 V (NEC 2023 314.71), a straight-pull box must be at least 48 times the outside diameter (over sheath) of the largest shielded or lead-covered conductor or cable entering it, or 32 times the outside diameter of the largest nonshielded conductor or cable. For angle or U pulls, the distance from each entry to the opposite wall must be at least 36 times the outside diameter of the largest cable or conductor, plus the sum of the diameters of other entries on the same wall."
+   }
+  },
+  {
+   "id": "E5-129",
+   "action": "fix",
+   "reason": "Wrong subsection for NEC 2023: controlled receptacle marking is 406.3(F) (406.3(E) is isolated ground receptacles). NFPA's 2026 NEC Panel 18 First Draft shows the 2023 lettering being changed from (F) to (D). The 2023 text also requires the marking on the receptacle face, visible after installation, and exempts wall-switched receptacles that provide the required room lighting outlet under 210.70.",
+   "fixed": {
+    "fact": "NEC 2023 406.3(F): 125 V, 15 A and 20 A nonlocking receptacles controlled by an automatic control device (for energy management or building automation) must be permanently marked with the controlled-receptacle (power) symbol and the word 'controlled', on the receptacle face and visible after installation. Receptacles controlled by a wall switch to provide the required room lighting outlet (210.70) are exempt.",
+    "source": "NEC 2023 406.3(F)",
+    "keywords": [
+     "controlled receptacle",
+     "406.3(F)",
+     "energy management",
+     "marking",
+     "automatic control",
+     "receptacle"
+    ]
+   }
+  },
+  {
+   "id": "E5-130",
+   "action": "fix",
+   "reason": "The 'unless it is a 15 A or 20 A receptacle also covered by the wet-location rule' clause is not in 406.9(A) and is confusing. 406.9(A) says the damp-location enclosure must be weatherproof with the plug removed and covers closed, that an installation suitable for wet locations is also suitable for damp locations, defines 'protected from the weather' (roofed open porches, canopies, marquees not subject to beating rain or runoff), and requires all 15 A and 20 A, 125 V and 250 V nonlocking receptacles there to be listed weather-resistant.",
+   "fixed": {
+    "fact": "NEC 2023 406.9(A): a receptacle in a damp location (such as under a roofed open porch, canopy or marquee not subject to beating rain or water runoff) needs an enclosure that is weatherproof when the receptacle is covered (no plug inserted and covers closed); an installation suitable for wet locations also satisfies the damp-location rule. All 15 A and 20 A, 125 V and 250 V nonlocking receptacles in damp locations must be listed weather-resistant."
+   }
+  },
+  {
+   "id": "E5-135",
+   "action": "fix",
+   "reason": "590.4(J) contains no 10 ft support interval: cables and cords must be supported at intervals that protect them from physical damage, using staples, cable ties, straps or similar fittings. The floor/ground ban applies to cable assemblies and cords installed as branch circuits or feeders; extension cords are exempt from 590.4(J). Checked against EC&M 'Temporary Installations' (Mike Holt) and 590.4(J) text quoted on Mike Holt's forum.",
+   "fixed": {
+    "fact": "NEC 2023 590.4: temporary branch circuits and feeders may use NM, NMC and SE cable (no height or construction-type limits) and hard- or extra-hard-usage cords. Under 590.4(J), cables and cords must be supported at intervals that protect them from physical damage (staples, cable ties, straps or similar fittings; no fixed spacing is given) and, when used as branch circuits or feeders, may not lie on the floor or ground (extension cords are exempt). Receptacles may not be on branch circuits that supply temporary lighting (590.4(D)).",
+    "keywords": [
+     "temporary wiring",
+     "590.4",
+     "cable support",
+     "extension cord",
+     "temporary lighting",
+     "construction"
+    ]
+   }
+  },
+  {
+   "id": "E5-137",
+   "action": "fix",
+   "reason": "Scope is wrong: the 125 V and 125/250 V, 15/20/30 A wording is 590.6(A)(3) (temporary installations), not 445.20. 445.20 requires listed GFCI protection, integral to the generator or receptacle, on the 125 V, 15 A and 20 A receptacle outlets of 15 kW or smaller portable generators; on unbonded (floating-neutral) generators it is not required if those 125 V receptacles are interlocked so they cannot be used while any 125/250 V receptacle is in use. Checked against EC&M code quiz on unbonded generators and FOH Online's quotes of 445.20 and 590.6(A)(3).",
+   "fixed": {
+    "fact": "NEC 2023 445.20: the 125 V, single-phase, 15 A and 20 A receptacle outlets on a portable generator rated 15 kW or less must have listed GFCI protection built into the generator or the receptacle. On an unbonded (floating-neutral) generator, GFCI is not required if those 125 V receptacles are interlocked so they cannot be used while any 125/250 V receptacle is in use. For temporary installations, 590.6(A)(3) goes further and requires GFCI on all 125 V and 125/250 V, 15, 20 and 30 A receptacles on such generators."
+   }
+  },
+  {
+   "id": "E5-138",
+   "action": "fix",
+   "reason": "Outdated wording. Current 600.5(B) (2011 through 2023) limits branch circuits supplying neon tubing installations to 30 A and branch circuits supplying ALL OTHER signs and outline lighting (including LED) to 20 A; it no longer lists only incandescent, fluorescent and HID. Sign circuits are also treated as continuous loads. Checked against Mike Holt/EC&M 'Understanding Requirements for Electric Signs and Outline Lighting' and 'NEC Rules for Electric Signs and Outline Lighting'.",
+   "fixed": {
+    "fact": "NEC 2023 600.5(B): sign branch circuits are treated as continuous loads. Branch circuits that supply neon tubing installations may be rated no more than 30 A; branch circuits that supply all other signs and outline lighting (incandescent, fluorescent, HID, LED and others) may be rated no more than 20 A."
+   }
+  },
+  {
+   "id": "E5-140",
+   "action": "fix",
+   "reason": "Omits the key condition in 230.90(A) Exception No. 3: the sum of two to six breakers or fuse sets may exceed the service conductor ampacity only if the calculated load does not exceed the conductor ampacity. Also Exception No. 2 allows ratings complying with 240.4(B) or (C) and 240.6.",
+   "fixed": {
+    "fact": "NEC 2023 230.70(A)(2): the service disconnect may not be installed in a bathroom. 230.90(A): each ungrounded service conductor needs overload protection rated no higher than the conductor ampacity, except that a rating complying with 240.4(B) or (C) and 240.6 (such as the next higher standard size up to 800 A) is allowed, and the sum of two to six breakers or sets of fuses may exceed the conductor ampacity provided the calculated load does not exceed the conductor ampacity."
+   }
+  },
+  {
+   "id": "E5-150",
+   "action": "fix",
+   "reason": "Outdated (2014/2017-era) wording. The current text, carried unchanged into the NEC 2026 Second Draft as 695.5(B)(2)(a)(1), requires the OCPD to carry indefinitely the sum of the locked-rotor current of the LARGEST fire pump motor plus the full-load current of all other pump motors (including pressure maintenance pumps) and accessory equipment. Pressure maintenance pumps are no longer added at locked-rotor current. Checked against NFPA 70 A2025 Panel 13 Second Draft report and EC&M 'NEC Requirements for Fire Pumps' (2023 NEC).",
+   "fixed": {
+    "fact": "NEC 2023 695.4(B)(2)(a)(1): the overcurrent device(s) for an individual fire pump power source must be rated to carry indefinitely the sum of the locked-rotor current of the largest fire pump motor plus the full-load current of all other pump motors (such as pressure maintenance pumps) and the accessory equipment, so the device will not open during a fire.",
+    "source": "NEC 2023 695.4(B)(2)(a)(1)"
+   }
+  },
+  {
+   "id": "E5-72",
+   "action": "fix",
+   "reason": "confirmed online in the independent audit",
+   "fixed": {
+    "status": "verified"
+   }
+  },
+  {
+   "id": "E5-73",
+   "action": "fix",
+   "reason": "confirmed online in the independent audit",
+   "fixed": {
+    "status": "verified"
+   }
+  },
+  {
+   "id": "E5-86",
+   "action": "fix",
+   "reason": "confirmed online in the independent audit",
+   "fixed": {
+    "status": "verified"
+   }
+  },
+  {
+   "id": "E5-98",
+   "action": "fix",
+   "reason": "confirmed online in the independent audit",
+   "fixed": {
+    "status": "verified"
+   }
+  },
+  {
+   "id": "E5-136",
+   "action": "fix",
+   "reason": "confirmed online in the independent audit",
+   "fixed": {
+    "status": "verified"
+   }
+  }
+ ],
+ "questions": [
+  {
+   "i": 15,
+   "action": "fix",
+   "reason": "Ref only: the NEC 2023 table is Table 430.52(C)(1) (renumbered from Table 430.52); the next-size-up permission is 430.52(C)(1) Exception No. 1. Answer (90 A) confirmed: 34 x 2.5 = 85 A, next standard size 90 A.",
+   "fixed": {
+    "ref": "NEC 2023 Table 430.250; Table 430.52(C)(1); 430.52(C)(1) Exc. 1"
+   }
+  },
+  {
+   "i": 16,
+   "action": "fix",
+   "reason": "Ref and why cite the old table number; in NEC 2023 it is Table 430.52(C)(1). Answer (150%) confirmed.",
+   "fixed": {
+    "ref": "NEC 2023 Table 430.52(C)(1)",
+    "why": "Table 430.52(C)(1) (Table 430.52 in NEC 2020) limits inverse-time breakers to 150% for wound-rotor motors; 250% applies to standard squirrel-cage motors."
+   }
+  },
+  {
+   "i": 17,
+   "action": "fix",
+   "reason": "Ref only: NEC 2023 table is Table 430.52(C)(1). Answer (30 A) confirmed: 10.6 x 2.5 = 26.5 A, next standard size 30 A.",
+   "fixed": {
+    "ref": "NEC 2023 240.4(G); Table 430.52(C)(1); 430.52(C)(1) Exc. 1"
+   }
+  },
+  {
+   "i": 38,
+   "action": "fix",
+   "reason": "Ref only: NEC 2023 table is Table 430.52(C)(1). Answer (80 A) confirmed: 30.8 x 2.5 = 77 A, next standard size 80 A.",
+   "fixed": {
+    "ref": "NEC 2023 Table 430.250; Table 430.52(C)(1); 430.52(C)(1) Exc. 1"
+   }
+  }
+ ]
 }

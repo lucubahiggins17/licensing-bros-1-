@@ -9,7 +9,11 @@ import path from "node:path";
 const ROOT = path.resolve(path.dirname(new URL(import.meta.url).pathname), "..");
 const KB = path.join(ROOT, "supabase/functions/_shared/kb.json");
 const QF = path.join(ROOT, "lib/kb-questions.json");
-const [roundFile, auditFile] = process.argv.slice(2);
+const args = process.argv.slice(2);
+// --force=ID,ID adds round facts the number-conflict check held back after a person confirmed they're different
+// table rows (for example another box size or motor horsepower), not a disagreement
+const force = new Set((args.find((a) => a.startsWith("--force=")) || "").replace("--force=", "").split(",").filter(Boolean));
+const [roundFile, auditFile] = args.filter((a) => !a.startsWith("--"));
 const round = JSON.parse(fs.readFileSync(roundFile, "utf8"));
 const audit = auditFile ? JSON.parse(fs.readFileSync(auditFile, "utf8")) : { questions: [], facts: [] };
 const kb = JSON.parse(fs.readFileSync(KB, "utf8"));
@@ -60,8 +64,8 @@ for (const f of round.facts) {
   if (dropF.has(f.id)) continue;
   const t = norm(f.fact);
   const near = existing.find((e) => e.f.trade === f.trade && (e.f.state || null) === (f.state || null) && jac(e.t, t) > 0.7);
-  if (near) {
-    if (nums(near.f.fact) !== nums(f.fact)) conflicts.push({ new: f.fact, existing: `${near.f.id}: ${near.f.fact}` });
+  if (near && !force.has(f.id)) {
+    if (nums(near.f.fact) !== nums(f.fact)) conflicts.push({ id: f.id, new: f.fact, existing: `${near.f.id}: ${near.f.fact}` });
     skippedF++; continue;
   }
   const p = prefix(f.topic); counters[p] = (counters[p] || 0) + 1;
@@ -86,5 +90,5 @@ round.questions.forEach((q, i) => {
 kb.generated = new Date().toISOString().slice(0, 10);
 fs.writeFileSync(KB, JSON.stringify(kb));
 fs.writeFileSync(QF, JSON.stringify(qs));
-if (conflicts.length) console.error(`${conflicts.length} new fact(s) disagree with an existing fact on a number; not added, check them:\n` + conflicts.map((c) => `- NEW: ${c.new}\n  HAVE ${c.existing}`).join("\n"));
+if (conflicts.length) console.error(`${conflicts.length} new fact(s) disagree with an existing fact on a number; not added, check them:\n` + conflicts.map((c) => `- NEW ${c.id}: ${c.new}\n  HAVE ${c.existing}`).join("\n"));
 console.log(JSON.stringify({ addedFacts: addedF, skippedDuplicateFacts: skippedF, numberConflicts: conflicts.length, fixedExistingFacts: fixedExisting, addedQuestions: addedQ, totalFacts: kb.facts.length, totalQuestions: qs.length }));

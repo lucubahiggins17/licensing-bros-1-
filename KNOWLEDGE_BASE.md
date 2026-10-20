@@ -1,12 +1,12 @@
 # Licensing Bro's knowledge base
 
-Generated 2026-10-19. **2788 facts** (2517 verified, 75 corrected, 196 flagged as unconfirmed) and **789 new practice questions** (113 Business & Law, shown to every trade; 204 General Contractor; 169 Electrical; 151 Plumbing; 152 HVAC).
+Generated 2026-10-20. **2940 facts** (2616 verified, 75 corrected, 249 flagged as unconfirmed) and **834 new practice questions** (113 Business & Law, shown to every trade; 204 General Contractor; 214 Electrical; 151 Plumbing; 152 HVAC).
 
 | Trade | Facts |
 |---|---|
+| Electrical | 765 |
 | General contractor | 700 |
 | Business & Law | 640 |
-| Electrical | 613 |
 | Plumbing | 439 |
 | HVAC / Mechanical | 396 |
 
@@ -17,7 +17,7 @@ State-specific rules: 51 jurisdictions, 518 facts.
 
 **Round 4 (October 2026: Electrical, Plumbing, HVAC and all 50 states plus DC).** Written in original wording from the model codes and regulations (NEC 2023 with 2020 differences noted, IPC 2021 with UPC 2021 differences, IMC and IFGC 2021, EPA 40 CFR Part 82 Subpart F, OSHA) and, for state rules, from state licensing boards, statutes and PSI/Prometric candidate bulletins. Each batch was then checked by a separate reviewer who had not written it, which corrected, removed or flagged items before they were added. Files: `knowledge/rounds/round4/` and `knowledge/audits/result_round4_*.json`.
 
-In all, 141 facts were changed in review.
+In all, 172 facts were changed in review.
 
 - **verified**: confirmed correct as written.
 - **corrected**: the flashcard's answer was wrong or outdated; the fact states the correct rule, and the note says what the card claimed.
@@ -28,7 +28,7 @@ Figures that change every year (OSHA penalty maximums, payroll tax wage bases, i
 ## How the app uses it
 - **AI tutor**: before answering, it looks up the most relevant facts for the student's question, trade and state (`supabase/functions/_shared/kb.ts`) and builds the answer on them, citing their source.
 - **AI-written exams and flashcards**: the generator is handed a random spread of checked facts and must build most questions on them.
-- **Verified question bank**: the 789 questions in `lib/kb-questions.json` are added to the built-in bank, so they work offline.
+- **Verified question bank**: the 834 questions in `lib/kb-questions.json` are added to the built-in bank, so they work offline.
 - State-specific facts (licensing thresholds, exams, lien deadlines and more for every state) only appear for students who pick that state. Plumbing answers rank the student's own code (IPC or UPC) first.
 
 ## Coverage by topic
@@ -48,35 +48,35 @@ Figures that change every year (OSHA penalty maximums, payroll tax wage bases, i
 | Business & Law · Risk management | 3 |
 | Business & Law · Safety (OSHA) | 1 |
 | Business & Law · Safety recordkeeping | 13 |
-| Electrical · Air conditioning (Art. 440) | 8 |
+| Electrical · Air conditioning (Art. 440) | 11 |
 | Electrical · Appliances & space heating | 9 |
-| Electrical · Boxes & enclosures | 21 |
+| Electrical · Boxes & enclosures | 31 |
 | Electrical · Boxes | 1 |
-| Electrical · Branch circuits | 19 |
-| Electrical · Cables & raceways | 23 |
+| Electrical · Branch circuits | 20 |
+| Electrical · Cables & raceways | 24 |
 | Electrical · Conductor identification | 4 |
-| Electrical · Conductors & ampacity | 21 |
+| Electrical · Conductors & ampacity | 37 |
 | Electrical · Conductors | 1 |
-| Electrical · Conduit fill (Chapter 9) | 12 |
+| Electrical · Conduit fill (Chapter 9) | 19 |
 | Electrical · Definitions (Art. 90/100) | 24 |
-| Electrical · Electrical theory | 40 |
-| Electrical · Emergency & standby | 10 |
-| Electrical · Feeders & load calculations | 51 |
-| Electrical · GFCI / AFCI | 22 |
-| Electrical · General requirements (Art. 110) | 21 |
-| Electrical · Generators & transformers | 10 |
-| Electrical · Grounding & bonding | 47 |
-| Electrical · Hazardous & health care | 13 |
-| Electrical · Luminaires | 6 |
-| Electrical · Motors (Art. 430) | 20 |
+| Electrical · Electrical theory | 51 |
+| Electrical · Emergency & standby | 17 |
+| Electrical · Feeders & load calculations | 62 |
+| Electrical · GFCI / AFCI | 25 |
+| Electrical · General requirements (Art. 110) | 30 |
+| Electrical · Generators & transformers | 14 |
+| Electrical · Grounding & bonding | 61 |
+| Electrical · Hazardous & health care | 22 |
+| Electrical · Luminaires | 7 |
+| Electrical · Motors (Art. 430) | 34 |
 | Electrical · OSHA electrical safety | 24 |
-| Electrical · Overcurrent protection | 14 |
-| Electrical · Pools, spas & tubs (Art. 680) | 23 |
-| Electrical · Receptacle layout | 31 |
-| Electrical · Services & outside wiring | 24 |
-| Electrical · Solar PV & EV charging | 10 |
+| Electrical · Overcurrent protection | 17 |
+| Electrical · Pools, spas & tubs (Art. 680) | 30 |
+| Electrical · Receptacle layout | 35 |
+| Electrical · Services & outside wiring | 31 |
+| Electrical · Solar PV & EV charging | 15 |
 | Electrical · Switches & panelboards | 11 |
-| Electrical · Wiring methods (Art. 300) | 23 |
+| Electrical · Wiring methods (Art. 300) | 28 |
 | Electrical · Working space | 2 |
 | General contractor · Accessibility | 26 |
 | General contractor · Building code (IBC) | 45 |
@@ -337,7 +337,7 @@ These are worth knowing as a selling point: the free study sets your competitors
 | PAYR-042 | The IRS groups federal business taxes into income tax, estimated tax, self-employment tax, employment taxes and excise taxes. Property tax is not a federal tax, but state and local governments levy it, and businesses owning real estate (and in many states equipment and other tangible business personal property) must pay it. | Card says property tax is generally not a business tax. It is not one of the federal business tax categories, but businesses routinely owe state/local property tax on real property and, in many states including Tennessee, on tangible business personal property. |
 | PAYR-045 | IRS Pub 15-T gives two manual withholding methods: the wage bracket method (look up the pay-period wage in tables by filing status; covers wages up to about $100,000 a year) and the percentage method (works for any wage). Separate tables apply to Forms W-4 from 2020 or later, which use no allowances, and to older W-4s still on file that claim allowances; table amounts change every year. | Card asks for withholding for a married employee with '3 exemptions' and gives $32 from an older Circular E table. Withholding tables now live in Pub 15-T and change annually, and the 2020 and later Form W-4 has no exemptions or allowances, so that dollar answer cannot be reused; always use the current year's tables. |
 
-## Flagged for review (196)
+## Flagged for review (249)
 Have a licensed reviewer (or the state bulletin) confirm these, then change `status` to `verified` for that ID in `supabase/functions/_shared/kb.json` (or in the CSV, then copy back) and run `node scripts/kb-report.mjs`.
 
 | ID | State | Fact | Why it's flagged |
@@ -538,6 +538,59 @@ Have a licensed reviewer (or the state bulletin) confirm these, then change `sta
 | RECE-019 | — | In other than one- and two-family dwellings, a 125 V, 15 or 20 A receptacle outlet must be within 25 ft of indoor service equipment, in the same room or area, and within 25 ft of indoor equipment needing dedicated equipment space under 110.26(E) (such as panelboards, switchboards and MCCs), in the same room or area and not on the load side of that equipment's disconnect. These rules entered as 210.63(B)(1) and (B)(2) in NEC 2020; NEC 2017 210.64 required only one receptacle within 50 ft of the service equipment. | 25 ft confirmed from a Mike Holt 2023 summary; the one-/two-family dwelling exclusion and exact (B)(1)/(B)(2) wording were not confirmed against the code text. |
 | POOL-016 | — | For an indoor spa or hot tub, receptacles must be at least 6 ft from the inside walls; at least one 125 V, 15/20 A receptacle must be between 6 ft and 10 ft away; and 125 V receptacles rated 30 A or less within 10 ft require GFCI. | Based on NEC 2017/2020 680.43(A) text; NEC 2023 reorganized GFCI rules into 680.5, so confirm 2023 wording. |
 | POOL-018 | — | Spas and hot tubs (other than at single-family dwellings) need a clearly labeled emergency shutoff for the recirculation and jet motors, readily accessible to users, at least 5 ft away, adjacent to and within sight of the spa. | Cited from NEC 2020; NEC 2023 reorganized parts of Article 680, so confirm the 2023 section number. |
+| FEED-056 | — | NEC 2023 220.83(B): for an existing dwelling where air conditioning or electric space heating is being added, use 100% of the larger of the air-conditioning load or the space-heating load (central electric heat, or fewer than four separately controlled space-heating units), not both, counting existing and new equipment; then add 100% of the first 8 kVA of all other loads and 40% of the remainder. | From the NEC 2023 text from memory; 220.83(A) (no AC/heat added) is already verified in the knowledge base. |
+| FEED-057 | — | More NEC 2023 Table 220.42(A) unit loads (VA per sq ft): religious facilities 2.2; gymnasiums and workshops 1.7; motion picture theaters, museums and post offices 1.6; automotive facilities, dormitories, libraries, performing arts theaters and sports arenas 1.5; convention centers, courthouses, exercise centers and town halls 1.4; fire and police stations 1.3; penitentiaries and transportation 1.2. | From the table as carried over from NEC 2020 Table 220.12; not re-checked against a published copy this round. |
+| FEED-058 | — | NEC 2023 220.14(D): a luminaire outlet is calculated at the maximum VA rating of the equipment and lamps it is rated for. 220.14(K) (220.14(L) in NEC 2020): other outlets not covered elsewhere in 220.14 are calculated at 180 VA per outlet. | From the NEC 2023 text from memory. |
+| GROU-054 | — | NEC 2023 250.102(E)(2): an equipment bonding jumper may be installed outside a raceway or enclosure only if its length is not more than 6 ft and it is routed with the raceway or enclosure. | From the NEC 2023 text from memory. |
+| GROU-056 | — | NEC 2023 250.30(A)(6): several separately derived systems may tap to a common grounding electrode conductor. If the common GEC is a wire, it must be an unspliced conductor of at least 3/0 AWG copper or 250 kcmil aluminum; interior metal water pipe within 5 ft of the building entrance or the building's metal frame may also serve. Each tap is sized from Table 250.66 based on that system's largest derived ungrounded conductor. Exception: where the only electrodes are rods, pipes, plates, concrete-encased electrodes or ground rings, the common GEC need not be larger than 250.66(A), (B) or (C) requires. | From the NEC 2023 text from memory. |
+| GROU-057 | — | NEC 2023 250.52(A)(2): metal in-ground support structures (such as steel building columns) in direct vertical contact with the earth for 10 ft or more, with or without concrete, qualify as a grounding electrode. | From the NEC 2023 text from memory. |
+| GROU-059 | — | NEC 2023 250.70: GEC connections to electrodes must use exothermic welding, listed lugs, listed pressure connectors or listed clamps. A ground clamp may hold only one conductor unless it is listed for more than one. | From the NEC 2023 text from memory. |
+| MOTO-032 | — | NEC 2023 430.28 motor feeder taps: a tap not over 10 ft long must be enclosed by a controller or raceway and, for field installations, the feeder overcurrent device may not exceed 1000% of the tap ampacity (so the tap needs at least 1/10 of the feeder OCPD rating); a tap not over 25 ft long needs an ampacity of at least one-third of the feeder conductors' ampacity and must be protected from physical damage or enclosed in a raceway. Either way the tap must meet Part II ampacity rules and end in a motor branch-circuit protective device. | From the NEC 2023 text from memory. |
+| AIRC-009 | — | NEC 2023 440.33: conductors supplying more than one motor-compressor (with or without other motors) must have an ampacity of at least the sum of the rated-load or branch-circuit selection currents (whichever is larger) of all motor-compressors, plus the full-load currents of all other motors, plus 25% of the highest motor-compressor or motor current in the group. Other non-motor loads are added under 440.34. | From the NEC 2023 text from memory. |
+| AIRC-011 | — | Unlike motors under 430.52, NEC 2023 440.22(A) has no next-size-up allowance for motor-compressor protection: the device may not exceed 175% (or 225% if needed to start), and the 175% figure is rounded down to a standard size. A 15 A device is always permitted. Example: 18 A x 1.75 = 31.5 A, so 30 A. | Round-down practice and 15 A minimum from NEC text knowledge; not re-checked online this round. |
+| SERV-025 | — | Other NEC 2023 230.24(A) roof-clearance exceptions: where the roof gets pedestrian or vehicle traffic, use the 230.24(B) ground clearances (Exc. 1); the 3 ft beyond-the-edge rule does not apply to the final span attached to the side of a building (Exc. 4); and at 300 V or less, 3 ft is enough where the roof area is guarded or isolated (Exc. 5). | Exception numbering and wording from NEC text knowledge; not re-checked online. |
+| SERV-026 | — | NEC 2023 230.51(A): service-entrance cable must be secured within 12 in of every service head, gooseneck or connection to a raceway or enclosure, and at intervals not exceeding 30 in. | From the NEC 2023 text from memory. |
+| SERV-027 | — | NEC 2023 230.28: a service mast used to support service-drop or overhead service conductors must be strong enough (or braced/guyed) for the strain, and only power service-drop or overhead service conductors may be attached to it; communications cables may not. | From the NEC 2023 text from memory. |
+| BRAN-020 | — | Unlike the informational-note recommendations elsewhere, NEC 2023 647.4(D) makes voltage drop limits mandatory for sensitive electronic equipment on 60/120 V technical power systems: for fixed equipment, 1.5% on branch circuits and 2.5% combined feeder plus branch circuit; for cord-connected equipment, 1% on receptacle branch circuits (figured with the receptacle load at 50% of the branch-circuit rating) and 2% combined. | From the NEC 2023 text from memory. |
+| EMER-011 | — | NEC 2023 695.7: during fire pump motor starting, the voltage at the fire pump controller line terminals may not drop more than 15% below normal (controller-rated voltage). While the motor runs at 115% of its full-load current, the voltage at the controller's load terminals may not drop more than 5% below the motor's rated voltage. | From the NEC 2023 text from memory. |
+| GENE-049 | — | NEC 2023 450.42 and 450.43: transformer vault walls and roofs (and floors not on earth) must have a 3-hour fire rating, floors on earth must be concrete at least 4 in thick, and stud-and-wallboard construction is not allowed. Each doorway from the building interior needs a tight-fitting door with a 3-hour rating and a sill or curb at least 4 in high. Where the transformers are protected by automatic sprinkler, water spray, CO2 or halon, 1-hour construction and a 1-hour door are permitted. | From the NEC 2023 text from memory. |
+| OVER-015 | — | NEC 2023 240.21(C)(2) 10 ft transformer secondary conductors: ampacity at least the calculated load and at least the rating of the device they terminate in; for field installations that leave the enclosure, at least 1/10 of the primary OCPD rating times the primary-to-secondary voltage ratio. | From the NEC 2023 text from memory. |
+| OVER-016 | — | NEC 2023 240.21(B)(3) feeder taps supplying a transformer: total primary plus secondary conductor length may not exceed 25 ft; primary tap ampacity at least 1/3 of the feeder OCPD; secondary ampacity at least 1/3 of the feeder OCPD times the primary-to-secondary voltage ratio, ending in a single device that limits load to the secondary ampacity. | From the NEC 2023 text from memory. |
+| GENE-055 | — | NEC 2023 110.26(A)(1)(b): by special permission (written consent of the AHJ), smaller working spaces are allowed where all exposed live parts operate at not more than 30 V RMS, 42 V peak or 60 V DC. | From the NEC 2023 text from memory. |
+| POOL-027 | — | NEC 2023 680.26(B)(1)(b): where pool shell steel is not used for bonding, a copper grid of 8 AWG bare solid copper is formed in a 12 in by 12 in network (4 in tolerance), following the pool contour and secured within or under the pool no more than 6 in from the outer contour of the shell. | From the NEC 2023 text from memory. |
+| POOL-028 | — | NEC 2023 680.26(B)(5): metal fittings within or attached to the pool structure must be bonded, but isolated parts no larger than 4 in in any dimension that penetrate the pool structure no more than 1 in need not be bonded. | From the NEC 2023 text from memory. |
+| POOL-029 | — | NEC 2023 680.10: electric pool water heaters must have heating elements subdivided into loads of not more than 48 A, each protected at not more than 60 A, and the branch-circuit conductors and overcurrent device must be rated at least 125% of the nameplate load. | From the NEC 2023 text from memory. |
+| POOL-030 | — | NEC 2023 680.43(B)(1): luminaires, lighting outlets and ceiling-suspended (paddle) fans over an indoor spa or hot tub, or within 5 ft of its inside walls, must be at least 12 ft above the maximum water level without GFCI protection, or at least 7 ft 6 in with GFCI protection. Below 7 ft 6 in, only GFCI-protected recessed luminaires (glass or plastic lens, nonmetallic or electrically isolated metal trim) or surface-mounted luminaires (glass or plastic globe, nonmetallic or isolated metal body) suitable for damp locations are allowed. | From the NEC 2023 text from memory. |
+| SOLA-012 | — | NEC 2023 690.11: PV systems with DC circuits operating at 80 V DC or greater between any two conductors need listed DC arc-fault circuit protection (or equivalent listed components). | From the NEC 2023 text from memory. |
+| HAZA-015 | — | NEC 2023 517.16(A): an isolated ground receptacle may not be installed within a patient care vicinity. | From the NEC 2023 text from memory. |
+| HAZA-016 | — | In an isolated power system (such as some operating rooms), the line isolation monitor must alarm when the total hazard current reaches 5.0 mA. The isolated conductors are identified orange (conductor No. 1) and brown (conductor No. 2), each with a distinctive stripe other than white, green or gray. | From NEC 2023 517.160 text from memory. |
+| HAZA-020 | — | Hazardous-location equipment is marked with a temperature class (T code) showing its maximum surface temperature: T1 450 C, T2 300 C, T3 200 C, T4 135 C, T5 100 C, T6 85 C. The T code must be below the autoignition temperature of the gas or vapor present. | Temperature class values from the NEC table; exact 2023 table number not confirmed. |
+| EMER-012 | — | NEC 2023 701.12: legally required standby systems must have power available within 60 seconds after the normal supply fails (emergency systems under 700.12 have 10 seconds). | 60 seconds is in the existing question bank but not as a fact; stated from the NEC text. |
+| EMER-013 | — | NEC 2023 700.10(D): in assembly occupancies for not less than 1000 persons, buildings above 75 ft in height, and educational occupancies with more than 300 occupants, emergency feeder-circuit wiring must be in spaces fully protected by an approved automatic fire protection system (sprinklers), or be a listed 2-hour electrical circuit protective system, a listed 2-hour fire-resistive cable system, inside a listed 2-hour fire-rated assembly containing only emergency circuits, or encased in at least 2 in of concrete. | From the NEC 2023 text from memory. |
+| EMER-014 | — | NEC 2023 700.8: a listed surge-protective device (SPD) is required in or on all emergency system switchboards and panelboards (first required in NEC 2020). | From the NEC 2023 text from memory. |
+| EMER-015 | — | NEC 2023 700.10(A): all boxes and enclosures for emergency circuits (including transfer switches, generators and power panels) must be permanently marked so they are readily identified as emergency system components. | From the NEC 2023 text from memory. |
+| BOXE-030 | — | NEC 2023 314.16(C): a conduit body enclosing 6 AWG or smaller conductors (other than short-radius bodies) must have a cross-sectional area at least twice that of the largest conduit attached to it. Splices, taps or devices are allowed in a conduit body only if it is marked with its volume, and then the 314.16(B) allowances apply. | From the NEC 2023 text from memory. |
+| BOXE-032 | — | For pull and junction boxes over 1000 V (NEC 2023 314.71), a straight-pull box must be at least 48 times the outside diameter (over sheath) of the largest shielded or lead-covered conductor or cable entering it, or 32 times the outside diameter of the largest nonshielded conductor or cable. For angle or U pulls, the distance from each entry to the opposite wall must be at least 36 times the outside diameter of the largest cable or conductor, plus the sum of the diameters of other entries on the same wall. | From the NEC 2023 text from memory. |
+| WIRI-025 | — | Other NEC 2023 Table 300.19(A) vertical support spacings (aluminum / copper): 18-8 AWG 100 / 100 ft; 6 AWG-1/0 200 / 100 ft; 2/0-4/0 180 / 80 ft; over 350-500 kcmil 120 / 50 ft; over 500-750 kcmil 95 / 40 ft; over 750 kcmil 85 / 35 ft. | Only the 350 kcmil copper row (60 ft) was confirmed online; the rest is from the table from memory. |
+| RECE-033 | — | NEC 2023 406.4(D)(5) and (D)(6): when a receptacle is replaced where the Code now requires tamper-resistant or weather-resistant receptacles, the replacement must be tamper-resistant or weather-resistant. | From the NEC 2023 text from memory. |
+| RECE-034 | — | NEC 2023 406.3(F): 125 V, 15 A and 20 A nonlocking receptacles controlled by an automatic control device (for energy management or building automation) must be permanently marked with the controlled-receptacle (power) symbol and the word 'controlled', on the receptacle face and visible after installation. Receptacles controlled by a wall switch to provide the required room lighting outlet (210.70) are exempt. | From the NEC 2023 text from memory. |
+| RECE-035 | — | NEC 2023 406.9(A): a receptacle in a damp location (such as under a roofed open porch, canopy or marquee not subject to beating rain or water runoff) needs an enclosure that is weatherproof when the receptacle is covered (no plug inserted and covers closed); an installation suitable for wet locations also satisfies the damp-location rule. All 15 A and 20 A, 125 V and 250 V nonlocking receptacles in damp locations must be listed weather-resistant. | From the NEC 2023 text from memory. |
+| GFCI-024 | — | NEC 2023 210.12(A)(5) and (6): an outlet branch-circuit AFCI at the first outlet is enough if the home run from the breaker to that outlet is in RMC, IMC, EMT, Type MC or steel-armored AC cable with metal boxes ((5)), or encased in at least 2 in of concrete ((6)). | From the NEC 2023 text from memory. |
+| GFCI-025 | — | NEC 2023 210.8 requires the GFCI device itself to be installed in a readily accessible location, so a GFCI receptacle hidden behind a refrigerator or inside a cabinet does not satisfy the rule for other outlets. | From the NEC 2023 text from memory. |
+| GENE-057 | — | NEC 2023 445.20: the 125 V, single-phase, 15 A and 20 A receptacle outlets on a portable generator rated 15 kW or less must have listed GFCI protection built into the generator or the receptacle. On an unbonded (floating-neutral) generator, GFCI is not required if those 125 V receptacles are interlocked so they cannot be used while any 125/250 V receptacle is in use. For temporary installations, 590.6(A)(3) goes further and requires GFCI on all 125 V and 125/250 V, 15, 20 and 30 A receptacles on such generators. | From the NEC 2023 text from memory. |
+| LUMI-007 | — | NEC 2023 600.5(B): sign branch circuits are treated as continuous loads. Branch circuits that supply neon tubing installations may be rated no more than 30 A; branch circuits that supply all other signs and outline lighting (incandescent, fluorescent, HID, LED and others) may be rated no more than 20 A. | From the NEC 2023 text from memory. |
+| SERV-030 | — | NEC 2023 230.42(A): service-entrance conductors must have an ampacity of at least the noncontinuous load plus 125% of the continuous load (before any adjustment or correction), the same idea as 210.19 for branch circuits and 215.2 for feeders. | From the NEC 2023 text from memory. |
+| SERV-031 | — | NEC 2023 230.70(A)(2): the service disconnect may not be installed in a bathroom. 230.90(A): each ungrounded service conductor needs overload protection rated no higher than the conductor ampacity, except that a rating complying with 240.4(B) or (C) and 240.6 (such as the next higher standard size up to 800 A) is allowed, and the sum of two to six breakers or sets of fuses may exceed the conductor ampacity provided the calculated load does not exceed the conductor ampacity. | From the NEC 2023 text from memory. |
+| GROU-060 | — | NEC 2023 250.53(C): bonding jumpers that connect grounding electrodes together are sized from 250.66 and installed per 250.64(A), (B) and (E); the jumper to a rod, pipe or plate never needs to be larger than 6 AWG copper. | From the NEC 2023 text from memory; the 6 AWG limit matches 250.66(A) in the knowledge base. |
+| GROU-061 | — | Ungrounded AC systems of 120-1000 V must have ground detectors that warn of a ground fault (NEC 2023 250.21(B)). High-impedance grounded neutral systems are allowed for 3-phase systems of 480-1000 V where qualified persons service the installation, ground detectors are installed and no line-to-neutral loads are served (250.36). | From the NEC 2023 text from memory. |
+| MOTO-033 | — | NEC 2023 430.37 (Table 430.37): a three-phase AC motor protected by overload units needs three of them, one in each phase conductor. | From the NEC 2023 text from memory. |
+| MOTO-034 | — | NEC 2023 430.83(E): a slash-rated controller (for example 480Y/277 V) may be used only on a solidly grounded system where the voltage to ground does not exceed the lower number and the voltage between conductors does not exceed the higher number. It may not be used on a 480 V delta or ungrounded system. | From the NEC 2023 text from memory. |
+| GENE-058 | — | NEC 2023 Table 450.3(B) Note 2: where secondary protection is required, it may be up to six circuit breakers or six sets of fuses grouped in one location, as long as their total rating does not exceed what a single device would be allowed. | From the NEC 2023 table note from memory. |
+| OVER-017 | — | NEC 2023 240.21(C)(1): the secondary conductors of a single-phase transformer with a 2-wire secondary, or a three-phase delta-delta transformer with a 3-wire secondary, may be protected by the primary overcurrent device if that device does not exceed the secondary conductor ampacity times the secondary-to-primary voltage ratio. | From the NEC 2023 text from memory. |
+| HAZA-021 | — | NEC 2023 517.18(A): each general care (Category 2) patient bed location must be supplied by at least two branch circuits, at least one from the critical branch and at least one from the normal system. | From the NEC 2023 text from memory. |
+| HAZA-022 | — | NEC 2023 501.15(C)(6): the cross-sectional area of conductors in a conduit seal may not exceed 25% of the area of rigid metal conduit of the same trade size, unless the seal is identified for a higher fill. | From the NEC 2023 text from memory. |
+| EMER-016 | — | NEC 2023 700.7(A): a sign at the service entrance must show the type and location of each on-site emergency power source. 700.4(B): when an alternate source also serves other loads, load shedding must keep priority in this order: emergency, then legally required standby, then optional standby. | From the NEC 2023 text from memory. |
+| EMER-017 | — | NEC 2023 695.4(B)(2)(a)(1): the overcurrent device(s) for an individual fire pump power source must be rated to carry indefinitely the sum of the locked-rotor current of the largest fire pump motor plus the full-load current of all other pump motors (such as pressure maintenance pumps) and the accessory equipment, so the device will not open during a fire. | From the NEC 2023 text from memory. |
 
 ## Adding or fixing content
 - The live files are `supabase/functions/_shared/kb.json` (facts) and `lib/kb-questions.json` (questions). Small fixes: edit them directly.
