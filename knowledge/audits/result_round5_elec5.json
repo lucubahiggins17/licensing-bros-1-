@@ -1,0 +1,47 @@
+{
+  "facts": [
+    {
+      "id": "E5-65",
+      "action": "fix",
+      "reason": "Wrong basis for the 25 ft tap. NEC 430.28(2) requires the 25 ft motor feeder tap to have an ampacity of at least one-third of the FEEDER CONDUCTORS' ampacity (not one-third of the feeder overcurrent device rating), and to be protected from physical damage or enclosed in a raceway. The 10 ft tap (430.28(1)) must be in an enclosed controller or raceway, and for field installations the feeder OCPD may not exceed 1000% of the tap ampacity (i.e., tap ampacity at least 1/10 of the feeder OCPD). Checked against NEC 430.28 text (Mike Holt / NFPA free access).",
+      "fixed": {
+        "fact": "NEC 2023 430.28 motor feeder taps: a tap not over 10 ft long must be enclosed by a controller or raceway and, for field installations, the feeder overcurrent device may not exceed 1000% of the tap ampacity (so the tap needs at least 1/10 of the feeder OCPD rating); a tap not over 25 ft long needs an ampacity of at least one-third of the feeder conductors' ampacity and must be protected from physical damage or enclosed in a raceway. Either way the tap must meet Part II ampacity rules and end in a motor branch-circuit protective device.",
+        "keywords": ["motor feeder tap", "430.28", "10 ft", "25 ft", "one third of feeder conductors", "1000 percent"]
+      }
+    },
+    {
+      "id": "E5-74",
+      "action": "fix",
+      "reason": "Misleading by omission. 647.4(D) has two sets of limits: (D)(1) fixed equipment 1.5% branch / 2.5% combined, and (D)(2) cord-connected equipment, where receptacle branch circuits are limited to 1% (load taken as 50% of the branch-circuit rating) and 2.0% combined. The fact gave only the fixed-equipment numbers as if they applied to all branch circuits.",
+      "fixed": {
+        "fact": "Unlike the informational-note recommendations elsewhere, NEC 2023 647.4(D) makes voltage drop limits mandatory for sensitive electronic equipment on 60/120 V technical power systems: for fixed equipment, 1.5% on branch circuits and 2.5% combined feeder plus branch circuit; for cord-connected equipment, 1% on receptacle branch circuits (figured with the receptacle load at 50% of the branch-circuit rating) and 2% combined.",
+        "keywords": ["voltage drop", "647.4", "sensitive electronic equipment", "1.5 percent", "2.5 percent", "1 percent", "technical power"]
+      }
+    },
+    {
+      "id": "E5-85",
+      "action": "fix",
+      "reason": "Omits the condition that makes the rule work: 110.26(A)(1)(b) allows smaller working spaces only BY SPECIAL PERMISSION (AHJ written consent) where exposed live parts operate at not more than 30 V rms, 42 V peak or 60 V dc.",
+      "fixed": {
+        "fact": "NEC 2023 110.26(A)(1)(b): by special permission (written consent of the AHJ), smaller working spaces are allowed where all exposed live parts operate at not more than 30 V RMS, 42 V peak or 60 V DC."
+      }
+    },
+    {
+      "id": "E5-130",
+      "action": "fix",
+      "reason": "The 'unless it is a 15 A or 20 A receptacle also covered by the wet-location rule' clause is not in 406.9(A) and is confusing. 406.9(A) says the damp-location enclosure must be weatherproof with the plug removed and covers closed, that an installation suitable for wet locations is also suitable for damp locations, defines 'protected from the weather' (roofed open porches, canopies, marquees not subject to beating rain or runoff), and requires all 15 A and 20 A, 125 V and 250 V nonlocking receptacles there to be listed weather-resistant.",
+      "fixed": {
+        "fact": "NEC 2023 406.9(A): a receptacle in a damp location (such as under a roofed open porch, canopy or marquee not subject to beating rain or water runoff) needs an enclosure that is weatherproof when the receptacle is covered (no plug inserted and covers closed); an installation suitable for wet locations also satisfies the damp-location rule. All 15 A and 20 A, 125 V and 250 V nonlocking receptacles in damp locations must be listed weather-resistant."
+      }
+    },
+    {
+      "id": "E5-140",
+      "action": "fix",
+      "reason": "Omits the key condition in 230.90(A) Exception No. 3: the sum of two to six breakers or fuse sets may exceed the service conductor ampacity only if the calculated load does not exceed the conductor ampacity. Also Exception No. 2 allows ratings complying with 240.4(B) or (C) and 240.6.",
+      "fixed": {
+        "fact": "NEC 2023 230.70(A)(2): the service disconnect may not be installed in a bathroom. 230.90(A): each ungrounded service conductor needs overload protection rated no higher than the conductor ampacity, except that a rating complying with 240.4(B) or (C) and 240.6 (such as the next higher standard size up to 800 A) is allowed, and the sum of two to six breakers or sets of fuses may exceed the conductor ampacity provided the calculated load does not exceed the conductor ampacity."
+      }
+    }
+  ],
+  "questions": []
+}
