@@ -282,7 +282,10 @@ function SupportCard({ initial }: { initial: SiteSettings["support"] }) {
 
 // ------------------------------------------------------------------------------------------------
 type VoiceHealth = { configured: boolean; ok: boolean; ms?: number; voice?: string; error?: string; stt?: boolean };
-type VoiceLink = { source: "saved" | "github" | "none"; url: string | null; voice: string | null; connected_at: string | null; machine: string | null; stt: boolean | null; code: string; github: boolean };
+type VoiceLink = {
+  source: "saved" | "github" | "none"; url: string | null; voice: string | null; connected_at: string | null; machine: string | null; stt: boolean | null; code: string; github: boolean;
+  voices?: { id: string; name: string; type: string }[]; prefer?: string; using?: string | null; usingName?: string | null;
+};
 
 /** The one PowerShell line that downloads and runs the connector with this site's connect code. */
 export function connectorCommand(code: string, scriptUrl: string, supabaseUrl: string, anon: string): string {
@@ -300,7 +303,7 @@ function VoiceCard({ initial }: { initial: NonNullable<SiteSettings["voice"]> })
   const [watching, setWatching] = useState(false);
   const [manual, setManual] = useState({ url: "", voice: "" });
 
-  const loadLink = useCallback(async (op: "get" | "new_code" | "forget" | "save" = "get", extra: Record<string, string> = {}) => {
+  const loadLink = useCallback(async (op: "get" | "new_code" | "forget" | "save" | "voices" | "prefer" = "get", extra: Record<string, string> = {}) => {
     try {
       const r = await callFn<VoiceLink>("voice", { action: "voice_admin", op, ...extra });
       setLink((prev) => {
@@ -371,6 +374,20 @@ function VoiceCard({ initial }: { initial: NonNullable<SiteSettings["voice"]> })
               <button type="button" className="btn sm navy" onClick={copyCommand}><Copy aria-hidden="true" />Copy</button>
             </div>
             {watching && <p className="note" role="status" style={{ margin: 0 }}><span className="spin" aria-hidden="true" /> Waiting for your PC to connect…</p>}
+            {link.source !== "none" && (
+              <div className={s.voicePick}>
+                <label className="field" style={{ margin: 0 }}>Voice students hear
+                  <select value={link.prefer || "Bro"} disabled={!!busy || !link.voices?.length}
+                    onChange={async (e) => { setBusy("link"); const r = await loadLink("prefer", { name: e.target.value }); setBusy(""); if (r) toast(`Students now hear "${r.usingName || e.target.value}".`); }}>
+                    {!(link.voices || []).some((v) => v.name.toLowerCase() === (link.prefer || "Bro").toLowerCase()) && <option value={link.prefer || "Bro"}>{link.prefer || "Bro"} (not found on the server)</option>}
+                    {(link.voices || []).filter((v) => v.type === "profile").map((v) => <option key={v.id} value={v.name}>{v.name} (your saved voice)</option>)}
+                    {(link.voices || []).filter((v) => v.type !== "profile").map((v) => <option key={v.id} value={v.name}>{v.name}</option>)}
+                  </select>
+                </label>
+                <span className="note">{link.using ? <>Now playing: <b>{link.usingName}</b>{link.usingName !== link.using ? ` (${link.using})` : ""}</> : link.voices?.length ? "" : "The voice server didn't list its voices; it uses the voice ID it was given."}</span>
+                <button type="button" className="btn sm ghost" disabled={!!busy} onClick={async () => { setBusy("link"); await loadLink("voices"); setBusy(""); }}><RefreshCw aria-hidden="true" />Refresh voices</button>
+              </div>
+            )}
             <div className="row" style={{ gap: 8, flexWrap: "wrap" }}>
               <button type="button" className="btn sm" disabled={!!busy} onClick={async () => { setBusy("link"); await loadLink("new_code"); setBusy(""); toast("New code made. The old command no longer works."); }}><RefreshCw aria-hidden="true" />New code</button>
               {link.source === "saved" && <button type="button" className="btn sm ghost" disabled={!!busy} onClick={async () => { setBusy("link"); await loadLink("forget"); setBusy(""); toast("Disconnected. Bro uses the phone's voice (or GitHub settings, if set)."); }}><Unplug aria-hidden="true" />Disconnect</button>}

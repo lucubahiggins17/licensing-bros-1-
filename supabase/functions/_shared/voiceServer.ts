@@ -116,7 +116,34 @@ export function transcriptText(raw: string): string {
 // The voice server's address can also come from the admin page or the PC connector (saved server-side in
 // server_settings, key "voice"), so a new tunnel address needs no GitHub change or rebuild. When saved, it wins.
 // ---------------------------------------------------------------------------------------------
-export type SavedVoice = { url?: string; voice?: string; key?: string; code?: string; connected_at?: string; stt?: boolean; machine?: string };
+export type SavedVoice = { url?: string; voice?: string; key?: string; code?: string; connected_at?: string; stt?: boolean; machine?: string; prefer?: string };
+
+/** The school's voice: the voice server's saved voice with this name is used whenever it exists. */
+export const DEFAULT_VOICE_NAME = "Bro";
+
+export type ServerVoice = { id: string; name: string; type: string };
+/** The voices a server lists (VoiceStudio: {voices:[{type,voice_id,name}]}; others: {data:[...]} or a plain array). */
+// deno-lint-ignore no-explicit-any
+export function readVoices(raw: any): ServerVoice[] {
+  const list = Array.isArray(raw?.voices) ? raw.voices : Array.isArray(raw?.data) ? raw.data : Array.isArray(raw) ? raw : [];
+  // deno-lint-ignore no-explicit-any
+  return list.map((v: any) => typeof v === "string" ? { id: v, name: v, type: "alias" } : { id: String(v?.voice_id || v?.id || v?.name || ""), name: String(v?.name || v?.voice_id || v?.id || ""), type: String(v?.type || v?.kind || "alias") })
+    .filter((v: ServerVoice) => v.id).slice(0, 300);
+}
+
+/**
+ * Which voice id to send: a saved voice whose name matches the preferred name ("Bro" unless an admin picked another)
+ * wins, then the configured voice (an id, or a name that matches a voice), then whatever was configured.
+ */
+export function pickVoice(voices: ServerVoice[], configured: string, prefer = DEFAULT_VOICE_NAME): string {
+  const norm = (x: string) => x.trim().toLowerCase();
+  const profiles = voices.filter((v) => v.type === "profile");
+  const byName = (n: string) => n ? (profiles.find((v) => norm(v.name) === norm(n)) || voices.find((v) => norm(v.name) === norm(n))) : undefined;
+  const preferred = byName(prefer);
+  if (preferred) return preferred.id;
+  if (voices.some((v) => v.id === configured)) return configured;
+  return byName(configured)?.id || configured;
+}
 
 /** Settings as the rest of this file reads them, with the saved address (and its voice and key) over GitHub's. */
 export function withSaved(saved: SavedVoice | null | undefined, env: (k: string) => string | undefined = (k) => Deno.env.get(k)) {

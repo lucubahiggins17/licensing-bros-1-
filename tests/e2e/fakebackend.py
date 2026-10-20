@@ -435,6 +435,12 @@ class FakeBackend:
                 if op == "new_code": link = {**link, "code": "newcode98765abcdefghjkmnp"}
                 if op == "forget": link = {**link, "source": "none", "url": None, "voice": None, "connected_at": None, "machine": None}
                 if op == "save": link = {**link, "source": "saved", "url": body.get("url"), "voice": body.get("voice"), "connected_at": now_iso(), "machine": "entered by hand"}
+                if op == "prefer": link = {**link, "prefer": body.get("name")}
+                if link.get("source") == "saved":
+                    voices = [{"id": "alloy", "name": "alloy", "type": "alias"}, {"id": "lucu0001", "name": "LuCuba", "type": "profile"}, {"id": "bro00042", "name": "Bro", "type": "profile"}]
+                    prefer = link.get("prefer") or "Bro"
+                    using = next((v for v in voices if v["name"].lower() == prefer.lower()), voices[0])
+                    link = {**link, "voices": voices, "prefer": prefer, "using": using["id"], "usingName": using["name"]}
                 self.voice_link = link
                 return 200, link
             if body.get("action") == "transcribe":

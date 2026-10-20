@@ -67,10 +67,13 @@ function VoiceName($v) { if ($v.name) { $v.name } else { VoiceId $v } }
 
 $chosen = $cfg.voice
 if ($chosen -and -not ($profiles | Where-Object { (VoiceId $_) -eq $chosen }) -and $profiles.Count -gt 0) { $chosen = $null }
+# The school's voice is the one saved in VoiceStudio as "Bro": use it whenever it exists
+$bro = @($profiles | Where-Object { "$(VoiceName $_)".Trim() -ieq "bro" }) | Select-Object -First 1
+if ($bro -and -not $Voice) { $chosen = VoiceId $bro }
 if (-not $chosen) {
   if ($profiles.Count -eq 0) {
-    Say "No cloned voice found in VoiceStudio yet, so Bro will use VoiceStudio's standard voice." Yellow
-    Say "Clone your voice in VoiceStudio (Voice Clone), then run this again to switch to it." Yellow
+    Say "No saved voice found in VoiceStudio yet, so Bro will use VoiceStudio's standard voice." Yellow
+    Say "Save your voice in VoiceStudio with the name Bro, then run this again to switch to it." Yellow
     $chosen = "alloy"
   } elseif ($profiles.Count -eq 1) {
     $chosen = VoiceId $profiles[0]
@@ -83,7 +86,10 @@ if (-not $chosen) {
   }
 }
 $cfg.voice = $chosen; Save-Config
-Say "[$(Stamp)] VoiceStudio is running. Bro's voice: $chosen" Green
+$label = $chosen
+$match = @($profiles | Where-Object { (VoiceId $_) -eq $chosen }) | Select-Object -First 1
+if ($match) { $label = "$(VoiceName $match) ($chosen)" }
+Say "[$(Stamp)] VoiceStudio is running. Bro's voice: $label" Green
 
 # ---------------------------------------------------------------- 2. Can VoiceStudio transcribe? (clear-voice listening)
 $stt = $false

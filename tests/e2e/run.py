@@ -1175,6 +1175,11 @@ def voice_connector(browser):
     fake.voice_link = {"source": "saved", "url": "https://brave-tiger.trycloudflare.com", "voice": "lucu0001", "connected_at": now_iso(), "machine": "LUCUBA-PC", "stt": True, "code": "testcode2345abcdefghjkmnpq", "github": False}
     page.wait_for_timeout(6500)
     check("when the PC connects, the page says so", card.get_by_text("Connected from LUCUBA-PC", exact=False).count() == 1 and card.get_by_text("voice lucu0001", exact=False).count() == 1)
+    pick = card.get_by_label("Voice students hear")
+    check("students hear the VoiceStudio voice named Bro by default", pick.input_value() == "Bro" and card.get_by_text("Now playing: Bro", exact=False).count() == 1, pick.input_value())
+    pick.select_option("LuCuba"); page.wait_for_timeout(600)
+    check("an admin can switch to another saved voice", card.get_by_text("Now playing: LuCuba", exact=False).count() == 1)
+    pick.select_option("Bro"); page.wait_for_timeout(600)
     card.get_by_role("button", name="New code").click(); page.wait_for_timeout(600)
     check("a new code replaces the old command", "newcode98765abcdefghjkmnp" in card.locator("code[aria-label='Connector command']").inner_text())
     shot(page, "admin-voice-connector")

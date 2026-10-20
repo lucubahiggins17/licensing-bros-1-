@@ -67,3 +67,16 @@ Deno.test("PC connector: only public https addresses, constant-time codes, safe 
   assert.equal(cleanVoiceName(" lucu0001 "), "lucu0001");
   assert.equal(cleanVoiceName("voice; rm -rf"), "");
 });
+
+import { pickVoice, readVoices } from "../../supabase/functions/_shared/voiceServer.ts";
+Deno.test("the school's voice: the saved voice named Bro wins; an admin can pick another by name", () => {
+  const vs = readVoices({ voices: [{ type: "alias", voice_id: "alloy", name: "alloy" }, { type: "profile", voice_id: "lucu0001", name: "LuCuba" }, { type: "profile", voice_id: "bro00042", name: " bro " }] });
+  assert.equal(vs.length, 3);
+  assert.equal(pickVoice(vs, "lucu0001"), "bro00042");          // Bro exists: always Bro, even if another id was configured
+  assert.equal(pickVoice(vs, "alloy", "LuCuba"), "lucu0001");  // an admin picked another voice by name
+  assert.equal(pickVoice(vs.filter((v) => v.id !== "bro00042"), "lucu0001"), "lucu0001"); // no Bro: the configured voice
+  assert.equal(pickVoice(vs.filter((v) => v.id !== "bro00042"), "LuCuba"), "lucu0001");   // configured by name
+  assert.equal(pickVoice([], "alloy"), "alloy");                // the server doesn't list voices
+  assert.deepEqual(readVoices({ data: [{ id: "v1", name: "One" }] }), [{ id: "v1", name: "One", type: "alias" }]);
+  assert.deepEqual(readVoices(["alloy"]), [{ id: "alloy", name: "alloy", type: "alias" }]);
+});

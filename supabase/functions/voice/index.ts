@@ -7,10 +7,26 @@
 // PC connector); the app never sees them, except admins on the settings page.
 import { cors, handler, HttpError, json, readBody, requireUser, staffRole } from "../_shared/common.ts";
 import {
-  AUDIO_TYPES, cleanVoiceName, newConnectCode, publicVoiceUrl, speakable, speechRequest, speechUrl, sttConfig, transcriptionRequest,
-  transcriptionUrl, transcriptText, voiceConfig, withSaved
+  AUDIO_TYPES, cleanVoiceName, DEFAULT_VOICE_NAME, newConnectCode, pickVoice, publicVoiceUrl, readVoices, type ServerVoice, speakable, speechRequest,
+  speechUrl, sttConfig, transcriptionRequest, transcriptionUrl, transcriptText, type VoiceConfig, voiceConfig, withSaved
 } from "../_shared/voiceServer.ts";
 import { loadSavedVoice, saveVoice } from "../_shared/voiceStore.ts";
+
+/** The voices the server has (cached a few minutes per server), so "Bro" can be found by name. */
+const voiceCache = new Map<string, { at: number; list: ServerVoice[] }>();
+async function serverVoices(c: VoiceConfig, fresh = false): Promise<ServerVoice[]> {
+  const hit = voiceCache.get(c.base);
+  if (!fresh && hit && Date.now() - hit.at < 300_000) return hit.list;
+  let list: ServerVoice[] = [];
+  try {
+    const root = c.base.replace(/\/v1$/, "");
+    const r = await fetch(`${root}/v1/audio/voices`, { headers: c.key ? { authorization: `Bearer ${c.key}` } : {}, signal: AbortSignal.timeout(8000) });
+    if (r.ok) list = readVoices(await r.json());
+    else await r.body?.cancel();
+  } catch { /* the server may not list voices (OpenAI): use the configured voice as is */ }
+  voiceCache.set(c.base, { at: Date.now(), list });
+  return list;
+}
 
 const NOT_SET = "Bro's studio voice isn't connected. Run the voice connector on the PC with VoiceStudio (Admin → Settings → Bro's voice), or keep using the phone's voice.";
 
@@ -19,7 +35,10 @@ Deno.serve(handler(async (req) => {
   const body = await readBody(req);
   const saved = await loadSavedVoice();
   const env = withSaved(saved);
-  const c = voiceConfig(env);
+  const c0 = voiceConfig(env);
+  // Use the school's voice ("Bro", or the name an admin picked) whenever the server has it
+  const prefer = saved?.prefer || DEFAULT_VOICE_NAME;
+  const c = c0 && body.action !== "voice_admin" && body.action !== "transcribe" ? { ...c0, voice: pickVoice(await serverVoices(c0), c0.voice, prefer) } : c0;
 
   if (body.action === "voice_admin") {
     if ((await staffRole(user.id)) !== "admin") throw new HttpError(403, "forbidden", "Only admins can change the voice server.");
@@ -37,13 +56,27 @@ Deno.serve(handler(async (req) => {
       await saveVoice(next);
       Object.assign(cur, next);
     }
+    if (op === "prefer") {
+      const name = String(body.name || "").trim().slice(0, 80);
+      if (!name) throw new HttpError(400, "bad_request", "Pick a voice.");
+      const next = { ...cur, prefer: name };
+      await saveVoice(next);
+      Object.assign(cur, next);
+    }
     if (op === "forget") {
       const next = { code: cur.code };
       await saveVoice(next);
       for (const k of Object.keys(cur)) if (k !== "code") delete (cur as Record<string, unknown>)[k];
     }
     const github = !!Deno.env.get("VOICE_API_URL");
+    // The voices on the connected server, and the one students hear
+    const live = voiceConfig(withSaved(cur));
+    const voices = live ? await serverVoices(live, op === "voices" || op === "prefer") : [];
+    const preferName = cur.prefer || DEFAULT_VOICE_NAME;
+    const using = live ? pickVoice(voices, live.voice, preferName) : null;
     return json({
+      voices: voices.map((v) => ({ id: v.id, name: v.name, type: v.type })), prefer: preferName, using,
+      usingName: voices.find((v) => v.id === using)?.name || using,
       source: cur.url ? "saved" : github ? "github" : "none",
       url: cur.url || null, voice: cur.voice || (cur.url ? null : Deno.env.get("VOICE_NAME") || null),
       connected_at: cur.connected_at || null, machine: cur.machine || null, stt: cur.stt ?? null, hasKey: !!cur.key,

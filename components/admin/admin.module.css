@@ -526,3 +526,6 @@
 .cmd{flex:1;min-width:0;display:block;font:12px/1.45 var(--mono);background:var(--navy);color:#e8eaf6;border-radius:8px;padding:10px 12px;overflow-wrap:anywhere;white-space:pre-wrap;user-select:all}
 .manual summary{cursor:pointer;font-weight:700;font-size:13.5px}
 .manual[open]{display:flex;flex-direction:column;gap:8px}
+.voicePick{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:6px 10px;align-items:end}
+.voicePick .note{grid-column:1 / -1;margin:0}
+.voicePick :global(.btn){align-self:end}
