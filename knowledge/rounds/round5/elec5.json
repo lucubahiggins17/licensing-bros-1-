@@ -1,0 +1,3401 @@
+{
+ "source": "Round 5 electrical deep dive (elec5): NEC 2023 lookup tables and calculations - ampacity, box/conduit fill, load calcs, grounding, motors, services, special occupancies, theory",
+ "facts": [
+  {
+   "id": "E5-1",
+   "topic": "Conductors & ampacity",
+   "trade": "elec",
+   "state": null,
+   "source": "NEC 2023 Table 310.16; 240.4(D)",
+   "fact": "NEC 2023 Table 310.16 lists 12 AWG copper at 20 A (60 C), 25 A (75 C) and 30 A (90 C). Even so, 240.4(D) limits 12 AWG copper to a 20 A overcurrent device unless another rule (such as motor circuits) allows more.",
+   "status": "verified",
+   "note": "Values match NEC 2023 Table 310.16 as reproduced in NFPA TIA Log 1691 public comment document (docinfofiles.nfpa.org).",
+   "keywords": [
+    "12 awg",
+    "ampacity",
+    "310.16",
+    "copper",
+    "20 amp",
+    "240.4(D)"
+   ]
+  },
+  {
+   "id": "E5-2",
+   "topic": "Conductors & ampacity",
+   "trade": "elec",
+   "state": null,
+   "source": "NEC 2023 Table 310.16; 240.4(D)",
+   "fact": "NEC 2023 Table 310.16 aluminum/copper-clad aluminum ampacities (60 C / 75 C / 90 C): 12 AWG 15/20/25 A; 10 AWG 25/30/35 A; 8 AWG 35/40/45 A. 240.4(D) still limits 12 AWG aluminum to 15 A and 10 AWG aluminum to 25 A overcurrent protection.",
+   "status": "verified",
+   "note": "Values match NEC 2023 Table 310.16 as reproduced in NFPA TIA Log 1691 public comment document (docinfofiles.nfpa.org).",
+   "keywords": [
+    "aluminum",
+    "ampacity",
+    "310.16",
+    "12 awg",
+    "10 awg",
+    "8 awg"
+   ]
+  },
+  {
+   "id": "E5-3",
+   "topic": "Conductors & ampacity",
+   "trade": "elec",
+   "state": null,
+   "source": "NEC 2023 Table 310.16",
+   "fact": "NEC 2023 Table 310.16 aluminum ampacities (60 C / 75 C / 90 C): 6 AWG 40/50/55 A; 4 AWG 55/65/75 A; 3 AWG 65/75/85 A; 2 AWG 75/90/100 A; 1 AWG 85/100/115 A.",
+   "status": "verified",
+   "note": "Values match NEC 2023 Table 310.16 as reproduced in NFPA TIA Log 1691 public comment document (docinfofiles.nfpa.org).",
+   "keywords": [
+    "aluminum",
+    "ampacity",
+    "6 awg",
+    "4 awg",
+    "2 awg",
+    "310.16"
+   ]
+  },
+  {
+   "id": "E5-4",
+   "topic": "Conductors & ampacity",
+   "trade": "elec",
+   "state": null,
+   "source": "NEC 2023 Table 310.16",
+   "fact": "NEC 2023 Table 310.16 aluminum ampacities (60 C / 75 C / 90 C): 1/0 AWG 100/120/135 A; 2/0 AWG 115/135/150 A; 3/0 AWG 130/155/175 A; 4/0 AWG 150/180/205 A.",
+   "status": "verified",
+   "note": "Values match NEC 2023 Table 310.16 as reproduced in NFPA TIA Log 1691 public comment document (docinfofiles.nfpa.org).",
+   "keywords": [
+    "aluminum",
+    "ampacity",
+    "1/0",
+    "2/0",
+    "3/0",
+    "4/0"
+   ]
+  },
+  {
+   "id": "E5-5",
+   "topic": "Conductors & ampacity",
+   "trade": "elec",
+   "state": null,
+   "source": "NEC 2023 Table 310.16",
+   "fact": "NEC 2023 Table 310.16 aluminum ampacities (60 C / 75 C / 90 C): 250 kcmil 170/205/230 A; 300 kcmil 195/230/260 A; 350 kcmil 210/250/280 A; 400 kcmil 225/270/305 A; 500 kcmil 260/310/350 A.",
+   "status": "verified",
+   "note": "Values match NEC 2023 Table 310.16 as reproduced in NFPA TIA Log 1691 public comment document (docinfofiles.nfpa.org).",
+   "keywords": [
+    "aluminum",
+    "kcmil",
+    "ampacity",
+    "250 kcmil",
+    "350 kcmil",
+    "500 kcmil"
+   ]
+  },
+  {
+   "id": "E5-6",
+   "topic": "Conductors & ampacity",
+   "trade": "elec",
+   "state": null,
+   "source": "NEC 2023 Table 310.16",
+   "fact": "NEC 2023 Table 310.16 aluminum ampacities (60 C / 75 C / 90 C): 600 kcmil 285/340/385 A; 750 kcmil 320/385/435 A; 1000 kcmil 375/445/500 A.",
+   "status": "verified",
+   "note": "Values match NEC 2023 Table 310.16 as reproduced in NFPA TIA Log 1691 public comment document (docinfofiles.nfpa.org).",
+   "keywords": [
+    "aluminum",
+    "kcmil",
+    "ampacity",
+    "600 kcmil",
+    "750 kcmil",
+    "1000 kcmil"
+   ]
+  },
+  {
+   "id": "E5-7",
+   "topic": "Conductors & ampacity",
+   "trade": "elec",
+   "state": null,
+   "source": "NEC 2023 Table 310.16",
+   "fact": "NEC 2023 Table 310.16 copper ampacities (60 C / 75 C / 90 C): 400 kcmil 280/335/380 A; 600 kcmil 350/420/475 A; 700 kcmil 385/460/520 A; 750 kcmil 400/475/535 A.",
+   "status": "verified",
+   "note": "Values match NEC 2023 Table 310.16 as reproduced in NFPA TIA Log 1691 public comment document (docinfofiles.nfpa.org).",
+   "keywords": [
+    "copper",
+    "kcmil",
+    "ampacity",
+    "400 kcmil",
+    "600 kcmil",
+    "750 kcmil"
+   ]
+  },
+  {
+   "id": "E5-8",
+   "topic": "Conductors & ampacity",
+   "trade": "elec",
+   "state": null,
+   "source": "NEC 2023 Table 310.16",
+   "fact": "NEC 2023 Table 310.16 copper ampacities (60 C / 75 C / 90 C): 800 kcmil 410/490/555 A; 900 kcmil 435/520/585 A; 1000 kcmil 455/545/615 A; 2000 kcmil 555/665/750 A (the largest size in the table).",
+   "status": "verified",
+   "note": "Values match NEC 2023 Table 310.16 as reproduced in NFPA TIA Log 1691 public comment document (docinfofiles.nfpa.org).",
+   "keywords": [
+    "copper",
+    "kcmil",
+    "ampacity",
+    "1000 kcmil",
+    "2000 kcmil",
+    "310.16"
+   ]
+  },
+  {
+   "id": "E5-9",
+   "topic": "Conductors & ampacity",
+   "trade": "elec",
+   "state": null,
+   "source": "NEC 2023 Table 310.15(B)(1)(1)",
+   "fact": "NEC 2023 Table 310.15(B)(1)(1) correction factors for ambients cooler than 30 C (60 C / 75 C / 90 C columns): 10 C (50 F) or less 1.29/1.20/1.15; 11-15 C 1.22/1.15/1.12; 16-20 C 1.15/1.11/1.08; 21-25 C 1.08/1.05/1.04; 26-30 C 1.00. Cold ambients raise allowable ampacity.",
+   "status": "verified",
+   "note": "Values match the 2020 table (Table 310.15(B)(1)) reproduced by Elliott Electric Supply; NEC 2023 only renumbered the table (confirmed in NFPA 2026 First Draft text, which reproduces Table 310.15(B)(1)(1)).",
+   "keywords": [
+    "correction factor",
+    "ambient temperature",
+    "cold",
+    "310.15(B)",
+    "derate",
+    "ampacity"
+   ]
+  },
+  {
+   "id": "E5-10",
+   "topic": "Conductors & ampacity",
+   "trade": "elec",
+   "state": null,
+   "source": "NEC 2023 Table 310.15(B)(1)(1)",
+   "fact": "NEC 2023 Table 310.15(B)(1)(1) correction factors for hot ambients (60 C / 75 C / 90 C): 51-55 C (124-131 F) 0.41/0.67/0.76; 56-60 C 0.58 (75 C) and 0.71 (90 C); 61-65 C 0.47 and 0.65; 66-70 C 0.33 and 0.58. No factor is given for 60 C conductors above 55 C, so they cannot be used there.",
+   "status": "verified",
+   "note": "Values match the 2020 table reproduced by Elliott Electric Supply; NEC 2023 renumbered it only.",
+   "keywords": [
+    "correction factor",
+    "hot ambient",
+    "310.15(B)",
+    "derate",
+    "attic",
+    "boiler room"
+   ]
+  },
+  {
+   "id": "E5-11",
+   "topic": "Conductors & ampacity",
+   "trade": "elec",
+   "state": null,
+   "source": "NEC 2023 Table 310.15(B)(1)(1)",
+   "fact": "Above 70 C (158 F) only 90 C conductors have correction factors in NEC 2023 Table 310.15(B)(1)(1): 71-75 C 0.50; 76-80 C 0.41; 81-85 C 0.29. 75 C conductors have no factor above 70 C.",
+   "status": "verified",
+   "note": "Values match the 2020 table reproduced by Elliott Electric Supply; NEC 2023 renumbered it only.",
+   "keywords": [
+    "correction factor",
+    "90 c",
+    "high temperature",
+    "310.15(B)",
+    "ambient",
+    "derate"
+   ]
+  },
+  {
+   "id": "E5-12",
+   "topic": "Boxes & enclosures",
+   "trade": "elec",
+   "state": null,
+   "source": "NEC 2023 Table 314.16(A)",
+   "fact": "NEC 2023 Table 314.16(A) round/octagonal metal boxes: 4 x 1-1/4 in = 12.5 cu in (max 6 of 14 AWG, 5 of 12 AWG, 5 of 10 AWG); 4 x 2-1/8 in = 21.5 cu in (max 10 of 14 AWG, 9 of 12 AWG, 8 of 10 AWG).",
+   "status": "verified",
+   "note": "Table 314.16(A) is unchanged from NEC 2011 through 2023; checked against a manufacturer reprint (Thomas & Betts) and the volume/allowance arithmetic.",
+   "keywords": [
+    "octagon box",
+    "box fill",
+    "314.16",
+    "cubic inches",
+    "round box",
+    "max conductors"
+   ]
+  },
+  {
+   "id": "E5-13",
+   "topic": "Boxes & enclosures",
+   "trade": "elec",
+   "state": null,
+   "source": "NEC 2023 Table 314.16(A)",
+   "fact": "NEC 2023 Table 314.16(A) 4 in square boxes: 1-1/4 in deep = 18.0 cu in (max 9 of 14 AWG, 8 of 12 AWG, 7 of 10 AWG); 1-1/2 in deep = 21.0 cu in (max 10 of 14 AWG, 9 of 12 AWG, 8 of 10 AWG).",
+   "status": "verified",
+   "note": "Table 314.16(A) is unchanged from NEC 2011 through 2023; checked against a manufacturer reprint (Thomas & Betts) and the volume/allowance arithmetic.",
+   "keywords": [
+    "4 square",
+    "1900 box",
+    "box fill",
+    "314.16",
+    "cubic inches",
+    "max conductors"
+   ]
+  },
+  {
+   "id": "E5-14",
+   "topic": "Boxes & enclosures",
+   "trade": "elec",
+   "state": null,
+   "source": "NEC 2023 Table 314.16(A)",
+   "fact": "NEC 2023 Table 314.16(A) 4-11/16 in square boxes: 1-1/4 in deep = 25.5 cu in (12 of 14 AWG, 11 of 12 AWG, 10 of 10 AWG); 1-1/2 in deep = 29.5 cu in (14, 13, 11); 2-1/8 in deep = 42.0 cu in (21 of 14 AWG, 18 of 12 AWG, 16 of 10 AWG).",
+   "status": "verified",
+   "note": "Table 314.16(A) is unchanged from NEC 2011 through 2023; checked against a manufacturer reprint (Thomas & Betts) and the volume/allowance arithmetic.",
+   "keywords": [
+    "4-11/16 box",
+    "box fill",
+    "314.16",
+    "cubic inches",
+    "max conductors",
+    "square box"
+   ]
+  },
+  {
+   "id": "E5-15",
+   "topic": "Boxes & enclosures",
+   "trade": "elec",
+   "state": null,
+   "source": "NEC 2023 Table 314.16(A)",
+   "fact": "NEC 2023 Table 314.16(A) 3 x 2 in device boxes by depth: 1-1/2 in = 7.5 cu in; 2 in = 10.0; 2-1/4 in = 10.5; 2-1/2 in = 12.5; 2-3/4 in = 14.0; 3-1/2 in = 18.0 cu in. For example, a 3 x 2 x 2-3/4 in box holds at most 7 of 14 AWG or 6 of 12 AWG.",
+   "status": "verified",
+   "note": "Table 314.16(A) is unchanged from NEC 2011 through 2023; checked against a manufacturer reprint (Thomas & Betts) and the volume/allowance arithmetic.",
+   "keywords": [
+    "device box",
+    "single gang",
+    "box fill",
+    "314.16",
+    "cubic inches",
+    "3x2 box"
+   ]
+  },
+  {
+   "id": "E5-16",
+   "topic": "Boxes & enclosures",
+   "trade": "elec",
+   "state": null,
+   "source": "NEC 2023 Table 314.16(A)",
+   "fact": "NEC 2023 Table 314.16(A) other boxes: 4 x 2-1/8 in device boxes 1-1/2 in deep 10.3 cu in, 1-7/8 in deep 13.0, 2-1/8 in deep 14.5; masonry boxes 3-3/4 x 2 x 2-1/2 in 14.0 and 3-3/4 x 2 x 3-1/2 in 21.0; FS single-gang 13.5, FD single-gang 18.0, FS multiple-gang 18.0, FD multiple-gang 24.0 cu in.",
+   "status": "verified",
+   "note": "Table 314.16(A) is unchanged from NEC 2011 through 2023; checked against a manufacturer reprint (Thomas & Betts) and the volume/allowance arithmetic.",
+   "keywords": [
+    "masonry box",
+    "FS box",
+    "FD box",
+    "handy box",
+    "box fill",
+    "314.16"
+   ]
+  },
+  {
+   "id": "E5-17",
+   "topic": "Boxes & enclosures",
+   "trade": "elec",
+   "state": null,
+   "source": "NEC 2023 Table 314.16(A); 314.16(B)",
+   "fact": "The maximum-conductor columns in NEC 2023 Table 314.16(A) apply only when the box has no other allowances (clamps, support fittings, devices or equipment grounding conductors). If any of those are present, add up the volume allowances under 314.16(B) and compare to the box volume instead.",
+   "status": "verified",
+   "note": "Table heading note: maximum number of conductors applies where no volume allowances are required by 314.16(B)(2) through (B)(5).",
+   "keywords": [
+    "box fill",
+    "max conductors",
+    "314.16",
+    "deductions",
+    "clamps",
+    "device"
+   ]
+  },
+  {
+   "id": "E5-18",
+   "topic": "Motors (Art. 430)",
+   "trade": "elec",
+   "state": null,
+   "source": "NEC 2023 Table 430.250",
+   "fact": "NEC 2023 Table 430.250 three-phase induction motor full-load current at 208 V: 1/2 hp 2.4 A; 3/4 hp 3.5 A; 1 hp 4.6 A; 1-1/2 hp 6.6 A; 2 hp 7.5 A; 3 hp 10.6 A; 5 hp 16.7 A.",
+   "status": "verified",
+   "note": "Matches NEC Table 430.250 values reproduced by Elliott Electric Supply (230/460 V) and Ace Industries motor chart (208/575 V); table values are unchanged in NEC 2023.",
+   "keywords": [
+    "208 volt",
+    "motor FLC",
+    "430.250",
+    "three phase",
+    "full load current",
+    "small motors"
+   ]
+  },
+  {
+   "id": "E5-19",
+   "topic": "Motors (Art. 430)",
+   "trade": "elec",
+   "state": null,
+   "source": "NEC 2023 Table 430.250",
+   "fact": "NEC 2023 Table 430.250 three-phase motor full-load current at 208 V: 7-1/2 hp 24.2 A; 10 hp 30.8 A; 15 hp 46.2 A; 20 hp 59.4 A; 25 hp 74.8 A; 30 hp 88 A; 40 hp 114 A; 50 hp 143 A.",
+   "status": "verified",
+   "note": "Matches NEC Table 430.250 values reproduced by Elliott Electric Supply (230/460 V) and Ace Industries motor chart (208/575 V); table values are unchanged in NEC 2023.",
+   "keywords": [
+    "208 volt",
+    "motor FLC",
+    "430.250",
+    "three phase",
+    "15 hp",
+    "25 hp"
+   ]
+  },
+  {
+   "id": "E5-20",
+   "topic": "Motors (Art. 430)",
+   "trade": "elec",
+   "state": null,
+   "source": "NEC 2023 Table 430.250",
+   "fact": "NEC 2023 Table 430.250 three-phase motor full-load current: at 460 V, 25 hp 34 A, 30 hp 40 A, 40 hp 52 A, 50 hp 65 A; at 230 V, 1/2 hp 2.2 A, 3/4 hp 3.2 A, 1-1/2 hp 6.0 A, 2 hp 6.8 A.",
+   "status": "verified",
+   "note": "Matches NEC Table 430.250 values reproduced by Elliott Electric Supply (230/460 V) and Ace Industries motor chart (208/575 V); table values are unchanged in NEC 2023.",
+   "keywords": [
+    "460 volt",
+    "230 volt",
+    "motor FLC",
+    "430.250",
+    "25 hp",
+    "50 hp"
+   ]
+  },
+  {
+   "id": "E5-21",
+   "topic": "Motors (Art. 430)",
+   "trade": "elec",
+   "state": null,
+   "source": "NEC 2023 Table 430.250",
+   "fact": "NEC 2023 Table 430.250 three-phase motor full-load current at 575 V: 1 hp 1.7 A; 5 hp 6.1 A; 10 hp 11 A; 15 hp 17 A; 20 hp 22 A; 25 hp 27 A; 50 hp 52 A. Use the 575 V column for a 600 V system.",
+   "status": "verified",
+   "note": "Matches NEC Table 430.250 values reproduced by Elliott Electric Supply (230/460 V) and Ace Industries motor chart (208/575 V); table values are unchanged in NEC 2023.",
+   "keywords": [
+    "575 volt",
+    "600 volt",
+    "motor FLC",
+    "430.250",
+    "three phase",
+    "full load current"
+   ]
+  },
+  {
+   "id": "E5-22",
+   "topic": "Motors (Art. 430)",
+   "trade": "elec",
+   "state": null,
+   "source": "NEC 2023 Table 430.248",
+   "fact": "NEC 2023 Table 430.248 single-phase motor full-load current (115 V / 230 V): 3 hp 34/17 A; 5 hp 56/28 A; 7-1/2 hp 80/40 A; 10 hp 100/50 A.",
+   "status": "verified",
+   "note": "Matches NEC Table 430.250 values reproduced by Elliott Electric Supply (230/460 V) and Ace Industries motor chart (208/575 V); table values are unchanged in NEC 2023.",
+   "keywords": [
+    "single phase",
+    "motor FLC",
+    "430.248",
+    "230 volt",
+    "5 hp",
+    "full load current"
+   ]
+  },
+  {
+   "id": "E5-23",
+   "topic": "Motors (Art. 430)",
+   "trade": "elec",
+   "state": null,
+   "source": "NEC 2023 Table 430.248",
+   "fact": "NEC 2023 Table 430.248 also has a 208 V single-phase column whose values are 110% of the 230 V values: 1 hp 8.8 A; 2 hp 13.2 A; 3 hp 18.7 A; 5 hp 30.8 A; 7-1/2 hp 44 A; 10 hp 55 A.",
+   "status": "verified",
+   "note": "Matches the single-phase FLC table reproduced by Transcat (motor reference sheet); values unchanged in NEC 2023.",
+   "keywords": [
+    "208 volt",
+    "single phase",
+    "motor FLC",
+    "430.248",
+    "3 hp",
+    "5 hp"
+   ]
+  },
+  {
+   "id": "E5-24",
+   "topic": "Conduit fill (Chapter 9)",
+   "trade": "elec",
+   "state": null,
+   "source": "NEC 2023 Chapter 9 Table 4",
+   "fact": "NEC 2023 Chapter 9 Table 4 areas used for 60% nipple fill: 2 in EMT 2.013 sq in; 1-1/2 in RMC 1.243 sq in; 2 in RMC 2.045 sq in. The 60% column is used only for nipples 24 in or shorter (Chapter 9 Note 4).",
+   "status": "verified",
+   "note": "Values appear in Mike Holt Enterprises sample workbook pages (Chapter 9 tables); Chapter 9 table values unchanged in NEC 2023.",
+   "keywords": [
+    "nipple",
+    "60 percent",
+    "table 4",
+    "EMT",
+    "RMC",
+    "conduit fill"
+   ]
+  },
+  {
+   "id": "E5-25",
+   "topic": "Conduit fill (Chapter 9)",
+   "trade": "elec",
+   "state": null,
+   "source": "NEC 2023 Chapter 9 Table 4",
+   "fact": "NEC 2023 Chapter 9 Table 4 sample areas: 3 in Schedule 40 PVC at 40% = 2.907 sq in; 1-1/2 in Schedule 80 PVC at 40% = 0.684 sq in; 1/2 in EMT at 53% (one conductor) = 0.161 sq in. Schedule 80 PVC has a smaller inside area than Schedule 40 of the same trade size, so it holds fewer wires.",
+   "status": "verified",
+   "note": "3 in PVC-40 and 1/2 EMT 53% from Mike Holt sample pages; 1-1/2 in PVC-80 0.684 from EC&M Chapter 9 article; table unchanged in NEC 2023.",
+   "keywords": [
+    "PVC",
+    "schedule 80",
+    "schedule 40",
+    "table 4",
+    "conduit fill",
+    "53 percent"
+   ]
+  },
+  {
+   "id": "E5-26",
+   "topic": "Conduit fill (Chapter 9)",
+   "trade": "elec",
+   "state": null,
+   "source": "NEC 2023 Chapter 9 Table 5",
+   "fact": "NEC 2023 Chapter 9 Table 5 areas: 250 kcmil THHN 0.3970 sq in; 500 kcmil THHN 0.7073 sq in; 10 AWG THW 0.0243 sq in (bigger than 10 AWG THHN at 0.0211, because THW insulation is thicker).",
+   "status": "verified",
+   "note": "Values appear in Mike Holt Enterprises sample workbook pages (Chapter 9 tables); Chapter 9 table values unchanged in NEC 2023.",
+   "keywords": [
+    "THHN",
+    "THW",
+    "table 5",
+    "conductor area",
+    "kcmil",
+    "conduit fill"
+   ]
+  },
+  {
+   "id": "E5-27",
+   "topic": "Conduit fill (Chapter 9)",
+   "trade": "elec",
+   "state": null,
+   "source": "NEC 2023 Chapter 9 Table 8; Chapter 9 Note 8",
+   "fact": "Bare conductors in a raceway (such as a bare EGC) use NEC 2023 Chapter 9 Table 8 areas: stranded 14 AWG 0.004 sq in; 12 AWG 0.006; 10 AWG 0.011; 8 AWG 0.017; 6 AWG 0.027 sq in.",
+   "status": "verified",
+   "note": "Values appear in Mike Holt Enterprises sample workbook pages (Chapter 9 tables); Chapter 9 table values unchanged in NEC 2023.",
+   "keywords": [
+    "bare conductor",
+    "table 8",
+    "EGC",
+    "conduit fill",
+    "stranded",
+    "area"
+   ]
+  },
+  {
+   "id": "E5-28",
+   "topic": "Conduit fill (Chapter 9)",
+   "trade": "elec",
+   "state": null,
+   "source": "NEC 2023 Chapter 9 Tables 1, 4, 5 and Note 7",
+   "fact": "Example: 1 in EMT at 40% fill (0.346 sq in) holds 35 of 14 AWG THHN (0.346 / 0.0097 = 35.7), 26 of 12 AWG THHN (26.0), 16 of 10 AWG THHN (16.4) and 9 of 8 AWG THHN (9.45). Decimals below 0.8 are dropped (Note 7).",
+   "status": "verified",
+   "note": "Calculated from verified Table 4 (1 in EMT 0.346) and Table 5 values; matches Annex C Table C.1 method.",
+   "keywords": [
+    "1 inch EMT",
+    "how many wires",
+    "THHN",
+    "conduit fill",
+    "annex C",
+    "12 awg"
+   ]
+  },
+  {
+   "id": "E5-29",
+   "topic": "Conductors & ampacity",
+   "trade": "elec",
+   "state": null,
+   "source": "NEC 2023 310.15(C)(1)(c)",
+   "fact": "NEC 2023 310.15(C)(1)(c): adjustment factors do not apply to underground conductors entering or leaving an outdoor trench if they are protected by RMC, IMC, RTRC, PVC or HDPE no longer than 10 ft and there are no more than four conductors.",
+   "status": "verified",
+   "note": "Item (c) text confirmed in NFPA's reproduction of 310.15(C)(1) (2026 First Draft report); 10 ft / four-conductor limits from the 2023 text.",
+   "keywords": [
+    "adjustment factor",
+    "trench",
+    "underground",
+    "riser",
+    "310.15(C)",
+    "exception"
+   ]
+  },
+  {
+   "id": "E5-30",
+   "topic": "Conductors & ampacity",
+   "trade": "elec",
+   "state": null,
+   "source": "NEC 2023 310.15(C)(1)(d), (e)",
+   "fact": "NEC 2023 310.15(C)(1)(d): no adjustment factor is needed for Type AC or MC cable without an overall outer jacket when each cable has no more than three current-carrying 12 AWG copper conductors and no more than 20 current-carrying conductors are bundled or stacked. Under (e), if more than 20 such conductors are bundled for more than 24 in, a 60% adjustment factor applies.",
+   "status": "verified",
+   "note": "Item (d) wording confirmed in NFPA's reproduction of 310.15(C)(1); the 2026 draft merges (d) and (e). The 20-conductor and 60% values are from the 2023 text.",
+   "keywords": [
+    "MC cable",
+    "AC cable",
+    "bundled",
+    "60 percent",
+    "adjustment factor",
+    "310.15(C)"
+   ]
+  },
+  {
+   "id": "E5-31",
+   "topic": "Cables & raceways",
+   "trade": "elec",
+   "state": null,
+   "source": "NEC 2023 334.80",
+   "fact": "NEC 2023 334.80: when more than two NM cables with two or more current-carrying conductors pass, without spacing, through the same opening in wood framing that will be sealed with thermal insulation, caulk or sealing foam, each conductor's ampacity must be adjusted per Table 310.15(C)(1), and the final value may not exceed the 60 C ampacity. Example: four 14/2 NM cables (8 conductors) = 25 A x 0.70 = 17.5 A, but the 60 C limit keeps it at 15 A. The same adjustment applies when more than two such cables touch thermal insulation without spacing.",
+   "status": "verified",
+   "note": "Sealed-opening rule, 60 C limit and example from EC&M (Charles Miller, Sizing Conductors Part VIII, 2011 NEC); the thermal-insulation sentence was added in NEC 2014 and remains in 2023.",
+   "keywords": [
+    "NM cable",
+    "bundling",
+    "derate",
+    "thermal insulation",
+    "334.80",
+    "romex"
+   ]
+  },
+  {
+   "id": "E5-32",
+   "topic": "General requirements (Art. 110)",
+   "trade": "elec",
+   "state": null,
+   "source": "NEC 2023 110.14(C)(1)(a)(4)",
+   "fact": "NEC 2023 110.14(C)(1)(a)(4): even on circuits of 100 A or less, conductors rated 75 C or higher may be used at their 75 C ampacity for motors marked with NEMA design letter B, C or D. Example: a 20 hp, 230 V, 3-phase Design B motor (54 A table FLC) needs 54 x 1.25 = 68 A, so 4 AWG THHN (85 A at 75 C), not 6 AWG (65 A at 75 C).",
+   "status": "verified",
+   "note": "Rule and example from EC&M (Charles Miller, Sizing Conductors Part XLIV); provision is unchanged in NEC 2023.",
+   "keywords": [
+    "motor",
+    "design B",
+    "75 C",
+    "termination",
+    "110.14(C)",
+    "conductor sizing"
+   ]
+  },
+  {
+   "id": "E5-33",
+   "topic": "General requirements (Art. 110)",
+   "trade": "elec",
+   "state": null,
+   "source": "NEC 2023 110.14(C)(1)(a)",
+   "fact": "Under NEC 2023 110.14(C)(1)(a), a 90 C conductor (such as THHN) on a 100 A-or-less circuit is still limited to its 60 C ampacity unless the terminals are listed and marked 75 C. The 90 C value may be used only as the starting point for correction and adjustment. Example: 8 AWG THHN on unmarked 60 C terminals is limited to 40 A, not 55 A.",
+   "status": "verified",
+   "note": "Consistent with the 110.14(C)(1)(a) rule already verified in the knowledge base and Table 310.16 values (NFPA document).",
+   "keywords": [
+    "60 C",
+    "THHN",
+    "termination",
+    "110.14(C)",
+    "8 awg",
+    "90 C column"
+   ]
+  },
+  {
+   "id": "E5-34",
+   "topic": "Conductors & ampacity",
+   "trade": "elec",
+   "state": null,
+   "source": "NEC 2023 Table 310.16; 310.15(C)(1); 110.14(C)",
+   "fact": "Example: six 3 AWG copper THHN current-carrying conductors in one raceway at 30 C with 75 C terminals: 115 A (90 C) x 0.80 = 92 A. Because 92 A is below the 75 C limit of 100 A, the conductor ampacity is 92 A.",
+   "status": "verified",
+   "note": "Calculated from verified Table 310.16 and Table 310.15(C)(1) values.",
+   "keywords": [
+    "derating example",
+    "adjustment",
+    "THHN",
+    "3 awg",
+    "90 C",
+    "terminal limit"
+   ]
+  },
+  {
+   "id": "E5-35",
+   "topic": "Conductors & ampacity",
+   "trade": "elec",
+   "state": null,
+   "source": "NEC 2023 Table 310.16; Table 310.15(B)(1)(1)",
+   "fact": "Example: three 3 AWG copper THHN current-carrying conductors in a 54 C (129 F) space: 115 A (90 C column) x 0.76 (51-55 C factor) = 87.4 A corrected ampacity.",
+   "status": "verified",
+   "note": "Calculated from verified Table 310.16 and Table 310.15(B)(1)(1) values.",
+   "keywords": [
+    "correction example",
+    "hot ambient",
+    "3 awg",
+    "THHN",
+    "0.76",
+    "rooftop"
+   ]
+  },
+  {
+   "id": "E5-36",
+   "topic": "Conductors & ampacity",
+   "trade": "elec",
+   "state": null,
+   "source": "NEC 2023 Table 310.16; 310.15(B), (C)",
+   "fact": "Example: 4 AWG copper THHN, six current-carrying conductors, 45 C (113 F) ambient: 95 A (90 C) x 0.87 x 0.80 = 66 A, too small for a 68 A load; 3 AWG gives 115 x 0.87 x 0.80 = 80 A, which works.",
+   "status": "verified",
+   "note": "Example from EC&M Sizing Conductors Part XLIV; factors match verified tables.",
+   "keywords": [
+    "correction and adjustment",
+    "derating example",
+    "4 awg",
+    "3 awg",
+    "45 C",
+    "THHN"
+   ]
+  },
+  {
+   "id": "E5-37",
+   "topic": "Feeders & load calculations",
+   "trade": "elec",
+   "state": null,
+   "source": "NEC 2023 Table 220.55 (Column C)",
+   "fact": "NEC 2023 Table 220.55 Column C (ranges not over 12 kW): for 5 through 40 ranges the maximum demand is 15 kW plus 1 kW per range (10 ranges 25 kW, 20 ranges 35 kW, 30 ranges 45 kW). For 41 or more ranges it is 25 kW plus 3/4 kW per range (50 ranges = 62.5 kW).",
+   "status": "verified",
+   "note": "Column C values for 10, 15, 20, 30 and 50 ranges confirmed in EC&M (Charles Miller) calculation articles; 5 ranges = 20 kW already in the knowledge base.",
+   "keywords": [
+    "range demand",
+    "column C",
+    "220.55",
+    "multifamily",
+    "many ranges",
+    "kW"
+   ]
+  },
+  {
+   "id": "E5-38",
+   "topic": "Feeders & load calculations",
+   "trade": "elec",
+   "state": null,
+   "source": "NEC 2023 Table 220.55 (Columns A and B)",
+   "fact": "NEC 2023 Table 220.55 demand factors for larger numbers of appliances: Column A (under 3-1/2 kW) 10 appliances 49%, 15 appliances 40%; Column B (3-1/2 to 8-3/4 kW) 10 appliances 34%, 15 appliances 32%. Example: ten 5 kW cooktops (50 kW) x 34% = 17 kW.",
+   "status": "verified",
+   "note": "Values and example from EC&M (Charles Miller) Branch-Circuit, Feeder and Service Calculations Part XXVI.",
+   "keywords": [
+    "column A",
+    "column B",
+    "220.55",
+    "cooktop",
+    "wall oven",
+    "demand factor"
+   ]
+  },
+  {
+   "id": "E5-39",
+   "topic": "Feeders & load calculations",
+   "trade": "elec",
+   "state": null,
+   "source": "NEC 2023 Table 220.55 Note 2",
+   "fact": "NEC 2023 Table 220.55 Note 2: for ranges of unequal ratings over 8-3/4 kW through 27 kW, find the average rating (count any range under 12 kW as 12 kW), then increase Column C by 5% for each kW or major fraction the average exceeds 12 kW. Example: five 13 kW, five 15 kW and five 17 kW ranges average 15 kW, so 30 kW x 1.15 = 34.5 kW.",
+   "status": "verified",
+   "note": "Method and example from EC&M (Charles Miller) Part XXIX.",
+   "keywords": [
+    "unequal ranges",
+    "note 2",
+    "220.55",
+    "average rating",
+    "range demand",
+    "5 percent"
+   ]
+  },
+  {
+   "id": "E5-40",
+   "topic": "Feeders & load calculations",
+   "trade": "elec",
+   "state": null,
+   "source": "NEC 2023 Table 220.55 Note 3",
+   "fact": "NEC 2023 Table 220.55 Note 3: household cooking appliances over 1-3/4 kW through 8-3/4 kW may be calculated by adding their nameplate ratings and applying the Column A or Column B factor for that number of appliances. When some fall under Column A and some under Column B, apply each column separately and add the results.",
+   "status": "verified",
+   "note": "EC&M Part XXVI describes Note 3 (apply each column separately and add).",
+   "keywords": [
+    "note 3",
+    "column A",
+    "column B",
+    "cooking appliances",
+    "220.55",
+    "demand"
+   ]
+  },
+  {
+   "id": "E5-41",
+   "topic": "Feeders & load calculations",
+   "trade": "elec",
+   "state": null,
+   "source": "NEC 2023 220.83(B)",
+   "fact": "NEC 2023 220.83(B): for an existing dwelling where air conditioning or electric space heating is being added, take 100% of the new AC or space heating load, plus 100% of the first 8 kVA of all other loads and 40% of the rest.",
+   "status": "unverified",
+   "note": "From the NEC 2023 text from memory; 220.83(A) (no AC/heat added) is already verified in the knowledge base.",
+   "keywords": [
+    "existing dwelling",
+    "220.83",
+    "adding AC",
+    "optional calculation",
+    "service upgrade",
+    "8 kVA"
+   ]
+  },
+  {
+   "id": "E5-42",
+   "topic": "Feeders & load calculations",
+   "trade": "elec",
+   "state": null,
+   "source": "NEC 2023 Table 220.42(A)",
+   "fact": "More NEC 2023 Table 220.42(A) unit loads (VA per sq ft): religious facilities 2.2; gymnasiums and workshops 1.7; motion picture theaters, museums and post offices 1.6; automotive facilities, dormitories, libraries, performing arts theaters and sports arenas 1.5; convention centers, courthouses, exercise centers and town halls 1.4; fire and police stations 1.3; penitentiaries and transportation 1.2.",
+   "status": "unverified",
+   "note": "From the table as carried over from NEC 2020 Table 220.12; not re-checked against a published copy this round.",
+   "keywords": [
+    "unit load",
+    "VA per square foot",
+    "220.42",
+    "church",
+    "gym",
+    "commercial lighting"
+   ]
+  },
+  {
+   "id": "E5-43",
+   "topic": "Feeders & load calculations",
+   "trade": "elec",
+   "state": null,
+   "source": "NEC 2023 220.14(D), (L)",
+   "fact": "NEC 2023 220.14(D): a luminaire outlet is calculated at the maximum VA rating of the equipment and lamps it is rated for. 220.14(L): other outlets not covered elsewhere are calculated at 180 VA per outlet.",
+   "status": "unverified",
+   "note": "From the NEC 2023 text from memory.",
+   "keywords": [
+    "luminaire load",
+    "180 VA",
+    "220.14",
+    "outlet load",
+    "commercial",
+    "load calculation"
+   ]
+  },
+  {
+   "id": "E5-44",
+   "topic": "Feeders & load calculations",
+   "trade": "elec",
+   "state": null,
+   "source": "NEC 2023 220.41, Table 220.45, Table 220.55, 220.54, 220.60",
+   "fact": "Standard-method example (NEC 2023): a 2,400 sq ft house has 7,200 VA lighting + 3,000 VA small-appliance + 1,500 VA laundry = 11,700 VA, demand 3,000 + 8,700 x 35% = 6,045 VA. Add a 12 kW range (8,000 VA), a 5,000 W dryer (5,000 VA) and the larger of 10 kW heat or 6 kVA AC (10,000 VA): total 29,045 VA / 240 V = about 121 A.",
+   "status": "verified",
+   "note": "Calculated using rules and values already verified in the knowledge base (220.41, Table 220.45, Table 220.55 Column C, 220.54, 220.60).",
+   "keywords": [
+    "dwelling load calculation",
+    "standard method",
+    "service size",
+    "example",
+    "220.41",
+    "residential"
+   ]
+  },
+  {
+   "id": "E5-45",
+   "topic": "Feeders & load calculations",
+   "trade": "elec",
+   "state": null,
+   "source": "NEC 2023 220.82",
+   "fact": "Optional-method example (NEC 2023 220.82): 2,000 sq ft house: 6,000 VA lighting + 4,500 VA small-appliance/laundry + 12,000 W range + 5,000 W dryer + 4,500 W water heater + 1,200 W dishwasher = 33,200 VA. First 10 kVA at 100% + 23,200 x 40% (9,280) = 19,280 VA; add 5,000 VA AC at 100% = 24,280 VA / 240 V = about 101 A.",
+   "status": "verified",
+   "note": "Calculated using 220.82(B) and (C) rules already verified in the knowledge base.",
+   "keywords": [
+    "optional method",
+    "220.82",
+    "dwelling",
+    "service size",
+    "example",
+    "40 percent"
+   ]
+  },
+  {
+   "id": "E5-46",
+   "topic": "Feeders & load calculations",
+   "trade": "elec",
+   "state": null,
+   "source": "NEC 2023 220.61(B)(1)",
+   "fact": "For the feeder or service neutral, NEC 2023 220.61(B)(1) lets household ranges, ovens, cooktops and dryers be counted at 70% of their demand load. Example: a 12 kW range (8,000 VA demand) adds 5,600 VA to the neutral load, and a 5,000 VA dryer adds 3,500 VA.",
+   "status": "verified",
+   "note": "Uses the 70% rule already verified in the knowledge base (220.61(B)).",
+   "keywords": [
+    "neutral load",
+    "70 percent",
+    "range",
+    "dryer",
+    "220.61",
+    "neutral sizing"
+   ]
+  },
+  {
+   "id": "E5-47",
+   "topic": "Feeders & load calculations",
+   "trade": "elec",
+   "state": null,
+   "source": "NEC 2023 550.31; Table 550.31",
+   "fact": "A manufactured home park feeder is calculated at no less than 16,000 VA per home site (or the larger actual load), then reduced by Table 550.31. Example: 35 sites x 16,000 VA x 24% = 134,400 VA, or 560 A at 240 V.",
+   "status": "verified",
+   "note": "Example from Mike Holt, Commercial Load Calculations Part 1 (EC&M); 16,000 VA and the 22-40 site factor of 24% carry into NEC 2023.",
+   "keywords": [
+    "manufactured home park",
+    "mobile home",
+    "550.31",
+    "16000 VA",
+    "demand factor",
+    "feeder"
+   ]
+  },
+  {
+   "id": "E5-48",
+   "topic": "Grounding & bonding",
+   "trade": "elec",
+   "state": null,
+   "source": "NEC 2023 Table 250.122",
+   "fact": "NEC 2023 Table 250.122 aluminum or copper-clad aluminum EGCs: 15 A 12 AWG; 20 A 10 AWG; 30-60 A 8 AWG; 100 A 6 AWG; 200 A 4 AWG; 300 A 2 AWG; 400 A 1 AWG; 500 A 1/0; 600 A 2/0; 800 A 3/0; 1000 A 4/0; 1200 A 250 kcmil.",
+   "status": "verified",
+   "note": "Table reproduced in Tucson Electric Power service requirements (SR-601) and matches values in eepower.com 'NEC 2023 Basics: Sizing EGCs'.",
+   "keywords": [
+    "aluminum EGC",
+    "250.122",
+    "ground wire size",
+    "equipment grounding",
+    "aluminum",
+    "feeder"
+   ]
+  },
+  {
+   "id": "E5-49",
+   "topic": "Grounding & bonding",
+   "trade": "elec",
+   "state": null,
+   "source": "NEC 2023 Table 250.122",
+   "fact": "NEC 2023 Table 250.122 for large overcurrent devices (copper / aluminum): 500 A 2 AWG / 1/0; 1600 A 4/0 / 350 kcmil; 2000 A 250 / 400 kcmil; 2500 A 350 / 600 kcmil; 3000 A 400 / 600 kcmil; 4000 A 500 kcmil copper; 5000 A 700 / 1200 kcmil; 6000 A 800 / 1200 kcmil.",
+   "status": "verified",
+   "note": "Table reproduced in Tucson Electric Power service requirements (SR-601) and matches values in eepower.com 'NEC 2023 Basics: Sizing EGCs'. The 4000 A aluminum value differs between references (750 vs 800 kcmil), so it is left out.",
+   "keywords": [
+    "EGC",
+    "250.122",
+    "large feeder",
+    "2000 amp",
+    "kcmil",
+    "equipment grounding"
+   ]
+  },
+  {
+   "id": "E5-50",
+   "topic": "Grounding & bonding",
+   "trade": "elec",
+   "state": null,
+   "source": "NEC 2023 250.122(A); Table 250.122",
+   "fact": "If an overcurrent device rating is not listed in Table 250.122, use the next larger rating in the table. Example: a 250 A breaker uses the 300 A row, so a 4 AWG copper or 2 AWG aluminum EGC. 250.122(A) also says the EGC never has to be larger than the circuit conductors.",
+   "status": "verified",
+   "note": "Example and rule from eepower.com 'NEC 2023 Basics: Sizing Equipment Grounding Conductors'.",
+   "keywords": [
+    "EGC",
+    "next size",
+    "250.122",
+    "250 amp",
+    "not listed",
+    "ground wire"
+   ]
+  },
+  {
+   "id": "E5-51",
+   "topic": "Grounding & bonding",
+   "trade": "elec",
+   "state": null,
+   "source": "NEC 2023 250.122(C), (G)",
+   "fact": "NEC 2023 250.122(C): one EGC may serve several circuits in the same raceway, cable, trench or tray, sized for the largest overcurrent device protecting those circuits. 250.122(G): an EGC for feeder tap conductors is sized from the overcurrent device ahead of the feeder, but it need not be larger than the tap conductors.",
+   "status": "verified",
+   "note": "From eepower.com 'NEC 2023 Basics: Sizing Equipment Grounding Conductors'.",
+   "keywords": [
+    "multiple circuits",
+    "one EGC",
+    "feeder tap",
+    "250.122",
+    "shared ground",
+    "raceway"
+   ]
+  },
+  {
+   "id": "E5-52",
+   "topic": "Grounding & bonding",
+   "trade": "elec",
+   "state": null,
+   "source": "NEC 2023 250.122(D)(1); Table 250.122",
+   "fact": "A motor branch-circuit EGC is sized from the rating of the motor short-circuit and ground-fault protective device, not the overloads. Example: a 40 hp, 460 V motor (52 A) with dual-element fuses at 175% (91 A, next size 100 A) needs at least an 8 AWG copper EGC.",
+   "status": "verified",
+   "note": "Rule and example from eepower.com 'NEC 2023 Basics: Sizing Equipment Grounding Conductors'.",
+   "keywords": [
+    "motor EGC",
+    "250.122(D)",
+    "dual element fuse",
+    "40 hp",
+    "ground wire",
+    "motor circuit"
+   ]
+  },
+  {
+   "id": "E5-53",
+   "topic": "Grounding & bonding",
+   "trade": "elec",
+   "state": null,
+   "source": "NEC 2023 250.102(D); Table 250.122",
+   "fact": "A bonding jumper on the load side of the service (equipment bonding jumper) is sized from Table 250.122 using the rating of the overcurrent device ahead of it, not from Table 250.102(C)(1).",
+   "status": "verified",
+   "note": "Rule stated in NEC 2023 250.102(D); TEP SR-601 notes 250.122 sizing for load-side bonds.",
+   "keywords": [
+    "load side bonding jumper",
+    "250.102(D)",
+    "equipment bonding jumper",
+    "250.122",
+    "bonding",
+    "sizing"
+   ]
+  },
+  {
+   "id": "E5-54",
+   "topic": "Grounding & bonding",
+   "trade": "elec",
+   "state": null,
+   "source": "NEC 2023 250.102(E)",
+   "fact": "NEC 2023 250.102(E)(2): an equipment bonding jumper may be installed outside a raceway or enclosure only if its length is not more than 6 ft and it is routed with the raceway or enclosure.",
+   "status": "unverified",
+   "note": "From the NEC 2023 text from memory.",
+   "keywords": [
+    "bonding jumper",
+    "outside raceway",
+    "6 ft",
+    "250.102(E)",
+    "flexible conduit",
+    "bonding"
+   ]
+  },
+  {
+   "id": "E5-55",
+   "topic": "Grounding & bonding",
+   "trade": "elec",
+   "state": null,
+   "source": "NEC 2023 Table 250.66",
+   "fact": "Example: a service with two parallel sets of 250 kcmil copper per phase has an equivalent area of 500 kcmil, so Table 250.66 (over 350 through 600 kcmil) requires a 1/0 copper GEC. For parallel sets, use the total area per phase.",
+   "status": "verified",
+   "note": "Uses Table 250.66 values already verified in the knowledge base.",
+   "keywords": [
+    "GEC sizing",
+    "parallel conductors",
+    "250.66",
+    "1/0",
+    "500 kcmil",
+    "grounding electrode conductor"
+   ]
+  },
+  {
+   "id": "E5-56",
+   "topic": "Grounding & bonding",
+   "trade": "elec",
+   "state": null,
+   "source": "NEC 2023 250.30(A)(6)",
+   "fact": "NEC 2023 250.30(A)(6): when several separately derived systems share a common grounding electrode conductor, the common GEC must be at least 3/0 copper or 250 kcmil aluminum, and each tap to it is sized from Table 250.66 based on that system's derived phase conductors.",
+   "status": "unverified",
+   "note": "From the NEC 2023 text from memory.",
+   "keywords": [
+    "separately derived system",
+    "common GEC",
+    "3/0",
+    "250.30",
+    "transformer",
+    "tap"
+   ]
+  },
+  {
+   "id": "E5-57",
+   "topic": "Grounding & bonding",
+   "trade": "elec",
+   "state": null,
+   "source": "NEC 2023 250.52(A)(2)",
+   "fact": "NEC 2023 250.52(A)(2): metal in-ground support structures (such as steel building columns) in direct vertical contact with the earth for 10 ft or more, with or without concrete, qualify as a grounding electrode.",
+   "status": "unverified",
+   "note": "From the NEC 2023 text from memory.",
+   "keywords": [
+    "grounding electrode",
+    "building steel",
+    "in-ground support structure",
+    "10 ft",
+    "250.52",
+    "electrode"
+   ]
+  },
+  {
+   "id": "E5-58",
+   "topic": "Grounding & bonding",
+   "trade": "elec",
+   "state": null,
+   "source": "NEC 2023 250.140(A), (B)",
+   "fact": "NEC 2023 250.140(A): the circuit supplying an electric range, wall oven, cooktop or clothes dryer must include an equipment grounding conductor connected to the frame (a 4-wire circuit for 120/240 V appliances). 250.140(B): only for existing installations with no EGC in the outlet box may the frame be connected to the grounded (neutral) conductor (3-wire).",
+   "status": "verified",
+   "note": "From Mike Holt's 2023 NEC 250.140 material (mikeholt.com PDF), which shows the 2023 (A)/(B) layout.",
+   "keywords": [
+    "range",
+    "dryer",
+    "4 wire",
+    "3 wire",
+    "250.140",
+    "frame grounding"
+   ]
+  },
+  {
+   "id": "E5-59",
+   "topic": "Grounding & bonding",
+   "trade": "elec",
+   "state": null,
+   "source": "NEC 2023 250.70",
+   "fact": "NEC 2023 250.70: GEC connections to electrodes must use exothermic welding, listed lugs, listed pressure connectors or listed clamps. A ground clamp may hold only one conductor unless it is listed for more than one.",
+   "status": "unverified",
+   "note": "From the NEC 2023 text from memory.",
+   "keywords": [
+    "ground clamp",
+    "acorn clamp",
+    "250.70",
+    "one conductor",
+    "GEC connection",
+    "listed"
+   ]
+  },
+  {
+   "id": "E5-60",
+   "topic": "Motors (Art. 430)",
+   "trade": "elec",
+   "state": null,
+   "source": "NEC 2023 Table 430.52",
+   "fact": "NEC 2023 Table 430.52 for wound-rotor motors: nontime-delay fuse 150%, dual-element fuse 150%, instantaneous-trip breaker 800%, inverse-time breaker 150%. For DC (constant-voltage) motors: 150%, 150%, 250% and 150%.",
+   "status": "verified",
+   "note": "Matches the Table 430.52 percentages reproduced on Transcat's motor reference sheet; unchanged in NEC 2023.",
+   "keywords": [
+    "430.52",
+    "wound rotor",
+    "DC motor",
+    "fuse sizing",
+    "breaker sizing",
+    "percent of FLC"
+   ]
+  },
+  {
+   "id": "E5-61",
+   "topic": "Motors (Art. 430)",
+   "trade": "elec",
+   "state": null,
+   "source": "NEC 2023 Table 430.52",
+   "fact": "In NEC 2023 Table 430.52, polyphase Design B energy-efficient premium motors get an 1100% maximum for instantaneous-trip breakers (other columns are the same as standard motors: 300%, 175% and 250%).",
+   "status": "verified",
+   "note": "Transcat sheet shows 1100% for the energy-efficient design row (older label 'Design E'); NEC 2017-2023 label this row Design B energy-efficient premium efficiency.",
+   "keywords": [
+    "instantaneous trip",
+    "1100 percent",
+    "design B energy efficient",
+    "430.52",
+    "premium efficiency",
+    "motor"
+   ]
+  },
+  {
+   "id": "E5-62",
+   "topic": "Motors (Art. 430)",
+   "trade": "elec",
+   "state": null,
+   "source": "NEC 2023 Table 430.247",
+   "fact": "NEC 2023 Table 430.247 DC motor full-load current: at 120 V, 1 hp 9.5 A and 5 hp 40 A; at 240 V, 1 hp 4.7 A, 10 hp 38 A, 50 hp 173 A.",
+   "status": "verified",
+   "note": "Matches the DC motor FLC table reproduced on Transcat's motor reference sheet; unchanged in NEC 2023.",
+   "keywords": [
+    "DC motor",
+    "430.247",
+    "full load current",
+    "120 volt",
+    "240 volt",
+    "FLC"
+   ]
+  },
+  {
+   "id": "E5-63",
+   "topic": "Motors (Art. 430)",
+   "trade": "elec",
+   "state": null,
+   "source": "NEC 2023 240.4(G); 430.22; Table 430.52; Table 430.250",
+   "fact": "Motor circuits are exempt from the 240.4(D) small-conductor limits (240.4(G) sends you to Article 430). Example: a 3 hp, 208 V, 3-phase motor (10.6 A) needs 10.6 x 1.25 = 13.25 A conductors, so 14 AWG copper works, and it may be protected by an inverse-time breaker up to 10.6 x 2.5 = 26.5 A, next size 30 A.",
+   "status": "verified",
+   "note": "Calculated from verified Table 430.250 values and the 430.22 / Table 430.52 rules in the knowledge base.",
+   "keywords": [
+    "14 awg on 30 amp",
+    "motor",
+    "240.4(G)",
+    "430.52",
+    "small conductor",
+    "3 hp"
+   ]
+  },
+  {
+   "id": "E5-64",
+   "topic": "Motors (Art. 430)",
+   "trade": "elec",
+   "state": null,
+   "source": "NEC 2023 430.22; Table 430.52; Table 430.250",
+   "fact": "Example: a 25 hp, 460 V, 3-phase motor (34 A) needs conductors of at least 42.5 A. Maximum short-circuit/ground-fault protection: inverse-time breaker 34 x 2.5 = 85 A, next size 90 A; dual-element fuse 34 x 1.75 = 59.5 A, next size 60 A; nontime-delay fuse 34 x 3 = 102 A, next size 110 A.",
+   "status": "verified",
+   "note": "Calculated from verified Table 430.250 values and Table 430.52 percentages.",
+   "keywords": [
+    "25 hp",
+    "460 volt",
+    "motor breaker",
+    "motor fuse",
+    "430.52",
+    "example"
+   ]
+  },
+  {
+   "id": "E5-65",
+   "topic": "Motors (Art. 430)",
+   "trade": "elec",
+   "state": null,
+   "source": "NEC 2023 430.28",
+   "fact": "NEC 2023 430.28 motor feeder taps: a tap no longer than 10 ft needs an ampacity of at least 1/10 of the feeder overcurrent device rating; a tap 10 to 25 ft long needs at least 1/3 of that rating; either way the tap must end in a motor branch-circuit protective device.",
+   "status": "unverified",
+   "note": "From the NEC 2023 text from memory.",
+   "keywords": [
+    "motor feeder tap",
+    "430.28",
+    "10 ft",
+    "25 ft",
+    "one third",
+    "one tenth"
+   ]
+  },
+  {
+   "id": "E5-66",
+   "topic": "Air conditioning (Art. 440)",
+   "trade": "elec",
+   "state": null,
+   "source": "NEC 2023 440.33",
+   "fact": "NEC 2023 440.33: conductors supplying several motor-compressors (with or without other motors) must have an ampacity of at least 125% of the largest motor-compressor rated-load current (or BCSC) plus the sum of the rated-load currents of the others plus other loads.",
+   "status": "unverified",
+   "note": "From the NEC 2023 text from memory.",
+   "keywords": [
+    "multiple compressors",
+    "440.33",
+    "feeder",
+    "rated load current",
+    "125 percent",
+    "HVAC"
+   ]
+  },
+  {
+   "id": "E5-67",
+   "topic": "Air conditioning (Art. 440)",
+   "trade": "elec",
+   "state": null,
+   "source": "NEC 2023 440.32; 440.33",
+   "fact": "Example: a condensing unit with an 18 A rated-load-current compressor and a 1.2 A fan motor needs circuit conductors of at least 18 x 1.25 + 1.2 = 23.7 A, which is how the nameplate minimum circuit ampacity (MCA) is figured.",
+   "status": "verified",
+   "note": "Calculated with the 125% rule in 440.32 already verified in the knowledge base.",
+   "keywords": [
+    "MCA",
+    "minimum circuit ampacity",
+    "condenser",
+    "compressor",
+    "440.32",
+    "example"
+   ]
+  },
+  {
+   "id": "E5-68",
+   "topic": "Air conditioning (Art. 440)",
+   "trade": "elec",
+   "state": null,
+   "source": "NEC 2023 440.22(A)",
+   "fact": "Unlike motors under 430.52, NEC 2023 440.22(A) has no next-size-up allowance for motor-compressor protection: the device may not exceed 175% (or 225% if needed to start), and the 175% figure is rounded down to a standard size. A 15 A device is always permitted. Example: 18 A x 1.75 = 31.5 A, so 30 A.",
+   "status": "unverified",
+   "note": "Round-down practice and 15 A minimum from NEC text knowledge; not re-checked online this round.",
+   "keywords": [
+    "MOCP",
+    "440.22",
+    "round down",
+    "compressor breaker",
+    "175 percent",
+    "HVAC"
+   ]
+  },
+  {
+   "id": "E5-69",
+   "topic": "Services & outside wiring",
+   "trade": "elec",
+   "state": null,
+   "source": "NEC 2023 230.24(A) Exceptions No. 1, 4, 5",
+   "fact": "Other NEC 2023 230.24(A) roof-clearance exceptions: where the roof gets pedestrian or vehicle traffic, use the 230.24(B) ground clearances (Exc. 1); the 3 ft beyond-the-edge rule does not apply to the final span attached to the side of a building (Exc. 4); and at 300 V or less, 3 ft is enough where the roof area is guarded or isolated (Exc. 5).",
+   "status": "unverified",
+   "note": "Exception numbering and wording from NEC text knowledge; not re-checked online.",
+   "keywords": [
+    "roof clearance",
+    "230.24",
+    "service drop",
+    "exception",
+    "overhead",
+    "3 ft"
+   ]
+  },
+  {
+   "id": "E5-70",
+   "topic": "Services & outside wiring",
+   "trade": "elec",
+   "state": null,
+   "source": "NEC 2023 230.51(A)",
+   "fact": "NEC 2023 230.51(A): service-entrance cable must be secured within 12 in of every service head, gooseneck or connection to a raceway or enclosure, and at intervals not exceeding 30 in.",
+   "status": "unverified",
+   "note": "From the NEC 2023 text from memory.",
+   "keywords": [
+    "SE cable",
+    "230.51",
+    "support",
+    "30 in",
+    "12 in",
+    "service entrance"
+   ]
+  },
+  {
+   "id": "E5-71",
+   "topic": "Services & outside wiring",
+   "trade": "elec",
+   "state": null,
+   "source": "NEC 2023 230.28",
+   "fact": "NEC 2023 230.28: a service mast used to support service-drop or overhead service conductors must be strong enough (or braced/guyed) for the strain, and only power service-drop or overhead service conductors may be attached to it; communications cables may not.",
+   "status": "unverified",
+   "note": "From the NEC 2023 text from memory.",
+   "keywords": [
+    "service mast",
+    "230.28",
+    "riser",
+    "communications",
+    "service drop",
+    "strain"
+   ]
+  },
+  {
+   "id": "E5-72",
+   "topic": "Services & outside wiring",
+   "trade": "elec",
+   "state": null,
+   "source": "NEC 2023 225.39",
+   "fact": "NEC 2023 225.39: the feeder or branch-circuit disconnect for a building supplied from another building must be rated at least 15 A for one 2-wire circuit, 30 A for two 2-wire circuits, 100 A (3-wire) for a one-family dwelling, and 60 A for all others.",
+   "status": "unverified",
+   "note": "From the NEC 2023 text from memory; mirrors 230.79 (already verified).",
+   "keywords": [
+    "225.39",
+    "detached building",
+    "disconnect rating",
+    "feeder",
+    "outbuilding",
+    "100 amp"
+   ]
+  },
+  {
+   "id": "E5-73",
+   "topic": "Services & outside wiring",
+   "trade": "elec",
+   "state": null,
+   "source": "NEC 2023 225.6(A)(1)",
+   "fact": "NEC 2023 225.6(A)(1): open individual overhead conductors (1000 V or less) must be at least 10 AWG copper or 8 AWG aluminum for spans up to 50 ft, and 8 AWG copper or 6 AWG aluminum for longer spans, unless supported by a messenger wire.",
+   "status": "unverified",
+   "note": "From the NEC 2023 text from memory.",
+   "keywords": [
+    "overhead span",
+    "225.6",
+    "10 awg",
+    "50 ft",
+    "outside wiring",
+    "messenger"
+   ]
+  },
+  {
+   "id": "E5-74",
+   "topic": "Branch circuits",
+   "trade": "elec",
+   "state": null,
+   "source": "NEC 2023 647.4(D)",
+   "fact": "Unlike the informational-note recommendations elsewhere, NEC 2023 647.4(D) makes voltage drop limits mandatory for sensitive electronic equipment on 120 V technical power systems (60/120 V): 1.5% on branch circuits and 2.5% total for feeders plus branch circuits.",
+   "status": "unverified",
+   "note": "From the NEC 2023 text from memory.",
+   "keywords": [
+    "voltage drop",
+    "647.4",
+    "sensitive electronic equipment",
+    "1.5 percent",
+    "2.5 percent",
+    "technical power"
+   ]
+  },
+  {
+   "id": "E5-75",
+   "topic": "Emergency & standby",
+   "trade": "elec",
+   "state": null,
+   "source": "NEC 2023 695.7",
+   "fact": "NEC 2023 695.7: during fire pump motor starting, the voltage at the controller line terminals may not drop more than 15% below normal, and while running at 115% of full-load current the voltage at the motor terminals may not drop more than 5% below the motor's rated voltage.",
+   "status": "unverified",
+   "note": "From the NEC 2023 text from memory.",
+   "keywords": [
+    "fire pump",
+    "voltage drop",
+    "695.7",
+    "15 percent",
+    "5 percent",
+    "motor starting"
+   ]
+  },
+  {
+   "id": "E5-76",
+   "topic": "Generators & transformers",
+   "trade": "elec",
+   "state": null,
+   "source": "NEC 2023 Table 450.3(B) Note 1",
+   "fact": "Example: a 50 kVA single-phase transformer with a 480 V primary has 50,000 / 480 = 104.2 A primary current; 104.2 x 1.25 = 130.2 A, so primary-only protection may use the next higher standard size, 150 A (Table 450.3(B) Note 1).",
+   "status": "verified",
+   "note": "Calculated with Table 450.3(B) rules already verified in the knowledge base and Table 240.6(A) standard sizes.",
+   "keywords": [
+    "transformer protection",
+    "450.3",
+    "single phase",
+    "primary",
+    "next size up",
+    "example"
+   ]
+  },
+  {
+   "id": "E5-77",
+   "topic": "Generators & transformers",
+   "trade": "elec",
+   "state": null,
+   "source": "NEC 2023 450.42; 450.43",
+   "fact": "NEC 2023 450.42 and 450.43: transformer vault walls, roofs and floors must have a 3-hour fire rating (1 hour is allowed where the vault has automatic sprinkler, water spray, CO2 or halon protection); vault doors need a 3-hour rating, and doorways need a sill or curb at least 4 in high.",
+   "status": "unverified",
+   "note": "From the NEC 2023 text from memory.",
+   "keywords": [
+    "transformer vault",
+    "3 hour",
+    "450.42",
+    "450.43",
+    "door sill",
+    "4 in"
+   ]
+  },
+  {
+   "id": "E5-78",
+   "topic": "Overcurrent protection",
+   "trade": "elec",
+   "state": null,
+   "source": "NEC 2023 240.21(C)(2)",
+   "fact": "NEC 2023 240.21(C)(2) 10 ft transformer secondary conductors: ampacity at least the calculated load and at least the rating of the device they terminate in; for field installations that leave the enclosure, at least 1/10 of the primary OCPD rating times the primary-to-secondary voltage ratio.",
+   "status": "unverified",
+   "note": "From the NEC 2023 text from memory.",
+   "keywords": [
+    "secondary conductors",
+    "10 ft",
+    "240.21(C)",
+    "transformer",
+    "tap rule",
+    "one tenth"
+   ]
+  },
+  {
+   "id": "E5-79",
+   "topic": "Overcurrent protection",
+   "trade": "elec",
+   "state": null,
+   "source": "NEC 2023 240.21(B)(3)",
+   "fact": "NEC 2023 240.21(B)(3) feeder taps supplying a transformer: total primary plus secondary conductor length may not exceed 25 ft; primary tap ampacity at least 1/3 of the feeder OCPD; secondary ampacity at least 1/3 of the feeder OCPD times the primary-to-secondary voltage ratio, ending in a single device that limits load to the secondary ampacity.",
+   "status": "unverified",
+   "note": "From the NEC 2023 text from memory.",
+   "keywords": [
+    "feeder tap",
+    "transformer",
+    "25 ft",
+    "240.21(B)",
+    "one third",
+    "tap rule"
+   ]
+  },
+  {
+   "id": "E5-80",
+   "topic": "General requirements (Art. 110)",
+   "trade": "elec",
+   "state": null,
+   "source": "NEC 2023 Table 110.26(A)(1)",
+   "fact": "NEC 2023 Table 110.26(A)(1): for equipment at 0-150 V to ground (such as 120/240 V or 208Y/120 V), the minimum working space depth is 3 ft for all three conditions. Only at 151 V to ground and above do Conditions 2 and 3 require more.",
+   "status": "verified",
+   "note": "Matches the table rows already verified in the knowledge base (0-150 V Condition 1 = 3 ft; 151-600 V = 3, 3-1/2, 4 ft).",
+   "keywords": [
+    "working space",
+    "110.26",
+    "depth",
+    "120/240",
+    "condition 2",
+    "3 ft"
+   ]
+  },
+  {
+   "id": "E5-81",
+   "topic": "General requirements (Art. 110)",
+   "trade": "elec",
+   "state": null,
+   "source": "NEC 2023 110.26(A)(1)(a), (c)",
+   "fact": "NEC 2023 110.26(A)(1)(a): working space is not required at the back or sides of dead-front equipment when all connections and renewable parts are reachable from the front. (c): when equipment is replaced in an existing building, Condition 2 spacing is allowed across an aisle between dead-front equipment if written procedures keep facing equipment from being open at once and only authorized, qualified persons service it.",
+   "status": "verified",
+   "note": "From EC&M 'NEC Requirements for Working Clearances' (Feb. 2023).",
+   "keywords": [
+    "dead front",
+    "working space",
+    "existing building",
+    "110.26",
+    "rear access",
+    "condition 2"
+   ]
+  },
+  {
+   "id": "E5-82",
+   "topic": "General requirements (Art. 110)",
+   "trade": "elec",
+   "state": null,
+   "source": "NEC 2023 110.26(A)(3) Exception No. 2",
+   "fact": "NEC 2023 110.26(A)(3) Exception No. 2: in existing dwelling units, service equipment or panelboards rated 200 A or less are exempt from the 6-1/2 ft working-space height requirement.",
+   "status": "verified",
+   "note": "From EC&M 'NEC Requirements for Working Clearances' (Feb. 2023).",
+   "keywords": [
+    "headroom",
+    "existing dwelling",
+    "200 amp",
+    "110.26",
+    "6.5 ft",
+    "exception"
+   ]
+  },
+  {
+   "id": "E5-83",
+   "topic": "General requirements (Art. 110)",
+   "trade": "elec",
+   "state": null,
+   "source": "NEC 2023 110.26(A)(4)",
+   "fact": "NEC 2023 110.26(A)(4) limited access: equipment above a lay-in ceiling needs an access opening at least 22 x 22 in; in a crawl space, at least 22 x 30 in. The working space must still be at least 30 in wide (or the equipment width), doors must open 90 degrees, and depth follows Table 110.26(A)(1).",
+   "status": "verified",
+   "note": "From EC&M 'NEC Requirements for Working Clearances' (Feb. 2023).",
+   "keywords": [
+    "limited access",
+    "above ceiling",
+    "crawl space",
+    "22 in",
+    "110.26",
+    "access opening"
+   ]
+  },
+  {
+   "id": "E5-84",
+   "topic": "General requirements (Art. 110)",
+   "trade": "elec",
+   "state": null,
+   "source": "NEC 2023 110.26(B); 110.26(C)(2)",
+   "fact": "NEC 2023 110.26(B): required working space may not be used for storage. 110.26(C)(2): an entrance at least 24 in wide and 6-1/2 ft high is needed at each end where equipment over 6 ft wide is rated 1200 A or more, or where service disconnects with a combined rating of 1200 A or more are over 6 ft wide.",
+   "status": "verified",
+   "note": "From EC&M 'NEC Requirements for Working Clearances' (Feb. 2023).",
+   "keywords": [
+    "storage",
+    "working space",
+    "two entrances",
+    "1200 amp",
+    "110.26",
+    "egress"
+   ]
+  },
+  {
+   "id": "E5-85",
+   "topic": "General requirements (Art. 110)",
+   "trade": "elec",
+   "state": null,
+   "source": "NEC 2023 110.26(A)(1)(b)",
+   "fact": "NEC 2023 110.26(A)(1)(b): smaller working spaces are allowed where all exposed live parts operate at not more than 30 V RMS, 42 V peak or 60 V DC.",
+   "status": "unverified",
+   "note": "From the NEC 2023 text from memory.",
+   "keywords": [
+    "low voltage",
+    "working space",
+    "30 volts",
+    "110.26",
+    "exception",
+    "60 V dc"
+   ]
+  },
+  {
+   "id": "E5-86",
+   "topic": "General requirements (Art. 110)",
+   "trade": "elec",
+   "state": null,
+   "source": "NEC 2023 Table 110.34(A)",
+   "fact": "NEC 2023 Table 110.34(A) working space depths over 1000 V (Conditions 1/2/3): 1001-2500 V 3/4/5 ft; 2501-9000 V 4/5/6 ft; 9001-25,000 V 5/6/9 ft; 25,001 V-75 kV 6/8/10 ft; above 75 kV 8/10/12 ft.",
+   "status": "unverified",
+   "note": "From the NEC 2023 table from memory; not re-checked online.",
+   "keywords": [
+    "medium voltage",
+    "working space",
+    "110.34",
+    "over 1000 volts",
+    "depth",
+    "switchgear"
+   ]
+  },
+  {
+   "id": "E5-87",
+   "topic": "Pools, spas & tubs (Art. 680)",
+   "trade": "elec",
+   "state": null,
+   "source": "NEC 2023 680.24(A)(2)",
+   "fact": "NEC 2023 680.24(A)(2): a junction box connected to a conduit that extends to a wet-niche or no-niche pool light must be at least 4 in above the ground or deck (measured to the inside bottom of the box) or 8 in above the maximum water level, whichever is higher, and at least 4 ft from the inside pool wall unless separated by a solid fence, wall or permanent barrier.",
+   "status": "verified",
+   "note": "Rule stated in EC&M 'Navigating the NEC's Rules for Bodies of Water'; requirement carried unchanged into NEC 2023.",
+   "keywords": [
+    "pool junction box",
+    "wet niche",
+    "680.24",
+    "4 ft",
+    "8 in",
+    "pool light"
+   ]
+  },
+  {
+   "id": "E5-88",
+   "topic": "Pools, spas & tubs (Art. 680)",
+   "trade": "elec",
+   "state": null,
+   "source": "NEC 2023 680.24(D)",
+   "fact": "NEC 2023 680.24(D): a pool light junction box, transformer enclosure or other enclosure in the supply to a wet-niche or no-niche luminaire must have at least one more grounding terminal than the number of conduit entries.",
+   "status": "verified",
+   "note": "Rule stated in EC&M 'Navigating the NEC's Rules for Bodies of Water'; unchanged in NEC 2023.",
+   "keywords": [
+    "grounding terminals",
+    "pool junction box",
+    "680.24",
+    "conduit entries",
+    "wet niche",
+    "bonding"
+   ]
+  },
+  {
+   "id": "E5-89",
+   "topic": "Pools, spas & tubs (Art. 680)",
+   "trade": "elec",
+   "state": null,
+   "source": "NEC 2023 680.26(B)(6)(a)",
+   "fact": "NEC 2023 680.26(B)(6)(a): for a double-insulated pool pump motor, a solid 8 AWG copper bonding conductor long enough to reach the motor must still be run from the bonding grid to an accessible point near the motor, so a replacement metal motor can be bonded.",
+   "status": "verified",
+   "note": "Rule stated in EC&M 'Navigating the NEC's Rules for Bodies of Water'; unchanged in NEC 2023.",
+   "keywords": [
+    "double insulated pump",
+    "pool bonding",
+    "8 awg",
+    "680.26",
+    "pump motor",
+    "equipotential"
+   ]
+  },
+  {
+   "id": "E5-90",
+   "topic": "Pools, spas & tubs (Art. 680)",
+   "trade": "elec",
+   "state": null,
+   "source": "NEC 2023 680.26(B)(1)(b)",
+   "fact": "NEC 2023 680.26(B)(1)(b): where pool shell steel is not used for bonding, a copper grid of 8 AWG bare solid copper is formed in a 12 in by 12 in network (4 in tolerance), following the pool contour and secured within or under the pool no more than 6 in from the outer contour of the shell.",
+   "status": "unverified",
+   "note": "From the NEC 2023 text from memory.",
+   "keywords": [
+    "copper grid",
+    "pool shell",
+    "12 x 12",
+    "680.26",
+    "bonding",
+    "8 awg"
+   ]
+  },
+  {
+   "id": "E5-91",
+   "topic": "Pools, spas & tubs (Art. 680)",
+   "trade": "elec",
+   "state": null,
+   "source": "NEC 2023 680.26(B)(5)",
+   "fact": "NEC 2023 680.26(B)(5): metal fittings within or attached to the pool structure must be bonded, but isolated parts no larger than 4 in in any dimension that penetrate the pool structure no more than 1 in need not be bonded.",
+   "status": "unverified",
+   "note": "From the NEC 2023 text from memory.",
+   "keywords": [
+    "pool fittings",
+    "bonding",
+    "680.26",
+    "4 in",
+    "1 in",
+    "exemption"
+   ]
+  },
+  {
+   "id": "E5-92",
+   "topic": "Pools, spas & tubs (Art. 680)",
+   "trade": "elec",
+   "state": null,
+   "source": "NEC 2023 680.10",
+   "fact": "NEC 2023 680.10: electric pool water heaters must have heating elements subdivided into loads of not more than 48 A, each protected at not more than 60 A, and the branch-circuit conductors and overcurrent device must be rated at least 125% of the nameplate load.",
+   "status": "unverified",
+   "note": "From the NEC 2023 text from memory.",
+   "keywords": [
+    "pool heater",
+    "680.10",
+    "48 amps",
+    "60 amps",
+    "125 percent",
+    "electric heater"
+   ]
+  },
+  {
+   "id": "E5-93",
+   "topic": "Pools, spas & tubs (Art. 680)",
+   "trade": "elec",
+   "state": null,
+   "source": "NEC 2023 680.43(B)(1)",
+   "fact": "NEC 2023 680.43(B)(1): luminaires, lighting outlets and ceiling fans over an indoor spa or hot tub (or within 5 ft of its inside walls) must be at least 12 ft above the maximum water level, or at least 7 ft 6 in if GFCI protected.",
+   "status": "unverified",
+   "note": "From the NEC 2023 text from memory.",
+   "keywords": [
+    "indoor spa",
+    "hot tub",
+    "luminaire height",
+    "680.43",
+    "7 ft 6 in",
+    "12 ft"
+   ]
+  },
+  {
+   "id": "E5-94",
+   "topic": "Solar PV & EV charging",
+   "trade": "elec",
+   "state": null,
+   "source": "NEC 2023 690.7(A); Table 690.7(A)",
+   "fact": "NEC 2023 Table 690.7(A) voltage correction factors for crystalline silicon modules run from 1.02 (24 to 20 C) up to 1.25 (-36 to -40 C); for -16 to -20 C the factor is 1.18. Example: 35 V Voc x 1.18 = 41.3 V per module; 12 in series = 495.6 V, under the 600 V dwelling limit.",
+   "status": "verified",
+   "note": "Factors and example from IAEI Magazine 'PV Systems Math: Sample Calculations'; table retained in NEC 2023.",
+   "keywords": [
+    "PV voltage",
+    "690.7",
+    "Voc",
+    "cold temperature",
+    "string size",
+    "correction factor"
+   ]
+  },
+  {
+   "id": "E5-95",
+   "topic": "Solar PV & EV charging",
+   "trade": "elec",
+   "state": null,
+   "source": "NEC 2023 690.11",
+   "fact": "NEC 2023 690.11: PV systems with DC circuits operating at 80 V DC or greater between any two conductors need listed DC arc-fault circuit protection (or equivalent listed components).",
+   "status": "unverified",
+   "note": "From the NEC 2023 text from memory.",
+   "keywords": [
+    "arc fault",
+    "PV",
+    "690.11",
+    "80 volts",
+    "DC AFCI",
+    "solar"
+   ]
+  },
+  {
+   "id": "E5-96",
+   "topic": "Solar PV & EV charging",
+   "trade": "elec",
+   "state": null,
+   "source": "NEC 2023 625.42; 625.41",
+   "fact": "NEC 2023 625.42 treats EVSE as a continuous load, which is why 625.41 sizes its overcurrent protection at no less than 125% of the EVSE rating. Example: a 40 A charger needs at least a 50 A breaker. If the EVSE has adjustable settings, the adjusted rating must be shown on its label.",
+   "status": "verified",
+   "note": "From Mike Holt's 2023 NEC Article 625 material (mikeholt.com PDF).",
+   "keywords": [
+    "EV charger",
+    "continuous load",
+    "625.42",
+    "125 percent",
+    "40 amp",
+    "adjustable"
+   ]
+  },
+  {
+   "id": "E5-97",
+   "topic": "Solar PV & EV charging",
+   "trade": "elec",
+   "state": null,
+   "source": "NEC 2023 625.43",
+   "fact": "NEC 2023 625.43: EVSE rated more than 60 A or more than 150 V to ground needs a disconnecting means at a readily accessible location; if it is remote from the EVSE it must be lockable in the open position per 110.25.",
+   "status": "verified",
+   "note": "60 A threshold, readily accessible location and lockable requirement confirmed in Mike Holt's 2023 Article 625 material; the 150 V-to-ground trigger is from the 2023 text.",
+   "keywords": [
+    "EVSE disconnect",
+    "625.43",
+    "60 amps",
+    "lockable",
+    "EV charger",
+    "readily accessible"
+   ]
+  },
+  {
+   "id": "E5-98",
+   "topic": "Solar PV & EV charging",
+   "trade": "elec",
+   "state": null,
+   "source": "NEC 2023 625.50",
+   "fact": "NEC 2023 625.50: unless listed otherwise, the EVSE coupling means (connector) must be stored or located at least 18 in above the floor indoors, or at least 24 in above grade outdoors.",
+   "status": "unverified",
+   "note": "Heights confirmed for WPTE control boxes (625.102(B)) in Mike Holt's material; EVSE 625.50 wording from memory.",
+   "keywords": [
+    "EV charger height",
+    "625.50",
+    "18 in",
+    "24 in",
+    "connector",
+    "mounting"
+   ]
+  },
+  {
+   "id": "E5-99",
+   "topic": "Hazardous & health care",
+   "trade": "elec",
+   "state": null,
+   "source": "NEC 2023 Article 100 (Patient Care Vicinity)",
+   "fact": "The patient care vicinity extends 6 ft beyond the normal location of the bed, chair, table or other patient support device, and 7 ft 6 in above the floor.",
+   "status": "verified",
+   "note": "From IAEI Magazine 'Overview of Article 517: Health Care Facilities'.",
+   "keywords": [
+    "patient care vicinity",
+    "6 ft",
+    "7 ft 6 in",
+    "517",
+    "hospital",
+    "health care"
+   ]
+  },
+  {
+   "id": "E5-100",
+   "topic": "Hazardous & health care",
+   "trade": "elec",
+   "state": null,
+   "source": "NEC 2023 517.16(A)",
+   "fact": "NEC 2023 517.16(A): an isolated ground receptacle may not be installed within a patient care vicinity.",
+   "status": "unverified",
+   "note": "From the NEC 2023 text from memory.",
+   "keywords": [
+    "isolated ground",
+    "IG receptacle",
+    "517.16",
+    "patient care vicinity",
+    "hospital",
+    "receptacle"
+   ]
+  },
+  {
+   "id": "E5-101",
+   "topic": "Hazardous & health care",
+   "trade": "elec",
+   "state": null,
+   "source": "NEC 2023 517.160(B)",
+   "fact": "In an isolated power system (such as some operating rooms), the line isolation monitor must alarm when the total hazard current reaches 5.0 mA. The isolated conductors are identified orange (conductor No. 1) and brown (conductor No. 2), each with a distinctive stripe other than white, green or gray.",
+   "status": "unverified",
+   "note": "From NEC 2023 517.160 text from memory.",
+   "keywords": [
+    "line isolation monitor",
+    "5 mA",
+    "isolated power",
+    "517.160",
+    "operating room",
+    "orange brown"
+   ]
+  },
+  {
+   "id": "E5-102",
+   "topic": "Hazardous & health care",
+   "trade": "elec",
+   "state": null,
+   "source": "NEC 2023 514.11(A)",
+   "fact": "NEC 2023 514.11(A): emergency electrical disconnects for fuel dispensers must be at approved locations at least 20 ft but not more than 100 ft from the dispensers they serve, and must cut power to the dispensers, remote pumps and related circuits.",
+   "status": "verified",
+   "note": "From Mike Holt, EC&M 'Understanding Requirements for Commercial Garages and Fuel-Dispensing Facilities'; unchanged in NEC 2023.",
+   "keywords": [
+    "gas station",
+    "emergency shutoff",
+    "514.11",
+    "20 ft",
+    "100 ft",
+    "fuel dispenser"
+   ]
+  },
+  {
+   "id": "E5-103",
+   "topic": "Hazardous & health care",
+   "trade": "elec",
+   "state": null,
+   "source": "NEC 2023 514.9(A); 514.8",
+   "fact": "At motor fuel dispensers, a listed seal is required in each conduit entering or leaving the dispenser, and it must be the first fitting after the conduit comes out of the earth or concrete (514.9(A)). Underground conduits below a classified area must be sealed within 10 ft of where they emerge above grade (514.8).",
+   "status": "verified",
+   "note": "From Mike Holt, EC&M article on Articles 511 and 514; unchanged in NEC 2023.",
+   "keywords": [
+    "conduit seal",
+    "fuel dispenser",
+    "514.9",
+    "first fitting",
+    "514.8",
+    "hazardous location"
+   ]
+  },
+  {
+   "id": "E5-104",
+   "topic": "Hazardous & health care",
+   "trade": "elec",
+   "state": null,
+   "source": "NEC 2023 511.7(B)(1)(b); 511.8",
+   "fact": "In commercial repair garages, lamps over travel lanes or exposed to damage must be at least 12 ft above the floor unless totally enclosed (511.7(B)(1)(b)). Underground wiring below classified areas uses threaded RMC or IMC; PVC, RTRC or HDPE may be used if buried at least 2 ft deep with threaded RMC or IMC for the last 2 ft (511.8).",
+   "status": "verified",
+   "note": "From Mike Holt, EC&M article on Articles 511 and 514.",
+   "keywords": [
+    "repair garage",
+    "511.7",
+    "12 ft",
+    "511.8",
+    "underground",
+    "hazardous location"
+   ]
+  },
+  {
+   "id": "E5-105",
+   "topic": "Hazardous & health care",
+   "trade": "elec",
+   "state": null,
+   "source": "NEC 2023 500.8(C)",
+   "fact": "Hazardous-location equipment is marked with a temperature class (T code) showing its maximum surface temperature: T1 450 C, T2 300 C, T3 200 C, T4 135 C, T5 100 C, T6 85 C. The T code must be below the autoignition temperature of the gas or vapor present.",
+   "status": "unverified",
+   "note": "Temperature class values from the NEC table; exact 2023 table number not confirmed.",
+   "keywords": [
+    "temperature class",
+    "T code",
+    "T3",
+    "autoignition",
+    "500.8",
+    "hazardous location"
+   ]
+  },
+  {
+   "id": "E5-106",
+   "topic": "Emergency & standby",
+   "trade": "elec",
+   "state": null,
+   "source": "NEC 2023 701.12",
+   "fact": "NEC 2023 701.12: legally required standby systems must have power available within 60 seconds after the normal supply fails (emergency systems under 700.12 have 10 seconds).",
+   "status": "unverified",
+   "note": "60 seconds is in the existing question bank but not as a fact; stated from the NEC text.",
+   "keywords": [
+    "legally required standby",
+    "60 seconds",
+    "701.12",
+    "transfer time",
+    "standby",
+    "generator"
+   ]
+  },
+  {
+   "id": "E5-107",
+   "topic": "Emergency & standby",
+   "trade": "elec",
+   "state": null,
+   "source": "NEC 2023 700.10(D)",
+   "fact": "NEC 2023 700.10(D): in buildings with assembly occupancies for more than 1000 persons, or buildings above 75 ft with certain occupancies (assembly, educational, residential, detention, business, mercantile), emergency feeder-circuit wiring must have a 2-hour fire rating or be protected by a listed 2-hour system or a fully sprinklered building.",
+   "status": "unverified",
+   "note": "From the NEC 2023 text from memory.",
+   "keywords": [
+    "emergency feeder",
+    "2 hour",
+    "700.10",
+    "fire rating",
+    "high rise",
+    "assembly"
+   ]
+  },
+  {
+   "id": "E5-108",
+   "topic": "Emergency & standby",
+   "trade": "elec",
+   "state": null,
+   "source": "NEC 2023 700.8",
+   "fact": "NEC 2023 700.8: a listed surge-protective device (SPD) is required in or on all emergency system switchboards and panelboards (first required in NEC 2020).",
+   "status": "unverified",
+   "note": "From the NEC 2023 text from memory.",
+   "keywords": [
+    "surge protective device",
+    "emergency panel",
+    "700.8",
+    "SPD",
+    "switchboard",
+    "emergency"
+   ]
+  },
+  {
+   "id": "E5-109",
+   "topic": "Emergency & standby",
+   "trade": "elec",
+   "state": null,
+   "source": "NEC 2023 700.10(A)",
+   "fact": "NEC 2023 700.10(A): all boxes and enclosures for emergency circuits (including transfer switches, generators and power panels) must be permanently marked so they are readily identified as emergency system components.",
+   "status": "unverified",
+   "note": "From the NEC 2023 text from memory.",
+   "keywords": [
+    "emergency marking",
+    "700.10",
+    "transfer switch",
+    "box marking",
+    "emergency circuit",
+    "identification"
+   ]
+  },
+  {
+   "id": "E5-110",
+   "topic": "Electrical theory",
+   "trade": "elec",
+   "state": null,
+   "source": "Ohm's law and power formulas",
+   "fact": "Two 100 W, 120 V lamps wired in series on 120 V each get only 60 V. Each lamp is 144 ohms (120 squared / 100), so the series string is 288 ohms, current is 0.417 A, and each lamp gives 25 W (50 W total).",
+   "status": "verified",
+   "note": "Standard Ohm's law / power formula calculation.",
+   "keywords": [
+    "series lamps",
+    "power",
+    "ohms law",
+    "120 volts",
+    "resistance",
+    "theory"
+   ]
+  },
+  {
+   "id": "E5-111",
+   "topic": "Electrical theory",
+   "trade": "elec",
+   "state": null,
+   "source": "Energy (kWh) and cost",
+   "fact": "Energy = power x time: kWh = watts x hours / 1,000. Example: a 1,500 W heater running 8 hours uses 12 kWh; at $0.15 per kWh it costs $1.80.",
+   "status": "verified",
+   "note": "Standard energy calculation.",
+   "keywords": [
+    "kilowatt hour",
+    "energy cost",
+    "kWh",
+    "heater",
+    "power",
+    "theory"
+   ]
+  },
+  {
+   "id": "E5-112",
+   "topic": "Electrical theory",
+   "trade": "elec",
+   "state": null,
+   "source": "Horsepower from electrical input",
+   "fact": "Motor output horsepower = volts x amps x efficiency x power factor / 746 (multiply by 1.732 for three-phase). Example: 460 V x 14 A x 1.732 x 0.9 efficiency x 0.85 PF / 746 = about 11.4 hp.",
+   "status": "verified",
+   "note": "Standard motor power calculation (1 hp = 746 W).",
+   "keywords": [
+    "horsepower",
+    "motor",
+    "efficiency",
+    "power factor",
+    "three phase",
+    "746"
+   ]
+  },
+  {
+   "id": "E5-113",
+   "topic": "Electrical theory",
+   "trade": "elec",
+   "state": null,
+   "source": "Open-delta transformer bank",
+   "fact": "An open-delta bank (two single-phase transformers) can supply only 57.7% of the kVA of a full three-transformer closed delta, which is 86.6% of the two transformers' combined rating. Example: two 50 kVA units in open delta supply about 86.6 kVA.",
+   "status": "verified",
+   "note": "Standard transformer theory (1 / 1.732 = 0.577; 0.577 x 3 / 2 = 0.866).",
+   "keywords": [
+    "open delta",
+    "57.7 percent",
+    "transformer",
+    "86.6 percent",
+    "three phase",
+    "theory"
+   ]
+  },
+  {
+   "id": "E5-114",
+   "topic": "Electrical theory",
+   "trade": "elec",
+   "state": null,
+   "source": "Power factor correction",
+   "fact": "To find capacitor kVAR for power factor correction, subtract the reactive power at the new PF from the reactive power at the old PF. Example: 100 kW at 0.80 PF has 75 kVAR; at 0.95 PF it has about 32.9 kVAR; so about 42 kVAR of capacitors are needed.",
+   "status": "verified",
+   "note": "Standard power triangle calculation.",
+   "keywords": [
+    "power factor correction",
+    "kVAR",
+    "capacitor",
+    "power triangle",
+    "0.95",
+    "theory"
+   ]
+  },
+  {
+   "id": "E5-115",
+   "topic": "Electrical theory",
+   "trade": "elec",
+   "state": null,
+   "source": "Three-phase apparent power",
+   "fact": "Three-phase apparent power: kVA = volts x amps x 1.732 / 1,000. Example: a 208 V, 3-phase load drawing 100 A is 208 x 100 x 1.732 = 36 kVA; a 480 V, 3-phase load at 100 A is about 83 kVA.",
+   "status": "verified",
+   "note": "Standard three-phase power calculation.",
+   "keywords": [
+    "three phase kVA",
+    "208 volts",
+    "480 volts",
+    "apparent power",
+    "1.732",
+    "theory"
+   ]
+  },
+  {
+   "id": "E5-116",
+   "topic": "Electrical theory",
+   "trade": "elec",
+   "state": null,
+   "source": "Series-parallel circuits",
+   "fact": "Solve series-parallel circuits by combining the parallel part first. Example: a 4 ohm resistor in series with 6 ohms and 3 ohms in parallel: 6 x 3 / 9 = 2 ohms, plus 4 = 6 ohms total; at 12 V the circuit draws 2 A, dropping 8 V across the 4 ohm resistor and 4 V across the parallel pair.",
+   "status": "verified",
+   "note": "Standard series-parallel calculation.",
+   "keywords": [
+    "series parallel",
+    "total resistance",
+    "ohms law",
+    "voltage drop",
+    "combination circuit",
+    "theory"
+   ]
+  },
+  {
+   "id": "E5-117",
+   "topic": "Electrical theory",
+   "trade": "elec",
+   "state": null,
+   "source": "Conductor resistance (R = K x L / CM); NEC 2023 Chapter 9 Table 8",
+   "fact": "Conductor resistance can be estimated as R = K x L / CM (K = 12.9 for copper). Example: 1,000 ft of 10 AWG copper (10,380 cmil) is 12.9 x 1,000 / 10,380 = 1.24 ohms, matching the Chapter 9 Table 8 value for stranded 10 AWG.",
+   "status": "verified",
+   "note": "Calculation matches Table 8 value (1.24 ohms/kft) already verified in the knowledge base.",
+   "keywords": [
+    "conductor resistance",
+    "K factor",
+    "circular mils",
+    "table 8",
+    "10 awg",
+    "theory"
+   ]
+  },
+  {
+   "id": "E5-118",
+   "topic": "Electrical theory",
+   "trade": "elec",
+   "state": null,
+   "source": "Delta transformer winding current",
+   "fact": "In a delta connection the winding (phase) current is the line current divided by 1.732. Example: a delta load with 173.2 A on each line has 100 A in each winding.",
+   "status": "verified",
+   "note": "Standard delta relationship (line current = phase current x 1.732).",
+   "keywords": [
+    "delta",
+    "phase current",
+    "line current",
+    "1.732",
+    "transformer winding",
+    "theory"
+   ]
+  },
+  {
+   "id": "E5-119",
+   "topic": "Boxes & enclosures",
+   "trade": "elec",
+   "state": null,
+   "source": "NEC 2023 314.16(A); Table 314.16(B)",
+   "fact": "Box fill example: a 4 x 2-1/8 in square box (30.3 cu in) with a plaster ring marked 3.6 cu in has 33.9 cu in total, because marked volumes of plaster rings, domed covers and extension rings are added (314.16(A)). Two 12/2 and one 14/2 NM cables, internal clamps, one receptacle on 12 AWG and the grounds need 4 x 2.25 + 2 x 2.00 + 2.25 + 4.50 + 2.25 = 22.0 cu in, so it fits.",
+   "status": "verified",
+   "note": "Plaster-ring addition shown in Mike Holt workbook examples; allowances from verified Table 314.16(B) and 314.16(B)(2)-(5) rules in the knowledge base.",
+   "keywords": [
+    "box fill example",
+    "plaster ring",
+    "mixed wire sizes",
+    "314.16",
+    "mud ring",
+    "cubic inches"
+   ]
+  },
+  {
+   "id": "E5-120",
+   "topic": "Boxes & enclosures",
+   "trade": "elec",
+   "state": null,
+   "source": "NEC 2023 314.16(C)",
+   "fact": "NEC 2023 314.16(C): a conduit body enclosing 6 AWG or smaller conductors (other than short-radius bodies) must have a cross-sectional area at least twice that of the largest conduit attached to it. Splices, taps or devices are allowed in a conduit body only if it is marked with its volume, and then the 314.16(B) allowances apply.",
+   "status": "unverified",
+   "note": "From the NEC 2023 text from memory.",
+   "keywords": [
+    "conduit body",
+    "LB",
+    "splice in conduit body",
+    "314.16(C)",
+    "marked volume",
+    "box fill"
+   ]
+  },
+  {
+   "id": "E5-121",
+   "topic": "Boxes & enclosures",
+   "trade": "elec",
+   "state": null,
+   "source": "NEC 2023 314.28(A)(2)",
+   "fact": "Pull box example (4 AWG and larger): a U pull with two 3 in raceways on the same wall needs 6 x 3 + 3 = 21 in to the opposite wall, and raceway entries enclosing the same conductors must be at least 6 x 3 = 18 in apart.",
+   "status": "verified",
+   "note": "Matches the trade size 3 pull box examples (24, 18 and 21 in) in Mike Holt workbook pages and the 314.28 rule verified in the knowledge base.",
+   "keywords": [
+    "pull box",
+    "U pull",
+    "314.28",
+    "6 times",
+    "raceway spacing",
+    "junction box sizing"
+   ]
+  },
+  {
+   "id": "E5-122",
+   "topic": "Boxes & enclosures",
+   "trade": "elec",
+   "state": null,
+   "source": "NEC 2023 314.71",
+   "fact": "For boxes over 1000 V (NEC 2023 314.71), a straight-pull box must be at least 48 times the outside diameter of the largest shielded conductor (over the jacket), and an angle-pull box at least 36 times that diameter from the entry to the opposite wall.",
+   "status": "unverified",
+   "note": "From the NEC 2023 text from memory.",
+   "keywords": [
+    "medium voltage",
+    "pull box",
+    "314.71",
+    "48 times",
+    "36 times",
+    "shielded cable"
+   ]
+  },
+  {
+   "id": "E5-123",
+   "topic": "Conduit fill (Chapter 9)",
+   "trade": "elec",
+   "state": null,
+   "source": "NEC 2023 Chapter 9 Note 9",
+   "fact": "NEC 2023 Chapter 9 Note 9: a multiconductor cable (such as NM or MC) counts as a single conductor for conduit fill, and an elliptical (flat) cable is treated as a circle whose diameter is the cable's major (widest) dimension. One cable may use 53% fill.",
+   "status": "verified",
+   "note": "Concept confirmed by Mike Holt workbook NM-in-EMT example and EC&M Chapter 9 article; note number per NEC 2023 notes to Chapter 9 tables.",
+   "keywords": [
+    "cable in conduit",
+    "NM in conduit",
+    "flat cable",
+    "major diameter",
+    "chapter 9 note",
+    "53 percent"
+   ]
+  },
+  {
+   "id": "E5-124",
+   "topic": "Conduit fill (Chapter 9)",
+   "trade": "elec",
+   "state": null,
+   "source": "NEC 2023 Chapter 9 Tables 1, 4, 5 and 8",
+   "fact": "Mixed-size example: three 4 AWG THHN (3 x 0.0824 = 0.2472 sq in) plus a bare stranded 8 AWG EGC (0.017 sq in) total 0.2642 sq in. That is too much for 3/4 in EMT (0.213 sq in at 40%) but fits 1 in EMT (0.346 sq in).",
+   "status": "verified",
+   "note": "Calculated from verified Table 4, Table 5 and Table 8 values.",
+   "keywords": [
+    "mixed conductors",
+    "conduit size",
+    "bare EGC",
+    "4 awg",
+    "EMT",
+    "example"
+   ]
+  },
+  {
+   "id": "E5-125",
+   "topic": "Wiring methods (Art. 300)",
+   "trade": "elec",
+   "state": null,
+   "source": "NEC 2023 300.19(A); Table 300.19(A)",
+   "fact": "NEC 2023 300.19(A): conductors in vertical raceways must be supported at the top or as close to it as practical, and at intervals not exceeding Table 300.19(A). For example, copper conductors over 4/0 through 350 kcmil must be supported at least every 60 ft.",
+   "status": "verified",
+   "note": "60 ft for 250 kcmil copper confirmed by EC&M Code Quiz (2020 NEC); unchanged in NEC 2023.",
+   "keywords": [
+    "vertical raceway",
+    "conductor support",
+    "300.19",
+    "riser",
+    "60 ft",
+    "high rise"
+   ]
+  },
+  {
+   "id": "E5-126",
+   "topic": "Wiring methods (Art. 300)",
+   "trade": "elec",
+   "state": null,
+   "source": "NEC 2023 Table 300.19(A)",
+   "fact": "Other NEC 2023 Table 300.19(A) vertical support spacings (aluminum / copper): 18-8 AWG 100 / 100 ft; 6 AWG-1/0 200 / 100 ft; 2/0-4/0 180 / 80 ft; over 350-500 kcmil 120 / 50 ft; over 500-750 kcmil 95 / 40 ft; over 750 kcmil 85 / 35 ft.",
+   "status": "unverified",
+   "note": "Only the 350 kcmil copper row (60 ft) was confirmed online; the rest is from the table from memory.",
+   "keywords": [
+    "vertical raceway",
+    "300.19",
+    "support spacing",
+    "aluminum",
+    "copper",
+    "riser"
+   ]
+  },
+  {
+   "id": "E5-127",
+   "topic": "Receptacle layout",
+   "trade": "elec",
+   "state": null,
+   "source": "NEC 2023 406.12",
+   "fact": "NEC 2023 406.12 requires listed tamper-resistant 15 A and 20 A, 125 V and 250 V nonlocking receptacles in: dwelling units, boathouses and mobile/manufactured homes (with garages, accessory buildings and common areas); hotel/motel guest rooms and common areas; child care; preschools and schools; clinic and medical/dental office business offices, lobbies and waiting areas; transportation waiting areas, gyms, skating rinks, fitness centers and auditoriums; dormitories; assisted living, rehab facilities and group homes; foster care, nursing homes and psychiatric hospitals; and public areas of agricultural buildings.",
+   "status": "verified",
+   "note": "List from Leviton Captain Code 2023 reprint of NEC 406.12.",
+   "keywords": [
+    "tamper resistant",
+    "406.12",
+    "TR receptacle",
+    "fitness center",
+    "nursing home",
+    "2023 change"
+   ]
+  },
+  {
+   "id": "E5-128",
+   "topic": "Receptacle layout",
+   "trade": "elec",
+   "state": null,
+   "source": "NEC 2023 406.4(D)(5), (D)(6)",
+   "fact": "NEC 2023 406.4(D)(5) and (D)(6): when a receptacle is replaced where the Code now requires tamper-resistant or weather-resistant receptacles, the replacement must be tamper-resistant or weather-resistant.",
+   "status": "unverified",
+   "note": "From the NEC 2023 text from memory.",
+   "keywords": [
+    "replacement receptacle",
+    "tamper resistant",
+    "weather resistant",
+    "406.4",
+    "existing",
+    "upgrade"
+   ]
+  },
+  {
+   "id": "E5-129",
+   "topic": "Receptacle layout",
+   "trade": "elec",
+   "state": null,
+   "source": "NEC 2023 406.3(E)",
+   "fact": "NEC 2023 406.3(E): 125 V, 15 A and 20 A nonlocking receptacles controlled by an automatic control device (for energy management or building automation) must be permanently marked with the controlled-receptacle (power) symbol and the word 'CONTROLLED'.",
+   "status": "unverified",
+   "note": "From the NEC 2023 text from memory.",
+   "keywords": [
+    "controlled receptacle",
+    "406.3",
+    "energy management",
+    "marking",
+    "automatic control",
+    "receptacle"
+   ]
+  },
+  {
+   "id": "E5-130",
+   "topic": "Receptacle layout",
+   "trade": "elec",
+   "state": null,
+   "source": "NEC 2023 406.9(A)",
+   "fact": "NEC 2023 406.9(A): a receptacle in a damp location needs an enclosure that is weatherproof when the receptacle is covered (no plug inserted and covers closed), unless it is a 15 A or 20 A receptacle also covered by the wet-location rule. 15 A and 20 A, 125-250 V damp-location receptacles must be listed weather-resistant.",
+   "status": "unverified",
+   "note": "From the NEC 2023 text from memory.",
+   "keywords": [
+    "damp location",
+    "406.9",
+    "weatherproof cover",
+    "covered porch",
+    "weather resistant",
+    "receptacle"
+   ]
+  },
+  {
+   "id": "E5-131",
+   "topic": "GFCI / AFCI",
+   "trade": "elec",
+   "state": null,
+   "source": "NEC 2023 210.12(A)(1), (2)",
+   "fact": "NEC 2023 210.12(A)(1): a listed combination-type AFCI breaker protecting the entire branch circuit satisfies the AFCI rule. (A)(2): a listed branch/feeder-type AFCI at the panel plus a listed outlet branch-circuit AFCI at the first outlet also works, with the first outlet box marked.",
+   "status": "verified",
+   "note": "Text of 210.12(A)(1)-(3) from NFPA 2020 Handbook errata (APPA); unchanged in NEC 2023.",
+   "keywords": [
+    "AFCI methods",
+    "combination AFCI",
+    "210.12(A)",
+    "first outlet",
+    "outlet branch circuit AFCI",
+    "breaker"
+   ]
+  },
+  {
+   "id": "E5-132",
+   "topic": "GFCI / AFCI",
+   "trade": "elec",
+   "state": null,
+   "source": "NEC 2023 210.12(A)(5), (6)",
+   "fact": "NEC 2023 210.12(A)(5) and (6): an outlet branch-circuit AFCI at the first outlet is enough if the home run from the breaker to that outlet is in RMC, IMC, EMT, Type MC or steel-armored AC cable with metal boxes ((5)), or encased in at least 2 in of concrete ((6)).",
+   "status": "unverified",
+   "note": "From the NEC 2023 text from memory.",
+   "keywords": [
+    "AFCI",
+    "210.12",
+    "metal raceway",
+    "concrete",
+    "first outlet",
+    "outlet branch circuit AFCI"
+   ]
+  },
+  {
+   "id": "E5-133",
+   "topic": "GFCI / AFCI",
+   "trade": "elec",
+   "state": null,
+   "source": "NEC 2023 210.8",
+   "fact": "NEC 2023 210.8 requires the GFCI device itself to be installed in a readily accessible location, so a GFCI receptacle hidden behind a refrigerator or inside a cabinet does not satisfy the rule for other outlets.",
+   "status": "unverified",
+   "note": "From the NEC 2023 text from memory.",
+   "keywords": [
+    "GFCI location",
+    "readily accessible",
+    "210.8",
+    "behind refrigerator",
+    "GFCI receptacle",
+    "dwelling"
+   ]
+  },
+  {
+   "id": "E5-134",
+   "topic": "Wiring methods (Art. 300)",
+   "trade": "elec",
+   "state": null,
+   "source": "NEC 2023 590.3(B)",
+   "fact": "NEC 2023 590.3(B): temporary power and lighting for holiday decorative lighting and similar purposes is permitted for no more than 90 days; construction temporary wiring may stay for the length of the work and must be removed when finished (590.3(D)).",
+   "status": "verified",
+   "note": "90-day limit from EC&M 'The Apprentice's Guide to Article 590' (2017 NEC); limit unchanged in NEC 2023.",
+   "keywords": [
+    "temporary wiring",
+    "holiday lighting",
+    "90 days",
+    "590.3",
+    "decorative lighting",
+    "construction"
+   ]
+  },
+  {
+   "id": "E5-135",
+   "topic": "Wiring methods (Art. 300)",
+   "trade": "elec",
+   "state": null,
+   "source": "NEC 2023 590.4",
+   "fact": "NEC 2023 590.4: temporary branch circuits and feeders may use NM, NMC and SE cable and hard- or extra-hard-usage cords; cables must be supported at intervals of not more than 10 ft, may not lie on the floor or ground, and receptacles may not be on branch circuits that supply temporary lighting.",
+   "status": "verified",
+   "note": "From EC&M 'The Apprentice's Guide to Article 590' (2017 NEC) and the matching OSHA rule already in the knowledge base; unchanged in NEC 2023.",
+   "keywords": [
+    "temporary wiring",
+    "590.4",
+    "10 ft support",
+    "extension cord",
+    "temporary lighting",
+    "construction"
+   ]
+  },
+  {
+   "id": "E5-136",
+   "topic": "Wiring methods (Art. 300)",
+   "trade": "elec",
+   "state": null,
+   "source": "NEC 2023 590.6(A)",
+   "fact": "NEC 2023 590.6(A): all 125 V and 125/250 V, single-phase, 15 A, 20 A and 30 A receptacle outlets used for temporary power (not part of the permanent wiring) must have GFCI protection for personnel; listed cord sets or portable GFCI devices are permitted.",
+   "status": "unverified",
+   "note": "The 125/250 V scope is the 2023 wording from memory; the 2017-era article only confirms 125 V, 15/20/30 A.",
+   "keywords": [
+    "temporary GFCI",
+    "590.6",
+    "construction site",
+    "30 amp",
+    "cord set",
+    "receptacles"
+   ]
+  },
+  {
+   "id": "E5-137",
+   "topic": "Generators & transformers",
+   "trade": "elec",
+   "state": null,
+   "source": "NEC 2023 445.20",
+   "fact": "NEC 2023 445.20: 125 V and 125/250 V, single-phase, 15 A, 20 A and 30 A receptacle outlets on portable generators rated 15 kW or less must have listed GFCI protection built into the generator or the receptacle.",
+   "status": "unverified",
+   "note": "From the NEC 2023 text from memory.",
+   "keywords": [
+    "portable generator",
+    "GFCI",
+    "445.20",
+    "15 kW",
+    "receptacles",
+    "generator"
+   ]
+  },
+  {
+   "id": "E5-138",
+   "topic": "Luminaires",
+   "trade": "elec",
+   "state": null,
+   "source": "NEC 2023 600.5(B)",
+   "fact": "NEC 2023 600.5(B): branch circuits supplying signs with incandescent, fluorescent or HID lighting may not be rated over 20 A; circuits supplying neon tubing installations only may be rated up to 30 A.",
+   "status": "unverified",
+   "note": "From the NEC 2023 text from memory.",
+   "keywords": [
+    "sign circuit",
+    "600.5",
+    "20 amp",
+    "neon",
+    "30 amp",
+    "outline lighting"
+   ]
+  },
+  {
+   "id": "E5-139",
+   "topic": "Services & outside wiring",
+   "trade": "elec",
+   "state": null,
+   "source": "NEC 2023 230.42(A)",
+   "fact": "NEC 2023 230.42(A): service-entrance conductors must have an ampacity of at least the noncontinuous load plus 125% of the continuous load (before any adjustment or correction), the same idea as 210.19 for branch circuits and 215.2 for feeders.",
+   "status": "unverified",
+   "note": "From the NEC 2023 text from memory.",
+   "keywords": [
+    "service entrance conductors",
+    "230.42",
+    "125 percent",
+    "continuous load",
+    "service sizing",
+    "ampacity"
+   ]
+  },
+  {
+   "id": "E5-140",
+   "topic": "Services & outside wiring",
+   "trade": "elec",
+   "state": null,
+   "source": "NEC 2023 230.70(A)(2); 230.90(A)",
+   "fact": "NEC 2023 230.70(A)(2): the service disconnect may not be installed in a bathroom. 230.90(A): each ungrounded service conductor needs overload protection rated no higher than the conductor ampacity, except that the next higher standard size (240.4(B)) is allowed and the sum of up to six breakers may exceed the conductor ampacity.",
+   "status": "unverified",
+   "note": "From the NEC 2023 text from memory.",
+   "keywords": [
+    "service disconnect",
+    "bathroom",
+    "230.70",
+    "230.90",
+    "service overcurrent",
+    "six breakers"
+   ]
+  },
+  {
+   "id": "E5-141",
+   "topic": "Grounding & bonding",
+   "trade": "elec",
+   "state": null,
+   "source": "NEC 2023 250.53(C)",
+   "fact": "NEC 2023 250.53(C): bonding jumpers that connect grounding electrodes together are sized from 250.66 and installed per 250.64(A), (B) and (E); the jumper to a rod, pipe or plate never needs to be larger than 6 AWG copper.",
+   "status": "unverified",
+   "note": "From the NEC 2023 text from memory; the 6 AWG limit matches 250.66(A) in the knowledge base.",
+   "keywords": [
+    "bonding jumper",
+    "electrodes",
+    "250.53",
+    "ground rod",
+    "6 awg",
+    "grounding electrode system"
+   ]
+  },
+  {
+   "id": "E5-142",
+   "topic": "Grounding & bonding",
+   "trade": "elec",
+   "state": null,
+   "source": "NEC 2023 250.21(B); 250.36",
+   "fact": "Ungrounded AC systems of 120-1000 V must have ground detectors that warn of a ground fault (NEC 2023 250.21(B)). High-impedance grounded neutral systems are allowed for 3-phase systems of 480-1000 V where qualified persons service the installation, ground detectors are installed and no line-to-neutral loads are served (250.36).",
+   "status": "unverified",
+   "note": "From the NEC 2023 text from memory.",
+   "keywords": [
+    "ungrounded system",
+    "ground detector",
+    "high impedance grounding",
+    "250.21",
+    "250.36",
+    "480 volts"
+   ]
+  },
+  {
+   "id": "E5-143",
+   "topic": "Motors (Art. 430)",
+   "trade": "elec",
+   "state": null,
+   "source": "NEC 2023 430.37; Table 430.37",
+   "fact": "NEC 2023 430.37 (Table 430.37): a three-phase AC motor protected by overload units needs three of them, one in each phase conductor.",
+   "status": "unverified",
+   "note": "From the NEC 2023 text from memory.",
+   "keywords": [
+    "overload",
+    "three overloads",
+    "430.37",
+    "three phase motor",
+    "heaters",
+    "overload relay"
+   ]
+  },
+  {
+   "id": "E5-144",
+   "topic": "Motors (Art. 430)",
+   "trade": "elec",
+   "state": null,
+   "source": "NEC 2023 430.83(E)",
+   "fact": "NEC 2023 430.83(E): a slash-rated controller (for example 480Y/277 V) may be used only on a solidly grounded system where the voltage to ground does not exceed the lower number and the voltage between conductors does not exceed the higher number. It may not be used on a 480 V delta or ungrounded system.",
+   "status": "unverified",
+   "note": "From the NEC 2023 text from memory.",
+   "keywords": [
+    "slash rating",
+    "480Y/277",
+    "430.83",
+    "controller",
+    "solidly grounded",
+    "delta"
+   ]
+  },
+  {
+   "id": "E5-145",
+   "topic": "Generators & transformers",
+   "trade": "elec",
+   "state": null,
+   "source": "NEC 2023 Table 450.3(B) Note 2",
+   "fact": "NEC 2023 Table 450.3(B) Note 2: where secondary protection is required, it may be up to six circuit breakers or six sets of fuses grouped in one location, as long as their total rating does not exceed what a single device would be allowed.",
+   "status": "unverified",
+   "note": "From the NEC 2023 table note from memory.",
+   "keywords": [
+    "transformer secondary",
+    "six breakers",
+    "450.3",
+    "secondary protection",
+    "note 2",
+    "fuses"
+   ]
+  },
+  {
+   "id": "E5-146",
+   "topic": "Overcurrent protection",
+   "trade": "elec",
+   "state": null,
+   "source": "NEC 2023 240.21(C)(1)",
+   "fact": "NEC 2023 240.21(C)(1): the secondary conductors of a single-phase transformer with a 2-wire secondary, or a three-phase delta-delta transformer with a 3-wire secondary, may be protected by the primary overcurrent device if that device does not exceed the secondary conductor ampacity times the secondary-to-primary voltage ratio.",
+   "status": "unverified",
+   "note": "From the NEC 2023 text from memory.",
+   "keywords": [
+    "transformer secondary",
+    "primary protection",
+    "240.21(C)",
+    "2-wire",
+    "delta-delta",
+    "voltage ratio"
+   ]
+  },
+  {
+   "id": "E5-147",
+   "topic": "Hazardous & health care",
+   "trade": "elec",
+   "state": null,
+   "source": "NEC 2023 517.18(A)",
+   "fact": "NEC 2023 517.18(A): each general care (Category 2) patient bed location must be supplied by at least two branch circuits, at least one from the critical branch and at least one from the normal system.",
+   "status": "unverified",
+   "note": "From the NEC 2023 text from memory.",
+   "keywords": [
+    "patient bed",
+    "general care",
+    "517.18",
+    "critical branch",
+    "normal system",
+    "branch circuits"
+   ]
+  },
+  {
+   "id": "E5-148",
+   "topic": "Hazardous & health care",
+   "trade": "elec",
+   "state": null,
+   "source": "NEC 2023 501.15(C)(6)",
+   "fact": "NEC 2023 501.15(C)(6): the cross-sectional area of conductors in a conduit seal may not exceed 25% of the area of rigid metal conduit of the same trade size, unless the seal is identified for a higher fill.",
+   "status": "unverified",
+   "note": "From the NEC 2023 text from memory.",
+   "keywords": [
+    "conduit seal",
+    "25 percent",
+    "501.15",
+    "seal fill",
+    "explosionproof",
+    "Class I"
+   ]
+  },
+  {
+   "id": "E5-149",
+   "topic": "Emergency & standby",
+   "trade": "elec",
+   "state": null,
+   "source": "NEC 2023 700.7(A); 700.4(B)",
+   "fact": "NEC 2023 700.7(A): a sign at the service entrance must show the type and location of each on-site emergency power source. 700.4(B): when an alternate source also serves other loads, load shedding must keep priority in this order: emergency, then legally required standby, then optional standby.",
+   "status": "unverified",
+   "note": "From the NEC 2023 text from memory.",
+   "keywords": [
+    "emergency sign",
+    "700.7",
+    "load shedding",
+    "700.4",
+    "priority",
+    "emergency system"
+   ]
+  },
+  {
+   "id": "E5-150",
+   "topic": "Emergency & standby",
+   "trade": "elec",
+   "state": null,
+   "source": "NEC 2023 695.4(B)(2)",
+   "fact": "NEC 2023 695.4(B)(2): the overcurrent device for a fire pump supply must be sized to carry the sum of the locked-rotor current of the fire pump motor(s) and pressure maintenance (jockey) pump motor(s) plus 100% of associated fire pump accessory equipment indefinitely, so it will not open during a fire.",
+   "status": "unverified",
+   "note": "From the NEC 2023 text from memory.",
+   "keywords": [
+    "fire pump",
+    "locked rotor",
+    "695.4",
+    "overcurrent",
+    "jockey pump",
+    "fire protection"
+   ]
+  },
+  {
+   "id": "E5-151",
+   "topic": "Electrical theory",
+   "trade": "elec",
+   "state": null,
+   "source": "Wye system voltages",
+   "fact": "In a 480Y/277 V system the line-to-neutral voltage is 480 / 1.732 = 277 V, which is used for fluorescent and LED lighting. A 10 kW single-phase load draws 10,000 / 277 = 36.1 A at 277 V, or 10,000 / 480 = 20.8 A connected line to line.",
+   "status": "verified",
+   "note": "Standard wye voltage relationship and I = P / E.",
+   "keywords": [
+    "480Y/277",
+    "277 volts",
+    "wye",
+    "line to neutral",
+    "single phase load",
+    "theory"
+   ]
+  },
+  {
+   "id": "E5-152",
+   "topic": "Electrical theory",
+   "trade": "elec",
+   "state": null,
+   "source": "Single-phase vs. three-phase current",
+   "fact": "For the same kW and voltage, a balanced three-phase load draws less line current than a single-phase load: I = P / (E x 1.732) instead of I = P / E. Example: 30 kW at 240 V is 125 A single-phase but about 72 A three-phase.",
+   "status": "verified",
+   "note": "Standard power formulas.",
+   "keywords": [
+    "three phase current",
+    "single phase current",
+    "240 volts",
+    "1.732",
+    "kW to amps",
+    "theory"
+   ]
+  }
+ ],
+ "questions": [
+  {
+   "t": "elec",
+   "topic": "Conductors & ampacity",
+   "q": "What is the 75 C ampacity of 2 AWG aluminum in Table 310.16?",
+   "c": [
+    "75 A",
+    "90 A",
+    "100 A",
+    "115 A"
+   ],
+   "a": 1,
+   "ref": "NEC 2023 Table 310.16",
+   "why": "Table 310.16 lists 2 AWG aluminum at 90 A in the 75 C column; 115 A is the 75 C value for 2 AWG copper."
+  },
+  {
+   "t": "elec",
+   "topic": "Conductors & ampacity",
+   "q": "Three 3 AWG copper THHN current-carrying conductors run through a rooftop space where the ambient is 54 C (129 F). What is the corrected ampacity?",
+   "c": [
+    "87.4 A",
+    "76 A",
+    "100 A",
+    "115 A"
+   ],
+   "a": 0,
+   "ref": "NEC 2023 Table 310.16; Table 310.15(B)(1)(1)",
+   "why": "Start with the 90 C value for 3 AWG copper (115 A) and multiply by the 51-55 C factor for 90 C conductors (0.76): 115 x 0.76 = 87.4 A."
+  },
+  {
+   "t": "elec",
+   "topic": "Boxes & enclosures",
+   "q": "With no clamps, devices or grounding conductors, how many 12 AWG conductors may go in a 4-11/16 x 2-1/8 in square metal box?",
+   "c": [
+    "16",
+    "13",
+    "21",
+    "18"
+   ],
+   "a": 3,
+   "ref": "NEC 2023 Table 314.16(A)",
+   "why": "The box is 42.0 cu in and each 12 AWG needs 2.25 cu in: 42.0 / 2.25 = 18.7, so 18 conductors."
+  },
+  {
+   "t": "elec",
+   "topic": "Motors (Art. 430)",
+   "q": "What minimum branch-circuit conductor ampacity is required for a 15 hp, 208 V, three-phase motor?",
+   "c": [
+    "46.2 A",
+    "52.5 A",
+    "57.75 A",
+    "80.9 A"
+   ],
+   "a": 2,
+   "ref": "NEC 2023 Table 430.250; 430.22",
+   "why": "Table 430.250 gives 46.2 A for 15 hp at 208 V, and 430.22 requires 125%: 46.2 x 1.25 = 57.75 A."
+  },
+  {
+   "t": "elec",
+   "topic": "Conduit fill (Chapter 9)",
+   "q": "How many 12 AWG THHN conductors are permitted in 1 in EMT (all the same size)?",
+   "c": [
+    "16",
+    "26",
+    "22",
+    "35"
+   ],
+   "a": 1,
+   "ref": "NEC 2023 Ch. 9 Tables 1, 4, 5",
+   "why": "1 in EMT has 0.346 sq in at 40% fill; 0.346 / 0.0133 = 26.0, so 26 conductors."
+  },
+  {
+   "t": "elec",
+   "topic": "General requirements (Art. 110)",
+   "q": "A 20 hp, 230 V, 3-phase Design B motor (54 A table FLC) is on a circuit under 100 A. Using THHN copper, what is the smallest conductor allowed?",
+   "c": [
+    "4 AWG",
+    "6 AWG",
+    "8 AWG",
+    "3 AWG"
+   ],
+   "a": 0,
+   "ref": "NEC 2023 430.22; 110.14(C)(1)(a)(4)",
+   "why": "54 x 1.25 = 68 A. Design B motors may use the 75 C column, where 6 AWG is only 65 A, so 4 AWG (85 A) is the minimum."
+  },
+  {
+   "t": "elec",
+   "topic": "Conductors & ampacity",
+   "q": "Six 3 AWG copper THHN current-carrying conductors share a raceway at 30 C, with 75 C terminals. What is their ampacity?",
+   "c": [
+    "80.5 A",
+    "115 A",
+    "100 A",
+    "92 A"
+   ],
+   "a": 3,
+   "ref": "NEC 2023 Table 310.16; 310.15(C)(1)",
+   "why": "115 A (90 C) x 0.80 for 4-6 conductors = 92 A, which is below the 100 A terminal limit, so 92 A applies."
+  },
+  {
+   "t": "elec",
+   "topic": "Feeders & load calculations",
+   "q": "Using Table 220.55 Column C, what is the maximum demand for 20 household ranges, each rated 12 kW?",
+   "c": [
+    "20 kW",
+    "27 kW",
+    "35 kW",
+    "48 kW"
+   ],
+   "a": 2,
+   "ref": "NEC 2023 Table 220.55, Column C",
+   "why": "Column C lists 35 kW for 20 ranges (15 kW plus 1 kW per range)."
+  },
+  {
+   "t": "elec",
+   "topic": "Feeders & load calculations",
+   "q": "Fifteen ranges are rated 13 kW (5), 15 kW (5) and 17 kW (5). What is the Column C demand using Note 2?",
+   "c": [
+    "30 kW",
+    "34.5 kW",
+    "36 kW",
+    "45 kW"
+   ],
+   "a": 1,
+   "ref": "NEC 2023 Table 220.55 Note 2",
+   "why": "The average is 15 kW, 3 kW over 12 kW, so increase the 15-range value (30 kW) by 15%: 30 x 1.15 = 34.5 kW."
+  },
+  {
+   "t": "elec",
+   "topic": "Feeders & load calculations",
+   "q": "A 2,400 sq ft house has a 12 kW range, a 5 kW dryer, 10 kW of electric heat and 6 kVA of AC. With the required small-appliance and laundry circuits, what is the standard-method load?",
+   "c": [
+    "About 121 A",
+    "About 101 A",
+    "About 146 A",
+    "About 167 A"
+   ],
+   "a": 0,
+   "ref": "NEC 2023 Art. 220 Part III",
+   "why": "Lighting/SA/laundry 11,700 VA demands to 6,045 VA; add 8,000 (range), 5,000 (dryer) and 10,000 (heat, larger than AC) = 29,045 VA / 240 = about 121 A."
+  },
+  {
+   "t": "elec",
+   "topic": "Feeders & load calculations",
+   "q": "In the 220.82 optional method, a house has 33,200 VA of general loads and 5,000 VA of AC. What is the calculated load?",
+   "c": [
+    "19,280 VA",
+    "38,200 VA",
+    "28,200 VA",
+    "24,280 VA"
+   ],
+   "a": 3,
+   "ref": "NEC 2023 220.82(B), (C)",
+   "why": "10,000 VA + 40% x 23,200 VA = 19,280 VA, plus 100% of the 5,000 VA AC = 24,280 VA."
+  },
+  {
+   "t": "elec",
+   "topic": "Grounding & bonding",
+   "q": "What is the minimum aluminum equipment grounding conductor for a feeder protected by a 400 A breaker?",
+   "c": [
+    "3 AWG",
+    "2 AWG",
+    "1 AWG",
+    "1/0 AWG"
+   ],
+   "a": 2,
+   "ref": "NEC 2023 Table 250.122",
+   "why": "Table 250.122 lists 1 AWG aluminum (3 AWG copper) for a 400 A device."
+  },
+  {
+   "t": "elec",
+   "topic": "Grounding & bonding",
+   "q": "A feeder is protected by a 250 A breaker. What is the minimum copper EGC?",
+   "c": [
+    "6 AWG",
+    "4 AWG",
+    "3 AWG",
+    "2 AWG"
+   ],
+   "a": 1,
+   "ref": "NEC 2023 Table 250.122",
+   "why": "250 A is not listed, so use the next larger row (300 A), which calls for 4 AWG copper."
+  },
+  {
+   "t": "elec",
+   "topic": "Grounding & bonding",
+   "q": "A 2000 A feeder requires what minimum copper equipment grounding conductor in each raceway?",
+   "c": [
+    "250 kcmil",
+    "4/0 AWG",
+    "3/0 AWG",
+    "350 kcmil"
+   ],
+   "a": 0,
+   "ref": "NEC 2023 Table 250.122; 250.122(F)",
+   "why": "Table 250.122 lists 250 kcmil copper for 2000 A, and 250.122(F) requires a full-size EGC in each parallel raceway."
+  },
+  {
+   "t": "elec",
+   "topic": "Grounding & bonding",
+   "q": "A service has two parallel sets of 250 kcmil copper per phase. What size copper GEC does Table 250.66 require (to a water pipe)?",
+   "c": [
+    "2 AWG",
+    "3/0 AWG",
+    "2/0 AWG",
+    "1/0 AWG"
+   ],
+   "a": 3,
+   "ref": "NEC 2023 Table 250.66",
+   "why": "Two 250 kcmil sets equal 500 kcmil per phase, which falls in the over 350 through 600 kcmil row: 1/0 copper."
+  },
+  {
+   "t": "elec",
+   "topic": "Motors (Art. 430)",
+   "q": "What is the maximum inverse-time breaker for a 25 hp, 460 V, 3-phase motor, using the next-size-up rule?",
+   "c": [
+    "60 A",
+    "80 A",
+    "90 A",
+    "110 A"
+   ],
+   "a": 2,
+   "ref": "NEC 2023 Table 430.250; Table 430.52",
+   "why": "FLC is 34 A; 34 x 250% = 85 A, which is not standard, so the next size up, 90 A, is allowed."
+  },
+  {
+   "t": "elec",
+   "topic": "Motors (Art. 430)",
+   "q": "For a wound-rotor motor, the maximum inverse-time breaker rating (before exceptions) is what percent of FLC?",
+   "c": [
+    "175%",
+    "150%",
+    "250%",
+    "800%"
+   ],
+   "a": 1,
+   "ref": "NEC 2023 Table 430.52",
+   "why": "Table 430.52 limits inverse-time breakers to 150% for wound-rotor motors; 250% applies to standard squirrel-cage motors."
+  },
+  {
+   "t": "elec",
+   "topic": "Motors (Art. 430)",
+   "q": "A 3 hp, 208 V, 3-phase motor has 14 AWG copper conductors. What is the largest inverse-time breaker allowed?",
+   "c": [
+    "30 A",
+    "20 A",
+    "25 A",
+    "15 A"
+   ],
+   "a": 0,
+   "ref": "NEC 2023 240.4(G); Table 430.52",
+   "why": "FLC is 10.6 A; 10.6 x 2.5 = 26.5 A, next standard size 30 A. The 15 A limit of 240.4(D) does not apply to motor circuits."
+  },
+  {
+   "t": "elec",
+   "topic": "Air conditioning (Art. 440)",
+   "q": "A unit has an 18 A rated-load-current compressor and a 1.2 A fan. What minimum circuit ampacity is needed?",
+   "c": [
+    "19.2 A",
+    "22.5 A",
+    "24 A",
+    "23.7 A"
+   ],
+   "a": 3,
+   "ref": "NEC 2023 440.32; 440.33",
+   "why": "125% of the compressor plus the fan: 18 x 1.25 + 1.2 = 23.7 A."
+  },
+  {
+   "t": "elec",
+   "topic": "General requirements (Art. 110)",
+   "q": "Equipment above a lay-in ceiling that may need servicing while energized must have an access opening of at least:",
+   "c": [
+    "18 x 18 in",
+    "22 x 30 in",
+    "22 x 22 in",
+    "30 x 30 in"
+   ],
+   "a": 2,
+   "ref": "NEC 2023 110.26(A)(4)",
+   "why": "110.26(A)(4) requires at least 22 x 22 in above a lay-in ceiling; 22 x 30 in is the crawl space minimum."
+  },
+  {
+   "t": "elec",
+   "topic": "General requirements (Art. 110)",
+   "q": "What is the minimum working space depth in front of a 208Y/120 V panelboard with exposed live parts across from a concrete wall (Condition 2)?",
+   "c": [
+    "3-1/2 ft",
+    "3 ft",
+    "4 ft",
+    "30 in"
+   ],
+   "a": 1,
+   "ref": "NEC 2023 Table 110.26(A)(1)",
+   "why": "208Y/120 V is 120 V to ground, in the 0-150 V row, which requires 3 ft for all three conditions."
+  },
+  {
+   "t": "elec",
+   "topic": "Pools, spas & tubs (Art. 680)",
+   "q": "A junction box feeding a wet-niche pool light (no barrier) must be at least how far from the inside wall of the pool?",
+   "c": [
+    "4 ft",
+    "3 ft",
+    "5 ft",
+    "10 ft"
+   ],
+   "a": 0,
+   "ref": "NEC 2023 680.24(A)(2)",
+   "why": "680.24(A)(2) requires the box to be at least 4 ft from the inside pool wall unless a solid fence, wall or permanent barrier separates them."
+  },
+  {
+   "t": "elec",
+   "topic": "Solar PV & EV charging",
+   "q": "PV modules have a 35 V Voc. Using a 1.18 cold-temperature factor, what is the maximum voltage of 12 modules in series?",
+   "c": [
+    "420 V",
+    "600 V",
+    "525 V",
+    "495.6 V"
+   ],
+   "a": 3,
+   "ref": "NEC 2023 690.7(A); Table 690.7(A)",
+   "why": "35 x 1.18 = 41.3 V per module; 41.3 x 12 = 495.6 V."
+  },
+  {
+   "t": "elec",
+   "topic": "Hazardous & health care",
+   "q": "Emergency disconnects for gasoline dispensers must be located:",
+   "c": [
+    "Within 10 ft of the dispensers",
+    "Within sight and not more than 50 ft away",
+    "At least 20 ft but not more than 100 ft from the dispensers",
+    "At the service equipment only"
+   ],
+   "a": 2,
+   "ref": "NEC 2023 514.11(A)",
+   "why": "514.11(A) requires emergency shutoffs at least 20 ft and no more than 100 ft from the dispensers they serve."
+  },
+  {
+   "t": "elec",
+   "topic": "Electrical theory",
+   "q": "Two 100 W, 120 V lamps are connected in series across 120 V. How much power does each lamp use?",
+   "c": [
+    "100 W",
+    "25 W",
+    "50 W",
+    "12.5 W"
+   ],
+   "a": 1,
+   "ref": "Ohm's law / power formulas",
+   "why": "Each lamp is 144 ohms; in series the current is 120 / 288 = 0.417 A, so each lamp uses 0.417 squared x 144 = 25 W."
+  },
+  {
+   "t": "elec",
+   "topic": "Electrical theory",
+   "q": "Two 50 kVA single-phase transformers are connected open delta. About how much 3-phase load can they supply?",
+   "c": [
+    "86.6 kVA",
+    "50 kVA",
+    "100 kVA",
+    "150 kVA"
+   ],
+   "a": 0,
+   "ref": "Transformer theory (open delta)",
+   "why": "Open delta delivers 86.6% of the two units' combined rating: 100 kVA x 0.866 = 86.6 kVA."
+  },
+  {
+   "t": "elec",
+   "topic": "Electrical theory",
+   "q": "A 100 kW load runs at 0.80 power factor. About how many kVAR of capacitors raise it to 0.95 PF?",
+   "c": [
+    "25 kVAR",
+    "75 kVAR",
+    "60 kVAR",
+    "42 kVAR"
+   ],
+   "a": 3,
+   "ref": "Power triangle",
+   "why": "At 0.80 PF the load has 75 kVAR; at 0.95 PF it has about 32.9 kVAR; 75 - 32.9 = about 42 kVAR."
+  },
+  {
+   "t": "elec",
+   "topic": "Receptacle layout",
+   "q": "Which location was ADDED to the tamper-resistant receptacle requirement in NEC 2023?",
+   "c": [
+    "Dwelling garages",
+    "Hotel guest rooms",
+    "Fitness centers",
+    "Child care facilities"
+   ],
+   "a": 2,
+   "ref": "NEC 2023 406.12",
+   "why": "Fitness centers (along with nursing homes and similar facilities) were added in 2023; the other choices were already covered."
+  },
+  {
+   "t": "elec",
+   "topic": "Boxes & enclosures",
+   "q": "A box holds four 12 AWG and two 14 AWG insulated conductors, internal clamps, one receptacle connected to 12 AWG, and the EGCs (12 AWG largest). What volume is required?",
+   "c": [
+    "18.0 cu in",
+    "22.0 cu in",
+    "20.25 cu in",
+    "24.75 cu in"
+   ],
+   "a": 1,
+   "ref": "NEC 2023 314.16(B)",
+   "why": "4 x 2.25 + 2 x 2.00 = 13.0; clamps 2.25; device 2 x 2.25 = 4.5; grounds 2.25. Total = 22.0 cu in."
+  },
+  {
+   "t": "elec",
+   "topic": "Boxes & enclosures",
+   "q": "A box is 30.3 cu in and has a plaster ring marked 3.6 cu in. What volume may be used for the box fill calculation?",
+   "c": [
+    "33.9 cu in",
+    "30.3 cu in",
+    "26.7 cu in",
+    "36.3 cu in"
+   ],
+   "a": 0,
+   "ref": "NEC 2023 314.16(A)",
+   "why": "Marked volumes of plaster rings, extension rings and domed covers are added to the box volume: 30.3 + 3.6 = 33.9 cu in."
+  },
+  {
+   "t": "elec",
+   "topic": "Conduit fill (Chapter 9)",
+   "q": "Three 4 AWG THHN conductors and one bare stranded 8 AWG EGC need what minimum size EMT?",
+   "c": [
+    "1/2 in",
+    "3/4 in",
+    "1-1/4 in",
+    "1 in"
+   ],
+   "a": 3,
+   "ref": "NEC 2023 Ch. 9 Tables 4, 5, 8",
+   "why": "3 x 0.0824 + 0.017 = 0.2642 sq in. 3/4 in EMT allows 0.213 sq in at 40%; 1 in EMT allows 0.346 sq in, so 1 in is needed."
+  },
+  {
+   "t": "elec",
+   "topic": "Boxes & enclosures",
+   "q": "A pull box has a U pull with two 3 in conduits (4/0 conductors) entering the same wall. What is the minimum distance to the opposite wall?",
+   "c": [
+    "18 in",
+    "24 in",
+    "21 in",
+    "36 in"
+   ],
+   "a": 2,
+   "ref": "NEC 2023 314.28(A)(2)",
+   "why": "For angle and U pulls: 6 x the largest raceway plus the other raceways on that wall: 6 x 3 + 3 = 21 in."
+  },
+  {
+   "t": "elec",
+   "topic": "Wiring methods (Art. 300)",
+   "q": "250 kcmil copper conductors in a vertical raceway must be supported at intervals not exceeding:",
+   "c": [
+    "35 ft",
+    "60 ft",
+    "100 ft",
+    "135 ft"
+   ],
+   "a": 1,
+   "ref": "NEC 2023 Table 300.19(A)",
+   "why": "Table 300.19(A) allows 60 ft for copper over 4/0 through 350 kcmil."
+  },
+  {
+   "t": "elec",
+   "topic": "Wiring methods (Art. 300)",
+   "q": "Temporary wiring for holiday decorative lighting may remain in place for no more than:",
+   "c": [
+    "90 days",
+    "60 days",
+    "30 days",
+    "180 days"
+   ],
+   "a": 0,
+   "ref": "NEC 2023 590.3(B)",
+   "why": "590.3(B) limits holiday and similar decorative temporary lighting to 90 days."
+  },
+  {
+   "t": "elec",
+   "topic": "Hazardous & health care",
+   "q": "The patient care vicinity extends how far horizontally beyond the normal location of the patient bed?",
+   "c": [
+    "3 ft",
+    "5 ft",
+    "10 ft",
+    "6 ft"
+   ],
+   "a": 3,
+   "ref": "NEC 2023 Art. 100 (Patient Care Vicinity)",
+   "why": "The patient care vicinity extends 6 ft beyond the bed and 7 ft 6 in above the floor."
+  },
+  {
+   "t": "elec",
+   "topic": "Conductors & ampacity",
+   "q": "What is the ambient temperature correction factor for a 90 C conductor in a 73 C (163 F) space?",
+   "c": [
+    "0.29",
+    "0.41",
+    "0.50",
+    "0.58"
+   ],
+   "a": 2,
+   "ref": "NEC 2023 Table 310.15(B)(1)(1)",
+   "why": "Table 310.15(B)(1)(1) gives 0.50 for 71-75 C in the 90 C column; 0.58 is for 66-70 C."
+  },
+  {
+   "t": "elec",
+   "topic": "Boxes & enclosures",
+   "q": "With nothing else in the box, how many 14 AWG conductors may be installed in a 4 x 1-1/2 in square metal box?",
+   "c": [
+    "7",
+    "10",
+    "9",
+    "12"
+   ],
+   "a": 1,
+   "ref": "NEC 2023 Table 314.16(A)",
+   "why": "The box is 21.0 cu in; 21.0 / 2.00 = 10.5, so 10 conductors of 14 AWG."
+  },
+  {
+   "t": "elec",
+   "topic": "Conductors & ampacity",
+   "q": "A feeder has a 300 A calculated load. What is the smallest aluminum conductor (75 C column, no derating) with enough ampacity?",
+   "c": [
+    "500 kcmil",
+    "400 kcmil",
+    "350 kcmil",
+    "600 kcmil"
+   ],
+   "a": 0,
+   "ref": "NEC 2023 Table 310.16",
+   "why": "At 75 C, aluminum 350 kcmil is 250 A and 400 kcmil is 270 A; 500 kcmil is 310 A, the first size at or above 300 A."
+  },
+  {
+   "t": "elec",
+   "topic": "Motors (Art. 430)",
+   "q": "What is the maximum inverse-time breaker for a 10 hp, 208 V, 3-phase motor, using the next-size-up rule?",
+   "c": [
+    "60 A",
+    "70 A",
+    "100 A",
+    "80 A"
+   ],
+   "a": 3,
+   "ref": "NEC 2023 Table 430.250; Table 430.52",
+   "why": "FLC is 30.8 A; 30.8 x 250% = 77 A, which is not a standard size, so the next size up, 80 A, is allowed."
+  },
+  {
+   "t": "elec",
+   "topic": "Motors (Art. 430)",
+   "q": "What minimum conductor ampacity is required for a 5 hp, 230 V, single-phase motor?",
+   "c": [
+    "28 A",
+    "32.2 A",
+    "35 A",
+    "56 A"
+   ],
+   "a": 2,
+   "ref": "NEC 2023 Table 430.248; 430.22",
+   "why": "Table 430.248 lists 28 A for 5 hp at 230 V; 28 x 1.25 = 35 A."
+  },
+  {
+   "t": "elec",
+   "topic": "Grounding & bonding",
+   "q": "What is the minimum aluminum EGC for a circuit protected by a 1200 A overcurrent device?",
+   "c": [
+    "3/0 AWG",
+    "250 kcmil",
+    "4/0 AWG",
+    "350 kcmil"
+   ],
+   "a": 1,
+   "ref": "NEC 2023 Table 250.122",
+   "why": "Table 250.122 lists 250 kcmil aluminum (3/0 copper) for 1200 A."
+  },
+  {
+   "t": "elec",
+   "topic": "Solar PV & EV charging",
+   "q": "An EV charger requires a readily accessible disconnecting means when it is rated more than:",
+   "c": [
+    "60 A",
+    "40 A",
+    "50 A",
+    "30 A"
+   ],
+   "a": 0,
+   "ref": "NEC 2023 625.43",
+   "why": "625.43 requires a readily accessible disconnect for EVSE rated more than 60 A (or more than 150 V to ground)."
+  },
+  {
+   "t": "elec",
+   "topic": "General requirements (Art. 110)",
+   "q": "In an existing dwelling, a 200 A panelboard is being replaced in a basement with 6 ft 2 in of headroom. Does 110.26 allow it?",
+   "c": [
+    "No, 6-1/2 ft headroom is always required",
+    "Only with a written variance from the utility",
+    "Only if the panel is 100 A or less",
+    "Yes, existing dwelling equipment rated 200 A or less is exempt from the height rule"
+   ],
+   "a": 3,
+   "ref": "NEC 2023 110.26(A)(3) Exc. 2",
+   "why": "110.26(A)(3) Exception No. 2 exempts service equipment and panelboards rated 200 A or less in existing dwelling units from the 6-1/2 ft height requirement."
+  },
+  {
+   "t": "elec",
+   "topic": "Hazardous & health care",
+   "q": "At a gasoline dispenser, where must the conduit seal be located?",
+   "c": [
+    "Within 18 in of the dispenser enclosure",
+    "At the service panel",
+    "As the first fitting after the conduit emerges from the earth or concrete",
+    "Within 10 ft of the canopy"
+   ],
+   "a": 2,
+   "ref": "NEC 2023 514.9(A)",
+   "why": "514.9(A) requires the seal (or listed explosionproof reducer) to be the first fitting after the raceway emerges from earth or concrete."
+  },
+  {
+   "t": "elec",
+   "topic": "Generators & transformers",
+   "q": "A 50 kVA single-phase transformer has a 480 V primary and primary-only protection. What is the maximum standard primary OCPD?",
+   "c": [
+    "110 A",
+    "150 A",
+    "125 A",
+    "175 A"
+   ],
+   "a": 1,
+   "ref": "NEC 2023 Table 450.3(B)",
+   "why": "50,000 / 480 = 104.2 A; x 1.25 = 130.2 A. Note 1 allows the next higher standard size, 150 A."
+  },
+  {
+   "t": "elec",
+   "topic": "Feeders & load calculations",
+   "q": "Ten 5 kW cooktops (Column B) are installed. What is their demand load using Table 220.55 Column B?",
+   "c": [
+    "17 kW",
+    "12.5 kW",
+    "24.5 kW",
+    "25 kW"
+   ],
+   "a": 0,
+   "ref": "NEC 2023 Table 220.55, Column B",
+   "why": "Column B gives 34% for 10 appliances: 50 kW x 0.34 = 17 kW."
+  },
+  {
+   "t": "elec",
+   "topic": "Cables & raceways",
+   "q": "Four 14/2 NM cables pass through one bored hole that will be sealed with fire caulk. What is the maximum ampacity of each conductor?",
+   "c": [
+    "12.5 A",
+    "20 A",
+    "17.5 A",
+    "15 A"
+   ],
+   "a": 3,
+   "ref": "NEC 2023 334.80; Table 310.15(C)(1)",
+   "why": "Eight current-carrying conductors take a 70% factor: 25 A (90 C) x 0.70 = 17.5 A, but NM cable is limited to the 60 C value of 15 A."
+  }
+ ]
+}

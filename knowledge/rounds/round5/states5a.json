@@ -1,0 +1,1243 @@
+{
+ "source": "Round 5 states5a: state electrical, plumbing and HVAC/mechanical licensing and statewide code adoption (NEC, plumbing, mechanical/fuel gas editions) for AL-MT jurisdictions, from official state sources",
+ "facts": [
+  {
+   "id": "S5A-1",
+   "topic": "State licensing",
+   "trade": "elec",
+   "state": "Alabama",
+   "source": "Ala. Admin. Code r. 303-X-3-.02 and 303-X-3-.03 (Alabama Electrical Contractors Board, eff. Feb. 14, 2026) - https://admincode.legislature.state.al.us/api/chapter/303-X-3",
+   "fact": "Under Alabama Electrical Contractors Board rules effective February 14, 2026, both electrical contractor and journeyman electrician applicants must document at least 8,000 hours of electrical experience. Each year of an approved apprenticeship or qualifying education can count as 1,000 hours, but no more than 2,000 of the 8,000 hours.",
+   "status": "verified",
+   "note": "Read in the Alabama Administrative Code chapter 303-X-3 (new rules published Dec. 31, 2025, effective Feb. 14, 2026).",
+   "keywords": [
+    "alabama electrician experience",
+    "8000 hours",
+    "journeyman electrician alabama",
+    "electrical contractor alabama",
+    "AECB",
+    "apprenticeship credit"
+   ]
+  },
+  {
+   "id": "S5A-2",
+   "topic": "State code adoption",
+   "trade": "elec",
+   "state": "Alabama",
+   "source": "Alabama Division of Construction Management, State Building Code page - https://dcm.alabama.gov/bldg_code.aspx",
+   "fact": "Alabama has no statewide electrical code for all buildings. The State Building Code run by the Division of Construction Management (DCM) adopts the 2020 NEC (NFPA 70), effective July 1, 2022, but it covers only state-owned or state-funded projects, public and private K-12 schools, public colleges, hotels/motels and movie theaters. Other homes and commercial buildings follow whatever code the city or county has adopted.",
+   "status": "verified",
+   "note": "DCM page states it has no jurisdiction over residential or commercial property except hotels/motels and movie theaters.",
+   "keywords": [
+    "alabama NEC edition",
+    "2020 NEC alabama",
+    "state building code alabama",
+    "DCM",
+    "local adoption",
+    "schools hotels"
+   ]
+  },
+  {
+   "id": "S5A-3",
+   "topic": "State code adoption",
+   "trade": "plumb",
+   "state": "Alabama",
+   "source": "Alabama Division of Construction Management, State Building Code page - https://dcm.alabama.gov/bldg_code.aspx",
+   "fact": "The Alabama State Building Code (Division of Construction Management) adopts the 2021 International Plumbing Code and the 2021 International Fuel Gas Code, effective July 1, 2022. Like the rest of the State Building Code, it applies to state-funded projects, schools, hotels/motels and movie theaters; other buildings use locally adopted codes.",
+   "status": "verified",
+   "note": "",
+   "keywords": [
+    "alabama plumbing code",
+    "2021 IPC alabama",
+    "2021 IFGC",
+    "state building code",
+    "DCM",
+    "fuel gas alabama"
+   ]
+  },
+  {
+   "id": "S5A-4",
+   "topic": "State exams",
+   "trade": "plumb",
+   "state": "Alabama",
+   "source": "Ala. Admin. Code r. 720-X-7-.01(1)(a) (Plumbers and Gas Fitters Examining Board) - https://admincode.legislature.state.al.us/api/chapter/720-X-7",
+   "fact": "Alabama Plumbers and Gas Fitters Examining Board exams are based on the 2021 International Plumbing Code and the 2021 International Fuel Gas Code (rule 720-X-7-.01, last amended effective October 15, 2022).",
+   "status": "verified",
+   "note": "",
+   "keywords": [
+    "alabama plumbing exam",
+    "2021 IPC",
+    "2021 IFGC",
+    "gas fitter exam alabama",
+    "PGFB",
+    "exam code book"
+   ]
+  },
+  {
+   "id": "S5A-5",
+   "topic": "State code adoption",
+   "trade": "hvac",
+   "state": "Alabama",
+   "source": "Alabama Division of Construction Management, State Building Code page - https://dcm.alabama.gov/bldg_code.aspx",
+   "fact": "The Alabama State Building Code uses the 2021 International Mechanical Code, amended March 17, 2025 with portions of the 2024 IMC, and the 2021 International Fuel Gas Code (effective July 1, 2022). It applies only to state-funded projects, schools, hotels/motels and movie theaters; there is no statewide mechanical code for other private buildings.",
+   "status": "verified",
+   "note": "",
+   "keywords": [
+    "alabama mechanical code",
+    "2021 IMC",
+    "2024 IMC portions",
+    "alabama fuel gas code",
+    "state building code",
+    "DCM"
+   ]
+  },
+  {
+   "id": "S5A-6",
+   "topic": "State licensing",
+   "trade": "hvac",
+   "state": "Alabama",
+   "source": "Alabama Board of Heating, Air Conditioning and Refrigeration Contractors, Exam Application EA-1 (2025), quoting Ala. Code 34-31-28 - https://hacr.alabama.gov/wp-content/uploads/2022/09/EA-1-thru-EA-7-Exam-Application-with-Prep-Courses-2025.pdf",
+   "fact": "Alabama's HVACR board gives two contractor certification exams: HVAC and Refrigeration. To qualify (Ala. Code 34-31-28), an applicant needs 2 or more years as a board-registered apprentice, 3,000 hours of board-approved coursework or experience, or graduation from an approved HVACR program; employer affidavits showing at least 2 years of industry work in the past 5 years are also accepted.",
+   "status": "verified",
+   "note": "",
+   "keywords": [
+    "alabama hvac license",
+    "HVACR certification alabama",
+    "3000 hours",
+    "apprentice registration",
+    "refrigeration exam",
+    "34-31-28"
+   ]
+  },
+  {
+   "id": "S5A-7",
+   "topic": "State exams",
+   "trade": "hvac",
+   "state": "Alabama",
+   "source": "Alabama Board of Heating, Air Conditioning and Refrigeration Contractors, Exam Application EA-1 reference lists (2025) - https://hacr.alabama.gov/wp-content/uploads/2022/09/EA-1-thru-EA-7-Exam-Application-with-Prep-Courses-2025.pdf",
+   "fact": "Alabama's HVAC exam references include the 2021 International Residential Code, ACCA Manual J (8th ed.) and Manual D, and the 2020 NEC. The Refrigeration exam uses the 2021 International Mechanical Code, 29 CFR 1926 and the 2020 NEC. Both also use the NASCLA business and law guide and the Alabama HACR laws and rules.",
+   "status": "verified",
+   "note": "Reference list from the board's 2025 exam application; check for a newer list before testing.",
+   "keywords": [
+    "alabama hvac exam books",
+    "2021 IRC",
+    "manual J",
+    "2021 IMC",
+    "NASCLA",
+    "refrigeration exam alabama"
+   ]
+  },
+  {
+   "id": "S5A-8",
+   "topic": "State code adoption",
+   "trade": "elec",
+   "state": "Alaska",
+   "source": "8 AAC 70.025 Minimum electrical standards - https://www.law.cornell.edu/regulations/alaska/8-AAC-70.025; Alaska DOLWD Mechanical Inspection - https://labor.alaska.gov/lss/mihome.htm",
+   "fact": "Alaska adopts the 2020 NEC (NFPA 70) as the minimum electrical code for the whole state under 8 AAC 70.025 (last amended effective April 16, 2022), along with the 2017 National Electrical Safety Code (ANSI C2).",
+   "status": "verified",
+   "note": "Both the regulation text and the Department of Labor Mechanical Inspection page list the 2020 NEC.",
+   "keywords": [
+    "alaska NEC edition",
+    "2020 NEC alaska",
+    "8 AAC 70.025",
+    "NESC",
+    "statewide electrical code",
+    "mechanical inspection"
+   ]
+  },
+  {
+   "id": "S5A-9",
+   "topic": "State code adoption",
+   "trade": "plumb",
+   "state": "Alaska",
+   "source": "Alaska DOLWD Mechanical Inspection, adopted codes list (8 AAC 63.101) - https://labor.alaska.gov/lss/mihome.htm",
+   "fact": "Alaska's Department of Labor (Mechanical Inspection Section) adopts the 2018 Uniform Plumbing Code (UPC) under 8 AAC 63.101, along with the 2018 Uniform Swimming Pool, Spa and Hot Tub Code and the 2018 Uniform Solar Energy, Hydronics and Geothermal Code.",
+   "status": "verified",
+   "note": "The page lists the editions but no effective dates.",
+   "keywords": [
+    "alaska plumbing code",
+    "UPC 2018",
+    "uniform plumbing code alaska",
+    "8 AAC 63.101",
+    "IAPMO",
+    "mechanical inspection"
+   ]
+  },
+  {
+   "id": "S5A-10",
+   "topic": "State code adoption",
+   "trade": "hvac",
+   "state": "Alaska",
+   "source": "Alaska Department of Public Safety, Division of Fire and Life Safety, Regulations - https://dps.alaska.gov/Fire/Regulations",
+   "fact": "The Alaska State Fire Marshal adopted the 2021 International Mechanical Code and 2021 International Fuel Gas Code (together with the 2021 IBC, IEBC and IFC) in 13 AAC 50 through 55, effective October 28, 2022.",
+   "status": "verified",
+   "note": "",
+   "keywords": [
+    "alaska mechanical code",
+    "2021 IMC alaska",
+    "2021 IFGC",
+    "state fire marshal",
+    "13 AAC 50",
+    "fuel gas alaska"
+   ]
+  },
+  {
+   "id": "S5A-11",
+   "topic": "State licensing",
+   "trade": "elec",
+   "state": "Alaska",
+   "source": "Alaska DOLWD Mechanical Inspection - https://labor.alaska.gov/lss/mihome.htm",
+   "fact": "A state-issued Certificate of Fitness (COF) is required to do construction work covered by the NEC anywhere in Alaska. Hours only count toward a journeyman COF if the worker holds a state Electrician or Power Lineman Trainee COF, and plumbers likewise need a Plumber Trainee COF to earn hours toward journeyman.",
+   "status": "verified",
+   "note": "",
+   "keywords": [
+    "alaska certificate of fitness",
+    "trainee COF",
+    "journeyman electrician alaska",
+    "plumber trainee",
+    "alaska electrician license",
+    "hours"
+   ]
+  },
+  {
+   "id": "S5A-12",
+   "topic": "State licensing",
+   "trade": "hvac",
+   "state": "Alaska",
+   "source": "12 AAC 39 Article 2 (Mechanical Administrator license categories) - https://law.cornell.edu/regulations/alaska/title-12/part-1/chapter-39/article-2; 12 AAC 39.322",
+   "fact": "Alaska mechanical contractors need a licensed Mechanical Administrator. Current categories are unlimited commercial and industrial plumbing; heating, cooling and process piping; unlimited HVAC/sheet metal; unlimited refrigeration; mechanical systems temperature control; residential plumbing and hydronic heating; and residential HVAC. The residential HVAC category requires journeyman-level residential HVAC experience in at least 2 of the 4 years before applying.",
+   "status": "verified",
+   "note": "",
+   "keywords": [
+    "alaska mechanical administrator",
+    "residential HVAC alaska",
+    "12 AAC 39",
+    "refrigeration category",
+    "sheet metal",
+    "alaska hvac license"
+   ]
+  },
+  {
+   "id": "S5A-13",
+   "topic": "State licensing",
+   "trade": "elec",
+   "state": "Arizona",
+   "source": "Arizona Registrar of Contractors, License Classification Requirements - https://www.azroc.gov/sites/default/files/2023-11/License%20Classification%20Requirements_6.8.20_0.pdf",
+   "fact": "Arizona ROC electrical licenses R-11 (residential), C-11 (commercial) and CR-11 (dual) each require a qualifying party with 4 years of hands-on and/or managerial experience who passes the Statutes and Rules Exam (SRE) and the trade exam. Arizona has no state journeyman electrician card; the license belongs to the contracting business.",
+   "status": "verified",
+   "note": "Experience and exams read on the ROC classification table; the document says nothing about any statewide journeyman license.",
+   "keywords": [
+    "arizona electrical license",
+    "C-11",
+    "R-11",
+    "CR-11",
+    "4 years experience",
+    "statutes and rules exam"
+   ]
+  },
+  {
+   "id": "S5A-14",
+   "topic": "State licensing",
+   "trade": "plumb",
+   "state": "Arizona",
+   "source": "Arizona Registrar of Contractors, License Classification Requirements - https://www.azroc.gov/sites/default/files/2023-11/License%20Classification%20Requirements_6.8.20_0.pdf",
+   "fact": "Arizona ROC plumbing licenses R-37 (residential, including solar), C-37 (commercial) and CR-37 (dual) each require 4 years of hands-on and/or managerial experience plus the Statutes and Rules Exam and the trade exam. Because R-37 includes solar work, it also requires the Solar exam.",
+   "status": "verified",
+   "note": "",
+   "keywords": [
+    "arizona plumbing license",
+    "R-37",
+    "C-37",
+    "CR-37",
+    "solar exam",
+    "ROC"
+   ]
+  },
+  {
+   "id": "S5A-15",
+   "topic": "State licensing",
+   "trade": "hvac",
+   "state": "Arizona",
+   "source": "Arizona Registrar of Contractors, License Classification Requirements - https://www.azroc.gov/sites/default/files/2023-11/License%20Classification%20Requirements_6.8.20_0.pdf",
+   "fact": "Arizona ROC air conditioning and refrigeration licenses are R-39 (residential, including solar), C-39 (commercial) and CR-39 (dual). Each requires 4 years of hands-on and/or managerial experience plus the Statutes and Rules Exam and the trade exam, and R-39 also requires the Solar exam.",
+   "status": "verified",
+   "note": "",
+   "keywords": [
+    "arizona hvac license",
+    "R-39",
+    "C-39",
+    "CR-39",
+    "air conditioning refrigeration",
+    "ROC"
+   ]
+  },
+  {
+   "id": "S5A-16",
+   "topic": "State code adoption",
+   "trade": "elec",
+   "state": "Arizona",
+   "source": "Mike Holt NEC Adoption List - https://www.mikeholt.com/necadoptionlist.php; IAEI Code Adoption by State - https://www.iaei.org/page/nec-code-adoption",
+   "fact": "Arizona does not adopt the NEC at the state level. Each city or county adopts its own electrical code edition, so the NEC edition an Arizona electrician works under depends on the local jurisdiction.",
+   "status": "verified",
+   "note": "Two respected trade references (Mike Holt and IAEI) agree; no state agency adopts the NEC for private work.",
+   "keywords": [
+    "arizona NEC",
+    "local adoption",
+    "no statewide electrical code",
+    "arizona electrical code edition",
+    "city county code",
+    "NEC arizona"
+   ]
+  },
+  {
+   "id": "S5A-17",
+   "topic": "State code adoption",
+   "trade": "plumb",
+   "state": "Arizona",
+   "source": "ICC Code Adoptions Map, Arizona - https://www.iccsafe.org/advocacy/adoptions-map/arizona/",
+   "fact": "Arizona has no statewide plumbing or mechanical code for private construction. Codes are adopted locally, mostly the I-codes (such as the IPC, IMC and IFGC), so the edition depends on the city or county. The only statewide code ICC notes is the State Fire Code (2018 IFC).",
+   "status": "verified",
+   "note": "ICC adoption page: 'Codes are adopted locally in Arizona and are predominantly the I-codes.'",
+   "keywords": [
+    "arizona plumbing code",
+    "local adoption",
+    "IPC arizona",
+    "IMC arizona",
+    "no statewide code",
+    "state fire code"
+   ]
+  },
+  {
+   "id": "S5A-18",
+   "topic": "State code adoption",
+   "trade": "elec",
+   "state": "Arkansas",
+   "source": "Arkansas DOLL, 2023 NEC Rule Summary and Public Notice (July 2024) - https://labor.arkansas.gov/wp-content/uploads/2023-NEC-Rule-Summary.pdf; Arkansas Building Authority Current Codes (rev. Jan. 2023) - https://sas.arkansas.gov/wp-content/uploads/CurrentCodes072023.pdf",
+   "fact": "Arkansas adopts the NEC statewide through the Board of Electrical Examiners (Rule 010.13-008). The state listed the 2020 Arkansas NEC as current in 2023, and in 2024 the board proposed moving to the 2023 NEC while keeping Article 210 at the 2020 standard. Confirm the edition now in force with the Department of Labor and Licensing.",
+   "status": "unverified",
+   "note": "No official page read confirms which edition is in force today. IAEI lists 2020 NEC effective 8/1/2022; Mike Holt's list shows the 2026 NEC effective 9/3/2026.",
+   "keywords": [
+    "arkansas NEC edition",
+    "board of electrical examiners",
+    "rule 010.13-008",
+    "2020 NEC arkansas",
+    "2023 NEC arkansas",
+    "article 210"
+   ]
+  },
+  {
+   "id": "S5A-19",
+   "topic": "State code adoption",
+   "trade": "plumb",
+   "state": "Arkansas",
+   "source": "Arkansas Building Authority, Current Codes (rev. Jan. 2023) - https://sas.arkansas.gov/wp-content/uploads/CurrentCodes072023.pdf; Arkansas Dept. of Health, Plumbing and Natural Gas - https://healthy.arkansas.gov/programs-services/licensing-military-member-licensure-permits-plan-reviews/plumbing-natural-gas-health-code/",
+   "fact": "Arkansas plumbing and gas work follows state codes administered by the Arkansas Department of Health: the 2018 Arkansas Plumbing Code (an ICC-published code based on the IPC) and the 2018 Arkansas Fuel Gas Code. Plumbers are licensed by the Health Department's State Committee of Plumbing Examiners.",
+   "status": "verified",
+   "note": "Editions from the state's 2023 current-codes list; ADH page confirms the codes are ICC-published but gives no edition, so check for a newer adoption.",
+   "keywords": [
+    "arkansas plumbing code",
+    "2018 arkansas plumbing code",
+    "fuel gas code arkansas",
+    "department of health",
+    "IPC based",
+    "state committee of plumbing examiners"
+   ]
+  },
+  {
+   "id": "S5A-20",
+   "topic": "State licensing",
+   "trade": "plumb",
+   "state": "Arkansas",
+   "source": "Arkansas Dept. of Health, Plumbing Licensing Rules (eff. Sept. 5, 2024), Section II - https://healthy.arkansas.gov/wp-content/uploads/Plumbing-Licensing-Rules.pdf",
+   "fact": "In Arkansas, a journeyman plumber applicant needs at least 4 years of experience (or its equivalent) and a master plumber applicant needs at least 5 years. A journeyman must hold that license for one full year before becoming eligible for the master exam (the committee may waive this for extreme hardship).",
+   "status": "verified",
+   "note": "",
+   "keywords": [
+    "arkansas plumber license",
+    "journeyman plumber 4 years",
+    "master plumber 5 years",
+    "arkansas master exam",
+    "department of health",
+    "plumbing experience"
+   ]
+  },
+  {
+   "id": "S5A-21",
+   "topic": "State licensing",
+   "trade": "hvac",
+   "state": "Arkansas",
+   "source": "17 CAR Part 261 (HVACR Licensing Board rules), sec. 261-103 and 261-104, as posted by Arkansas DOLL - https://labor.arkansas.gov/wp-content/uploads/17CARpt.261-Clean.pdf",
+   "fact": "Arkansas HVACR licenses: Class A has no capacity limit; Class B is limited to air conditioning of 25 tons or less and heating of 1,000,000 BTUH input or less per unit, and refrigeration of 15 hp or less per unit; Class D covers sheet metal ductwork only; Class E covers refrigeration only. Exam applicants need at least 2 years of experience as or for an HVACR contractor, and employees who do HVACR work must hold a registration.",
+   "status": "verified",
+   "note": "Class definitions read in the DOLL-posted 17 CAR Part 261 rule text (clean copy); confirm this is the final adopted version.",
+   "keywords": [
+    "arkansas hvac license classes",
+    "class A",
+    "class B 25 tons",
+    "class D sheet metal",
+    "class E refrigeration",
+    "HVACR registration"
+   ]
+  },
+  {
+   "id": "S5A-22",
+   "topic": "State code adoption",
+   "trade": "hvac",
+   "state": "Arkansas",
+   "source": "17 CAR 261-121(a) - https://labor.arkansas.gov/wp-content/uploads/17CARpt.261-Clean.pdf; Arkansas Building Authority Current Codes - https://sas.arkansas.gov/wp-content/uploads/CurrentCodes072023.pdf",
+   "fact": "The Arkansas HVACR Licensing Board adopts the 2021 International Mechanical Code as the state mechanical code, administered by the Department of Labor and Licensing.",
+   "status": "verified",
+   "note": "Both the board rule text and the state's current-codes list name the 2021 IMC.",
+   "keywords": [
+    "arkansas mechanical code",
+    "2021 IMC arkansas",
+    "HVACR board",
+    "department of labor",
+    "mechanical code edition",
+    "arkansas"
+   ]
+  },
+  {
+   "id": "S5A-23",
+   "topic": "State code adoption",
+   "trade": "elec",
+   "state": "California",
+   "source": "California Building Standards Commission, Codes page - https://www.dgs.ca.gov/bsc/codes; HCD 01/23 Initial Statement of Reasons, Part 3 - https://www.dgs.ca.gov/-/media/Divisions/BSC/03-Rulemaking/2024-Triennial-Cycle/CAC/2024-03-25-PEME/HCD-01-23-ISOR-PT3.pdf",
+   "fact": "California's electrical code is the California Electrical Code (Title 24, Part 3). The current 2025 California Electrical Code, effective January 1, 2026, is based on the 2023 NEC with California amendments.",
+   "status": "verified",
+   "note": "BSC page gives the 2025 Title 24 effective date of Jan. 1, 2026; the state rulemaking document says the 2025 CEC is based on the 2023 NEC.",
+   "keywords": [
+    "california electrical code",
+    "2025 CEC",
+    "2023 NEC california",
+    "title 24 part 3",
+    "CBSC",
+    "effective january 1 2026"
+   ]
+  },
+  {
+   "id": "S5A-24",
+   "topic": "State code adoption",
+   "trade": "plumb",
+   "state": "California",
+   "source": "California Building Standards Commission, Codes page - https://www.dgs.ca.gov/bsc/codes; BSC 02/24 Initial Statement of Reasons, Part 5 - https://www.dgs.ca.gov/-/media/Divisions/BSC/03-Rulemaking/2024-Triennial-Cycle/CAC/2024-03-25-PEME/BSC-02-24-ISOR-PT5.pdf",
+   "fact": "The 2025 California Plumbing Code (Title 24, Part 5), effective January 1, 2026, is based on the 2024 Uniform Plumbing Code (UPC) published by IAPMO, not the IPC.",
+   "status": "verified",
+   "note": "",
+   "keywords": [
+    "california plumbing code",
+    "2025 CPC",
+    "2024 UPC",
+    "title 24 part 5",
+    "IAPMO",
+    "uniform plumbing code california"
+   ]
+  },
+  {
+   "id": "S5A-25",
+   "topic": "State code adoption",
+   "trade": "hvac",
+   "state": "California",
+   "source": "California Building Standards Commission, Codes page - https://www.dgs.ca.gov/bsc/codes; BSC 01/24 Initial Statement of Reasons, Part 4 - https://www.dgs.ca.gov/-/media/Divisions/BSC/03-Rulemaking/2024-Triennial-Cycle/CAC/2024-03-25-PEME/BSC-01-24-ISOR-PT4.pdf",
+   "fact": "The 2025 California Mechanical Code (Title 24, Part 4), effective January 1, 2026, is based on the 2024 Uniform Mechanical Code (UMC) published by IAPMO, not the IMC.",
+   "status": "verified",
+   "note": "",
+   "keywords": [
+    "california mechanical code",
+    "2025 CMC",
+    "2024 UMC",
+    "title 24 part 4",
+    "IAPMO",
+    "uniform mechanical code"
+   ]
+  },
+  {
+   "id": "S5A-26",
+   "topic": "State licensing",
+   "trade": "elec",
+   "state": "California",
+   "source": "California DIR, Electrician Certification application form - https://www.dir.ca.gov/das/ElectricalCertificationForm.pdf",
+   "fact": "California's Department of Industrial Relations certifies electricians by category with minimum experience hours: General Electrician 8,000 hours, Residential Electrician 4,800, Fire/Life Safety Technician 4,000, Voice Data Video Technician 4,000, and Nonresidential Lighting Technician 2,000. An approved applicant must take the exam within 1 year of being notified of eligibility.",
+   "status": "verified",
+   "note": "",
+   "keywords": [
+    "california electrician certification",
+    "general electrician 8000 hours",
+    "residential electrician 4800",
+    "DIR",
+    "fire life safety technician",
+    "voice data video"
+   ]
+  },
+  {
+   "id": "S5A-27",
+   "topic": "State licensing",
+   "trade": "plumb",
+   "state": "California",
+   "source": "CSLB, Acceptable documentation of journey-level experience - https://www.cslb.ca.gov/Resources/Contractors/Journeymen/AcceptableDocs.pdf",
+   "fact": "California licenses plumbing businesses as CSLB C-36 Plumbing contractors. The qualifying individual must show at least 4 years of journey-level experience in that classification within the last 10 years and pass the exams. California does not issue a statewide journeyman plumber card.",
+   "status": "verified",
+   "note": "Experience rule read on the CSLB document; the no-journeyman-card point matches existing KB fact STAT-046.",
+   "keywords": [
+    "california plumbing license",
+    "C-36",
+    "CSLB",
+    "4 years journey level",
+    "last 10 years",
+    "plumbing contractor california"
+   ]
+  },
+  {
+   "id": "S5A-28",
+   "topic": "State licensing",
+   "trade": "hvac",
+   "state": "California",
+   "source": "CSLB, Acceptable documentation of journey-level experience - https://www.cslb.ca.gov/Resources/Contractors/Journeymen/AcceptableDocs.pdf",
+   "fact": "California HVAC businesses are licensed by CSLB as C-20 Warm-Air Heating, Ventilating and Air-Conditioning contractors. As with every CSLB classification, the qualifier needs at least 4 years of journey-level experience in the trade within the last 10 years and must pass the exams; there is no separate state HVAC technician license (EPA 608 still applies to refrigerant work).",
+   "status": "verified",
+   "note": "",
+   "keywords": [
+    "california hvac license",
+    "C-20",
+    "CSLB",
+    "warm-air heating",
+    "4 years experience",
+    "hvac contractor california"
+   ]
+  },
+  {
+   "id": "S5A-29",
+   "topic": "State code adoption",
+   "trade": "elec",
+   "state": "Colorado",
+   "source": "Colorado State Electrical Board (DORA) homepage - https://dpo.colorado.gov/Electrical; IAEI Colorado NEC adoption - https://www.iaei.org/page/colorado-electrical-ceus",
+   "fact": "The Colorado State Electrical Board adopts the NEC statewide by rule (Rule 1.5, incorporation by reference), and the state runs electrical inspections where there is no local enforcement. The board adopted the 2023 NEC effective August 1, 2023, and held a May 27, 2026 rulemaking hearing to adopt the 2026 NEC. Check the board for the 2026 effective date.",
+   "status": "unverified",
+   "note": "DORA page confirms the May 27, 2026 hearing to adopt the 2026 NEC but gives no effective date; Mike Holt's list shows Aug. 1, 2026. The 2023 date comes from IAEI.",
+   "keywords": [
+    "colorado NEC edition",
+    "state electrical board",
+    "2026 NEC colorado",
+    "2023 NEC colorado",
+    "rule 1.5",
+    "electrical inspection"
+   ]
+  },
+  {
+   "id": "S5A-30",
+   "topic": "State code adoption",
+   "trade": "plumb",
+   "state": "Colorado",
+   "source": "3 CCR 720-1, Rule 2 (Colorado Plumbing Board) - https://regulations.justia.com/states/colorado/700/720/rule-3-ccr-720-1/section-3-ccr-720-1-2; ICC press release July 19, 2023",
+   "fact": "Colorado has a statewide plumbing code adopted by the State Plumbing Board: the 2021 International Plumbing Code and the 2021 International Fuel Gas Code with Colorado amendments (published as the 2021 Colorado Plumbing and Fuel Gas Codes).",
+   "status": "verified",
+   "note": "Regulation text (current through June 2025) incorporates the 2021 IPC and 2021 IFGC; ICC's July 2023 release confirms the board's adoption. Check for a later 2024 update.",
+   "keywords": [
+    "colorado plumbing code",
+    "2021 IPC colorado",
+    "2021 IFGC",
+    "state plumbing board",
+    "3 CCR 720-1",
+    "colorado fuel gas"
+   ]
+  },
+  {
+   "id": "S5A-31",
+   "topic": "State code adoption",
+   "trade": "hvac",
+   "state": "Colorado",
+   "source": "ICC Code Adoptions Map, Colorado - https://www.iccsafe.org/advocacy/adoptions-map/colorado/",
+   "fact": "Colorado has no statewide building or mechanical code; mechanical codes such as the IMC are adopted and enforced by local governments. State-level exceptions are state-owned buildings, public K-12 schools and health facilities, factory-built homes, and hotels, motels and multifamily buildings in areas with no local code.",
+   "status": "verified",
+   "note": "ICC adoption page: 'Colorado has no statewide building code.' Plumbing and electrical are the exceptions, with statewide codes set by their boards.",
+   "keywords": [
+    "colorado mechanical code",
+    "no statewide building code",
+    "local adoption",
+    "IMC colorado",
+    "home rule",
+    "colorado hvac"
+   ]
+  },
+  {
+   "id": "S5A-32",
+   "topic": "State code adoption",
+   "trade": "elec",
+   "state": "Connecticut",
+   "source": "CT DAS Office of State Building Inspector, Connecticut State Building Code - https://portal.ct.gov/en/DAS/Office-of-State-Building-Inspector/Connecticut-State-Building-Code/Regulations",
+   "fact": "Connecticut's statewide building code is the 2022 Connecticut State Building Code, which applies to permit applications filed on or after October 1, 2022. It adopts the 2020 NEC (NFPA 70) for electrical work.",
+   "status": "verified",
+   "note": "The DAS page lists no newer code; Mike Holt notes a 2023 NEC update process underway with no effective date set.",
+   "keywords": [
+    "connecticut NEC edition",
+    "2020 NEC connecticut",
+    "2022 state building code",
+    "october 1 2022",
+    "DAS",
+    "CT electrical code"
+   ]
+  },
+  {
+   "id": "S5A-33",
+   "topic": "State code adoption",
+   "trade": "plumb",
+   "state": "Connecticut",
+   "source": "CT DAS Office of State Building Inspector, Connecticut State Building Code - https://portal.ct.gov/en/DAS/Office-of-State-Building-Inspector/Connecticut-State-Building-Code/Regulations",
+   "fact": "The 2022 Connecticut State Building Code (permit applications filed from October 1, 2022) adopts the 2021 International Plumbing Code as Connecticut's statewide plumbing code.",
+   "status": "verified",
+   "note": "",
+   "keywords": [
+    "connecticut plumbing code",
+    "2021 IPC connecticut",
+    "2022 state building code",
+    "CT plumbing",
+    "statewide",
+    "DAS"
+   ]
+  },
+  {
+   "id": "S5A-34",
+   "topic": "State code adoption",
+   "trade": "hvac",
+   "state": "Connecticut",
+   "source": "CT DAS Office of State Building Inspector, Connecticut State Building Code - https://portal.ct.gov/en/DAS/Office-of-State-Building-Inspector/Connecticut-State-Building-Code/Regulations",
+   "fact": "The 2022 Connecticut State Building Code (permit applications filed from October 1, 2022) adopts the 2021 International Mechanical Code, along with the 2021 IBC, IRC, IEBC and IECC.",
+   "status": "verified",
+   "note": "",
+   "keywords": [
+    "connecticut mechanical code",
+    "2021 IMC connecticut",
+    "state building code",
+    "CT hvac code",
+    "2021 I-codes",
+    "DAS"
+   ]
+  },
+  {
+   "id": "S5A-35",
+   "topic": "State licensing",
+   "trade": "elec",
+   "state": "Connecticut",
+   "source": "CT DCP, Electrical License Types and Scope of Work - https://portal.ct.gov/DCP/Occupational-and-Professional-Division/Occupational--Profess/Electrical-License-Types-and-Scope-of-Work",
+   "fact": "In Connecticut, an E-2 Unlimited Electrical Journeyperson needs a completed registered apprenticeship (or at least 4 years of equivalent experience and training) and may work only while employed by a licensed contractor. An E-1 Unlimited Electrical Contractor needs 2 years as a licensed unlimited journeyperson (or 6 years of equivalent experience and training). Limited licenses include C-5 (up to 48 volts or 8 amps), L-5 (up to 25 volts or 5 amps) and PV-1 solar.",
+   "status": "verified",
+   "note": "",
+   "keywords": [
+    "connecticut electrician license",
+    "E-1",
+    "E-2",
+    "journeyperson",
+    "2 years journeyperson",
+    "C-5 limited"
+   ]
+  },
+  {
+   "id": "S5A-36",
+   "topic": "State licensing",
+   "trade": "plumb",
+   "state": "Connecticut",
+   "source": "CT DCP, Plumbing Licenses and Scope of Work - https://portal.ct.gov/DCP/Occupational-and-Professional-Division/Occupational--Profess/Plumbing-Licenses-and-Scope-of-Work",
+   "fact": "Connecticut's P-2 Unlimited Journeyperson Plumber needs a completed registered apprenticeship (or equivalent experience and training) and works only for a licensed contractor; the P-1 Unlimited Plumbing Contractor needs 2 years as an unlimited licensed journeyperson. Limited categories include J-1/J-2 well pumps and water conditioning and P-6/P-7 sewer, storm and water piping.",
+   "status": "verified",
+   "note": "",
+   "keywords": [
+    "connecticut plumbing license",
+    "P-1",
+    "P-2",
+    "journeyperson plumber",
+    "2 years",
+    "limited plumbing license"
+   ]
+  },
+  {
+   "id": "S5A-37",
+   "topic": "State licensing",
+   "trade": "hvac",
+   "state": "Connecticut",
+   "source": "CT DCP, Heating, Piping and Cooling License Types and Scope of Work - https://portal.ct.gov/DCP/Occupational-and-Professional-Division/Occupational--Profess/Heating-Piping-and-Cooling-License-Types-and-Scope-of-Work",
+   "fact": "Connecticut heating and cooling contractor licenses (S-1 unlimited, D-1 warm air/AC/refrigeration, B-1 gas and oil burner, G-1 gas piping) each require 2 years as a properly licensed journeyperson or equivalent experience; the matching journeyperson licenses (S-2, D-2, B-2, G-2) require a registered apprenticeship or equivalent. D-1 work excludes oil burners, and B-1 'light commercial' means burners of 5 gallons per hour or less or a total heating load up to 500,000 BTU.",
+   "status": "verified",
+   "note": "",
+   "keywords": [
+    "connecticut hvac license",
+    "S-1",
+    "D-1",
+    "B-1 oil burner",
+    "journeyperson",
+    "500000 BTU light commercial"
+   ]
+  },
+  {
+   "id": "S5A-38",
+   "topic": "State code adoption",
+   "trade": "elec",
+   "state": "Delaware",
+   "source": "Delaware State Fire Marshal, 2026 DSFPR update (Regulation 701) - https://statefiremarshal.delaware.gov/wp-content/uploads/sites/110/2025/12/2026-DSFPR-update.pdf; IAEI Delaware page",
+   "fact": "Delaware's 2026 State Fire Prevention Regulations (Regulation 701), effective January 1, 2026, list NFPA 70, the 2023 NEC, as the electrical code. Local jurisdictions in Delaware must use the NEC edition enacted by the State Fire Prevention Commission.",
+   "status": "verified",
+   "note": "Effective date and edition read on the State Fire Marshal's 2026 DSFPR update; the local-adoption rule is from IAEI.",
+   "keywords": [
+    "delaware NEC edition",
+    "2023 NEC delaware",
+    "fire prevention regulations",
+    "regulation 701",
+    "january 1 2026",
+    "state fire marshal"
+   ]
+  },
+  {
+   "id": "S5A-39",
+   "topic": "State code adoption",
+   "trade": "plumb",
+   "state": "Delaware",
+   "source": "16 Del. Admin. Code 4455-1.0 and 2.0 (State of Delaware Plumbing Code) - https://www.law.cornell.edu/regulations/delaware/16-Del-Admin-Code-SS-4455-2.0; 26 DE Reg. 110 (Aug. 1, 2022)",
+   "fact": "The State of Delaware Plumbing Code, issued by the Division of Public Health (16 Del. Admin. Code 4455), adopts the 2021 International Plumbing Code with Delaware amendments, effective August 11, 2022.",
+   "status": "verified",
+   "note": "Final order in 26 DE Reg. 110 sets the Aug. 11, 2022 effective date; codified text names the 2021 IPC.",
+   "keywords": [
+    "delaware plumbing code",
+    "2021 IPC delaware",
+    "division of public health",
+    "4455",
+    "august 2022",
+    "state plumbing code"
+   ]
+  },
+  {
+   "id": "S5A-40",
+   "topic": "State code adoption",
+   "trade": "hvac",
+   "state": "Delaware",
+   "source": "Delaware State Fire Marshal, 2026 DSFPR update (Regulation 701) - https://statefiremarshal.delaware.gov/wp-content/uploads/sites/110/2025/12/2026-DSFPR-update.pdf",
+   "fact": "Delaware's 2026 State Fire Prevention Regulations (effective January 1, 2026) list NFPA 54 National Fuel Gas Code (2024 edition), NFPA 58 LP-Gas Code (2024 edition) and NFPA 96 commercial cooking ventilation (2024 edition) among the adopted codes.",
+   "status": "verified",
+   "note": "",
+   "keywords": [
+    "delaware fuel gas code",
+    "NFPA 54 2024",
+    "NFPA 58",
+    "NFPA 96",
+    "fire prevention regulations",
+    "delaware gas piping"
+   ]
+  },
+  {
+   "id": "S5A-41",
+   "topic": "State licensing",
+   "trade": "hvac",
+   "state": "Delaware",
+   "source": "24 Del. C. 1802(11)-(12) - https://delcode.delaware.gov/title24/c018/sc01/index.html",
+   "fact": "Delaware licenses Master HVACR licensees for heating, ventilation, air conditioning, refrigeration, hydronics, commercial hoods and gas piping. A Master HVACR Restricted license covers only one area: forced-air heating and gas piping, hydronic heating and gas piping, commercial hood systems, refrigeration, air conditioning, or gas piping.",
+   "status": "verified",
+   "note": "",
+   "keywords": [
+    "delaware hvac license",
+    "master HVACR",
+    "restricted HVACR",
+    "24 Del. C. 1802",
+    "gas piping",
+    "hydronic"
+   ]
+  },
+  {
+   "id": "S5A-42",
+   "topic": "State code adoption",
+   "trade": "elec",
+   "state": "District of Columbia",
+   "source": "DC Department of Buildings, 2017 DC Construction Codes - https://dob.dc.gov/node/1615636",
+   "fact": "The District of Columbia's current construction codes are the 2017 DC Construction Codes, effective May 29, 2020. The DC Electrical Code (12C DCMR) is based on the 2014 NEC. DOB began work in 2026 on new codes based on the 2024 model codes, with final rules expected in late 2027.",
+   "status": "verified",
+   "note": "Current codes read on DOB page; the 2024-code update timeline is from a June 25, 2026 news report on DOB's listening sessions.",
+   "keywords": [
+    "DC electrical code",
+    "2014 NEC",
+    "2017 DC construction codes",
+    "12C DCMR",
+    "may 29 2020",
+    "washington DC"
+   ]
+  },
+  {
+   "id": "S5A-43",
+   "topic": "State code adoption",
+   "trade": "plumb",
+   "state": "District of Columbia",
+   "source": "DC Department of Buildings, 2017 DC Construction Codes - https://dob.dc.gov/node/1615636",
+   "fact": "Under the 2017 DC Construction Codes (effective May 29, 2020), the DC Plumbing Code (12F DCMR) is based on the 2015 International Plumbing Code.",
+   "status": "verified",
+   "note": "",
+   "keywords": [
+    "DC plumbing code",
+    "2015 IPC",
+    "12F DCMR",
+    "2017 DC construction codes",
+    "washington DC plumbing",
+    "DOB"
+   ]
+  },
+  {
+   "id": "S5A-44",
+   "topic": "State code adoption",
+   "trade": "hvac",
+   "state": "District of Columbia",
+   "source": "DC Department of Buildings, 2017 DC Construction Codes - https://dob.dc.gov/node/1615636",
+   "fact": "Under the 2017 DC Construction Codes (effective May 29, 2020), the DC Mechanical Code (12E DCMR) is based on the 2015 International Mechanical Code and the DC Fuel Gas Code (12D DCMR) on the 2015 International Fuel Gas Code.",
+   "status": "verified",
+   "note": "",
+   "keywords": [
+    "DC mechanical code",
+    "2015 IMC",
+    "2015 IFGC",
+    "12E DCMR",
+    "12D DCMR",
+    "washington DC"
+   ]
+  },
+  {
+   "id": "S5A-45",
+   "topic": "State licensing",
+   "trade": "elec",
+   "state": "District of Columbia",
+   "source": "DC DLCP Electrician license guide - https://dlcp.dc.gov/sites/default/files/dc/sites/DLCP/publication/attachments/Electrician.pdf",
+   "fact": "DC electricians are licensed as apprentice, journeyman and master. A journeyman by exam needs 4 years (8,000 work hours) and a master needs 8 years (16,000 hours). Proof of completing a nationally certified apprenticeship can waive the journeyman exam, and the exams are open book.",
+   "status": "verified",
+   "note": "The DLCP guide lists the 2011 NEC as the study reference, which may be out of date; confirm the current exam code edition.",
+   "keywords": [
+    "DC electrician license",
+    "journeyman 8000 hours",
+    "master 16000 hours",
+    "open book exam",
+    "DLCP",
+    "board of industrial trades"
+   ]
+  },
+  {
+   "id": "S5A-46",
+   "topic": "State licensing",
+   "trade": "plumb",
+   "state": "District of Columbia",
+   "source": "DC DLCP Plumbing and Gasfitting license guide - https://dlcp.dc.gov/sites/default/files/dc/sites/DLCP/publication/attachments/PlumbingGasfitting.pdf",
+   "fact": "DC plumbers and gasfitters are licensed as apprentice, journeyman and master. A journeyman needs 4 years (8,000 work hours) and a master needs 8 years (16,000 hours), verified by tax records and employer letters signed off by a master. Completing a nationally certified apprenticeship can waive the journeyman exam, and the exams are open book on the IPC and IFGC.",
+   "status": "verified",
+   "note": "The DLCP guide lists the 2012 IPC and IFGC as exam references, which may be out of date.",
+   "keywords": [
+    "DC plumber license",
+    "journeyman plumber DC",
+    "master plumber 16000 hours",
+    "gasfitter",
+    "open book",
+    "DLCP"
+   ]
+  },
+  {
+   "id": "S5A-47",
+   "topic": "State code adoption",
+   "trade": "elec",
+   "state": "Florida",
+   "source": "Florida Building Commission, 2026 FBC Workplan (Aug. 2026) - https://www.floridabuilding.org/fbc/commission/FBC_0726/Commission/2026_FBC_Workplan_August_2026.pdf; IAEI and Mike Holt NEC adoption lists",
+   "fact": "Florida's electrical code is set in the statewide Florida Building Code. The 8th Edition (2023) FBC, effective December 31, 2023, uses the 2020 NEC. The 9th Edition (2026) FBC, built on the 2024 I-Codes and the 2023 NEC, takes effect December 31, 2026.",
+   "status": "verified",
+   "note": "9th Edition date and model codes read on the Commission's workplan; the 8th Edition's 2020 NEC comes from IAEI and Mike Holt, which agree.",
+   "keywords": [
+    "florida NEC edition",
+    "florida building code 8th edition",
+    "9th edition 2026",
+    "2023 NEC florida",
+    "december 31 2026",
+    "2020 NEC"
+   ]
+  },
+  {
+   "id": "S5A-48",
+   "topic": "State code adoption",
+   "trade": "plumb",
+   "state": "Florida",
+   "source": "Florida Building Commission, 2026 FBC Workplan (Aug. 2026) - https://www.floridabuilding.org/fbc/commission/FBC_0726/Commission/2026_FBC_Workplan_August_2026.pdf; Alachua County Codes page",
+   "fact": "Florida enforces a statewide Florida Building Code - Plumbing. The 8th Edition (2023) has been in effect since December 31, 2023, and the 9th Edition (2026), based on the 2024 International Plumbing Code with Florida changes, takes effect December 31, 2026.",
+   "status": "verified",
+   "note": "",
+   "keywords": [
+    "florida plumbing code",
+    "FBC plumbing",
+    "2024 IPC florida",
+    "9th edition",
+    "december 31 2026",
+    "florida building code"
+   ]
+  },
+  {
+   "id": "S5A-49",
+   "topic": "State code adoption",
+   "trade": "hvac",
+   "state": "Florida",
+   "source": "Florida Building Commission, 2026 FBC Workplan (Aug. 2026) - https://www.floridabuilding.org/fbc/commission/FBC_0726/Commission/2026_FBC_Workplan_August_2026.pdf",
+   "fact": "The Florida Building Code - Mechanical and - Fuel Gas apply statewide. For the 9th Edition (2026) FBC, effective December 31, 2026, the Florida Building Commission based them on the 2024 International Mechanical Code and 2024 International Fuel Gas Code.",
+   "status": "verified",
+   "note": "",
+   "keywords": [
+    "florida mechanical code",
+    "FBC mechanical",
+    "2024 IMC florida",
+    "fuel gas florida",
+    "9th edition",
+    "december 31 2026"
+   ]
+  },
+  {
+   "id": "S5A-50",
+   "topic": "State licensing",
+   "trade": "hvac",
+   "state": "Florida",
+   "source": "Fla. Stat. 489.105(3)(f)-(g), as amended by Laws of Fla. ch. 2024-206 - https://laws.flrules.org/2024/206",
+   "fact": "Florida licenses air-conditioning contractors in classes. A Class A air-conditioning contractor is unlimited, while a Class B contractor is limited to 25 tons of cooling and 500,000 Btu of heating in any one system.",
+   "status": "verified",
+   "note": "",
+   "keywords": [
+    "florida class A air conditioning",
+    "class B 25 tons",
+    "500000 btu",
+    "489.105",
+    "florida hvac license",
+    "CILB"
+   ]
+  },
+  {
+   "id": "S5A-51",
+   "topic": "State licensing",
+   "trade": "plumb",
+   "state": "Florida",
+   "source": "Fla. Stat. 489.111(2)(c) - https://m.flsenate.gov/Statutes/489.111",
+   "fact": "To sit for a Florida Construction Industry Licensing Board exam (including plumbing, mechanical and air-conditioning contractor), an applicant generally needs 4 years of experience as a skilled worker or foreman with at least 1 year as a foreman, or a 4-year engineering, architecture or building construction degree plus 1 year of experience, or college credit combined with foreman experience. Full-time years are counted at 2,000 person-hours.",
+   "status": "verified",
+   "note": "",
+   "keywords": [
+    "florida plumbing contractor exam",
+    "489.111",
+    "4 years experience",
+    "1 year foreman",
+    "CILB eligibility",
+    "college credit"
+   ]
+  },
+  {
+   "id": "S5A-52",
+   "topic": "State code adoption",
+   "trade": "elec",
+   "state": "Georgia",
+   "source": "Georgia DCA, Current Codes 'green sheet' (Jan. 1, 2026) - https://dca.georgia.gov/document/document/green-sheet-current-codes-greenpdf/download; DCA memo Dec. 1, 2025",
+   "fact": "Georgia's State Minimum Standard Electrical Code is the 2023 NEC with Georgia amendments (in effect since January 1, 2025; 2026 Georgia amendments took effect January 1, 2026). Because Georgia omits the IRC's electrical chapters, the NEC also applies to one- and two-family dwellings.",
+   "status": "verified",
+   "note": "",
+   "keywords": [
+    "georgia NEC edition",
+    "2023 NEC georgia",
+    "state minimum standard codes",
+    "DCA",
+    "georgia amendments",
+    "january 1 2025"
+   ]
+  },
+  {
+   "id": "S5A-53",
+   "topic": "State code adoption",
+   "trade": "plumb",
+   "state": "Georgia",
+   "source": "Georgia DCA memo, New Codes and Amendments Effective January 1, 2026 - https://dca.georgia.gov/document/document/new-codes-and-amendments-effective-january-1-2026-memo/download",
+   "fact": "Since January 1, 2026, Georgia's State Minimum Standard Plumbing Code is the 2024 International Plumbing Code with Georgia amendments. The IRC's plumbing provisions are omitted in Georgia, so the IPC also governs one- and two-family dwellings.",
+   "status": "verified",
+   "note": "",
+   "keywords": [
+    "georgia plumbing code",
+    "2024 IPC georgia",
+    "DCA",
+    "january 1 2026",
+    "state minimum standard",
+    "georgia amendments"
+   ]
+  },
+  {
+   "id": "S5A-54",
+   "topic": "State code adoption",
+   "trade": "hvac",
+   "state": "Georgia",
+   "source": "Georgia DCA memo, New Codes and Amendments Effective January 1, 2026 - https://dca.georgia.gov/document/document/new-codes-and-amendments-effective-january-1-2026-memo/download",
+   "fact": "Since January 1, 2026, Georgia's State Minimum Standard Mechanical and Gas Codes are the 2024 International Mechanical Code and 2024 International Fuel Gas Code, each with Georgia amendments.",
+   "status": "verified",
+   "note": "",
+   "keywords": [
+    "georgia mechanical code",
+    "2024 IMC georgia",
+    "2024 IFGC",
+    "DCA",
+    "january 1 2026",
+    "gas code georgia"
+   ]
+  },
+  {
+   "id": "S5A-55",
+   "topic": "State licensing",
+   "trade": "elec",
+   "state": "Georgia",
+   "source": "Ga. Comp. R. & Regs. r. 121-3-.01 (Statewide Electrical Contractor License) - https://www.law.cornell.edu/regulations/georgia/Ga-Comp-R-Regs-R-121-3-.01",
+   "fact": "Georgia issues statewide electrical contractor licenses in two classes: Class I (restricted) covers single-phase installations not over 200 amperes at the service drop or lateral, and Class II is unrestricted. Applicants must be at least 21, document at least 4 years of primary electrical experience (Class II must include work above single-phase 200-amp systems) and score at least 70 on the exam.",
+   "status": "verified",
+   "note": "",
+   "keywords": [
+    "georgia electrical contractor",
+    "class I restricted",
+    "class II unrestricted",
+    "200 amperes",
+    "4 years experience",
+    "score 70"
+   ]
+  },
+  {
+   "id": "S5A-56",
+   "topic": "State licensing",
+   "trade": "plumb",
+   "state": "Georgia",
+   "source": "Ga. Comp. R. & Regs. r. 121-3-.02(4)-(5) - https://rules.sos.ga.gov/GAC/121-3; Georgia SOS Master and Journeyman Plumbers FAQ - https://sos.ga.gov/page/division-master-and-journeyman-plumbers-faq",
+   "fact": "Georgia's journeyman plumber license requires at least 1 year of plumbing experience. Master plumbers (Class I and Class II) need at least 5 years of plumbing experience, 2 of them as a licensed journeyman, and Class II also requires commercial or industrial experience. Class I is limited to single-family and one-level two-family dwellings and commercial buildings up to 10,000 square feet. Exams are given by PSI.",
+   "status": "verified",
+   "note": "",
+   "keywords": [
+    "georgia plumbing license",
+    "master plumber class I",
+    "class II",
+    "journeyman plumber georgia",
+    "10000 square feet",
+    "PSI"
+   ]
+  },
+  {
+   "id": "S5A-57",
+   "topic": "State licensing",
+   "trade": "hvac",
+   "state": "Georgia",
+   "source": "Ga. Comp. R. & Regs. r. 121-3-.04 - https://rules.sos.ga.gov/GAC/121-3",
+   "fact": "Georgia Conditioned Air Contractor Class I (restricted) licenses cover systems of no more than 175,000 BTU of heating and 60,000 BTU (5 tons) of cooling and require 4 years of experience. Class II (unrestricted) requires 5 years of experience, including systems above those limits.",
+   "status": "verified",
+   "note": "",
+   "keywords": [
+    "georgia conditioned air",
+    "class I 175000 BTU",
+    "60000 BTU cooling",
+    "class II unrestricted",
+    "georgia hvac license",
+    "121-3-.04"
+   ]
+  }
+ ],
+ "questions": [
+  {
+   "t": "elec",
+   "topic": "State licensing",
+   "q": "Under Alabama Electrical Contractors Board rules effective in 2026, how many hours of electrical experience must a journeyman electrician applicant document?",
+   "c": [
+    "4,000 hours",
+    "6,000 hours",
+    "8,000 hours",
+    "10,000 hours"
+   ],
+   "a": 2,
+   "ref": "Ala. Admin. Code r. 303-X-3-.03",
+   "why": "Alabama requires a minimum of 8,000 hours for journeyman (and contractor) applicants; up to 2,000 hours can come from apprenticeship or education."
+  },
+  {
+   "t": "elec",
+   "topic": "State code adoption",
+   "q": "Which NEC edition does 8 AAC 70.025 adopt as Alaska's statewide minimum electrical code?",
+   "c": [
+    "2017 NEC",
+    "2020 NEC",
+    "2023 NEC",
+    "2026 NEC"
+   ],
+   "a": 1,
+   "ref": "8 AAC 70.025(a)",
+   "why": "Alaska's regulation adopts the 2020 edition of NFPA 70 as the minimum electrical code for the state."
+  },
+  {
+   "t": "plumb",
+   "topic": "State licensing",
+   "q": "How many years of experience does the Arizona Registrar of Contractors require of the qualifying party for a C-37 plumbing license?",
+   "c": [
+    "2 years",
+    "3 years",
+    "4 years",
+    "5 years"
+   ],
+   "a": 2,
+   "ref": "AZ ROC License Classification Requirements",
+   "why": "The ROC classification table lists 4 years of hands-on and/or managerial experience for C-37 (and for R-37 and CR-37)."
+  },
+  {
+   "t": "elec",
+   "topic": "State code adoption",
+   "q": "The 2025 California Electrical Code, effective January 1, 2026, is based on which NEC edition?",
+   "c": [
+    "2017 NEC",
+    "2020 NEC",
+    "2023 NEC",
+    "2026 NEC"
+   ],
+   "a": 2,
+   "ref": "HCD 01/23 ISOR, Title 24 Part 3",
+   "why": "The state's rulemaking says the 2025 CEC is based on the 2023 NEC, effective January 1, 2026."
+  },
+  {
+   "t": "plumb",
+   "topic": "State code adoption",
+   "q": "Which model code is the 2025 California Plumbing Code based on?",
+   "c": [
+    "2021 International Plumbing Code",
+    "2024 International Plumbing Code",
+    "2021 Uniform Plumbing Code",
+    "2024 Uniform Plumbing Code"
+   ],
+   "a": 3,
+   "ref": "BSC 02/24 ISOR, Title 24 Part 5",
+   "why": "California bases its plumbing code on IAPMO's Uniform Plumbing Code; the 2025 CPC adopts the 2024 UPC."
+  },
+  {
+   "t": "elec",
+   "topic": "State licensing",
+   "q": "How many hours of experience does California's DIR require for General Electrician certification?",
+   "c": [
+    "2,000 hours",
+    "4,800 hours",
+    "6,000 hours",
+    "8,000 hours"
+   ],
+   "a": 3,
+   "ref": "Cal. DIR Electrician Certification form",
+   "why": "General Electrician needs 8,000 hours; Residential Electrician needs 4,800."
+  },
+  {
+   "t": "hvac",
+   "topic": "State licensing",
+   "q": "An Arkansas Class B HVACR license is limited to air conditioning systems of no more than how much cooling capacity per unit?",
+   "c": [
+    "10 tons",
+    "15 tons",
+    "25 tons",
+    "50 tons"
+   ],
+   "a": 2,
+   "ref": "17 CAR 261-103(b)",
+   "why": "Class B covers AC systems of 25 tons or less per unit (and heating up to 1,000,000 BTUH input); Class A has no limit."
+  },
+  {
+   "t": "plumb",
+   "topic": "State code adoption",
+   "q": "Which plumbing code has the Colorado State Plumbing Board adopted as the statewide plumbing code?",
+   "c": [
+    "2018 Uniform Plumbing Code",
+    "2021 International Plumbing Code",
+    "2021 Uniform Plumbing Code",
+    "2015 International Plumbing Code"
+   ],
+   "a": 1,
+   "ref": "3 CCR 720-1, Rule 2",
+   "why": "Colorado's plumbing board incorporates the 2021 IPC (with the 2021 IFGC) by reference, with Colorado amendments."
+  },
+  {
+   "t": "elec",
+   "topic": "State licensing",
+   "q": "In Connecticut, how much experience as a licensed unlimited journeyperson does an E-1 Unlimited Electrical Contractor applicant need?",
+   "c": [
+    "1 year",
+    "2 years",
+    "4 years",
+    "6 years"
+   ],
+   "a": 1,
+   "ref": "CT DCP Electrical License Types",
+   "why": "E-1 requires 2 years as an unlimited licensed journeyperson, or 6 years of equivalent experience and training."
+  },
+  {
+   "t": "plumb",
+   "topic": "State code adoption",
+   "q": "Which edition of the International Plumbing Code does the State of Delaware Plumbing Code (16 Del. Admin. Code 4455) adopt?",
+   "c": [
+    "2015 IPC",
+    "2018 IPC",
+    "2021 IPC",
+    "2024 IPC"
+   ],
+   "a": 2,
+   "ref": "16 Del. Admin. Code 4455-2.0",
+   "why": "Delaware's Division of Public Health adopted the 2021 IPC with amendments, effective August 11, 2022."
+  },
+  {
+   "t": "elec",
+   "topic": "State code adoption",
+   "q": "The DC Electrical Code in the 2017 DC Construction Codes (effective May 29, 2020) is based on which NEC edition?",
+   "c": [
+    "2011 NEC",
+    "2014 NEC",
+    "2017 NEC",
+    "2020 NEC"
+   ],
+   "a": 1,
+   "ref": "DC DOB, 2017 DC Construction Codes",
+   "why": "DOB lists the 2014 NEC as the model code for 12C DCMR, even though the package is called the 2017 codes."
+  },
+  {
+   "t": "hvac",
+   "topic": "State licensing",
+   "q": "A Florida Class B air-conditioning contractor is limited to which system size?",
+   "c": [
+    "25 tons of cooling and 500,000 Btu of heating in any one system",
+    "15 tons of cooling and 250,000 Btu of heating in any one system",
+    "50 tons of cooling and 1,000,000 Btu of heating in any one system",
+    "10 tons of cooling and 100,000 Btu of heating in any one system"
+   ],
+   "a": 0,
+   "ref": "Fla. Stat. 489.105(3)(g)",
+   "why": "Class B is limited to 25 tons of cooling and 500,000 Btu of heating per system; Class A is unlimited."
+  },
+  {
+   "t": "elec",
+   "topic": "State code adoption",
+   "q": "When does the 9th Edition (2026) Florida Building Code, which moves Florida to the 2023 NEC, take effect?",
+   "c": [
+    "December 31, 2025",
+    "July 1, 2026",
+    "December 31, 2026",
+    "January 1, 2027"
+   ],
+   "a": 2,
+   "ref": "Florida Building Commission 2026 FBC Workplan",
+   "why": "The Commission's schedule sets the 9th Edition effective date at December 31, 2026, six months after publication."
+  },
+  {
+   "t": "elec",
+   "topic": "State licensing",
+   "q": "A Georgia Class I (restricted) electrical contractor is limited to single-phase installations that do not exceed how many amperes at the service drop or lateral?",
+   "c": [
+    "100 amperes",
+    "150 amperes",
+    "200 amperes",
+    "400 amperes"
+   ],
+   "a": 2,
+   "ref": "Ga. Comp. R. & Regs. r. 121-3-.01",
+   "why": "Class I covers single-phase work not over 200 amps; Class II is unrestricted."
+  },
+  {
+   "t": "hvac",
+   "topic": "State licensing",
+   "q": "A Georgia Conditioned Air Contractor Class I license covers systems up to 175,000 BTU of heating and how much cooling?",
+   "c": [
+    "36,000 BTU",
+    "60,000 BTU",
+    "90,000 BTU",
+    "120,000 BTU"
+   ],
+   "a": 1,
+   "ref": "Ga. Comp. R. & Regs. r. 121-3-.04",
+   "why": "The restricted Class I limit is 175,000 BTU heating and 60,000 BTU (5 tons) cooling."
+  }
+ ]
+}

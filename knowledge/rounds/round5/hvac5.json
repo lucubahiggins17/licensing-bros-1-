@@ -1,0 +1,1790 @@
+{
+ "source": "Round 5 HVAC/mechanical deepening (hvac5): IFGC 2021 Ch. 3-6, IMC 2021 Ch. 3-6 and 9, EPA 40 CFR 82 Subpart F and 40 CFR 84, DOE efficiency rules, and HVAC fundamentals",
+ "facts": [
+  {
+   "id": "H5-1",
+   "topic": "Fuel gas sizing",
+   "trade": "hvac",
+   "state": null,
+   "source": "IFGC 2021 402.3",
+   "fact": "Under the 2021 IFGC, gas piping must be sized by one of three methods: the pipe sizing tables or equations in Section 402.4, the sizing tables in a listed piping system's installation instructions (for example, CSST), or engineering methods.",
+   "status": "verified",
+   "note": "Confirmed in Seattle's published 2021 Fuel Gas Code (2021 IFGC text; Washington does not amend IFGC 402).",
+   "keywords": [
+    "gas pipe sizing",
+    "402.3",
+    "CSST tables",
+    "engineering methods",
+    "IFGC"
+   ]
+  },
+  {
+   "id": "H5-2",
+   "topic": "Fuel gas sizing",
+   "trade": "hvac",
+   "state": null,
+   "source": "IFGC 2021 402.2",
+   "fact": "Under IFGC 2021 402.2, the gas flow used to size piping is the sum of the maximum input ratings of all appliances served, assuming they all run at full capacity at once. A smaller (diversified) load may be used only where load diversity can be established.",
+   "status": "verified",
+   "note": "",
+   "keywords": [
+    "maximum gas demand",
+    "connected load",
+    "diversity",
+    "pipe sizing",
+    "402.2"
+   ]
+  },
+  {
+   "id": "H5-3",
+   "topic": "Fuel gas sizing",
+   "trade": "hvac",
+   "state": null,
+   "source": "IFGC 2021 Table 402.4(2)",
+   "fact": "IFGC 2021 Table 402.4(2) (Schedule 40 steel, natural gas, under 2 psi inlet, 0.5 in. w.c. drop, 0.60 specific gravity) lists these capacities in cubic feet per hour: at 10 ft, 1/2 in = 172, 3/4 in = 360, 1 in = 678, 1-1/4 in = 1,390; at 50 ft, 72, 151, 284 and 583; at 100 ft, 50, 104, 195 and 400.",
+   "status": "verified",
+   "note": "Values read from the 2021 IFGC table as published in Seattle's 2021 Fuel Gas Code.",
+   "keywords": [
+    "Table 402.4(2)",
+    "gas pipe capacity",
+    "CFH",
+    "schedule 40",
+    "0.5 inch drop",
+    "natural gas"
+   ]
+  },
+  {
+   "id": "H5-4",
+   "topic": "Fuel gas sizing",
+   "trade": "hvac",
+   "state": null,
+   "source": "IFGC 2021 402.4.1; Table 402.4(2)",
+   "fact": "Longest length method example (IFGC 2021 Table 402.4(2)): the run from the meter to the most remote appliance is 60 ft, so every section is sized from the 60 ft row. The main carrying 205 CFH needs 1 in pipe (257 CFH; 3/4 in holds only 137), a 100 CFH furnace branch needs 3/4 in (137), and a 40 CFH water heater branch needs 1/2 in (65).",
+   "status": "verified",
+   "note": "Worked example built from the published 60 ft row: 1/2 in 65, 3/4 in 137, 1 in 257, 1-1/4 in 528 CFH.",
+   "keywords": [
+    "longest length method",
+    "gas sizing example",
+    "60 feet",
+    "branch",
+    "main",
+    "Table 402.4(2)"
+   ]
+  },
+  {
+   "id": "H5-5",
+   "topic": "Fuel gas piping",
+   "trade": "hvac",
+   "state": null,
+   "source": "IFGC 2021 401.4; 401.6; 401.7",
+   "fact": "Under the 2021 IFGC, before adding an appliance to an existing gas system you must check that the piping has enough capacity, and enlarge it or run separate piping if it does not (401.4). Where separate customers on one premises have separate meters, their outlet piping may not be interconnected (401.6), and piping from multiple meters must be permanently marked to show which meter supplies it (401.7).",
+   "status": "verified",
+   "note": "",
+   "keywords": [
+    "additional appliance",
+    "existing gas piping",
+    "multiple meters",
+    "interconnection",
+    "401.6"
+   ]
+  },
+  {
+   "id": "H5-6",
+   "topic": "Clearance reduction",
+   "trade": "hvac",
+   "state": null,
+   "source": "IFGC 2021 308.2; Table 308.2",
+   "fact": "IFGC 2021 308.2 allows clearances to combustible material to be reduced only by a protection method in Table 308.2 or a listed clearance-reduction assembly (UL 1618). Clearances not shown in the table may be found by interpolation, but extrapolation below the table range is not allowed.",
+   "status": "verified",
+   "note": "",
+   "keywords": [
+    "clearance reduction",
+    "combustibles",
+    "Table 308.2",
+    "UL 1618",
+    "interpolation"
+   ]
+  },
+  {
+   "id": "H5-7",
+   "topic": "Clearance reduction",
+   "trade": "hvac",
+   "state": null,
+   "source": "IFGC 2021 Table 308.2",
+   "fact": "Per IFGC 2021 Table 308.2, No. 24 gage sheet metal spaced out 1 inch with a ventilated air space reduces a required 36 in clearance to 18 in above the appliance and 12 in at the sides and rear, and reduces a required 18 in clearance to 9 in above and 6 in at the sides and rear.",
+   "status": "verified",
+   "note": "",
+   "keywords": [
+    "sheet metal shield",
+    "24 gage",
+    "air space",
+    "clearance reduction",
+    "36 inch",
+    "18 inch"
+   ]
+  },
+  {
+   "id": "H5-8",
+   "topic": "Clearance reduction",
+   "trade": "hvac",
+   "state": null,
+   "source": "IFGC 2021 Table 308.2",
+   "fact": "Per IFGC 2021 Table 308.2, a 3-1/2 inch masonry wall can reduce clearances only at the sides and rear (not above): without an air space, 36 in becomes 24 in and 18 in becomes 12 in; with a 1 inch ventilated air space, 36 in becomes 12 in and 18 in becomes 6 in.",
+   "status": "verified",
+   "note": "",
+   "keywords": [
+    "masonry wall",
+    "clearance reduction",
+    "air space",
+    "sides and rear",
+    "Table 308.2"
+   ]
+  },
+  {
+   "id": "H5-9",
+   "topic": "Clearance reduction",
+   "trade": "hvac",
+   "state": null,
+   "source": "IFGC 2021 Table 308.2 notes",
+   "fact": "Table 308.2 rules (IFGC 2021): spacers and ties must be noncombustible and may not be placed directly behind the appliance or connector; there must be at least 1 inch between the appliance and the protector; and mineral wool used in a protection system must have a density of at least 8 lb per cubic foot and a melting point of at least 1,500 F.",
+   "status": "verified",
+   "note": "",
+   "keywords": [
+    "spacers",
+    "noncombustible",
+    "mineral wool",
+    "1 inch air space",
+    "clearance protection"
+   ]
+  },
+  {
+   "id": "H5-10",
+   "topic": "Equipment location",
+   "trade": "hvac",
+   "state": null,
+   "source": "IFGC 2021 303.7",
+   "fact": "Under IFGC 2021 303.7, an appliance installed in a pit may not touch the soil; the pit sides must be held back at least 12 inches from the appliance (30 inches on the control side); pits more than 12 inches deep below grade need concrete or masonry walls extending at least 4 inches above grade; and the pit must be protected from flooding.",
+   "status": "verified",
+   "note": "",
+   "keywords": [
+    "pit location",
+    "appliance in pit",
+    "12 inches",
+    "30 inches control side",
+    "flooding"
+   ]
+  },
+  {
+   "id": "H5-11",
+   "topic": "Equipment location",
+   "trade": "hvac",
+   "state": null,
+   "source": "IFGC 2021 303.5; 305.8",
+   "fact": "Under the 2021 IFGC, furnaces and boilers installed in closets or alcoves must be listed for that installation (303.5). Required clearances to combustibles must account for door swing, drawer pulls, overhead projections and shelving, and door stops or door closers may not be used to provide the clearance (305.8).",
+   "status": "verified",
+   "note": "",
+   "keywords": [
+    "closet furnace",
+    "alcove",
+    "clearance to combustibles",
+    "door swing",
+    "door stops"
+   ]
+  },
+  {
+   "id": "H5-12",
+   "topic": "Fuel gas piping",
+   "trade": "hvac",
+   "state": null,
+   "source": "IFGC 2021 309.1; 310.1",
+   "fact": "Under the 2021 IFGC, gas piping may never be used as a grounding electrode (309.1). Above-ground gas piping other than CSST that is likely to become energized must be electrically continuous and bonded; it is considered bonded when it is connected to an appliance that is connected to the equipment grounding conductor of its circuit (310.1).",
+   "status": "verified",
+   "note": "",
+   "keywords": [
+    "grounding electrode",
+    "gas pipe bonding",
+    "equipment grounding conductor",
+    "310.1",
+    "309.1"
+   ]
+  },
+  {
+   "id": "H5-13",
+   "topic": "Fuel gas piping",
+   "trade": "hvac",
+   "state": null,
+   "source": "IFGC 2021 310.2; 310.3",
+   "fact": "In the 2021 IFGC, CSST that is not arc-resistant must be bonded to the electrical service grounding electrode system (or lightning protection system) with a jumper of at least 6 AWG copper, no longer than 75 ft, using UL 467 listed clamps (310.2). Arc-resistant CSST (ARCSST) only has to be electrically continuous and bonded to an effective ground-fault current path like other gas piping (310.3).",
+   "status": "verified",
+   "note": "The 2018 IFGC numbered the CSST bonding rule 310.1.1; the 2021 edition split it into 310.2 (standard CSST) and 310.3 (arc-resistant CSST).",
+   "keywords": [
+    "CSST bonding",
+    "arc-resistant CSST",
+    "6 AWG",
+    "75 feet",
+    "310.2",
+    "310.3"
+   ]
+  },
+  {
+   "id": "H5-14",
+   "topic": "Condensate",
+   "trade": "hvac",
+   "state": null,
+   "source": "IFGC 2021 307.5",
+   "fact": "Under IFGC 2021 307.5, a Category IV condensing appliance needs an auxiliary drain pan where damage to building components could result from a stopped condensate drain, unless the appliance automatically shuts down when its condensate drain is blocked.",
+   "status": "verified",
+   "note": "",
+   "keywords": [
+    "Category IV",
+    "condensing furnace",
+    "auxiliary drain pan",
+    "condensate",
+    "307.5"
+   ]
+  },
+  {
+   "id": "H5-15",
+   "topic": "Venting",
+   "trade": "hvac",
+   "state": null,
+   "source": "IFGC 2021 501.8",
+   "fact": "IFGC 2021 501.8 lists appliances that do not need to be vented, including ranges, built-in domestic cooking units listed for optional venting, hot plates and laundry stoves, Type 1 clothes dryers (which are exhausted per Section 614), refrigerators, counter appliances, room heaters listed for unvented use, direct-fired makeup air heaters, and small specialty appliances such as laboratory burners and gas lights.",
+   "status": "verified",
+   "note": "",
+   "keywords": [
+    "unvented appliances",
+    "ranges",
+    "501.8",
+    "not required to be vented",
+    "Type 1 dryer"
+   ]
+  },
+  {
+   "id": "H5-16",
+   "topic": "Venting",
+   "trade": "hvac",
+   "state": null,
+   "source": "IFGC 2021 501.8; 621.5",
+   "fact": "Under the 2021 IFGC, where unvented appliances (other than ranges, cooking units, hot plates and Type 1 dryers) total more than 20 Btu/h per cubic foot of room volume, enough of them must be vented to bring the unvented total down to 20 Btu/h per cubic foot. Example: a 2,000 cubic foot room may have at most 2,000 x 20 = 40,000 Btu/h of such unvented appliances.",
+   "status": "verified",
+   "note": "An adjoining room connected by an opening that cannot be closed may be counted in the volume.",
+   "keywords": [
+    "20 Btu per cubic foot",
+    "unvented heaters",
+    "room volume",
+    "501.8",
+    "621.5"
+   ]
+  },
+  {
+   "id": "H5-17",
+   "topic": "Chimney & vent termination",
+   "trade": "hvac",
+   "state": null,
+   "source": "IFGC 2021 501.12; 503.5.3",
+   "fact": "Under the 2021 IFGC, masonry chimneys serving residential-type and low-heat gas appliances must be lined with clay flue lining (ASTM C315), a listed chimney lining system (UL 1777), or another approved material that resists flue gases and condensate at temperatures up to 1,800 F.",
+   "status": "verified",
+   "note": "",
+   "keywords": [
+    "chimney liner",
+    "clay flue lining",
+    "UL 1777",
+    "masonry chimney",
+    "1800 F"
+   ]
+  },
+  {
+   "id": "H5-18",
+   "topic": "Chimney & vent termination",
+   "trade": "hvac",
+   "state": null,
+   "source": "IFGC 2021 501.15; 503.5.9",
+   "fact": "Under the 2021 IFGC, when a masonry chimney that served solid or liquid fuel is reused for gas, it must be cleaned and must have an accessible cleanout with a tight-fitting noncombustible cover, with the upper edge of the cleanout at least 6 inches below the lowest chimney inlet.",
+   "status": "verified",
+   "note": "",
+   "keywords": [
+    "chimney cleanout",
+    "6 inches below inlet",
+    "converted chimney",
+    "masonry chimney",
+    "503.5.9"
+   ]
+  },
+  {
+   "id": "H5-19",
+   "topic": "Chimney & vent termination",
+   "trade": "hvac",
+   "state": null,
+   "source": "IFGC 2021 503.5.5",
+   "fact": "IFGC 2021 503.5.5: a chimney serving one draft-hood appliance must have an effective area at least equal to the draft hood outlet (or flue collar) area and no more than 7 times that area. For two draft-hood appliances, the area must be at least the larger outlet area plus 50 percent of the smaller, and no more than 7 times the smallest outlet area.",
+   "status": "verified",
+   "note": "",
+   "keywords": [
+    "chimney size",
+    "7 times",
+    "draft hood outlet",
+    "two appliances",
+    "503.5.5"
+   ]
+  },
+  {
+   "id": "H5-20",
+   "topic": "Venting",
+   "trade": "hvac",
+   "state": null,
+   "source": "IFGC 2021 502.1; 503.4.1.1; 503.4.2",
+   "fact": "Under the 2021 IFGC, Category II and III appliances use special gas vents listed to UL 1738, installed per the vent manufacturer's instructions (Type B and BW vents are UL 441). Plastic vent pipe for Category IV appliances need not be listed if the appliance manufacturer specifies it, and any required primer must be a contrasting color so joints can be inspected.",
+   "status": "verified",
+   "note": "",
+   "keywords": [
+    "special gas vent",
+    "UL 1738",
+    "Category III",
+    "plastic vent",
+    "primer contrasting color"
+   ]
+  },
+  {
+   "id": "H5-21",
+   "topic": "Venting",
+   "trade": "hvac",
+   "state": null,
+   "source": "IFGC 2021 503.3.3",
+   "fact": "IFGC 2021 503.3.3: mechanical draft systems must be listed to UL 378. Parts under positive pressure must be built to keep flue gas from leaking into the building, a natural-draft vent connector may not connect to a positive-pressure section, and gas to the main burners must shut off if the draft system is not working properly.",
+   "status": "verified",
+   "note": "",
+   "keywords": [
+    "mechanical draft",
+    "power venter",
+    "positive pressure",
+    "UL 378",
+    "503.3.3"
+   ]
+  },
+  {
+   "id": "H5-22",
+   "topic": "Venting",
+   "trade": "hvac",
+   "state": null,
+   "source": "IFGC 2021 503.6.10.2",
+   "fact": "IFGC 2021 503.6.10.2: Type B and L vents sized by the draft-hood-area method must run generally vertical with offsets of 45 degrees or less (one 60-degree offset is allowed; anything steeper counts as horizontal), and the total horizontal run of the vent plus connector may not exceed 75 percent of the vent's vertical height.",
+   "status": "verified",
+   "note": "",
+   "keywords": [
+    "vent offset",
+    "45 degrees",
+    "60 degree",
+    "75 percent",
+    "Type B vent"
+   ]
+  },
+  {
+   "id": "H5-23",
+   "topic": "Venting",
+   "trade": "hvac",
+   "state": null,
+   "source": "IFGC 2021 503.6.14",
+   "fact": "IFGC 2021 503.6.14: screws and rivets may not penetrate the inner wall of a double-wall (Type B) gas vent, except at the transition from the appliance draft hood outlet, flue collar or single-wall connector to the double-wall vent.",
+   "status": "verified",
+   "note": "",
+   "keywords": [
+    "Type B vent",
+    "screws",
+    "inner wall",
+    "double-wall",
+    "503.6.14"
+   ]
+  },
+  {
+   "id": "H5-24",
+   "topic": "Venting",
+   "trade": "hvac",
+   "state": null,
+   "source": "IFGC 2021 503.7",
+   "fact": "IFGC 2021 503.7: single-wall metal pipe used as a vent must be galvanized steel at least 0.0304 inch thick (or equivalent), extend at least 5 ft above the highest draft hood or flue collar and at least 2 ft above the roof and anything within 10 ft, and run directly from the appliance space through the roof or an exterior wall. It may not start in or pass through an attic, inside wall, concealed space or floor, and uninsulated pipe may not be used outdoors where the 99 percent winter design temperature is below 32 F.",
+   "status": "verified",
+   "note": "",
+   "keywords": [
+    "single-wall vent",
+    "0.0304 inch",
+    "attic prohibited",
+    "5 feet",
+    "503.7"
+   ]
+  },
+  {
+   "id": "H5-25",
+   "topic": "Venting",
+   "trade": "hvac",
+   "state": null,
+   "source": "IFGC 2021 503.7.7",
+   "fact": "IFGC 2021 503.7.7: single-wall vent pipe passing through a combustible exterior wall needs a ventilated metal thimble at least 4 in larger in diameter than the pipe for listed draft-hood appliances (2 in larger if at least 6 ft of pipe is exposed before the thimble), 6 in larger for unlisted draft-hood appliances, and 12 in larger for residential and low-heat appliances.",
+   "status": "verified",
+   "note": "",
+   "keywords": [
+    "thimble",
+    "combustible wall",
+    "single-wall pipe",
+    "4 inches larger",
+    "503.7.7"
+   ]
+  },
+  {
+   "id": "H5-26",
+   "topic": "Vent connectors",
+   "trade": "hvac",
+   "state": null,
+   "source": "IFGC 2021 503.10.2.3",
+   "fact": "IFGC 2021 503.10.2.3: vent connectors for residential-type appliances that are not Type B or L must be galvanized steel at least 0.018 inch thick, aluminum (1100 or 3003 alloy) at least 0.027 inch, stainless steel at least 0.012 inch, or a listed connector, and connectors may not be wrapped in insulation unless listed as insulated.",
+   "status": "verified",
+   "note": "",
+   "keywords": [
+    "vent connector thickness",
+    "galvanized 0.018",
+    "aluminum connector",
+    "stainless",
+    "503.10.2.3"
+   ]
+  },
+  {
+   "id": "H5-27",
+   "topic": "Vent connectors",
+   "trade": "hvac",
+   "state": null,
+   "source": "IFGC 2021 Table 503.10.5",
+   "fact": "IFGC 2021 Table 503.10.5 single-wall vent connector clearances to combustibles: 6 in for listed draft-hood appliances, 9 in for residential boilers and furnaces with a listed conversion burner and draft hood, 18 in for other residential and low-heat appliances, and 36 in for medium-heat appliances.",
+   "status": "verified",
+   "note": "",
+   "keywords": [
+    "single-wall connector clearance",
+    "9 inches",
+    "18 inches",
+    "36 inches",
+    "Table 503.10.5"
+   ]
+  },
+  {
+   "id": "H5-28",
+   "topic": "Vent connectors",
+   "trade": "hvac",
+   "state": null,
+   "source": "IFGC 2021 503.10.12; 503.10.14",
+   "fact": "Under the 2021 IFGC, the whole length of a vent connector must be readily accessible for inspection, cleaning and replacement (503.10.12), and single-wall connectors may not pass through any wall, floor or ceiling except as allowed for single-wall vents in 503.7.4 (503.10.14).",
+   "status": "verified",
+   "note": "",
+   "keywords": [
+    "vent connector access",
+    "readily accessible",
+    "single-wall through wall",
+    "503.10.14"
+   ]
+  },
+  {
+   "id": "H5-29",
+   "topic": "Venting",
+   "trade": "hvac",
+   "state": null,
+   "source": "IFGC 2021 503.12.5; 503.12.7",
+   "fact": "Under the 2021 IFGC, a draft hood must be in the same room as the appliance's combustion air supply so no pressure difference exists (503.12.5), and its relief opening must be at least 6 inches from any surface other than the appliance and its vent, unless the appliance label requires more (503.12.7).",
+   "status": "verified",
+   "note": "",
+   "keywords": [
+    "draft hood",
+    "relief opening",
+    "6 inches",
+    "same room",
+    "503.12"
+   ]
+  },
+  {
+   "id": "H5-30",
+   "topic": "Venting",
+   "trade": "hvac",
+   "state": null,
+   "source": "IFGC 2021 503.13; 503.14; 503.15",
+   "fact": "Under the 2021 IFGC, manually operated dampers may not be placed in vent connectors (fixed baffles are not considered dampers), automatically operated vent dampers must be listed, and no device that slows vent gas flow may be installed in a connector, vent or chimney except listed draft regulators, listed heat reclaimers, listed automatic dampers and similar approved devices.",
+   "status": "verified",
+   "note": "",
+   "keywords": [
+    "vent damper",
+    "manual damper prohibited",
+    "automatic vent damper",
+    "heat reclaimer",
+    "obstructions"
+   ]
+  },
+  {
+   "id": "H5-31",
+   "topic": "Specific gas appliances",
+   "trade": "hvac",
+   "state": null,
+   "source": "IFGC 2021 621.2; 621.3; 621.4",
+   "fact": "Under the 2021 IFGC, an unvented room heater may not be the only source of comfort heat in a dwelling unit (621.2), may not exceed 40,000 Btu/h input (621.3), and may not be installed in Group A, E or I occupancies (621.4).",
+   "status": "verified",
+   "note": "",
+   "keywords": [
+    "unvented room heater",
+    "ventless heater",
+    "40,000 Btu",
+    "sole source of heat",
+    "621"
+   ]
+  },
+  {
+   "id": "H5-32",
+   "topic": "Specific gas appliances",
+   "trade": "hvac",
+   "state": null,
+   "source": "IFGC 2021 621.6",
+   "fact": "IFGC 2021 621.6: unvented room heaters must have an oxygen-depletion safety shutoff that cuts gas to the main and pilot burners when oxygen drops to the manufacturer's set point, which may not be lower than 18 percent oxygen, and it may not be adjustable in the field.",
+   "status": "verified",
+   "note": "",
+   "keywords": [
+    "oxygen depletion sensor",
+    "ODS",
+    "18 percent",
+    "unvented heater",
+    "621.6"
+   ]
+  },
+  {
+   "id": "H5-33",
+   "topic": "Specific gas appliances",
+   "trade": "hvac",
+   "state": null,
+   "source": "IFGC 2021 623.7",
+   "fact": "IFGC 2021 623.7: a domestic gas range needs at least 30 inches of vertical clearance between the cooking top and combustible material or metal cabinets above. It may be reduced to 24 inches with 1/4 inch insulating millboard covered by sheet metal at least 0.0122 inch thick, a metal ventilating hood (0.0122 inch) with a 1/4 inch air space that is at least as wide as the range and centered, or a listed microwave or other appliance installed per its instructions.",
+   "status": "verified",
+   "note": "",
+   "keywords": [
+    "range clearance",
+    "30 inches",
+    "24 inches",
+    "cooking top",
+    "623.7"
+   ]
+  },
+  {
+   "id": "H5-34",
+   "topic": "Specific gas appliances",
+   "trade": "hvac",
+   "state": null,
+   "source": "IFGC 2021 620.4",
+   "fact": "IFGC 2021 620.4: unless listed for less, a suspended gas unit heater needs 18 in clearance at the sides, 12 in at the bottom and 6 in above the top (with an internal draft hood), and a floor-mounted unit heater needs 6 in to combustibles at the back and one side.",
+   "status": "verified",
+   "note": "",
+   "keywords": [
+    "unit heater",
+    "suspended heater clearance",
+    "18 inches",
+    "12 inches bottom",
+    "620.4"
+   ]
+  },
+  {
+   "id": "H5-35",
+   "topic": "Specific gas appliances",
+   "trade": "hvac",
+   "state": null,
+   "source": "IFGC 2021 630.3",
+   "fact": "IFGC 2021 630.3: where unvented infrared radiant heaters are used, outdoor ventilation air of at least 4 cfm per 1,000 Btu/h of total heater input must be provided, with flue product exhaust openings located above the heaters. Example: 150,000 Btu/h of unvented infrared heaters needs at least 600 cfm.",
+   "status": "verified",
+   "note": "",
+   "keywords": [
+    "infrared heater",
+    "radiant tube heater",
+    "4 cfm per 1000 Btu",
+    "ventilation",
+    "630.3"
+   ]
+  },
+  {
+   "id": "H5-36",
+   "topic": "Specific gas appliances",
+   "trade": "hvac",
+   "state": null,
+   "source": "IFGC 2021 625.1",
+   "fact": "IFGC 2021 625.1: a gas refrigerator without manufacturer's clearance instructions needs at least 2 inches between its back and the wall and at least 12 inches above the top.",
+   "status": "verified",
+   "note": "",
+   "keywords": [
+    "gas refrigerator",
+    "clearance",
+    "2 inches",
+    "12 inches",
+    "625"
+   ]
+  },
+  {
+   "id": "H5-37",
+   "topic": "Specific gas appliances",
+   "trade": "hvac",
+   "state": null,
+   "source": "IFGC 2021 608 (vented wall furnaces); IMC 2021 909",
+   "fact": "Under the 2021 IFGC (and IMC 909), no door may swing within 12 inches of a vented wall furnace's air inlet or outlet, measured at right angles to the opening, and doorstops or door closers may not be used to meet this. Ducts may not be attached to a wall furnace, and a wall furnace between a bathroom and another room may not circulate bathroom air.",
+   "status": "verified",
+   "note": "",
+   "keywords": [
+    "wall furnace",
+    "door swing",
+    "12 inches",
+    "doorstop",
+    "vented wall furnace"
+   ]
+  },
+  {
+   "id": "H5-38",
+   "topic": "Specific gas appliances",
+   "trade": "hvac",
+   "state": null,
+   "source": "IFGC 2021 609 (floor furnaces)",
+   "fact": "Under the 2021 IFGC, floor furnaces may not be placed in doorways, stair landings, aisles, passageways or exits, or in concrete floors built on grade. A horizontal floor register must be at least 6 in from the nearest wall, and doors, draperies or similar items must be at least 12 in from the register.",
+   "status": "verified",
+   "note": "",
+   "keywords": [
+    "floor furnace",
+    "register",
+    "6 inches from wall",
+    "12 inches draperies",
+    "609"
+   ]
+  },
+  {
+   "id": "H5-39",
+   "topic": "Specific gas appliances",
+   "trade": "hvac",
+   "state": null,
+   "source": "IFGC 2021 609 (floor furnaces)",
+   "fact": "Under the 2021 IFGC, the lowest part of a floor furnace must be at least 6 inches above the ground (2 inches if the lower 6 inches are sealed by the manufacturer against water); otherwise a pit is excavated, with at least 12 inches of clearance on all sides and 18 inches on the control side.",
+   "status": "verified",
+   "note": "",
+   "keywords": [
+    "floor furnace clearance",
+    "6 inches above grade",
+    "pit",
+    "18 inches control side"
+   ]
+  },
+  {
+   "id": "H5-40",
+   "topic": "Return air",
+   "trade": "hvac",
+   "state": null,
+   "source": "IFGC 2021 618.3 Item 4",
+   "fact": "IFGC 2021 618.3: outdoor or return air for a forced-air furnace may not be taken from a room whose volume is less than 25 percent of the total volume served by the system (spaces joined by permanent openings count together). The rule does not apply where the return air taken from the room is no more than the supply air delivered to it.",
+   "status": "verified",
+   "note": "",
+   "keywords": [
+    "return air",
+    "25 percent volume",
+    "furnace return",
+    "618.3",
+    "room volume"
+   ]
+  },
+  {
+   "id": "H5-41",
+   "topic": "Return air",
+   "trade": "hvac",
+   "state": null,
+   "source": "IFGC 2021 618.3 Item 5",
+   "fact": "IFGC 2021 618.3: a room containing a fuel-burning appliance may not be the only source of return air unless the appliance is direct-vent, or the room volume exceeds 1 cubic foot per 10 Btu/h of total appliance input, supply and return air are about equal, and return inlets are at least 10 ft from any draft hood or atmospheric burner. Example: a 100,000 Btu/h furnace needs a room larger than 10,000 cubic feet.",
+   "status": "verified",
+   "note": "",
+   "keywords": [
+    "return air",
+    "1 cubic foot per 10 Btu",
+    "draft hood 10 feet",
+    "sole source",
+    "618.3"
+   ]
+  },
+  {
+   "id": "H5-42",
+   "topic": "Return air",
+   "trade": "hvac",
+   "state": null,
+   "source": "IFGC 2021 618.5; 618.6",
+   "fact": "Under the 2021 IFGC, return air from one dwelling unit may not be discharged into another dwelling unit (618.5). When a furnace's supply ducts serve areas outside the room it sits in, its return air must come through ducts sealed to the furnace casing and ending outside that room (618.6).",
+   "status": "verified",
+   "note": "",
+   "keywords": [
+    "return duct sealed",
+    "dwelling unit",
+    "furnace room return",
+    "618.6"
+   ]
+  },
+  {
+   "id": "H5-43",
+   "topic": "Specific gas appliances",
+   "trade": "hvac",
+   "state": null,
+   "source": "IFGC 2021 627.8",
+   "fact": "IFGC 2021 627.8: a cooling coil must be installed in parallel with, or downstream (on the outlet side) of, a gas furnace unless the furnace is listed for use with an upstream coil, and the coil must not overload the blower's capacity. Condensate must be kept off the heating element.",
+   "status": "verified",
+   "note": "",
+   "keywords": [
+    "cooling coil",
+    "downstream of furnace",
+    "evaporator coil location",
+    "627.8"
+   ]
+  },
+  {
+   "id": "H5-44",
+   "topic": "Dryer exhaust",
+   "trade": "hvac",
+   "state": null,
+   "source": "IFGC 2021 614.4.2; IMC 2021 504.4.2",
+   "fact": "Under the 2021 IFGC and IMC, a clothes dryer exhaust terminal must keep the duct passageway undiminished and provide an open area of at least 12.5 square inches.",
+   "status": "verified",
+   "note": "",
+   "keywords": [
+    "dryer vent hood",
+    "12.5 square inches",
+    "termination",
+    "open area",
+    "dryer exhaust"
+   ]
+  },
+  {
+   "id": "H5-45",
+   "topic": "Dryer exhaust",
+   "trade": "hvac",
+   "state": null,
+   "source": "IFGC 2021 614.9.6; IMC 2021 504.8.6",
+   "fact": "Under the 2021 IFGC and IMC, wherever a space for a clothes dryer is provided, a dryer exhaust duct must be installed; if no dryer is installed at occupancy, the duct must be capped at the dryer location. Exception: a listed condensing (ductless) dryer installed before occupancy.",
+   "status": "verified",
+   "note": "",
+   "keywords": [
+    "dryer duct required",
+    "laundry space",
+    "capped duct",
+    "condensing dryer"
+   ]
+  },
+  {
+   "id": "H5-46",
+   "topic": "Dryer exhaust",
+   "trade": "hvac",
+   "state": null,
+   "source": "IFGC 2021 614.10",
+   "fact": "IFGC 2021 614.10: exhaust ducts for Type 2 (commercial) clothes dryers need at least 6 inches of clearance to combustible materials, the exhaust fan motor must be outside the airstream, and where several dryers share a duct the fan must run continuously or be interlocked with the dryers.",
+   "status": "verified",
+   "note": "",
+   "keywords": [
+    "Type 2 dryer",
+    "commercial dryer",
+    "6 inches clearance",
+    "614.10"
+   ]
+  },
+  {
+   "id": "H5-47",
+   "topic": "EPA 608 definitions",
+   "trade": "hvac",
+   "state": null,
+   "source": "40 CFR 82.152 (small appliance)",
+   "fact": "Under 40 CFR 82.152, a small appliance is a product that is fully manufactured, charged and hermetically sealed in a factory with 5 pounds or less of refrigerant, such as household refrigerators and freezers, room air conditioners, dehumidifiers and drinking water coolers. Servicing small appliances requires Type I (or Universal) certification.",
+   "status": "verified",
+   "note": "",
+   "keywords": [
+    "small appliance",
+    "5 pounds",
+    "Type I",
+    "hermetically sealed",
+    "definition"
+   ]
+  },
+  {
+   "id": "H5-48",
+   "topic": "EPA 608 definitions",
+   "trade": "hvac",
+   "state": null,
+   "source": "40 CFR 82.152 (full charge)",
+   "fact": "Under 40 CFR 82.152, an appliance's full charge (the amount needed for normal operation) may be determined by: the manufacturer's specified charge; a calculation from component sizes, refrigerant density and piping volume; actual measurements of refrigerant added or removed (including seasonal adjustments); or the midpoint of an established range based on the best available operating data.",
+   "status": "verified",
+   "note": "",
+   "keywords": [
+    "full charge",
+    "nameplate charge",
+    "leak rate",
+    "charge determination",
+    "82.152"
+   ]
+  },
+  {
+   "id": "H5-49",
+   "topic": "EPA 608 definitions",
+   "trade": "hvac",
+   "state": null,
+   "source": "40 CFR 82.152",
+   "fact": "EPA appliance categories (40 CFR 82.152): comfort cooling is air conditioning that controls heat or humidity in occupied buildings (such as chillers, commercial split systems and rooftop units); commercial refrigeration serves the retail food and cold storage warehouse sectors; industrial process refrigeration is customized equipment tied to industrial processes, ice rinks and industrial ice machines. A dual-use appliance counts as industrial process refrigeration if at least half its capacity serves industrial processes.",
+   "status": "verified",
+   "note": "",
+   "keywords": [
+    "comfort cooling",
+    "commercial refrigeration",
+    "industrial process refrigeration",
+    "appliance category",
+    "leak rate threshold"
+   ]
+  },
+  {
+   "id": "H5-50",
+   "topic": "EPA 608 definitions",
+   "trade": "hvac",
+   "state": null,
+   "source": "40 CFR 82.152 (MVAC-like appliance); 82.161(a)",
+   "fact": "An MVAC-like appliance (40 CFR 82.152) is an open-drive compressor system with a full charge of 20 pounds or less used to cool the cab of off-road vehicles such as farm or construction equipment (R-22 units excluded). Under 82.161(a), technicians servicing MVAC-like appliances must hold Type II certification or Section 609 (Subpart B) certification, while regular motor vehicle AC requires Section 609 certification.",
+   "status": "verified",
+   "note": "",
+   "keywords": [
+    "MVAC-like",
+    "off-road vehicle",
+    "20 pounds",
+    "Section 609",
+    "Type II"
+   ]
+  },
+  {
+   "id": "H5-51",
+   "topic": "EPA 608 definitions",
+   "trade": "hvac",
+   "state": null,
+   "source": "40 CFR 82.152 (technician; opening)",
+   "fact": "Under 40 CFR 82.152, a technician is anyone whose work could reasonably be expected to break into the refrigerant circuit, such as attaching or detaching hoses and gauges, adding or removing refrigerant, adding or removing components, or cutting lines; painting or tightening bolts does not count. Connecting hoses and gauges to measure pressure, add refrigerant or recover refrigerant is not considered 'opening' the appliance.",
+   "status": "verified",
+   "note": "",
+   "keywords": [
+    "technician definition",
+    "attaching gauges",
+    "opening an appliance",
+    "certification required",
+    "82.152"
+   ]
+  },
+  {
+   "id": "H5-52",
+   "topic": "EPA 608 definitions",
+   "trade": "hvac",
+   "state": null,
+   "source": "40 CFR 82.152",
+   "fact": "EPA defines self-contained recovery equipment as equipment that can remove refrigerant without help from the appliance's own components (it has its own compressor or pump), and system-dependent (passive) recovery equipment as equipment that needs the appliance's own compressor or pressure to remove the refrigerant.",
+   "status": "verified",
+   "note": "",
+   "keywords": [
+    "self-contained recovery",
+    "system-dependent",
+    "passive recovery",
+    "recovery machine",
+    "definition"
+   ]
+  },
+  {
+   "id": "H5-53",
+   "topic": "EPA 608 leak repair",
+   "trade": "hvac",
+   "state": null,
+   "source": "40 CFR 82.152 (leak inspection)",
+   "fact": "Under 40 CFR 82.152, a leak inspection must find where leaks are, using methods such as bubble tests, ultrasonic tests, gas-imaging cameras or properly maintained electronic leak detectors. Methods that only show that a leak exists (such as a pressure decay test or checking the sight glass) must be paired with a method that locates the leak.",
+   "status": "verified",
+   "note": "",
+   "keywords": [
+    "leak inspection",
+    "bubble test",
+    "ultrasonic",
+    "pressure decay",
+    "sight glass"
+   ]
+  },
+  {
+   "id": "H5-54",
+   "topic": "EPA 608 certification",
+   "trade": "hvac",
+   "state": null,
+   "source": "40 CFR 82.161(a)",
+   "fact": "Under 40 CFR 82.161(a), an apprentice does not need EPA 608 certification while closely and continually supervised by a certified technician during any work that could release refrigerant; the supervising technician and apprentice share responsibility for compliance. People who only dispose of small appliances, MVACs or MVAC-like appliances do not need to be certified.",
+   "status": "verified",
+   "note": "",
+   "keywords": [
+    "apprentice",
+    "supervision",
+    "certification exemption",
+    "disposal",
+    "82.161"
+   ]
+  },
+  {
+   "id": "H5-55",
+   "topic": "EPA 608 certification",
+   "trade": "hvac",
+   "state": null,
+   "source": "40 CFR 82 Subpart F, Appendix D",
+   "fact": "Under 40 CFR 82 Subpart F Appendix D, Universal certification can be earned on one combined test or by combining passing scores on separate Type I, II and III tests, but a mail-in Type I test cannot count toward Universal. Results must be sent within 30 days, and a wallet card must be issued within 30 days showing the program's name, the technician's name, the certification type and a unique number that is not the Social Security number.",
+   "status": "verified",
+   "note": "",
+   "keywords": [
+    "Universal certification",
+    "wallet card",
+    "30 days",
+    "mail-in Type I",
+    "Appendix D"
+   ]
+  },
+  {
+   "id": "H5-56",
+   "topic": "EPA 608 certification",
+   "trade": "hvac",
+   "state": null,
+   "source": "40 CFR 82.161(b)",
+   "fact": "Under 40 CFR 82.161(b), since January 1, 2018 each approved certification program must publish online a list of technicians it has certified on or after January 1, 2017 (name, city, certification type and date), updated at least yearly, and must let technicians opt out of the list.",
+   "status": "verified",
+   "note": "",
+   "keywords": [
+    "technician list",
+    "online lookup",
+    "certification program",
+    "opt out",
+    "2018"
+   ]
+  },
+  {
+   "id": "H5-57",
+   "topic": "EPA 608 sales restriction",
+   "trade": "hvac",
+   "state": null,
+   "source": "40 CFR 82.154(c)(1)",
+   "fact": "Other exceptions to the EPA refrigerant sales restriction (40 CFR 82.154(c)(1)) include: sales intended only for resale to certified technicians or appliance manufacturers (for example, to a wholesaler), sales to appliance manufacturers, refrigerant contained in an appliance with a fully assembled refrigerant circuit or in an appliance component, and refrigerant charged into an appliance by a certified technician or apprentice during service.",
+   "status": "verified",
+   "note": "",
+   "keywords": [
+    "sales restriction exceptions",
+    "wholesaler",
+    "appliance manufacturer",
+    "pre-charged appliance",
+    "82.154"
+   ]
+  },
+  {
+   "id": "H5-58",
+   "topic": "EPA 608 sales restriction",
+   "trade": "hvac",
+   "state": null,
+   "source": "40 CFR 82.154(g)",
+   "fact": "Under 40 CFR 82.154(g), the refrigerant sales restriction has been stayed (not enforced) since April 27, 1995 as it applies to refrigerant contained in appliances without fully assembled refrigerant circuits, such as pre-charged split-system components, while EPA reconsiders the rule.",
+   "status": "verified",
+   "note": "",
+   "keywords": [
+    "stay",
+    "pre-charged split system",
+    "April 27 1995",
+    "sales restriction",
+    "82.154(g)"
+   ]
+  },
+  {
+   "id": "H5-59",
+   "topic": "EPA 608 sales restriction",
+   "trade": "hvac",
+   "state": null,
+   "source": "40 CFR 82.154(c)(2)",
+   "fact": "Under 40 CFR 82.154(c)(2), small cans (2 pounds or less) of non-exempt substitute refrigerant for motor vehicle AC made or imported on or after January 1, 2018 must have a single self-sealing valve that closes automatically and leaks no more than 3.00 grams per year when closed, tested by an independent U.S. laboratory.",
+   "status": "verified",
+   "note": "",
+   "keywords": [
+    "self-sealing valve",
+    "small cans",
+    "3 grams per year",
+    "MVAC",
+    "DIY refrigerant"
+   ]
+  },
+  {
+   "id": "H5-60",
+   "topic": "EPA 608 equipment",
+   "trade": "hvac",
+   "state": null,
+   "source": "40 CFR 82.154(e); 82.154(f)",
+   "fact": "Under 40 CFR 82.154(e), appliances (other than small appliances) must be built with a servicing aperture, and small appliances with a process stub, so refrigerant can be removed during service and disposal. Under 82.154(f), one-time expansion devices (such as self-chilling cans) may not be made or imported unless they use only exempt refrigerants.",
+   "status": "verified",
+   "note": "",
+   "keywords": [
+    "servicing aperture",
+    "process stub",
+    "small appliance",
+    "one-time expansion device",
+    "82.154"
+   ]
+  },
+  {
+   "id": "H5-61",
+   "topic": "EPA 608 evacuation",
+   "trade": "hvac",
+   "state": null,
+   "source": "40 CFR 82.156(a)(1)(iii)",
+   "fact": "Under 40 CFR 82.156(a)(1)(iii), before opening an appliance just to change the compressor oil, the technician must evacuate or pressurize the appliance (or isolated section) to no higher than 5 psig, or drain the oil into a system receiver that has been evacuated or pressurized to no higher than 5 psig.",
+   "status": "verified",
+   "note": "",
+   "keywords": [
+    "oil change",
+    "5 psig",
+    "compressor oil",
+    "evacuation level",
+    "82.156"
+   ]
+  },
+  {
+   "id": "H5-62",
+   "topic": "EPA 608 evacuation",
+   "trade": "hvac",
+   "state": null,
+   "source": "40 CFR 82.156(a)(1)(ii)",
+   "fact": "Under 40 CFR 82.156(a)(1)(ii), for a non-major repair, a low-pressure appliance must be pressurized to no higher than 0 psig before opening. For refrigerants that boil above 85 F at 29.9 in. Hg (such as R-123), heat should be used to raise the pressure, and nitrogen may be used only to raise the pressure from the level heat can reach up to atmospheric.",
+   "status": "verified",
+   "note": "",
+   "keywords": [
+    "low-pressure chiller",
+    "non-major repair",
+    "0 psig",
+    "heat",
+    "nitrogen"
+   ]
+  },
+  {
+   "id": "H5-63",
+   "topic": "EPA 608 evacuation",
+   "trade": "hvac",
+   "state": null,
+   "source": "40 CFR 82.156(a)",
+   "fact": "Under 40 CFR 82.156(a), technicians may evacuate the whole appliance or only the part being serviced if it can be isolated to a system receiver, and they must verify that the required evacuation level has been reached before opening the appliance.",
+   "status": "verified",
+   "note": "",
+   "keywords": [
+    "isolate",
+    "system receiver",
+    "verify evacuation",
+    "pump down",
+    "82.156"
+   ]
+  },
+  {
+   "id": "H5-64",
+   "topic": "EPA 608 disposal",
+   "trade": "hvac",
+   "state": null,
+   "source": "40 CFR 82.156(c); 82.156(d)",
+   "fact": "Under 40 CFR 82.156(c) and (d), when MVACs and MVAC-like appliances are disposed of, the refrigerant must be recovered per Subpart B or the system pressure reduced to 102 mm of mercury vacuum or lower.",
+   "status": "verified",
+   "note": "",
+   "keywords": [
+    "MVAC disposal",
+    "102 mm Hg",
+    "MVAC-like",
+    "vehicle AC",
+    "82.156"
+   ]
+  },
+  {
+   "id": "H5-65",
+   "topic": "EPA 608 recovery practice",
+   "trade": "hvac",
+   "state": null,
+   "source": "40 CFR 82.156(h); IMC 2021 1102.2.2",
+   "fact": "Under 40 CFR 82.156(h), recovered refrigerant may be charged back into the same appliance or another appliance owned by the same person without being recycled or reclaimed (not allowed for MVAC or MVAC-like appliances). Selling it to a different owner requires reclamation to AHRI 700 purity by a certified reclaimer.",
+   "status": "verified",
+   "note": "",
+   "keywords": [
+    "reuse recovered refrigerant",
+    "same owner",
+    "reclaim",
+    "AHRI 700",
+    "82.156(h)"
+   ]
+  },
+  {
+   "id": "H5-66",
+   "topic": "EPA 608 leak repair",
+   "trade": "hvac",
+   "state": null,
+   "source": "40 CFR 82.157(d)",
+   "fact": "Under 40 CFR 82.157(d), a certified technician must inspect to locate the leaks, and the repair must bring the leak rate below the threshold. A repair is presumed successful if no refrigerant has to be added for 12 months or if later leak inspections find no leaks.",
+   "status": "verified",
+   "note": "",
+   "keywords": [
+    "leak repair",
+    "presumed repaired",
+    "12 months",
+    "certified technician",
+    "82.157"
+   ]
+  },
+  {
+   "id": "H5-67",
+   "topic": "EPA 608 leak repair",
+   "trade": "hvac",
+   "state": null,
+   "source": "40 CFR 82.157(f)",
+   "fact": "Under 40 CFR 82.157(f), the 30-day (or 120-day) leak repair deadline may be extended if the appliance is in a radiologically contaminated area, other laws make timely repair impossible, or needed parts are unavailable. A parts extension runs until 30 days after the part is delivered, capped at 180 days (270 days with an industrial process shutdown), and EPA must be notified within the original repair period.",
+   "status": "verified",
+   "note": "",
+   "keywords": [
+    "repair extension",
+    "parts unavailable",
+    "180 days",
+    "270 days",
+    "82.157"
+   ]
+  },
+  {
+   "id": "H5-68",
+   "topic": "EPA 608 leak repair",
+   "trade": "hvac",
+   "state": null,
+   "source": "40 CFR 82.157(g)",
+   "fact": "Under 40 CFR 82.157(g), an automatic leak detection system can replace the required periodic leak inspections for the parts it monitors if it is audited or calibrated yearly. Refrigerant-in-air sensors must detect 10 ppm and alarm at 100 ppm; other systems must alarm at a loss of 50 lb or 10 percent of the full charge, whichever is less.",
+   "status": "verified",
+   "note": "",
+   "keywords": [
+    "automatic leak detection",
+    "10 ppm",
+    "100 ppm",
+    "50 lb or 10 percent",
+    "leak inspection"
+   ]
+  },
+  {
+   "id": "H5-69",
+   "topic": "EPA 608 leak repair",
+   "trade": "hvac",
+   "state": null,
+   "source": "40 CFR 82.157(h)",
+   "fact": "Under 40 CFR 82.157(h), a retrofit or retirement plan must be signed by an authorized official, dated, kept at the site, and include the appliance identity and location, refrigerant type and charge, the planned conversion or disposal, and a schedule of no more than one year. The work must be finished within one year of the plan date and no more than 13 months after the plan was required.",
+   "status": "verified",
+   "note": "",
+   "keywords": [
+    "retrofit plan",
+    "retirement plan",
+    "one year",
+    "13 months",
+    "82.157(h)"
+   ]
+  },
+  {
+   "id": "H5-70",
+   "topic": "EPA 608 leak repair",
+   "trade": "hvac",
+   "state": null,
+   "source": "40 CFR 82.157(i); 82.157(k)",
+   "fact": "Under 40 CFR 82.157, owners may get 18 months to retire an appliance if its replacement uses an exempt substitute refrigerant (82.157(i)); repair and retrofit deadlines are suspended while an appliance is mothballed and restart when refrigerant is added back; and refrigerant purged and destroyed at 98 percent or greater efficiency does not count toward the leak rate (82.157(k)).",
+   "status": "verified",
+   "note": "",
+   "keywords": [
+    "mothball",
+    "18 months",
+    "exempt substitute",
+    "purged refrigerant",
+    "98 percent"
+   ]
+  },
+  {
+   "id": "H5-71",
+   "topic": "EPA ER&R (HFC)",
+   "trade": "hvac",
+   "state": null,
+   "source": "40 CFR 84.106",
+   "fact": "Under the HFC leak repair rule (40 CFR 84.106, effective January 1, 2026), owners calculate the leak rate each time refrigerant is added using either the annualizing method or the rolling average method (the same method at all their facilities). Systems of 500 lb or more over the threshold get quarterly leak inspections, 15 to under 500 lb annual inspections, and any appliance of 15 lb or more that leaks 125 percent of its charge in a year must be reported to EPA by March 1.",
+   "status": "verified",
+   "note": "",
+   "keywords": [
+    "HFC leak repair",
+    "rolling average",
+    "annualizing",
+    "chronic leaker",
+    "15 pounds"
+   ]
+  },
+  {
+   "id": "H5-72",
+   "topic": "EPA ER&R (HFC)",
+   "trade": "hvac",
+   "state": null,
+   "source": "40 CFR 84.106(a)",
+   "fact": "The 40 CFR 84.106 HFC leak repair rule does not apply to appliances that contain only an ozone-depleting refrigerant (those stay under 40 CFR 82.157) or to residential and light commercial air conditioning and heat pumps. Refrigerated transport falls in the 10 percent leak-rate group with comfort cooling.",
+   "status": "verified",
+   "note": "",
+   "keywords": [
+    "ER&R exclusions",
+    "residential AC excluded",
+    "refrigerated transport",
+    "10 percent",
+    "84.106"
+   ]
+  },
+  {
+   "id": "H5-73",
+   "topic": "EPA ER&R (HFC)",
+   "trade": "hvac",
+   "state": null,
+   "source": "40 CFR 84.108",
+   "fact": "Under 40 CFR 84.108, required automatic leak detection on 1,500 lb or larger commercial and industrial process refrigeration systems must be audited and calibrated yearly; direct-detection sensors must detect 10 ppm and alarm at 100 ppm, condition-monitoring systems must alarm at a loss of 50 lb or 10 percent of the charge (whichever is less), and after an alarm the owner has 30 days (120 with a shutdown) to calculate the leak rate or repair the leak.",
+   "status": "verified",
+   "note": "",
+   "keywords": [
+    "automatic leak detection",
+    "1,500 lb",
+    "84.108",
+    "ALD",
+    "supermarket"
+   ]
+  },
+  {
+   "id": "H5-74",
+   "topic": "AIM Act / Technology Transitions",
+   "trade": "hvac",
+   "state": null,
+   "source": "40 CFR 84.54(c)(1) (as amended 91 FR 31329, May 26, 2026)",
+   "fact": "Under 40 CFR 84.54(c)(1), since January 1, 2025 new residential and light commercial AC and heat pump systems (other than VRF) may not be installed with a refrigerant of GWP 700 or more, except that systems whose specified components were all manufactured or imported before January 1, 2025 may still be installed. After the May 26, 2026 amendment, the text sets no deadline for installing those older-component systems.",
+   "status": "verified",
+   "note": "",
+   "keywords": [
+    "R-410A installation",
+    "GWP 700",
+    "technology transitions",
+    "components before 2025",
+    "84.54"
+   ]
+  },
+  {
+   "id": "H5-75",
+   "topic": "AIM Act / Technology Transitions",
+   "trade": "hvac",
+   "state": null,
+   "source": "40 CFR 84.54(c)(2)",
+   "fact": "Under 40 CFR 84.54(c)(2), new residential and light commercial variable refrigerant flow (VRF) systems may not be installed with refrigerant of GWP 700 or more starting January 1, 2026, except that VRF systems with all components made or imported before January 1, 2026 may be installed until January 1, 2027 (January 1, 2028 with a building permit approved before October 5, 2023).",
+   "status": "verified",
+   "note": "",
+   "keywords": [
+    "VRF",
+    "variable refrigerant flow",
+    "GWP 700",
+    "2026",
+    "2027"
+   ]
+  },
+  {
+   "id": "H5-76",
+   "topic": "AIM Act / Technology Transitions",
+   "trade": "hvac",
+   "state": null,
+   "source": "40 CFR 84.54(a); 84.54(b)",
+   "fact": "Under 40 CFR 84.54(a), since January 1, 2025 self-contained residential and light commercial AC and heat pumps, residential dehumidifiers and comfort-cooling chillers may not be manufactured or imported with refrigerant of GWP 700 or more, and household refrigerators and freezers are limited to GWP below 150. Under 84.54(b), selling or distributing such products is restricted starting three years after the manufacture date.",
+   "status": "verified",
+   "note": "",
+   "keywords": [
+    "GWP 150",
+    "household refrigerator",
+    "dehumidifier",
+    "chiller",
+    "sell-through 3 years"
+   ]
+  },
+  {
+   "id": "H5-77",
+   "topic": "AIM Act / Technology Transitions",
+   "trade": "hvac",
+   "state": null,
+   "source": "42 U.S.C. 7675(e)(2)(C) (AIM Act)",
+   "fact": "The AIM Act (42 U.S.C. 7675(e)(2)(C)) phases down U.S. HFC production and consumption, measured against a baseline in exchange-value-weighted amounts: 90 percent of baseline for 2020-2023, 60 percent for 2024-2028, 30 percent for 2029-2033, 20 percent for 2034-2035, and 15 percent for 2036 and later (an 85 percent cut).",
+   "status": "verified",
+   "note": "",
+   "keywords": [
+    "HFC phasedown",
+    "AIM Act",
+    "85 percent",
+    "baseline",
+    "2036"
+   ]
+  },
+  {
+   "id": "H5-78",
+   "topic": "Piping support",
+   "trade": "hvac",
+   "state": null,
+   "source": "IMC 2021 Table 305.4",
+   "fact": "IMC 2021 Table 305.4 maximum hanger spacing: copper or copper-alloy tubing 8 ft horizontal and 10 ft vertical; copper pipe 12 ft horizontal and 10 ft vertical; steel pipe 12 ft horizontal and 15 ft vertical; PVC pipe 4 ft horizontal and 10 ft vertical (with a mid-story guide); PEX 1 inch and smaller 32 inches horizontal and 10 ft vertical.",
+   "status": "verified",
+   "note": "Confirmed in Seattle's published 2021 Mechanical Code (IMC text; Washington does not amend IMC 305).",
+   "keywords": [
+    "pipe support spacing",
+    "hanger spacing",
+    "copper tubing",
+    "Table 305.4",
+    "PEX",
+    "steel pipe"
+   ]
+  },
+  {
+   "id": "H5-79",
+   "topic": "Ventilation",
+   "trade": "hvac",
+   "state": null,
+   "source": "IMC 2021 Table 403.3.1.1",
+   "fact": "IMC 2021 Table 403.3.1.1: retail sales floors use a default of 15 people per 1,000 sq ft with 7.5 cfm per person plus 0.12 cfm per sq ft. Example: a 2,000 sq ft store with 30 people needs (7.5 x 30) + (0.12 x 2,000) = 225 + 240 = 465 cfm of breathing-zone outdoor air.",
+   "status": "verified",
+   "note": "Values match ASHRAE 62.1 Table 6.2.2.1, which the IMC table is based on.",
+   "keywords": [
+    "retail ventilation",
+    "7.5 cfm per person",
+    "0.12 cfm per square foot",
+    "outdoor air",
+    "Table 403.3.1.1"
+   ]
+  },
+  {
+   "id": "H5-80",
+   "topic": "Ventilation",
+   "trade": "hvac",
+   "state": null,
+   "source": "IMC 2021 Table 403.3.1.1",
+   "fact": "IMC 2021 Table 403.3.1.1: restaurant dining rooms use 70 people per 1,000 sq ft, and cafeterias/fast-food dining and bars/cocktail lounges use 100 people per 1,000 sq ft; all three require 7.5 cfm per person plus 0.18 cfm per sq ft of outdoor air.",
+   "status": "verified",
+   "note": "",
+   "keywords": [
+    "restaurant ventilation",
+    "dining room",
+    "0.18 cfm per square foot",
+    "bar",
+    "occupant density"
+   ]
+  },
+  {
+   "id": "H5-81",
+   "topic": "Ventilation",
+   "trade": "hvac",
+   "state": null,
+   "source": "IMC 2021 Table 403.3.1.1",
+   "fact": "IMC 2021 Table 403.3.1.1: conference and meeting rooms use 50 people per 1,000 sq ft, and auditorium seating 150 people per 1,000 sq ft, both at 5 cfm per person plus 0.06 cfm per sq ft. Classrooms for ages 5 to 8 use 25 people per 1,000 sq ft at 10 cfm per person plus 0.12 cfm per sq ft.",
+   "status": "verified",
+   "note": "",
+   "keywords": [
+    "conference room ventilation",
+    "auditorium",
+    "classroom ages 5-8",
+    "occupant density",
+    "outdoor air rate"
+   ]
+  },
+  {
+   "id": "H5-82",
+   "topic": "Ventilation",
+   "trade": "hvac",
+   "state": null,
+   "source": "IMC 2021 Table 403.3.1.1 (exhaust rates)",
+   "fact": "IMC 2021 Table 403.3.1.1 exhaust rates include: commercial cooking kitchens 0.7 cfm per sq ft, janitor closets 1.0 cfm per sq ft, locker rooms 0.5 cfm per sq ft, and enclosed parking garages 0.75 cfm per sq ft. Commercial kitchens also need 7.5 cfm per person plus 0.12 cfm per sq ft of outdoor air (default 20 people per 1,000 sq ft).",
+   "status": "verified",
+   "note": "",
+   "keywords": [
+    "exhaust rate",
+    "janitor closet",
+    "locker room",
+    "commercial kitchen",
+    "parking garage exhaust"
+   ]
+  },
+  {
+   "id": "H5-83",
+   "topic": "Ventilation",
+   "trade": "hvac",
+   "state": null,
+   "source": "IMC 2021 404 (enclosed parking garages)",
+   "fact": "Under the IMC (Section 404), enclosed parking garage ventilation may cycle or modulate under automatic detection controls, but automatic operation may never reduce the rate below 0.05 cfm per sq ft of floor area, and the system must be able to provide 0.75 cfm per sq ft.",
+   "status": "verified",
+   "note": "The 2024 IMC 404.1 requires carbon monoxide detectors used together with nitrogen dioxide detectors (listed to UL 2075) when the system is not run continuously.",
+   "keywords": [
+    "parking garage ventilation",
+    "0.05 cfm",
+    "0.75 cfm",
+    "CO detection",
+    "404"
+   ]
+  },
+  {
+   "id": "H5-84",
+   "topic": "Ventilation",
+   "trade": "hvac",
+   "state": null,
+   "source": "IMC 2021 403.2.1",
+   "fact": "IMC 2021 403.2.1 limits recirculation: ventilation air may not be recirculated from one dwelling unit to another or to dissimilar occupancies; pool and pool-deck air may be recirculated only if dehumidified to 60 percent relative humidity or less; and spaces that require mechanical exhaust under Note b of Table 403.3.1.1 (such as toilet rooms) may not have their air recirculated, so all air supplied to them must be exhausted.",
+   "status": "verified",
+   "note": "",
+   "keywords": [
+    "recirculation",
+    "dissimilar occupancy",
+    "pool 60 percent",
+    "toilet room exhaust",
+    "403.2.1"
+   ]
+  },
+  {
+   "id": "H5-85",
+   "topic": "Ventilation",
+   "trade": "hvac",
+   "state": null,
+   "source": "IMC 2021 Sec. 403.3.1.1 (zone air distribution effectiveness table)",
+   "fact": "Additional IMC zone air distribution effectiveness (Ez) values: 0.7 for warm air supplied at the floor with a ceiling return, and 0.5 when makeup air is drawn in near the exhaust or return. Lower Ez means more outdoor air: Voz = Vbz / Ez, so 100 cfm / 0.7 = about 143 cfm.",
+   "status": "verified",
+   "note": "Values agree with ASHRAE 62.1 Table 6.2.2.2.",
+   "keywords": [
+    "Ez",
+    "air distribution effectiveness",
+    "0.7",
+    "0.5",
+    "zone outdoor air"
+   ]
+  },
+  {
+   "id": "H5-86",
+   "topic": "Duct systems",
+   "trade": "hvac",
+   "state": null,
+   "source": "IMC 2021 601.4",
+   "fact": "IMC 2021 601.4: exhaust ducts under positive pressure, chimneys and vents may not extend into or pass through supply or return ducts or plenums (limited exceptions apply, such as positive-pressure vents listed for the use with no joints in the plenum or run inside a sealed conduit).",
+   "status": "verified",
+   "note": "",
+   "keywords": [
+    "contamination prevention",
+    "vent through plenum",
+    "positive pressure",
+    "601.4",
+    "ducts"
+   ]
+  },
+  {
+   "id": "H5-87",
+   "topic": "Return air",
+   "trade": "hvac",
+   "state": null,
+   "source": "IMC 2021 601.5; IRC 2021 M1602.2",
+   "fact": "IMC 2021 601.5 and IRC 2021 M1602.2: return air openings must be at least 10 ft (in any direction) from an open combustion chamber or draft hood of another appliance in the same room, the return air taken from a room may not exceed the supply air delivered to that room, and return openings are sized per the manufacturer, ACCA Manual D or the design professional.",
+   "status": "verified",
+   "note": "",
+   "keywords": [
+    "return air opening",
+    "10 feet",
+    "draft hood",
+    "return not exceed supply",
+    "Manual D"
+   ]
+  },
+  {
+   "id": "H5-88",
+   "topic": "Return air",
+   "trade": "hvac",
+   "state": null,
+   "source": "IRC 2021 M1602.2",
+   "fact": "IRC 2021 M1602.2 also prohibits taking return air from an unconditioned crawl space by a direct connection to the furnace return (transfer openings in the crawl space enclosure are allowed), and return air from one dwelling unit may not be discharged into another dwelling unit.",
+   "status": "verified",
+   "note": "",
+   "keywords": [
+    "crawl space return",
+    "direct connection",
+    "dwelling unit",
+    "M1602.2",
+    "transfer opening"
+   ]
+  },
+  {
+   "id": "H5-89",
+   "topic": "Duct systems",
+   "trade": "hvac",
+   "state": null,
+   "source": "IMC 2021 Table 603.4; IRC 2021 Table M1601.1.1",
+   "fact": "In the 2021 IMC Table 603.4 (single dwelling units) and IRC Table M1601.1.1, minimum galvanized steel thickness depends on size and pressure: round ducts under 12 in at 1/2 in. w.c. need 0.013 in, 15-17 in round need 0.016 in, rectangular ducts 8 in or less need 0.013 in, 13-16 in rectangular need 0.019 in, and 19-20 in rectangular need 0.024 in. Ducts over 20 in or over 1 in. w.c. must follow SMACNA.",
+   "status": "verified",
+   "note": "",
+   "keywords": [
+    "duct gauge",
+    "sheet metal thickness",
+    "Table 603.4",
+    "galvanized duct",
+    "SMACNA"
+   ]
+  },
+  {
+   "id": "H5-90",
+   "topic": "Duct systems",
+   "trade": "hvac",
+   "state": null,
+   "source": "IMC 2021 603.4.1; IRC 2021 M1601.4.1; M1601.4.2",
+   "fact": "Under the 2021 IMC and IRC, crimp joints in round metal ducts must have a contact lap of at least 1 inch with the male end pointing in the direction of airflow, and must be mechanically fastened with at least three sheet metal screws or rivets equally spaced around the joint.",
+   "status": "verified",
+   "note": "",
+   "keywords": [
+    "round duct joint",
+    "three screws",
+    "1 inch lap",
+    "crimp joint",
+    "M1601.4.1"
+   ]
+  },
+  {
+   "id": "H5-91",
+   "topic": "Duct systems",
+   "trade": "hvac",
+   "state": null,
+   "source": "IMC 2021 603.3",
+   "fact": "IMC 2021 603.3: ducts are classified by design static pressure in pressure classes of +/-0.5, 1, 2, 3, 4, 6 and 10 in. w.c., and the duct's class must equal or exceed the system's design operating pressure.",
+   "status": "verified",
+   "note": "",
+   "keywords": [
+    "duct pressure class",
+    "static pressure",
+    "603.3",
+    "SMACNA",
+    "inches water column"
+   ]
+  },
+  {
+   "id": "H5-92",
+   "topic": "Duct systems",
+   "trade": "hvac",
+   "state": null,
+   "source": "IMC 2021 603.8; IRC 2021 M1601.1.2",
+   "fact": "Under the 2021 IMC and IRC, underground ducts must be approved for that use; metal ducts without corrosion protection must be fully encased in at least 2 inches of concrete; ducts must slope to an accessible point for drainage (IMC: at least 1/8 inch per foot); plastic underground ducts are limited to 150 F; and ducts must be sealed, secured and tested before burial.",
+   "status": "verified",
+   "note": "",
+   "keywords": [
+    "underground duct",
+    "2 inches concrete",
+    "slab duct",
+    "150 F",
+    "slope"
+   ]
+  },
+  {
+   "id": "H5-93",
+   "topic": "Duct systems",
+   "trade": "hvac",
+   "state": null,
+   "source": "IMC 2021 603.18",
+   "fact": "IMC 2021 603.18: supply and return outlets need volume dampers or another means of adjustment, floor registers must resist a 200 lb load on a 2-inch-diameter disc, and registers may not be installed in the floor of toilet and bathing rooms with hard nonabsorbent floors (except in dwelling units).",
+   "status": "verified",
+   "note": "",
+   "keywords": [
+    "floor register",
+    "200 pounds",
+    "volume damper",
+    "bathroom register",
+    "603.18"
+   ]
+  },
+  {
+   "id": "H5-94",
+   "topic": "Duct systems",
+   "trade": "hvac",
+   "state": null,
+   "source": "IRC 2021 M1601.2; M1601.4.7; M1601.4.8",
+   "fact": "Under the 2021 IRC, vibration isolators between ducts and equipment may be no longer than 10 inches (M1601.2); factory-made air ducts may not be installed in or on the ground, in tile or metal pipe, or within masonry or concrete (M1601.4.7); and ducts must be at least 4 inches from earth unless built as underground ducts (M1601.4.8).",
+   "status": "verified",
+   "note": "",
+   "keywords": [
+    "vibration isolator",
+    "10 inches",
+    "flex duct in slab",
+    "4 inches from earth",
+    "M1601"
+   ]
+  },
+  {
+   "id": "H5-95",
+   "topic": "Plenums",
+   "trade": "hvac",
+   "state": null,
+   "source": "IRC 2021 M1601.5",
+   "fact": "Under the 2021 IRC M1601.5, under-floor (crawl space) supply plenums are not allowed in new structures. Where an existing one is modified, the furnace fan must start at 150 F or lower with a separate limit holding outlet air to 200 F, the access opening must be at least 18 by 24 inches, and the ground needs a vapor barrier of at least 4 mils.",
+   "status": "verified",
+   "note": "",
+   "keywords": [
+    "under-floor plenum",
+    "crawl space plenum",
+    "150 F fan",
+    "200 F limit",
+    "M1601.5"
+   ]
+  },
+  {
+   "id": "H5-96",
+   "topic": "Duct insulation",
+   "trade": "hvac",
+   "state": null,
+   "source": "IMC 2021 604.7; IRC 2021 M1601.3",
+   "fact": "Under the 2021 IMC (604.7) and IRC (M1601.3), external duct insulation and factory-insulated flexible duct must be printed or identified at intervals of no more than 36 inches with the manufacturer's name, the installed R-value, and the flame spread and smoke-developed indexes.",
+   "status": "verified",
+   "note": "An earlier KB entry stated 10 ft; the 2021 IMC and IRC text both say 36 inches.",
+   "keywords": [
+    "duct insulation marking",
+    "36 inches",
+    "R-value label",
+    "flex duct",
+    "604.7"
+   ]
+  },
+  {
+   "id": "H5-97",
+   "topic": "Duct insulation",
+   "trade": "hvac",
+   "state": null,
+   "source": "IMC 2021 604.2",
+   "fact": "IMC 2021 604.2: ducts that operate above 120 F must have enough insulation to keep their exposed surface temperature at or below 120 F.",
+   "status": "verified",
+   "note": "",
+   "keywords": [
+    "surface temperature",
+    "120 F",
+    "hot duct",
+    "insulation",
+    "604.2"
+   ]
+  },
+  {
+   "id": "H5-98",
+   "topic": "Duct insulation",
+   "trade": "hvac",
+   "state": null,
+   "source": "IMC 2021 604.11; IRC 2021 M1601.4.6",
+   "fact": "Under the 2021 IMC and IRC, externally insulated cooling ducts that pass through spaces where condensation can form need a vapor retarder of 0.05 perm or less (or aluminum foil at least 2 mils thick) over the insulation, with sealed joints.",
+   "status": "verified",
+   "note": "Spray polyurethane foam rated 3 perms per inch or less is an exception.",
+   "keywords": [
+    "vapor retarder",
+    "0.05 perm",
+    "cooling duct",
+    "condensation",
+    "duct wrap"
+   ]
+  },
+  {
+   "id": "H5-99",
+   "topic": "Duct insulation",
+   "trade": "hvac",
+   "state": null,
+   "source": "IMC 2021 604.8; 604.13",
+   "fact": "Under the 2021 IMC, duct liner must be interrupted at fire damper operating areas and for at least 6 inches upstream and downstream of electric or fuel-fired heaters in the duct (604.8), and water-permeable internal insulation may not be used from the cooling coil outlet to the downstream end of the drain pan (604.13).",
+   "status": "verified",
+   "note": "",
+   "keywords": [
+    "duct liner",
+    "6 inches",
+    "duct heater",
+    "drain pan",
+    "internal insulation"
+   ]
+  },
+  {
+   "id": "H5-100",
+   "topic": "Air filters",
+   "trade": "hvac",
+   "state": null,
+   "source": "IMC 2021 605.1; 605.2; 605.3",
+   "fact": "Under the 2021 IMC, HVAC systems need approved air filters located in the return or outdoor air stream upstream of any heat exchanger or coil (605.1). Media filters are listed to UL 900, HEPA filters to UL 586 and electrostatic filters to UL 867, but filters used inside dwelling units need not be listed (605.2). Ducts must spread air evenly across the whole filter face (605.3).",
+   "status": "verified",
+   "note": "Washington amends 605.1 and adds MERV minimums; the UL listing standards are model IMC text.",
+   "keywords": [
+    "air filter",
+    "UL 900",
+    "upstream of coil",
+    "electrostatic filter",
+    "605"
+   ]
+  },
+  {
+   "id": "H5-101",
+   "topic": "Fire & smoke dampers",
+   "trade": "hvac",
+   "state": null,
+   "source": "IMC 2021 607.3.3.1",
+   "fact": "IMC 2021 607.3.3.1: a fire damper's heat-responsive device must operate at about 50 F above the normal temperature in the duct, but not lower than 160 F; in a smoke control system it may be rated up to 350 F.",
+   "status": "verified",
+   "note": "",
+   "keywords": [
+    "fusible link",
+    "fire damper temperature",
+    "160 F",
+    "350 F",
+    "607.3.3.1"
+   ]
+  },
+  {
+   "id": "H5-102",
+   "topic": "Fire & smoke dampers",
+   "trade": "hvac",
+   "state": null,
+   "source": "IMC 2021 607.4; 607.7",
+   "fact": "Under the 2021 IMC, fire and smoke dampers with fusible links or internal operators need an access door at least 12 inches square or a removable duct section (607.4), and flexible air ducts and flexible air connectors may not pass through any fire-resistance-rated assembly (607.7).",
+   "status": "verified",
+   "note": "",
+   "keywords": [
+    "damper access door",
+    "12 inches square",
+    "flex duct rated wall",
+    "607.4",
+    "607.7"
+   ]
+  },
+  {
+   "id": "H5-103",
+   "topic": "Fire & smoke dampers",
+   "trade": "hvac",
+   "state": null,
+   "source": "IMC 2021 607.6.1 Exception",
+   "fact": "IMC 2021 607.6.1 exception: in a dwelling, a duct may pass through up to three floors without fire dampers if it is inside a wall cavity, made of steel at least 0.0187 inch (No. 26 gage), serves only one dwelling or sleeping unit, is no larger than 4 inches nominal diameter, and the total of such ducts is no more than 100 sq in per 100 sq ft of floor area.",
+   "status": "verified",
+   "note": "",
+   "keywords": [
+    "fire damper exception",
+    "4 inch duct",
+    "three floors",
+    "26 gage",
+    "dwelling unit"
+   ]
+  },
+  {
+   "id": "H5-104",
+   "topic": "Cooling towers",
+   "trade": "hvac",
+   "state": null,
+   "source": "IMC 2021 908.1; 908.6",
+   "fact": "Under the 2021 IMC, cooling towers, evaporative condensers and fluid coolers must be located so the plume discharges at least 5 ft above or 20 ft away from any ventilation inlet to a building (908.1), and their drains and blowdown must be indirectly connected to an approved disposal location (908.6).",
+   "status": "verified",
+   "note": "",
+   "keywords": [
+    "cooling tower",
+    "plume",
+    "20 feet",
+    "5 feet above",
+    "blowdown"
+   ]
+  },
+  {
+   "id": "H5-105",
+   "topic": "Specific appliances",
+   "trade": "hvac",
+   "state": null,
+   "source": "IMC 2021 914",
+   "fact": "IMC 2021 914 (sauna heaters): the thermostat must limit room temperature to 194 F (sensor within 6 inches of the ceiling if not built in), the timer may allow no more than 1 hour of operation with its control outside the sauna room, and the room needs a ventilation opening at least 4 by 8 inches near the top of the door.",
+   "status": "verified",
+   "note": "",
+   "keywords": [
+    "sauna heater",
+    "194 F",
+    "1 hour timer",
+    "ventilation opening",
+    "914"
+   ]
+  }
+ ],
+ "questions": []
+}

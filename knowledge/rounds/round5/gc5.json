@@ -1,0 +1,1955 @@
+{
+ "source": "Round 5 (gc5): GC trade knowledge (IRC/IBC 2021 residential and commercial details, concrete, masonry, roofing, drywall, plan reading, estimating) and national business & law (bonds, liens, AIA, labor, payroll tax, depreciation, ratios, OSHA recordkeeping, EEO)",
+ "facts": [
+  {
+   "id": "G5-1",
+   "topic": "Residential code",
+   "trade": "gc",
+   "state": null,
+   "source": "IRC 2021 R311.7.1",
+   "fact": "Under the 2021 IRC, a stairway must be at least 36 in clear width above the handrail height. Handrails may stick out no more than 4-1/2 in on each side, so the clear width at and below the handrail must be at least 31-1/2 in with one handrail and 27 in with handrails on both sides.",
+   "status": "verified",
+   "note": "Confirmed against the 2021 IRC text reproduced in Viewrail's 2021 IRC visual interpretation and a California (CRC) building department handout.",
+   "keywords": [
+    "stair width",
+    "36 inches",
+    "31.5 inches",
+    "27 inches",
+    "handrail projection",
+    "IRC stairs"
+   ]
+  },
+  {
+   "id": "G5-2",
+   "topic": "Residential code",
+   "trade": "gc",
+   "state": null,
+   "source": "IRC 2021 R311.7.3",
+   "fact": "Under the 2021 IRC, one flight of stairs may not rise more than 12 ft 7 in (151 in) vertically between floor levels or landings. A taller rise needs an intermediate landing.",
+   "status": "verified",
+   "note": "Confirmed by Viewrail's reproduction of the 2021 IRC text and Montana DLI 2021 IRC means of egress training.",
+   "keywords": [
+    "maximum rise",
+    "151 inches",
+    "12 ft 7 in",
+    "flight of stairs",
+    "landing",
+    "IRC"
+   ]
+  },
+  {
+   "id": "G5-3",
+   "topic": "Residential code",
+   "trade": "gc",
+   "state": null,
+   "source": "IRC 2021 R311.7.5.1; R311.7.5.2",
+   "fact": "In a dwelling stairway (2021 IRC), the tallest riser in a flight may be no more than 3/8 in taller than the shortest riser, and the deepest tread may be no more than 3/8 in deeper than the shallowest tread.",
+   "status": "verified",
+   "note": "Confirmed by Viewrail 2021 IRC reproduction, Montana DLI 2021 IRC training and a CRC handout.",
+   "keywords": [
+    "riser variation",
+    "tread variation",
+    "3/8 inch",
+    "uniformity",
+    "stairs",
+    "IRC"
+   ]
+  },
+  {
+   "id": "G5-4",
+   "topic": "Residential code",
+   "trade": "gc",
+   "state": null,
+   "source": "IRC 2021 R311.7.5.3",
+   "fact": "Under the 2021 IRC, stairs with solid risers need a nosing projection of at least 3/4 in and no more than 1-1/4 in, with a nosing radius no larger than 9/16 in. A nosing is not required where the tread depth is at least 11 in.",
+   "status": "verified",
+   "note": "Confirmed by Viewrail 2021 IRC reproduction, Montana DLI 2021 IRC training and a CRC handout.",
+   "keywords": [
+    "nosing",
+    "3/4 inch",
+    "1-1/4 inch",
+    "11 inch tread",
+    "stair nosing",
+    "IRC"
+   ]
+  },
+  {
+   "id": "G5-5",
+   "topic": "Residential code",
+   "trade": "gc",
+   "state": null,
+   "source": "IRC 2021 R311.7.4; R311.7.5.2.1",
+   "fact": "Under the 2021 IRC, winder treads must be at least 10 in deep measured at the walkline, which is 12 in from the narrow side of the turn, and at least 6 in deep at any point within the clear width of the stair.",
+   "status": "verified",
+   "note": "Confirmed by Viewrail 2021 IRC reproduction and Montana DLI 2021 IRC training.",
+   "keywords": [
+    "winder",
+    "walkline",
+    "10 inches",
+    "6 inches",
+    "12 inches",
+    "IRC stairs"
+   ]
+  },
+  {
+   "id": "G5-6",
+   "topic": "Residential code",
+   "trade": "gc",
+   "state": null,
+   "source": "IRC 2021 R311.7.5.1",
+   "fact": "Open risers are allowed in IRC stairways, but where the stair is more than 30 in above the floor or grade below, the openings between treads must not let a 4-in sphere pass through.",
+   "status": "verified",
+   "note": "Confirmed by Viewrail 2021 IRC reproduction, Montana DLI training and a CRC handout.",
+   "keywords": [
+    "open risers",
+    "4 inch sphere",
+    "30 inches",
+    "stairs",
+    "IRC",
+    "riser opening"
+   ]
+  },
+  {
+   "id": "G5-7",
+   "topic": "Residential code",
+   "trade": "gc",
+   "state": null,
+   "source": "IRC 2021 R311.7.6",
+   "fact": "Under the 2021 IRC, every stairway needs a floor or landing at the top and bottom. A landing must be at least as wide as the stair it serves, and on a straight run it must be at least 36 in deep in the direction of travel.",
+   "status": "verified",
+   "note": "Confirmed by Viewrail 2021 IRC reproduction and Montana DLI training.",
+   "keywords": [
+    "stair landing",
+    "36 inches",
+    "landing width",
+    "top and bottom",
+    "IRC"
+   ]
+  },
+  {
+   "id": "G5-8",
+   "topic": "Residential code",
+   "trade": "gc",
+   "state": null,
+   "source": "IRC 2021 R311.7.8; R311.7.8.2",
+   "fact": "Under the 2021 IRC, a handrail is required on at least one side of each flight of stairs with four or more risers, and it must be continuous for the full length of the flight (limited interruptions are allowed at newel posts, landings and the lowest tread).",
+   "status": "verified",
+   "note": "Confirmed by Viewrail 2021 IRC reproduction and Montana DLI training.",
+   "keywords": [
+    "handrail required",
+    "four risers",
+    "continuous handrail",
+    "stairs",
+    "IRC"
+   ]
+  },
+  {
+   "id": "G5-9",
+   "topic": "Residential code",
+   "trade": "gc",
+   "state": null,
+   "source": "IRC 2021 R311.7.10.1",
+   "fact": "IRC spiral stairs need a clear width of at least 26 in at and below the handrail, treads at least 6-3/4 in deep at the walkline (walkline radius no more than 24-1/2 in), identical treads, risers no taller than 9-1/2 in, and headroom of at least 6 ft 6 in.",
+   "status": "verified",
+   "note": "Width, tread, radius and headroom confirmed in Viewrail's 2021 IRC reproduction; 9-1/2 in riser and 26 in width confirmed in Montana DLI 2021 IRC training.",
+   "keywords": [
+    "spiral stair",
+    "26 inches",
+    "6-3/4 inch tread",
+    "9-1/2 inch riser",
+    "6 ft 6 in headroom",
+    "IRC"
+   ]
+  },
+  {
+   "id": "G5-10",
+   "topic": "Residential code",
+   "trade": "gc",
+   "state": null,
+   "source": "IRC 2021 R312.1.1",
+   "fact": "Under the 2021 IRC, guards are required on open sides of floors, stairs, ramps and landings that are more than 30 in above the floor or grade below, measured at any point within 36 in horizontally of the edge. Insect screening does not count as a guard.",
+   "status": "verified",
+   "note": "Confirmed by Viewrail 2021 IRC reproduction and Montana DLI training.",
+   "keywords": [
+    "guard",
+    "30 inches",
+    "36 inches horizontally",
+    "deck guard",
+    "IRC",
+    "open side"
+   ]
+  },
+  {
+   "id": "G5-11",
+   "topic": "Residential code",
+   "trade": "gc",
+   "state": null,
+   "source": "IRC 2021 R312.1.2",
+   "fact": "Required guards under the 2021 IRC must be at least 36 in high above the walking surface. Guards on the open sides of stairs must be at least 34 in high measured from the line of the nosings, and where the top of a stair guard also serves as the handrail it must be 34 to 38 in high.",
+   "status": "verified",
+   "note": "Confirmed by Viewrail 2021 IRC reproduction. Some states amend this (California requires 42 in).",
+   "keywords": [
+    "guard height",
+    "36 inches",
+    "34 inches",
+    "stair guard",
+    "IRC",
+    "deck railing"
+   ]
+  },
+  {
+   "id": "G5-12",
+   "topic": "Residential code",
+   "trade": "gc",
+   "state": null,
+   "source": "IRC 2021 R312.1.3",
+   "fact": "IRC guards may not have openings that let a 4-in sphere pass. Two exceptions: the triangle formed by a stair riser, tread and bottom rail may not pass a 6-in sphere, and guards on the open side of stairs may not pass a 4-3/8-in sphere.",
+   "status": "verified",
+   "note": "Confirmed by Viewrail 2021 IRC reproduction, Montana DLI training and a CRC handout.",
+   "keywords": [
+    "baluster spacing",
+    "4 inch sphere",
+    "4-3/8 inch",
+    "6 inch triangle",
+    "guard openings",
+    "IRC"
+   ]
+  },
+  {
+   "id": "G5-13",
+   "topic": "Residential code",
+   "trade": "gc",
+   "state": null,
+   "source": "IRC 2021 R312.2.1; R312.2.2",
+   "fact": "Under the 2021 IRC, an operable window needs fall protection when its sill is less than 24 in above the finished floor and the opening is more than 72 in above the grade outside. The window must either not open far enough to pass a 4-in sphere or have an ASTM F2090 opening control or fall prevention device, and a required escape window must still give its full escape opening once the device is released.",
+   "status": "verified",
+   "note": "Confirmed by a 2021 IRC-based building department tip sheet (MyBuildingPermit TS 23).",
+   "keywords": [
+    "window fall protection",
+    "24 inches",
+    "72 inches",
+    "ASTM F2090",
+    "window opening control device",
+    "IRC"
+   ]
+  },
+  {
+   "id": "G5-14",
+   "topic": "Residential code",
+   "trade": "gc",
+   "state": null,
+   "source": "IRC 2021 R310.1",
+   "fact": "Under the 2021 IRC, basements, habitable attics and every sleeping room need at least one operable emergency escape and rescue opening, and a basement with sleeping rooms needs one in each sleeping room. Basements used only to house mechanical equipment and not over 200 sq ft are exempt.",
+   "status": "verified",
+   "note": "Confirmed by Boulder County (2021 IRC) and City of Boise building handouts.",
+   "keywords": [
+    "emergency escape opening",
+    "egress window",
+    "sleeping room",
+    "basement",
+    "200 sq ft",
+    "IRC"
+   ]
+  },
+  {
+   "id": "G5-15",
+   "topic": "Residential code",
+   "trade": "gc",
+   "state": null,
+   "source": "IRC 2021 R310.2.1; R310.2.2",
+   "fact": "IRC emergency escape and rescue openings need a net clear opening of at least 5.7 sq ft (5 sq ft is allowed for grade-floor openings), a net clear opening height of at least 24 in and a net clear width of at least 20 in. Because 24 x 20 in is only 3.3 sq ft, an opening at both minimum dimensions does not meet the area rule.",
+   "status": "verified",
+   "note": "Confirmed by Boulder County (2021 IRC) and Boise handouts. The 2018 IRC put all three numbers in R310.2.1; the 2021 IRC split the dimensions into R310.2.2.",
+   "keywords": [
+    "egress window size",
+    "5.7 sq ft",
+    "5 sq ft",
+    "24 inches",
+    "20 inches",
+    "net clear opening",
+    "IRC"
+   ]
+  },
+  {
+   "id": "G5-16",
+   "topic": "Residential code",
+   "trade": "gc",
+   "state": null,
+   "source": "IRC 2021 R310.4 (area wells)",
+   "fact": "Under the 2021 IRC, a window well serving an escape opening must have a horizontal area of at least 9 sq ft with a projection and width of at least 36 in. A well deeper than 44 in needs a permanently attached ladder or steps; ladder rungs must be at least 12 in wide inside, project at least 3 in from the wall and be spaced no more than 18 in apart vertically.",
+   "status": "verified",
+   "note": "Confirmed by Boulder County (2021 IRC numbering R310.4-R310.4.2.1) and Boise (2018 numbering R310.2.3) handouts. The ladder or steps may encroach up to 6 in into the required well size.",
+   "keywords": [
+    "window well",
+    "area well",
+    "9 sq ft",
+    "36 inches",
+    "44 inches deep",
+    "ladder",
+    "IRC"
+   ]
+  },
+  {
+   "id": "G5-17",
+   "topic": "Residential code",
+   "trade": "gc",
+   "state": null,
+   "source": "IRC 2021 R310.2.4",
+   "fact": "An emergency escape opening may open under a deck, porch or cantilever only if the window can open fully and there is a path at least 36 in high to a yard or court.",
+   "status": "verified",
+   "note": "Confirmed by Boise and Boulder County handouts.",
+   "keywords": [
+    "egress window under deck",
+    "36 inches",
+    "porch",
+    "escape path",
+    "IRC"
+   ]
+  },
+  {
+   "id": "G5-18",
+   "topic": "Doors, windows & glazing",
+   "trade": "gc",
+   "state": null,
+   "source": "IRC 2021 R308.4.1",
+   "fact": "Under the 2021 IRC, glazing in the fixed and operable panels of swinging, sliding and bifold doors is a hazardous location that needs safety glazing. Exceptions include openings that will not pass a 3-in sphere and decorative glazing.",
+   "status": "verified",
+   "note": "Confirmed by a 2021 IRC building department tip sheet (MyBuildingPermit TS 19).",
+   "keywords": [
+    "safety glazing",
+    "glass in doors",
+    "tempered glass",
+    "3 inch sphere",
+    "hazardous location",
+    "IRC"
+   ]
+  },
+  {
+   "id": "G5-19",
+   "topic": "Doors, windows & glazing",
+   "trade": "gc",
+   "state": null,
+   "source": "IRC 2021 R308.4.2",
+   "fact": "Glazing next to a door needs safety glazing when its bottom edge is less than 60 in above the walking surface and it is within 24 in of either side of the door in the closed position. It is not required where a wall or permanent barrier separates the door and the glass.",
+   "status": "verified",
+   "note": "Confirmed by a 2021 IRC building department tip sheet (MyBuildingPermit TS 19).",
+   "keywords": [
+    "glazing adjacent to door",
+    "24 inches",
+    "60 inches",
+    "safety glazing",
+    "sidelite",
+    "IRC"
+   ]
+  },
+  {
+   "id": "G5-20",
+   "topic": "Doors, windows & glazing",
+   "trade": "gc",
+   "state": null,
+   "source": "IRC 2021 R308.4.3",
+   "fact": "A window pane needs safety glazing under the IRC only when all four conditions are met: it is larger than 9 sq ft, its bottom edge is less than 18 in above the floor, its top edge is more than 36 in above the floor, and a walking surface is within 36 in horizontally. A protective bar 34 to 38 in high that resists 50 lb per linear foot is an alternative.",
+   "status": "verified",
+   "note": "Confirmed by a 2021 IRC building department tip sheet (MyBuildingPermit TS 19).",
+   "keywords": [
+    "safety glazing window",
+    "9 sq ft",
+    "18 inches",
+    "36 inches",
+    "four conditions",
+    "IRC"
+   ]
+  },
+  {
+   "id": "G5-21",
+   "topic": "Doors, windows & glazing",
+   "trade": "gc",
+   "state": null,
+   "source": "IRC 2021 R308.4.5",
+   "fact": "Glazing in walls, enclosures or fences around tubs, showers, hot tubs, spas, saunas, steam rooms and pools needs safety glazing when its bottom edge is less than 60 in above the standing or walking surface. Glass more than 60 in horizontally from the water's edge is exempt.",
+   "status": "verified",
+   "note": "Confirmed by a 2021 IRC building department tip sheet (MyBuildingPermit TS 19).",
+   "keywords": [
+    "wet location glazing",
+    "shower glass",
+    "60 inches",
+    "bathtub",
+    "safety glazing",
+    "IRC"
+   ]
+  },
+  {
+   "id": "G5-22",
+   "topic": "Doors, windows & glazing",
+   "trade": "gc",
+   "state": null,
+   "source": "IRC 2021 R308.4.6; R308.4.7",
+   "fact": "Glazing beside stairs, ramps and landings needs safety glazing when its bottom edge is less than 36 in above the walking surface (unless it is more than 36 in away horizontally). At the bottom of a stair, glazing less than 36 in above the landing and within a 60-in horizontal arc of the bottom tread also needs safety glazing.",
+   "status": "verified",
+   "note": "Confirmed by a 2021 IRC building department tip sheet (MyBuildingPermit TS 19).",
+   "keywords": [
+    "glazing at stairs",
+    "36 inches",
+    "60 inch arc",
+    "bottom landing",
+    "safety glazing",
+    "IRC"
+   ]
+  },
+  {
+   "id": "G5-23",
+   "topic": "Fire protection",
+   "trade": "gc",
+   "state": null,
+   "source": "IRC 2021 R314.3",
+   "fact": "Under the 2021 IRC, smoke alarms are required in each sleeping room, outside each separate sleeping area near the bedrooms, and on each additional story including basements and habitable attics (but not crawl spaces or uninhabitable attics).",
+   "status": "verified",
+   "note": "Confirmed by City of Boise and 2021 IRC (MyBuildingPermit TS 04) handouts.",
+   "keywords": [
+    "smoke alarm locations",
+    "sleeping room",
+    "each story",
+    "basement",
+    "IRC",
+    "smoke detector"
+   ]
+  },
+  {
+   "id": "G5-24",
+   "topic": "Fire protection",
+   "trade": "gc",
+   "state": null,
+   "source": "IRC 2021 R314.3 (near cooking appliances); NFPA 72-2019 29.11.3.4",
+   "fact": "Smoke alarms in dwellings must be kept back from permanently installed cooking appliances: at least 20 ft for ionization alarms, 10 ft for ionization alarms with a silencing switch, and 6 ft for photoelectric alarms, unless that would prevent a required location.",
+   "status": "verified",
+   "note": "Confirmed by City of Boise IRC handout and a 2021 IRC tip sheet that cites NFPA 72-2019.",
+   "keywords": [
+    "smoke alarm kitchen",
+    "ionization",
+    "photoelectric",
+    "20 feet",
+    "6 feet",
+    "nuisance alarm"
+   ]
+  },
+  {
+   "id": "G5-25",
+   "topic": "Fire protection",
+   "trade": "gc",
+   "state": null,
+   "source": "IRC 2021 R314.4",
+   "fact": "When more than one smoke alarm is required in a dwelling unit, they must be interconnected so that one alarm sounding sets off all of them. Listed wireless interconnection is acceptable.",
+   "status": "verified",
+   "note": "Confirmed by City of Boise and 2021 IRC (MyBuildingPermit TS 04) handouts.",
+   "keywords": [
+    "interconnected smoke alarms",
+    "wireless",
+    "all alarms sound",
+    "IRC",
+    "R314.4"
+   ]
+  },
+  {
+   "id": "G5-26",
+   "topic": "Fire protection",
+   "trade": "gc",
+   "state": null,
+   "source": "IRC 2021 R314.2.2; R315.2.2",
+   "fact": "When permitted alterations, repairs or additions are made to an existing home, the house must get smoke alarms (and CO alarms where required) like a new dwelling. Work limited to exterior surfaces such as roofing, siding, windows or doors, or to plumbing or mechanical systems, is exempt.",
+   "status": "verified",
+   "note": "Confirmed by City of Boise and 2021 IRC (MyBuildingPermit TS 04) handouts.",
+   "keywords": [
+    "remodel smoke alarms",
+    "alterations",
+    "existing dwelling",
+    "CO alarm",
+    "permit",
+    "IRC"
+   ]
+  },
+  {
+   "id": "G5-27",
+   "topic": "Fire protection",
+   "trade": "gc",
+   "state": null,
+   "source": "IRC 2021 R315.2.1; R315.3",
+   "fact": "Under the 2021 IRC, new dwellings need carbon monoxide alarms when they have a fuel-fired appliance or an attached garage with an opening into the home. The alarm goes outside each separate sleeping area near the bedrooms, and also inside a bedroom when a fuel-burning appliance is in that bedroom or its attached bathroom.",
+   "status": "verified",
+   "note": "Confirmed by City of Boise and 2021 IRC (MyBuildingPermit TS 04) handouts.",
+   "keywords": [
+    "carbon monoxide alarm",
+    "CO alarm",
+    "attached garage",
+    "fuel-fired appliance",
+    "bedroom",
+    "IRC"
+   ]
+  },
+  {
+   "id": "G5-28",
+   "topic": "Residential code",
+   "trade": "gc",
+   "state": null,
+   "source": "IRC 2021 R302.5.1",
+   "fact": "Under the IRC, a garage may not open directly into a room used for sleeping. Other doors between the garage and the house must be solid wood or solid or honeycomb-core steel at least 1-3/8 in thick, or 20-minute fire-rated, and have a self-closing or automatic-closing device.",
+   "status": "verified",
+   "note": "Confirmed by City of Boise and 2021 IRC (MyBuildingPermit TS 06) handouts.",
+   "keywords": [
+    "garage door to house",
+    "1-3/8 inch",
+    "20-minute door",
+    "self-closing",
+    "sleeping room",
+    "IRC"
+   ]
+  },
+  {
+   "id": "G5-29",
+   "topic": "Residential code",
+   "trade": "gc",
+   "state": null,
+   "source": "IRC 2021 R302.5.2",
+   "fact": "Ducts in a garage, and ducts that pass through the walls or ceiling separating the house from the garage, must be at least No. 26 gage sheet steel (or other approved material) and may not have openings into the garage.",
+   "status": "verified",
+   "note": "Confirmed by City of Boise and 2021 IRC (MyBuildingPermit TS 06) handouts.",
+   "keywords": [
+    "garage duct",
+    "26 gage",
+    "no registers in garage",
+    "duct penetration",
+    "IRC"
+   ]
+  },
+  {
+   "id": "G5-30",
+   "topic": "Residential code",
+   "trade": "gc",
+   "state": null,
+   "source": "IRC 2021 Table R302.6",
+   "fact": "IRC garage separation: at least 1/2-in gypsum board on the garage side between the garage and the house and its attic; at least 5/8-in Type X gypsum board between the garage and habitable rooms above it; and at least 1/2-in gypsum board on structure that supports the separating floor/ceiling assembly.",
+   "status": "verified",
+   "note": "Confirmed by City of Boise and 2021 IRC (MyBuildingPermit TS 06) handouts.",
+   "keywords": [
+    "garage separation",
+    "1/2 inch gypsum",
+    "5/8 Type X",
+    "room over garage",
+    "IRC",
+    "Table R302.6"
+   ]
+  },
+  {
+   "id": "G5-31",
+   "topic": "Residential code",
+   "trade": "gc",
+   "state": null,
+   "source": "IRC 2021 Table R302.1(1)",
+   "fact": "For homes without sprinklers (2021 IRC), an exterior wall with a fire separation distance of less than 5 ft must be 1-hour fire-resistance rated with exposure from both sides; at 5 ft or more no rating is required. Projections such as eaves are not allowed closer than 2 ft and need 1-hour protection on the underside from 2 ft to under 5 ft.",
+   "status": "verified",
+   "note": "Confirmed by Pierce County WA 2021 code bulletin and the Michigan Residential Code table (Mich. Admin. Code R 408.30544b).",
+   "keywords": [
+    "fire separation distance",
+    "5 feet",
+    "1-hour wall",
+    "eave projection",
+    "2 feet",
+    "IRC"
+   ]
+  },
+  {
+   "id": "G5-32",
+   "topic": "Residential code",
+   "trade": "gc",
+   "state": null,
+   "source": "IRC 2021 Table R302.1(1)",
+   "fact": "For homes without sprinklers (2021 IRC), wall openings such as windows and doors are not allowed where the fire separation distance is less than 3 ft, are limited to 25 percent of the wall area from 3 ft to under 5 ft, and are unlimited at 5 ft or more. Penetrations closer than 3 ft must be protected per R302.4.",
+   "status": "verified",
+   "note": "Confirmed by Pierce County WA 2021 code bulletin and the Michigan Residential Code table.",
+   "keywords": [
+    "openings near lot line",
+    "25 percent",
+    "3 feet",
+    "5 feet",
+    "fire separation distance",
+    "IRC"
+   ]
+  },
+  {
+   "id": "G5-33",
+   "topic": "Residential code",
+   "trade": "gc",
+   "state": null,
+   "source": "IRC 2021 R403.1.1",
+   "fact": "IRC concrete and masonry footings must be at least 12 in wide and 6 in thick (larger where Tables R403.1(1)-(3) require). The footing must project at least 2 in beyond the face of the foundation wall but not more than the footing's thickness.",
+   "status": "verified",
+   "note": "Confirmed by a 2021 IRC footing and foundation inspection guide (MyBuildingPermit).",
+   "keywords": [
+    "footing size",
+    "12 inches wide",
+    "6 inches thick",
+    "footing projection",
+    "2 inches",
+    "IRC"
+   ]
+  },
+  {
+   "id": "G5-34",
+   "topic": "Site work & concrete",
+   "trade": "gc",
+   "state": null,
+   "source": "IRC 2021 Table R402.2",
+   "fact": "IRC minimum concrete strengths: 2,500 psi for basement walls, foundations and interior slabs not exposed to weather; up to 3,000 psi for walls exposed to weather; and up to 3,500 psi for porches, steps and garage floor slabs in severe weathering areas. Exposed concrete in moderate and severe weathering areas must be air-entrained to 5-7 percent.",
+   "status": "verified",
+   "note": "Table text confirmed in a Penn State PHRC handout (2009 IRC) and the 3,000 psi / 5-7% air row confirmed in a 2021 IRC inspection guide; the table has not changed in later editions.",
+   "keywords": [
+    "concrete strength",
+    "2500 psi",
+    "3000 psi",
+    "3500 psi",
+    "air entrainment",
+    "garage slab",
+    "IRC"
+   ]
+  },
+  {
+   "id": "G5-35",
+   "topic": "Residential code",
+   "trade": "gc",
+   "state": null,
+   "source": "IRC 2021 R404.1.6",
+   "fact": "IRC concrete and masonry foundation walls must extend at least 6 in above the finished grade next to the foundation (4 in where masonry veneer is used).",
+   "status": "verified",
+   "note": "6 in confirmed by a 2021 IRC inspection guide; the 4 in masonry-veneer allowance is from the code text as commonly published.",
+   "keywords": [
+    "foundation height above grade",
+    "6 inches",
+    "4 inches",
+    "masonry veneer",
+    "IRC"
+   ]
+  },
+  {
+   "id": "G5-36",
+   "topic": "Wood framing",
+   "trade": "gc",
+   "state": null,
+   "source": "IRC 2021 R602.6",
+   "fact": "Studs in exterior or bearing walls may be notched no more than 25 percent of their width; studs in nonbearing partitions up to 40 percent. Bored holes may be up to 60 percent of the stud width with the hole edge at least 5/8 in from the stud edge, but bearing-wall studs bored over 40 percent must be doubled, with no more than two successive doubled studs bored.",
+   "status": "verified",
+   "note": "Limits confirmed by Blaine MN and Scott County MN framing handouts; they are unchanged in the 2021 IRC.",
+   "keywords": [
+    "stud notching",
+    "25 percent",
+    "40 percent",
+    "60 percent",
+    "5/8 inch",
+    "bored holes",
+    "IRC"
+   ]
+  },
+  {
+   "id": "G5-37",
+   "topic": "Wood framing",
+   "trade": "gc",
+   "state": null,
+   "source": "IRC 2021 R602.6.1",
+   "fact": "If plumbing or ductwork requires cutting, drilling or notching more than 50 percent of the top plate width in an exterior or bearing wall, a galvanized metal tie at least 0.054 in thick (16 ga) and 1-1/2 in wide must be fastened across the cut with at least eight 10d nails on each side, extending at least 6 in past the opening.",
+   "status": "verified",
+   "note": "Confirmed by a Blaine MN framing handout; same rule in the 2021 IRC.",
+   "keywords": [
+    "top plate notch",
+    "50 percent",
+    "16 gauge strap",
+    "eight 10d nails",
+    "metal tie",
+    "IRC"
+   ]
+  },
+  {
+   "id": "G5-38",
+   "topic": "Residential code",
+   "trade": "gc",
+   "state": null,
+   "source": "IRC 2021 R311.2",
+   "fact": "Each dwelling needs at least one egress door: a side-hinged door with a net clear width of at least 32 in (measured with the door open 90 degrees) and a clear height of at least 78 in, readily openable from inside without a key, special knowledge or effort. Other exterior doors do not have to meet these sizes.",
+   "status": "verified",
+   "note": "Confirmed by Montana DLI 2021 IRC means of egress training.",
+   "keywords": [
+    "egress door",
+    "32 inches",
+    "78 inches",
+    "side-hinged",
+    "dwelling exit",
+    "IRC"
+   ]
+  },
+  {
+   "id": "G5-39",
+   "topic": "Residential code",
+   "trade": "gc",
+   "state": null,
+   "source": "IRC 2021 R311.3; R311.3.1",
+   "fact": "At the required egress door, the inside floor or landing may be no more than 1-1/2 in below the top of the threshold, and the outside landing may be up to 7-3/4 in below the threshold if the door does not swing over it. Exterior landings may slope no more than 1/4 in per foot (2 percent).",
+   "status": "verified",
+   "note": "Confirmed by Montana DLI 2021 IRC means of egress training.",
+   "keywords": [
+    "threshold height",
+    "1-1/2 inch",
+    "7-3/4 inch",
+    "exterior landing",
+    "egress door",
+    "IRC"
+   ]
+  },
+  {
+   "id": "G5-40",
+   "topic": "Residential code",
+   "trade": "gc",
+   "state": null,
+   "source": "IRC 2021 R311.6; R305.1",
+   "fact": "Hallways in a dwelling must be at least 3 ft wide clear and have a ceiling height of at least 7 ft.",
+   "status": "verified",
+   "note": "Confirmed by Montana DLI 2021 IRC training and an ICC inspection guide sample.",
+   "keywords": [
+    "hallway width",
+    "3 feet",
+    "36 inches",
+    "ceiling height",
+    "IRC"
+   ]
+  },
+  {
+   "id": "G5-41",
+   "topic": "Residential code",
+   "trade": "gc",
+   "state": null,
+   "source": "IRC 2021 R311.8",
+   "fact": "IRC ramps may slope no more than 1 in 12 (8.33 percent), or 1 in 8 where that is technically infeasible because of site limits. Ramps need landings at least 36 in long at the top and bottom, and a handrail on at least one side when the slope is steeper than 1 in 12.",
+   "status": "verified",
+   "note": "Confirmed by Montana DLI 2021 IRC means of egress training.",
+   "keywords": [
+    "residential ramp",
+    "1:12",
+    "1:8",
+    "ramp landing",
+    "36 inches",
+    "IRC"
+   ]
+  },
+  {
+   "id": "G5-42",
+   "topic": "Residential code",
+   "trade": "gc",
+   "state": null,
+   "source": "IRC 2021 R303.1",
+   "fact": "IRC habitable rooms need glazing equal to at least 8 percent of the floor area for natural light and openable area of at least 4 percent of the floor area for natural ventilation. Artificial light averaging 6 footcandles and whole-house mechanical ventilation can be used instead.",
+   "status": "verified",
+   "note": "Confirmed by an ICC inspection guide sample (earlier edition) and unchanged in the 2021 IRC; the 2021 IRC mechanical ventilation reference is Section M1505.",
+   "keywords": [
+    "natural light",
+    "8 percent",
+    "ventilation",
+    "4 percent",
+    "habitable room",
+    "IRC"
+   ]
+  },
+  {
+   "id": "G5-43",
+   "topic": "Residential code",
+   "trade": "gc",
+   "state": null,
+   "source": "IRC 2021 R303.3; Table M1505.4.4",
+   "fact": "A bathroom needs at least 3 sq ft of glazing, half of it openable, unless it has artificial light and a local exhaust fan of at least 50 cfm intermittent or 20 cfm continuous, vented directly to the outdoors.",
+   "status": "verified",
+   "note": "Confirmed by an ICC inspection guide sample (earlier edition, table then numbered M1507.4); same values in the 2021 IRC.",
+   "keywords": [
+    "bathroom exhaust",
+    "50 cfm",
+    "20 cfm",
+    "3 sq ft window",
+    "bath fan",
+    "IRC"
+   ]
+  },
+  {
+   "id": "G5-44",
+   "topic": "Residential code",
+   "trade": "gc",
+   "state": null,
+   "source": "IRC 2021 R304.1; R304.2; R304.3",
+   "fact": "IRC habitable rooms (other than kitchens) must have at least 70 sq ft of floor area and be at least 7 ft in every horizontal direction. Floor area under a sloped ceiling lower than 5 ft does not count toward the required area.",
+   "status": "verified",
+   "note": "Confirmed by an ICC inspection guide sample; same in the 2021 IRC.",
+   "keywords": [
+    "minimum room size",
+    "70 sq ft",
+    "7 feet",
+    "habitable room",
+    "sloped ceiling",
+    "IRC"
+   ]
+  },
+  {
+   "id": "G5-45",
+   "topic": "Residential code",
+   "trade": "gc",
+   "state": null,
+   "source": "IRC 2021 R305.1",
+   "fact": "IRC ceiling heights: at least 7 ft in habitable spaces, hallways and basement areas containing them, and at least 6 ft 8 in in bathrooms, toilet rooms and laundry rooms. Beams, ducts and pipes in basements may project down to 6 ft 4 in, and a shower needs 6 ft 8 in over a 30 x 30 in area at the showerhead.",
+   "status": "verified",
+   "note": "Confirmed by an ICC inspection guide sample and Montana DLI 2021 IRC training.",
+   "keywords": [
+    "ceiling height",
+    "7 feet",
+    "6 ft 8 in",
+    "6 ft 4 in",
+    "basement beam",
+    "IRC"
+   ]
+  },
+  {
+   "id": "G5-46",
+   "topic": "Residential code",
+   "trade": "gc",
+   "state": null,
+   "source": "IRC 2021 R307.1 (Figure R307.1)",
+   "fact": "IRC fixture clearances: at least 21 in clear in front of a water closet and lavatory, at least 15 in from the water closet centerline to a side wall or obstruction, showers at least 30 x 30 in inside, and 24 in clear in front of the shower opening.",
+   "status": "verified",
+   "note": "Confirmed by an ICC inspection guide sample; same figure in the 2021 IRC.",
+   "keywords": [
+    "toilet clearance",
+    "21 inches",
+    "15 inches",
+    "shower 30 x 30",
+    "bathroom layout",
+    "IRC"
+   ]
+  },
+  {
+   "id": "G5-47",
+   "topic": "Residential code",
+   "trade": "gc",
+   "state": null,
+   "source": "IRC 2021 R303.7",
+   "fact": "Interior stairways must be lit to at least 1 footcandle at the treads and landings, and where a stair has six or more risers a wall switch is required at each floor level unless the light is on continuously or automatically controlled.",
+   "status": "verified",
+   "note": "Confirmed by Montana DLI 2021 IRC training and an ICC inspection guide sample.",
+   "keywords": [
+    "stair lighting",
+    "1 footcandle",
+    "six risers",
+    "light switch",
+    "IRC"
+   ]
+  },
+  {
+   "id": "G5-48",
+   "topic": "Building code (IBC)",
+   "trade": "gc",
+   "state": null,
+   "source": "IBC 2021 303.1.1; 303.1.2",
+   "fact": "Under the 2021 IBC, a building or tenant space used for assembly with fewer than 50 occupants is classified as Group B. An assembly room accessory to another occupancy is treated as Group B or part of the main occupancy if it has fewer than 50 occupants or is less than 750 sq ft.",
+   "status": "verified",
+   "note": "Confirmed in the 2021 Seattle Building Code Chapter 3 (2021 IBC text with marked local amendments; these sections unamended).",
+   "keywords": [
+    "small assembly",
+    "50 occupants",
+    "750 sq ft",
+    "Group B",
+    "occupancy classification",
+    "IBC"
+   ]
+  },
+  {
+   "id": "G5-49",
+   "topic": "Building code (IBC)",
+   "trade": "gc",
+   "state": null,
+   "source": "IBC 2021 303.2-303.6",
+   "fact": "IBC assembly subgroups: A-1 fixed-seat performance spaces (theaters, concert halls); A-2 food and drink (restaurants, bars, banquet halls); A-3 worship, recreation and similar (churches, libraries, museums, gyms without spectator seating); A-4 indoor sporting events with spectator seating (arenas, indoor pools, rinks); A-5 outdoor viewing (stadiums, grandstands, bleachers).",
+   "status": "verified",
+   "note": "Confirmed in the 2021 Seattle Building Code Chapter 3 (2021 IBC base).",
+   "keywords": [
+    "assembly occupancy",
+    "A-1",
+    "A-2",
+    "A-3",
+    "A-4",
+    "A-5",
+    "IBC"
+   ]
+  },
+  {
+   "id": "G5-50",
+   "topic": "Building code (IBC)",
+   "trade": "gc",
+   "state": null,
+   "source": "IBC 2021 304.1; 305.1; 305.2",
+   "fact": "Under the IBC, Group E covers educational use by six or more people at one time through the 12th grade, plus day care for more than five children older than 2-1/2 years for less than 24 hours a day. Training and education above the 12th grade (colleges, tutoring) is Group B, along with offices, banks and outpatient clinics.",
+   "status": "verified",
+   "note": "Confirmed in the 2021 Seattle Building Code Chapter 3 (2021 IBC base).",
+   "keywords": [
+    "Group E",
+    "educational occupancy",
+    "12th grade",
+    "day care",
+    "Group B",
+    "IBC"
+   ]
+  },
+  {
+   "id": "G5-51",
+   "topic": "Building code (IBC)",
+   "trade": "gc",
+   "state": null,
+   "source": "IBC 2021 308.2; 310.2-310.5",
+   "fact": "IBC residential groups: R-1 is transient lodging (hotels, motels); R-2 has more than two dwelling units or permanent sleeping units (apartments, dormitories); R-3 covers buildings with no more than two dwelling units and other small residential uses; R-4 is supervised custodial care for more than 5 but not more than 16 residents. Custodial care for more than 16 residents is Group I-1.",
+   "status": "verified",
+   "note": "Confirmed in the 2021 Seattle Building Code Chapter 3 (2021 IBC base).",
+   "keywords": [
+    "Group R",
+    "R-1",
+    "R-2",
+    "R-3",
+    "R-4",
+    "I-1",
+    "IBC"
+   ]
+  },
+  {
+   "id": "G5-52",
+   "topic": "Building code (IBC)",
+   "trade": "gc",
+   "state": null,
+   "source": "IBC 2021 306.2; 306.3; 311.2; 311.3; 312.1",
+   "fact": "Under the IBC, F-1 and S-1 are moderate-hazard factory and storage uses (furniture, lumber, repair garages), while F-2 and S-2 are low-hazard uses involving noncombustible materials (metal fabrication, glass, frozen foods, parking garages). Group U covers accessory structures such as private garages, carports, sheds, barns and fences over 7 ft tall.",
+   "status": "verified",
+   "note": "Confirmed in the 2021 Seattle Building Code Chapter 3 (2021 IBC base).",
+   "keywords": [
+    "F-1",
+    "F-2",
+    "S-1",
+    "S-2",
+    "Group U",
+    "occupancy",
+    "IBC"
+   ]
+  },
+  {
+   "id": "G5-53",
+   "topic": "Building code (IBC)",
+   "trade": "gc",
+   "state": null,
+   "source": "IBC 2021 Table 601",
+   "fact": "IBC Table 601 for Type I construction: Type IA needs 3-hour primary structural frame and bearing walls, 2-hour floors and 1-1/2-hour roof construction; Type IB needs 2-hour frame and bearing walls, 2-hour floors and 1-hour roof construction.",
+   "status": "verified",
+   "note": "Confirmed in the 2021 Seattle Building Code Chapter 6 (Table 601 unamended).",
+   "keywords": [
+    "Table 601",
+    "Type IA",
+    "Type IB",
+    "fire-resistance rating",
+    "construction type",
+    "IBC"
+   ]
+  },
+  {
+   "id": "G5-54",
+   "topic": "Building code (IBC)",
+   "trade": "gc",
+   "state": null,
+   "source": "IBC 2021 Table 601",
+   "fact": "IBC Table 601: Types IIA, IIIA and VA ('A' or protected types) need 1-hour structural frame, floors and roof construction, while Types IIB and VB need no rating. Types IIIA and IIIB both require 2-hour exterior bearing walls, and Type IV-HT uses heavy timber sizes with 2-hour exterior bearing walls.",
+   "status": "verified",
+   "note": "Confirmed in the 2021 Seattle Building Code Chapter 6 (Table 601 unamended).",
+   "keywords": [
+    "Table 601",
+    "Type V",
+    "Type III",
+    "protected construction",
+    "heavy timber",
+    "IBC"
+   ]
+  },
+  {
+   "id": "G5-55",
+   "topic": "Building code (IBC)",
+   "trade": "gc",
+   "state": null,
+   "source": "IBC 2021 Table 1004.5",
+   "fact": "IBC 2021 occupant load factors (sq ft per person): business 150 gross, mercantile 60 gross, residential 200 gross, industrial 100 gross, warehouses 500 gross, and accessory storage or mechanical rooms 300 gross. Divide the floor area by the factor and round up.",
+   "status": "verified",
+   "note": "Confirmed in WAC 51-50-1004 (Washington's adoption of the 2021 IBC). The business factor was 100 gross before the 2018 IBC.",
+   "keywords": [
+    "occupant load factor",
+    "Table 1004.5",
+    "business 150",
+    "mercantile 60",
+    "warehouse 500",
+    "IBC"
+   ]
+  },
+  {
+   "id": "G5-56",
+   "topic": "Building code (IBC)",
+   "trade": "gc",
+   "state": null,
+   "source": "IBC 2021 Table 1004.5",
+   "fact": "IBC 2021 occupant load factors for assembly without fixed seats: 7 net sq ft per person for concentrated use (chairs only), 5 net for standing space, and 15 net for unconcentrated use (tables and chairs). Classrooms use 20 net, vocational shops 50 net, exercise rooms 50 gross and day care 35 net.",
+   "status": "verified",
+   "note": "Confirmed in WAC 51-50-1004 (Washington's adoption of the 2021 IBC).",
+   "keywords": [
+    "assembly occupant load",
+    "7 net",
+    "15 net",
+    "5 net standing",
+    "classroom 20 net",
+    "IBC"
+   ]
+  },
+  {
+   "id": "G5-57",
+   "topic": "Building code (IBC)",
+   "trade": "gc",
+   "state": null,
+   "source": "IBC 2021 Table 1017.2",
+   "fact": "IBC 2021 maximum exit access travel distance: Groups A, E, F-1, M, R and S-1 are 200 ft without sprinklers and 250 ft with sprinklers; Group B is 200 ft without and 300 ft with sprinklers; Groups F-2, S-2 and U are 300 ft without and 400 ft with sprinklers.",
+   "status": "verified",
+   "note": "Confirmed in WAC 51-50-10170 (Washington's adoption of the 2021 IBC).",
+   "keywords": [
+    "travel distance",
+    "Table 1017.2",
+    "200 feet",
+    "250 feet",
+    "300 feet",
+    "sprinklered",
+    "IBC"
+   ]
+  },
+  {
+   "id": "G5-58",
+   "topic": "Building code (IBC)",
+   "trade": "gc",
+   "state": null,
+   "source": "IBC 2021 1006.3.3 (Table 1006.3.3); 1006.2.1.1",
+   "fact": "Under the 2021 IBC, each story needs at least 2 exits for an occupant load of 1 to 500, 3 exits for 501 to 1,000, and 4 exits for more than 1,000.",
+   "status": "verified",
+   "note": "Confirmed in the 2021 Seattle Building Code Chapter 10 and WAC 51-50-1006.",
+   "keywords": [
+    "number of exits",
+    "500 occupants",
+    "1000 occupants",
+    "Table 1006.3.3",
+    "IBC"
+   ]
+  },
+  {
+   "id": "G5-59",
+   "topic": "Building code (IBC)",
+   "trade": "gc",
+   "state": null,
+   "source": "IBC 2021 Table 1006.2.1",
+   "fact": "A space may have just one exit or exit access doorway under the 2021 IBC only if its occupant load and common path of travel stay within Table 1006.2.1. For Groups A, E and M the limit is 49 occupants and a 75-ft common path; for Group B it is 49 occupants and 100 ft (75 ft without sprinklers when more than 30 occupants).",
+   "status": "verified",
+   "note": "Confirmed in WAC 51-50-1006 (2021 IBC table).",
+   "keywords": [
+    "one exit",
+    "common path of travel",
+    "49 occupants",
+    "75 feet",
+    "100 feet",
+    "IBC"
+   ]
+  },
+  {
+   "id": "G5-60",
+   "topic": "Building code (IBC)",
+   "trade": "gc",
+   "state": null,
+   "source": "IBC 2021 1007.1.1",
+   "fact": "When two exits or exit access doorways are required, they must be separated by at least one-half of the maximum overall diagonal of the building or area served, or one-third of the diagonal in a building with a complete automatic sprinkler system.",
+   "status": "verified",
+   "note": "Confirmed in the 2021 Seattle Building Code Chapter 10.",
+   "keywords": [
+    "exit separation",
+    "one-half diagonal",
+    "one-third diagonal",
+    "remoteness",
+    "IBC"
+   ]
+  },
+  {
+   "id": "G5-61",
+   "topic": "Building code (IBC)",
+   "trade": "gc",
+   "state": null,
+   "source": "IBC 2021 1005.3.1; 1005.3.2",
+   "fact": "IBC egress width capacity is 0.3 in per occupant for stairways and 0.2 in per occupant for other egress components such as doors and corridors. In buildings (other than H and I-2) with full sprinklers and an emergency voice/alarm system, the factors drop to 0.2 in and 0.15 in.",
+   "status": "verified",
+   "note": "Confirmed in the 2021 Seattle Building Code Chapter 10.",
+   "keywords": [
+    "egress width",
+    "0.3 inch per occupant",
+    "0.2 inch",
+    "stair capacity",
+    "IBC"
+   ]
+  },
+  {
+   "id": "G5-62",
+   "topic": "Building code (IBC)",
+   "trade": "gc",
+   "state": null,
+   "source": "IBC 2021 1010.1.1; 1010.1.2.1",
+   "fact": "IBC egress doors need a clear opening width of at least 32 in and a clear height of at least 80 in. Doors must swing in the direction of egress travel when they serve a room or area with an occupant load of 50 or more, or a Group H occupancy.",
+   "status": "verified",
+   "note": "Confirmed in the 2021 Seattle Building Code Chapter 10.",
+   "keywords": [
+    "door width",
+    "32 inches",
+    "80 inches",
+    "door swing",
+    "50 occupants",
+    "IBC"
+   ]
+  },
+  {
+   "id": "G5-63",
+   "topic": "Building code (IBC)",
+   "trade": "gc",
+   "state": null,
+   "source": "IBC 2021 Table 1020.3",
+   "fact": "IBC 2021 minimum corridor widths: 24 in for access to mechanical, plumbing or electrical equipment; 36 in with an occupant load under 50 or inside a dwelling unit; 72 in in Group E corridors serving 100 or more occupants; and 44 in in most other cases.",
+   "status": "verified",
+   "note": "Confirmed by Building Code Trainer (2021 IBC Table 1020.3) and the CBC Table 1020.3 text.",
+   "keywords": [
+    "corridor width",
+    "44 inches",
+    "36 inches",
+    "72 inches",
+    "Table 1020.3",
+    "IBC"
+   ]
+  },
+  {
+   "id": "G5-64",
+   "topic": "Building code (IBC)",
+   "trade": "gc",
+   "state": null,
+   "source": "IBC 2021 1020.5",
+   "fact": "Dead-end corridors are limited to 20 ft under the IBC. The limit is 50 ft in fully sprinklered Group B, E, F, I-1, M, R-1, R-2, R-4, S and U buildings, and there is no limit when the dead end is shorter than 2.5 times its least width.",
+   "status": "verified",
+   "note": "Confirmed by the CBC 1020.5 text (based on the IBC) and consistent with the 2021 IBC.",
+   "keywords": [
+    "dead end corridor",
+    "20 feet",
+    "50 feet",
+    "sprinklered",
+    "2.5 times width",
+    "IBC"
+   ]
+  },
+  {
+   "id": "G5-65",
+   "topic": "Fire protection",
+   "trade": "gc",
+   "state": null,
+   "source": "IBC 2021 903.2.1.1-903.2.1.4",
+   "fact": "Under the 2021 IBC, Group A-2 needs sprinklers when the fire area exceeds 5,000 sq ft, the occupant load is 100 or more, or the fire area is on a floor other than the exit discharge level. Groups A-1, A-3 and A-4 use 12,000 sq ft or an occupant load of 300 or more.",
+   "status": "verified",
+   "note": "Confirmed in the 2021 Seattle Building Code Chapter 9 (model triggers shown).",
+   "keywords": [
+    "sprinkler threshold",
+    "A-2",
+    "5000 sq ft",
+    "100 occupants",
+    "12000 sq ft",
+    "300 occupants",
+    "IBC"
+   ]
+  },
+  {
+   "id": "G5-66",
+   "topic": "Fire protection",
+   "trade": "gc",
+   "state": null,
+   "source": "IBC 2021 903.2.4; 903.2.7; 903.2.9",
+   "fact": "Under the 2021 IBC, buildings with Group F-1, M or S-1 occupancies need sprinklers throughout when the fire area exceeds 12,000 sq ft, the fire area is more than three stories above grade plane, or the combined fire area on all floors exceeds 24,000 sq ft.",
+   "status": "verified",
+   "note": "Confirmed in the 2021 Seattle Building Code Chapter 9 (model triggers).",
+   "keywords": [
+    "sprinkler threshold",
+    "F-1",
+    "Group M",
+    "S-1",
+    "12000 sq ft",
+    "24000 sq ft",
+    "IBC"
+   ]
+  },
+  {
+   "id": "G5-67",
+   "topic": "Fire protection",
+   "trade": "gc",
+   "state": null,
+   "source": "IBC 2021 903.2.8",
+   "fact": "The IBC requires an automatic sprinkler system throughout every building that contains a Group R fire area, which includes apartments (R-2) and hotels (R-1).",
+   "status": "verified",
+   "note": "Confirmed in the 2021 Seattle Building Code Chapter 9.",
+   "keywords": [
+    "Group R sprinklers",
+    "apartments",
+    "hotel",
+    "903.2.8",
+    "IBC"
+   ]
+  },
+  {
+   "id": "G5-68",
+   "topic": "Fire protection",
+   "trade": "gc",
+   "state": null,
+   "source": "IBC 2021 903.2.3",
+   "fact": "The model 2021 IBC requires sprinklers in Group E when the fire area exceeds 12,000 sq ft, the occupant load is 300 or more, or the Group E fire area is on a floor other than a level of exit discharge.",
+   "status": "verified",
+   "note": "Model text confirmed from the struck-through model language in the 2021 Seattle Building Code (Washington amends this to 51 occupants).",
+   "keywords": [
+    "school sprinklers",
+    "Group E",
+    "12000 sq ft",
+    "300 occupants",
+    "IBC"
+   ]
+  },
+  {
+   "id": "G5-69",
+   "topic": "Fire protection",
+   "trade": "gc",
+   "state": null,
+   "source": "IBC 2021 903.2.10; 903.2.11.3",
+   "fact": "Under the 2021 IBC, enclosed parking garages need sprinklers when the fire area exceeds 12,000 sq ft or the garage is under another occupancy (except R-3), and open parking garages when the fire area exceeds 48,000 sq ft. Any building with a story holding 30 or more occupants located 55 ft or more above the lowest fire department vehicle access needs sprinklers throughout.",
+   "status": "verified",
+   "note": "Confirmed in the 2021 Seattle Building Code Chapter 9.",
+   "keywords": [
+    "parking garage sprinkler",
+    "48000 sq ft",
+    "55 feet",
+    "fire department access",
+    "IBC"
+   ]
+  },
+  {
+   "id": "G5-70",
+   "topic": "Fire protection",
+   "trade": "gc",
+   "state": null,
+   "source": "IBC 2021 907.2.1; 907.2.2",
+   "fact": "Under the 2021 IBC, a manual fire alarm system is required in Group A when the occupant load is 300 or more (or more than 100 above or below the lowest exit discharge level), and in Group B when the combined occupant load of all floors is 500 or more (or more than 100 above or below the lowest exit discharge level).",
+   "status": "verified",
+   "note": "Confirmed in the 2021 Seattle Building Code Chapter 9. Sprinklered buildings can be exempt when waterflow activates the notification appliances.",
+   "keywords": [
+    "fire alarm",
+    "manual pull station",
+    "300 occupants",
+    "500 occupants",
+    "Group B",
+    "IBC"
+   ]
+  },
+  {
+   "id": "G5-71",
+   "topic": "Accessibility",
+   "trade": "gc",
+   "state": null,
+   "source": "2010 ADA Standards 403.5.1",
+   "fact": "An accessible route must have a continuous clear width of at least 36 in. It may narrow to 32 in at points such as doorways, but only for a length of 24 in or less.",
+   "status": "verified",
+   "note": "Confirmed by the U.S. Access Board guide to ADA Standards Chapter 4 (accessible routes).",
+   "keywords": [
+    "accessible route width",
+    "36 inches",
+    "32 inches",
+    "24 inches",
+    "ADA",
+    "clear width"
+   ]
+  },
+  {
+   "id": "G5-72",
+   "topic": "Accessibility",
+   "trade": "gc",
+   "state": null,
+   "source": "2010 ADA Standards 403.5.3",
+   "fact": "Where an accessible route is less than 60 in wide, passing spaces at least 60 x 60 in (or a T-shaped space with 48-in arms) are required at intervals of no more than 200 ft.",
+   "status": "verified",
+   "note": "Confirmed by the U.S. Access Board guide to ADA Standards Chapter 4.",
+   "keywords": [
+    "passing space",
+    "200 feet",
+    "60 x 60",
+    "accessible route",
+    "ADA"
+   ]
+  },
+  {
+   "id": "G5-73",
+   "topic": "Accessibility",
+   "trade": "gc",
+   "state": null,
+   "source": "2010 ADA Standards 304.3; 305",
+   "fact": "A wheelchair turning space is either a 60-in diameter circle or a T-shaped space within a 60-in square with arms and base at least 36 in wide. A clear floor space for one stationary wheelchair is at least 30 x 48 in, for either a forward or a parallel approach.",
+   "status": "verified",
+   "note": "Confirmed by the U.S. Access Board guide to ADA Standards Chapter 3 (clear floor space and turning space).",
+   "keywords": [
+    "turning space",
+    "60 inch circle",
+    "T-shaped",
+    "clear floor space",
+    "30 x 48",
+    "ADA"
+   ]
+  },
+  {
+   "id": "G5-74",
+   "topic": "Accessibility",
+   "trade": "gc",
+   "state": null,
+   "source": "2010 ADA Standards 308.2; 308.3",
+   "fact": "Accessible operable parts (switches, controls, dispensers) must be within an unobstructed reach range of 15 in minimum to 48 in maximum above the floor, for both forward and side reach. Reaching over an obstruction lowers the maximum, for example to 44 in for a forward reach more than 20 in deep.",
+   "status": "verified",
+   "note": "Confirmed by the U.S. Access Board guide to ADA Standards Chapter 3 (operable parts).",
+   "keywords": [
+    "reach range",
+    "15 inches",
+    "48 inches",
+    "forward reach",
+    "side reach",
+    "ADA"
+   ]
+  },
+  {
+   "id": "G5-75",
+   "topic": "Accessibility",
+   "trade": "gc",
+   "state": null,
+   "source": "2010 ADA Standards 405.5; 405.7",
+   "fact": "Accessible ramp runs must be at least 36 in clear between handrails. Ramp landings must be at least as wide as the ramp run and at least 60 in long, and a landing where the ramp changes direction must be at least 60 x 60 in.",
+   "status": "verified",
+   "note": "Confirmed by the U.S. Access Board guide to ADA Standards Chapter 4 (ramps and curb ramps).",
+   "keywords": [
+    "ramp width",
+    "36 inches",
+    "ramp landing",
+    "60 inches",
+    "change of direction",
+    "ADA"
+   ]
+  },
+  {
+   "id": "G5-76",
+   "topic": "Accessibility",
+   "trade": "gc",
+   "state": null,
+   "source": "2010 ADA Standards 406.1; 406.3; 406.4",
+   "fact": "Curb ramps may have a running slope of no more than 1:12, flared sides no steeper than 1:10, and a top landing at least 36 in deep.",
+   "status": "verified",
+   "note": "Confirmed by the U.S. Access Board guide to ADA Standards Chapter 4 (ramps and curb ramps).",
+   "keywords": [
+    "curb ramp",
+    "1:12",
+    "flared sides 1:10",
+    "36 inch landing",
+    "ADA"
+   ]
+  },
+  {
+   "id": "G5-77",
+   "topic": "Accessibility",
+   "trade": "gc",
+   "state": null,
+   "source": "2010 ADA Standards Table 208.2",
+   "fact": "Minimum accessible parking spaces under the ADA: 1 for 1-25 total spaces, 2 for 26-50, 3 for 51-75, 4 for 76-100, 5 for 101-150, 6 for 151-200, 7 for 201-300, 8 for 301-400, 9 for 401-500, 2 percent of the total for 501-1,000, and 20 plus 1 per 100 over 1,000.",
+   "status": "verified",
+   "note": "Confirmed by ADA.gov parking guidance (2010 ADA Standards).",
+   "keywords": [
+    "accessible parking count",
+    "Table 208.2",
+    "handicap parking",
+    "2 percent",
+    "ADA"
+   ]
+  },
+  {
+   "id": "G5-78",
+   "topic": "Accessibility",
+   "trade": "gc",
+   "state": null,
+   "source": "2010 ADA Standards 208.2.4; 502.5",
+   "fact": "At least one of every six accessible parking spaces (or fraction of six) must be van accessible. Van spaces, their access aisles and the vehicle route to them need at least 98 in of vertical clearance.",
+   "status": "verified",
+   "note": "Confirmed by ADA.gov parking guidance (2010 ADA Standards).",
+   "keywords": [
+    "van accessible",
+    "one in six",
+    "98 inches",
+    "vertical clearance",
+    "ADA parking"
+   ]
+  },
+  {
+   "id": "G5-79",
+   "topic": "Site work & concrete",
+   "trade": "gc",
+   "state": null,
+   "source": "ASTM C143",
+   "fact": "In the slump test (ASTM C143), the cone is filled in three layers and each layer is rodded 25 times. The cone is then lifted straight up about 12 in in 5 seconds (plus or minus 2), the whole test must be finished within 2-1/2 minutes, and slump is reported to the nearest 1/4 in.",
+   "status": "verified",
+   "note": "Confirmed by the FDOT ASTM C143 procedure checklist.",
+   "keywords": [
+    "slump test",
+    "three layers",
+    "25 strokes",
+    "2-1/2 minutes",
+    "ASTM C143",
+    "concrete testing"
+   ]
+  },
+  {
+   "id": "G5-80",
+   "topic": "Site work & concrete",
+   "trade": "gc",
+   "state": null,
+   "source": "ACI 318-19 26.12.1.1; 19.2.1.3",
+   "fact": "Under ACI 318, one strength test is the average strength of at least two 6 x 12 in cylinders or at least three 4 x 8 in cylinders made from the same sample, normally tested at 28 days unless the construction documents say otherwise.",
+   "status": "verified",
+   "note": "Confirmed by the ACI FAQ on strength testing and NRMCA CIP 9.",
+   "keywords": [
+    "strength test",
+    "cylinders",
+    "6 x 12",
+    "4 x 8",
+    "28 days",
+    "ACI 318"
+   ]
+  },
+  {
+   "id": "G5-81",
+   "topic": "Site work & concrete",
+   "trade": "gc",
+   "state": null,
+   "source": "ACI 318-19 26.12.3.1",
+   "fact": "Concrete strength is acceptable under ACI 318 when every average of three consecutive strength tests equals or exceeds the specified strength (f'c), and no single test falls more than 500 psi below f'c when f'c is 5,000 psi or less (or more than 10 percent below f'c when f'c is over 5,000 psi).",
+   "status": "verified",
+   "note": "Confirmed by the ACI FAQ (citing ACI 318-19 26.12.3.1) and NRMCA CIP 9.",
+   "keywords": [
+    "concrete acceptance",
+    "three consecutive tests",
+    "500 psi",
+    "f'c",
+    "ACI 318",
+    "low cylinder breaks"
+   ]
+  },
+  {
+   "id": "G5-82",
+   "topic": "Site work & concrete",
+   "trade": "gc",
+   "state": null,
+   "source": "ACI 318-19 26.12.2.1",
+   "fact": "ACI 318 strength tests for each concrete mix are taken at least once a day, at least once for every 150 cubic yards placed, and at least once for every 5,000 sq ft of slab or wall surface placed. If a mix totals less than 50 cubic yards, the building official may waive testing.",
+   "status": "verified",
+   "note": "Confirmed by West Valley City UT building department concrete testing page; consistent with ACI 318-19 26.12.2.1.",
+   "keywords": [
+    "testing frequency",
+    "150 cubic yards",
+    "5000 sq ft",
+    "once per day",
+    "50 cubic yards",
+    "ACI 318"
+   ]
+  },
+  {
+   "id": "G5-83",
+   "topic": "Site work & concrete",
+   "trade": "gc",
+   "state": null,
+   "source": "ASTM C94 (earlier editions); California HCAI PIN 82",
+   "fact": "The traditional ready-mix rule is that concrete must be fully discharged within 1-1/2 hours after water is added or before the drum turns 300 revolutions, whichever comes first. Current ASTM C94 no longer sets these numbers, so the limits now come from the project specifications or the governing agency.",
+   "status": "verified",
+   "note": "Confirmed by California HCAI Policy Intent Notice 82, which notes ASTM C94 dropped the values.",
+   "keywords": [
+    "ready mix time limit",
+    "90 minutes",
+    "300 revolutions",
+    "ASTM C94",
+    "discharge time"
+   ]
+  },
+  {
+   "id": "G5-84",
+   "topic": "Masonry",
+   "trade": "gc",
+   "state": null,
+   "source": "ASTM C270 (property specification)",
+   "fact": "ASTM C270 mortar types and minimum 28-day compressive strengths: Type M 2,500 psi, Type S 1,800 psi, Type N 750 psi and Type O 350 psi. The letters come from the word MaSoNwOrK, in order from strongest to weakest.",
+   "status": "verified",
+   "note": "Confirmed by Quikrete mortar specification guide (M, S, N) and Archtoolbox (all four types).",
+   "keywords": [
+    "mortar types",
+    "Type M",
+    "Type S",
+    "Type N",
+    "Type O",
+    "ASTM C270",
+    "compressive strength"
+   ]
+  },
+  {
+   "id": "G5-85",
+   "topic": "Masonry",
+   "trade": "gc",
+   "state": null,
+   "source": "ASTM C270 guidance; BIA Technical Note 8",
+   "fact": "Typical mortar uses: Type M for below-grade work with heavy loads such as foundations and retaining walls; Type S for below-grade work and where higher flexural bond is needed; Type N for general above-grade exterior and interior work; and Type O for interior non-load-bearing work and some repointing. Standard mortar joints are 3/8 in thick.",
+   "status": "verified",
+   "note": "Confirmed by Archtoolbox mortar guide and Quikrete specification guide.",
+   "keywords": [
+    "mortar selection",
+    "below grade",
+    "Type N general",
+    "3/8 inch joint",
+    "repointing",
+    "masonry"
+   ]
+  },
+  {
+   "id": "G5-86",
+   "topic": "Roofing",
+   "trade": "gc",
+   "state": null,
+   "source": "IRC 2021 R905.1.2",
+   "fact": "Where Table R301.2 shows a history of ice dams at the eaves, the IRC requires an ice barrier of at least two layers of underlayment cemented together or a self-adhering polymer-modified bitumen sheet. It runs from the lowest roof edge to at least 24 in inside the exterior wall line, and on roofs sloped 8:12 or steeper it must also extend at least 36 in up the slope from the eave.",
+   "status": "verified",
+   "note": "Confirmed by City of Bozeman MT 2021 IRC roofing handout and a Grinnell IA (2015 IRC) letter.",
+   "keywords": [
+    "ice barrier",
+    "ice and water shield",
+    "24 inches inside wall",
+    "36 inches",
+    "eave",
+    "IRC"
+   ]
+  },
+  {
+   "id": "G5-87",
+   "topic": "Roofing",
+   "trade": "gc",
+   "state": null,
+   "source": "IRC 2021 R905.2.2",
+   "fact": "Asphalt shingles may be used only on roof slopes of 2:12 or steeper. On slopes from 2:12 up to less than 4:12, a double layer of underlayment is required.",
+   "status": "verified",
+   "note": "Confirmed by Grinnell IA and Goodhue County MN IRC handouts; unchanged in the 2021 IRC.",
+   "keywords": [
+    "asphalt shingle slope",
+    "2:12",
+    "4:12",
+    "double underlayment",
+    "low slope",
+    "IRC"
+   ]
+  },
+  {
+   "id": "G5-88",
+   "topic": "Roofing",
+   "trade": "gc",
+   "state": null,
+   "source": "IRC 2021 R905.2.5; R905.2.6",
+   "fact": "IRC asphalt shingles need at least the manufacturer's number of fasteners, but never fewer than four per strip shingle or two per individual shingle. Roofing nails need at least a 12-gage shank and 3/8-in head and must go at least 3/4 in into the sheathing, or through it if the sheathing is thinner.",
+   "status": "verified",
+   "note": "Nail specs confirmed by Bozeman MT 2021 IRC handout; fastener count confirmed by an LSU AgCenter IRC roofing guide (earlier edition, same rule).",
+   "keywords": [
+    "shingle nails",
+    "four nails per shingle",
+    "12 gage",
+    "3/8 inch head",
+    "3/4 inch penetration",
+    "IRC"
+   ]
+  },
+  {
+   "id": "G5-89",
+   "topic": "Roofing",
+   "trade": "gc",
+   "state": null,
+   "source": "IRC 2021 R908.3",
+   "fact": "Under the 2021 IRC, a roof replacement must remove all existing layers of roof covering down to the roof deck. An existing self-adhered ice barrier membrane may be left in place and covered with a new ice barrier layer.",
+   "status": "verified",
+   "note": "Confirmed by City of Bozeman MT 2021 IRC roofing handout.",
+   "keywords": [
+    "reroof",
+    "tear-off",
+    "roof replacement",
+    "roof deck",
+    "ice barrier",
+    "IRC"
+   ]
+  },
+  {
+   "id": "G5-90",
+   "topic": "Roofing",
+   "trade": "gc",
+   "state": null,
+   "source": "IRC 2021 R908.3.1.1",
+   "fact": "A roof recover (new roofing over an old roof) is not allowed when the existing roof is water-soaked or deteriorated, is slate, clay, cement or asbestos-cement tile, or already has two or more layers of roof covering.",
+   "status": "unverified",
+   "note": "Taken from the IRC R908.3.1.1 text as commonly published; could not reach the 2021 code text to confirm wording.",
+   "keywords": [
+    "roof recover",
+    "two layers",
+    "reroofing",
+    "overlay",
+    "tile roof",
+    "IRC"
+   ]
+  },
+  {
+   "id": "G5-91",
+   "topic": "Estimating",
+   "trade": "gc",
+   "state": null,
+   "source": "Standard roofing estimating practice",
+   "fact": "Roofing is sold and estimated by the square: 1 square covers 100 sq ft of roof. Roof area equals plan (horizontal) area times a slope factor equal to the rafter length per foot of run; for a 6:12 roof the factor is the square root of (6x6 + 12x12) divided by 12, or about 1.118.",
+   "status": "verified",
+   "note": "Standard trade definition and geometry (Pythagorean theorem); no code citation needed.",
+   "keywords": [
+    "roofing square",
+    "100 sq ft",
+    "slope factor",
+    "6:12",
+    "roof area",
+    "estimating"
+   ]
+  },
+  {
+   "id": "G5-92",
+   "topic": "Drywall & finishes",
+   "trade": "gc",
+   "state": null,
+   "source": "IRC 2021 Table R702.3.5",
+   "fact": "For 1/2-in or 5/8-in gypsum board under the IRC, maximum fastener spacing is 7 in for nails and 12 in for screws on ceilings, and 8 in for nails on walls. Wall screws may be 16 in apart when framing is 16 in on center, but 12 in when framing is 24 in on center.",
+   "status": "verified",
+   "note": "Confirmed by City of Richland WA drywall handout reproducing Table R702.3.5.",
+   "keywords": [
+    "drywall screw spacing",
+    "7 inches",
+    "12 inches",
+    "16 inches",
+    "gypsum board",
+    "IRC"
+   ]
+  },
+  {
+   "id": "G5-93",
+   "topic": "Drywall & finishes",
+   "trade": "gc",
+   "state": null,
+   "source": "IRC 2021 Table R702.3.5",
+   "fact": "Under the IRC, 1/2-in gypsum board on ceilings may span framing at 24 in on center only when installed perpendicular to the framing (16 in on center either direction), and 3/8-in board should not be used on ceilings that get a water-based texture.",
+   "status": "verified",
+   "note": "Confirmed by City of Richland WA handout reproducing Table R702.3.5 and its footnote d.",
+   "keywords": [
+    "ceiling drywall",
+    "perpendicular",
+    "24 inches",
+    "3/8 inch board",
+    "texture",
+    "IRC"
+   ]
+  },
+  {
+   "id": "G5-94",
+   "topic": "Drywall & finishes",
+   "trade": "gc",
+   "state": null,
+   "source": "IRC 2021 Table R702.3.5; Table R302.6",
+   "fact": "The 5/8-in Type X gypsum board required on a garage ceiling below habitable rooms is installed perpendicular to framing spaced up to 24 in on center, with nails or drywall screws at 6 in on center (1-7/8 in 6d coated nails or equivalent screws).",
+   "status": "verified",
+   "note": "Confirmed by City of Richland WA handout reproducing Table R702.3.5.",
+   "keywords": [
+    "Type X",
+    "garage ceiling",
+    "6 inch spacing",
+    "5/8 inch",
+    "fire separation",
+    "IRC"
+   ]
+  },
+  {
+   "id": "G5-95",
+   "topic": "Plan reading",
+   "trade": "gc",
+   "state": null,
+   "source": "FEMA/USFA engineer and architect scales guide",
+   "fact": "An architect's scale reads in fractions of an inch per foot (such as 1/8, 1/4, 1/2 or 1-1/2 in = 1 ft) and is used for building plans, elevations and details. An engineer's scale reads in feet per inch (1 in = 10, 20, 30, 40, 50 or 60 ft) and is used for site, road, utility and topographic drawings.",
+   "status": "verified",
+   "note": "Confirmed by the U.S. Fire Administration (FEMA) engineer/architect scales handout.",
+   "keywords": [
+    "architect scale",
+    "engineer scale",
+    "1/4 inch = 1 foot",
+    "1 inch = 20 feet",
+    "site plan",
+    "plan reading"
+   ]
+  },
+  {
+   "id": "G5-96",
+   "topic": "Plan reading",
+   "trade": "gc",
+   "state": null,
+   "source": "U.S. National CAD Standard (Uniform Drawing System) sheet identification",
+   "fact": "Under the U.S. National CAD Standard, a sheet number like A-201 means discipline (A = architectural), sheet type (2 = elevations) and sequence (01). Common discipline letters are G general, C civil, L landscape, S structural, A architectural, P plumbing, M mechanical, E electrical and F fire protection; sheet types are 0 general, 1 plans, 2 elevations, 3 sections, 4 large-scale views, 5 details and 6 schedules and diagrams.",
+   "status": "verified",
+   "note": "Confirmed by Archtoolbox's summary of the U.S. National CAD Standard; firms may vary.",
+   "keywords": [
+    "sheet numbering",
+    "A-201",
+    "discipline designator",
+    "National CAD Standard",
+    "plan reading",
+    "drawing index"
+   ]
+  },
+  {
+   "id": "G5-97",
+   "topic": "Plan reading",
+   "trade": "gc",
+   "state": null,
+   "source": "Standard construction drawing conventions (U.S. National CAD Standard symbols)",
+   "fact": "On construction drawings, a section or detail callout bubble shows the drawing number on top and the sheet number where that drawing appears on the bottom; for example, 3 over A-501 means detail 3 on sheet A-501. The arrow or flag on a section cut shows the direction you are looking.",
+   "status": "unverified",
+   "note": "Common drafting convention; individual offices sometimes arrange callouts differently, so check the sheet legend.",
+   "keywords": [
+    "callout bubble",
+    "section cut",
+    "detail reference",
+    "sheet number",
+    "plan reading"
+   ]
+  },
+  {
+   "id": "G5-98",
+   "topic": "Estimating",
+   "trade": "gc",
+   "state": null,
+   "source": "BIA Technical Note 10 (Dimensioning and Estimating Brick Masonry)",
+   "fact": "A modular brick is specified as 3-5/8 x 2-1/4 x 7-5/8 in (nominal 4 x 2-2/3 x 8 in). Three courses equal 8 in of height, and a wall of modular brick takes about 6.75 brick per sq ft (675 per 100 sq ft) with 3/8-in joints, plus about 5.5 cu ft of mortar per 100 sq ft before waste.",
+   "status": "verified",
+   "note": "Confirmed in Brick Industry Association Technical Note 10. BIA suggests adding 15-25 percent for mortar waste.",
+   "keywords": [
+    "modular brick",
+    "6.75 per sq ft",
+    "brick estimating",
+    "three courses 8 inches",
+    "mortar quantity",
+    "estimating"
+   ]
+  },
+  {
+   "id": "G5-99",
+   "topic": "Estimating",
+   "trade": "gc",
+   "state": null,
+   "source": "Concrete masonry nominal dimensions (8 x 8 x 16 CMU)",
+   "fact": "A standard 8 x 8 x 16 concrete block has a nominal face of 8 x 16 in (actual 7-5/8 x 15-5/8 in plus a 3/8-in joint), which is 0.889 sq ft, so a wall needs 1.125 blocks per sq ft (112.5 per 100 sq ft) before waste.",
+   "status": "verified",
+   "note": "Arithmetic from standard nominal CMU dimensions (128 sq in per unit).",
+   "keywords": [
+    "CMU estimating",
+    "1.125 blocks per sq ft",
+    "8x8x16",
+    "concrete block",
+    "estimating"
+   ]
+  },
+  {
+   "id": "G5-100",
+   "topic": "Estimating",
+   "trade": "gc",
+   "state": null,
+   "source": "ASTM A615 nominal bar weights",
+   "fact": "Reinforcing bar weights for estimating: #3 = 0.376 lb/ft, #4 = 0.668 lb/ft, #5 = 1.043 lb/ft, #6 = 1.502 lb/ft, #7 = 2.044 lb/ft and #8 = 2.670 lb/ft. Rebar is priced by weight, so multiply total length by the weight per foot.",
+   "status": "verified",
+   "note": "Confirmed by Engineering ToolBox rebar table; these are the ASTM A615 nominal weights.",
+   "keywords": [
+    "rebar weight",
+    "#4 0.668",
+    "#5 1.043",
+    "pounds per foot",
+    "rebar takeoff",
+    "estimating"
+   ]
+  },
+  {
+   "id": "G5-101",
+   "topic": "Estimating",
+   "trade": "gc",
+   "state": null,
+   "source": "CSI MasterFormat (2018 edition and later) division titles",
+   "fact": "Common MasterFormat divisions: 01 General Requirements, 02 Existing Conditions, 03 Concrete, 04 Masonry, 05 Metals, 06 Wood, Plastics and Composites, 07 Thermal and Moisture Protection, 08 Openings, 09 Finishes, 10 Specialties, 14 Conveying Equipment, 21 Fire Suppression, 22 Plumbing, 23 HVAC, 26 Electrical and 31 Earthwork.",
+   "status": "verified",
+   "note": "Confirmed by Archtoolbox's MasterFormat division list (current as of 2020).",
+   "keywords": [
+    "MasterFormat divisions",
+    "Division 03",
+    "Division 08 openings",
+    "Division 09 finishes",
+    "Division 23",
+    "CSI"
+   ]
+  },
+  {
+   "id": "G5-102",
+   "topic": "Fire protection",
+   "trade": "gc",
+   "state": null,
+   "source": "IBC 2021 Table 706.4; 706.6",
+   "fact": "IBC fire walls must be 3-hour rated for Groups A, B, E, H-4, I, R-1, R-2 and U (2 hours where separating buildings of Type II or V construction) and for F-1, H-3, H-5, M and S-1; 4-hour for H-1 and H-2; and 2-hour for F-2, S-2, R-3 and R-4. Fire walls generally run from the foundation to at least 30 in above both adjacent roofs.",
+   "status": "verified",
+   "note": "Confirmed in the 2021 Seattle Building Code Chapter 7 (Washington amends footnote a to cover Types II, III, IV and V).",
+   "keywords": [
+    "fire wall rating",
+    "Table 706.4",
+    "3-hour",
+    "parapet 30 inches",
+    "fire wall",
+    "IBC"
+   ]
+  },
+  {
+   "id": "G5-103",
+   "topic": "Fire protection",
+   "trade": "gc",
+   "state": null,
+   "source": "IBC Table 716.1(2)",
+   "fact": "Fire door ratings for openings (IBC Table 716.1(2)): 3-hour doors in 3- and 4-hour fire walls and fire barriers; 1-1/2-hour doors in 2-hour walls; 1-hour doors in 1-hour shaft, exit stair and exit passageway walls; 3/4-hour doors in other 1-hour fire barriers; and 20-minute doors in corridor walls and smoke barriers.",
+   "status": "verified",
+   "note": "Confirmed against the 2018 IBC Table 716.1(2) reproduced by SAFTI; the 2021 table keeps these ratings.",
+   "keywords": [
+    "fire door rating",
+    "90 minute door",
+    "Table 716.1(2)",
+    "opening protective",
+    "fire barrier",
+    "IBC"
+   ]
+  },
+  {
+   "id": "G5-104",
+   "topic": "Fire protection",
+   "trade": "gc",
+   "state": null,
+   "source": "IBC 2021 706.8; 707.6",
+   "fact": "Openings in IBC fire walls and fire barriers are limited to 156 sq ft each, and their total width may not exceed 25 percent of the wall length. Fire barrier openings have exceptions for sprinklered areas and for opening protectives tested to the full wall rating.",
+   "status": "verified",
+   "note": "Confirmed in the 2021 Seattle Building Code Chapter 7.",
+   "keywords": [
+    "fire wall openings",
+    "156 sq ft",
+    "25 percent",
+    "fire barrier",
+    "IBC"
+   ]
+  },
+  {
+   "id": "G5-105",
+   "topic": "Building code (IBC)",
+   "trade": "gc",
+   "state": null,
+   "source": "IBC 2021 Tables 504.3, 504.4, 506.2",
+   "fact": "In the IBC height and area tables, a full NFPA 13 sprinkler system generally adds 20 ft of height and one story. For example, a Group B building of Type VB construction is limited to 40 ft, 2 stories and 9,000 sq ft per story without sprinklers, and 60 ft, 3 stories and 27,000 sq ft per story (36,000 sq ft for a one-story building) with sprinklers.",
+   "status": "verified",
+   "note": "Confirmed in the 2021 Seattle Building Code Chapter 5 tables (B/VB row).",
+   "keywords": [
+    "allowable height",
+    "allowable area",
+    "Type VB",
+    "sprinkler increase",
+    "Table 506.2",
+    "IBC"
+   ]
+  },
+  {
+   "id": "G5-106",
+   "topic": "Building code (IBC)",
+   "trade": "gc",
+   "state": null,
+   "source": "IBC 2021 506.3",
+   "fact": "The IBC allows a frontage increase in allowable area when at least 25 percent of the building perimeter faces a public way or open space at least 20 ft wide; the increase factor grows with the percent of perimeter and the width of the open space.",
+   "status": "verified",
+   "note": "Confirmed in the 2021 Seattle Building Code Chapter 5.",
+   "keywords": [
+    "frontage increase",
+    "25 percent perimeter",
+    "20 feet",
+    "allowable area",
+    "IBC"
+   ]
+  },
+  {
+   "id": "G5-107",
+   "topic": "Building code (IBC)",
+   "trade": "gc",
+   "state": null,
+   "source": "IBC 2021 505.2.1",
+   "fact": "Under the model 2021 IBC, the total area of mezzanines in a room may not exceed one-third of that room's floor area (two-thirds in certain special industrial buildings of Type I or II construction), and mezzanines need at least 7 ft of clear height.",
+   "status": "verified",
+   "note": "Model one-third limit confirmed from the struck model text in the 2021 Seattle Building Code, which amends it to one-half locally.",
+   "keywords": [
+    "mezzanine",
+    "one-third",
+    "7 feet clear height",
+    "IBC 505",
+    "floor area"
+   ]
+  },
+  {
+   "id": "G5-108",
+   "topic": "Building code (IBC)",
+   "trade": "gc",
+   "state": null,
+   "source": "IBC 2021 508.2; 508.3; 508.4",
+   "fact": "The IBC handles mixed occupancies three ways: accessory occupancies (together no more than 10 percent of the story area, usually no separation), nonseparated occupancies (the most restrictive rules apply to the whole area), or separated occupancies (fire barriers per Table 508.4, with the sum of actual-to-allowable area ratios on each story not over 1).",
+   "status": "verified",
+   "note": "Confirmed in the 2021 Seattle Building Code Chapter 5.",
+   "keywords": [
+    "mixed occupancy",
+    "accessory 10 percent",
+    "nonseparated",
+    "separated occupancies",
+    "Table 508.4",
+    "IBC"
+   ]
+  },
+  {
+   "id": "G5-109",
+   "topic": "Fire protection",
+   "trade": "gc",
+   "state": null,
+   "source": "IBC 2021 Table 707.3.10",
+   "fact": "When fire barriers are used to create separate fire areas (for example to stay under a sprinkler threshold), the IBC requires 2-hour barriers for most groups (A, B, E, F-2, I, M, R, S-2), 3-hour for F-1, H-3 and S-1, 4-hour for H-1 and H-2, and 1-hour for Group U.",
+   "status": "verified",
+   "note": "Confirmed in the 2021 Seattle Building Code Chapter 7.",
+   "keywords": [
+    "fire area",
+    "fire barrier",
+    "2-hour",
+    "3-hour",
+    "Table 707.3.10",
+    "IBC"
+   ]
+  }
+ ],
+ "questions": []
+}

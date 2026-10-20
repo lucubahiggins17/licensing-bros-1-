@@ -1,0 +1,1772 @@
+{
+ "source": "Round 5 state trade licensing and code adoption (electrical, plumbing, HVAC) for NE-WY states, from official state board, statute, rule and code-adoption pages, checked October 2026",
+ "facts": [
+  {
+   "id": "S5B-1",
+   "topic": "State code adoption",
+   "trade": "elec",
+   "state": "Nebraska",
+   "source": "Nebraska State Electrical Division, 2023 Code Adoption, https://electrical.nebraska.gov/2023-code-adoption",
+   "fact": "Nebraska's State Electrical Division adopted the 2023 National Electrical Code (NFPA 70) effective August 1, 2024. On that date, PSI electrical license exams and the in-office specialty exams also switched to the 2023 code.",
+   "status": "verified",
+   "note": "The division's State Act update notice (https://electrical.nebraska.gov/node/187) says PSI bulletins would allow either the 2020 or the 2023 NFPA 70 as a reference during the change.",
+   "keywords": [
+    "Nebraska NEC",
+    "2023 NEC",
+    "Nebraska electrical code",
+    "code adoption",
+    "PSI exam",
+    "August 1 2024"
+   ]
+  },
+  {
+   "id": "S5B-2",
+   "topic": "State licensing",
+   "trade": "elec",
+   "state": "Nebraska",
+   "source": "Nebraska State Electrical Division, Journeyman Electrician, https://electrical.nebraska.gov/node/44",
+   "fact": "A Nebraska journeyman electrician license requires at least four years (8,000 hours) of verifiable electrical experience acceptable to the State Electrical Board. A two-year post-high-school electrical course can count as one year of experience. An applicant with less than 4,000 hours of verifiable experience in Nebraska gets a restricted license, which cannot be used for reciprocity with other states.",
+   "status": "verified",
+   "note": "",
+   "keywords": [
+    "Nebraska journeyman electrician",
+    "8,000 hours",
+    "four years",
+    "restricted license",
+    "reciprocity",
+    "experience"
+   ]
+  },
+  {
+   "id": "S5B-3",
+   "topic": "State licensing",
+   "trade": "elec",
+   "state": "Nebraska",
+   "source": "Nebraska State Electrical Division, Residential Journeyman Wireman, https://electrical.nebraska.gov/node/47",
+   "fact": "A Nebraska residential journeyman electrician (residential wireman) needs at least three years of electrical experience acceptable to the board. The license is valid only for residential work: one- and two-family homes and multi-family dwellings no more than three stories tall. Clubhouses at multi-family complexes must be wired by full (Type JA) journeymen.",
+   "status": "verified",
+   "note": "",
+   "keywords": [
+    "Nebraska residential journeyman",
+    "residential wireman",
+    "three years",
+    "three stories",
+    "multi-family",
+    "scope"
+   ]
+  },
+  {
+   "id": "S5B-4",
+   "topic": "State licensing",
+   "trade": "elec",
+   "state": "Nebraska",
+   "source": "Nebraska State Electrical Division, Electrical Contractor, https://electrical.nebraska.gov/electrical-contractor",
+   "fact": "To qualify for a Nebraska electrical contractor license, an applicant needs at least one year of experience, acceptable to the board, as a licensed journeyman electrician. A graduate of a four-year electrical engineering program also needs at least one year as a licensed journeyman.",
+   "status": "verified",
+   "note": "",
+   "keywords": [
+    "Nebraska electrical contractor",
+    "one year journeyman",
+    "contractor license",
+    "experience",
+    "engineering degree"
+   ]
+  },
+  {
+   "id": "S5B-5",
+   "topic": "State code adoption",
+   "trade": "plumb",
+   "state": "Nebraska",
+   "source": "Neb. Rev. Stat. 71-6403 and 71-6406, https://nebraskalegislature.gov/laws/statutes.php?statute=71-6403",
+   "fact": "Nebraska's state building code (Neb. Rev. Stat. 71-6403) adopts the 2018 IBC, the 2018 IRC (without section R313 and chapters 25-33), the 2018 IEBC and the 2018 Uniform Plumbing Code. Under 71-6406, the state code applies by default in any county, city or village that does not adopt its own code, and any local code must generally conform to the state code.",
+   "status": "verified",
+   "note": "Nebraska has no state plumbing license board; plumbing licenses come from cities such as Omaha and Lincoln (see existing fact STAT-244).",
+   "keywords": [
+    "Nebraska plumbing code",
+    "Uniform Plumbing Code 2018",
+    "UPC",
+    "state building code",
+    "71-6403",
+    "local code"
+   ]
+  },
+  {
+   "id": "S5B-6",
+   "topic": "State code adoption",
+   "trade": "hvac",
+   "state": "Nebraska",
+   "source": "Neb. Rev. Stat. 71-6403 and 71-6406, https://nebraskalegislature.gov/laws/statutes.php?statute=71-6406",
+   "fact": "Nebraska's state building code lists no mechanical or fuel gas code, and it leaves out the IRC's plumbing, mechanical and electrical chapters (25-33). Under 71-6406, cities, villages and counties may adopt mechanical and other standard codes themselves, so HVAC rules in Nebraska are set locally.",
+   "status": "verified",
+   "note": "Code contents verified in the statutes. The point that HVAC licensing is local only matches existing fact STAT-244, which is still unverified.",
+   "keywords": [
+    "Nebraska HVAC",
+    "mechanical code",
+    "local adoption",
+    "no state HVAC license",
+    "IRC chapters 25-33",
+    "71-6406"
+   ]
+  },
+  {
+   "id": "S5B-7",
+   "topic": "State licensing",
+   "trade": "elec",
+   "state": "Nevada",
+   "source": "NAC 624.200, Classification C-2: Electrical contracting (via Cornell LII), https://www.law.cornell.edu/regulations/nevada/NAC-624-200",
+   "fact": "The Nevada State Contractors Board licenses electrical contracting businesses under classification C-2. Its subclassifications are C-2a Electrical Wiring, C-2b Integrated Ceilings, C-2c Fire Detection, C-2d Low Voltage Systems, C-2e Lines to Transmit Electricity, C-2f Residential Wiring and C-2g Photovoltaics.",
+   "status": "verified",
+   "note": "Read from the Cornell LII copy of NAC 624.200. Nevada issues no statewide journeyman electrician license; worker cards, where required, come from local jurisdictions (not confirmed on an official page).",
+   "keywords": [
+    "Nevada C-2",
+    "electrical contractor",
+    "NSCB",
+    "subclassification",
+    "C-2f residential wiring",
+    "photovoltaics"
+   ]
+  },
+  {
+   "id": "S5B-8",
+   "topic": "State licensing",
+   "trade": "plumb",
+   "state": "Nevada",
+   "source": "NAC 624.190, Classification C-1: Plumbing and heating contracting (via Cornell LII), https://www.law.cornell.edu/regulations/nevada/NAC-624-190",
+   "fact": "Nevada licenses plumbing and heating contractors under NSCB classification C-1. Its subclassifications include C-1a Boilers, C-1b Fire Sprinklers, C-1c Insulation of Pipes and Ducts, C-1d Plumbing, C-1e Sheet Metal, C-1f Heating, Cooling and Circulating Air, C-1g Pipes and Vents for Gas, C-1h Water Heaters, C-1i Chilled-Water Piping, C-1j Breathing Air Systems for Firefighters and C-1k Industrial Piping.",
+   "status": "verified",
+   "note": "Read from the Cornell LII copy of NAC 624.190.",
+   "keywords": [
+    "Nevada C-1",
+    "plumbing contractor",
+    "plumbing and heating",
+    "NSCB",
+    "C-1d plumbing",
+    "subclassification"
+   ]
+  },
+  {
+   "id": "S5B-9",
+   "topic": "State licensing",
+   "trade": "hvac",
+   "state": "Nevada",
+   "source": "NAC 624.380, Classification C-21: Refrigeration and air-conditioning (via Cornell LII), https://law.cornell.edu/regulations/nevada/NAC-624-380",
+   "fact": "Nevada's NSCB classification C-21 covers refrigeration and air-conditioning. Its subclassifications are C-21a Refrigeration, C-21b Air-Conditioning, C-21c Sheet Metal, C-21d Maintenance, C-21e Solar Air-Conditioning, C-21f Chilled and Hot Water Systems and C-21g Industrial Piping. A full C-21 license covers the work of all its subclassifications.",
+   "status": "verified",
+   "note": "Heating, cooling and circulating-air work can also be licensed under C-1f (see NAC 624.190).",
+   "keywords": [
+    "Nevada C-21",
+    "HVAC license",
+    "refrigeration",
+    "air conditioning",
+    "NSCB",
+    "subclassification"
+   ]
+  },
+  {
+   "id": "S5B-10",
+   "topic": "State licensing",
+   "trade": "elec",
+   "state": "Nevada",
+   "source": "Nevada State Contractors Board, Contractor's License Application, https://www.nvcontractorsboard.com/licensing/contractors-license-application/",
+   "fact": "For a Nevada contractor's license in a trade such as electrical (C-2), plumbing and heating (C-1) or refrigeration and air conditioning (C-21), the trade qualified individual needs at least 4 years of experience in that trade, gained within the past 15 years. The management qualified individual must pass the business and law (CMS) exam, and one person can fill both roles.",
+   "status": "verified",
+   "note": "",
+   "keywords": [
+    "Nevada experience",
+    "4 years",
+    "15 years",
+    "qualified individual",
+    "CMS exam",
+    "NSCB"
+   ]
+  },
+  {
+   "id": "S5B-11",
+   "topic": "State code adoption",
+   "trade": "elec",
+   "state": "Nevada",
+   "source": "NAC 341.045, Standards for design (via Cornell LII), https://www.law.cornell.edu/regulations/nevada/NAC-341-045 ; Nevada State Public Works Division, 2024 Adopted Codes, https://publicworks.nv.gov/uploadedFiles/publicworksnvgov/content/Documents/Permitting_Code_Enforcement/2024%20Adopted_Codes.pdf",
+   "fact": "For the design of Nevada state buildings, NAC 341.045 adopts the 2023 National Electrical Code along with the 2024 IBC, IRC and IEBC. These state rules cover state buildings; cities and counties adopt their own codes for private projects.",
+   "status": "verified",
+   "note": "The State Public Works Division says projects submitted after the grace period ended June 30, 2025 must be designed under the new codes. Local editions vary, so check the city or county.",
+   "keywords": [
+    "Nevada NEC",
+    "2023 NEC",
+    "state buildings",
+    "State Public Works",
+    "NAC 341.045",
+    "code adoption"
+   ]
+  },
+  {
+   "id": "S5B-12",
+   "topic": "State code adoption",
+   "trade": "plumb",
+   "state": "Nevada",
+   "source": "NAC 341.045, Standards for design (via Cornell LII), https://www.law.cornell.edu/regulations/nevada/NAC-341-045",
+   "fact": "For Nevada state buildings, NAC 341.045 puts the Uniform Plumbing Code in place of the International Plumbing Code. It adopts the 2024 Uniform Plumbing Code and the 2024 Uniform Mechanical Code alongside the 2024 IBC.",
+   "status": "verified",
+   "note": "Applies to state buildings designed under the State Public Works Division. Local jurisdictions adopt their own plumbing and mechanical codes.",
+   "keywords": [
+    "Nevada plumbing code",
+    "UPC 2024",
+    "UMC 2024",
+    "state buildings",
+    "NAC 341.045",
+    "Uniform Plumbing Code"
+   ]
+  },
+  {
+   "id": "S5B-13",
+   "topic": "State code adoption",
+   "trade": "elec",
+   "state": "New Hampshire",
+   "source": "RSA 155-A:1, IV (state building code definition), https://gc.nh.gov/rsa/html/XII/155-A/155-A-1.htm ; HB 134 (2025), 2025 Laws ch. 135",
+   "fact": "New Hampshire's state building code (RSA 155-A:1, IV) adopts the 2023 National Electrical Code. HB 134 (2025 Laws chapter 135) moved the state from the 2020 to the 2023 NEC, effective July 1, 2025.",
+   "status": "verified",
+   "note": "When checked in October 2026, the State Fire Marshal's code page (https://firemarshal.dos.nh.gov/laws-rules-regulatory/fire-building-codes) still listed the 2020 NEC. The statute text is current.",
+   "keywords": [
+    "New Hampshire NEC",
+    "2023 NEC",
+    "RSA 155-A",
+    "state building code",
+    "July 1 2025",
+    "HB 134"
+   ]
+  },
+  {
+   "id": "S5B-14",
+   "topic": "State code adoption",
+   "trade": "plumb",
+   "state": "New Hampshire",
+   "source": "RSA 155-A:1, IV, https://gc.nh.gov/rsa/html/XII/155-A/155-A-1.htm ; HB 1159 (2026), 2026 Laws ch. 49",
+   "fact": "New Hampshire uses the International Plumbing Code statewide. HB 1159 (2026 Laws chapter 49) updated the state building code to the 2024 IPC, along with the 2024 IBC, IRC, IEBC and IMC, effective July 1, 2026. Before that, the 2021 editions had applied since July 1, 2024.",
+   "status": "verified",
+   "note": "The energy code stays at the 2018 IECC. The Fire Marshal's page still showed the 2021 editions when checked; check for any concurrency period.",
+   "keywords": [
+    "New Hampshire plumbing code",
+    "IPC 2024",
+    "International Plumbing Code",
+    "state building code",
+    "July 1 2026",
+    "HB 1159"
+   ]
+  },
+  {
+   "id": "S5B-15",
+   "topic": "State code adoption",
+   "trade": "hvac",
+   "state": "New Hampshire",
+   "source": "RSA 155-A:1, IV, https://gc.nh.gov/rsa/html/XII/155-A/155-A-1.htm",
+   "fact": "The New Hampshire state building code adopts the 2024 International Mechanical Code, effective July 1, 2026, replacing the 2021 IMC. The energy code part of the state building code remains the 2018 IECC.",
+   "status": "verified",
+   "note": "Fuel gas installations are also regulated through state fire code rules and fuel gas fitter licensing; the NFPA 54/58 editions were not confirmed here.",
+   "keywords": [
+    "New Hampshire mechanical code",
+    "IMC 2024",
+    "International Mechanical Code",
+    "HVAC code",
+    "2018 IECC",
+    "RSA 155-A"
+   ]
+  },
+  {
+   "id": "S5B-16",
+   "topic": "State licensing",
+   "trade": "hvac",
+   "state": "New Hampshire",
+   "source": "RSA 153:28, I(a) (Mechanical Safety and Licensing Board), https://gc.nh.gov/rsa/html/XII/153/153-mrg.htm",
+   "fact": "New Hampshire licenses fuel gas workers through the Mechanical Safety and Licensing Board (OPLC). A fuel gas installation technician needs 1,000 hours of field experience within 60 months (up to 500 hours may be heating oil work). A fuel gas service technician needs 2,000 hours within 60 months (up to 750 hours of oil work). A fuel gas piping installer needs 1,000 hours of gas piping experience.",
+   "status": "verified",
+   "note": "Approved education can stand in for field experience. Other classes include hearth system technician, domestic appliance technician and fuel gas trainee.",
+   "keywords": [
+    "New Hampshire gas fitter",
+    "fuel gas license",
+    "1,000 hours",
+    "2,000 hours",
+    "service technician",
+    "OPLC"
+   ]
+  },
+  {
+   "id": "S5B-17",
+   "topic": "State licensing",
+   "trade": "plumb",
+   "state": "New Hampshire",
+   "source": "RSA 153:27, XV and 153:28, I(a), https://gc.nh.gov/rsa/html/XII/153/153-mrg.htm",
+   "fact": "In New Hampshire, a plumbing licensee may employ no more than 2 plumbing apprentices. The Mechanical Safety and Licensing Board sets the education, field experience and testing standards for master, journeyman and apprentice plumber licenses by rule.",
+   "status": "verified",
+   "note": "",
+   "keywords": [
+    "New Hampshire plumber",
+    "apprentice ratio",
+    "2 apprentices",
+    "journeyman plumber",
+    "master plumber",
+    "RSA 153"
+   ]
+  },
+  {
+   "id": "S5B-18",
+   "topic": "State code adoption",
+   "trade": "elec",
+   "state": "New Jersey",
+   "source": "NJ DCA, Current Construction Codes (N.J.A.C. 5:23-3.16), https://www.nj.gov/dca/codes/codreg/current.shtml",
+   "fact": "New Jersey's Uniform Construction Code electrical subcode (N.J.A.C. 5:23-3.16) adopts the 2023 National Electrical Code (NFPA 70) with TIAs 1-13. DCA lists the adoption date as August 17, 2026.",
+   "status": "verified",
+   "note": "DCA usually allows a six-month grace period after a new subcode is adopted, during which a complete application may use the prior edition (the 2020 NEC, adopted September 6, 2022). Confirm the current grace period dates with DCA.",
+   "keywords": [
+    "New Jersey NEC",
+    "2023 NEC",
+    "UCC",
+    "electrical subcode",
+    "N.J.A.C. 5:23-3.16",
+    "August 17 2026"
+   ]
+  },
+  {
+   "id": "S5B-19",
+   "topic": "State code adoption",
+   "trade": "plumb",
+   "state": "New Jersey",
+   "source": "NJ DCA, Current Construction Codes (N.J.A.C. 5:23-3.15), https://www.nj.gov/dca/codes/codreg/current.shtml",
+   "fact": "New Jersey uses neither the IPC nor the UPC. Its UCC plumbing subcode (N.J.A.C. 5:23-3.15) adopts the National Standard Plumbing Code, 2024 edition (New Jersey edition), with an adoption date of August 17, 2026.",
+   "status": "verified",
+   "note": "The prior edition was the 2021 NSPC (adopted September 19, 2022). A six-month grace period for the prior edition has been DCA's usual practice.",
+   "keywords": [
+    "New Jersey plumbing code",
+    "National Standard Plumbing Code",
+    "NSPC 2024",
+    "plumbing subcode",
+    "UCC",
+    "N.J.A.C. 5:23-3.15"
+   ]
+  },
+  {
+   "id": "S5B-20",
+   "topic": "State code adoption",
+   "trade": "hvac",
+   "state": "New Jersey",
+   "source": "NJ DCA, Current Construction Codes (N.J.A.C. 5:23-3.20 and 3.22), https://www.nj.gov/dca/codes/codreg/current.shtml",
+   "fact": "Under New Jersey's Uniform Construction Code, the mechanical subcode (N.J.A.C. 5:23-3.20) adopts the 2024 International Mechanical Code, and the fuel gas subcode (N.J.A.C. 5:23-3.22) adopts the 2024 International Fuel Gas Code. Both have an adoption date of August 17, 2026.",
+   "status": "verified",
+   "note": "One- and two-family dwellings use the 2024 IRC (NJ edition) under N.J.A.C. 5:23-3.21.",
+   "keywords": [
+    "New Jersey mechanical code",
+    "IMC 2024",
+    "IFGC 2024",
+    "fuel gas subcode",
+    "UCC",
+    "HVAC code"
+   ]
+  },
+  {
+   "id": "S5B-21",
+   "topic": "State licensing",
+   "trade": "elec",
+   "state": "New Jersey",
+   "source": "NJ Board of Examiners of Electrical Contractors, FAQ, https://njconsumeraffairs.gov/elec/Pages/FAQ.aspx",
+   "fact": "The New Jersey electrical contractor exam has three parts: electrical contractor (trade), alarm systems, and business and law. Applicants must show a completed 4-year U.S. Department of Labor approved apprenticeship plus one more year as a journeyman. Electrical contractor licenses and business permits expire every three years on March 31.",
+   "status": "verified",
+   "note": "The FAQ also says a person must register as a qualified journeyman electrician to do the work described in N.J.S.A. 45:5A-18(k) and (l).",
+   "keywords": [
+    "New Jersey electrical contractor",
+    "three-part exam",
+    "alarm systems",
+    "business and law",
+    "March 31",
+    "journeyman registration"
+   ]
+  },
+  {
+   "id": "S5B-22",
+   "topic": "State licensing",
+   "trade": "hvac",
+   "state": "New Jersey",
+   "source": "NJ State Board of Examiners of Master HVACR Contractors, FAQ (N.J.A.C. 13:32A-2.1), https://njconsumeraffairs.gov/hvacr/Pages/FAQ.aspx",
+   "fact": "To take the New Jersey Master HVACR exam, an applicant needs one of these: a 4-year U.S. DOL approved HVACR apprenticeship plus 1 year as a journeyperson under a licensed Master HVACR Contractor; a bachelor's degree in HVACR plus 1 year; a related bachelor's degree plus 3 years; or a two-year trade school degree plus at least 2 years of approved apprenticeship and 1 year as a journeyperson. Licensees need 5 continuing education credits every two years.",
+   "status": "verified",
+   "note": "",
+   "keywords": [
+    "New Jersey HVACR",
+    "master HVACR contractor",
+    "apprenticeship",
+    "journeyperson",
+    "continuing education",
+    "N.J.A.C. 13:32A-2.1"
+   ]
+  },
+  {
+   "id": "S5B-23",
+   "topic": "State code adoption",
+   "trade": "elec",
+   "state": "New Mexico",
+   "source": "14.10.4 NMAC, 2020 New Mexico Electrical Code, https://www.srca.nm.gov/parts/title14/14.010.0004.pdf",
+   "fact": "New Mexico's electrical code is 14.10.4 NMAC, the 2020 New Mexico Electrical Code. It adopts the 2020 National Electrical Code with state amendments and took effect March 28, 2023.",
+   "status": "verified",
+   "note": "No newer NEC adoption was found on New Mexico state sites as of October 2026. CID posted drafts for other 2024-cycle codes in 2026, so check for updates.",
+   "keywords": [
+    "New Mexico NEC",
+    "2020 NEC",
+    "14.10.4 NMAC",
+    "New Mexico Electrical Code",
+    "CID",
+    "code adoption"
+   ]
+  },
+  {
+   "id": "S5B-24",
+   "topic": "State code adoption",
+   "trade": "plumb",
+   "state": "New Mexico",
+   "source": "14.8.2 NMAC, 2021 New Mexico Plumbing Code, https://www.srca.nm.gov/parts/title14/14.008.0002.pdf ; draft 2024 rule, https://www.rld.nm.gov/wp-content/uploads/2026/03/14.8.2-NMAC_DRAFT-RULE.pdf",
+   "fact": "New Mexico uses the Uniform Plumbing Code. 14.8.2 NMAC, the 2021 New Mexico Plumbing Code, adopts the 2021 UPC with state amendments, and after September 10, 2022 plumbing permits may be issued only under it.",
+   "status": "verified",
+   "note": "In March 2026 CID posted a draft rule that would adopt the 2024 UPC as the 2024 New Mexico Plumbing Code. It was a draft when checked, so confirm whether it has taken effect.",
+   "keywords": [
+    "New Mexico plumbing code",
+    "UPC 2021",
+    "Uniform Plumbing Code",
+    "14.8.2 NMAC",
+    "CID",
+    "code adoption"
+   ]
+  },
+  {
+   "id": "S5B-25",
+   "topic": "State code adoption",
+   "trade": "hvac",
+   "state": "New Mexico",
+   "source": "14.9.2 NMAC, 2021 New Mexico Mechanical Code, https://www.srca.nm.gov/parts/title14/14.009.0002.pdf",
+   "fact": "New Mexico uses the Uniform Mechanical Code. 14.9.2 NMAC, the 2021 New Mexico Mechanical Code, adopts the 2021 UMC with state amendments.",
+   "status": "verified",
+   "note": "A 2024-cycle update may follow the 2024 UPC draft; check the CID site.",
+   "keywords": [
+    "New Mexico mechanical code",
+    "UMC 2021",
+    "Uniform Mechanical Code",
+    "14.9.2 NMAC",
+    "HVAC code",
+    "CID"
+   ]
+  },
+  {
+   "id": "S5B-26",
+   "topic": "State licensing",
+   "trade": "hvac",
+   "state": "New Mexico",
+   "source": "14.6.6.11 NMAC, Mechanical classifications, https://www.srca.nm.gov/parts/title14/14.006.0006.pdf",
+   "fact": "New Mexico's mechanical license classifications are MM-1 plumbing, MM-2 natural gas fitting, MM-3 heating, ventilation and air conditioning (HVAC), MM-4 hydronic heating, cooling and process piping, and MM-98 mechanical, which covers all of MM-1 through MM-4. Each requires four years of experience for the qualifying party.",
+   "status": "verified",
+   "note": "MM-98 also covers the MS-3, MS-6, MS-12 and MS-14 specialty work.",
+   "keywords": [
+    "New Mexico HVAC license",
+    "MM-3",
+    "MM-98",
+    "mechanical classification",
+    "qualifying party",
+    "four years"
+   ]
+  },
+  {
+   "id": "S5B-27",
+   "topic": "State licensing",
+   "trade": "plumb",
+   "state": "New Mexico",
+   "source": "14.6.6.11 NMAC, Mechanical classifications, https://www.srca.nm.gov/parts/title14/14.006.0006.pdf",
+   "fact": "In New Mexico, an MM-1 plumbing classification requires four years of experience for the qualifying party. The JPG journeyman certificate (journeyman plumber and natural gas fitter) requires two years of experience, and the holder may work under an MM-1, MM-2 or MM-98 licensee.",
+   "status": "verified",
+   "note": "",
+   "keywords": [
+    "New Mexico plumber",
+    "MM-1",
+    "JPG journeyman",
+    "two years",
+    "gas fitter",
+    "CID"
+   ]
+  },
+  {
+   "id": "S5B-28",
+   "topic": "State licensing",
+   "trade": "elec",
+   "state": "New Mexico",
+   "source": "14.6.6.10 NMAC, Electrical classifications, https://www.srca.nm.gov/parts/title14/14.006.0006.pdf",
+   "fact": "New Mexico's EE-98 classification covers residential, commercial and industrial electrical wiring at 5,000 volts nominal or less and requires four years of experience. ER-1 (residential) requires two years, EL-1 (over 5,000 volts) requires four years, and the ES electrical specialty classes require two years each.",
+   "status": "verified",
+   "note": "The EE-98J journeyman certificate requires four years and may work under EE-98, ER-1 and the electrical specialty licenses.",
+   "keywords": [
+    "New Mexico EE-98",
+    "ER-1",
+    "EL-1",
+    "5,000 volts",
+    "electrical classification",
+    "CID"
+   ]
+  },
+  {
+   "id": "S5B-29",
+   "topic": "State code adoption",
+   "trade": "plumb",
+   "state": "New York",
+   "source": "NYS Department of State, Amended Notice of Adoption, https://dos.ny.gov/notice-adoption ; NYSED Facilities Planning notice, https://www.nysed.gov/facilities-planning/news/2025-nys-uniform-code-and-state-energy-code-will-take-effect-december-31",
+   "fact": "The 2025 New York State Uniform Code, including the 2025 Plumbing Code of New York State, took effect December 31, 2025. The 2025 NYS code books are based on the 2024 ICC model codes with New York changes. From October 1 to December 30, 2025, applicants could use either the 2020 or the 2025 Uniform Code.",
+   "status": "verified",
+   "note": "Basis on 2024 ICC books per DOS Code Outreach bulletin 2026-1 (https://dos.ny.gov/2026-01-nycrr-changes-2025-codes). New York City has its own construction codes.",
+   "keywords": [
+    "New York plumbing code",
+    "Plumbing Code of New York State",
+    "2025 Uniform Code",
+    "December 31 2025",
+    "IPC based",
+    "transition period"
+   ]
+  },
+  {
+   "id": "S5B-30",
+   "topic": "State code adoption",
+   "trade": "hvac",
+   "state": "New York",
+   "source": "NYS Department of State, Amended Notice of Adoption, https://dos.ny.gov/notice-adoption",
+   "fact": "New York's 2025 Uniform Code, effective December 31, 2025, includes the 2025 Mechanical Code of New York State and the 2025 Fuel Gas Code of New York State. Both are based on the 2024 ICC model codes (IMC and IFGC) with New York changes.",
+   "status": "verified",
+   "note": "The energy code had no transition period. New York City uses its own mechanical and fuel gas codes.",
+   "keywords": [
+    "New York mechanical code",
+    "Fuel Gas Code of New York State",
+    "2025 Uniform Code",
+    "IMC",
+    "IFGC",
+    "HVAC code"
+   ]
+  },
+  {
+   "id": "S5B-31",
+   "topic": "State code adoption",
+   "trade": "elec",
+   "state": "New York",
+   "source": "NYC Electrical Code section 28-1101.1, NYC Department of Buildings, https://www.nyc.gov/assets/buildings/codes-pdf/2025electrical_code.pdf",
+   "fact": "New York City has its own electrical code. Section 28-1101.1 of the NYC Electrical Code adopts the 2020 edition of NFPA 70 (the National Electrical Code) with New York City amendments.",
+   "status": "verified",
+   "note": "This applies in NYC only. Outside the city, electrical work follows the state Uniform Code and local rules.",
+   "keywords": [
+    "New York City electrical code",
+    "NYC",
+    "2020 NEC",
+    "28-1101.1",
+    "Department of Buildings",
+    "code adoption"
+   ]
+  },
+  {
+   "id": "S5B-32",
+   "topic": "State code adoption",
+   "trade": "elec",
+   "state": "New York",
+   "source": "NYS Department of State, Code Outreach bulletin 2026-1, https://dos.ny.gov/2026-01-nycrr-changes-2025-codes",
+   "fact": "Outside New York City, electrical installations fall under the NYS Uniform Code, which points to NFPA 70. The 2025 Uniform Code (effective December 31, 2025) is based on the 2024 ICC codes, which reference the 2023 NEC, so the 2023 NEC is likely the edition now in force statewide.",
+   "status": "unverified",
+   "note": "No official NYS page that names the NEC edition in the 2025 Uniform Code was found. The 2023 NEC is inferred from the 2024 ICC base codes. New York has no statewide electrician license (see STAT-280).",
+   "keywords": [
+    "New York NEC",
+    "Uniform Code",
+    "2023 NEC",
+    "electrical code",
+    "statewide",
+    "NFPA 70"
+   ]
+  },
+  {
+   "id": "S5B-33",
+   "topic": "State licensing",
+   "trade": "elec",
+   "state": "New York",
+   "source": "NYC Department of Buildings, Obtain a Master & Special Electrician License, https://www.nyc.gov/site/buildings/industry/obtain-a-master-and-special-electrician-license.page",
+   "fact": "A New York City master electrician applicant must be at least 18 and have at least 7 years of experience within the 10 years before applying, under the direct and continuing supervision of a licensed master or special electrician, with at least 2 years in NYC. Candidates must pass a multiple-choice written exam on NYC electrical codes (70% to pass) and then a practical exam within 24 months.",
+   "status": "verified",
+   "note": "Other routes: a bachelor's degree in electrical engineering plus 3 years within 5, or a NYS DOL registered apprenticeship plus 5 years within 10 (2 years in NYC still required for the degree route).",
+   "keywords": [
+    "NYC master electrician",
+    "7 years",
+    "written exam",
+    "practical exam",
+    "70%",
+    "New York City"
+   ]
+  },
+  {
+   "id": "S5B-34",
+   "topic": "State licensing",
+   "trade": "plumb",
+   "state": "New York",
+   "source": "NYC Department of Buildings, Obtain a Master Plumber License, https://www.nyc.gov/site/buildings/industry/obtain-a-master-plumber-license.page",
+   "fact": "A New York City master plumber applicant needs 7 years of experience within the 10 years before applying, under a licensed master plumber, including at least 2 years as a registered journeyman plumber. The written exam is multiple-choice on NYC construction codes, with no reference materials allowed and a 70% passing score. The practical exam must be passed within 24 months of the written exam notice.",
+   "status": "verified",
+   "note": "Other routes include a mechanical engineering degree plus 5 years within 7 (2 in NYC) or a NYS-licensed architect or engineer with 3 years within 5 (1 in NYC).",
+   "keywords": [
+    "NYC master plumber",
+    "7 years",
+    "journeyman plumber",
+    "written exam",
+    "no references",
+    "New York City"
+   ]
+  },
+  {
+   "id": "S5B-35",
+   "topic": "State code adoption",
+   "trade": "elec",
+   "state": "North Carolina",
+   "source": "NC Office of State Fire Marshal, State Electrical Code and Interpretations, https://ncosfm.gov/codes/state-electrical-division/state-electrical-code-and-interpretations",
+   "fact": "North Carolina's current electrical code is the 2020 NEC with state amendments, in effect since November 1, 2021. The 2023 NEC with NC amendments was set for January 1, 2025, but Session Law 2025-2 (House Bill 47) delayed it with no set date.",
+   "status": "verified",
+   "note": "Under S.L. 2025-2, the 2024 code package, including the 2023 NC Electrical Code, takes effect 12 months after the State Fire Marshal certifies certain conditions. Check OSFM for the current status.",
+   "keywords": [
+    "North Carolina NEC",
+    "2020 NEC",
+    "2023 NEC delayed",
+    "NC Electrical Code",
+    "Session Law 2025-2",
+    "OSFM"
+   ]
+  },
+  {
+   "id": "S5B-36",
+   "topic": "State code adoption",
+   "trade": "plumb",
+   "state": "North Carolina",
+   "source": "NC OSFM press release, North Carolina Delays Implementation of 2024 State Building Code (Apr. 7, 2025), https://ncosfm.gov/news/press-releases/2025/04/07/north-carolina-delays-implementation-2024-state-building-code",
+   "fact": "The 2018 North Carolina State Building Code, including the 2018 NC Plumbing Code, remains in effect. Session Law 2025-2 moved the 2024 NC State Building Code to 12 months after the State Fire Marshal certifies the code is published and the Residential Code Council is fully formed. An owner may ask to use the 2024 code as an alternative method.",
+   "status": "verified",
+   "note": "The State Fire Marshal's letter of March 31, 2025 calls the date 'to be determined'. Check OSFM for whether the certification has been made.",
+   "keywords": [
+    "North Carolina plumbing code",
+    "2018 NC Plumbing Code",
+    "2024 code delayed",
+    "Session Law 2025-2",
+    "State Building Code",
+    "OSFM"
+   ]
+  },
+  {
+   "id": "S5B-37",
+   "topic": "State code adoption",
+   "trade": "hvac",
+   "state": "North Carolina",
+   "source": "NC OSFM, Effective Date of the 2024 NC State Building Code memo, https://ncosfm.gov/2024-1212-effective-date-2024-north-carolina-state-building-code/open ; OSFM press release Apr. 7, 2025",
+   "fact": "North Carolina's 2018 Mechanical Code and 2018 Fuel Gas Code are still in force because the 2024 NC State Building Code was delayed (first by S.L. 2024-57 to July 1, 2025, then by S.L. 2025-2 to 12 months after State Fire Marshal certification). A project that chooses the 2024 code early must use it for the whole project scope.",
+   "status": "verified",
+   "note": "Check OSFM for the certification date that starts the 12-month clock.",
+   "keywords": [
+    "North Carolina mechanical code",
+    "2018 NC Mechanical Code",
+    "fuel gas code",
+    "2024 code delayed",
+    "HVAC code",
+    "OSFM"
+   ]
+  },
+  {
+   "id": "S5B-38",
+   "topic": "State licensing",
+   "trade": "elec",
+   "state": "North Carolina",
+   "source": "21 NCAC 18B .0201, Requirements for all examination applicants (via Cornell LII), https://law.cornell.edu/regulations/north-carolina/21-N-C-Admin-Code-18B-0201",
+   "fact": "To take the North Carolina electrical contractor exam, a Limited applicant needs 3,000 hours of experience (at least 2,000 primary), an Intermediate applicant needs 5,750 hours (at least 5,000 primary), and an Unlimited applicant needs 9,000 hours (at least 8,000 primary). Unlimited applicants must also submit written statements from two people who can vouch for their ability to supervise electrical work.",
+   "status": "verified",
+   "note": "Primary and secondary experience are defined in 21 NCAC 18B .0202.",
+   "keywords": [
+    "North Carolina electrical contractor",
+    "Limited",
+    "Intermediate",
+    "Unlimited",
+    "experience hours",
+    "NCBEEC"
+   ]
+  },
+  {
+   "id": "S5B-39",
+   "topic": "State licensing",
+   "trade": "plumb",
+   "state": "North Carolina",
+   "source": "N.C. Gen. Stat. 87-21, https://www.ncleg.gov/EnactedLegislation/Statutes/HTML/BySection/Chapter_87/GS_87-21.html",
+   "fact": "Under N.C. Gen. Stat. 87-21, the State Board of Examiners of Plumbing, Heating and Fire Sprinkler Contractors may require no more than two years of experience to take its exam, and up to half of that may come from academic or technical courses. A plumbing or heating licensee who has kept a license in good standing for at least 10 years is credited with the experience for Class II qualifications.",
+   "status": "verified",
+   "note": "Applicants may be required to be at least 18.",
+   "keywords": [
+    "North Carolina plumbing license",
+    "two years experience",
+    "Class II",
+    "87-21",
+    "plumbing board",
+    "coursework credit"
+   ]
+  },
+  {
+   "id": "S5B-40",
+   "topic": "State licensing",
+   "trade": "hvac",
+   "state": "North Carolina",
+   "source": "N.C. Gen. Stat. 87-21, https://www.ncleg.gov/EnactedLegislation/Statutes/HTML/BySection/Chapter_87/GS_87-21.html",
+   "fact": "North Carolina's plumbing, heating and fire sprinkler board issues a separate fuel piping license for people who do not hold the needed Class I or Class II plumbing or heating license. Heating licenses are split into three groups, and group three covers systems of 15 tons or less (see STAT-294).",
+   "status": "verified",
+   "note": "",
+   "keywords": [
+    "North Carolina fuel piping license",
+    "gas piping",
+    "heating license",
+    "87-21",
+    "HVAC",
+    "Class I"
+   ]
+  },
+  {
+   "id": "S5B-41",
+   "topic": "State code adoption",
+   "trade": "elec",
+   "state": "North Dakota",
+   "source": "N.D. Admin. Code 24.1-02-01-02 and 24.1-02-01-03, https://www.ndlegis.gov/information/acdata/pdf/24.1-02-01.pdf",
+   "fact": "North Dakota's State Electrical Board wiring standards adopt the 2026 edition of NFPA 70, the National Electrical Code, effective July 1, 2026. North Dakota had been on the 2023 NEC since July 1, 2024.",
+   "status": "verified",
+   "note": "The rule history shows amendments effective July 1, 2024 and July 1, 2026. The July 1, 2024 move to the 2023 NEC is reported by Interstate IBC (https://interstateibc.org/nd-adopts-2023-nec/). Exam references may lag; check the PSI bulletin.",
+   "keywords": [
+    "North Dakota NEC",
+    "2026 NEC",
+    "State Electrical Board",
+    "wiring standards",
+    "July 1 2026",
+    "24.1-02-01"
+   ]
+  },
+  {
+   "id": "S5B-42",
+   "topic": "State code adoption",
+   "trade": "plumb",
+   "state": "North Dakota",
+   "source": "N.D. Admin. Code 62-03.1-01-01, https://www.ndlegis.gov/information/acdata/pdf/62-03.1-01.pdf",
+   "fact": "The North Dakota State Plumbing Board adopts the 2018 Uniform Plumbing Code (IAPMO) as the state plumbing code, known as the 2018 North Dakota Plumbing Code. The rule took effect April 1, 2020.",
+   "status": "verified",
+   "note": "This was the current posted rule as of October 2026. A newer UPC edition may be adopted later.",
+   "keywords": [
+    "North Dakota plumbing code",
+    "UPC 2018",
+    "Uniform Plumbing Code",
+    "State Plumbing Board",
+    "62-03.1",
+    "code adoption"
+   ]
+  },
+  {
+   "id": "S5B-43",
+   "topic": "State code adoption",
+   "trade": "hvac",
+   "state": "North Dakota",
+   "source": "ND Department of Commerce, Building Codes, https://www.commerce.nd.gov/community-services/building-codes",
+   "fact": "The North Dakota State Building Code, which includes the 2024 International Mechanical Code and 2024 International Fuel Gas Code along with the 2024 IBC and IRC, took effect January 1, 2026. Local governments do not have to enforce building codes, but any jurisdiction that chooses to must use the State Building Code, with local amendments allowed.",
+   "status": "verified",
+   "note": "Fully chartered home rule cities may adopt something else. North Dakota has no statewide HVAC license (not confirmed on an official page).",
+   "keywords": [
+    "North Dakota mechanical code",
+    "IMC 2024",
+    "IFGC 2024",
+    "State Building Code",
+    "January 1 2026",
+    "HVAC code"
+   ]
+  },
+  {
+   "id": "S5B-44",
+   "topic": "State licensing",
+   "trade": "plumb",
+   "state": "North Dakota",
+   "source": "N.D. Admin. Code 62-02-01-01, https://www.ndlegis.gov/information/acdata/pdf/62-02-01.pdf",
+   "fact": "To take the North Dakota journeyman plumber exam, an applicant needs four years of experience as an apprentice plumber under a licensed master plumber. The master plumber exam requires an applicant to be at least 21 with two years (3,400 hours) as a licensed journeyman plumber in North Dakota or another licensing state.",
+   "status": "verified",
+   "note": "Someone who worked where no state license is required may instead show five years in the trade (1,900 hours a year, 9,500 hours total) with four affidavits and pass a screening test first.",
+   "keywords": [
+    "North Dakota journeyman plumber",
+    "master plumber",
+    "four years apprentice",
+    "3,400 hours",
+    "age 21",
+    "plumbing exam"
+   ]
+  },
+  {
+   "id": "S5B-45",
+   "topic": "State code adoption",
+   "trade": "elec",
+   "state": "Ohio",
+   "source": "Union County (OH) Building Regulation, Current Ohio Code References (1/28/2026), https://www.unioncountyohio.gov/media/Officials/Engineer/building-regulation/BuildingInUnionCo_UsefulInfo/Current%20Ohio%20Code%20References.pdf ; OAC 4101:1-27-01 (eff. 3/1/2024)",
+   "fact": "Ohio enforces the 2023 National Electrical Code for commercial buildings under the Ohio Building Code since March 1, 2024, and for one-, two- and three-family homes under the Residential Code of Ohio since April 15, 2024. Before that, Ohio used the 2017 NEC.",
+   "status": "verified",
+   "note": "Confirmed on a county building department page and consistent with the OCILB electrical exam, which uses the 2023 NEC (STAT-309). A Board of Building Standards page naming the edition was not reached.",
+   "keywords": [
+    "Ohio NEC",
+    "2023 NEC",
+    "Ohio Building Code",
+    "Residential Code of Ohio",
+    "March 1 2024",
+    "electrical code"
+   ]
+  },
+  {
+   "id": "S5B-46",
+   "topic": "State code adoption",
+   "trade": "plumb",
+   "state": "Ohio",
+   "source": "ICC news release, Ohio Strengthens Building Safety and Resilience by Adopting International Plumbing, Building and Mechanical Codes, https://www.iccsafe.org/about/periodicals-and-newsroom/ohio-strengthens-building-safety-and-resilience-by-adopting-international-plumbing-building-and-mechanical-codes ; Ohio BBS 2024 OPC Summary of Changes",
+   "fact": "The 2024 Ohio Plumbing Code is based on the 2021 International Plumbing Code with Ohio changes and took effect March 1, 2024. One Ohio change adds a small-business exception to the toilet room requirements in section 403.2.",
+   "status": "verified",
+   "note": "The edition and date are from the ICC release. The Ohio Board of Building Standards summary (https://dam.assets.ohio.gov/image/upload/com.ohio.gov/documents/2024%20OPC%20Summary%20of%20Changes%20-%20BBS%20letterhead.pdf) confirms adoption of the IPC by reference and lists the changes.",
+   "keywords": [
+    "Ohio plumbing code",
+    "2024 Ohio Plumbing Code",
+    "IPC 2021",
+    "March 1 2024",
+    "Board of Building Standards",
+    "code adoption"
+   ]
+  },
+  {
+   "id": "S5B-47",
+   "topic": "State code adoption",
+   "trade": "hvac",
+   "state": "Ohio",
+   "source": "ICC news release (Ohio adopts 2021 I-Codes, effective March 1, 2024); Union County (OH) Current Ohio Code References, https://www.unioncountyohio.gov/media/Officials/Engineer/building-regulation/BuildingInUnionCo_UsefulInfo/Current%20Ohio%20Code%20References.pdf",
+   "fact": "Ohio's commercial mechanical code is the 2024 Ohio Mechanical Code, based on the 2021 International Mechanical Code and effective March 1, 2024. Commercial fuel gas work follows the 2021 International Fuel Gas Code.",
+   "status": "verified",
+   "note": "This replaced the 2017 OMC and the 2015 IFGC. Homes follow the Residential Code of Ohio.",
+   "keywords": [
+    "Ohio mechanical code",
+    "2024 Ohio Mechanical Code",
+    "IMC 2021",
+    "IFGC 2021",
+    "commercial",
+    "HVAC code"
+   ]
+  },
+  {
+   "id": "S5B-48",
+   "topic": "State licensing",
+   "trade": "elec",
+   "state": "Ohio",
+   "source": "Ohio Rev. Code 4740.06(B), https://codes.ohio.gov/ohio-revised-code/section-4740.06",
+   "fact": "To take an Ohio Construction Industry Licensing Board exam (electrical, plumbing, HVAC, refrigeration or hydronics), an applicant must be at least 18 and have worked at least five years as a tradesperson in that trade right before applying, or have other experience the specialty section accepts. An Ohio-registered engineer may instead qualify with three years of construction business experience in that trade.",
+   "status": "verified",
+   "note": "Licensees must also carry contractor's liability insurance in an amount set by the specialty section.",
+   "keywords": [
+    "Ohio contractor license",
+    "OCILB",
+    "five years",
+    "registered engineer",
+    "liability insurance",
+    "4740.06"
+   ]
+  },
+  {
+   "id": "S5B-49",
+   "topic": "State code adoption",
+   "trade": "elec",
+   "state": "Oklahoma",
+   "source": "Oklahoma Construction Industries Board news, 2023 NEC Code (Aug. 20, 2024), https://oklahoma.gov/cib/news/2023-nec-code.html",
+   "fact": "The Oklahoma Uniform Building Code Commission adopted the 2023 National Electrical Code, effective September 14, 2024. CIB electrical exam questions stayed on the 2020 NEC through December 13, 2024 and switched to the 2023 NEC on December 14, 2024.",
+   "status": "verified",
+   "note": "",
+   "keywords": [
+    "Oklahoma NEC",
+    "2023 NEC",
+    "OUBCC",
+    "CIB",
+    "September 14 2024",
+    "exam"
+   ]
+  },
+  {
+   "id": "S5B-50",
+   "topic": "State code adoption",
+   "trade": "plumb",
+   "state": "Oklahoma",
+   "source": "OUBCC, 2024 IPC rules (OAC 748:20-16), https://oklahoma.gov/content/dam/ok/en/oubcc/documents/2024-pending-rules/2024%20IPC%20Pending%20Rules.pdf ; CIB news, 2026 Updated Building Code, https://oklahoma.gov/cib/news/2026-updated-building-code.html",
+   "fact": "Oklahoma's statewide plumbing code is the International Plumbing Code. The OUBCC adopted the 2024 IPC (OAC 748:20-16), effective September 14, 2026, replacing the 2018 IPC. The 2021 IPC was never adopted in Oklahoma.",
+   "status": "verified",
+   "note": "",
+   "keywords": [
+    "Oklahoma plumbing code",
+    "IPC 2024",
+    "OUBCC",
+    "September 14 2026",
+    "748:20-16",
+    "International Plumbing Code"
+   ]
+  },
+  {
+   "id": "S5B-51",
+   "topic": "State code adoption",
+   "trade": "hvac",
+   "state": "Oklahoma",
+   "source": "Oklahoma Construction Industries Board news, 2026 Updated Building Code (Aug. 31, 2026), https://oklahoma.gov/cib/news/2026-updated-building-code.html",
+   "fact": "Oklahoma adopted the 2024 International Mechanical Code and 2024 International Fuel Gas Code (with the 2024 IBC, IRC and IPC), effective September 14, 2026. CIB mechanical exams such as HVACR, refrigeration, sheet metal, natural gas and process piping moved to the new codes that day, with a 90-day transition through December 14, 2026 when either code may be used.",
+   "status": "verified",
+   "note": "The Plumbing Contractor and the Plumbing Journeyman and Gas exams change on October 8, 2026, with a transition through January 8, 2027.",
+   "keywords": [
+    "Oklahoma mechanical code",
+    "IMC 2024",
+    "IFGC 2024",
+    "HVACR exam",
+    "September 14 2026",
+    "transition period"
+   ]
+  },
+  {
+   "id": "S5B-52",
+   "topic": "State licensing",
+   "trade": "plumb",
+   "state": "Oklahoma",
+   "source": "Oklahoma CIB Plumbing License Application (rev. 9-2023), https://aem-prod.oklahoma.gov/content/dam/ok/en/cib/documents/your-industry/plumbing-industry/plumbing_application-9-2023.pdf",
+   "fact": "Oklahoma plumbers are licensed statewide by the Construction Industries Board. A plumbing journeyman needs three years of plumbing experience while employed by a licensed plumbing contractor, and a plumbing contractor needs the journeyman requirements plus one more year. CIB counts one year of full-time work as about 2,000 hours.",
+   "status": "verified",
+   "note": "A residential plumbing contractor needs the residential journeyman requirements plus one year. Requirements are from the 2023 application form; check CIB for later rule changes.",
+   "keywords": [
+    "Oklahoma plumber",
+    "journeyman plumber",
+    "three years",
+    "plumbing contractor",
+    "CIB",
+    "2,000 hours"
+   ]
+  },
+  {
+   "id": "S5B-53",
+   "topic": "State licensing",
+   "trade": "hvac",
+   "state": "Oklahoma",
+   "source": "Oklahoma Construction Industries Board, Mechanical Journeyman, https://oklahoma.gov/cib/your-industry/mechanical/mechanical-journeyman.html",
+   "fact": "Oklahoma's CIB licenses mechanical journeymen in categories such as HVAC Limited (cooling up to 25 tons and heating up to 500,000 Btu/h per appliance), HVAC Unlimited, Limited Residential, Refrigeration, Natural Gas Piping, Process Piping and Sheet Metal. The basic route is age 18 plus three years of verifiable experience with a licensed mechanical contractor, where one year equals 2,000 hours. Approved school programs can replace part of the experience.",
+   "status": "verified",
+   "note": "Examples: a 1,000-hour program plus 1 year, or a 500-hour program plus 2 years. Limited Residential covers new one- and two-family homes with systems up to 5 tons cooling and 150,000 Btu/h heating, with no fuel gas piping.",
+   "keywords": [
+    "Oklahoma HVAC license",
+    "mechanical journeyman",
+    "HVAC Limited",
+    "25 tons",
+    "three years",
+    "CIB"
+   ]
+  },
+  {
+   "id": "S5B-54",
+   "topic": "State code adoption",
+   "trade": "elec",
+   "state": "Oregon",
+   "source": "Oregon Building Codes Division, Electrical (Oregon Electrical Specialty Code), https://oregon.gov/bcd/codes-stand/Pages/electrical.aspx",
+   "fact": "Oregon's electrical code is the Oregon Electrical Specialty Code (OESC). The 2026 OESC is based on the 2026 National Electrical Code and took effect October 1, 2026.",
+   "status": "verified",
+   "note": "The BCD page did not mention a phase-in period. The prior edition was the 2023 OESC.",
+   "keywords": [
+    "Oregon NEC",
+    "2026 NEC",
+    "Oregon Electrical Specialty Code",
+    "OESC",
+    "October 1 2026",
+    "Building Codes Division"
+   ]
+  },
+  {
+   "id": "S5B-55",
+   "topic": "State code adoption",
+   "trade": "plumb",
+   "state": "Oregon",
+   "source": "Oregon Building Codes Division, Plumbing (Oregon Plumbing Specialty Code), https://www.oregon.gov/bcd/codes-stand/Pages/plumbing.aspx",
+   "fact": "Oregon uses the Uniform Plumbing Code as the base for its Oregon Plumbing Specialty Code (OPSC). The 2026 OPSC is based on the 2024 UPC and took effect October 1, 2026. It replaced the 2023 OPSC, which was based on the 2021 UPC and took effect October 1, 2023.",
+   "status": "verified",
+   "note": "The BCD page did not describe a phase-in period for the 2026 OPSC.",
+   "keywords": [
+    "Oregon plumbing code",
+    "Oregon Plumbing Specialty Code",
+    "OPSC",
+    "UPC 2024",
+    "Uniform Plumbing Code",
+    "October 1 2026"
+   ]
+  },
+  {
+   "id": "S5B-56",
+   "topic": "State code adoption",
+   "trade": "hvac",
+   "state": "Oregon",
+   "source": "Oregon Building Codes Division, Mechanical (Oregon Mechanical Specialty Code), https://www.oregon.gov/bcd/codes-stand/Pages/mechanical.aspx",
+   "fact": "The 2025 Oregon Mechanical Specialty Code (OMSC) is based on the 2024 International Mechanical Code and International Fuel Gas Code. It took effect October 1, 2025 with a six-month phase-in, when either the 2022 or 2025 OMSC could be used, and became mandatory April 1, 2026.",
+   "status": "verified",
+   "note": "",
+   "keywords": [
+    "Oregon mechanical code",
+    "Oregon Mechanical Specialty Code",
+    "OMSC",
+    "IMC 2024",
+    "IFGC 2024",
+    "phase-in"
+   ]
+  },
+  {
+   "id": "S5B-57",
+   "topic": "State licensing",
+   "trade": "elec",
+   "state": "Oregon",
+   "source": "Oregon BCD, Electrical License Application information packet (Form 440-2570i), https://www.oregon.gov/bcd/Formslibrary/2570i.pdf",
+   "fact": "An Oregon General Journeyman Electrician (J) license requires an approved Oregon apprenticeship, or 576 hours of classroom training plus 8,000 hours of out-of-state experience (at least 1,000 each in residential, commercial and industrial work), or 16,000 hours of out-of-state experience. A General Supervising Electrician (S) needs a journeyman license (or its qualifications) plus another 8,000 hours of journeyman experience. A Limited Residential Electrician (LR) needs an apprenticeship, 288 classroom hours plus 4,000 residential hours, or 8,000 residential hours.",
+   "status": "verified",
+   "note": "Oregon's '300 percent rule' applies to how out-of-state experience is counted (see the packet).",
+   "keywords": [
+    "Oregon journeyman electrician",
+    "supervising electrician",
+    "limited residential",
+    "8,000 hours",
+    "576 hours",
+    "apprenticeship"
+   ]
+  },
+  {
+   "id": "S5B-58",
+   "topic": "State licensing",
+   "trade": "plumb",
+   "state": "Oregon",
+   "source": "Oregon BCD, Plumbing License Application (Form 440-2571), https://www.oregon.gov/bcd/Formslibrary/2571.pdf",
+   "fact": "To qualify for the Oregon journeyman plumber (JP) exam, an applicant can show at least 576 hours of plumbing classroom training plus 3,850 hours of commercial and 3,850 hours of residential on-the-job experience as an apprentice or journeyman. Another route is 7,700 hours each of commercial and residential work done while holding a license with a similar scope. No more than 2,000 hours of experience count per year.",
+   "status": "verified",
+   "note": "A high school diploma, GED or equivalent is also required.",
+   "keywords": [
+    "Oregon journeyman plumber",
+    "JP license",
+    "576 hours",
+    "3,850 hours",
+    "2,000 hours per year",
+    "plumbing exam"
+   ]
+  },
+  {
+   "id": "S5B-59",
+   "topic": "State code adoption",
+   "trade": "plumb",
+   "state": "Pennsylvania",
+   "source": "City of Philadelphia L&I Code Bulletin B-2501, Implementation of 2021 International Codes, https://www.phila.gov/media/20251021080549/B-2501-Implementation-of-2021-International-Codes.pdf ; City of York, 2021 UCC Code Update, https://www.yorkcity.org/2021ucc",
+   "fact": "Pennsylvania's statewide Uniform Construction Code (UCC) moved to the 2021 International Plumbing Code on January 1, 2026, replacing the 2018 editions. Applications complete and submitted before that date could continue under the 2018 UCC.",
+   "status": "verified",
+   "note": "Confirmed by two municipal code offices citing PA Department of Labor & Industry rulemaking (Pa. Bulletin Doc. No. 25-1602). The DLI and Pa. Code pages could not be fetched. Philadelphia and Allegheny County have their own plumbing rules.",
+   "keywords": [
+    "Pennsylvania plumbing code",
+    "UCC",
+    "IPC 2021",
+    "January 1 2026",
+    "Uniform Construction Code",
+    "code adoption"
+   ]
+  },
+  {
+   "id": "S5B-60",
+   "topic": "State code adoption",
+   "trade": "hvac",
+   "state": "Pennsylvania",
+   "source": "City of Philadelphia L&I Code Bulletin B-2501, https://www.phila.gov/media/20251021080549/B-2501-Implementation-of-2021-International-Codes.pdf ; City of York, 2021 UCC Code Update, https://www.yorkcity.org/2021ucc",
+   "fact": "Since January 1, 2026, Pennsylvania's Uniform Construction Code uses the 2021 International Mechanical Code and 2021 International Fuel Gas Code, along with the 2021 IBC and IRC.",
+   "status": "verified",
+   "note": "Confirmed by two municipal code offices citing DLI's adoption under the PA Construction Code Act (Act 45 of 1999).",
+   "keywords": [
+    "Pennsylvania mechanical code",
+    "UCC",
+    "IMC 2021",
+    "IFGC 2021",
+    "January 1 2026",
+    "HVAC code"
+   ]
+  },
+  {
+   "id": "S5B-61",
+   "topic": "State code adoption",
+   "trade": "elec",
+   "state": "Pennsylvania",
+   "source": "City of Philadelphia L&I Code Bulletin B-2501, https://www.phila.gov/media/20251021080549/B-2501-Implementation-of-2021-International-Codes.pdf ; City of York, 2021 UCC Code Update, https://www.yorkcity.org/2021ucc",
+   "fact": "Under Pennsylvania's 2021 Uniform Construction Code (effective January 1, 2026), the referenced electrical standard is the 2020 NFPA 70 (National Electrical Code), not the 2023 edition.",
+   "status": "verified",
+   "note": "Confirmed by Philadelphia L&I and the City of York. Pennsylvania has no statewide electrician license (see STAT-342).",
+   "keywords": [
+    "Pennsylvania NEC",
+    "2020 NEC",
+    "UCC",
+    "electrical code",
+    "January 1 2026",
+    "code adoption"
+   ]
+  },
+  {
+   "id": "S5B-62",
+   "topic": "State licensing",
+   "trade": "elec",
+   "state": "Pennsylvania",
+   "source": "City of Philadelphia, Get an electrical contractor license, https://www.phila.gov/services/permits-violations-licenses/get-a-license/trade-licenses/get-an-electrical-contractor-license/",
+   "fact": "Pennsylvania leaves electrician licensing to local governments. In Philadelphia, an electrical contractor license requires at least four years of electrical work for a licensed company (two years of electrical school count as one year, up to two years) and a passing score on the Philadelphia Electrical Contractor Examination given by the ICC. Licensees need at least $500,000 per occurrence of general liability insurance.",
+   "status": "verified",
+   "note": "Auto liability of $300,000 and workers' compensation are also required.",
+   "keywords": [
+    "Philadelphia electrical contractor",
+    "Pennsylvania electrician",
+    "local license",
+    "four years",
+    "ICC exam",
+    "$500,000"
+   ]
+  },
+  {
+   "id": "S5B-63",
+   "topic": "State licensing",
+   "trade": "plumb",
+   "state": "Pennsylvania",
+   "source": "Allegheny County Health Department, Plumbers Exam Application, https://www.alleghenycounty.us/files/assets/county/v/2/government/health/documents/plumbers-exam-application.pdf",
+   "fact": "In Allegheny County (Pittsburgh area), plumbers are licensed by the county Health Department. A journeyman plumber needs four full years as a registered apprentice plus 576 hours of related technical training, and a master plumber needs two full years as a licensed journeyman. The exams are based on Article XV, the county plumbing code, which uses the 2009 International Plumbing Code as amended.",
+   "status": "verified",
+   "note": "The edition is from the county exam application; check ACHD for any newer Article XV edition.",
+   "keywords": [
+    "Allegheny County plumber",
+    "Pennsylvania plumbing license",
+    "Article XV",
+    "576 hours",
+    "master plumber",
+    "local license"
+   ]
+  },
+  {
+   "id": "S5B-64",
+   "topic": "State code adoption",
+   "trade": "elec",
+   "state": "Rhode Island",
+   "source": "RISBC-5 Rhode Island Electrical Code (510-RICR-00-00-5), section 5.2(A), https://rules.sos.ri.gov/Regulations/Part/510-00-00-5",
+   "fact": "Rhode Island's state electrical code, RISBC-5, adopts the 2023 edition of the National Electrical Code. The current version of the rule took effect December 1, 2025.",
+   "status": "verified",
+   "note": "",
+   "keywords": [
+    "Rhode Island NEC",
+    "2023 NEC",
+    "RISBC-5",
+    "electrical code",
+    "December 1 2025",
+    "code adoption"
+   ]
+  },
+  {
+   "id": "S5B-65",
+   "topic": "State code adoption",
+   "trade": "plumb",
+   "state": "Rhode Island",
+   "source": "RISBC-3 Rhode Island Plumbing Code (510-RICR-00-00-3), section 3.2, https://rules.sos.ri.gov/Regulations/Part/510-00-00-3",
+   "fact": "Rhode Island's state plumbing code, RISBC-3, adopts the 2021 International Plumbing Code. The current version of the rule took effect December 1, 2025.",
+   "status": "verified",
+   "note": "",
+   "keywords": [
+    "Rhode Island plumbing code",
+    "IPC 2021",
+    "RISBC-3",
+    "International Plumbing Code",
+    "December 1 2025",
+    "code adoption"
+   ]
+  },
+  {
+   "id": "S5B-66",
+   "topic": "State code adoption",
+   "trade": "hvac",
+   "state": "Rhode Island",
+   "source": "RISBC-4 Rhode Island Mechanical Code (510-RICR-00-00-4), https://rules.sos.ri.gov/Regulations/Part/510-00-00-4",
+   "fact": "Rhode Island's mechanical code, RISBC-4, adopts the 2021 International Mechanical Code (current version effective December 1, 2025). Wherever the IMC refers to the International Fuel Gas Code, Rhode Island uses its own Rhode Island Fuel Gas Code instead.",
+   "status": "verified",
+   "note": "",
+   "keywords": [
+    "Rhode Island mechanical code",
+    "IMC 2021",
+    "RISBC-4",
+    "Rhode Island Fuel Gas Code",
+    "HVAC code",
+    "code adoption"
+   ]
+  },
+  {
+   "id": "S5B-67",
+   "topic": "State licensing",
+   "trade": "elec",
+   "state": "Rhode Island",
+   "source": "RI Department of Labor and Training, Electricians License Application, https://dlt.ri.gov/sites/g/files/xkgbur571/files/2024-05/applicationelectricians_0_0.pdf",
+   "fact": "Rhode Island's Class B journeyperson electrician exam requires at least four years of experience in the trade and 576 hours of related instruction approved by the Department of Labor and Training. The Class A electrical contractor exam requires six years of experience and a Rhode Island journeyperson license held for at least two years.",
+   "status": "verified",
+   "note": "Indentured apprentices submit a Certificate of Completion of Apprenticeship.",
+   "keywords": [
+    "Rhode Island journeyperson electrician",
+    "Class B",
+    "Class A contractor",
+    "576 hours",
+    "four years",
+    "DLT"
+   ]
+  },
+  {
+   "id": "S5B-68",
+   "topic": "State licensing",
+   "trade": "plumb",
+   "state": "Rhode Island",
+   "source": "R.I. Gen. Laws 5-20-17, https://webserver.rilegislature.gov/Statutes/TITLE5/5-20/5-20-17.htm",
+   "fact": "A Rhode Island journeyperson plumber applicant must generally have been a registered apprentice plumber for at least four years, with 8,000 hours of on-the-job training in Rhode Island within five years, plus 576 hours of related instruction. Other routes include two academic years of plumbing or sanitary engineering study, an associate degree plus two years as a registered apprentice, or an equivalent out-of-state journeyperson license.",
+   "status": "verified",
+   "note": "The apprentice and the master plumber record the apprenticeship hours together.",
+   "keywords": [
+    "Rhode Island journeyperson plumber",
+    "8,000 hours",
+    "576 hours",
+    "apprentice",
+    "5-20-17",
+    "plumbing license"
+   ]
+  },
+  {
+   "id": "S5B-69",
+   "topic": "State licensing",
+   "trade": "hvac",
+   "state": "Rhode Island",
+   "source": "R.I. Gen. Laws 28-27-5, https://webserver.rilegislature.gov/Statutes/TITLE28/28-27/28-27-5.htm",
+   "fact": "In Rhode Island, working as a master in pipefitting, refrigeration/air conditioning, air distribution or fire sprinkler work requires a license from the Department of Labor and Training. A master license holder may do the sheet metal work on a job without a separate license only when the AC air handling equipment is 10 tons or less or the heating equipment is 250,000 BTU or less. Larger jobs must use a licensed sheet metal contractor.",
+   "status": "verified",
+   "note": "",
+   "keywords": [
+    "Rhode Island HVAC license",
+    "pipefitter",
+    "refrigeration",
+    "sheet metal",
+    "10 tons",
+    "28-27-5"
+   ]
+  },
+  {
+   "id": "S5B-70",
+   "topic": "State code adoption",
+   "trade": "elec",
+   "state": "South Carolina",
+   "source": "SC LLR Building Codes Council, Building Codes in Effect for South Carolina, https://www.llr.sc.gov/BCC/PDFfiles/Building%20Codes%20in%20Effect%20for%20South%20Carolina.pdf ; Building Code Adoption, https://llr.sc.gov/bcc/BCAdoption.aspx",
+   "fact": "South Carolina's mandatory statewide electrical code is the 2020 National Electrical Code with SC modifications. The Building Codes Council adopted it October 6, 2021, and local jurisdictions had to put it in place by January 1, 2023.",
+   "status": "verified",
+   "note": "The Council is adopting the 2024 code cycle: SC changes to it were published in the State Register on May 22, 2026, but no effective date was posted when checked (October 2026). Check whether the 2023 NEC is part of that cycle.",
+   "keywords": [
+    "South Carolina NEC",
+    "2020 NEC",
+    "Building Codes Council",
+    "January 1 2023",
+    "code adoption",
+    "LLR"
+   ]
+  },
+  {
+   "id": "S5B-71",
+   "topic": "State code adoption",
+   "trade": "plumb",
+   "state": "South Carolina",
+   "source": "SC LLR Building Codes Council, SC Code Adoption Notice, https://www.llr.sc.gov/bcc/pdffiles/SC-Code-Adoption-Notice.pdf",
+   "fact": "South Carolina uses the International Plumbing Code statewide. The 2021 IPC with SC modifications has been in effect since January 1, 2023, when local jurisdictions had to begin using the 2021 code cycle.",
+   "status": "verified",
+   "note": "The 2024 code cycle was in progress in 2026 with no effective date posted yet.",
+   "keywords": [
+    "South Carolina plumbing code",
+    "IPC 2021",
+    "International Plumbing Code",
+    "January 1 2023",
+    "Building Codes Council",
+    "code adoption"
+   ]
+  },
+  {
+   "id": "S5B-72",
+   "topic": "State code adoption",
+   "trade": "hvac",
+   "state": "South Carolina",
+   "source": "SC LLR Building Codes Council, Building Codes in Effect for South Carolina, https://www.llr.sc.gov/BCC/PDFfiles/Building%20Codes%20in%20Effect%20for%20South%20Carolina.pdf",
+   "fact": "South Carolina's statewide mechanical and fuel gas codes are the 2021 International Mechanical Code and 2021 International Fuel Gas Code, both with SC modifications and in effect since January 1, 2023.",
+   "status": "verified",
+   "note": "The previous editions (2018 IMC/IFGC) took effect January 1, 2020.",
+   "keywords": [
+    "South Carolina mechanical code",
+    "IMC 2021",
+    "IFGC 2021",
+    "January 1 2023",
+    "HVAC code",
+    "Building Codes Council"
+   ]
+  },
+  {
+   "id": "S5B-73",
+   "topic": "State licensing",
+   "trade": "hvac",
+   "state": "South Carolina",
+   "source": "SC LLR Residential Builders Commission, Residential HVAC Installer and Repairer License, https://www.llr.sc.gov/res/reshvac.aspx",
+   "fact": "In South Carolina, residential HVAC work over $500 requires a Residential HVAC license from the Residential Builders Commission, with verified work experience and the SC Residential HVAC exam. Commercial HVAC work over $10,000 needs a mechanical contractor license from the Contractor's Licensing Board instead.",
+   "status": "verified",
+   "note": "An exam waiver skips only the technical part. The experience requirement and the Business Management and Law exam still apply.",
+   "keywords": [
+    "South Carolina HVAC license",
+    "residential HVAC",
+    "$500",
+    "Residential Builders Commission",
+    "$10,000",
+    "LLR"
+   ]
+  },
+  {
+   "id": "S5B-74",
+   "topic": "State licensing",
+   "trade": "elec",
+   "state": "South Carolina",
+   "source": "SC LLR Residential Builders Commission, Licensure, https://llr.sc.gov/res/licensure.aspx",
+   "fact": "South Carolina's Residential Builders Commission issues residential specialty licenses for electrical (RBE), HVAC (RBH) and plumbing (RBP) work. Licensure by exam requires passing the PSI exam and one year of verifiable experience under a licensed person in that trade. North Carolina and Mississippi licensees may get a trade exam waiver but must still pass the SC Business Management and Law exam.",
+   "status": "verified",
+   "note": "The NASCLA electrical exam is also accepted. A separate Residential Specialty Contractor Registration (RBS) requires one year of residential experience in the past five years per trade.",
+   "keywords": [
+    "South Carolina residential electrician",
+    "RBE",
+    "RBP",
+    "RBH",
+    "Residential Builders Commission",
+    "exam waiver"
+   ]
+  }
+ ],
+ "questions": [
+  {
+   "t": "elec",
+   "topic": "State code adoption",
+   "q": "Which edition of the National Electrical Code did Nebraska's State Electrical Division adopt effective August 1, 2024?",
+   "c": [
+    "2017 NEC",
+    "2020 NEC",
+    "2023 NEC",
+    "2026 NEC"
+   ],
+   "a": 2,
+   "ref": "electrical.nebraska.gov 2023 Code Adoption",
+   "why": "Nebraska adopted the 2023 NEC (NFPA 70) starting August 1, 2024, and PSI exams moved to the 2023 code that day."
+  },
+  {
+   "t": "elec",
+   "topic": "State licensing",
+   "q": "How much verifiable experience does Nebraska require for a journeyman electrician license?",
+   "c": [
+    "2 years (4,000 hours)",
+    "3 years (6,000 hours)",
+    "4 years (8,000 hours)",
+    "5 years (10,000 hours)"
+   ],
+   "a": 2,
+   "ref": "electrical.nebraska.gov Journeyman Electrician",
+   "why": "Nebraska requires at least four years (8,000 hours) of verifiable electrical experience for the journeyman license."
+  },
+  {
+   "t": "plumb",
+   "topic": "State code adoption",
+   "q": "Which plumbing code is part of Nebraska's state building code under Neb. Rev. Stat. 71-6403?",
+   "c": [
+    "2018 International Plumbing Code",
+    "2018 Uniform Plumbing Code",
+    "2021 National Standard Plumbing Code",
+    "2024 Uniform Plumbing Code"
+   ],
+   "a": 1,
+   "ref": "Neb. Rev. Stat. 71-6403",
+   "why": "The Nebraska state building code adopts the 2018 Uniform Plumbing Code along with the 2018 IBC, IRC and IEBC."
+  },
+  {
+   "t": "hvac",
+   "topic": "State licensing",
+   "q": "In Nevada, which State Contractors Board classification covers refrigeration and air-conditioning contracting?",
+   "c": [
+    "C-1",
+    "C-2",
+    "C-10",
+    "C-21"
+   ],
+   "a": 3,
+   "ref": "NAC 624.380",
+   "why": "Classification C-21 is refrigeration and air-conditioning, with subclassifications C-21a through C-21g."
+  },
+  {
+   "t": "elec",
+   "topic": "State licensing",
+   "q": "How much trade experience does Nevada require of a contractor license's trade qualified individual?",
+   "c": [
+    "2 years within the past 10 years",
+    "4 years within the past 15 years",
+    "5 years within the past 10 years",
+    "8,000 hours at any time"
+   ],
+   "a": 1,
+   "ref": "NSCB Contractor's License Application",
+   "why": "The NSCB requires at least 4 years of experience in the trade, gained within the past 15 years."
+  },
+  {
+   "t": "elec",
+   "topic": "State code adoption",
+   "q": "Since July 1, 2025, which NEC edition is part of the New Hampshire state building code?",
+   "c": [
+    "2017 NEC",
+    "2020 NEC",
+    "2023 NEC",
+    "2026 NEC"
+   ],
+   "a": 2,
+   "ref": "RSA 155-A:1, IV; HB 134 (2025)",
+   "why": "HB 134 (2025 Laws ch. 135) changed the state building code from the 2020 to the 2023 NEC effective July 1, 2025."
+  },
+  {
+   "t": "plumb",
+   "topic": "State code adoption",
+   "q": "Which plumbing code does New Jersey adopt in its Uniform Construction Code plumbing subcode?",
+   "c": [
+    "International Plumbing Code",
+    "Uniform Plumbing Code",
+    "National Standard Plumbing Code",
+    "A New Jersey plumbing code with no model code base"
+   ],
+   "a": 2,
+   "ref": "N.J.A.C. 5:23-3.15",
+   "why": "New Jersey's plumbing subcode adopts the National Standard Plumbing Code (2024, NJ edition), not the IPC or UPC."
+  },
+  {
+   "t": "elec",
+   "topic": "State licensing",
+   "q": "The New Jersey electrical contractor exam has three parts. Which list is correct?",
+   "c": [
+    "Trade, alarm systems, and business and law",
+    "Trade, plan reading, and safety",
+    "Business and law, OSHA, and load calculations",
+    "Trade, fire sprinklers, and energy code"
+   ],
+   "a": 0,
+   "ref": "NJ Electrical Board FAQ",
+   "why": "The NJ Board says the exam covers electrical contractor (trade), alarm systems, and business and law."
+  },
+  {
+   "t": "plumb",
+   "topic": "State code adoption",
+   "q": "Which model plumbing code does New Mexico adopt for its state plumbing code (14.8.2 NMAC)?",
+   "c": [
+    "International Plumbing Code",
+    "Uniform Plumbing Code",
+    "National Standard Plumbing Code",
+    "Southern Standard Plumbing Code"
+   ],
+   "a": 1,
+   "ref": "14.8.2 NMAC",
+   "why": "The 2021 New Mexico Plumbing Code adopts the 2021 Uniform Plumbing Code with state amendments."
+  },
+  {
+   "t": "hvac",
+   "topic": "State licensing",
+   "q": "In New Mexico, which mechanical classification covers heating, ventilation and air conditioning (HVAC)?",
+   "c": [
+    "MM-1",
+    "MM-2",
+    "MM-3",
+    "MM-4"
+   ],
+   "a": 2,
+   "ref": "14.6.6.11 NMAC",
+   "why": "MM-3 is HVAC. MM-1 is plumbing, MM-2 is natural gas fitting, and MM-4 is hydronic heating, cooling and process piping."
+  },
+  {
+   "t": "elec",
+   "topic": "State licensing",
+   "q": "A New York City master electrician applicant generally needs how much experience under a licensed master or special electrician?",
+   "c": [
+    "4 years within the last 6 years",
+    "5 years within the last 8 years",
+    "7 years within the last 10 years",
+    "10 years at any time"
+   ],
+   "a": 2,
+   "ref": "NYC DOB Master Electrician License page",
+   "why": "NYC DOB requires at least 7 years of experience within the 10 years before applying, with at least 2 years in NYC."
+  },
+  {
+   "t": "plumb",
+   "topic": "State code adoption",
+   "q": "When did the 2025 New York State Uniform Code, including the 2025 Plumbing Code of NYS, take effect?",
+   "c": [
+    "January 1, 2025",
+    "July 1, 2025",
+    "October 1, 2025",
+    "December 31, 2025"
+   ],
+   "a": 3,
+   "ref": "NYS DOS Notice of Adoption",
+   "why": "The 2025 Uniform Code took effect December 31, 2025, after a transition period from October 1 to December 30, 2025."
+  },
+  {
+   "t": "elec",
+   "topic": "State code adoption",
+   "q": "As of 2026, which NEC edition is North Carolina's electrical code based on?",
+   "c": [
+    "2017 NEC",
+    "2020 NEC",
+    "2023 NEC",
+    "2026 NEC"
+   ],
+   "a": 1,
+   "ref": "NC OSFM State Electrical Code page",
+   "why": "North Carolina has used the 2020 NEC with state amendments since November 1, 2021. The 2023 NEC was delayed indefinitely by S.L. 2025-2."
+  },
+  {
+   "t": "elec",
+   "topic": "State licensing",
+   "q": "How many hours of experience does an Unlimited electrical contractor exam applicant need in North Carolina?",
+   "c": [
+    "3,000 hours",
+    "5,750 hours",
+    "8,000 hours",
+    "9,000 hours"
+   ],
+   "a": 3,
+   "ref": "21 NCAC 18B .0201",
+   "why": "Unlimited applicants need 9,000 hours (at least 8,000 primary). Limited needs 3,000, and Intermediate needs 5,750."
+  },
+  {
+   "t": "elec",
+   "topic": "State code adoption",
+   "q": "Effective July 1, 2026, which NEC edition do North Dakota's State Electrical Board wiring standards adopt?",
+   "c": [
+    "2020 NEC",
+    "2023 NEC",
+    "2026 NEC",
+    "2017 NEC"
+   ],
+   "a": 2,
+   "ref": "N.D. Admin. Code 24.1-02-01-02",
+   "why": "The ND wiring standards now name the NFPA 70 2026 edition, effective July 1, 2026. The state was on the 2023 NEC from July 1, 2024."
+  },
+  {
+   "t": "plumb",
+   "topic": "State code adoption",
+   "q": "Which code is the North Dakota state plumbing code based on?",
+   "c": [
+    "2018 Uniform Plumbing Code",
+    "2021 International Plumbing Code",
+    "2024 International Plumbing Code",
+    "National Standard Plumbing Code"
+   ],
+   "a": 0,
+   "ref": "N.D. Admin. Code 62-03.1-01-01",
+   "why": "The State Plumbing Board adopts the 2018 UPC as the 2018 North Dakota Plumbing Code."
+  },
+  {
+   "t": "plumb",
+   "topic": "State code adoption",
+   "q": "The 2024 Ohio Plumbing Code, effective March 1, 2024, is based on which model code?",
+   "c": [
+    "2018 Uniform Plumbing Code",
+    "2021 International Plumbing Code",
+    "2024 International Plumbing Code",
+    "2021 Uniform Plumbing Code"
+   ],
+   "a": 1,
+   "ref": "ICC release; Ohio BBS",
+   "why": "Ohio adopted the 2021 IPC (with Ohio changes) as the 2024 Ohio Plumbing Code, effective March 1, 2024."
+  },
+  {
+   "t": "elec",
+   "topic": "State licensing",
+   "q": "Under Ohio Rev. Code 4740.06, how many years as a tradesperson must an OCILB exam applicant normally have right before applying?",
+   "c": [
+    "Two years",
+    "Three years",
+    "Four years",
+    "Five years"
+   ],
+   "a": 3,
+   "ref": "Ohio Rev. Code 4740.06(B)",
+   "why": "Ohio requires at least five years as a tradesperson in that trade immediately before applying, or three years for an Ohio-registered engineer."
+  },
+  {
+   "t": "plumb",
+   "topic": "State code adoption",
+   "q": "Effective September 14, 2026, which plumbing code edition is Oklahoma's statewide minimum?",
+   "c": [
+    "2018 IPC",
+    "2021 IPC",
+    "2024 IPC",
+    "2024 UPC"
+   ],
+   "a": 2,
+   "ref": "OAC 748:20-16; CIB news",
+   "why": "The OUBCC adopted the 2024 IPC effective September 14, 2026, replacing the 2018 IPC. Oklahoma never adopted the 2021 IPC."
+  },
+  {
+   "t": "plumb",
+   "topic": "State licensing",
+   "q": "How much plumbing experience does Oklahoma's CIB require for a plumbing journeyman license?",
+   "c": [
+    "One year",
+    "Two years",
+    "Three years",
+    "Five years"
+   ],
+   "a": 2,
+   "ref": "Oklahoma CIB Plumbing License Application",
+   "why": "A plumbing journeyman needs three years of experience while employed by a licensed plumbing contractor. A contractor needs one more year."
+  },
+  {
+   "t": "hvac",
+   "topic": "State licensing",
+   "q": "Under Oklahoma's CIB rules, the HVAC Limited mechanical journeyman category covers cooling equipment up to how many tons?",
+   "c": [
+    "5 tons",
+    "15 tons",
+    "25 tons",
+    "50 tons"
+   ],
+   "a": 2,
+   "ref": "Oklahoma CIB Mechanical Journeyman page",
+   "why": "HVAC Limited covers cooling up to 25 tons and heating up to 500,000 Btu/h per appliance. HVAC Unlimited has no capacity cap."
+  },
+  {
+   "t": "plumb",
+   "topic": "State code adoption",
+   "q": "Which model code is the 2026 Oregon Plumbing Specialty Code based on?",
+   "c": [
+    "2024 International Plumbing Code",
+    "2021 Uniform Plumbing Code",
+    "2024 Uniform Plumbing Code",
+    "National Standard Plumbing Code"
+   ],
+   "a": 2,
+   "ref": "Oregon BCD Plumbing page",
+   "why": "The 2026 OPSC, effective October 1, 2026, is based on the 2024 UPC. The 2023 OPSC was based on the 2021 UPC."
+  },
+  {
+   "t": "elec",
+   "topic": "State code adoption",
+   "q": "Which NEC edition is the 2026 Oregon Electrical Specialty Code based on?",
+   "c": [
+    "2020 NEC",
+    "2023 NEC",
+    "2026 NEC",
+    "2017 NEC"
+   ],
+   "a": 2,
+   "ref": "Oregon BCD Electrical page",
+   "why": "The 2026 OESC is based on the 2026 NEC and took effect October 1, 2026."
+  },
+  {
+   "t": "elec",
+   "topic": "State licensing",
+   "q": "An Oregon General Supervising Electrician (S) applicant must hold a journeyman license (or its qualifications) plus how many more hours of journeyman experience?",
+   "c": [
+    "2,000 hours",
+    "4,000 hours",
+    "6,000 hours",
+    "8,000 hours"
+   ],
+   "a": 3,
+   "ref": "Oregon BCD Form 440-2570i",
+   "why": "The S license requires verification of an additional 8,000 hours of on-the-job journeyman experience."
+  },
+  {
+   "t": "plumb",
+   "topic": "State code adoption",
+   "q": "Since January 1, 2026, which plumbing code does Pennsylvania's statewide Uniform Construction Code use?",
+   "c": [
+    "2018 International Plumbing Code",
+    "2021 International Plumbing Code",
+    "2024 Uniform Plumbing Code",
+    "Pennsylvania has no statewide plumbing code"
+   ],
+   "a": 1,
+   "ref": "Phila. L&I Bulletin B-2501; City of York",
+   "why": "Pennsylvania's UCC moved from the 2018 to the 2021 International Codes, including the 2021 IPC, on January 1, 2026."
+  },
+  {
+   "t": "elec",
+   "topic": "State code adoption",
+   "q": "Which NEC edition is referenced under Pennsylvania's 2021 Uniform Construction Code (effective January 1, 2026)?",
+   "c": [
+    "2017 NEC",
+    "2020 NEC",
+    "2023 NEC",
+    "2026 NEC"
+   ],
+   "a": 1,
+   "ref": "Phila. L&I Bulletin B-2501; City of York",
+   "why": "Both Philadelphia L&I and the City of York list the 2020 NFPA 70 as the electrical standard under the 2021 UCC."
+  },
+  {
+   "t": "plumb",
+   "topic": "State code adoption",
+   "q": "Which plumbing code does Rhode Island adopt as RISBC-3?",
+   "c": [
+    "2021 International Plumbing Code",
+    "2021 Uniform Plumbing Code",
+    "2024 National Standard Plumbing Code",
+    "2018 International Plumbing Code"
+   ],
+   "a": 0,
+   "ref": "RISBC-3 section 3.2",
+   "why": "RISBC-3 adopts the 2021 IPC; the current version of the rule took effect December 1, 2025."
+  },
+  {
+   "t": "elec",
+   "topic": "State licensing",
+   "q": "To take Rhode Island's Class A electrical contractor exam, how long must the applicant have held a Rhode Island journeyperson license?",
+   "c": [
+    "6 months",
+    "1 year",
+    "2 years",
+    "4 years"
+   ],
+   "a": 2,
+   "ref": "RI DLT Electricians License Application",
+   "why": "The journeyperson license must be valid at least two years before applying, with six years of total trade experience."
+  },
+  {
+   "t": "hvac",
+   "topic": "State licensing",
+   "q": "In Rhode Island, a mechanical master license holder may do the sheet metal work without a separate license when the AC air handling equipment is no more than:",
+   "c": [
+    "5 tons",
+    "10 tons",
+    "20 tons",
+    "25 tons"
+   ],
+   "a": 1,
+   "ref": "R.I. Gen. Laws 28-27-5",
+   "why": "The exception covers AC air handling equipment of 10 tons or less or heating equipment of 250,000 BTU or less."
+  },
+  {
+   "t": "elec",
+   "topic": "State code adoption",
+   "q": "Which NEC edition has been mandatory statewide in South Carolina since January 1, 2023?",
+   "c": [
+    "2017 NEC",
+    "2020 NEC",
+    "2023 NEC",
+    "2014 NEC"
+   ],
+   "a": 1,
+   "ref": "SC Building Codes Council",
+   "why": "The SC Building Codes Council adopted the 2020 NEC (with SC changes) on October 6, 2021, effective January 1, 2023."
+  },
+  {
+   "t": "hvac",
+   "topic": "State licensing",
+   "q": "In South Carolina, residential HVAC work over what amount requires a Residential HVAC license?",
+   "c": [
+    "$200",
+    "$500",
+    "$5,000",
+    "$10,000"
+   ],
+   "a": 1,
+   "ref": "SC LLR Residential HVAC License page",
+   "why": "Residential HVAC work over $500 needs the license. Commercial HVAC work over $10,000 falls under the Contractor's Licensing Board."
+  }
+ ]
+}

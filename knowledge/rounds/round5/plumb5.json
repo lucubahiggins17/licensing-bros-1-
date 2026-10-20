@@ -1,0 +1,1733 @@
+{
+ "source": "Round 5 plumbing deep-dive (IPC 2021 tables/sizing, UPC differences labeled UPC) by plumb5",
+ "facts": [
+  {
+   "id": "P5-1",
+   "topic": "Backflow",
+   "trade": "plumb",
+   "state": null,
+   "source": "IPC 2021 Table 608.1 (ICC PMG CodeNotes: Backflow Preventers, 2021 IPC/IRC, iccsafe.org)",
+   "fact": "In IPC 2021 Table 608.1, reduced pressure principle assemblies (ASSE 1013) and double check assemblies (ASSE 1015) are listed in sizes 3/8 in through 16 in. Pressure vacuum breakers (ASSE 1020) and spill-resistant vacuum breakers (ASSE 1056) are listed only in sizes 1/2 in through 2 in.",
+   "status": "verified",
+   "note": "",
+   "keywords": [
+    "Table 608.1",
+    "backflow sizes",
+    "RPZ",
+    "double check",
+    "PVB",
+    "spill-resistant"
+   ]
+  },
+  {
+   "id": "P5-2",
+   "topic": "Backflow",
+   "trade": "plumb",
+   "state": null,
+   "source": "IPC 2021 Table 608.1 (ICC PMG CodeNotes: Backflow Preventers, 2021)",
+   "fact": "A spill-resistant vacuum breaker (SVB, ASSE 1056) is rated for high or low hazard but protects against backsiphonage only, the same rating as a pressure vacuum breaker. Unlike a PVB, it is designed not to spit water from its vent when it is pressurized.",
+   "status": "verified",
+   "note": "The no-spill design is the purpose of the ASSE 1056 device; the table itself lists hazard and backflow type.",
+   "keywords": [
+    "spill-resistant vacuum breaker",
+    "SVB",
+    "ASSE 1056",
+    "backsiphonage",
+    "Table 608.1"
+   ]
+  },
+  {
+   "id": "P5-3",
+   "topic": "Backflow",
+   "trade": "plumb",
+   "state": null,
+   "source": "IPC 2021 Table 608.1 (ICC PMG CodeNotes: Backflow Preventers, 2021)",
+   "fact": "The antisiphon fill valve (ballcock) in a gravity water closet flush tank must meet ASSE 1002 or CSA B125.3. IPC 2021 Table 608.1 rates it for high hazard, backsiphonage only.",
+   "status": "verified",
+   "note": "",
+   "keywords": [
+    "antisiphon fill valve",
+    "ballcock",
+    "ASSE 1002",
+    "flush tank",
+    "backsiphonage"
+   ]
+  },
+  {
+   "id": "P5-4",
+   "topic": "Backflow",
+   "trade": "plumb",
+   "state": null,
+   "source": "IPC 2021 Table 608.1 (ICC PMG CodeNotes: Backflow Preventers, 2021)",
+   "fact": "A dual check valve backflow preventer (ASSE 1024) is a low hazard (pollution) device only, listed in IPC 2021 Table 608.1 in sizes 1/4 in to 1 in. It protects against back pressure and backsiphonage but is not testable like a double check assembly.",
+   "status": "verified",
+   "note": "ASSE 1024 is the standard for dual check valve devices; the CodeNote table lists the device's hazard and size range.",
+   "keywords": [
+    "dual check",
+    "ASSE 1024",
+    "low hazard",
+    "Table 608.1",
+    "residential backflow"
+   ]
+  },
+  {
+   "id": "P5-5",
+   "topic": "Backflow",
+   "trade": "plumb",
+   "state": null,
+   "source": "IPC 2021 Table 608.1 (ICC PMG CodeNotes: Backflow Preventers, 2021)",
+   "fact": "A backflow preventer with an intermediate atmospheric vent (ASSE 1012 or CSA B64.3) is rated for low hazard only, against back pressure or backsiphonage. That is why IPC 2021 allows it on a boiler fill line only when no chemical conditioners are added.",
+   "status": "verified",
+   "note": "",
+   "keywords": [
+    "intermediate atmospheric vent",
+    "ASSE 1012",
+    "boiler feed",
+    "low hazard",
+    "Table 608.1"
+   ]
+  },
+  {
+   "id": "P5-6",
+   "topic": "Backflow",
+   "trade": "plumb",
+   "state": null,
+   "source": "IPC 2021 Table 608.1 (ICC PMG CodeNotes: Backflow Preventers, 2021)",
+   "fact": "Hose connection vacuum breakers (ASSE 1011, sizes 1/2, 3/4 and 1 in) and frost-resistant, automatic-draining vacuum breaker wall hydrants (ASSE 1019, sizes 3/4 and 1 in) are rated in IPC 2021 Table 608.1 for high or low hazard, against backsiphonage or low head back pressure only.",
+   "status": "verified",
+   "note": "",
+   "keywords": [
+    "hose connection vacuum breaker",
+    "ASSE 1011",
+    "ASSE 1019",
+    "wall hydrant",
+    "low head back pressure"
+   ]
+  },
+  {
+   "id": "P5-7",
+   "topic": "Definitions",
+   "trade": "plumb",
+   "state": null,
+   "source": "IPC 2021 Chapter 2 definition (ICC 2021 IPC/UPC Essentials, Session 54, iccsafe.org)",
+   "fact": "Low head back pressure, as used for hose connection devices, means a back pressure of 4.33 psi or less, which equals a 10 ft column of water.",
+   "status": "verified",
+   "note": "",
+   "keywords": [
+    "low head back pressure",
+    "4.33 psi",
+    "10 ft",
+    "hose bibb vacuum breaker",
+    "definition"
+   ]
+  },
+  {
+   "id": "P5-8",
+   "topic": "Backflow",
+   "trade": "plumb",
+   "state": null,
+   "source": "IPC 2021 Table 608.1; ASSE 1001 (ICC PMG CodeNotes: Backflow Preventers, 2021)",
+   "fact": "Pipe-applied atmospheric vacuum breakers (ASSE 1001) are listed in sizes 1/2 in to 4 in for high or low hazard, backsiphonage only. Because an AVB may not stay under continuous pressure for 12 hours or more, no shutoff valve may be placed downstream of it.",
+   "status": "verified",
+   "note": "",
+   "keywords": [
+    "atmospheric vacuum breaker",
+    "AVB",
+    "ASSE 1001",
+    "continuous pressure",
+    "12 hours"
+   ]
+  },
+  {
+   "id": "P5-9",
+   "topic": "Backflow",
+   "trade": "plumb",
+   "state": null,
+   "source": "IPC 2021 Table 608.1 (ICC PMG CodeNotes: Backflow Preventers, 2021)",
+   "fact": "Fire sprinkler detector assemblies have their own standards in IPC 2021 Table 608.1: the double check detector fire protection assembly is ASSE 1048 (low hazard) and the reduced pressure detector fire protection assembly is ASSE 1047 (high or low hazard).",
+   "status": "verified",
+   "note": "",
+   "keywords": [
+    "detector assembly",
+    "ASSE 1048",
+    "ASSE 1047",
+    "fire sprinkler",
+    "backflow"
+   ]
+  },
+  {
+   "id": "P5-10",
+   "topic": "Testing",
+   "trade": "plumb",
+   "state": null,
+   "source": "IPC 2021 312.10.2 (ICC PMG CodeNotes: Backflow Preventers, 2021)",
+   "fact": "Testable backflow assemblies (RP, double check, PVB, spill-resistant VB, detector assemblies and hose connection backflow preventers) must be field tested using the ASSE 5000-series procedures (such as ASSE 5013, 5015, 5020, 5047, 5048, 5052, 5056) or CSA B64.10 / B64.10.1.",
+   "status": "verified",
+   "note": "",
+   "keywords": [
+    "backflow testing",
+    "ASSE 5013",
+    "CSA B64.10",
+    "312.10.2",
+    "field test"
+   ]
+  },
+  {
+   "id": "P5-11",
+   "topic": "Venting",
+   "trade": "plumb",
+   "state": null,
+   "source": "IPC 2021 906.1, Table 906.1 (ICC 2021 Plumbing Venting brochure; ICC Building Safety Journal, Methods of Venting in the 2021 IPC)",
+   "fact": "Stack vents and vent stacks are sized from IPC 2021 Table 906.1 using the drainage stack size, the DFU connected and the vent's developed length. Example: a 3 in stack carrying 102 DFU may use a 1-1/2 in vent only up to 25 ft of developed length; a longer vent must be larger.",
+   "status": "verified",
+   "note": "In the 2015 and earlier IPC this table was numbered 916.1, and Table 906.1 was the trap-to-vent table.",
+   "keywords": [
+    "Table 906.1",
+    "stack vent sizing",
+    "vent stack",
+    "developed length",
+    "102 DFU"
+   ]
+  },
+  {
+   "id": "P5-12",
+   "topic": "Venting",
+   "trade": "plumb",
+   "state": null,
+   "source": "IPC 2021 Table 915.2.2 (ICC 2021 Plumbing Venting brochure)",
+   "fact": "Combination waste and vent pipe capacity (IPC 2021 Table 915.2.2), horizontal branch or stack / connecting to a building drain or subdrain: 2 in = 3 / 4 DFU; 2-1/2 in = 6 / 26; 3 in = 12 / 31; 4 in = 20 / 50; 5 in = 160 / 250; 6 in = 360 / 575.",
+   "status": "verified",
+   "note": "",
+   "keywords": [
+    "combination waste and vent",
+    "Table 915.2.2",
+    "DFU",
+    "sizing",
+    "horizontal wet vent"
+   ]
+  },
+  {
+   "id": "P5-13",
+   "topic": "Venting",
+   "trade": "plumb",
+   "state": null,
+   "source": "IPC 2021 915.2 (ICC 2021 Plumbing Venting brochure)",
+   "fact": "In a combination waste and vent system, the vertical drop (riser) from a fixture to the combination waste and vent pipe may be no more than 8 ft, while the horizontal combination pipe has no length limit. The pipe still may not slope more than 1/2 in per ft.",
+   "status": "verified",
+   "note": "",
+   "keywords": [
+    "combination waste and vent",
+    "8 ft",
+    "vertical riser",
+    "unlimited length",
+    "915.2"
+   ]
+  },
+  {
+   "id": "P5-14",
+   "topic": "Venting",
+   "trade": "plumb",
+   "state": null,
+   "source": "IPC 2021 916.2, 916.3 (ICC 2021 Plumbing Venting brochure)",
+   "fact": "For island fixture venting, the vent (or branch vent for several island fixtures) must rise at least 6 in above the highest island fixture served before it connects to the vent going outdoors. Vent piping below the flood level rim is installed like drainage pipe, sized per 906.2, and needs cleanouts for rodding.",
+   "status": "verified",
+   "note": "",
+   "keywords": [
+    "island fixture vent",
+    "6 in",
+    "kitchen island",
+    "916",
+    "cleanout"
+   ]
+  },
+  {
+   "id": "P5-15",
+   "topic": "Venting",
+   "trade": "plumb",
+   "state": null,
+   "source": "IPC 2021 914.4 (ICC 2021 Plumbing Venting brochure; ICC 2021 IPC/UPC Essentials)",
+   "fact": "The relief vent on a circuit-vented branch (required with four or more water closets) may also serve as the drain for fixtures in the same branch interval, but the discharge into that relief vent is limited to 4 DFU.",
+   "status": "verified",
+   "note": "",
+   "keywords": [
+    "circuit vent",
+    "relief vent",
+    "4 DFU",
+    "914.4",
+    "water closets"
+   ]
+  },
+  {
+   "id": "P5-16",
+   "topic": "Venting",
+   "trade": "plumb",
+   "state": null,
+   "source": "IPC 2021 913.3 (ICC 2021 Plumbing Venting brochure)",
+   "fact": "In a waste stack vent system, the stack vent must be the same size as the waste stack, and any offset in the stack vent must be at least 6 in above the flood level rim of the highest fixture. Offsets in the waste stack itself are not allowed between the lowest and highest fixture connections.",
+   "status": "verified",
+   "note": "",
+   "keywords": [
+    "waste stack vent",
+    "stack vent size",
+    "offset",
+    "913",
+    "6 in"
+   ]
+  },
+  {
+   "id": "P5-17",
+   "topic": "Venting",
+   "trade": "plumb",
+   "state": null,
+   "source": "IPC 2021 917, Table 917.2 (ICC 2021 Plumbing Venting brochure)",
+   "fact": "In an IPC 2021 single stack vent system (Section 917), a 3 in stack may serve no more than two water closets, and a 3 in stack is not permitted taller than 75 ft. Larger stacks are sized by Table 917.2 using stack height and DFU.",
+   "status": "verified",
+   "note": "Single stack venting was added to the IPC in 2015 (as 917).",
+   "keywords": [
+    "single stack vent",
+    "Table 917.2",
+    "3 in stack",
+    "two water closets",
+    "75 ft"
+   ]
+  },
+  {
+   "id": "P5-18",
+   "topic": "Fixture counts",
+   "trade": "plumb",
+   "state": null,
+   "source": "IPC 2021 Table 403.1, A-3 worship (ICC 2021 IPC/UPC Essentials, Session 54)",
+   "fact": "Worked example: a church (Group A-3 place of worship) with 500 occupants splits 250 male / 250 female. Water closets: men 1 per 150 = 250/150 = 1.67, round up to 2; women 1 per 75 = 250/75 = 3.33, round up to 4.",
+   "status": "verified",
+   "note": "",
+   "keywords": [
+    "fixture count",
+    "church",
+    "A-3",
+    "Table 403.1",
+    "water closets",
+    "worked example"
+   ]
+  },
+  {
+   "id": "P5-19",
+   "topic": "Fixture counts",
+   "trade": "plumb",
+   "state": null,
+   "source": "IPC 2021 Table 403.1, A-1 theater (ICC 2021 IPC/UPC Essentials, Session 54)",
+   "fact": "Worked example: a movie theater (Group A-1) with 250 occupants splits 125 male / 125 female. Water closets: men 1 per 125 = 1; women 1 per 65 = 1.9, round up to 2.",
+   "status": "verified",
+   "note": "",
+   "keywords": [
+    "fixture count",
+    "theater",
+    "A-1",
+    "Table 403.1",
+    "1 per 65",
+    "worked example"
+   ]
+  },
+  {
+   "id": "P5-20",
+   "topic": "Fixture counts",
+   "trade": "plumb",
+   "state": null,
+   "source": "IPC 2021 410.2; UPC 2021 415.2 (ICC 2021 IPC/UPC Essentials, Session 54)",
+   "fact": "Under IPC 2021 410.2, drinking fountains are not required where the occupant load is 15 or fewer. The UPC 2021 (415.2) sets that threshold at 30 occupants.",
+   "status": "verified",
+   "note": "",
+   "keywords": [
+    "drinking fountain",
+    "occupant load",
+    "15",
+    "UPC 30",
+    "410.2"
+   ]
+  },
+  {
+   "id": "P5-21",
+   "topic": "UPC differences",
+   "trade": "plumb",
+   "state": null,
+   "source": "IPC 2021 Chapter 2; UPC 2021 Chapter 2 (ICC 2021 IPC/UPC Essentials, Session 54)",
+   "fact": "The IPC defines hot water as water at 110 F or higher. The UPC defines hot water as water at 120 F or higher.",
+   "status": "verified",
+   "note": "",
+   "keywords": [
+    "hot water definition",
+    "110 F",
+    "120 F",
+    "UPC",
+    "IPC"
+   ]
+  },
+  {
+   "id": "P5-22",
+   "topic": "Hot water",
+   "trade": "plumb",
+   "state": null,
+   "source": "IPC 2021 412.10 (ICC 2021 IPC/UPC Essentials, Session 54)",
+   "fact": "Water supplied to pedicure chairs, footbaths and head shampoo sinks must be limited to no more than 120 F by an ASSE 1070 (or CSA B125.3) water temperature limiting device.",
+   "status": "verified",
+   "note": "Numbered 424.10 in the 2018 IPC before Chapter 4 was reorganized.",
+   "keywords": [
+    "pedicure",
+    "footbath",
+    "shampoo sink",
+    "120 F",
+    "ASSE 1070"
+   ]
+  },
+  {
+   "id": "P5-23",
+   "topic": "Hot water",
+   "trade": "plumb",
+   "state": null,
+   "source": "IPC 2021 412.4 (ICC 2021 IPC/UPC Essentials, Session 54)",
+   "fact": "Multiple (gang) showers fed by one tempered water pipe must be controlled by an automatic temperature control mixing valve (ASSE 1069 or CSA B125.3), or each shower must have its own ASSE 1016 valve. Either way the maximum setting is limited to 120 F.",
+   "status": "verified",
+   "note": "Numbered 424.4 in the 2018 IPC.",
+   "keywords": [
+    "gang showers",
+    "ASSE 1069",
+    "mixing valve",
+    "120 F",
+    "412.4"
+   ]
+  },
+  {
+   "id": "P5-24",
+   "topic": "UPC differences",
+   "trade": "plumb",
+   "state": null,
+   "source": "UPC 2021 408.4; IPC 2021 421.3 (ICC 2021 IPC/UPC Essentials, Session 54)",
+   "fact": "The UPC requires a shower drain, trap and fixture drain of at least 2 in. The IPC allows 1-1/2 in for a shower with a total flow of 5.7 gpm or less.",
+   "status": "verified",
+   "note": "",
+   "keywords": [
+    "shower drain",
+    "2 in",
+    "UPC",
+    "1-1/2 in",
+    "trap size"
+   ]
+  },
+  {
+   "id": "P5-25",
+   "topic": "Water heaters",
+   "trade": "plumb",
+   "state": null,
+   "source": "IPC 2021 504.4, 504.5 (ICC 2021 IPC/UPC Essentials, Session 54)",
+   "fact": "A water heater temperature and pressure relief valve may have a temperature setting of no more than 210 F, and a pressure setting no higher than the heater's rated working pressure or 150 psi, whichever is less.",
+   "status": "verified",
+   "note": "",
+   "keywords": [
+    "T&P valve",
+    "210 F",
+    "150 psi",
+    "relief valve setting",
+    "504.5"
+   ]
+  },
+  {
+   "id": "P5-26",
+   "topic": "Water heaters",
+   "trade": "plumb",
+   "state": null,
+   "source": "IPC 2021 504.6 item 14 (ICC Building Safety Journal, CodeNotes: Water Heater Safety in the I-Codes; ICC Session 54)",
+   "fact": "New in the 2021 IPC: where insert fittings are used on relief valve discharge piping (common with PEX), the discharge pipe must be one nominal size larger than the relief valve outlet, and the end of the tubing must be secured.",
+   "status": "verified",
+   "note": "",
+   "keywords": [
+    "relief valve discharge",
+    "insert fittings",
+    "PEX",
+    "one size larger",
+    "504.6"
+   ]
+  },
+  {
+   "id": "P5-27",
+   "topic": "Water supply",
+   "trade": "plumb",
+   "state": null,
+   "source": "IPC 2021 605.4; 504.6 item 13 (ICC Building Safety Journal, CodeNotes: Water Heater Safety in the I-Codes)",
+   "fact": "Water distribution pipe must conform to NSF 61, and hot water distribution pipe and tubing must have a pressure rating of at least 100 psi at 180 F. Relief valve discharge piping must also be a material rated for this service.",
+   "status": "verified",
+   "note": "",
+   "keywords": [
+    "100 psi",
+    "180 F",
+    "NSF 61",
+    "hot water pipe rating",
+    "605.4"
+   ]
+  },
+  {
+   "id": "P5-28",
+   "topic": "Drainage",
+   "trade": "plumb",
+   "state": null,
+   "source": "IPC 2021 704.1 (ICC 2021 IPC/UPC Essentials, Session 54)",
+   "fact": "Under IPC 2021 704.1, horizontal drains that discharge to a grease interceptor must slope at least 1/4 in per ft, even when the pipe is 3 in or larger. This keeps grease-laden waste moving.",
+   "status": "verified",
+   "note": "From an ICC training presentation on the 2021 IPC. Check the local edition, since the general table allows 1/8 in per ft for 3 to 6 in pipe.",
+   "keywords": [
+    "grease interceptor",
+    "slope",
+    "1/4 in per ft",
+    "704.1",
+    "horizontal drain"
+   ]
+  },
+  {
+   "id": "P5-29",
+   "topic": "Sumps & ejectors",
+   "trade": "plumb",
+   "state": null,
+   "source": "IPC 2021 712.4 (ICC 2021 IPC/UPC Essentials, Session 54)",
+   "fact": "Exceptions to the 2 in solids rule for pumps that receive water closet waste: a grinder pump or grinder ejector needs a discharge opening of at least 1-1/4 in, and a macerating toilet assembly serving a single water closet needs a discharge of at least 3/4 in.",
+   "status": "verified",
+   "note": "",
+   "keywords": [
+    "grinder pump",
+    "macerating toilet",
+    "1-1/4 in",
+    "3/4 in",
+    "712.4"
+   ]
+  },
+  {
+   "id": "P5-30",
+   "topic": "Interceptors",
+   "trade": "plumb",
+   "state": null,
+   "source": "IPC 2021 1003.4.2.1; UPC 2021 1017.2 (ICC 2021 IPC/UPC Essentials, Session 54)",
+   "fact": "An oil separator must be at least 2 ft deep below the invert of its discharge drain, and its outlet must have a water seal of at least 18 in. The IPC and UPC agree on both numbers.",
+   "status": "verified",
+   "note": "",
+   "keywords": [
+    "oil separator",
+    "2 ft",
+    "18 in water seal",
+    "1003.4",
+    "repair garage"
+   ]
+  },
+  {
+   "id": "P5-31",
+   "topic": "Water supply",
+   "trade": "plumb",
+   "state": null,
+   "source": "IPC 2021 608.18, Table 608.18.1 (ICC 2021 IPC/UPC Essentials, Session 54)",
+   "fact": "A private well or pump suction line must be kept away from sources of contamination. Examples from IPC 2021 Table 608.18.1: septic tank 25 ft, farm silo 25 ft, subsurface disposal (drain) field 50 ft, barnyard or pasture 100 ft.",
+   "status": "verified",
+   "note": "",
+   "keywords": [
+    "private well",
+    "separation",
+    "septic tank 25 ft",
+    "drain field 50 ft",
+    "Table 608.18.1"
+   ]
+  },
+  {
+   "id": "P5-32",
+   "topic": "Testing",
+   "trade": "plumb",
+   "state": null,
+   "source": "IPC 2021 312.1 (ICC 2021 IPC/UPC Essentials, Session 54)",
+   "fact": "Water used for plumbing tests must come from a potable source.",
+   "status": "verified",
+   "note": "",
+   "keywords": [
+    "test water",
+    "potable",
+    "312.1",
+    "pressure test",
+    "hydrostatic"
+   ]
+  },
+  {
+   "id": "P5-33",
+   "topic": "Water supply",
+   "trade": "plumb",
+   "state": null,
+   "source": "PDI-WH 201 (Watts ES-15 water hammer arrestor spec sheet; Josam Absorbotron catalog)",
+   "fact": "Water hammer arrestors (ASSE 1010) are sized by PDI-WH 201 size symbols using the water supply fixture units on the branch: A = 1 to 11 FU, B = 12 to 32, C = 33 to 60, D = 61 to 113, E = 114 to 154, F = 155 to 330.",
+   "status": "verified",
+   "note": "Industry standard (PDI), not IPC text; IPC 604.9 requires arrestors where quick-closing valves are used.",
+   "keywords": [
+    "water hammer arrestor",
+    "PDI-WH 201",
+    "size A",
+    "fixture units",
+    "ASSE 1010"
+   ]
+  },
+  {
+   "id": "P5-34",
+   "topic": "Water supply",
+   "trade": "plumb",
+   "state": null,
+   "source": "PDI-WH 201 placement rules (Watts ES-15 spec sheet); Josam Absorbotron catalog",
+   "fact": "PDI placement: on a branch up to 20 ft long, one arrestor sized for the whole branch goes at the end of the branch, between the last two fixtures. On a branch over 20 ft, a second arrestor is added so the two together cover the branch fixture units. Arrestors go as close as possible to the quick-closing valve.",
+   "status": "unverified",
+   "note": "20 ft rule confirmed in one manufacturer sheet (Watts); Josam confirms the close-as-possible placement. PDI-WH 201 itself not reviewed.",
+   "keywords": [
+    "water hammer arrestor",
+    "20 ft",
+    "placement",
+    "branch",
+    "quick-closing valve"
+   ]
+  },
+  {
+   "id": "P5-35",
+   "topic": "Flow rates",
+   "trade": "plumb",
+   "state": null,
+   "source": "Energy Policy Act of 1992 / 10 CFR 430.32 (Plumbing Manufacturers International, Summary of Current Plumbing Provisions; Alliance for Water Efficiency, Water Efficiency Standards, Codes and Guidelines, 2019)",
+   "fact": "The federal (EPAct 1992) maximums match IPC 2021 Table 604.4: showerheads 2.5 gpm at 80 psi, lavatory and kitchen faucets 2.2 gpm at 60 psi, water closets 1.6 gallons per flush, and urinals 1.0 gallon per flush. Federal law still allows blowout-type water closets up to 3.5 gpf.",
+   "status": "verified",
+   "note": "",
+   "keywords": [
+    "EPAct",
+    "federal flow rate",
+    "1.6 gpf",
+    "2.5 gpm",
+    "blowout 3.5 gpf"
+   ]
+  },
+  {
+   "id": "P5-36",
+   "topic": "Flow rates",
+   "trade": "plumb",
+   "state": null,
+   "source": "EPA WaterSense specifications (Plumbing Manufacturers International WaterSense summary; Alliance for Water Efficiency, 2019)",
+   "fact": "EPA WaterSense (voluntary) labels require: toilets 1.28 gpf or less, urinals 0.5 gpf or less, lavatory faucets 1.5 gpm or less at 60 psi (but not below 0.8 gpm), and showerheads 2.0 gpm or less. The model IPC requires only the higher Table 604.4 limits, but some states and green codes require WaterSense fixtures.",
+   "status": "verified",
+   "note": "",
+   "keywords": [
+    "WaterSense",
+    "1.28 gpf",
+    "0.5 gpf urinal",
+    "1.5 gpm faucet",
+    "2.0 gpm showerhead"
+   ]
+  },
+  {
+   "id": "P5-37",
+   "topic": "Venting",
+   "trade": "plumb",
+   "state": null,
+   "source": "IPC 2021 Table 906.1 (ICC 2021 Plumbing Venting brochure)",
+   "fact": "IPC 2021 Table 906.1, 2 in drainage stack: with 12 DFU, a 1-1/4 in vent may run 30 ft, a 1-1/2 in vent 75 ft, and a 2 in vent 200 ft of developed length. With 20 DFU, those lengths drop to 26 ft, 50 ft and 150 ft.",
+   "status": "verified",
+   "note": "",
+   "keywords": [
+    "Table 906.1",
+    "2 in stack",
+    "vent length",
+    "stack vent",
+    "DFU"
+   ]
+  },
+  {
+   "id": "P5-38",
+   "topic": "Venting",
+   "trade": "plumb",
+   "state": null,
+   "source": "IPC 2021 Table 906.1 (ICC 2021 Plumbing Venting brochure)",
+   "fact": "IPC 2021 Table 906.1, 3 in drainage stack, maximum vent developed length for 1-1/2 / 2 / 2-1/2 / 3 in vents: 10 DFU = 42 / 150 / 360 / 1,040 ft; 21 DFU = 32 / 110 / 270 / 810 ft; 53 DFU = 27 / 94 / 230 / 680 ft; 102 DFU = 25 / 86 / 210 / 620 ft.",
+   "status": "verified",
+   "note": "",
+   "keywords": [
+    "Table 906.1",
+    "3 in stack",
+    "vent stack",
+    "developed length",
+    "102 DFU"
+   ]
+  },
+  {
+   "id": "P5-39",
+   "topic": "Venting",
+   "trade": "plumb",
+   "state": null,
+   "source": "IPC 2021 Table 906.1 (ICC 2021 Plumbing Venting brochure)",
+   "fact": "IPC 2021 Table 906.1, 4 in drainage stack, maximum vent developed length for 2 / 2-1/2 / 3 / 4 in vents: 43 DFU = 35 / 85 / 250 / 980 ft; 140 DFU = 27 / 65 / 200 / 750 ft; 320 DFU = 23 / 55 / 170 / 640 ft; 540 DFU = 21 / 50 / 150 / 580 ft.",
+   "status": "verified",
+   "note": "",
+   "keywords": [
+    "Table 906.1",
+    "4 in stack",
+    "540 DFU",
+    "vent sizing",
+    "developed length"
+   ]
+  },
+  {
+   "id": "P5-40",
+   "topic": "Venting",
+   "trade": "plumb",
+   "state": null,
+   "source": "IPC 2021 917.4 (ICC 2021 Plumbing Venting brochure; NY DOS Code Outreach Issue 2021-5, Plumbing Vents)",
+   "fact": "In a single stack vent system taller than two branch intervals, horizontal branches may not connect to the stack on the lower two floors. Those fixtures drain to a separate stack that joins the building drain at least 10 pipe diameters downstream. A horizontal branch serving fixtures other than water closets is limited to 12 ft of developed length.",
+   "status": "verified",
+   "note": "NY DOS bulletin covers the 2020 Plumbing Code of New York State, which uses the same IPC Section 917 rules.",
+   "keywords": [
+    "single stack",
+    "lower two floors",
+    "12 ft",
+    "horizontal branch",
+    "917"
+   ]
+  },
+  {
+   "id": "P5-41",
+   "topic": "Venting",
+   "trade": "plumb",
+   "state": null,
+   "source": "IPC 2021 913 (NY DOS Code Outreach Issue 2021-5, Plumbing Vents; ICC 2021 Plumbing Venting brochure)",
+   "fact": "A waste stack vent system may not receive water closet or urinal discharge. The waste stack must be vertical, one size from bottom to top (sized by Table 913.4), with no offsets between the highest and lowest fixture drain connections.",
+   "status": "verified",
+   "note": "",
+   "keywords": [
+    "waste stack vent",
+    "no water closets",
+    "one size",
+    "Table 913.4",
+    "no offsets"
+   ]
+  },
+  {
+   "id": "P5-42",
+   "topic": "Traps",
+   "trade": "plumb",
+   "state": null,
+   "source": "IPC 2021 1002.4.1.5 (ICC Building Safety Journal, Significant Changes to Fixture Drains Serving as a Trap Priming Method in the 2021 IPC)",
+   "fact": "New in the 2021 IPC (1002.4.1.5): the entire waste flow from a lavatory or hand sink may be routed to a floor drain, trench drain or floor sink to keep that trap seal from drying out, as an alternative to a separate trap primer.",
+   "status": "verified",
+   "note": "",
+   "keywords": [
+    "trap primer",
+    "1002.4.1.5",
+    "lavatory",
+    "floor drain",
+    "trap seal evaporation"
+   ]
+  },
+  {
+   "id": "P5-43",
+   "topic": "Medical gas",
+   "trade": "plumb",
+   "state": null,
+   "source": "NFPA 99 pipe labeling colors (Amico pipe marker label specification; Wikipedia, Pipe marking, citing NFPA 99C)",
+   "fact": "NFPA 99 medical gas pipe label colors (text on background): oxygen white on green; medical air black on yellow; nitrous oxide white on blue; nitrogen white on black; medical-surgical vacuum black on white; WAGD white on violet (purple); carbon dioxide black or white on gray; instrument air white on red.",
+   "status": "verified",
+   "note": "Check the edition of NFPA 99 adopted locally.",
+   "keywords": [
+    "medical gas colors",
+    "oxygen green",
+    "NFPA 99",
+    "pipe label",
+    "nitrous oxide blue"
+   ]
+  },
+  {
+   "id": "P5-44",
+   "topic": "Medical gas",
+   "trade": "plumb",
+   "state": null,
+   "source": "NFPA 99 piping labeling (pipemarker.com NFPA 99 guide); IPC 2021 1202.1",
+   "fact": "Medical gas piping labels must appear at intervals of no more than 20 ft, at least once in or above every room, on both sides of walls or partitions the pipe passes through, and at least once in every story height a riser passes through.",
+   "status": "unverified",
+   "note": "Source quotes NFPA 99C (2002); current NFPA 99 keeps similar labeling rules, but confirm the adopted edition.",
+   "keywords": [
+    "medical gas labeling",
+    "20 ft",
+    "each room",
+    "riser",
+    "NFPA 99"
+   ]
+  },
+  {
+   "id": "P5-45",
+   "topic": "Medical gas",
+   "trade": "plumb",
+   "state": null,
+   "source": "NFPA 99 installer testing (Plumbing & Mechanical magazine, Mandatory Testing of Medical Gas Systems)",
+   "fact": "After installation, positive-pressure medical gas piping gets a standing pressure test with oil-free dry nitrogen at 20% above normal line pressure for 24 hours. Final system verification is done by a verifier qualified to ASSE 6030, not by the installer.",
+   "status": "unverified",
+   "note": "Article cites NFPA 99-2002; check the current adopted NFPA 99 edition for exact test values.",
+   "keywords": [
+    "medical gas test",
+    "standing pressure",
+    "24 hours",
+    "20 percent",
+    "ASSE 6030"
+   ]
+  },
+  {
+   "id": "P5-46",
+   "topic": "Interceptors",
+   "trade": "plumb",
+   "state": null,
+   "source": "PDI G-101 sizing method (Josam Interceptor Sizing guide; City of Independence, MO FOG sizing requirements)",
+   "fact": "Hydromechanical grease interceptor sizing by fixture volume (PDI G-101): sink volume in cubic inches (L x W x D) / 231 = gallons; take 75% of that (the rest is displaced by dishes); divide by a 1-minute drain period (2 minutes if allowed) to get gpm, and pick the next larger standard size.",
+   "status": "verified",
+   "note": "Industry method used with IPC 1003.3 hydromechanical interceptors rated by ASME A112.14.3 / PDI G101.",
+   "keywords": [
+    "grease interceptor sizing",
+    "PDI G-101",
+    "231 cubic inches",
+    "75 percent",
+    "1 minute drain"
+   ]
+  },
+  {
+   "id": "P5-47",
+   "topic": "Interceptors",
+   "trade": "plumb",
+   "state": null,
+   "source": "Josam Interceptor Sizing guide (PDI G-101 method worked example)",
+   "fact": "Worked example: a 48 x 24 x 12 in sink holds 13,824 cu in / 231 = 59.8 gallons. At 75%, the load is 44.9 gallons. With a 1-minute drain period that is 44.9 gpm, so a 50 gpm interceptor is chosen; with a 2-minute period it is 22.5 gpm, so a 25 gpm unit.",
+   "status": "verified",
+   "note": "Math checked: 48x24x12 = 13,824; /231 = 59.84; x0.75 = 44.9.",
+   "keywords": [
+    "grease interceptor",
+    "worked example",
+    "50 gpm",
+    "sink volume",
+    "sizing math"
+   ]
+  },
+  {
+   "id": "P5-48",
+   "topic": "Interceptors",
+   "trade": "plumb",
+   "state": null,
+   "source": "IPC 2021 1003.3.5, Table 1003.3.5.1 (ICC 2021 IPC/UPC Essentials); NYC 15 RCNY 19-11(e)",
+   "fact": "A hydromechanical grease interceptor's grease retention capacity in pounds must be at least twice its flow rating in gpm. For example, a 20 gpm interceptor must hold at least 40 lb of grease, and a 50 gpm unit at least 100 lb.",
+   "status": "verified",
+   "note": "The ICC session confirms the IPC table rates retention in pounds; the 2-to-1 ratio is confirmed in the NYC rule and matches the IPC table values.",
+   "keywords": [
+    "grease retention",
+    "pounds",
+    "twice flow rate",
+    "Table 1003.3.5.1",
+    "hydromechanical"
+   ]
+  },
+  {
+   "id": "P5-49",
+   "topic": "Pipe support",
+   "trade": "plumb",
+   "state": null,
+   "source": "IPC 2021 Table 308.5 (Connecticut State Building Inspector code change proposal 22-004 quoting 2021 IPC/IRC hanger tables)",
+   "fact": "IPC 2021 Table 308.5: PE-RT and polypropylene (PP) pipe 1 in and smaller need horizontal support every 2.67 ft (32 in); 1-1/4 in and larger every 4 ft. Vertical support is every 10 ft, with a mid-story guide.",
+   "status": "verified",
+   "note": "",
+   "keywords": [
+    "PE-RT",
+    "polypropylene",
+    "hanger spacing",
+    "32 in",
+    "Table 308.5"
+   ]
+  },
+  {
+   "id": "P5-50",
+   "topic": "Pipe support",
+   "trade": "plumb",
+   "state": null,
+   "source": "IPC 2021 Table 308.5; IRC 2021 Table P2605.1 (Connecticut code change proposal 22-004)",
+   "fact": "CPVC pipe 1 in and smaller needs horizontal support every 3 ft, and CPVC 1-1/4 in and larger every 4 ft. Vertical support is every 10 ft with a mid-story guide.",
+   "status": "verified",
+   "note": "The proposal document shows these values in the IRC table; the IPC row shows 3 ft for both sizes, likely a transcription issue. Confirm against the code book.",
+   "keywords": [
+    "CPVC",
+    "hanger spacing",
+    "3 ft",
+    "4 ft",
+    "Table 308.5"
+   ]
+  },
+  {
+   "id": "P5-51",
+   "topic": "UPC differences",
+   "trade": "plumb",
+   "state": null,
+   "source": "UPC Table 313.3 (as adopted in Minnesota Rules 4714.0313)",
+   "fact": "UPC hanger spacing for copper tube and pipe: 1-1/2 in and smaller every 6 ft horizontally, 2 in and larger every 10 ft; vertically at each floor, not over 10 ft. The IPC uses 6 ft only for 1-1/4 in and smaller copper tubing.",
+   "status": "verified",
+   "note": "Minnesota amends parts of UPC Table 313.3; these rows match the model UPC.",
+   "keywords": [
+    "UPC hangers",
+    "copper",
+    "6 ft",
+    "10 ft",
+    "Table 313.3"
+   ]
+  },
+  {
+   "id": "P5-52",
+   "topic": "UPC differences",
+   "trade": "plumb",
+   "state": null,
+   "source": "UPC Table 313.3 (as adopted in Minnesota Rules 4714.0313)",
+   "fact": "UPC support for hubless cast iron: support every other joint, but at every joint where the pipe is over 4 ft long, with no hanger on the coupling itself. Vertically: at the base and each floor, not over 15 ft.",
+   "status": "verified",
+   "note": "",
+   "keywords": [
+    "UPC",
+    "hubless cast iron",
+    "every other joint",
+    "hanger",
+    "15 ft"
+   ]
+  },
+  {
+   "id": "P5-53",
+   "topic": "UPC differences",
+   "trade": "plumb",
+   "state": null,
+   "source": "UPC Table 313.3 (as adopted in Minnesota Rules 4714.0313)",
+   "fact": "UPC support for steel water or DWV pipe: 3/4 in and smaller every 10 ft, 1 in and larger every 12 ft horizontally; vertically every other floor, not over 25 ft. The IPC uses 12 ft horizontal and 15 ft vertical for all steel pipe.",
+   "status": "verified",
+   "note": "",
+   "keywords": [
+    "UPC",
+    "steel pipe",
+    "hanger spacing",
+    "25 ft",
+    "12 ft"
+   ]
+  },
+  {
+   "id": "P5-54",
+   "topic": "Plumbing math",
+   "trade": "plumb",
+   "state": null,
+   "source": "Plumbing math (grade); IPC 2021 Table 704.1",
+   "fact": "Worked example: a building drain starts at invert elevation 100.00 ft and runs 120 ft at 1/8 in per ft. It falls 120 x 0.125 = 15 in = 1.25 ft, so the downstream invert is 98.75 ft.",
+   "status": "verified",
+   "note": "Derived calculation.",
+   "keywords": [
+    "invert elevation",
+    "fall",
+    "1/8 in per ft",
+    "building drain",
+    "slope math"
+   ]
+  },
+  {
+   "id": "P5-55",
+   "topic": "Plumbing math",
+   "trade": "plumb",
+   "state": null,
+   "source": "Plumbing math (grade)",
+   "fact": "To find slope from a measured fall, divide the fall by the length. A 50 ft drain that drops 6-1/4 in has a slope of 6.25 / 50 = 0.125 in per ft, which is 1/8 in per ft (about 1%).",
+   "status": "verified",
+   "note": "Derived calculation.",
+   "keywords": [
+    "slope",
+    "fall",
+    "inches per foot",
+    "percent grade",
+    "plumbing math"
+   ]
+  },
+  {
+   "id": "P5-56",
+   "topic": "Plumbing math",
+   "trade": "plumb",
+   "state": null,
+   "source": "Plumbing math (hydrostatics); IPC 2021 312.2, 312.3",
+   "fact": "A 10 ft head of water (the IPC DWV water test) puts 10 x 0.433 = 4.33 psi on the lowest joint. The 5 psi air test is roughly equal to 11.5 ft of water head (5 x 2.31).",
+   "status": "verified",
+   "note": "Derived calculation.",
+   "keywords": [
+    "10 ft head",
+    "4.33 psi",
+    "air test",
+    "5 psi",
+    "head pressure"
+   ]
+  },
+  {
+   "id": "P5-57",
+   "topic": "Plumbing math",
+   "trade": "plumb",
+   "state": null,
+   "source": "Plumbing math (weight of water)",
+   "fact": "A 50-gallon water heater holds about 50 x 8.34 = 417 lb of water, plus the weight of the tank. This matters when a heater is placed in an attic or on a platform.",
+   "status": "verified",
+   "note": "Derived calculation.",
+   "keywords": [
+    "water weight",
+    "8.34 lb",
+    "water heater",
+    "attic load",
+    "50 gallon"
+   ]
+  },
+  {
+   "id": "P5-58",
+   "topic": "Plumbing math",
+   "trade": "plumb",
+   "state": null,
+   "source": "Plumbing math (heat): Btu = gallons x 8.34 x temperature rise",
+   "fact": "Heat needed to warm water: Btu = gallons x 8.34 x temperature rise (F). Example: heating 40 gallons from 50 F to 120 F takes 40 x 8.34 x 70 = 23,352 Btu.",
+   "status": "verified",
+   "note": "Derived calculation (1 Btu raises 1 lb of water 1 F).",
+   "keywords": [
+    "Btu",
+    "temperature rise",
+    "water heater",
+    "8.34",
+    "heat formula"
+   ]
+  },
+  {
+   "id": "P5-59",
+   "topic": "Plumbing math",
+   "trade": "plumb",
+   "state": null,
+   "source": "Plumbing math (water heater recovery)",
+   "fact": "Water heater recovery in gallons per hour = output Btu/h / (8.34 x temperature rise). Example: a 40,000 Btu/h burner at 80% efficiency delivers 32,000 Btu/h; with a 90 F rise, recovery = 32,000 / (8.34 x 90) = about 42.6 gph.",
+   "status": "verified",
+   "note": "Derived calculation.",
+   "keywords": [
+    "recovery rate",
+    "gph",
+    "Btu/h",
+    "efficiency",
+    "water heater"
+   ]
+  },
+  {
+   "id": "P5-60",
+   "topic": "Plumbing math",
+   "trade": "plumb",
+   "state": null,
+   "source": "Plumbing math (flow and velocity)",
+   "fact": "Flow in gpm = 2.448 x (inside diameter in inches) squared x velocity in ft per second. Example: a 1 in pipe flowing at 8 fps carries about 2.448 x 1 x 8 = 19.6 gpm.",
+   "status": "verified",
+   "note": "Derived: 448.8 gpm per cfs x 0.005454 sq ft per square inch of diameter = 2.448.",
+   "keywords": [
+    "velocity",
+    "gpm",
+    "fps",
+    "2.448",
+    "pipe flow"
+   ]
+  },
+  {
+   "id": "P5-61",
+   "topic": "Plumbing math",
+   "trade": "plumb",
+   "state": null,
+   "source": "Plumbing math (temperature conversion): C = (F - 32) / 1.8",
+   "fact": "Common plumbing temperatures in Celsius: 110 F = 43 C (tempered water limit), 120 F = 49 C (shower and tub limit), 140 F = 60 C (tankless and master mixing valve limit), 210 F = 99 C (T&P relief setting).",
+   "status": "verified",
+   "note": "Derived calculation, rounded to the nearest degree.",
+   "keywords": [
+    "Fahrenheit",
+    "Celsius",
+    "120 F 49 C",
+    "temperature conversion",
+    "140 F"
+   ]
+  },
+  {
+   "id": "P5-62",
+   "topic": "Plumbing math",
+   "trade": "plumb",
+   "state": null,
+   "source": "Plumbing math (hydrostatics): 1 psi = 2.31 ft of head",
+   "fact": "To get a given static pressure from elevation alone, multiply psi by 2.31. A gravity tank must sit about 20 x 2.31 = 46.2 ft above a fixture to give it 20 psi, before friction loss.",
+   "status": "verified",
+   "note": "Derived calculation.",
+   "keywords": [
+    "gravity tank",
+    "2.31 ft",
+    "elevation",
+    "static pressure",
+    "head"
+   ]
+  },
+  {
+   "id": "P5-63",
+   "topic": "Plumbing math",
+   "trade": "plumb",
+   "state": null,
+   "source": "IPC 2021 709.3; plumbing math",
+   "fact": "Worked example for continuous flow: a 1.5 gpm condensate pump discharging to a sanitary drain counts as 1.5 x 2 = 3 DFU, and a 6 gpm sump pump counts as 12 DFU.",
+   "status": "verified",
+   "note": "Derived from the 2 DFU per gpm rule.",
+   "keywords": [
+    "continuous flow",
+    "2 DFU per gpm",
+    "pump",
+    "DFU math",
+    "709.3"
+   ]
+  },
+  {
+   "id": "P5-64",
+   "topic": "Water supply",
+   "trade": "plumb",
+   "state": null,
+   "source": "IPC 2021 Appendix E, Table E103.3(2) (Town of Eagle, CO plumbing calculation worksheet citing IPC Appendix E; City of Louisville, CO commercial water fixture count form)",
+   "fact": "IPC Appendix E water supply fixture units (WSFU) for a private bathroom group: with a flush tank water closet, 2.7 cold, 1.5 hot, 3.6 total; with a flush valve water closet, 6.0 cold, 3.0 hot, 8.0 total.",
+   "status": "verified",
+   "note": "Confirmed in two municipal sizing documents; the Eagle worksheet cites the 2015 IPC Appendix E, which carries into 2021. Appendix E applies only where adopted.",
+   "keywords": [
+    "WSFU",
+    "bathroom group",
+    "Table E103.3(2)",
+    "Appendix E",
+    "3.6"
+   ]
+  },
+  {
+   "id": "P5-65",
+   "topic": "Water supply",
+   "trade": "plumb",
+   "state": null,
+   "source": "IPC 2021 Appendix E, Table E103.3(2) (Town of Eagle, CO and City of Louisville, CO sizing documents)",
+   "fact": "Private fixture WSFU totals from IPC Table E103.3(2): lavatory 0.7; kitchen sink 1.4; bathtub 1.4; shower head 1.4; clothes washer (8 lb) 1.4; dishwasher 1.4 (hot only); bidet 2.0; water closet with flush tank 2.2; water closet with flush valve 6.0.",
+   "status": "verified",
+   "note": "",
+   "keywords": [
+    "WSFU",
+    "private fixtures",
+    "lavatory 0.7",
+    "water closet 2.2",
+    "Appendix E"
+   ]
+  },
+  {
+   "id": "P5-66",
+   "topic": "Water supply",
+   "trade": "plumb",
+   "state": null,
+   "source": "IPC 2021 Appendix E, Table E103.3(2) (City of Louisville, CO commercial water fixture count form)",
+   "fact": "Public fixture WSFU totals from IPC Table E103.3(2): water closet with flush valve 10; water closet with flush tank 5; urinal with 1 in flush valve 10, 3/4 in flush valve 5, flush tank 3; lavatory 2.0; shower head 4.0; hotel or restaurant kitchen sink 4.0; service sink 3.0.",
+   "status": "verified",
+   "note": "Values match the Town of Eagle worksheet where both list the fixture.",
+   "keywords": [
+    "WSFU",
+    "public fixtures",
+    "flush valve 10",
+    "urinal",
+    "Table E103.3(2)"
+   ]
+  },
+  {
+   "id": "P5-67",
+   "topic": "Water supply",
+   "trade": "plumb",
+   "state": null,
+   "source": "IPC 2021 Appendix E, Table E103.3(2) (City of Louisville, CO commercial water fixture count form)",
+   "fact": "Other WSFU values in IPC Table E103.3(2): hose bibb 2.5; drinking fountain 0.25; water closet with flushometer tank (public or private) 2.0; laundry tray 1.4 (private); public bathtub 4.0.",
+   "status": "verified",
+   "note": "",
+   "keywords": [
+    "WSFU",
+    "hose bibb 2.5",
+    "drinking fountain",
+    "flushometer tank",
+    "laundry tray"
+   ]
+  },
+  {
+   "id": "P5-68",
+   "topic": "Water supply",
+   "trade": "plumb",
+   "state": null,
+   "source": "IPC 2021 Appendix E, Table E103.3(2)",
+   "fact": "In Table E103.3(2), a fixture's total WSFU is less than its cold plus hot values (a private lavatory is 0.5 cold + 0.5 hot but 0.7 total) because both are not drawn at full rate at once. Use the total column to size the building service and cold main, and the hot column to size hot water piping.",
+   "status": "verified",
+   "note": "Values confirmed in municipal sizing documents; the use of each column follows the Appendix E method.",
+   "keywords": [
+    "WSFU",
+    "cold and hot",
+    "total column",
+    "diversity",
+    "service sizing"
+   ]
+  },
+  {
+   "id": "P5-69",
+   "topic": "Water supply",
+   "trade": "plumb",
+   "state": null,
+   "source": "IPC 2021 Appendix E, Table E103.3(2); plumbing math",
+   "fact": "Worked example: a house with two private bathroom groups (flush tank, 3.6 each), a kitchen sink (1.4), a dishwasher (1.4), a clothes washer (1.4) and two hose bibbs (2.5 each) totals 7.2 + 1.4 + 1.4 + 1.4 + 5.0 = 16.4 WSFU. That total is then converted to gpm demand with Table E103.3(3).",
+   "status": "verified",
+   "note": "Derived from the table values above.",
+   "keywords": [
+    "WSFU",
+    "worked example",
+    "house",
+    "16.4",
+    "demand"
+   ]
+  },
+  {
+   "id": "P5-70",
+   "topic": "Disinfection",
+   "trade": "plumb",
+   "state": null,
+   "source": "AWWA C651 (Plastics Pipe Institute TR-34; American Water specification 33 01 10.15); allowed by IPC 2021 610.1",
+   "fact": "AWWA C651 continuous feed method (an allowed alternative to the IPC 610.1 procedure): chlorinate the new main to about 25 mg/L free chlorine, and after 24 hours the residual must still be at least 10 mg/L. The tablet method uses about 25 mg/L held at least 24 hours (48 hours if the water is below 41 F).",
+   "status": "verified",
+   "note": "",
+   "keywords": [
+    "AWWA C651",
+    "continuous feed",
+    "25 mg/L",
+    "10 mg/L residual",
+    "tablet method"
+   ]
+  },
+  {
+   "id": "P5-71",
+   "topic": "Disinfection",
+   "trade": "plumb",
+   "state": null,
+   "source": "AWWA C651 slug method (Plastics Pipe Institute TR-34; American Water specification 33 01 10.15)",
+   "fact": "AWWA C651 slug method: a slug of water at about 100 mg/L free chlorine is moved through the main so every part is exposed for at least 3 hours. If the residual drops below 50 mg/L, flow is stopped and chlorine is added to bring it back to at least 100 mg/L.",
+   "status": "verified",
+   "note": "",
+   "keywords": [
+    "AWWA C651",
+    "slug method",
+    "100 mg/L",
+    "3 hours",
+    "50 mg/L"
+   ]
+  },
+  {
+   "id": "P5-72",
+   "topic": "Water supply",
+   "trade": "plumb",
+   "state": null,
+   "source": "IPC 2021 609.2.1 (ICC Building Safety Journal, Significant Changes to Tracer Wire for Buried Nonmetallic Water Service Piping; ICC 2021 IPC/UPC Essentials)",
+   "fact": "New in the 2021 IPC (609.2.1): buried nonmetallic water service piping serving a hospital (Group I-2, Condition 2) needs a tracer wire at least 18 AWG with insulation listed for direct burial, accessible at each end of the piping.",
+   "status": "verified",
+   "note": "2024 IPC adds a 14 AWG tracer wire for plastic sewer piping (306.2.4).",
+   "keywords": [
+    "tracer wire",
+    "18 AWG",
+    "hospital",
+    "nonmetallic water service",
+    "609.2.1"
+   ]
+  },
+  {
+   "id": "P5-73",
+   "topic": "Cleanouts",
+   "trade": "plumb",
+   "state": null,
+   "source": "IPC 2021 708.1.5 Exception 1, 708.1.6 (ICC Building Safety Journal, Significant Changes to Removable Fixture Traps Serving as Cleanouts)",
+   "fact": "Under the 2021 IPC, a removable P-trap may serve as cleanout access only for drain pipe the same size as the trap or one size larger. New Section 708.1.6 also accepts removable fixtures with integral traps (such as water closets and urinals) as cleanout access, but removing a water closet does not count as the cleanout for a building sewer.",
+   "status": "verified",
+   "note": "",
+   "keywords": [
+    "removable trap",
+    "cleanout",
+    "708.1.6",
+    "P-trap",
+    "water closet"
+   ]
+  },
+  {
+   "id": "P5-74",
+   "topic": "Fixture counts",
+   "trade": "plumb",
+   "state": null,
+   "source": "IPC 2021 403.1.2 (ICC Building Safety Journal, Significant Changes to Fixtures in Single-User Toilet Rooms)",
+   "fact": "Under IPC 2021 403.1.2, fixtures in single-user toilet rooms and bathing rooms count toward the building's total required fixtures. Required fixtures may be in single-user rooms, in rooms separated by sex, or a mix of both.",
+   "status": "verified",
+   "note": "",
+   "keywords": [
+    "single-user toilet room",
+    "fixture count",
+    "403.1.2",
+    "all-gender",
+    "required fixtures"
+   ]
+  },
+  {
+   "id": "P5-75",
+   "topic": "Fixture counts",
+   "trade": "plumb",
+   "state": null,
+   "source": "IPC 2021 403.2 Exception 6; 405.3.4 (ICC Building Safety Journal, Significant Changes to Multiple-User Nonseparated Toilet Facilities)",
+   "fact": "The 2021 IPC (403.2, Exception 6) allows multiple-user toilet rooms designed to serve both sexes. Each water closet must be in a private compartment per 405.3.4, and any urinals in such a room must be in stalls.",
+   "status": "verified",
+   "note": "",
+   "keywords": [
+    "all-gender toilet room",
+    "multiple-user",
+    "403.2",
+    "compartment",
+    "urinal stall"
+   ]
+  }
+ ],
+ "questions": [
+  {
+   "t": "plumb",
+   "topic": "Backflow",
+   "q": "Under IPC 2021 Table 608.1, a spill-resistant vacuum breaker (ASSE 1056) protects against:",
+   "c": [
+    "Backsiphonage only",
+    "Back pressure only",
+    "Both back pressure and backsiphonage",
+    "Low hazard back pressure only"
+   ],
+   "a": 0,
+   "ref": "IPC 2021 Table 608.1",
+   "why": "Like a pressure vacuum breaker, the SVB is rated for high or low hazard but backsiphonage only."
+  },
+  {
+   "t": "plumb",
+   "topic": "Backflow",
+   "q": "The antisiphon fill valve in a gravity toilet tank must comply with which standard?",
+   "c": [
+    "ASSE 1001",
+    "ASSE 1002",
+    "ASSE 1013",
+    "ASSE 1024"
+   ],
+   "a": 1,
+   "ref": "IPC 2021 Table 608.1",
+   "why": "Antisiphon fill valves for gravity flush tanks are ASSE 1002 (or CSA B125.3) devices."
+  },
+  {
+   "t": "plumb",
+   "topic": "Definitions",
+   "q": "Low head back pressure is back pressure of no more than:",
+   "c": [
+    "0.433 psi",
+    "2.31 psi",
+    "4.33 psi",
+    "10 psi"
+   ],
+   "a": 2,
+   "ref": "IPC 2021 Ch. 2 definitions",
+   "why": "Low head back pressure is 4.33 psi or less, equal to a 10 ft column of water."
+  },
+  {
+   "t": "plumb",
+   "topic": "Water heaters",
+   "q": "The maximum temperature setting allowed for a water heater temperature relief valve is:",
+   "c": [
+    "180 F",
+    "200 F",
+    "210 F",
+    "220 F"
+   ],
+   "a": 2,
+   "ref": "IPC 2021 504.5",
+   "why": "T&P valves may be set no higher than 210 F, and no higher than 150 psi or the heater's rating."
+  },
+  {
+   "t": "plumb",
+   "topic": "Water heaters",
+   "q": "Relief valve discharge piping made with insert fittings (such as PEX) must be:",
+   "c": [
+    "The same size as the valve outlet",
+    "One nominal size larger than the valve outlet",
+    "At least 1 in regardless of outlet size",
+    "Two nominal sizes larger than the valve outlet"
+   ],
+   "a": 1,
+   "ref": "IPC 2021 504.6 item 14",
+   "why": "Insert fittings reduce the bore, so the 2021 IPC requires the pipe to be one nominal size larger than the outlet."
+  },
+  {
+   "t": "plumb",
+   "topic": "Venting",
+   "q": "Per IPC 2021 Table 915.2.2, a 3 in combination waste and vent pipe serving as a horizontal branch may carry up to:",
+   "c": [
+    "6 DFU",
+    "12 DFU",
+    "20 DFU",
+    "31 DFU"
+   ],
+   "a": 1,
+   "ref": "IPC 2021 Table 915.2.2",
+   "why": "A 3 in horizontal combination waste and vent carries 12 DFU; 31 DFU applies when it connects to a building drain."
+  },
+  {
+   "t": "plumb",
+   "topic": "Fixture counts",
+   "q": "A church (A-3 worship) has 500 occupants. How many water closets are required for women (1 per 75)?",
+   "c": [
+    "3",
+    "4",
+    "5",
+    "7"
+   ],
+   "a": 1,
+   "ref": "IPC 2021 Table 403.1",
+   "why": "Half the load is 250 women; 250/75 = 3.33, which rounds up to 4."
+  },
+  {
+   "t": "plumb",
+   "topic": "UPC differences",
+   "q": "Under the UPC, the minimum size of a shower drain and trap is:",
+   "c": [
+    "1-1/4 in",
+    "1-1/2 in",
+    "2 in",
+    "3 in"
+   ],
+   "a": 2,
+   "ref": "UPC 2021 408.4",
+   "why": "The UPC requires a 2 in shower drain and trap; the IPC allows 1-1/2 in for most showers."
+  },
+  {
+   "t": "plumb",
+   "topic": "Interceptors",
+   "q": "The outlet of an oil separator must have a water seal of at least:",
+   "c": [
+    "6 in",
+    "12 in",
+    "18 in",
+    "24 in"
+   ],
+   "a": 2,
+   "ref": "IPC 2021 1003.4.2.1",
+   "why": "Oil separators need at least an 18 in water seal and must be at least 2 ft deep below the discharge invert."
+  },
+  {
+   "t": "plumb",
+   "topic": "Water supply",
+   "q": "A PDI size C water hammer arrestor is rated for a branch load of:",
+   "c": [
+    "1 to 11 fixture units",
+    "12 to 32 fixture units",
+    "33 to 60 fixture units",
+    "61 to 113 fixture units"
+   ],
+   "a": 2,
+   "ref": "PDI-WH 201",
+   "why": "PDI sizes run A (1-11), B (12-32), C (33-60), D (61-113), E (114-154), F (155-330)."
+  },
+  {
+   "t": "plumb",
+   "topic": "Hot water",
+   "q": "Gang showers supplied by one tempered water pipe may be controlled by an automatic temperature control mixing valve meeting:",
+   "c": [
+    "ASSE 1010",
+    "ASSE 1016",
+    "ASSE 1069",
+    "ASSE 1070"
+   ],
+   "a": 2,
+   "ref": "IPC 2021 412.4",
+   "why": "ASSE 1069 covers automatic temperature control mixing valves for gang showers, limited to 120 F."
+  },
+  {
+   "t": "plumb",
+   "topic": "Sumps & ejectors",
+   "q": "A grinder pump that receives water closet waste must have a discharge opening of at least:",
+   "c": [
+    "3/4 in",
+    "1-1/4 in",
+    "2 in",
+    "3 in"
+   ],
+   "a": 1,
+   "ref": "IPC 2021 712.4",
+   "why": "Grinder pumps are an exception to the 2 in solids rule and need at least a 1-1/4 in discharge."
+  },
+  {
+   "t": "plumb",
+   "topic": "Flow rates",
+   "q": "What is the WaterSense maximum flush volume for a toilet?",
+   "c": [
+    "1.0 gpf",
+    "1.28 gpf",
+    "1.6 gpf",
+    "2.0 gpf"
+   ],
+   "a": 1,
+   "ref": "EPA WaterSense specification",
+   "why": "WaterSense toilets use 1.28 gpf or less; the IPC and federal limit is 1.6 gpf."
+  },
+  {
+   "t": "plumb",
+   "topic": "Flow rates",
+   "q": "Federal law still allows which type of water closet to use up to 3.5 gallons per flush?",
+   "c": [
+    "Flushometer tank",
+    "Dual-flush",
+    "Blowout",
+    "Wall-hung siphon jet"
+   ],
+   "a": 2,
+   "ref": "10 CFR 430.32 (EPAct 1992)",
+   "why": "Blowout water closets are the federal exception at 3.5 gpf; others are limited to 1.6 gpf."
+  },
+  {
+   "t": "plumb",
+   "topic": "Venting",
+   "q": "Per IPC 2021 Table 906.1, a 3 in stack with 102 DFU may use a 2 in vent stack up to what developed length?",
+   "c": [
+    "25 ft",
+    "86 ft",
+    "210 ft",
+    "620 ft"
+   ],
+   "a": 1,
+   "ref": "IPC 2021 Table 906.1",
+   "why": "For a 3 in stack at 102 DFU: 1-1/2 in = 25 ft, 2 in = 86 ft, 2-1/2 in = 210 ft, 3 in = 620 ft."
+  },
+  {
+   "t": "plumb",
+   "topic": "Venting",
+   "q": "Per IPC 2021 Table 906.1, a 4 in stack carrying 540 DFU with a 3 in vent stack may have a vent developed length up to:",
+   "c": [
+    "50 ft",
+    "150 ft",
+    "580 ft",
+    "750 ft"
+   ],
+   "a": 1,
+   "ref": "IPC 2021 Table 906.1",
+   "why": "At 540 DFU on a 4 in stack, a 3 in vent may run 150 ft; a 4 in vent may run 580 ft."
+  },
+  {
+   "t": "plumb",
+   "topic": "Venting",
+   "q": "Which fixtures may NOT discharge into a waste stack vent system?",
+   "c": [
+    "Lavatories",
+    "Kitchen sinks",
+    "Water closets and urinals",
+    "Floor drains"
+   ],
+   "a": 2,
+   "ref": "IPC 2021 913",
+   "why": "A waste stack vent carries waste only; water closets and urinals are not allowed to connect."
+  },
+  {
+   "t": "plumb",
+   "topic": "Medical gas",
+   "q": "Under NFPA 99, an oxygen pipe label has:",
+   "c": [
+    "Black letters on yellow",
+    "White letters on blue",
+    "White letters on green",
+    "Black letters on white"
+   ],
+   "a": 2,
+   "ref": "NFPA 99 labeling colors",
+   "why": "Oxygen is white on green; medical air is black on yellow and nitrous oxide is white on blue."
+  },
+  {
+   "t": "plumb",
+   "topic": "Interceptors",
+   "q": "When sizing a hydromechanical grease interceptor by sink volume (PDI method), what percentage of the sink volume is used as the drainage load?",
+   "c": [
+    "50%",
+    "75%",
+    "90%",
+    "100%"
+   ],
+   "a": 1,
+   "ref": "PDI G-101 sizing method",
+   "why": "Sinks are assumed 75% full because dishes displace about 25% of the water."
+  },
+  {
+   "t": "plumb",
+   "topic": "Interceptors",
+   "q": "A 25 gpm hydromechanical grease interceptor must have a grease retention capacity of at least:",
+   "c": [
+    "12.5 lb",
+    "25 lb",
+    "50 lb",
+    "75 lb"
+   ],
+   "a": 2,
+   "ref": "IPC 2021 Table 1003.3.5.1",
+   "why": "Grease retention capacity in pounds must be at least twice the flow rating in gpm: 25 x 2 = 50 lb."
+  },
+  {
+   "t": "plumb",
+   "topic": "Pipe support",
+   "q": "Under IPC 2021 Table 308.5, 3/4 in PE-RT tubing must be supported horizontally at least every:",
+   "c": [
+    "24 in",
+    "32 in",
+    "4 ft",
+    "6 ft"
+   ],
+   "a": 1,
+   "ref": "IPC 2021 Table 308.5",
+   "why": "PE-RT (like PEX and PP) 1 in and smaller needs support every 2.67 ft, which is 32 in."
+  },
+  {
+   "t": "plumb",
+   "topic": "UPC differences",
+   "q": "Under the UPC, horizontal support spacing for 1-1/2 in copper tube is:",
+   "c": [
+    "4 ft",
+    "6 ft",
+    "10 ft",
+    "12 ft"
+   ],
+   "a": 1,
+   "ref": "UPC Table 313.3",
+   "why": "The UPC uses 6 ft for copper 1-1/2 in and smaller and 10 ft for 2 in and larger."
+  },
+  {
+   "t": "plumb",
+   "topic": "Plumbing math",
+   "q": "A drain runs 120 ft at 1/8 in per ft from an invert of 100.00 ft. What is the downstream invert?",
+   "c": [
+    "98.75 ft",
+    "99.00 ft",
+    "98.50 ft",
+    "97.50 ft"
+   ],
+   "a": 0,
+   "ref": "Plumbing math (grade)",
+   "why": "120 x 1/8 in = 15 in = 1.25 ft of fall, so 100.00 - 1.25 = 98.75 ft."
+  },
+  {
+   "t": "plumb",
+   "topic": "Plumbing math",
+   "q": "How many Btu does it take to heat 40 gallons of water from 50 F to 120 F?",
+   "c": [
+    "2,800 Btu",
+    "16,680 Btu",
+    "23,352 Btu",
+    "33,360 Btu"
+   ],
+   "a": 2,
+   "ref": "Btu = gal x 8.34 x temp rise",
+   "why": "40 x 8.34 x 70 F = 23,352 Btu."
+  },
+  {
+   "t": "plumb",
+   "topic": "Plumbing math",
+   "q": "About how many gpm flow through a 1 in pipe at 8 ft per second?",
+   "c": [
+    "8 gpm",
+    "12 gpm",
+    "19.6 gpm",
+    "32 gpm"
+   ],
+   "a": 2,
+   "ref": "gpm = 2.448 x d^2 x fps",
+   "why": "2.448 x 1 squared x 8 = 19.6 gpm."
+  },
+  {
+   "t": "plumb",
+   "topic": "Plumbing math",
+   "q": "A 6 gpm sump pump discharging continuously into a sanitary drain counts as how many DFU?",
+   "c": [
+    "3 DFU",
+    "6 DFU",
+    "12 DFU",
+    "18 DFU"
+   ],
+   "a": 2,
+   "ref": "IPC 2021 709.3",
+   "why": "Continuous flow is counted at 2 DFU per gpm, so 6 x 2 = 12 DFU."
+  },
+  {
+   "t": "plumb",
+   "topic": "Water supply",
+   "q": "Under IPC Appendix E, the total water supply fixture unit value for a private bathroom group with a flush tank water closet is:",
+   "c": [
+    "2.2",
+    "3.6",
+    "5.0",
+    "8.0"
+   ],
+   "a": 1,
+   "ref": "IPC 2021 Table E103.3(2)",
+   "why": "A private bathroom group with a flush tank is 3.6 WSFU total (8.0 with a flush valve)."
+  },
+  {
+   "t": "plumb",
+   "topic": "Water supply",
+   "q": "Per IPC Table E103.3(2), a public water closet with a flush valve is rated at how many WSFU?",
+   "c": [
+    "2.2",
+    "5",
+    "6",
+    "10"
+   ],
+   "a": 3,
+   "ref": "IPC 2021 Table E103.3(2)",
+   "why": "Public flush valve water closets are 10 WSFU; public flush tank closets are 5."
+  },
+  {
+   "t": "plumb",
+   "topic": "Water supply",
+   "q": "Per IPC Table E103.3(2), a hose bibb is rated at:",
+   "c": [
+    "1.0 WSFU",
+    "1.4 WSFU",
+    "2.5 WSFU",
+    "4.0 WSFU"
+   ],
+   "a": 2,
+   "ref": "IPC 2021 Table E103.3(2)",
+   "why": "A hose bibb counts as 2.5 water supply fixture units."
+  },
+  {
+   "t": "plumb",
+   "topic": "Disinfection",
+   "q": "Using the AWWA C651 continuous feed method, after 24 hours the free chlorine residual must be at least:",
+   "c": [
+    "1 mg/L",
+    "10 mg/L",
+    "25 mg/L",
+    "50 mg/L"
+   ],
+   "a": 1,
+   "ref": "AWWA C651",
+   "why": "The main is dosed to about 25 mg/L, and at least 10 mg/L must remain after 24 hours."
+  },
+  {
+   "t": "plumb",
+   "topic": "Water supply",
+   "q": "Under IPC 2021 609.2.1, tracer wire for a hospital's buried nonmetallic water service must be at least:",
+   "c": [
+    "10 AWG",
+    "14 AWG",
+    "18 AWG",
+    "22 AWG"
+   ],
+   "a": 2,
+   "ref": "IPC 2021 609.2.1",
+   "why": "The 2021 IPC requires at least 18 AWG tracer wire listed for direct burial."
+  },
+  {
+   "t": "plumb",
+   "topic": "Cleanouts",
+   "q": "Under the 2021 IPC, a removable P-trap may serve as cleanout access for drain pipe that is:",
+   "c": [
+    "Any size",
+    "The same size or one size larger than the trap",
+    "Two sizes larger than the trap",
+    "Only 4 in and larger"
+   ],
+   "a": 1,
+   "ref": "IPC 2021 708.1.5",
+   "why": "A removable P-trap counts as cleanout access only for pipe of the same size or one size larger."
+  }
+ ]
+}
