@@ -1,14 +1,14 @@
 # Licensing Bro's knowledge base
 
-Generated 2026-10-20. **3209 facts** (2877 verified, 75 corrected, 257 flagged as unconfirmed) and **933 new practice questions** (128 Business & Law, shown to every trade; 234 General Contractor; 238 Electrical; 170 Plumbing; 163 HVAC).
+Generated 2026-10-20. **3508 facts** (3162 verified, 75 corrected, 271 flagged as unconfirmed) and **1042 new practice questions** (128 Business & Law, shown to every trade; 234 General Contractor; 238 Electrical; 225 Plumbing; 217 HVAC).
 
 | Trade | Facts |
 |---|---|
 | Electrical | 808 |
 | General contractor | 807 |
 | Business & Law | 685 |
-| Plumbing | 478 |
-| HVAC / Mechanical | 431 |
+| Plumbing | 627 |
+| HVAC / Mechanical | 581 |
 
 State-specific rules: 51 jurisdictions, 635 facts.
 
@@ -17,7 +17,7 @@ State-specific rules: 51 jurisdictions, 635 facts.
 
 **Round 4 (October 2026: Electrical, Plumbing, HVAC and all 50 states plus DC).** Written in original wording from the model codes and regulations (NEC 2023 with 2020 differences noted, IPC 2021 with UPC 2021 differences, IMC and IFGC 2021, EPA 40 CFR Part 82 Subpart F, OSHA) and, for state rules, from state licensing boards, statutes and PSI/Prometric candidate bulletins. Each batch was then checked by a separate reviewer who had not written it, which corrected, removed or flagged items before they were added. Files: `knowledge/rounds/round4/` and `knowledge/audits/result_round4_*.json`.
 
-In all, 217 facts were changed in review.
+In all, 260 facts were changed in review.
 
 - **verified**: confirmed correct as written.
 - **corrected**: the flashcard's answer was wrong or outdated; the fact states the correct rule, and the note says what the card claimed.
@@ -28,7 +28,7 @@ Figures that change every year (OSHA penalty maximums, payroll tax wage bases, i
 ## How the app uses it
 - **AI tutor**: before answering, it looks up the most relevant facts for the student's question, trade and state (`supabase/functions/_shared/kb.ts`) and builds the answer on them, citing their source.
 - **AI-written exams and flashcards**: the generator is handed a random spread of checked facts and must build most questions on them.
-- **Verified question bank**: the 933 questions in `lib/kb-questions.json` are added to the built-in bank, so they work offline.
+- **Verified question bank**: the 1042 questions in `lib/kb-questions.json` are added to the built-in bank, so they work offline.
 - State-specific facts (licensing thresholds, exams, lien deadlines and more for every state) only appear for students who pick that state. Plumbing answers rank the student's own code (IPC or UPC) first.
 
 ## Coverage by topic
@@ -94,112 +94,119 @@ Figures that change every year (OSHA penalty maximums, payroll tax wage bases, i
 | General contractor · Site work & concrete | 109 |
 | General contractor · Steel & trusses | 46 |
 | General contractor · Wood framing | 22 |
-| HVAC / Mechanical · A2L refrigerants | 1 |
-| HVAC / Mechanical · AIM Act / Technology Transitions | 2 |
+| HVAC / Mechanical · A2L refrigerants | 2 |
+| HVAC / Mechanical · AIM Act / Technology Transitions | 7 |
 | HVAC / Mechanical · Access & service space | 4 |
+| HVAC / Mechanical · Air filters | 1 |
 | HVAC / Mechanical · Attic access | 5 |
-| HVAC / Mechanical · Boilers | 5 |
-| HVAC / Mechanical · Chimney & vent termination | 7 |
+| HVAC / Mechanical · Boilers | 6 |
+| HVAC / Mechanical · Chimney & vent termination | 10 |
+| HVAC / Mechanical · Clearance reduction | 4 |
 | HVAC / Mechanical · Combustion air | 16 |
-| HVAC / Mechanical · Commercial kitchen | 14 |
+| HVAC / Mechanical · Commercial kitchen | 15 |
 | HVAC / Mechanical · Compressors | 3 |
-| HVAC / Mechanical · Condensate | 15 |
+| HVAC / Mechanical · Condensate | 16 |
+| HVAC / Mechanical · Cooling towers | 1 |
 | HVAC / Mechanical · Diagnostics | 3 |
-| HVAC / Mechanical · Dryer exhaust | 13 |
+| HVAC / Mechanical · Dryer exhaust | 16 |
 | HVAC / Mechanical · Duct design | 2 |
-| HVAC / Mechanical · Duct systems | 11 |
+| HVAC / Mechanical · Duct insulation | 3 |
+| HVAC / Mechanical · Duct systems | 19 |
 | HVAC / Mechanical · EPA 608 Type I | 3 |
 | HVAC / Mechanical · EPA 608 Type II | 1 |
 | HVAC / Mechanical · EPA 608 Type III | 3 |
-| HVAC / Mechanical · EPA 608 certification | 6 |
-| HVAC / Mechanical · EPA 608 cylinders | 5 |
-| HVAC / Mechanical · EPA 608 definitions | 1 |
-| HVAC / Mechanical · EPA 608 disposal | 3 |
-| HVAC / Mechanical · EPA 608 equipment | 1 |
-| HVAC / Mechanical · EPA 608 evacuation | 9 |
-| HVAC / Mechanical · EPA 608 leak repair | 9 |
+| HVAC / Mechanical · EPA 608 certification | 11 |
+| HVAC / Mechanical · EPA 608 cylinders | 6 |
+| HVAC / Mechanical · EPA 608 definitions | 8 |
+| HVAC / Mechanical · EPA 608 disposal | 4 |
+| HVAC / Mechanical · EPA 608 equipment | 2 |
+| HVAC / Mechanical · EPA 608 evacuation | 13 |
+| HVAC / Mechanical · EPA 608 leak repair | 16 |
 | HVAC / Mechanical · EPA 608 pressure classes | 2 |
 | HVAC / Mechanical · EPA 608 reclamation | 1 |
 | HVAC / Mechanical · EPA 608 recordkeeping | 1 |
-| HVAC / Mechanical · EPA 608 recovery practice | 2 |
-| HVAC / Mechanical · EPA 608 sales restriction | 4 |
-| HVAC / Mechanical · EPA 608 venting | 4 |
+| HVAC / Mechanical · EPA 608 recovery practice | 3 |
+| HVAC / Mechanical · EPA 608 sales restriction | 7 |
+| HVAC / Mechanical · EPA 608 venting | 5 |
 | HVAC / Mechanical · EPA 608 | 4 |
-| HVAC / Mechanical · EPA ER&R (HFC) | 4 |
-| HVAC / Mechanical · Efficiency standards | 9 |
+| HVAC / Mechanical · EPA ER&R (HFC) | 8 |
+| HVAC / Mechanical · Efficiency standards | 10 |
 | HVAC / Mechanical · Efficiency | 1 |
-| HVAC / Mechanical · Electrical for HVAC | 10 |
+| HVAC / Mechanical · Electrical for HVAC | 14 |
 | HVAC / Mechanical · Energy code (controls) | 2 |
 | HVAC / Mechanical · Energy code (ducts) | 6 |
 | HVAC / Mechanical · Energy code (piping) | 1 |
-| HVAC / Mechanical · Equipment location | 8 |
+| HVAC / Mechanical · Equipment location | 10 |
 | HVAC / Mechanical · Exhaust termination | 6 |
 | HVAC / Mechanical · Fan laws | 3 |
-| HVAC / Mechanical · Fire & smoke dampers | 4 |
-| HVAC / Mechanical · Fuel gas piping | 15 |
-| HVAC / Mechanical · Fuel gas sizing | 4 |
+| HVAC / Mechanical · Fire & smoke dampers | 7 |
+| HVAC / Mechanical · Fuel gas piping | 18 |
+| HVAC / Mechanical · Fuel gas sizing | 9 |
 | HVAC / Mechanical · Fuel gas testing | 6 |
-| HVAC / Mechanical · Fuel gas | 3 |
+| HVAC / Mechanical · Fuel gas | 4 |
 | HVAC / Mechanical · Heat fundamentals | 2 |
 | HVAC / Mechanical · Heat pumps | 3 |
-| HVAC / Mechanical · Hydronics | 7 |
+| HVAC / Mechanical · Hydronics | 13 |
 | HVAC / Mechanical · IMC definitions | 8 |
 | HVAC / Mechanical · Kitchen exhaust | 2 |
 | HVAC / Mechanical · Listing & installation | 2 |
 | HVAC / Mechanical · Load & airflow | 11 |
-| HVAC / Mechanical · Load calculation | 7 |
+| HVAC / Mechanical · Load calculation | 9 |
 | HVAC / Mechanical · Metering devices | 4 |
 | HVAC / Mechanical · Ozone & regulation history | 3 |
-| HVAC / Mechanical · Plenums | 2 |
+| HVAC / Mechanical · Piping support | 1 |
+| HVAC / Mechanical · Plenums | 3 |
 | HVAC / Mechanical · Pressure units | 2 |
 | HVAC / Mechanical · Psychrometrics | 8 |
 | HVAC / Mechanical · Refrigerant safety groups | 3 |
-| HVAC / Mechanical · Refrigerants | 4 |
-| HVAC / Mechanical · Refrigeration code | 8 |
+| HVAC / Mechanical · Refrigerants | 5 |
+| HVAC / Mechanical · Refrigeration code | 20 |
 | HVAC / Mechanical · Refrigeration cycle | 12 |
-| HVAC / Mechanical · Refrigeration practice | 2 |
-| HVAC / Mechanical · Return air | 2 |
+| HVAC / Mechanical · Refrigeration practice | 3 |
+| HVAC / Mechanical · Return air | 7 |
 | HVAC / Mechanical · Roof access | 5 |
 | HVAC / Mechanical · Smoke detection | 3 |
 | HVAC / Mechanical · Space heating | 1 |
+| HVAC / Mechanical · Specific appliances | 1 |
+| HVAC / Mechanical · Specific gas appliances | 11 |
 | HVAC / Mechanical · Static pressure | 2 |
-| HVAC / Mechanical · System components | 1 |
+| HVAC / Mechanical · System components | 2 |
 | HVAC / Mechanical · Under-floor access | 3 |
-| HVAC / Mechanical · Vent connectors | 8 |
-| HVAC / Mechanical · Ventilation | 14 |
+| HVAC / Mechanical · Vent connectors | 11 |
+| HVAC / Mechanical · Ventilation | 22 |
 | HVAC / Mechanical · Venting categories | 2 |
-| HVAC / Mechanical · Venting | 4 |
+| HVAC / Mechanical · Venting | 15 |
 | Plumbing · Accessibility | 13 |
-| Plumbing · Backflow | 16 |
+| Plumbing · Backflow | 27 |
 | Plumbing · Backwater valves | 2 |
-| Plumbing · Cleanouts | 8 |
+| Plumbing · Cleanouts | 9 |
 | Plumbing · Combustion air | 6 |
 | Plumbing · Condensate | 2 |
 | Plumbing · DFU / sizing | 1 |
-| Plumbing · Definitions | 30 |
-| Plumbing · Disinfection | 2 |
-| Plumbing · Drainage | 27 |
-| Plumbing · Fixture counts | 11 |
-| Plumbing · Fixtures | 30 |
-| Plumbing · Flow rates | 2 |
+| Plumbing · Definitions | 31 |
+| Plumbing · Disinfection | 4 |
+| Plumbing · Drainage | 33 |
+| Plumbing · Fixture counts | 28 |
+| Plumbing · Fixtures | 32 |
+| Plumbing · Flow rates | 4 |
 | Plumbing · Fuel gas | 35 |
-| Plumbing · General regulations | 14 |
-| Plumbing · Hot water | 7 |
+| Plumbing · General regulations | 16 |
+| Plumbing · Hot water | 9 |
 | Plumbing · Indirect waste | 11 |
-| Plumbing · Interceptors | 7 |
-| Plumbing · Medical gas | 3 |
-| Plumbing · Nonpotable water | 3 |
-| Plumbing · Pipe support | 11 |
-| Plumbing · Plumbing math | 16 |
-| Plumbing · Storm drainage | 12 |
-| Plumbing · Sumps & ejectors | 6 |
-| Plumbing · Testing | 10 |
-| Plumbing · Traps | 9 |
+| Plumbing · Interceptors | 11 |
+| Plumbing · Medical gas | 6 |
+| Plumbing · Nonpotable water | 4 |
+| Plumbing · Pipe support | 13 |
+| Plumbing · Plumbing math | 59 |
+| Plumbing · Storm drainage | 13 |
+| Plumbing · Sumps & ejectors | 7 |
+| Plumbing · Testing | 13 |
+| Plumbing · Traps | 10 |
 | Plumbing · Trench safety | 14 |
-| Plumbing · UPC differences | 12 |
-| Plumbing · Venting | 42 |
-| Plumbing · Water heaters | 21 |
-| Plumbing · Water supply | 21 |
+| Plumbing · UPC differences | 18 |
+| Plumbing · Venting | 61 |
+| Plumbing · Water heaters | 25 |
+| Plumbing · Water supply | 36 |
 
 ## State-specific facts by state
 | State | Facts |
@@ -337,7 +344,7 @@ These are worth knowing as a selling point: the free study sets your competitors
 | PAYR-042 | The IRS groups federal business taxes into income tax, estimated tax, self-employment tax, employment taxes and excise taxes. Property tax is not a federal tax, but state and local governments levy it, and businesses owning real estate (and in many states equipment and other tangible business personal property) must pay it. | Card says property tax is generally not a business tax. It is not one of the federal business tax categories, but businesses routinely owe state/local property tax on real property and, in many states including Tennessee, on tangible business personal property. |
 | PAYR-045 | IRS Pub 15-T gives two manual withholding methods: the wage bracket method (look up the pay-period wage in tables by filing status; covers wages up to about $100,000 a year) and the percentage method (works for any wage). Separate tables apply to Forms W-4 from 2020 or later, which use no allowances, and to older W-4s still on file that claim allowances; table amounts change every year. | Card asks for withholding for a married employee with '3 exemptions' and gives $32 from an older Circular E table. Withholding tables now live in Pub 15-T and change annually, and the 2020 and later Form W-4 has no exemptions or allowances, so that dollar answer cannot be reused; always use the current year's tables. |
 
-## Flagged for review (257)
+## Flagged for review (271)
 Have a licensed reviewer (or the state bulletin) confirm these, then change `status` to `verified` for that ID in `supabase/functions/_shared/kb.json` (or in the CSV, then copy back) and run `node scripts/kb-report.mjs`.
 
 | ID | State | Fact | Why it's flagged |
@@ -456,14 +463,11 @@ Have a licensed reviewer (or the state bulletin) confirm these, then change `sta
 | STEE-046 | — | Small penetrations through steel deck (about 6 in, removing one rib) may need no reinforcing or only a light plate, somewhat larger holes get thicker reinforcing plates, and large openings must be framed with members extending past the opening as designed by the project engineer. | Card gives a specific schedule (0.045-in and 0.057-in plates, framing above 13 in) and a C4x5.4 frame detail for 24-in openings; these are handbook or manufacturer details, not code, so the figures could not be confirmed. |
 | PROJ-043 | — | In the NASCLA guide's description of project roles, the project manager is responsible for monitoring the project's compliance with building and safety codes. | Based on the practice-test answer key, not confirmed against the guide text. On real jobs this duty is shared: the superintendent and safety staff enforce day-to-day compliance on site and the building official inspects, with the PM overseeing at the project level. |
 | CONT-057 | — | When drawings and specifications conflict, the NASCLA guide teaches following the stricter (more demanding) requirement; in practice the contract's order-of-precedence clause controls, and the contractor should report the conflict to the architect and get a written clarification. | Contract dependent. AIA A201-2017 1.2.1 treats the contract documents as complementary with no order of precedence, and 3.2.2 requires the contractor to report inconsistencies it finds; many general conditions say specifications govern over drawings or that the more stringent requirement applies. |
-| ROOF-025 | — | Permanent equipment-access ladders are required to have rungs spaced no more than 14 inches on center, at least 18 inches between rails, and at least 6 inches of toe clearance behind the rungs. | Recalled values; could not confirm the full ladder list against 2021 text. |
 | EXHA-004 | — | Exhaust outlets for ducts carrying explosive or flammable vapors, fumes or dusts must be at least 30 ft from property lines, 10 ft from operable openings, 6 ft from exterior walls and roofs, 30 ft from combustible walls or openings in the discharge direction, and 10 ft above grade. | Recalled list; not confirmed against 2021 text. |
 | COMM-014 | — | Unlisted wall-mounted canopy hoods are commonly required to exhaust 200 cfm per linear foot for light-duty, 300 for medium-duty, 400 for heavy-duty and 550 for extra-heavy-duty appliances. | Recalled table values; not confirmed for the 2021 edition, and listed hoods (UL 710) use their listed rates. |
 | ENER-025 | — | The thermostat for a dwelling's primary heating or cooling system must be programmable by time and day, and is initially set by the manufacturer to no higher than 70 degrees F for heating and no lower than 78 degrees F for cooling. | Programmable-thermostat requirement confirmed for 2021; the 70/78 initial set points are from prior editions and were not re-confirmed. |
-| VENT-027 | — | A vent connector entering a masonry chimney must enter at least 12 inches above the lowest portion of the interior of the chimney flue and may not extend past the inner face of the chimney liner. | Could not confirm a 12-inch-above-flue-bottom entry rule in IFGC 503.10. The code text says the connector must enter above the extreme bottom of the chimney to avoid stoppage and must not extend so far that it restricts the flue. |
 | CHIM-006 | — | Mechanical draft vent terminals must be at least 12 inches above finished grade and at least 7 ft above grade where located next to public walkways. | The 12-inch-above-grade rule is in IFGC 503.8. The 7-ft public-walkway rule comes from NFPA 54, and I could not confirm it in the 2021 IFGC text. |
 | HYDR-002 | — | Ground-source heat pump loop piping must be pressure tested with water at 100 psi for 15 minutes with no observed leaks before trenches are backfilled. | Confirmed for the 2024 IMC (1210.10); not confirmed for the 2021 edition. |
-| AIMA-002 | — | A final rule published May 26, 2026 removed the installation deadline (originally January 1, 2026) for residential and light commercial AC and heat pump systems with GWP of 700 or more that were manufactured or imported before January 1, 2025, so remaining legacy R-410A systems may still be installed. | As reported by Holland & Knight, May 2026; check for later changes. |
 | REFR-011 | — | The allowable refrigerant charge for an occupied space is the table limit (pounds per 1,000 cubic feet) times the room volume divided by 1,000. Example: R-410A at 26 lb per 1,000 cu ft in a 20 x 20 x 10 ft (4,000 cu ft) room allows 26 x 4,000 / 1,000 = 104 lb. | Calculation method confirmed; the R-410A table value (26 lb/1,000 cu ft) was confirmed only from a 2024-edition study source. |
 | ALRE-001 | — | Many A2L split systems (R-454B, R-32) are required by their UL 60335-2-40 listing to include a refrigerant leak detection system that, when it senses a leak, runs the indoor blower to dilute the refrigerant and disables the compressor and other potential ignition sources. | Requirement depends on charge size and equipment type; follow the listing and manufacturer instructions. |
 | LOAD-018 | — | Manual S generally limits single-speed air conditioners and heat pumps (cooling) to a total capacity of 90 to 115 percent of the calculated total cooling load, with larger allowances for multi-stage and variable-speed equipment. | Limits vary by Manual S edition and equipment type; confirm with the current Manual S. |
@@ -599,6 +603,23 @@ Have a licensed reviewer (or the state bulletin) confirm these, then change `sta
 | STAT-586 | West Virginia | West Virginia's State Building Code is State Fire Commission rule 87 CSR 4. The version effective August 1, 2022, still listed as active by the Secretary of State in October 2026, adopts the 2020 NEC along with the 2018 IBC, IRC, IPC and IMC. A newer version is listed as in progress, and some 2026 city ordinances say a 2024-edition update with the 2023 NEC took effect July 29, 2026, so confirm the current edition with the State Fire Marshal. | Not confirmed on an official state code page. Some 2026 local ordinances (e.g., Buckhannon) cite a 2024-edition update of 87 CSR 4 with the 2023 NEC, but the state effective date could not be confirmed. Electrical exams still use the 2020 NEC. |
 | STAT-587 | West Virginia | The August 1, 2022 version of West Virginia's State Building Code (87 CSR 4) adopted the 2018 International Plumbing Code and 2018 International Mechanical Code. The Secretary of State still listed that version as active in October 2026, but some 2026 city ordinances say a 2024-edition update (2024 IPC and IMC) took effect July 29, 2026, so confirm the current edition with the State Fire Marshal. | Not confirmed on an official state code page. A 2024-edition update (2024 IPC and IMC) appears in some 2026 local ordinances, but the state effective date was not confirmed. The plumbing contractor exam references the IPC (STAT-462). |
 | STAT-592 | Wyoming | The Wyoming State Fire Marshal's electrical safety page lists the 2026 National Electrical Code as the electrical code that applies in Wyoming. Before that, Wyoming used the 2023 NEC, effective July 1, 2023. | The official page lists the 2026 NEC but gives no effective date. The July 1, 2023 date for the 2023 NEC is from IAEI (https://www.iaei.org/wyoming-electrical-ceus). Check the current exam edition with the State Fire Marshal or PSI. |
+| REFR-037 | — | IMC 2021 1105.6.3.1: during occupied conditions, normal ventilation of a refrigeration machinery room (non-ammonia) must exhaust the larger of (1) at least 0.5 cfm per sq ft of machinery room area or 20 cfm per person, or (2) the airflow needed to limit the room temperature rise to 18 F, counting the heat from all machinery in the room. | Numbers agree with Seattle's code and ASHRAE 15, but Seattle amends this section ([S]); model 2021 IMC wording not seen directly. Seattle's unoccupied 0.25 cfm/sq ft rate is not confirmed as model text. |
+| ALRE-002 | — | The 2024 IMC adds A2L/B2L piping rules: tubing for these refrigerants that is less than 1-1/2 inches from the edge of a stud or joist needs a steel shield plate at least 0.0575 inch (No. 16 gage), and a naturally ventilated shaft carrying the piping needs a vent pipe at least 4 inches in diameter from the lowest point to outdoors. | Seen in Seattle's adopted Chapter 11, which follows the 2024 IMC layout; not confirmed against the 2024 IMC text itself. Not in the 2021 IMC. |
+| WATE-048 | — | PDI placement: on a branch up to 20 ft long, one arrestor sized for the whole branch goes at the end of the branch, between the last two fixtures. On a branch over 20 ft, a second arrestor is added so the two together cover the branch fixture units. Arrestors go as close as possible to the quick-closing valve. | 20 ft rule confirmed in one manufacturer sheet (Watts); Josam confirms the close-as-possible placement. PDI-WH 201 itself not reviewed. |
+| MEDI-005 | — | Medical gas piping labels must appear at intervals of no more than 20 ft, at least once in or above every room, on both sides of walls or partitions the pipe passes through, and at least once in every story height a riser passes through. | Source quotes NFPA 99C (2002); current NFPA 99 keeps similar labeling rules, but confirm the adopted edition. |
+| MEDI-006 | — | After installation, positive-pressure medical gas piping gets a standing pressure test with oil-free dry nitrogen at 20% above normal line pressure for 24 hours. Final system verification is done by a verifier qualified to ASSE 6030, not by the installer. | Article cites NFPA 99-2002; check the current adopted NFPA 99 edition for exact test values. |
+| VENT-110 | — | The Table 909.1 trap-to-vent distance limits do not apply to self-siphoning fixtures such as water closets. The developed length from a water closet's trap weir to its vent is not limited by that table. | Could not reach the IPC 2021 code text during research (ICC Digital Codes and UpCodes pages were not readable); stated from the published 909.1 exception. Confirm in the code book. |
+| WATE-056 | — | The pressure-reducing valve required when static pressure exceeds 80 psi must conform to ASSE 1003 or CSA B356 and must include a strainer. | Code text not reachable during research; standard numbers stated from the published 604.8. Confirm in the code book. |
+| WATE-057 | — | Unfired hot water storage tanks must be insulated to at least R-12.5. | Code text not reachable during research; confirm in the code book. |
+| WATE-058 | — | A drain valve must be installed at the bottom of every tank-type water heater and hot water storage tank. Its inlet must be at least 3/4 in nominal iron pipe size, and its outlet must have hose threads. | Code text not reachable during research; confirm in the code book. |
+| STOR-013 | — | Storm leaders and conductors may not be used as soil, waste or vent pipes, and soil, waste or vent pipes may not be used as storm conductors. | Code text not reachable during research; subsection number not confirmed. |
+| GENE-059 | — | Plastic pipe, fittings and plastic pipe-related components must be third-party certified as conforming to NSF 14. Pipe and fittings that carry potable water must also meet NSF 61. | Code text not reachable during research; subsection number not confirmed. |
+| GENE-060 | — | Required plumbing inspections include an underground inspection (after trenches are dug and bedded and pipe is installed, before backfill), a rough-in inspection (after the roof, framing, firestopping and bracing are in place, before covering), and a final inspection after the work is complete. | Code text not reachable during research; confirm wording in the code book. |
+| DRAI-033 | — | Hub-and-spigot cast-iron soil pipe joints use compression gaskets meeting ASTM C564. Hubless cast-iron joints use shielded couplings meeting CISPI 310, ASTM C1277 or ASTM C1540. | Code text not reachable during research; subsection numbers not confirmed. |
+| WATE-059 | — | Soldered copper water joints must use flux meeting ASTM B813 and lead-free solder meeting ASTM B32, and must be made following ASTM B828. | Code text not reachable during research; subsection numbers not confirmed. |
+| WATE-060 | — | Each plastic has its own solvent cement standard: PVC cement meets ASTM D2564 (with ASTM F656 primer), CPVC cement meets ASTM F493, and ABS cement meets ASTM D2235. Solvent-cement joints between different types of plastic are prohibited. | Code text not reachable during research; PVC standards and the mixed-plastic prohibition are already in the existing knowledge base. |
+| WATE-061 | — | Joints between copper or copper-alloy tubing and galvanized steel pipe must be made with a copper-alloy (brass) fitting or a dielectric fitting or union meeting ASSE 1079, to limit galvanic corrosion. | Code text not reachable during research; subsection number not confirmed. |
+| VENT-111 | — | Where drainage piping is roughed in for future fixtures, a vent rough-in must also be installed. It must be at least one-half the diameter of the rough-in drain it will serve and be marked to show it is a vent. | Code text not reachable during research; section number recalled from the 2018/2021 IPC. Confirm in the code book. |
 
 ## Adding or fixing content
 - The live files are `supabase/functions/_shared/kb.json` (facts) and `lib/kb-questions.json` (questions). Small fixes: edit them directly.
