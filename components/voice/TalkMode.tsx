@@ -35,10 +35,10 @@ type Phase = "idle" | "listening" | "thinking" | "speaking";
 type Msg = { role: "user" | "assistant"; content: string };
 
 const STARTERS: Record<TradeKey, string[]> = {
-  gc: ["Quiz me on fall protection", "Markup versus margin?", "How do lien waivers work?"],
-  elec: ["Quiz me on GFCI rules", "How do I size a grounding conductor?", "Explain voltage drop"],
-  plumb: ["Quiz me on trap rules", "How do fixture units work?", "When do I need a pressure-reducing valve?"],
-  hvac: ["Superheat versus subcooling?", "Quiz me on EPA 608", "How many BTUs are in a ton?"]
+  gc: ["Quiz me on fall protection", "How do I frame a window opening?", "Markup versus margin?"],
+  elec: ["Quiz me on GFCI rules", "How do I wire a 3-way switch?", "Explain voltage drop"],
+  plumb: ["Quiz me on trap rules", "How do I set a toilet flange?", "When do I need a pressure-reducing valve?"],
+  hvac: ["Superheat versus subcooling?", "Why would a furnace short-cycle?", "Quiz me on EPA 608"]
 };
 const CONTEXT_STARTERS = ["Explain this simply", "Quiz me on this", "What's most likely on the exam?"];
 
@@ -463,7 +463,7 @@ export default function TalkMode({ open, onClose, context, title, initialQuestio
       <div className={s.captions} ref={capRef} aria-live="polite">
         {!msgs.length && !heard && (
           <div className={s.empty}>
-            <p>{context ? "Ask about this, or tap a suggestion." : `Ask anything about the ${state} ${TRADES[trade]} exam. Talk like you would to a buddy on the job site.`}</p>
+            <p>{context ? "Ask about this, or tap a suggestion." : `Ask anything about the ${state} ${TRADES[trade]} exam or the job site. Talk like you would to a buddy on the crew.`}</p>
             <div className={s.starters}>
               {starters.map((t) => <button key={t} type="button" className={s.starter} onClick={() => { primeSpeech(); ask(t); }}>{t}</button>)}
             </div>

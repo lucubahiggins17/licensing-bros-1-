@@ -201,3 +201,15 @@ Deno.test("clear-voice listening: transcription settings, address and reply clea
   assert.equal(transcriptText('{"text":"Thanks for watching!"}'), "");
   assert.equal(transcriptText('{"text":"Contractor licensing exam prep with Bro. NEC, GFCI"}'), "");
 });
+
+import { needsFreshInfo } from "../../supabase/functions/_shared/logic.ts";
+import { tutorParts } from "../../supabase/functions/_shared/common.ts";
+Deno.test("construction questions: Bro answers field questions and searches for things that change", () => {
+  for (const q of ["How much does a yard of concrete cost?", "What's the price of 2x4s right now?", "Which brand of PEX crimp tool is best?", "Any recalls on that breaker?", "Cost per square foot to frame a garage?"]) assert.ok(needsFreshInfo(q), q);
+  for (const q of ["How do I frame a window opening?", "What's the max span for a 2x10 joist at 16 inches?", "How do I wire a 3-way switch?"]) assert.ok(!needsFreshInfo(q), q);
+  const { system } = tutorParts("Tennessee", "General Contractor", "IBC/IRC 2021", "", { calculator: true });
+  assert.ok(system.includes("answer any construction question"));
+  assert.ok(system.includes("FIELD ANSWERS"));
+  assert.ok(system.includes("engineer must size it"));
+  assert.ok(system.includes('"On the exam:"'));
+});

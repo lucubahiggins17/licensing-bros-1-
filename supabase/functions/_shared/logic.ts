@@ -1050,3 +1050,7 @@ export function describeAiError(e: any): string {
 /** Whether a failed AI call is worth retrying after a short pause (busy, overloaded, rate limited, network). */
 // deno-lint-ignore no-explicit-any
 export const retryableAiError = (e: any) => [408, 409, 429, 500, 502, 503, 504, 529].includes(Number(e?.status)) || /network|timeout|socket|ECONNRESET|terminated/i.test(String(e?.message || ""));
+
+/** Questions about things that change (prices, products, recalls, this year's rules): worth a web search. */
+const FRESH = /\b(prices?|pricing|costs?|how much (does|do|is|are|would|will)|per (square|sq\.?|linear|lin\.?|cubic|board) ?(foot|feet|ft|yards?|yd)|cheapest|latest|newest|current(ly)?|this year|right now|today|recalls?|lead times?|in stock|availability|which (brand|product|model)|best (brand|product|model)|202[4-9])\b/i;
+export const needsFreshInfo = (question: string) => FRESH.test(question || "");

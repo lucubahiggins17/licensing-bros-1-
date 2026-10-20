@@ -31,7 +31,7 @@ import { searchLibrary } from "../_shared/library.ts";
 import { gapReason } from "../_shared/researchLogic.ts";
 import { background, logGap } from "../_shared/research.ts";
 import { streamAnswer } from "../_shared/answer.ts";
-import { describeAiError, retryableAiError } from "../_shared/logic.ts";
+import { describeAiError, needsFreshInfo, retryableAiError } from "../_shared/logic.ts";
 
 type Turn = { role: "user" | "assistant"; content: string };
 const INTERRUPTED = "\n\n[The answer was interrupted. Try again.]";
@@ -71,8 +71,9 @@ Deno.serve(handler(async (req) => {
     Promise.resolve(searchFacts(lookup, { trade, state, limit: 12 })),
     searchLibrary(lookup, { trade, state, limit: 6 }).catch(() => [])
   ]);
-  const webSearch = needsStateCheck(`${question} ${context}`, facts);
   const lastQuestion = turns[turns.length - 1].content;
+  // Search the web for state rules, and for things that change (prices, products, recalls)
+  const webSearch = needsStateCheck(`${question} ${context}`, facts) || needsFreshInfo(lastQuestion);
   // Questions the notes didn't cover well go on the research desk's list (the question only, nothing about the student)
   if (!admin && !hasImage && !context) {
     const reason = gapReason({ question: lastQuestion, facts, library, state, stateSensitive: needsStateCheck(lastQuestion) });
@@ -84,7 +85,7 @@ Deno.serve(handler(async (req) => {
   const coach = typeof body.coach === "string" ? body.coach.replace(/[<>]/g, "").replace(/\s+/g, " ").trim().slice(0, 400) : "";
   const studentContext = [context, coach ? `Their study record: ${coach}` : ""].filter(Boolean).join("\n\n");
   const { system, notes } = tutorParts(state, tradeName, refs, notesText, { voice, context: studentContext, webSearch, calculator: true });
-  const maxTokens = voice ? 600 : webSearch ? 1800 : 1400;
+  const maxTokens = voice ? 600 : webSearch ? 1900 : 1600;
 
   // Messages: earlier turns as-is (cached), the latest question carries the notes and any photo
   // deno-lint-ignore no-explicit-any

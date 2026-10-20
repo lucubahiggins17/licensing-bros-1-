@@ -15,10 +15,10 @@ import s from "./Study.module.css";
 type Msg = { role: "user" | "assistant"; content: string; error?: any };
 
 const STARTERS: Record<string, string[]> = {
-  gc: ["Quiz me on OSHA fall protection", "Explain retainage vs. lien waivers", "How do I calculate concrete yards?", "What's the difference between markup and margin?"],
-  elec: ["How do I size an EGC?", "Walk me through a box-fill calculation", "When is GFCI required in a garage?", "Quiz me on voltage drop"],
-  plumb: ["How do I size a drain using DFUs?", "Explain trap arms and venting", "When is a PRV required?", "Quiz me on water heater rules"],
-  hvac: ["Explain superheat vs. subcooling", "What's on the EPA 608 Core section?", "How do I size a duct for 400 CFM?", "Quiz me on refrigerant recovery"]
+  gc: ["Quiz me on OSHA fall protection", "How do I frame a window opening?", "How many yards of concrete for a 20x30 slab, 4 inches?", "What's the difference between markup and margin?", "Explain retainage vs. lien waivers"],
+  elec: ["How do I size an EGC?", "How do I wire a 3-way switch?", "When is GFCI required in a garage?", "Walk me through a box-fill calculation", "Quiz me on voltage drop"],
+  plumb: ["How do I size a drain using DFUs?", "How do I set a toilet flange right?", "When is a PRV required?", "Explain trap arms and venting", "Quiz me on water heater rules"],
+  hvac: ["Explain superheat vs. subcooling", "How do I troubleshoot a short-cycling furnace?", "How do I size a duct for 400 CFM?", "What's on the EPA 608 Core section?", "Quiz me on refrigerant recovery"]
 };
 
 export default function Tutor({ draft, clearDraft }: { draft: string; clearDraft: () => void }) {
@@ -202,7 +202,7 @@ export default function Tutor({ draft, clearDraft }: { draft: string; clearDraft
             <svg viewBox="0 0 24 24"><rect x="9" y="3" width="6" height="11" rx="3" /><path d="M5 11a7 7 0 0 0 14 0M12 18v3" /></svg>
           </button>
           <label htmlFor="ask" hidden>Your question</label>
-          <textarea id="ask" ref={taRef} rows={1} value={input} placeholder="e.g. How do I size the EGC for a 60 A circuit?"
+          <textarea id="ask" ref={taRef} rows={1} value={input} placeholder="Ask about your exam or the job site, e.g. How do I size the EGC for a 60 A circuit?"
             onChange={(e) => setInput(e.target.value)}
             onKeyDown={(e) => { if (e.key === "Enter" && !e.shiftKey) { e.preventDefault(); send(); } }} />
           {busy
