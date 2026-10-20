@@ -30,6 +30,8 @@ State-specific rules: ${states.length} jurisdictions, ${F.filter((f) => f.state)
 
 **Round 4 (October 2026: Electrical, Plumbing, HVAC and all 50 states plus DC).** Written in original wording from the model codes and regulations (NEC 2023 with 2020 differences noted, IPC 2021 with UPC 2021 differences, IMC and IFGC 2021, EPA 40 CFR Part 82 Subpart F, OSHA) and, for state rules, from state licensing boards, statutes and PSI/Prometric candidate bulletins. Each batch was then checked by a separate reviewer who had not written it, which corrected, removed or flagged items before they were added. Files: \`knowledge/rounds/round4/\` and \`knowledge/audits/result_round4_*.json\`.
 
+**Round 5 (October 2026: deeper trade code coverage and state trade licensing).** About 840 more facts and 290 questions: NEC 2023 tables, calculations and special occupancies; 2021 IRC/IBC, ADA, concrete, roofing, estimating and current business and tax law; IFGC/IMC 2021 and the EPA AIM Act rules through 2026; IPC 2021 sizing with UPC differences; and every state's electrical, plumbing and mechanical code editions and trade licensing (with 2026 effective dates). Each section was checked by an independent reviewer on official sources (state agency pages, eCFR, Federal Register, IRS, DOL); reviewers fixed about 145 facts and 22 questions, removed local amendments that had been passed off as model code, and corrected 8 facts already in the knowledge base. New facts whose numbers differed from a similar existing fact were held for a person to check before being added. Files: \`knowledge/rounds/round5/\` and \`knowledge/audits/result_round5_*.json\`.
+
 In all, ${F.filter((f) => f.reviewed).length} facts were changed in review.
 
 - **verified**: confirmed correct as written.

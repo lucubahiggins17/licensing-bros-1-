@@ -1,23 +1,25 @@
 # Licensing Bro's knowledge base
 
-Generated 2026-10-20. **3508 facts** (3162 verified, 75 corrected, 271 flagged as unconfirmed) and **1042 new practice questions** (128 Business & Law, shown to every trade; 234 General Contractor; 238 Electrical; 225 Plumbing; 217 HVAC).
+Generated 2026-10-20. **3626 facts** (3275 verified, 75 corrected, 276 flagged as unconfirmed) and **1075 new practice questions** (128 Business & Law, shown to every trade; 234 General Contractor; 253 Electrical; 238 Plumbing; 222 HVAC).
 
 | Trade | Facts |
 |---|---|
-| Electrical | 808 |
+| Electrical | 852 |
 | General contractor | 807 |
 | Business & Law | 685 |
-| Plumbing | 627 |
-| HVAC / Mechanical | 581 |
+| Plumbing | 664 |
+| HVAC / Mechanical | 618 |
 
-State-specific rules: 51 jurisdictions, 635 facts.
+State-specific rules: 51 jurisdictions, 753 facts.
 
 ## Where it came from
 **Rounds 1–3 (General Contractor, Business & Law, Georgia).** Seven student-made NASCLA study sets (about 2,000 flashcards on OSHA safety, building codes, construction practice and contractor business law) were used only as a map of which topics the exam covers. Nothing was copied. Each card's underlying fact was checked against the actual source (OSHA 29 CFR 1926/1904, IBC 2021, IRC 2021, ADA 2010 Standards, IRS, DOL, USCIS, EPA and FAR rules, AIA A201, and accounting and contract-law fundamentals), then rewritten in original wording. A second, independent review then rechecked every question and every verified or corrected fact, correcting the ones that needed it.
 
 **Round 4 (October 2026: Electrical, Plumbing, HVAC and all 50 states plus DC).** Written in original wording from the model codes and regulations (NEC 2023 with 2020 differences noted, IPC 2021 with UPC 2021 differences, IMC and IFGC 2021, EPA 40 CFR Part 82 Subpart F, OSHA) and, for state rules, from state licensing boards, statutes and PSI/Prometric candidate bulletins. Each batch was then checked by a separate reviewer who had not written it, which corrected, removed or flagged items before they were added. Files: `knowledge/rounds/round4/` and `knowledge/audits/result_round4_*.json`.
 
-In all, 260 facts were changed in review.
+**Round 5 (October 2026: deeper trade code coverage and state trade licensing).** About 840 more facts and 290 questions: NEC 2023 tables, calculations and special occupancies; 2021 IRC/IBC, ADA, concrete, roofing, estimating and current business and tax law; IFGC/IMC 2021 and the EPA AIM Act rules through 2026; IPC 2021 sizing with UPC differences; and every state's electrical, plumbing and mechanical code editions and trade licensing (with 2026 effective dates). Each section was checked by an independent reviewer on official sources (state agency pages, eCFR, Federal Register, IRS, DOL); reviewers fixed about 145 facts and 22 questions, removed local amendments that had been passed off as model code, and corrected 8 facts already in the knowledge base. New facts whose numbers differed from a similar existing fact were held for a person to check before being added. Files: `knowledge/rounds/round5/` and `knowledge/audits/result_round5_*.json`.
+
+In all, 304 facts were changed in review.
 
 - **verified**: confirmed correct as written.
 - **corrected**: the flashcard's answer was wrong or outdated; the fact states the correct rule, and the note says what the card claimed.
@@ -28,7 +30,7 @@ Figures that change every year (OSHA penalty maximums, payroll tax wage bases, i
 ## How the app uses it
 - **AI tutor**: before answering, it looks up the most relevant facts for the student's question, trade and state (`supabase/functions/_shared/kb.ts`) and builds the answer on them, citing their source.
 - **AI-written exams and flashcards**: the generator is handed a random spread of checked facts and must build most questions on them.
-- **Verified question bank**: the 1042 questions in `lib/kb-questions.json` are added to the built-in bank, so they work offline.
+- **Verified question bank**: the 1075 questions in `lib/kb-questions.json` are added to the built-in bank, so they work offline.
 - State-specific facts (licensing thresholds, exams, lien deadlines and more for every state) only appear for students who pick that state. Plumbing answers rank the student's own code (IPC or UPC) first.
 
 ## Coverage by topic
@@ -211,33 +213,33 @@ Figures that change every year (OSHA penalty maximums, payroll tax wage bases, i
 ## State-specific facts by state
 | State | Facts |
 |---|---|
-| Alabama | 13 |
-| Alaska | 11 |
-| Arizona | 11 |
-| Arkansas | 13 |
-| California | 10 |
-| Colorado | 9 |
-| Connecticut | 9 |
-| Delaware | 9 |
-| District of Columbia | 8 |
-| Florida | 10 |
-| Georgia | 37 |
-| Hawaii | 8 |
-| Idaho | 9 |
-| Illinois | 7 |
-| Indiana | 6 |
-| Iowa | 7 |
-| Kansas | 6 |
-| Kentucky | 7 |
-| Louisiana | 11 |
-| Maine | 9 |
-| Maryland | 10 |
-| Massachusetts | 11 |
-| Michigan | 11 |
-| Minnesota | 8 |
-| Mississippi | 9 |
-| Missouri | 7 |
-| Montana | 8 |
+| Alabama | 24 |
+| Alaska | 16 |
+| Arizona | 16 |
+| Arkansas | 19 |
+| California | 16 |
+| Colorado | 12 |
+| Connecticut | 15 |
+| Delaware | 13 |
+| District of Columbia | 12 |
+| Florida | 15 |
+| Georgia | 45 |
+| Hawaii | 13 |
+| Idaho | 13 |
+| Illinois | 10 |
+| Indiana | 10 |
+| Iowa | 10 |
+| Kansas | 10 |
+| Kentucky | 10 |
+| Louisiana | 16 |
+| Maine | 12 |
+| Maryland | 13 |
+| Massachusetts | 14 |
+| Michigan | 15 |
+| Minnesota | 12 |
+| Mississippi | 11 |
+| Missouri | 8 |
+| Montana | 12 |
 | Nebraska | 13 |
 | Nevada | 16 |
 | New Hampshire | 12 |
@@ -344,7 +346,7 @@ These are worth knowing as a selling point: the free study sets your competitors
 | PAYR-042 | The IRS groups federal business taxes into income tax, estimated tax, self-employment tax, employment taxes and excise taxes. Property tax is not a federal tax, but state and local governments levy it, and businesses owning real estate (and in many states equipment and other tangible business personal property) must pay it. | Card says property tax is generally not a business tax. It is not one of the federal business tax categories, but businesses routinely owe state/local property tax on real property and, in many states including Tennessee, on tangible business personal property. |
 | PAYR-045 | IRS Pub 15-T gives two manual withholding methods: the wage bracket method (look up the pay-period wage in tables by filing status; covers wages up to about $100,000 a year) and the percentage method (works for any wage). Separate tables apply to Forms W-4 from 2020 or later, which use no allowances, and to older W-4s still on file that claim allowances; table amounts change every year. | Card asks for withholding for a married employee with '3 exemptions' and gives $32 from an older Circular E table. Withholding tables now live in Pub 15-T and change annually, and the 2020 and later Form W-4 has no exemptions or allowances, so that dollar answer cannot be reused; always use the current year's tables. |
 
-## Flagged for review (271)
+## Flagged for review (276)
 Have a licensed reviewer (or the state bulletin) confirm these, then change `status` to `verified` for that ID in `supabase/functions/_shared/kb.json` (or in the CSV, then copy back) and run `node scripts/kb-report.mjs`.
 
 | ID | State | Fact | Why it's flagged |
@@ -479,8 +481,6 @@ Have a licensed reviewer (or the state bulletin) confirm these, then change `sta
 | STAT-046 | California | California licenses electrical, plumbing and HVAC businesses as CSLB specialty contractors (C-10 Electrical, C-36 Plumbing, C-20 Warm-Air HVAC). Workers doing electrical work for a C-10 contractor must also hold a state electrician certification from the Department of Industrial Relations (e.g., General Electrician), or be registered apprentices. There is no statewide journeyman plumber or HVAC license. | Classification codes and the DIR certification rule are from general knowledge; the CSLB classification page and DIR pages failed to load this session, so details (and hour requirements) were not confirmed. |
 | STAT-050 | Colorado | Colorado has no statewide general contractor license. General, building and specialty contractors are licensed or registered by cities and counties (for example Denver, Colorado Springs/Pikes Peak Regional Building Department), often with ICC exams, while the state (DORA) licenses only electricians and plumbers among the construction trades. | Consistent across many secondary sources and with DORA's program list, but no official state page saying 'no state GC license' was confirmed this session. |
 | STAT-056 | Colorado | Colorado does not issue a state HVAC or mechanical license; mechanical contractors are licensed by local jurisdictions where required. | Based on DORA's program list (only electrical and plumbing boards) and secondary sources; not confirmed on an official page this session. |
-| STAT-065 | Connecticut | Connecticut plumbers are licensed by the Department of Consumer Protection (Plumbing and Piping Work Examining Board) as P-1 Unlimited Plumbing and Piping Contractor or P-2 Unlimited Journeyperson, with limited categories as well; exams are given by PSI. | Board name and the P-1/P-2 codes are from general knowledge and secondary sites; the PSI plumbing bulletin was not located this session. |
-| STAT-082 | District of Columbia | DC master electrician applicants generally need several years of experience as a licensed journeyman, and electrical exams are open book based on the NEC; electrical contractors must designate a DC-licensed master electrician. | Master/contractor structure confirmed at https://dlcp.dc.gov/node/1619081 , but the specific experience years and exam format for electricians could not be confirmed (DLCP electrical guide did not load). |
 | STAT-088 | Florida | Florida CILB exams are registered through Professional Testing, Inc. (PTI), with the Business and Finance exam given by Pearson VUE. Per the DBPR FAQ, Business and Finance has 120 questions (84 correct = 70% to pass) and candidates may bring approved reference books; scores are not rounded. | https://www2.myfloridalicense.com/servop/testing/documents/cilb_faq.pdf is dated 2012; vendors, question counts and timing may have changed since. Confirm with the current PTI/Pearson VUE candidate bulletin. |
 | STAT-091 | Florida | Florida electrical and alarm system contractors are licensed separately from the CILB, by the Electrical Contractors' Licensing Board. Exam eligibility options include 4 years as a supervisor or contractor in the trade within the past 8 years, 3 years of management experience within 6 years, or 6 years of combined training/education/supervisory experience within 12 years. Florida has no statewide journeyman electrician license. | Experience options verified in statute: http://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0400-0499/0489/Sections/0489.511.html ; the board name and 'no state journeyman license' are from general knowledge (the section does not name the board). |
 | STAT-101 | Hawaii | Electricians and plumbers in Hawaii are licensed by the Board of Electricians and Plumbers, on 3-year renewal cycles ending June 30: electrician licenses renew in 2026, 2029 and 2032, and plumber licenses in 2027, 2030 and 2033. Electrical and plumbing contractors also need a C-13 or C-37 specialty license from the Contractors License Board. | Renewal cycles verified at https://cca.hawaii.gov/pvl/boards/electrician/ (the page itself has an inconsistent plumber period). The C-13/C-37 contractor codes and license tiers (journeyworker, supervising electrician, master plumber) were not confirmed this session. |
@@ -620,6 +620,13 @@ Have a licensed reviewer (or the state bulletin) confirm these, then change `sta
 | WATE-060 | — | Each plastic has its own solvent cement standard: PVC cement meets ASTM D2564 (with ASTM F656 primer), CPVC cement meets ASTM F493, and ABS cement meets ASTM D2235. Solvent-cement joints between different types of plastic are prohibited. | Code text not reachable during research; PVC standards and the mixed-plastic prohibition are already in the existing knowledge base. |
 | WATE-061 | — | Joints between copper or copper-alloy tubing and galvanized steel pipe must be made with a copper-alloy (brass) fitting or a dielectric fitting or union meeting ASSE 1079, to limit galvanic corrosion. | Code text not reachable during research; subsection number not confirmed. |
 | VENT-111 | — | Where drainage piping is roughed in for future fixtures, a vent rough-in must also be installed. It must be at least one-half the diameter of the rough-in drain it will serve and be marked to show it is a vent. | Code text not reachable during research; section number recalled from the 2018/2021 IPC. Confirm in the code book. |
+| STAT-618 | Arkansas | Arkansas adopts the NEC statewide through the Board of Electrical Examiners (17 CAR Part 210, formerly Rule 010.13-008). The board's final rule adopts the 2026 NEC with Arkansas amendments (for example, AFCI and GFCI protection is not required on dwelling-unit circuits over 130 volts except where Articles 680 and 682 require it). A trade reference lists it effective September 3, 2026; before that Arkansas used the 2020 NEC with state amendments (effective August 1, 2022). | Edition read in the DOLL-posted final 17 CAR Part 210; the Sept. 3, 2026 effective date is from Mike Holt only and the Aug. 1, 2022 date for the 2020 NEC from IAEI. Confirm the effective date with DOLL. |
+| STAT-667 | Illinois | Illinois does not issue a statewide HVAC or mechanical contractor license, and there is no statewide mechanical code for private buildings. HVAC licensing and mechanical code adoption are handled by cities and counties. | Not confirmed on an official state page; based on the absence of a state HVAC board. EPA 608 certification still applies to refrigerant work. |
+| STAT-686 | Louisiana | Louisiana does not license individual electricians statewide; worker licensing is set locally (for example, New Orleans requires ICC certifications). Electrical contracting businesses are licensed by the Louisiana State Licensing Board for Contractors, which requires a license for electrical, mechanical or plumbing projects over $10,000 including labor and materials. | The $10,000 LSLBC threshold is from the board's page; the no-statewide-electrician-license point rests on one trade reference (IAEI). |
+| STAT-688 | Maine | Maine's plumbing installation standard is the 2021 Uniform Plumbing Code (UPC), adopted by the Plumbers' Examining Board with exclusions. The board does not adopt the UPC appendices, Chapter 12 (Fuel Gas Piping) or Chapter 13 (Health Care Facilities and Medical Gas), and adopts only listed parts of Chapter 5 (Water Heaters); fuel gas work falls under the Maine Fuel Board. | 2021 UPC and exclusions read only in a Justia copy current through June 2025; the board's web page (apparently stale) still cites the 2015 UPC. Confirm the current edition with the Plumbers' Examining Board. |
+| STAT-689 | Maryland | Maryland's statewide NEC edition could not be confirmed from an official state page. IAEI lists the 2023 NEC effective March 1, 2025, while Mike Holt lists the 2020 NEC effective May 29, 2023; many Maryland counties also adopt and enforce the NEC locally. | The two trade references disagree, and the State Fire Prevention Code (COMAR 29.06.01.06) incorporates only NFPA 1 and NFPA 101, not NFPA 70. Ask the local jurisdiction which edition it enforces. |
+| STAT-702 | Mississippi | Mississippi does not license journeyman or master electricians, plumbers or HVAC technicians statewide; individual trade licenses, where required, come from cities and counties. The Mississippi State Board of Contractors licenses companies: a commercial license is needed for contractors and subcontractors on commercial jobs over $50,000, and electrical, mechanical/HVAC and plumbing subcontractors on residential projects must hold an MSBOC license at any contract amount. | Board thresholds read on the MSBOC FAQ; the absence of statewide individual trade licenses was not confirmed on an official page. |
+| STAT-713 | Maine | The Maine Fuel Board adopts NFPA standards for fuel-burning equipment, including NFPA 31 (oil-burning equipment, 2020 edition), NFPA 54 National Fuel Gas Code (2021), NFPA 58 LP-Gas Code (2020), NFPA 211 chimneys and vents (2019) and NFPA 90B warm-air heating and AC systems (2021), each with Maine exclusions and amendments where listed. | Editions read only in a Justia copy current through June 2025; not confirmed on a Maine Fuel Board or Secretary of State page. Confirm current editions before relying on them. |
 
 ## Adding or fixing content
 - The live files are `supabase/functions/_shared/kb.json` (facts) and `lib/kb-questions.json` (questions). Small fixes: edit them directly.

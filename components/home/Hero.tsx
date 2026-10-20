@@ -19,7 +19,7 @@ export const DEFAULT_HERO: SiteSettings["hero"] = {
 export const DEFAULT_STATS: SiteSettings["home_stats"] = [
   { value: "50", label: "States + DC covered" },
   { value: "4", label: "Trades: GC, electrical, plumbing, HVAC" },
-  { value: "2,700+", label: "Verified code, OSHA, business & state facts" }
+  { value: "3,600+", label: "Verified code, OSHA, business & state facts" }
 ];
 
 const STAT_ICONS = [TrendingUp, MapPin, Users];

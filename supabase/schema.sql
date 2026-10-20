@@ -86,7 +86,7 @@ create table if not exists public.site_settings (
   updated_at timestamptz not null default now()
 );
 insert into public.site_settings (key, value) values
-  ('home_stats', '[{"value":"50","label":"States + DC covered"},{"value":"4","label":"Trades: GC, electrical, plumbing, HVAC"},{"value":"2,700+","label":"Verified code, OSHA, business & state facts"}]'),
+  ('home_stats', '[{"value":"50","label":"States + DC covered"},{"value":"4","label":"Trades: GC, electrical, plumbing, HVAC"},{"value":"3,600+","label":"Verified code, OSHA, business & state facts"}]'),
   ('hero', '{"badge_top":"2026 Edition","badge_main":"Industry-leading contractor education","headline_1":"Master your","headline_2":"Contractor license","sub":"The blueprint to your exam preparation for electrical, plumbing, HVAC, and general contractor certifications"}'),
   ('free_limits', '{"ai_daily":5,"exam_max_questions":10,"ai_exams":false,"practice_sets":false}'),
   ('paid_limits', '{"ai_daily":60,"exam_max_questions":50,"ai_exams":true,"practice_sets":true}'),
