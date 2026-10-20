@@ -265,7 +265,7 @@
    "source": "IPC 2021 913.3 (ICC 2021 Plumbing Venting brochure)",
    "fact": "In a waste stack vent system, the stack vent must be the same size as the waste stack, and any offset in the stack vent must be at least 6 in above the flood level rim of the highest fixture. Offsets in the waste stack itself are not allowed between the lowest and highest fixture connections.",
    "status": "verified",
-   "note": "",
+   "note": "The ICC brochure describes the vent offset limit as 6 in above the highest branch connection; check the exact wording of 913.3 in the code book.",
    "keywords": [
     "waste stack vent",
     "stack vent size",
@@ -366,7 +366,7 @@
    "topic": "Hot water",
    "trade": "plumb",
    "state": null,
-   "source": "IPC 2021 412.10 (ICC 2021 IPC/UPC Essentials, Session 54)",
+   "source": "IPC 2021 412.10, 423.3 (ICC 2021 IPC/UPC Essentials, Session 54)",
    "fact": "Water supplied to pedicure chairs, footbaths and head shampoo sinks must be limited to no more than 120 F by an ASSE 1070 (or CSA B125.3) water temperature limiting device.",
    "status": "verified",
    "note": "Numbered 424.10 in the 2018 IPC before Chapter 4 was reorganized.",
@@ -1149,7 +1149,7 @@
    "trade": "plumb",
    "state": null,
    "source": "IPC 2021 Appendix E, Table E103.3(2)",
-   "fact": "In Table E103.3(2), a fixture's total WSFU is less than its cold plus hot values (a private lavatory is 0.5 cold + 0.5 hot but 0.7 total) because both are not drawn at full rate at once. Use the total column to size the building service and cold main, and the hot column to size hot water piping.",
+   "fact": "In Table E103.3(2), a fixture's total WSFU is less than its cold plus hot values (a private lavatory is 0.5 cold + 0.5 hot but 0.7 total) because both are not drawn at full rate at once. Use the total column for the water service and any main that feeds both hot and cold (ahead of the water heater), the cold column for cold-only branches, and the hot column for hot water piping.",
    "status": "verified",
    "note": "Values confirmed in municipal sizing documents; the use of each column follows the Appendix E method.",
    "keywords": [
