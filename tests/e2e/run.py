@@ -3,10 +3,10 @@ Browser tests for Licensing Bro's: builds are served from ./out and every Supaba
 Usage (from the repo root, after `NEXT_PUBLIC_SUPABASE_URL=https://example.supabase.co NEXT_PUBLIC_SUPABASE_ANON_KEY=x npx next build`):
     PLAYWRIGHT_BROWSERS_PATH=/opt/pw-browsers python3 tests/e2e/run.py [--shots DIR] [--only NAME]
 """
-import json, os, sys, time, threading, http.server, socketserver, functools, traceback, argparse
+import json, os, re, sys, time, threading, http.server, socketserver, functools, traceback, argparse
 from playwright.sync_api import sync_playwright
 sys.path.insert(0, os.path.dirname(__file__))
-from fakebackend import FakeBackend, ADMIN_ID, PAID_ID, FREE_ID, TEACH_ID, C_FREE, C_PAID, L_FREE1, L_PAID1, L_PREV, LIVE_NOW, LIVE_SOON, POST1, DECK1
+from fakebackend import now_iso, FakeBackend, ADMIN_ID, PAID_ID, FREE_ID, TEACH_ID, C_FREE, C_PAID, L_FREE1, L_PAID1, L_PREV, LIVE_NOW, LIVE_SOON, POST1, DECK1
 
 ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", ".."))
 OUT = os.path.join(ROOT, "out")
@@ -1153,6 +1153,37 @@ def talk_reliability(browser):
     shot(page, "talk-clear-voice")
     check("clear-voice listening ran without errors", not errors, "; ".join(errors[:3]))
     ctx.close()
+
+# ---------------------------------------------------------------------------------------------------------------------
+@scenario
+def voice_connector(browser):
+    fake = FakeBackend(user_id=ADMIN_ID)
+    ctx, page, errors = new_page(browser, fake)
+    ctx.grant_permissions(["clipboard-read", "clipboard-write"], origin=BASE)
+    goto(page, "/admin/#settings")
+    page.wait_for_timeout(1200)
+    card = page.locator("section", has_text="Connect VoiceStudio on your PC").first
+    check("Bro's voice settings offer the PC connector", card.count() == 1 and card.get_by_text("Not connected yet").count() == 1)
+    cmd = card.locator("code[aria-label='Connector command']").inner_text()
+    check("the one-line command carries the connect code, the script and this site's Supabase", "testcode2345abcdefghjkmnpq" in cmd and "bro-voice.ps1" in cmd and "example.supabase.co" in cmd and "-ExecutionPolicy Bypass" in cmd, cmd[:200])
+    script_url = re.search(r'irm "([^"]+)"', cmd).group(1)
+    body = page.evaluate("u => fetch(u).then(r => r.ok ? r.text() : '')", script_url)
+    check("the connector script is served with the site", "voice-connect" in body and "trycloudflare" in body and "Licensing Bro's voice connector" in body)
+    card.get_by_role("button", name="Copy").click(); page.wait_for_timeout(300)
+    check("Copy puts the command on the clipboard", page.evaluate("navigator.clipboard.readText()") == cmd)
+    check("and the page waits for the PC to connect", card.get_by_text("Waiting for your PC to connect", exact=False).count() == 1)
+    fake.voice_link = {"source": "saved", "url": "https://brave-tiger.trycloudflare.com", "voice": "lucu0001", "connected_at": now_iso(), "machine": "LUCUBA-PC", "stt": True, "code": "testcode2345abcdefghjkmnpq", "github": False}
+    page.wait_for_timeout(6500)
+    check("when the PC connects, the page says so", card.get_by_text("Connected from LUCUBA-PC", exact=False).count() == 1 and card.get_by_text("voice lucu0001", exact=False).count() == 1)
+    card.get_by_role("button", name="New code").click(); page.wait_for_timeout(600)
+    check("a new code replaces the old command", "newcode98765abcdefghjkmnp" in card.locator("code[aria-label='Connector command']").inner_text())
+    shot(page, "admin-voice-connector")
+    check("voice connector ran without errors", not errors, "; ".join(errors[:3]))
+    ctx.close()
+    # Instructors can't see or change it
+    fake = FakeBackend(user_id=TEACH_ID)
+    status, data = fake.fn("voice", {"action": "voice_admin", "op": "get"})
+    check("only admins can read the connect code", status == 403)
 
 # ---------------------------------------------------------------------------------------------------------------------
 if __name__ == "__main__":

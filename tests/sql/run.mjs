@@ -396,6 +396,17 @@ console.log("\nresearch desk");
   ok("deleting a research document keeps the study record", (await db.query(`select doc_id from public.kb_research`)).rows[0].doc_id === null);
 }
 
+console.log("\nserver-only settings");
+{
+  const one = async (u, sql, params) => as(u, "authenticated", () => tryQ(sql, params));
+  await as(null, "service_role", () => tryQ(`insert into public.server_settings (key, value) values ('voice', '{"url":"https://x.trycloudflare.com","code":"secret"}')`));
+  ok("the backend can keep the voice server's address", (await db.query(`select value->>'code' c from public.server_settings where key = 'voice'`)).rows[0]?.c === "secret");
+  ok("even admins can't read server-only settings from the app", (await one(ids.admin, `select value from public.server_settings`)).rows.length === 0);
+  ok("students can't read them either", (await one(ids.paid, `select value from public.server_settings`)).rows.length === 0);
+  ok("nobody can write them from the app", !!(await one(ids.admin, `insert into public.server_settings (key, value) values ('voice2', '{}')`)).error);
+  ok("visitors can't see them", (await as(null, "anon", () => tryQ(`select value from public.server_settings`))).rows.length === 0);
+}
+
 console.log("\nupgrading an older project");
 // A project set up before game decks existed: re-running schema.sql adds the new columns and keeps the data
 await db.exec(`alter table public.practice_sets drop column kind, drop column topic, drop column pairs`);

@@ -2,11 +2,13 @@
 import { useAuth } from "@/lib/auth";
 // Settings: homepage text and stats, plan limits, location rules, admin code and support contact.
 import { useCallback, useEffect, useState } from "react";
-import { CheckCircle2, Mic, Play, Plus, Trash2, TriangleAlert } from "lucide-react";
+import { CheckCircle2, Copy, Link2, Mic, Play, Plus, RefreshCw, Trash2, TriangleAlert, Unplug } from "lucide-react";
 import { audioFn, callFn } from "@/lib/api";
 import { supabase } from "@/lib/supabaseClient";
 import type { Limits, SiteSettings } from "@/lib/types";
-import { errMsg, q } from "./format";
+import { errMsg, q, relTime } from "./format";
+import { SUPABASE_KEY, SUPABASE_URL } from "@/lib/env";
+import { asset, IS_APP_BUILD, SITE_URL } from "@/lib/nav";
 import { useAdmin, useDirty, ErrorBox, FormPanel, Loading, SectionHead, Toggle } from "./ui";
 import { MoveButtons } from "./fields";
 import { STATES } from "@/lib/data";
@@ -98,7 +100,7 @@ function useSetting<T>(key: Key, initial: T, validate?: (v: T) => string) {
     } catch (e) { toast(errMsg(e), "bad"); }
     setSaving(false);
   }
-  return { value, setValue, dirty, saving, save, problem, discard: () => { setValue(saved); setProblem(""); } };
+  return { value, setValue, dirty, saving, save, problem, discard: () => { setValue(saved); setProblem(""); }, /** The server already saved this value */ synced: (v: T) => { setValue(v); setSaved(v); } };
 }
 
 function Actions({ dirty, saving, onSave, onDiscard, problem }: { dirty: boolean; saving: boolean; onSave: () => void; onDiscard: () => void; problem?: string }) {
@@ -280,11 +282,53 @@ function SupportCard({ initial }: { initial: SiteSettings["support"] }) {
 
 // ------------------------------------------------------------------------------------------------
 type VoiceHealth = { configured: boolean; ok: boolean; ms?: number; voice?: string; error?: string; stt?: boolean };
+type VoiceLink = { source: "saved" | "github" | "none"; url: string | null; voice: string | null; connected_at: string | null; machine: string | null; stt: boolean | null; code: string; github: boolean };
+
+/** The one PowerShell line that downloads and runs the connector with this site's connect code. */
+export function connectorCommand(code: string, scriptUrl: string, supabaseUrl: string, anon: string): string {
+  return `$d="$env:LOCALAPPDATA\\BroVoice"; New-Item -ItemType Directory -Force $d | Out-Null; irm "${scriptUrl}" -OutFile "$d\\bro-voice.ps1"; powershell -NoProfile -ExecutionPolicy Bypass -File "$d\\bro-voice.ps1" -Code "${code}" -Supabase "${supabaseUrl}" -Anon "${anon}"`;
+}
+
 function VoiceCard({ initial }: { initial: NonNullable<SiteSettings["voice"]> }) {
   const { toast } = useAdmin();
+  const { refreshSettings } = useAuth();
   const st = useSetting("voice", { studio: !!initial.studio, ears: !!initial.ears });
   const [health, setHealth] = useState<VoiceHealth | null>(null);
-  const [busy, setBusy] = useState<"" | "check" | "play">("");
+  const [busy, setBusy] = useState<"" | "check" | "play" | "link">("");
+  const [link, setLink] = useState<VoiceLink | null>(null);
+  const [linkErr, setLinkErr] = useState("");
+  const [watching, setWatching] = useState(false);
+  const [manual, setManual] = useState({ url: "", voice: "" });
+
+  const loadLink = useCallback(async (op: "get" | "new_code" | "forget" | "save" = "get", extra: Record<string, string> = {}) => {
+    try {
+      const r = await callFn<VoiceLink>("voice", { action: "voice_admin", op, ...extra });
+      setLink((prev) => {
+        // Just connected from the PC: the studio voice switch was turned on on the server too
+        if (prev && r.connected_at && r.connected_at !== prev.connected_at && r.source === "saved") { refreshSettings(); st.synced({ studio: true, ears: !!st.value.ears || !!r.stt }); }
+        return r;
+      });
+      setLinkErr("");
+      return r;
+    } catch (e) { setLinkErr(errMsg(e, "Couldn't load the voice connection. Run Build Android app to deploy the latest functions, and rerun schema.sql.")); return null; }
+  }, []); // eslint-disable-line react-hooks/exhaustive-deps
+  useEffect(() => { loadLink(); }, [loadLink]);
+  // After copying the command, watch for the PC to connect (up to 5 minutes)
+  useEffect(() => {
+    if (!watching) return;
+    const start = link?.connected_at;
+    const t = setInterval(async () => { const r = await loadLink(); if (r?.connected_at && r.connected_at !== start) { setWatching(false); toast("Your PC connected. Students now hear the studio voice."); } }, 5000);
+    const stop = setTimeout(() => setWatching(false), 300000);
+    return () => { clearInterval(t); clearTimeout(stop); };
+  }, [watching]); // eslint-disable-line react-hooks/exhaustive-deps
+
+  const scriptUrl = IS_APP_BUILD && SITE_URL ? `${SITE_URL}/bro-voice.ps1` : typeof window !== "undefined" ? `${window.location.origin}${asset("/bro-voice.ps1")}` : "";
+  const command = link?.code ? connectorCommand(link.code, scriptUrl, SUPABASE_URL, SUPABASE_KEY) : "";
+  async function copyCommand() {
+    try { await navigator.clipboard.writeText(command); toast("Copied. Paste it into PowerShell on the PC with VoiceStudio."); }
+    catch { toast("Select the command and copy it yourself.", "info"); }
+    setWatching(true);
+  }
 
   async function check() {
     setBusy("check");
@@ -306,8 +350,48 @@ function VoiceCard({ initial }: { initial: NonNullable<SiteSettings["voice"]> })
 
   return (
     <FormPanel code="Form ST-7 · Voice" title="Bro's voice">
+      <div className={s.voiceLink}>
+        <div className={s.voiceLinkHead}>
+          <Link2 aria-hidden="true" />
+          <b>Connect VoiceStudio on your PC</b>
+          {link && (
+            <span className={s.voiceState} data-on={link.source !== "none" ? "1" : "0"}>
+              {link.source === "saved" ? `Connected${link.machine ? ` from ${link.machine}` : ""} ${relTime(link.connected_at)}${link.voice ? ` · voice ${link.voice}` : ""}${link.stt ? " · clear-voice ready" : ""}`
+                : link.source === "github" ? "Using the address in GitHub settings" : "Not connected yet"}
+            </span>
+          )}
+        </div>
+        {linkErr ? <p className="err" style={{ margin: 0 }}>{linkErr}</p> : !link ? <p className="note" style={{ margin: 0 }}>Loading…</p> : (
+          <>
+            <p className="note" style={{ margin: 0 }}>
+              Open VoiceStudio on the PC, then open <b>PowerShell</b> there and paste this one line. It finds your cloned voice, starts a free Cloudflare tunnel, connects it here and switches the studio voice on. No GitHub settings or rebuild needed. Keep its window open (minimized is fine); it reconnects by itself and can start when you sign in to Windows.
+            </p>
+            <div className={s.cmdRow}>
+              <code className={s.cmd} aria-label="Connector command">{command}</code>
+              <button type="button" className="btn sm navy" onClick={copyCommand}><Copy aria-hidden="true" />Copy</button>
+            </div>
+            {watching && <p className="note" role="status" style={{ margin: 0 }}><span className="spin" aria-hidden="true" /> Waiting for your PC to connect…</p>}
+            <div className="row" style={{ gap: 8, flexWrap: "wrap" }}>
+              <button type="button" className="btn sm" disabled={!!busy} onClick={async () => { setBusy("link"); await loadLink("new_code"); setBusy(""); toast("New code made. The old command no longer works."); }}><RefreshCw aria-hidden="true" />New code</button>
+              {link.source === "saved" && <button type="button" className="btn sm ghost" disabled={!!busy} onClick={async () => { setBusy("link"); await loadLink("forget"); setBusy(""); toast("Disconnected. Bro uses the phone's voice (or GitHub settings, if set)."); }}><Unplug aria-hidden="true" />Disconnect</button>}
+            </div>
+            <details className={s.manual}>
+              <summary>Enter the address by hand instead</summary>
+              <div className="grid2">
+                <label className="field">Voice server address (https)
+                  <input value={manual.url} onChange={(e) => setManual({ ...manual, url: e.target.value })} placeholder="https://something.trycloudflare.com" autoComplete="off" />
+                </label>
+                <label className="field">Voice ID
+                  <input value={manual.voice} onChange={(e) => setManual({ ...manual, voice: e.target.value })} placeholder="from 127.0.0.1:3900/v1/audio/voices" autoComplete="off" />
+                </label>
+              </div>
+              <button type="button" className="btn sm" disabled={!!busy || !manual.url.trim()} onClick={async () => { setBusy("link"); const r = await loadLink("save", { url: manual.url.trim(), voice: manual.voice.trim() }); setBusy(""); if (r) toast("Saved. Click Check the voice server to test it."); }}>Save address</button>
+            </details>
+          </>
+        )}
+      </div>
       <p className="note" style={{ margin: 0 }}>
-        By default Bro talks with each phone&rsquo;s built-in voice. Switch on the studio voice to use your own voice server instead, so every student hears the same natural voice (you can even clone one with VoiceStudio). It works with VoiceStudio, Kokoro-FastAPI, OpenAI&rsquo;s speech API or any server with the same <code>/v1/audio/speech</code> format. Set <b>VOICE_API_URL</b> (and <b>VOICE_API_KEY</b>, <b>VOICE_NAME</b> if needed) in GitHub, then run Build Android app. If the server can&rsquo;t be reached, students automatically hear the phone&rsquo;s voice instead.
+        By default Bro talks with each phone&rsquo;s built-in voice. Switch on the studio voice to use your own voice server instead, so every student hears the same natural voice (you can even clone one with VoiceStudio). It works with VoiceStudio, Kokoro-FastAPI, OpenAI&rsquo;s speech API or any server with the same <code>/v1/audio/speech</code> format. The connector above sets it up for you; advanced setups can instead set <b>VOICE_API_URL</b> (and <b>VOICE_API_KEY</b>, <b>VOICE_NAME</b>) in GitHub. If the server can&rsquo;t be reached, students automatically hear the phone&rsquo;s voice instead.
       </p>
       <div className="row" style={{ gap: 8, flexWrap: "wrap" }}>
         <button type="button" className="btn sm" onClick={check} disabled={!!busy}><Mic aria-hidden="true" />{busy === "check" ? "Checking…" : "Check the voice server"}</button>

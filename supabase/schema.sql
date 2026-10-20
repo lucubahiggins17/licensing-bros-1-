@@ -1072,6 +1072,18 @@ revoke execute on function public.kb_log_gap(text, text, text, text, text) from 
 grant execute on function public.kb_log_gap(text, text, text, text, text) to service_role;
 
 -- -------------------------------------------------------------------------------------
+-- Server-only settings (for example the voice server's address and the PC connector's code).
+-- No policies: only the backend functions can read or change these rows.
+-- -------------------------------------------------------------------------------------
+create table if not exists public.server_settings (
+  key text primary key,
+  value jsonb not null default '{}'::jsonb,
+  updated_at timestamptz not null default now()
+);
+alter table public.server_settings enable row level security;
+revoke all on public.server_settings from anon, authenticated;
+
+-- -------------------------------------------------------------------------------------
 -- Storage: course videos (private) and public images
 -- -------------------------------------------------------------------------------------
 insert into storage.buckets (id, name, public) values ('course-media', 'course-media', false) on conflict (id) do nothing;

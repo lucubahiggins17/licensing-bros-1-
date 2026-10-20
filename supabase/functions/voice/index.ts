@@ -2,16 +2,54 @@
 //   {text, speed?}       -> audio (mp3 by default), spoken by the school's voice server
 //   {action: "health"}   -> {configured, ok, ms, voice, error?, stt}   (is the voice server reachable right now?)
 //   {action: "transcribe", audio: base64, mime} -> {text}   (clear-voice listening: the student's recorded question)
-// The server's address and key stay here as function secrets; the app never sees them.
-import { cors, handler, HttpError, json, readBody, requireUser } from "../_shared/common.ts";
-import { AUDIO_TYPES, speakable, speechRequest, speechUrl, sttConfig, transcriptionRequest, transcriptionUrl, transcriptText, voiceConfig } from "../_shared/voiceServer.ts";
+//   {action: "voice_admin", op: "get"|"save"|"new_code"|"forget", url?, voice?, key?}   (admins: the voice server's address)
+// The server's address and key stay on the server (function secrets, or server_settings saved by the admin page or the
+// PC connector); the app never sees them, except admins on the settings page.
+import { cors, handler, HttpError, json, readBody, requireUser, staffRole } from "../_shared/common.ts";
+import {
+  AUDIO_TYPES, cleanVoiceName, newConnectCode, publicVoiceUrl, speakable, speechRequest, speechUrl, sttConfig, transcriptionRequest,
+  transcriptionUrl, transcriptText, voiceConfig, withSaved
+} from "../_shared/voiceServer.ts";
+import { loadSavedVoice, saveVoice } from "../_shared/voiceStore.ts";
 
-const NOT_SET = "Bro's studio voice isn't set up. Add VOICE_API_URL in GitHub (see the Launch Guide), or keep using the phone's voice.";
+const NOT_SET = "Bro's studio voice isn't connected. Run the voice connector on the PC with VoiceStudio (Admin → Settings → Bro's voice), or keep using the phone's voice.";
 
 Deno.serve(handler(async (req) => {
-  await requireUser(req);
+  const { user } = await requireUser(req);
   const body = await readBody(req);
-  const c = voiceConfig();
+  const saved = await loadSavedVoice();
+  const env = withSaved(saved);
+  const c = voiceConfig(env);
+
+  if (body.action === "voice_admin") {
+    if ((await staffRole(user.id)) !== "admin") throw new HttpError(403, "forbidden", "Only admins can change the voice server.");
+    const cur = (await loadSavedVoice(true)) || {};
+    const op = String(body.op || "get");
+    if (op === "new_code" || (op === "get" && !cur.code)) {
+      const next = { ...cur, code: newConnectCode() };
+      await saveVoice(next);
+      Object.assign(cur, next);
+    }
+    if (op === "save") {
+      const url = publicVoiceUrl(body.url);
+      if (!url) throw new HttpError(400, "bad_request", "Use the public https address of your voice server (for example the trycloudflare.com address), not localhost.");
+      const next = { ...cur, url, voice: cleanVoiceName(body.voice) || cur.voice || "", key: typeof body.key === "string" ? body.key.trim().slice(0, 300) : cur.key || "", connected_at: new Date().toISOString(), machine: "entered by hand" };
+      await saveVoice(next);
+      Object.assign(cur, next);
+    }
+    if (op === "forget") {
+      const next = { code: cur.code };
+      await saveVoice(next);
+      for (const k of Object.keys(cur)) if (k !== "code") delete (cur as Record<string, unknown>)[k];
+    }
+    const github = !!Deno.env.get("VOICE_API_URL");
+    return json({
+      source: cur.url ? "saved" : github ? "github" : "none",
+      url: cur.url || null, voice: cur.voice || (cur.url ? null : Deno.env.get("VOICE_NAME") || null),
+      connected_at: cur.connected_at || null, machine: cur.machine || null, stt: cur.stt ?? null, hasKey: !!cur.key,
+      code: cur.code, github
+    });
+  }
 
   const speak = async (text: string, speed: number, timeoutMs: number) => {
     let format = c!.format;
@@ -25,7 +63,7 @@ Deno.serve(handler(async (req) => {
   };
 
   if (body.action === "transcribe") {
-    const sc = sttConfig();
+    const sc = sttConfig(env);
     if (!sc) throw new HttpError(503, "stt_not_set_up", "Clear-voice listening isn't set up. Add VOICE_API_URL (or STT_API_URL) in GitHub.");
     const b64 = typeof body.audio === "string" ? body.audio : "";
     if (!b64 || b64.length > 14_000_000) throw new HttpError(400, "bad_request", "That recording is missing or too long.");
@@ -40,7 +78,7 @@ Deno.serve(handler(async (req) => {
   }
 
   if (body.action === "health") {
-    const stt = !!sttConfig();
+    const stt = !!sttConfig(env);
     if (!c) return json({ configured: false, ok: false, error: NOT_SET, stt });
     const t0 = Date.now();
     try {

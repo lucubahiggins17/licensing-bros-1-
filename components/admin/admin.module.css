@@ -515,3 +515,14 @@
 /* ---------- Knowledge library ---------- */
 .kbModes button{display:inline-flex;align-items:center;gap:6px}
 .kbModes button svg{width:16px;height:16px;flex:none}
+
+/* Bro's voice: PC connector */
+.voiceLink{display:flex;flex-direction:column;gap:10px;border:1.5px solid var(--line);border-radius:10px;padding:12px;background:var(--surface)}
+.voiceLinkHead{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.voiceLinkHead svg{width:18px;height:18px;color:var(--orange)}
+.voiceState{margin-left:auto;font-size:12.5px;font-weight:700;border-radius:999px;padding:3px 10px;background:#fff;border:1px solid var(--line);color:var(--muted)}
+.voiceState[data-on="1"]{background:var(--ok-soft);border-color:#b9e3c9;color:var(--ok)}
+.cmdRow{display:flex;gap:8px;align-items:flex-start}
+.cmd{flex:1;min-width:0;display:block;font:12px/1.45 var(--mono);background:var(--navy);color:#e8eaf6;border-radius:8px;padding:10px 12px;overflow-wrap:anywhere;white-space:pre-wrap;user-select:all}
+.manual summary{cursor:pointer;font-weight:700;font-size:13.5px}
+.manual[open]{display:flex;flex-direction:column;gap:8px}

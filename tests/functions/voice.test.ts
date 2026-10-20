@@ -37,3 +37,33 @@ Deno.test("speakable: drops markdown, links and code; caps the length", () => {
   assert.equal(speakable("x ".repeat(2000)).length, 1500);
   assert.equal(speakable(null), "");
 });
+
+import { cleanVoiceName, newConnectCode, publicVoiceUrl, sameCode, sttConfig as sttCfg, voiceConfig as voiceCfg, withSaved } from "../../supabase/functions/_shared/voiceServer.ts";
+Deno.test("PC connector: a saved tunnel address (and its voice) wins over GitHub settings, without GitHub's key", () => {
+  const env = (m: Record<string, string>) => (k: string) => m[k];
+  const gh = env({ VOICE_API_URL: "https://old.example", VOICE_API_KEY: "gh-key", VOICE_NAME: "alloy", VOICE_MODEL: "tts-1" });
+  const c = voiceCfg(withSaved({ url: "https://brave-tiger.trycloudflare.com", voice: "lucu0001" }, gh))!;
+  assert.equal(c.base, "https://brave-tiger.trycloudflare.com");
+  assert.equal(c.voice, "lucu0001");
+  assert.equal(c.key, "");
+  assert.equal(c.model, "tts-1");
+  assert.equal(sttCfg(withSaved({ url: "https://brave-tiger.trycloudflare.com" }, gh))!.base, "https://brave-tiger.trycloudflare.com");
+  // Nothing saved: GitHub settings as before
+  assert.equal(voiceCfg(withSaved(null, gh))!.base, "https://old.example");
+  assert.equal(voiceCfg(withSaved({ code: "x" }, gh))!.key, "gh-key");
+});
+
+Deno.test("PC connector: only public https addresses, constant-time codes, safe voice names", () => {
+  assert.equal(publicVoiceUrl("https://brave-tiger.trycloudflare.com/"), "https://brave-tiger.trycloudflare.com");
+  assert.equal(publicVoiceUrl("https://brave-tiger.trycloudflare.com/openapi.json"), "https://brave-tiger.trycloudflare.com");
+  assert.equal(publicVoiceUrl("https://voice.mysite.com/v1/audio/speech"), "https://voice.mysite.com");
+  for (const bad of ["http://brave.trycloudflare.com", "https://localhost:3900", "https://127.0.0.1:3900", "https://192.168.1.20", "https://10.0.0.5", "https://myserver", "ftp://x.com", "", null]) assert.equal(publicVoiceUrl(bad), null, String(bad));
+  assert.equal(sameCode("abc", "abc"), true);
+  assert.equal(sameCode("abc", "abd"), false);
+  assert.equal(sameCode("", ""), false);
+  assert.equal(sameCode(undefined, "abc"), false);
+  const a = newConnectCode(), b = newConnectCode();
+  assert.equal(a.length, 24); assert.notEqual(a, b); assert.match(a, /^[a-z2-9]+$/);
+  assert.equal(cleanVoiceName(" lucu0001 "), "lucu0001");
+  assert.equal(cleanVoiceName("voice; rm -rf"), "");
+});

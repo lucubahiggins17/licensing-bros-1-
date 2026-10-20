@@ -31,6 +31,10 @@ verify_jwt = true
 [functions.voice]
 verify_jwt = true
 
+# The PC voice connector calls this with only the public site key; the admin's connect code is checked instead.
+[functions.voice-connect]
+verify_jwt = false
+
 # The hourly scheduler calls this without a user sign-in; it checks the x-automation-key header or the user itself.
 [functions.automations]
 verify_jwt = false

@@ -107,6 +107,7 @@ jobs:
           supabase functions deploy stripe-webhook --no-verify-jwt --project-ref "$PROJECT_REF"
           # The hourly scheduler has no sign-in; the function checks AUTOMATION_SECRET itself
           supabase functions deploy automations --no-verify-jwt --project-ref "$PROJECT_REF"
+          supabase functions deploy voice-connect --no-verify-jwt --project-ref "$PROJECT_REF"
 
   android:
     name: Build APK

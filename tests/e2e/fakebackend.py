@@ -427,6 +427,16 @@ class FakeBackend:
         if name == "research":
             return self.research(body)
         if name == "voice":
+            if body.get("action") == "voice_admin":
+                if not self.is_admin():
+                    return 403, {"error": "Only admins can change the voice server.", "code": "forbidden"}
+                link = getattr(self, "voice_link", None) or {"source": "none", "url": None, "voice": None, "connected_at": None, "machine": None, "stt": None, "code": "testcode2345abcdefghjkmnpq", "github": False}
+                op = body.get("op")
+                if op == "new_code": link = {**link, "code": "newcode98765abcdefghjkmnp"}
+                if op == "forget": link = {**link, "source": "none", "url": None, "voice": None, "connected_at": None, "machine": None}
+                if op == "save": link = {**link, "source": "saved", "url": body.get("url"), "voice": body.get("voice"), "connected_at": now_iso(), "machine": "entered by hand"}
+                self.voice_link = link
+                return 200, link
             if body.get("action") == "transcribe":
                 self.transcribed = getattr(self, "transcribed", 0) + 1
                 self.stt_mimes = getattr(self, "stt_mimes", []) + [body.get("mime")]
