@@ -1195,7 +1195,7 @@
    "trade": "hvac",
    "state": null,
    "source": "40 CFR 84.106",
-   "fact": "Under the HFC leak repair rule (40 CFR 84.106, effective January 1, 2026), owners calculate the leak rate each time refrigerant is added using either the annualizing method or the rolling average method (the same method at all their facilities). Systems of 500 lb or more over the threshold get quarterly leak inspections, 15 to under 500 lb annual inspections, and any appliance of 15 lb or more that leaks 125 percent of its charge in a year must be reported to EPA by March 1.",
+   "fact": "Under the HFC leak repair rule (40 CFR 84.106, effective January 1, 2026), owners calculate the leak rate each time refrigerant is added using either the annualizing method or the rolling average method (the same method at all their facilities). After an exceedance, commercial refrigeration and industrial process systems of 500 lb or more get quarterly leak inspections, while those of 15 to under 500 lb and comfort cooling systems get annual inspections, and any appliance of 15 lb or more that leaks 125 percent of its charge in a year must be reported to EPA by March 1.",
    "status": "verified",
    "note": "",
    "keywords": [
@@ -1784,7 +1784,1548 @@
     "ventilation opening",
     "914"
    ]
+  },
+  {
+   "id": "H5-106",
+   "topic": "Refrigeration code",
+   "trade": "hvac",
+   "state": null,
+   "source": "IMC 2021 Table 1103.1",
+   "fact": "IMC 2021 Table 1103.1 lists the most refrigerant allowed in a single circuit per 1,000 cubic feet of occupied space before a machinery room (or outdoor location) is needed: R-22 13 lb, R-134a 13 lb, R-407C 18 lb, R-410A 26 lb, R-404A 31 lb, R-32 4.8 lb, R-290 (propane) 0.56 lb and R-123 3.5 lb.",
+   "status": "verified",
+   "note": "R-22, R-134a, R-407C, R-410A and R-404A confirmed in 2018 IMC text and Seattle's current code; R-32, R-290 and R-123 from Seattle's current Chapter 11. All match ASHRAE 34 RCL values.",
+   "keywords": [
+    "Table 1103.1",
+    "refrigerant concentration limit",
+    "R-32",
+    "R-410A",
+    "pounds per 1000 cubic feet",
+    "machinery room"
+   ]
+  },
+  {
+   "id": "H5-107",
+   "topic": "Refrigeration code",
+   "trade": "hvac",
+   "state": null,
+   "source": "IMC 2021 1104.2; Table 1103.1",
+   "fact": "Worked example using IMC Table 1103.1: an R-32 system serving a 12 x 12 x 8 ft room (1,152 cubic feet) may hold at most 4.8 x 1,152 / 1,000 = about 5.5 lb in a single circuit; the same room with R-410A (26 lb per 1,000 cubic feet) could hold about 30 lb.",
+   "status": "verified",
+   "note": "",
+   "keywords": [
+    "refrigerant charge limit",
+    "room volume",
+    "R-32 example",
+    "IMC 1104.2",
+    "calculation"
+   ]
+  },
+  {
+   "id": "H5-108",
+   "topic": "Refrigeration code",
+   "trade": "hvac",
+   "state": null,
+   "source": "IMC 2021 1102.2.1; 1102.2.2",
+   "fact": "Under IMC 2021 1102.2, refrigerants with different ASHRAE 34 designations may not be mixed in a system (except an additive the manufacturer permits for oil return). Refrigerant added to a system must be new, recovered (reused only in the same owner's systems after filtering and drying; visibly contaminated refrigerant must be reclaimed), or reclaimed to AHRI 700 purity for use by a different owner.",
+   "status": "verified",
+   "note": "",
+   "keywords": [
+    "mixing refrigerants",
+    "refrigerant purity",
+    "recovered refrigerant",
+    "AHRI 700",
+    "1102.2"
+   ]
+  },
+  {
+   "id": "H5-109",
+   "topic": "Refrigeration code",
+   "trade": "hvac",
+   "state": null,
+   "source": "IMC 2021 1101.8",
+   "fact": "IMC 2021 1101.8: before changing the type of refrigerant in a circuit holding more than 220 lb of a Group A1 refrigerant or more than 30 lb of any other group, the owner must notify the code official, and the new refrigerant must comply with the code.",
+   "status": "verified",
+   "note": "Section number per the 2018/2021 IMC layout; Seattle's current Chapter 11, which follows the newer 2024-style layout, numbers it 1101.7.",
+   "keywords": [
+    "change refrigerant type",
+    "220 pounds",
+    "30 pounds",
+    "code official notice",
+    "retrofit"
+   ]
+  },
+  {
+   "id": "H5-110",
+   "topic": "Refrigeration code",
+   "trade": "hvac",
+   "state": null,
+   "source": "IMC 2021 1104.2 Exception",
+   "fact": "IMC 2021 1104.2 exception: listed equipment containing 6.6 lb (3 kg) or less of refrigerant, installed per its listing and the manufacturer's instructions, does not need a machinery room no matter what the refrigerant's safety classification is.",
+   "status": "verified",
+   "note": "",
+   "keywords": [
+    "6.6 pounds",
+    "machinery room exception",
+    "listed equipment",
+    "small charge",
+    "1104.2"
+   ]
+  },
+  {
+   "id": "H5-111",
+   "topic": "Refrigeration code",
+   "trade": "hvac",
+   "state": null,
+   "source": "IMC 2021 1104.3.4; 1106.2",
+   "fact": "Under the 2021 IMC, where a device with an open flame or a surface hotter than 800 F is in a room holding more than 6.6 lb of refrigerant in a single circuit, a hood and exhaust system per Section 510 is required (1104.3.4), and machinery rooms may not contain permanently installed open-flame devices or continuously hot surfaces above 800 F (1106.2).",
+   "status": "verified",
+   "note": "",
+   "keywords": [
+    "open flame",
+    "800 F",
+    "machinery room",
+    "hot surface",
+    "refrigerant decomposition"
+   ]
+  },
+  {
+   "id": "H5-112",
+   "topic": "Refrigeration code",
+   "trade": "hvac",
+   "state": null,
+   "source": "IMC 2021 1105.6.1; 1105.7",
+   "fact": "Under the 2021 IMC, refrigeration machinery room exhaust must discharge outdoors at least 20 ft from property lines and building openings (1105.6.1), and pressure relief devices must discharge at least 15 ft above adjoining grade and at least 20 ft from any window, ventilation opening or exit (1105.7).",
+   "status": "verified",
+   "note": "",
+   "keywords": [
+    "machinery room exhaust",
+    "20 feet",
+    "relief valve discharge",
+    "15 feet above grade",
+    "1105.7"
+   ]
+  },
+  {
+   "id": "H5-113",
+   "topic": "Refrigeration code",
+   "trade": "hvac",
+   "state": null,
+   "source": "IMC 2021 1105.6.3.1",
+   "fact": "IMC 2021 1105.6.3.1: normal ventilation of an occupied refrigeration machinery room is the greatest of 0.5 cfm per sq ft, the airflow needed to hold the room's temperature rise to 18 F, or 20 cfm per person. When unoccupied it may drop to the greater of 0.25 cfm per sq ft or the 18 F temperature-rise airflow, with controls that raise it when the room lights are on.",
+   "status": "verified",
+   "note": "",
+   "keywords": [
+    "machinery room ventilation",
+    "18 F rise",
+    "0.25 cfm",
+    "unoccupied",
+    "1105.6.3"
+   ]
+  },
+  {
+   "id": "H5-114",
+   "topic": "Refrigeration code",
+   "trade": "hvac",
+   "state": null,
+   "source": "IMC 2021 1107.2; 1107.2.1",
+   "fact": "Under the 2021 IMC, refrigerant piping that crosses an open space used as a passageway must be at least 7 ft 3 in above the floor unless it is run against the ceiling (1107.2), and refrigerant piping installed in a concrete floor must be encased in a pipe duct (1107.2.1).",
+   "status": "verified",
+   "note": "Seattle's current Chapter 11, which follows the newer 2024-style layout, numbers these 1109.2.1 and 1109.2.4.",
+   "keywords": [
+    "refrigerant piping height",
+    "7 feet 3 inches",
+    "concrete floor",
+    "pipe duct",
+    "1107.2"
+   ]
+  },
+  {
+   "id": "H5-115",
+   "topic": "Refrigeration code",
+   "trade": "hvac",
+   "state": null,
+   "source": "IMC 2021 1107.8; 1107.8.1",
+   "fact": "Under the 2021 IMC, systems with positive-displacement compressors holding more than 6.6 lb of refrigerant need stop valves at each compressor (or condensing unit) inlet and discharge and at each liquid receiver outlet (1107.8); systems with 100 lb or more also need a stop valve at each liquid receiver inlet (1107.8.1). Self-contained systems are among the exceptions.",
+   "status": "verified",
+   "note": "",
+   "keywords": [
+    "stop valves",
+    "service valves",
+    "6.6 pounds",
+    "100 pounds",
+    "liquid receiver"
+   ]
+  },
+  {
+   "id": "H5-116",
+   "topic": "Refrigeration code",
+   "trade": "hvac",
+   "state": null,
+   "source": "IMC 2021 1108.1 Exception; 1108.4",
+   "fact": "Under the 2021 IMC, field-erected systems using copper tubing no larger than 5/8 inch OD may be tested with the system's own refrigerant charged to its saturated vapor pressure at 70 F or higher instead of a separate pressure test (1108.1 exception), and systems holding 55 lb or more of refrigerant need a signed test certificate stating the refrigerant and the high- and low-side test pressures (1108.4).",
+   "status": "verified",
+   "note": "",
+   "keywords": [
+    "field test",
+    "5/8 inch copper",
+    "test certificate",
+    "55 pounds",
+    "1108"
+   ]
+  },
+  {
+   "id": "H5-117",
+   "topic": "A2L refrigerants",
+   "trade": "hvac",
+   "state": null,
+   "source": "2024 IMC Chapter 11 (as adopted in Seattle Mechanical Code Ch. 11, Sec. 1109.3)",
+   "fact": "The 2024 IMC adds A2L/B2L piping rules: tubing for these refrigerants that is less than 1-1/2 inches from the edge of a stud or joist needs a steel shield plate at least 0.0575 inch (No. 16 gage), and a naturally ventilated shaft carrying the piping needs a vent pipe at least 4 inches in diameter from the lowest point to outdoors.",
+   "status": "unverified",
+   "note": "Seen in Seattle's adopted Chapter 11, which follows the 2024 IMC layout; not confirmed against the 2024 IMC text itself. Not in the 2021 IMC.",
+   "keywords": [
+    "A2L piping",
+    "shield plate",
+    "2024 IMC",
+    "R-454B",
+    "1109.3"
+   ]
+  },
+  {
+   "id": "H5-118",
+   "topic": "Hydronics",
+   "trade": "hvac",
+   "state": null,
+   "source": "IRC 2021 M2103.1; M2103.4",
+   "fact": "Under the 2021 IRC, piping embedded in a radiant floor heating system must be rated for at least 80 psi at 180 F (M2103.1), and it must be hydrostatically tested at not less than 100 psi for 30 minutes, with every joint visually checked for leaks (M2103.4).",
+   "status": "verified",
+   "note": "",
+   "keywords": [
+    "radiant floor",
+    "embedded piping test",
+    "100 psi",
+    "30 minutes",
+    "M2103"
+   ]
+  },
+  {
+   "id": "H5-119",
+   "topic": "Hydronics",
+   "trade": "hvac",
+   "state": null,
+   "source": "IRC 2021 M2103.3; Table M2101.1",
+   "fact": "Under the 2021 IRC, joints in hydronic piping embedded in concrete must be: welded for steel, brazed for copper tubing (not soldered), heat-fused for polybutylene and polypropylene, solvent cemented for CPVC, and cold-expansion, insert or compression type for PEX.",
+   "status": "verified",
+   "note": "",
+   "keywords": [
+    "embedded joints",
+    "brazed copper",
+    "PEX fittings",
+    "radiant slab",
+    "M2103.3"
+   ]
+  },
+  {
+   "id": "H5-120",
+   "topic": "Hydronics",
+   "trade": "hvac",
+   "state": null,
+   "source": "IRC 2021 M2101.23; M2101.27",
+   "fact": "Under the 2021 IRC, where a hydronic system's pressure is reduced (for example, by a pressure-reducing valve), a relief valve must be installed on the low-pressure side and set at the system's maximum design pressure (M2101.23), and hydronic pipe whose surface exceeds 250 F needs at least 1 inch of clearance to combustible materials (M2101.27).",
+   "status": "verified",
+   "note": "",
+   "keywords": [
+    "relief valve low side",
+    "pressure reducing valve",
+    "250 F pipe",
+    "1 inch clearance",
+    "hydronic"
+   ]
+  },
+  {
+   "id": "H5-121",
+   "topic": "Hydronics",
+   "trade": "hvac",
+   "state": null,
+   "source": "IRC 2021 M2105.25; M2105.28",
+   "fact": "Under the 2021 IRC, ground-source heat pump loop piping entering a building must be marked 'GROUND-SOURCE HEAT-PUMP LOOP SYSTEM' with any antifreeze and its concentration named (M2105.25). After the 100 psi, 15-minute test, the measured flow rate and pressure drop are compared to design values, and a difference of more than 10 percent must be found and corrected (M2105.28).",
+   "status": "verified",
+   "note": "",
+   "keywords": [
+    "ground-source loop",
+    "geothermal",
+    "loop marking",
+    "10 percent",
+    "M2105"
+   ]
+  },
+  {
+   "id": "H5-122",
+   "topic": "Hydronics",
+   "trade": "hvac",
+   "state": null,
+   "source": "IRC 2021 M2003.2; Table M2003.2",
+   "fact": "IRC 2021 Table M2003.2 sizes hot water heating expansion tanks by system volume: a 50 gallon system needs a 4.0 gallon diaphragm (pressurized) tank or a 7.5 gallon nonpressurized tank, and a 100 gallon system needs 8.0 or 15.0 gallons. The table assumes 195 F average water, 12 psig fill and 30 psig maximum operating pressure, and pressurized tanks must withstand a hydrostatic test of 2-1/2 times the system's allowable working pressure.",
+   "status": "verified",
+   "note": "Seattle strikes this IRC section because it regulates boilers under a local boiler code; the values shown are the 2021 IRC text.",
+   "keywords": [
+    "expansion tank sizing",
+    "diaphragm tank",
+    "Table M2003.2",
+    "12 psig fill",
+    "2.5 times"
+   ]
+  },
+  {
+   "id": "H5-123",
+   "topic": "Boilers",
+   "trade": "hvac",
+   "state": null,
+   "source": "IRC 2021 M2002.4",
+   "fact": "IRC 2021 M2002.4: the discharge from a boiler's pressure-relief valve must be piped by gravity to within 18 inches of the floor or to an open receptor.",
+   "status": "verified",
+   "note": "",
+   "keywords": [
+    "boiler relief valve",
+    "18 inches",
+    "discharge pipe",
+    "open receptor",
+    "M2002.4"
+   ]
+  },
+  {
+   "id": "H5-124",
+   "topic": "Load calculation",
+   "trade": "hvac",
+   "state": null,
+   "source": "IRC 2021 M1401.3 Exceptions",
+   "fact": "IRC 2021 M1401.3 lets equipment exceed the Manual S size limits only where (1) multistage or variable-capacity (VRF) equipment has a published capacity range that covers the calculated loads, or (2) no published capacity meets both the total and sensible loads and the next larger standard size is used.",
+   "status": "verified",
+   "note": "",
+   "keywords": [
+    "equipment oversizing",
+    "Manual S",
+    "variable speed",
+    "next larger size",
+    "M1401.3"
+   ]
+  },
+  {
+   "id": "H5-125",
+   "topic": "Electrical for HVAC",
+   "trade": "hvac",
+   "state": null,
+   "source": "IRC 2021 M1407",
+   "fact": "IRC 2021 M1407: an electric duct heater installed within 4 ft of a heat pump or air conditioner must be listed for that installation (and the heat pump or AC must be listed for it too), and duct heaters must be interlocked so they cannot run unless the system fan is running.",
+   "status": "verified",
+   "note": "",
+   "keywords": [
+    "duct heater",
+    "4 feet",
+    "fan interlock",
+    "heat pump",
+    "M1407"
+   ]
+  },
+  {
+   "id": "H5-126",
+   "topic": "System components",
+   "trade": "hvac",
+   "state": null,
+   "source": "IRC 2021 M1411.2",
+   "fact": "IRC 2021 M1411.2: where a cooling coil is placed in the supply plenum of a warm-air furnace, the furnace blower must be rated for at least 0.5 in. w.c. static pressure unless the furnace is listed for use with a cooling coil, and cooling coils may not be placed upstream of the heat exchanger unless listed for it.",
+   "status": "verified",
+   "note": "",
+   "keywords": [
+    "cooling coil",
+    "furnace blower",
+    "0.5 inch static",
+    "upstream coil",
+    "M1411.2"
+   ]
+  },
+  {
+   "id": "H5-127",
+   "topic": "Refrigeration code",
+   "trade": "hvac",
+   "state": null,
+   "source": "IRC 2021 M1411.6; M1411.7",
+   "fact": "Under the 2021 IRC, refrigerant suction lines must be insulated to at least R-3 with an external surface permeance of no more than 0.05 perm (M1411.6), and refrigerant piping installed within 1-1/2 inches of the underside of roof decking must be protected from roofing nails and fasteners (M1411.7).",
+   "status": "verified",
+   "note": "",
+   "keywords": [
+    "suction line insulation",
+    "R-3",
+    "0.05 perm",
+    "roof deck",
+    "M1411.6"
+   ]
+  },
+  {
+   "id": "H5-128",
+   "topic": "Load calculation",
+   "trade": "hvac",
+   "state": null,
+   "source": "ACCA Technical Manuals (acca.org/standards/manuals)",
+   "fact": "ACCA manuals: Manual J = residential load calculation, Manual S = residential equipment selection, Manual D = residential duct design, Manual T = air distribution basics (choosing supply outlets and returns to avoid drafts and stagnant air), Manual N = commercial load calculation, Manual Q = commercial low-pressure duct design, Manual Zr = residential zoning, Manual B = testing, adjusting and balancing, Manual H = heat pump systems, and Manual P = psychrometrics. Manuals J and D are ANSI-approved standards.",
+   "status": "verified",
+   "note": "",
+   "keywords": [
+    "ACCA manuals",
+    "Manual J",
+    "Manual S",
+    "Manual D",
+    "Manual T",
+    "Manual N"
+   ]
+  },
+  {
+   "id": "H5-129",
+   "topic": "Efficiency standards",
+   "trade": "hvac",
+   "state": null,
+   "source": "DOE 10 CFR 430 Appendix M1; NYSERDA Clean Heat fact sheet (cleanheatconnect.ny.gov)",
+   "fact": "DOE's Appendix M1 test procedure (for units made on or after January 1, 2023) raised the external static pressure used to rate ducted systems from about 0.1-0.2 in. w.c. to 0.5 in. w.c., which is why SEER2, EER2 and HSPF2 numbers are lower than the old SEER, EER and HSPF. There is no single conversion factor; for example, the 2023 split heat pump minimum of 14.3 SEER2 / 7.5 HSPF2 corresponds to 15 SEER / 8.8 HSPF in the old metrics.",
+   "status": "verified",
+   "note": "",
+   "keywords": [
+    "SEER2",
+    "M1 test procedure",
+    "0.5 in w.c.",
+    "HSPF2",
+    "external static pressure"
+   ]
+  },
+  {
+   "id": "H5-130",
+   "topic": "Electrical for HVAC",
+   "trade": "hvac",
+   "state": null,
+   "source": "ACHR News, Testing the Run Capacitor While the System Is Running; ACCA HVAC Blog",
+   "fact": "A run capacitor can be checked under load with: microfarads = (2,652 x amps) / volts, using the current on the wire from the capacitor's HERM (or FAN) terminal and the voltage measured across the capacitor terminals. Example: 4.0 A at 380 V gives 2,652 x 4 / 380 = about 27.9 uF; compare it to the rated value (many run capacitors allow about +/-6 percent).",
+   "status": "verified",
+   "note": "ACCA's blog rounds the constant to 2,650.",
+   "keywords": [
+    "capacitor test",
+    "2652",
+    "microfarads",
+    "under load",
+    "run capacitor"
+   ]
+  },
+  {
+   "id": "H5-131",
+   "topic": "Electrical for HVAC",
+   "trade": "hvac",
+   "state": null,
+   "source": "IAEI Magazine, Air Conditioning Equipment Installations; NEC 2023 440.33",
+   "fact": "Manufacturers figure nameplate minimum circuit ampacity (MCA) as 125 percent of the largest motor-compressor rated-load current plus the other loads (NEC 440.33). Example: a 16 A RLA compressor and a 1.2 A condenser fan give 1.25 x 16 + 1.2 = 21.2 A MCA.",
+   "status": "verified",
+   "note": "",
+   "keywords": [
+    "MCA",
+    "minimum circuit ampacity",
+    "125 percent",
+    "RLA",
+    "440.33"
+   ]
+  },
+  {
+   "id": "H5-132",
+   "topic": "Electrical for HVAC",
+   "trade": "hvac",
+   "state": null,
+   "source": "NEC 2023 440.22(A); IAEI Magazine",
+   "fact": "Under NEC 440.22(A), the branch-circuit fuse or breaker for a hermetic motor-compressor may not exceed 175 percent of its rated-load current, and may be raised to no more than 225 percent if the motor will not start. Example: a 16 A RLA compressor allows 28 A, or up to 36 A if needed to start. The equipment nameplate MOCP must never be exceeded (NEC 110.3(B)).",
+   "status": "verified",
+   "note": "",
+   "keywords": [
+    "MOCP",
+    "175 percent",
+    "225 percent",
+    "440.22",
+    "breaker size"
+   ]
+  },
+  {
+   "id": "H5-133",
+   "topic": "EPA 608 cylinders",
+   "trade": "hvac",
+   "state": null,
+   "source": "Arkema Forane tech tip (A2L vs A1 cylinders); ACCA HVAC Blog (gray A2L cylinders)",
+   "fact": "Cylinders for A2L refrigerants (such as R-454B and R-32) have a left-hand threaded valve outlet (an AHRI guideline adopted by most manufacturers) so A1 and A2L hoses are not mixed up, a red band or red top marking flammability (a DOT requirement), and a spring-loaded relief valve that recloses instead of a rupture disc.",
+   "status": "verified",
+   "note": "",
+   "keywords": [
+    "A2L cylinder",
+    "left-hand thread",
+    "red band",
+    "relief valve",
+    "R-454B"
+   ]
+  },
+  {
+   "id": "H5-134",
+   "topic": "Fuel gas",
+   "trade": "hvac",
+   "state": null,
+   "source": "Beckett Corp., Clocking the Gas Meter (burner tutorial)",
+   "fact": "To clock a gas meter, shut off all other gas appliances, run the appliance at high fire, and time one revolution of the test dial: CFH = 3,600 x dial size (cubic feet) / seconds per revolution, and input (Btu/h) = CFH x the gas heating value. Example: a 1/2 cubic foot dial taking 36 seconds gives 3,600 x 0.5 / 36 = 50 CFH, or about 50,000 Btu/h with 1,000 Btu per cubic foot gas.",
+   "status": "verified",
+   "note": "Get the actual heating value from the gas supplier; it is lower at high altitude.",
+   "keywords": [
+    "clocking gas meter",
+    "3600",
+    "firing rate",
+    "CFH",
+    "input check"
+   ]
+  },
+  {
+   "id": "H5-135",
+   "topic": "Refrigeration practice",
+   "trade": "hvac",
+   "state": null,
+   "source": "Thermo King service manual, Pressure Rise Test; HVAC School, Vacuum: Moisture vs System Leak",
+   "fact": "After evacuation, isolate the vacuum pump and watch the micron gauge (decay or pressure-rise test): if pressure rises and then levels off below atmospheric, the system is tight but still wet and needs more evacuation; if it keeps rising toward atmospheric pressure, there is a leak that must be found and repaired.",
+   "status": "verified",
+   "note": "",
+   "keywords": [
+    "decay test",
+    "micron gauge",
+    "moisture",
+    "leak",
+    "evacuation"
+   ]
+  },
+  {
+   "id": "H5-136",
+   "topic": "Refrigerants",
+   "trade": "hvac",
+   "state": null,
+   "source": "HVAC School, Oil Best Practices for HFC and HFO Systems; RefrigerantHQ, Understanding Refrigerant Oils",
+   "fact": "Mineral oil is used with older CFC and HCFC refrigerants such as R-12 and R-22 and does not mix well with HFCs, while stationary HFC and HFO systems (such as R-410A and R-404A) use POE oil (PVE in some ductless/VRF units). POE absorbs moisture quickly from the air, so it should only be used from sealed metal containers; water breaks POE down into acids.",
+   "status": "verified",
+   "note": "Automotive R-134a and R-1234yf systems generally use PAG oil.",
+   "keywords": [
+    "POE oil",
+    "mineral oil",
+    "hygroscopic",
+    "R-410A oil",
+    "PVE"
+   ]
+  },
+  {
+   "id": "H5-137",
+   "topic": "Commercial kitchen",
+   "trade": "hvac",
+   "state": null,
+   "source": "IMC 2021 506.3.2.5",
+   "fact": "IMC 2021 506.3.2.5: before a Type I grease duct is concealed or put into use, a light test must be done by passing a lamp of at least 100 watts through the duct to confirm that all welded and brazed joints are liquid-tight.",
+   "status": "verified",
+   "note": "",
+   "keywords": [
+    "grease duct test",
+    "light test",
+    "100 watt",
+    "Type I hood",
+    "welded joints"
+   ]
+  },
+  {
+   "id": "H5-138",
+   "topic": "Venting",
+   "trade": "hvac",
+   "state": null,
+   "source": "IFGC 2021 501.7; 503.10.13",
+   "fact": "Under the 2021 IFGC, a gas appliance vented into a fireplace flue needs a noncombustible seal below the connection and access for flue inspection and cleaning; it may not connect to a factory-built fireplace flue unless the appliance is listed for that use (501.7), and a vent connector may enter a fireplace flue only if the fireplace opening is permanently sealed (503.10.13).",
+   "status": "verified",
+   "note": "",
+   "keywords": [
+    "fireplace flue",
+    "noncombustible seal",
+    "factory-built fireplace",
+    "gas insert",
+    "501.7"
+   ]
+  },
+  {
+   "id": "H5-139",
+   "topic": "EPA 608 definitions",
+   "trade": "hvac",
+   "state": null,
+   "source": "40 CFR 82.152 (seasonal variance; mothball)",
+   "fact": "Under 40 CFR 82.152, a seasonal variance is refrigerant removed because of a seasonal change in ambient conditions and later added back (no more than was removed) within one 12-month period; such additions do not require a leak rate calculation. To mothball an appliance means to evacuate it to at least atmospheric pressure and shut it down temporarily.",
+   "status": "verified",
+   "note": "",
+   "keywords": [
+    "seasonal variance",
+    "mothball",
+    "leak rate",
+    "12 months",
+    "definition"
+   ]
+  },
+  {
+   "id": "H5-140",
+   "topic": "EPA 608 venting",
+   "trade": "hvac",
+   "state": null,
+   "source": "40 CFR 82.154(a)(1)",
+   "fact": "Under 40 CFR 82.154(a)(1), propane (R-290) is an exempt substitute (not covered by the venting prohibition) only in listed end uses, including household refrigerators and freezers, certain residential and light commercial air conditioning, vending machines, ice machines, water coolers and some retail food equipment; isobutane (R-600a) is exempt in household refrigerators, stand-alone retail units and vending machines.",
+   "status": "verified",
+   "note": "Using a hydrocarbon outside its listed end uses is not exempt.",
+   "keywords": [
+    "R-290",
+    "propane",
+    "exempt substitute",
+    "isobutane",
+    "venting prohibition"
+   ]
+  },
+  {
+   "id": "H5-141",
+   "topic": "EPA 608 certification",
+   "trade": "hvac",
+   "state": null,
+   "source": "40 CFR 82 Subpart F, Appendix D(b); D(g)",
+   "fact": "Under 40 CFR 82 Subpart F Appendix D, proctors must check each test taker's photo ID (such as a driver's license, passport or military ID), and certifying programs must keep records of test takers' names and addresses, scores, and test dates and locations indefinitely unless the records are transferred to another approved program or to EPA.",
+   "status": "verified",
+   "note": "",
+   "keywords": [
+    "photo ID",
+    "proctor",
+    "certification records",
+    "Appendix D",
+    "testing"
+   ]
+  },
+  {
+   "id": "H5-142",
+   "topic": "EPA ER&R (HFC)",
+   "trade": "hvac",
+   "state": null,
+   "source": "40 CFR 84.112",
+   "fact": "Under 40 CFR 84.112, starting January 1, 2026 certified reclaimers must label each container of reclaimed HFC refrigerant stating that it contains no more than 15 percent virgin regulated substance, and must keep an electronic certification record for each filled container for three years.",
+   "status": "verified",
+   "note": "",
+   "keywords": [
+    "reclaimed refrigerant label",
+    "15 percent virgin",
+    "reclaimer",
+    "84.112",
+    "2026"
+   ]
+  },
+  {
+   "id": "H5-143",
+   "topic": "AIM Act / Technology Transitions",
+   "trade": "hvac",
+   "state": null,
+   "source": "40 CFR 84.54(c) (eCFR current as of Oct 2026)",
+   "fact": "Under current 40 CFR 84.54(c), new supermarket systems may not be installed with refrigerant of GWP 1,400 or more from January 1, 2027; retail food remote condensing units (GWP 1,400) and cold storage warehouses (GWP 700) have a July 27, 2026 installation date; and tighter 150/300 GWP tiers apply to all three starting January 1, 2032.",
+   "status": "verified",
+   "note": "Several of these dates were changed by amendments in 2024-2026; check eCFR for the current text.",
+   "keywords": [
+    "supermarket system",
+    "GWP 1400",
+    "cold storage",
+    "remote condensing unit",
+    "2032"
+   ]
+  },
+  {
+   "id": "H5-144",
+   "topic": "Specific gas appliances",
+   "trade": "hvac",
+   "state": null,
+   "source": "IFGC 2021 612",
+   "fact": "IFGC 2021 612: recirculating direct-fired industrial air heaters may be used only in industrial or commercial occupancies, may not serve sleeping quarters or hazardous locations, and must bring in outdoor ventilation air of at least 4 cfm per 1,000 Btu/h of rated input.",
+   "status": "verified",
+   "note": "",
+   "keywords": [
+    "direct-fired heater",
+    "makeup air heater",
+    "4 cfm per 1000",
+    "industrial",
+    "612"
+   ]
+  },
+  {
+   "id": "H5-145",
+   "topic": "EPA 608 evacuation",
+   "trade": "hvac",
+   "state": null,
+   "source": "40 CFR 82.156(f)",
+   "fact": "Under 40 CFR 82.156(f), people who service only their own appliances that have permanently attached pump-out units are not required to use certified self-contained recovery equipment; elsewhere, system-dependent recovery is limited to appliances with 15 lb or less (82.156(e)).",
+   "status": "verified",
+   "note": "",
+   "keywords": [
+    "pump-out unit",
+    "self-contained recovery",
+    "system-dependent",
+    "15 pounds",
+    "82.156"
+   ]
+  },
+  {
+   "id": "H5-146",
+   "topic": "Fuel gas sizing",
+   "trade": "hvac",
+   "state": null,
+   "source": "IFGC 2021 Table 402.4(2)",
+   "fact": "More IFGC 2021 Table 402.4(2) values (Schedule 40, natural gas, 0.5 in. w.c. drop): at 20 ft, 1/2 in = 118 CFH, 3/4 in = 247, 1 in = 466; at 40 ft, 81, 170 and 320. Example: a 150 CFH load with a 40 ft longest length needs 3/4 in pipe (170 CFH), but a 200 CFH load needs 1 in (320 CFH).",
+   "status": "verified",
+   "note": "",
+   "keywords": [
+    "gas pipe sizing",
+    "Table 402.4(2)",
+    "40 feet",
+    "3/4 inch",
+    "CFH capacity"
+   ]
+  },
+  {
+   "id": "H5-147",
+   "topic": "Ventilation",
+   "trade": "hvac",
+   "state": null,
+   "source": "IMC 2021 Table 403.3.1.1",
+   "fact": "IMC 2021 Table 403.3.1.1: hotel bedrooms and living rooms use 10 people per 1,000 sq ft at 5 cfm per person plus 0.06 cfm per sq ft, and lecture classrooms use 65 people per 1,000 sq ft at 7.5 cfm per person plus 0.06 cfm per sq ft.",
+   "status": "verified",
+   "note": "",
+   "keywords": [
+    "hotel room ventilation",
+    "lecture classroom",
+    "Table 403.3.1.1",
+    "outdoor air",
+    "occupant density"
+   ]
+  },
+  {
+   "id": "H5-148",
+   "topic": "EPA 608 leak repair",
+   "trade": "hvac",
+   "state": null,
+   "source": "40 CFR 82.157(g)",
+   "fact": "Under 40 CFR 82.157(g), required leak inspections cover all visible and accessible components, but need not include components that are insulated, underground, behind walls, iced over or otherwise inaccessible, components more than 2 meters (about 6.5 ft) above the ground, or components site personnel judge unsafe to reach.",
+   "status": "verified",
+   "note": "",
+   "keywords": [
+    "leak inspection scope",
+    "2 meters",
+    "inaccessible",
+    "insulated components",
+    "82.157(g)"
+   ]
+  },
+  {
+   "id": "H5-149",
+   "topic": "EPA 608 certification",
+   "trade": "hvac",
+   "state": null,
+   "source": "40 CFR 82.161(b)",
+   "fact": "Under 40 CFR 82.161(b), EPA encourages certification programs to offer the 608 test in other languages or allow translators, and a program may give an oral test if the candidate makes a written request, explaining the need, at least 30 days before the exam.",
+   "status": "verified",
+   "note": "",
+   "keywords": [
+    "oral test",
+    "30 days",
+    "translator",
+    "608 exam",
+    "82.161"
+   ]
+  },
+  {
+   "id": "H5-150",
+   "topic": "Duct systems",
+   "trade": "hvac",
+   "state": null,
+   "source": "IMC 2021 601.2",
+   "fact": "IMC 2021 601.2: corridors may not be used as supply, return, exhaust, relief or ventilation air ducts. Limited exceptions apply, such as using corridor air as makeup air for adjoining toilet rooms, bathrooms, dressing rooms and janitor closets when the corridor gets outdoor air at a higher rate than the makeup air taken from it.",
+   "status": "verified",
+   "note": "",
+   "keywords": [
+    "corridor as duct",
+    "601.2",
+    "return air corridor",
+    "makeup air",
+    "egress"
+   ]
+  },
+  {
+   "id": "H5-151",
+   "topic": "Hydronics",
+   "trade": "hvac",
+   "state": null,
+   "source": "IRC 2021 M2105.29",
+   "fact": "IRC 2021 M2105.29: ground-source heat pump loop piping embedded in concrete must be pressure tested before the concrete is poured, and the proposed operating pressure must be maintained in the piping during the pour.",
+   "status": "verified",
+   "note": "",
+   "keywords": [
+    "embedded loop",
+    "pressure during pour",
+    "ground-source",
+    "slab",
+    "M2105.29"
+   ]
   }
  ],
- "questions": []
+ "questions": [
+  {
+   "t": "hvac",
+   "topic": "Fuel gas sizing",
+   "q": "Using the longest length method with IFGC Table 402.4(2), the longest run is 60 ft and the main from the meter carries 205 CFH. What is the smallest Schedule 40 main that works?",
+   "c": [
+    "1/2 in",
+    "3/4 in",
+    "1 in",
+    "1-1/4 in"
+   ],
+   "a": 2,
+   "ref": "IFGC 2021 402.4.1; Table 402.4(2)",
+   "why": "In the 60 ft row, 3/4 in carries only 137 CFH while 1 in carries 257 CFH, so 1 in is the smallest size that handles 205 CFH."
+  },
+  {
+   "t": "hvac",
+   "topic": "Fuel gas sizing",
+   "q": "Per IFGC 2021 Table 402.4(2) (natural gas, 0.5 in. w.c. drop), what is the capacity of 3/4 in Schedule 40 pipe at 10 ft?",
+   "c": [
+    "172 CFH",
+    "247 CFH",
+    "360 CFH",
+    "678 CFH"
+   ],
+   "a": 2,
+   "ref": "IFGC 2021 Table 402.4(2)",
+   "why": "At 10 ft the table lists 172 CFH for 1/2 in, 360 CFH for 3/4 in and 678 CFH for 1 in."
+  },
+  {
+   "t": "hvac",
+   "topic": "Fuel gas sizing",
+   "q": "A branch serves a 150 CFH load and the longest length from the meter is 40 ft. Using IFGC Table 402.4(2), what is the smallest Schedule 40 pipe size?",
+   "c": [
+    "1/2 in",
+    "3/4 in",
+    "1 in",
+    "1-1/4 in"
+   ],
+   "a": 1,
+   "ref": "IFGC 2021 Table 402.4(2)",
+   "why": "At 40 ft, 1/2 in carries 81 CFH and 3/4 in carries 170 CFH, so 3/4 in is enough for 150 CFH."
+  },
+  {
+   "t": "hvac",
+   "topic": "Clearance reduction",
+   "q": "An appliance requires 36 in of clearance at the sides. Using No. 24 gage sheet metal spaced out 1 in with a ventilated air space (IFGC Table 308.2), the side clearance can be reduced to:",
+   "c": [
+    "24 in",
+    "18 in",
+    "12 in",
+    "9 in"
+   ],
+   "a": 2,
+   "ref": "IFGC 2021 Table 308.2",
+   "why": "Table 308.2 reduces a 36 in required clearance to 12 in at the sides and rear (18 in above) with 24 gage sheet metal and a 1 in air space."
+  },
+  {
+   "t": "hvac",
+   "topic": "Clearance reduction",
+   "q": "Per IFGC 2021 Table 308.2, a 3-1/2 in masonry wall installed with no air space reduces a required 36 in side clearance to:",
+   "c": [
+    "12 in",
+    "18 in",
+    "24 in",
+    "30 in"
+   ],
+   "a": 2,
+   "ref": "IFGC 2021 Table 308.2",
+   "why": "Masonry without an air space reduces 36 in to 24 in at the sides and rear; with a 1 in ventilated air space it reduces to 12 in."
+  },
+  {
+   "t": "hvac",
+   "topic": "Equipment location",
+   "q": "Under IFGC 2021 303.7, how far must the side of a pit be held back from the control side of a gas appliance installed in the pit?",
+   "c": [
+    "12 in",
+    "18 in",
+    "24 in",
+    "30 in"
+   ],
+   "a": 3,
+   "ref": "IFGC 2021 303.7",
+   "why": "Pit sides must be at least 12 in from the appliance, and at least 30 in on the control side."
+  },
+  {
+   "t": "hvac",
+   "topic": "Fuel gas piping",
+   "q": "Under the 2021 IFGC, how must arc-resistant CSST (ARCSST) be bonded?",
+   "c": [
+    "With a 6 AWG copper jumper to the service grounding electrode system",
+    "With a 4 AWG jumper no longer than 50 ft",
+    "It is electrically continuous and bonded to an effective ground-fault current path like other gas piping",
+    "It does not need to be bonded at all"
+   ],
+   "a": 2,
+   "ref": "IFGC 2021 310.3",
+   "why": "IFGC 2021 310.3 treats arc-resistant CSST like other gas piping; the 6 AWG direct-bond jumper in 310.2 applies to CSST that is not arc-resistant."
+  },
+  {
+   "t": "hvac",
+   "topic": "Venting",
+   "q": "A room has a volume of 2,000 cubic feet. Under IFGC 501.8 and 621.5, what is the most total input of unvented room heaters allowed in it?",
+   "c": [
+    "20,000 Btu/h",
+    "40,000 Btu/h",
+    "50,000 Btu/h",
+    "100,000 Btu/h"
+   ],
+   "a": 1,
+   "ref": "IFGC 2021 501.8; 621.5",
+   "why": "The limit is 20 Btu/h per cubic foot of room volume: 2,000 x 20 = 40,000 Btu/h."
+  },
+  {
+   "t": "hvac",
+   "topic": "Chimney & vent termination",
+   "q": "Under IFGC 2021 503.5.5, the effective area of a chimney serving one draft-hood appliance may not be more than how many times the draft hood outlet area?",
+   "c": [
+    "2 times",
+    "4 times",
+    "7 times",
+    "10 times"
+   ],
+   "a": 2,
+   "ref": "IFGC 2021 503.5.5",
+   "why": "The chimney area must be at least the draft hood outlet area and no more than 7 times that area, so it is not oversized."
+  },
+  {
+   "t": "hvac",
+   "topic": "Venting",
+   "q": "For Type B vents sized by the draft-hood method, IFGC 503.6.10.2 limits offsets to 45 degrees from vertical, except that a vent may have:",
+   "c": [
+    "Any number of 60-degree offsets",
+    "One 60-degree offset",
+    "One 90-degree offset",
+    "Two 75-degree offsets"
+   ],
+   "a": 1,
+   "ref": "IFGC 2021 503.6.10.2",
+   "why": "Offsets may not exceed 45 degrees, except one 60-degree offset is allowed; anything steeper counts as horizontal."
+  },
+  {
+   "t": "hvac",
+   "topic": "Venting",
+   "q": "Under IFGC 2021 503.7, single-wall metal pipe used as a gas vent may NOT:",
+   "c": [
+    "Pass through an attic or concealed space",
+    "Run directly through the roof from the appliance room",
+    "Terminate with an approved cap",
+    "Be made of galvanized steel at least 0.0304 in thick"
+   ],
+   "a": 0,
+   "ref": "IFGC 2021 503.7",
+   "why": "Single-wall vent pipe must run directly from the appliance space through the roof or exterior wall and may not start in or pass through an attic, inside wall, concealed space or floor."
+  },
+  {
+   "t": "hvac",
+   "topic": "Venting",
+   "q": "A single-wall vent from a listed draft-hood appliance passes through a combustible exterior wall. Under IFGC 503.7.7, the ventilated metal thimble must normally be how much larger in diameter than the pipe?",
+   "c": [
+    "1 in",
+    "2 in",
+    "4 in",
+    "12 in"
+   ],
+   "a": 2,
+   "ref": "IFGC 2021 503.7.7",
+   "why": "For listed draft-hood appliances the thimble must be at least 4 in larger (2 in if at least 6 ft of pipe is exposed first); 12 in applies to residential and low-heat appliances."
+  },
+  {
+   "t": "hvac",
+   "topic": "Vent connectors",
+   "q": "Per IFGC 2021 Table 503.10.5, what clearance to combustibles is required for a single-wall vent connector serving a residential or low-heat appliance (not a listed draft-hood appliance)?",
+   "c": [
+    "6 in",
+    "9 in",
+    "18 in",
+    "36 in"
+   ],
+   "a": 2,
+   "ref": "IFGC 2021 Table 503.10.5",
+   "why": "The table requires 18 in for single-wall connectors on other residential and low-heat appliances, 6 in for listed draft-hood appliances and 36 in for medium-heat appliances."
+  },
+  {
+   "t": "hvac",
+   "topic": "Venting",
+   "q": "Under IFGC 2021 503.12.7, a draft hood's relief opening must be at least how far from any surface other than the appliance and its venting system?",
+   "c": [
+    "3 in",
+    "6 in",
+    "12 in",
+    "18 in"
+   ],
+   "a": 1,
+   "ref": "IFGC 2021 503.12.7",
+   "why": "The relief opening must be at least 6 in from other surfaces unless the appliance label requires more."
+  },
+  {
+   "t": "hvac",
+   "topic": "Specific gas appliances",
+   "q": "Under IFGC 2021 621.3, what is the maximum input rating of an unvented room heater?",
+   "c": [
+    "10,000 Btu/h",
+    "20,000 Btu/h",
+    "40,000 Btu/h",
+    "65,000 Btu/h"
+   ],
+   "a": 2,
+   "ref": "IFGC 2021 621.3",
+   "why": "Unvented room heaters are limited to 40,000 Btu/h, and they may not be the only heat source in a dwelling."
+  },
+  {
+   "t": "hvac",
+   "topic": "Specific gas appliances",
+   "q": "The oxygen-depletion safety shutoff on an unvented room heater must shut off gas before oxygen falls below:",
+   "c": [
+    "14 percent",
+    "16 percent",
+    "18 percent",
+    "20.9 percent"
+   ],
+   "a": 2,
+   "ref": "IFGC 2021 621.6",
+   "why": "IFGC 621.6 requires the shutoff set point to be no lower than 18 percent oxygen, and it may not be field adjustable."
+  },
+  {
+   "t": "hvac",
+   "topic": "Specific gas appliances",
+   "q": "Without a listed hood or other protection, what vertical clearance does IFGC 623.7 require between a domestic range cooking top and combustible cabinets above?",
+   "c": [
+    "18 in",
+    "24 in",
+    "30 in",
+    "36 in"
+   ],
+   "a": 2,
+   "ref": "IFGC 2021 623.7",
+   "why": "30 in is required; it may be reduced to 24 in with approved protection such as a metal hood or millboard covered with sheet metal."
+  },
+  {
+   "t": "hvac",
+   "topic": "Specific gas appliances",
+   "q": "Unvented infrared radiant heaters totaling 150,000 Btu/h are installed in a shop. Under IFGC 630.3, what is the minimum outdoor ventilation air?",
+   "c": [
+    "150 cfm",
+    "350 cfm",
+    "600 cfm",
+    "1,500 cfm"
+   ],
+   "a": 2,
+   "ref": "IFGC 2021 630.3",
+   "why": "The rule is 4 cfm per 1,000 Btu/h of input: 150 x 4 = 600 cfm."
+  },
+  {
+   "t": "hvac",
+   "topic": "Return air",
+   "q": "A room containing a 100,000 Btu/h furnace is used as the only source of return air. Under IFGC 618.3, the room volume must exceed:",
+   "c": [
+    "2,500 cubic feet",
+    "5,000 cubic feet",
+    "10,000 cubic feet",
+    "50,000 cubic feet"
+   ],
+   "a": 2,
+   "ref": "IFGC 2021 618.3",
+   "why": "The room must have more than 1 cubic foot per 10 Btu/h of total input (100,000 / 10 = 10,000 cubic feet), with return inlets at least 10 ft from any draft hood."
+  },
+  {
+   "t": "hvac",
+   "topic": "Dryer exhaust",
+   "q": "Under the 2021 IFGC and IMC, a clothes dryer exhaust terminal must provide an open area of at least:",
+   "c": [
+    "7.5 sq in",
+    "12.5 sq in",
+    "16 sq in",
+    "100 sq in"
+   ],
+   "a": 1,
+   "ref": "IFGC 2021 614.4.2; IMC 2021 504.4.2",
+   "why": "The terminal passageway must be undiminished and provide at least 12.5 square inches of open area."
+  },
+  {
+   "t": "hvac",
+   "topic": "EPA 608 definitions",
+   "q": "Under 40 CFR 82.161, a technician servicing the AC in a farm tractor cab (an MVAC-like appliance) must hold:",
+   "c": [
+    "Type I certification only",
+    "Type III certification",
+    "Type II or Section 609 certification",
+    "No certification"
+   ],
+   "a": 2,
+   "ref": "40 CFR 82.152; 82.161(a)",
+   "why": "MVAC-like appliances (open-drive, 20 lb or less, off-road vehicle cabs) may be serviced by Type II or Section 609 certified technicians."
+  },
+  {
+   "t": "hvac",
+   "topic": "EPA 608 definitions",
+   "q": "Under 40 CFR 82.152, which activity does NOT count as technician work that requires EPA 608 certification?",
+   "c": [
+    "Attaching gauges to the service ports",
+    "Adding refrigerant",
+    "Cutting a refrigerant line",
+    "Painting the outdoor unit"
+   ],
+   "a": 3,
+   "ref": "40 CFR 82.152 (technician)",
+   "why": "Work that could break into the refrigerant circuit (hoses, gauges, adding or removing refrigerant, cutting lines) requires certification; painting does not."
+  },
+  {
+   "t": "hvac",
+   "topic": "EPA 608 leak repair",
+   "q": "Under 40 CFR 82.152, a pressure decay test or sight glass check used as a leak inspection must be:",
+   "c": [
+    "Done only by the equipment manufacturer",
+    "Paired with a method that locates the leak",
+    "Repeated every 10 days",
+    "Reported to EPA within 30 days"
+   ],
+   "a": 1,
+   "ref": "40 CFR 82.152 (leak inspection)",
+   "why": "Those methods only show that a leak exists, so they must be combined with a method that finds where it is, such as a bubble test or electronic detector."
+  },
+  {
+   "t": "hvac",
+   "topic": "EPA 608 sales restriction",
+   "q": "Since April 27, 1995, EPA has stayed (not enforced) the refrigerant sales restriction as it applies to:",
+   "c": [
+    "Refrigerant in appliances without fully assembled circuits, such as pre-charged split-system components",
+    "All 30 lb cylinders of R-410A",
+    "Recovered refrigerant sold to homeowners",
+    "Small cans for stationary AC"
+   ],
+   "a": 0,
+   "ref": "40 CFR 82.154(g)",
+   "why": "82.154(g) stays the sales restriction only for refrigerant contained in appliances without fully assembled refrigerant circuits."
+  },
+  {
+   "t": "hvac",
+   "topic": "EPA 608 evacuation",
+   "q": "Before opening an appliance only to change the compressor oil, 40 CFR 82.156 requires evacuating or pressurizing it to no higher than:",
+   "c": [
+    "0 psig",
+    "5 psig",
+    "10 in Hg vacuum",
+    "15 psig"
+   ],
+   "a": 1,
+   "ref": "40 CFR 82.156(a)(1)(iii)",
+   "why": "For oil changes the appliance (or the receiver the oil is drained into) must be at 5 psig or less."
+  },
+  {
+   "t": "hvac",
+   "topic": "EPA 608 recovery practice",
+   "q": "Under 40 CFR 82.156(h), recovered refrigerant may be put back into another appliance without reclaiming it when:",
+   "c": [
+    "The other appliance is owned by the same person",
+    "The refrigerant passes a sight-glass check",
+    "The technician holds Universal certification",
+    "The other appliance is a motor vehicle AC"
+   ],
+   "a": 0,
+   "ref": "40 CFR 82.156(h)",
+   "why": "Refrigerant may go back into the same appliance or another appliance owned by the same person; selling it to another owner requires reclamation."
+  },
+  {
+   "t": "hvac",
+   "topic": "EPA 608 leak repair",
+   "q": "When needed parts are unavailable, how long can EPA's leak repair deadline be extended at most for a system that does not need an industrial process shutdown?",
+   "c": [
+    "60 days",
+    "120 days",
+    "180 days",
+    "1 year"
+   ],
+   "a": 2,
+   "ref": "40 CFR 82.157(f)",
+   "why": "The extension runs until 30 days after the part arrives but is capped at 180 days (270 days with an industrial process shutdown)."
+  },
+  {
+   "t": "hvac",
+   "topic": "EPA 608 leak repair",
+   "q": "Refrigerant-in-air automatic leak detectors used in place of periodic leak inspections must detect at least ___ and alarm at ___.",
+   "c": [
+    "1 ppm; 10 ppm",
+    "10 ppm; 100 ppm",
+    "100 ppm; 1,000 ppm",
+    "50 ppm; 500 ppm"
+   ],
+   "a": 1,
+   "ref": "40 CFR 82.157(g); 84.108",
+   "why": "Direct refrigerant-in-air sensors must accurately detect 10 ppm and alert at 100 ppm."
+  },
+  {
+   "t": "hvac",
+   "topic": "EPA ER&R (HFC)",
+   "q": "Under the HFC leak repair rule (40 CFR 84.106), which leak rate calculation methods may an owner use?",
+   "c": [
+    "Only the annualizing method",
+    "Only the rolling average method",
+    "Either annualizing or rolling average, using the same method at all facilities",
+    "Any method the technician chooses for each event"
+   ],
+   "a": 2,
+   "ref": "40 CFR 84.106",
+   "why": "Owners may use the annualizing or rolling average method but must use the same method at all facilities covered by the rule."
+  },
+  {
+   "t": "hvac",
+   "topic": "AIM Act / Technology Transitions",
+   "q": "Under current 40 CFR 84.54(c)(1), a new residential R-410A (GWP above 700) split system may still be installed when:",
+   "c": [
+    "It is installed before January 1, 2026",
+    "All of its specified components were made or imported before January 1, 2025",
+    "It has a SEER2 rating above 16",
+    "The homeowner signs a waiver"
+   ],
+   "a": 1,
+   "ref": "40 CFR 84.54(c)(1)",
+   "why": "The rule allows installation where all components were made or imported before January 1, 2025; after the May 2026 amendment there is no installation deadline."
+  },
+  {
+   "t": "hvac",
+   "topic": "AIM Act / Technology Transitions",
+   "q": "Under the AIM Act, what share of the HFC baseline is allowed in 2036 and later?",
+   "c": [
+    "60 percent",
+    "30 percent",
+    "20 percent",
+    "15 percent"
+   ],
+   "a": 3,
+   "ref": "42 U.S.C. 7675(e)(2)(C)",
+   "why": "The schedule steps down from 90 to 60 to 30 to 20 percent and reaches 15 percent of baseline (an 85 percent cut) in 2036."
+  },
+  {
+   "t": "hvac",
+   "topic": "Ventilation",
+   "q": "A 2,000 sq ft retail sales floor will hold 30 people. Using IMC Table 403.3.1.1 (7.5 cfm per person + 0.12 cfm per sq ft), the breathing-zone outdoor air is:",
+   "c": [
+    "225 cfm",
+    "240 cfm",
+    "465 cfm",
+    "690 cfm"
+   ],
+   "a": 2,
+   "ref": "IMC 2021 Table 403.3.1.1",
+   "why": "(7.5 x 30) + (0.12 x 2,000) = 225 + 240 = 465 cfm."
+  },
+  {
+   "t": "hvac",
+   "topic": "Ventilation",
+   "q": "Under the IMC, automatic controls for an enclosed parking garage ventilation system may never reduce the rate below:",
+   "c": [
+    "0.05 cfm per sq ft",
+    "0.25 cfm per sq ft",
+    "0.75 cfm per sq ft",
+    "1.5 cfm per sq ft"
+   ],
+   "a": 0,
+   "ref": "IMC 404",
+   "why": "The system must be able to deliver 0.75 cfm per sq ft, but automatic operation may not drop below 0.05 cfm per sq ft."
+  },
+  {
+   "t": "hvac",
+   "topic": "Duct insulation",
+   "q": "Under the 2021 IMC and IRC, external duct insulation and insulated flex duct must be marked with the manufacturer, R-value and fire ratings at intervals of no more than:",
+   "c": [
+    "12 in",
+    "36 in",
+    "10 ft",
+    "25 ft"
+   ],
+   "a": 1,
+   "ref": "IMC 2021 604.7; IRC 2021 M1601.3",
+   "why": "Both codes require the identification to be printed at intervals not greater than 36 inches."
+  },
+  {
+   "t": "hvac",
+   "topic": "Duct systems",
+   "q": "Crimp joints in round metal ducts must be mechanically fastened with at least how many sheet metal screws or rivets, equally spaced?",
+   "c": [
+    "One",
+    "Two",
+    "Three",
+    "Four"
+   ],
+   "a": 2,
+   "ref": "IMC 2021 603.4.1; IRC 2021 M1601.4.1",
+   "why": "At least three equally spaced screws or rivets are required, with a 1 in minimum lap."
+  },
+  {
+   "t": "hvac",
+   "topic": "Fire & smoke dampers",
+   "q": "Under IMC 2021 607.3.3.1, a fire damper's heat-responsive device must be rated about 50 F above normal duct temperature but not less than:",
+   "c": [
+    "125 F",
+    "160 F",
+    "212 F",
+    "286 F"
+   ],
+   "a": 1,
+   "ref": "IMC 2021 607.3.3.1",
+   "why": "The operating temperature must be about 50 F above the normal duct temperature, but never lower than 160 F."
+  },
+  {
+   "t": "hvac",
+   "topic": "Refrigeration code",
+   "q": "Using IMC Table 1103.1 (R-32 = 4.8 lb per 1,000 cubic feet), about how much R-32 may a single circuit hold if it serves only a 12 x 12 x 8 ft room?",
+   "c": [
+    "2.4 lb",
+    "5.5 lb",
+    "11 lb",
+    "30 lb"
+   ],
+   "a": 1,
+   "ref": "IMC 2021 1104.2; Table 1103.1",
+   "why": "12 x 12 x 8 = 1,152 cubic feet; 4.8 x 1,152 / 1,000 = about 5.5 lb."
+  },
+  {
+   "t": "hvac",
+   "topic": "Refrigeration code",
+   "q": "Under IMC 2021 1105.7, pressure relief devices for a refrigeration machinery room must discharge at least how high above adjoining grade?",
+   "c": [
+    "7 ft",
+    "10 ft",
+    "15 ft",
+    "20 ft"
+   ],
+   "a": 2,
+   "ref": "IMC 2021 1105.7",
+   "why": "Relief discharge must be at least 15 ft above grade and at least 20 ft from windows, ventilation openings and exits."
+  },
+  {
+   "t": "hvac",
+   "topic": "Refrigeration code",
+   "q": "Refrigerant piping crossing an open passageway, and not run against the ceiling, must be at least how high above the floor under IMC 2021 1107.2?",
+   "c": [
+    "6 ft 8 in",
+    "7 ft",
+    "7 ft 3 in",
+    "8 ft"
+   ],
+   "a": 2,
+   "ref": "IMC 2021 1107.2",
+   "why": "The IMC requires at least 7 ft 3 in of headroom under refrigerant piping crossing a passageway."
+  },
+  {
+   "t": "hvac",
+   "topic": "Hydronics",
+   "q": "Under IRC 2021 M2103.4, piping to be embedded in a radiant floor slab must be hydrostatically tested at not less than:",
+   "c": [
+    "60 psi for 15 minutes",
+    "100 psi for 30 minutes",
+    "150 psi for 1 hour",
+    "1.5 times working pressure for 10 minutes"
+   ],
+   "a": 1,
+   "ref": "IRC 2021 M2103.4",
+   "why": "The test is at least 100 psi held for 30 minutes while all joints are visually inspected."
+  },
+  {
+   "t": "hvac",
+   "topic": "Hydronics",
+   "q": "Using IRC Table M2003.2, what size diaphragm (pressurized) expansion tank is required for a hot water heating system holding 50 gallons?",
+   "c": [
+    "2.5 gallons",
+    "4.0 gallons",
+    "7.5 gallons",
+    "8.0 gallons"
+   ],
+   "a": 1,
+   "ref": "IRC 2021 Table M2003.2",
+   "why": "The table lists 4.0 gallons for a diaphragm tank (7.5 gallons nonpressurized) for a 50 gallon system."
+  },
+  {
+   "t": "hvac",
+   "topic": "Boilers",
+   "q": "Under IRC 2021 M2002.4, a boiler relief valve must discharge by gravity to within how many inches of the floor (or to an open receptor)?",
+   "c": [
+    "6 in",
+    "12 in",
+    "18 in",
+    "24 in"
+   ],
+   "a": 2,
+   "ref": "IRC 2021 M2002.4",
+   "why": "The discharge must be piped by gravity to within 18 in of the floor or to an open receptor."
+  },
+  {
+   "t": "hvac",
+   "topic": "Electrical for HVAC",
+   "q": "Under IRC 2021 M1407, an electric duct heater installed within what distance of a heat pump or air conditioner must be listed for that installation?",
+   "c": [
+    "2 ft",
+    "4 ft",
+    "6 ft",
+    "10 ft"
+   ],
+   "a": 1,
+   "ref": "IRC 2021 M1407",
+   "why": "Duct heaters within 4 ft of a heat pump or AC must be listed for that use, and the heat pump or AC must be listed too."
+  },
+  {
+   "t": "hvac",
+   "topic": "Electrical for HVAC",
+   "q": "While running, a compressor's start (HERM) wire carries 4.0 A and the capacitor reads 380 V. Using uF = 2,652 x A / V, the capacitance is about:",
+   "c": [
+    "7 uF",
+    "17.5 uF",
+    "27.9 uF",
+    "35 uF"
+   ],
+   "a": 2,
+   "ref": "ACHR News; ACCA HVAC Blog",
+   "why": "2,652 x 4.0 / 380 = about 27.9 uF, which is then compared to the capacitor's rating."
+  },
+  {
+   "t": "hvac",
+   "topic": "Electrical for HVAC",
+   "q": "A condensing unit has a 16 A RLA compressor and a 1.2 A fan motor. What is its minimum circuit ampacity?",
+   "c": [
+    "17.2 A",
+    "20.0 A",
+    "21.2 A",
+    "36.0 A"
+   ],
+   "a": 2,
+   "ref": "NEC 2023 440.33; IAEI Magazine",
+   "why": "MCA = 1.25 x 16 + 1.2 = 20 + 1.2 = 21.2 A."
+  },
+  {
+   "t": "hvac",
+   "topic": "Electrical for HVAC",
+   "q": "Under NEC 440.22(A), the branch-circuit protective device for a hermetic compressor normally may not exceed what percent of its rated-load current?",
+   "c": [
+    "125 percent",
+    "150 percent",
+    "175 percent",
+    "250 percent"
+   ],
+   "a": 2,
+   "ref": "NEC 2023 440.22(A)",
+   "why": "The limit is 175 percent, which may be raised to no more than 225 percent if the motor will not start."
+  },
+  {
+   "t": "hvac",
+   "topic": "EPA 608 cylinders",
+   "q": "How do most cylinders for A2L refrigerants such as R-454B differ from A1 refrigerant cylinders?",
+   "c": [
+    "They have left-hand threaded valve outlets and a red band",
+    "They are painted solid yellow",
+    "They have no pressure relief device",
+    "They may be refilled with any refrigerant"
+   ],
+   "a": 0,
+   "ref": "Arkema Forane tech tip; ACCA HVAC Blog",
+   "why": "A2L cylinders use left-hand threaded outlets to prevent mix-ups, carry a red band for flammability, and use a reclosing relief valve."
+  },
+  {
+   "t": "hvac",
+   "topic": "Fuel gas",
+   "q": "With all other appliances off, the 1/2 cubic foot test dial on a natural gas meter makes one revolution in 36 seconds. What is the gas flow?",
+   "c": [
+    "18 CFH",
+    "36 CFH",
+    "50 CFH",
+    "100 CFH"
+   ],
+   "a": 2,
+   "ref": "Beckett, Clocking the Gas Meter",
+   "why": "CFH = 3,600 x 0.5 / 36 = 50 CFH, or about 50,000 Btu/h with 1,000 Btu per cubic foot gas."
+  },
+  {
+   "t": "hvac",
+   "topic": "Refrigeration practice",
+   "q": "During a decay test after evacuation, the micron reading rises and then levels off well below atmospheric pressure. This most likely means:",
+   "c": [
+    "The system has a large leak",
+    "The system is tight but still contains moisture",
+    "The vacuum pump oil is fresh",
+    "The system is ready to charge"
+   ],
+   "a": 1,
+   "ref": "Thermo King manual; HVAC School",
+   "why": "A rise that stabilizes indicates moisture still boiling off; a steady rise toward atmospheric indicates a leak."
+  },
+  {
+   "t": "hvac",
+   "topic": "Refrigerants",
+   "q": "Why must POE oil for R-410A systems be kept in sealed metal containers?",
+   "c": [
+    "It is flammable at room temperature",
+    "It absorbs moisture from the air quickly",
+    "It reacts with steel",
+    "It evaporates rapidly"
+   ],
+   "a": 1,
+   "ref": "HVAC School; RefrigerantHQ",
+   "why": "POE absorbs moisture quickly, and water breaks it down into acids that damage the system."
+  },
+  {
+   "t": "hvac",
+   "topic": "Efficiency standards",
+   "q": "DOE's M1 test procedure, used for SEER2 ratings since January 1, 2023, rates ducted systems at an external static pressure of about:",
+   "c": [
+    "0.1 in. w.c.",
+    "0.2 in. w.c.",
+    "0.5 in. w.c.",
+    "1.0 in. w.c."
+   ],
+   "a": 2,
+   "ref": "10 CFR 430 App. M1; NYSERDA fact sheet",
+   "why": "M1 raised the test external static pressure from about 0.1-0.2 in. w.c. to 0.5 in. w.c., which lowers the ratings."
+  },
+  {
+   "t": "hvac",
+   "topic": "Load calculation",
+   "q": "Which ACCA manual covers selecting supply outlets and return grilles to avoid drafts and stagnant air?",
+   "c": [
+    "Manual J",
+    "Manual S",
+    "Manual T",
+    "Manual N"
+   ],
+   "a": 2,
+   "ref": "ACCA Technical Manuals",
+   "why": "Manual T (Air Distribution Basics) covers outlet and return selection; J is loads, S is equipment selection and N is commercial loads."
+  },
+  {
+   "t": "hvac",
+   "topic": "Commercial kitchen",
+   "q": "Before a Type I grease duct is concealed, IMC 2021 506.3.2.5 requires its welded joints to be checked with:",
+   "c": [
+    "A 25 psi air test",
+    "A light test using a lamp of at least 100 watts",
+    "A smoke bomb test",
+    "A water fill test for 24 hours"
+   ],
+   "a": 1,
+   "ref": "IMC 2021 506.3.2.5",
+   "why": "A lamp of at least 100 watts is passed through the duct to confirm all welded and brazed joints are liquid-tight."
+  },
+  {
+   "t": "hvac",
+   "topic": "Refrigeration code",
+   "q": "Under IRC 2021 M1411.6, refrigerant suction lines must be insulated to at least:",
+   "c": [
+    "R-1",
+    "R-3",
+    "R-6",
+    "R-8"
+   ],
+   "a": 1,
+   "ref": "IRC 2021 M1411.6",
+   "why": "Suction line insulation must be at least R-3 with an external surface permeance of 0.05 perm or less."
+  }
+ ]
 }

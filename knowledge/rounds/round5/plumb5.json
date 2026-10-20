@@ -1278,6 +1278,1283 @@
     "compartment",
     "urinal stall"
    ]
+  },
+  {
+   "id": "P5-76",
+   "topic": "Drainage",
+   "trade": "plumb",
+   "state": null,
+   "source": "IPC 2021 Table 709.1 (existing text shown in ICC 2021 Group A Public Comment Agenda, proposal P1-21)",
+   "fact": "More IPC 2021 Table 709.1 values: dental unit or cuspidor 1 DFU; dental lavatory 1 DFU; combination sink and tray 2 DFU; wash sink (circular or multiple) 2 DFU for each set of faucets; plain sink 2 DFU; kitchen sink with a disposer, dishwasher or both is still 2 DFU.",
+   "status": "verified",
+   "note": "",
+   "keywords": [
+    "Table 709.1",
+    "dental unit",
+    "wash sink",
+    "combination sink and tray",
+    "DFU"
+   ]
+  },
+  {
+   "id": "P5-77",
+   "topic": "Drainage",
+   "trade": "plumb",
+   "state": null,
+   "source": "IPC 2021 Table 709.1 footnote b (ICC 2021 Group A Public Comment Agenda, P1-21)",
+   "fact": "Per IPC 2021 Table 709.1 footnote b, a showerhead installed over a bathtub or whirlpool tub does not increase the tub's DFU value, so a tub/shower combination stays at 2 DFU.",
+   "status": "verified",
+   "note": "",
+   "keywords": [
+    "tub shower",
+    "DFU",
+    "footnote",
+    "bathtub",
+    "Table 709.1"
+   ]
+  },
+  {
+   "id": "P5-78",
+   "topic": "Drainage",
+   "trade": "plumb",
+   "state": null,
+   "source": "IPC 2021 Table 709.1 footnotes a, d, e (ICC 2021 Group A Public Comment Agenda, P1-21)",
+   "fact": "Table 709.1 footnotes: water closet and urinal trap sizes must match the fixture outlet size; fixtures with traps larger than 3 in are rated using Table 709.2; and for building drain and sewer loads, water closets and urinals may not be given a lower DFU value unless testing confirms it.",
+   "status": "verified",
+   "note": "",
+   "keywords": [
+    "Table 709.1 footnotes",
+    "trap size",
+    "outlet size",
+    "lower DFU",
+    "testing"
+   ]
+  },
+  {
+   "id": "P5-79",
+   "topic": "Drainage",
+   "trade": "plumb",
+   "state": null,
+   "source": "IPC 2021 Table 709.1 footnotes f, g, h (ICC 2021 Group A Public Comment Agenda, P1-21)",
+   "fact": "When a fixture is added to a bathroom group, its DFU value is added to the group's 5 or 6 DFU. Floor sinks have no fixed DFU in Table 709.1; they are rated per 709.4 and 709.4.1 by what drains into them. Clothes washer standpipe drain, branch and stack sizing is covered in 406.2.",
+   "status": "verified",
+   "note": "",
+   "keywords": [
+    "bathroom group",
+    "added fixture",
+    "floor sink",
+    "709.4",
+    "406.2"
+   ]
+  },
+  {
+   "id": "P5-80",
+   "topic": "Fixture counts",
+   "trade": "plumb",
+   "state": null,
+   "source": "IPC 2021 Table 403.1, A-4 and A-5 (existing text shown in ICC 2021 Group A Public Comment Agenda, P22-21)",
+   "fact": "IPC 2021 Table 403.1 for arenas and stadiums (A-4 and A-5): water closets for men 1 per 75 for the first 1,500 and 1 per 120 after that; for women 1 per 40 for the first 1,520 and 1 per 60 after that. Lavatories: men 1 per 200, women 1 per 150. Drinking fountains 1 per 1,000.",
+   "status": "verified",
+   "note": "",
+   "keywords": [
+    "Table 403.1",
+    "stadium",
+    "arena",
+    "A-4",
+    "A-5",
+    "water closets"
+   ]
+  },
+  {
+   "id": "P5-81",
+   "topic": "Fixture counts",
+   "trade": "plumb",
+   "state": null,
+   "source": "IPC 2021 Table 403.1, A-3 (ICC 2021 Group A Public Comment Agenda, P22-21)",
+   "fact": "IPC 2021 Table 403.1 for auditoriums without permanent seating, museums, libraries, galleries and gyms (A-3): water closets men 1 per 125, women 1 per 65; lavatories 1 per 200; drinking fountains 1 per 500; one service sink. Places of worship use 1 per 150 (men) and 1 per 75 (women) with drinking fountains 1 per 1,000.",
+   "status": "verified",
+   "note": "",
+   "keywords": [
+    "Table 403.1",
+    "A-3",
+    "museum",
+    "library",
+    "worship",
+    "1 per 65"
+   ]
+  },
+  {
+   "id": "P5-82",
+   "topic": "Fixture counts",
+   "trade": "plumb",
+   "state": null,
+   "source": "IPC 2021 Table 403.1, F and S (ICC 2021 Group A Public Comment Agenda, P22-21)",
+   "fact": "IPC 2021 Table 403.1: factories and industrial buildings (F-1, F-2) need water closets 1 per 100, lavatories 1 per 100, drinking fountains 1 per 400 and one service sink. Storage buildings and warehouses (S-1, S-2) need water closets 1 per 100, lavatories 1 per 100, drinking fountains 1 per 1,000 and one service sink.",
+   "status": "verified",
+   "note": "",
+   "keywords": [
+    "Table 403.1",
+    "factory",
+    "warehouse",
+    "1 per 100",
+    "drinking fountain 1 per 400"
+   ]
+  },
+  {
+   "id": "P5-83",
+   "topic": "Fixture counts",
+   "trade": "plumb",
+   "state": null,
+   "source": "IPC 2021 Table 403.1, R-2 and R-1 (ICC 2021 Group A Public Comment Agenda, P22-21)",
+   "fact": "IPC 2021 Table 403.1: apartment houses (R-2) need 1 water closet, 1 lavatory, 1 bathtub or shower and 1 kitchen sink per dwelling unit, plus 1 automatic clothes washer connection per 20 dwelling units. Hotels and motels (R-1) need 1 water closet, 1 lavatory and 1 bathtub or shower per sleeping unit, plus a service sink.",
+   "status": "verified",
+   "note": "",
+   "keywords": [
+    "Table 403.1",
+    "apartment",
+    "R-2",
+    "clothes washer per 20 units",
+    "hotel"
+   ]
+  },
+  {
+   "id": "P5-84",
+   "topic": "Fixture counts",
+   "trade": "plumb",
+   "state": null,
+   "source": "IPC 2021 Table 403.1, dormitories (ICC 2021 Group A Public Comment Agenda, P22-21)",
+   "fact": "IPC 2021 Table 403.1 for dormitories, fraternities, sororities and boarding houses (not transient): water closets 1 per 10, lavatories 1 per 10, bathtubs or showers 1 per 8, drinking fountains 1 per 100 and one service sink. Congregate living facilities with 16 or fewer persons use the same ratios.",
+   "status": "verified",
+   "note": "",
+   "keywords": [
+    "Table 403.1",
+    "dormitory",
+    "1 per 10",
+    "shower 1 per 8",
+    "congregate living"
+   ]
+  },
+  {
+   "id": "P5-85",
+   "topic": "Fixture counts",
+   "trade": "plumb",
+   "state": null,
+   "source": "IPC 2021 Table 403.1, I-2 (ICC 2021 Group A Public Comment Agenda, P22-21)",
+   "fact": "IPC 2021 Table 403.1 for hospitals and nursing homes (I-2): patients need 1 water closet and 1 lavatory per room; employees need water closets 1 per 25 and lavatories 1 per 35; visitors need water closets 1 per 75 and lavatories 1 per 100. One service sink is required per floor.",
+   "status": "verified",
+   "note": "",
+   "keywords": [
+    "Table 403.1",
+    "hospital",
+    "I-2",
+    "employees 1 per 25",
+    "visitors 1 per 75"
+   ]
+  },
+  {
+   "id": "P5-86",
+   "topic": "Fixture counts",
+   "trade": "plumb",
+   "state": null,
+   "source": "IPC 2021 Table 403.1, A-2 casinos (ICC 2021 Group A Public Comment Agenda, P22-21)",
+   "fact": "IPC 2021 Table 403.1 for casino gaming areas (A-2): water closets for men 1 per 100 for the first 400 and 1 per 250 after that; for women 1 per 50 for the first 400 and 1 per 150 after that. Drinking fountains 1 per 1,000.",
+   "status": "verified",
+   "note": "",
+   "keywords": [
+    "Table 403.1",
+    "casino",
+    "A-2",
+    "1 per 50",
+    "gaming"
+   ]
+  },
+  {
+   "id": "P5-87",
+   "topic": "Fixture counts",
+   "trade": "plumb",
+   "state": null,
+   "source": "IPC 2021 Table 403.1, I-3 and I-4 (ICC 2021 Group A Public Comment Agenda, P22-21)",
+   "fact": "IPC 2021 Table 403.1: prisons need 1 water closet and 1 lavatory per cell; reformatories, detention and correctional centers need water closets and lavatories 1 per 15; adult and child day care facilities need water closets and lavatories 1 per 15, with drinking fountains 1 per 100.",
+   "status": "verified",
+   "note": "",
+   "keywords": [
+    "Table 403.1",
+    "prison",
+    "day care",
+    "1 per 15",
+    "detention"
+   ]
+  },
+  {
+   "id": "P5-88",
+   "topic": "Fixture counts",
+   "trade": "plumb",
+   "state": null,
+   "source": "IPC 2021 Table 403.1; plumbing math",
+   "fact": "Worked example: an outdoor stadium (A-5) with 4,000 occupants has 2,000 women. Water closets for women = 1,520/40 + 480/60 = 38 + 8 = 46.",
+   "status": "verified",
+   "note": "Derived from the A-5 ratios.",
+   "keywords": [
+    "stadium",
+    "fixture count",
+    "worked example",
+    "women",
+    "A-5"
+   ]
+  },
+  {
+   "id": "P5-89",
+   "topic": "Fixture counts",
+   "trade": "plumb",
+   "state": null,
+   "source": "IPC 2021 403.1.1 (existing text shown in ICC 2021 Group A Public Comment Agenda, P25-21/P26-21)",
+   "fact": "Under IPC 2021 403.1.1, when a building has more than one occupancy, the fractional fixture counts for each occupancy are added together first, and only then rounded up to the next whole fixture.",
+   "status": "verified",
+   "note": "",
+   "keywords": [
+    "fixture calculation",
+    "multiple occupancies",
+    "fractions",
+    "round up",
+    "403.1.1"
+   ]
+  },
+  {
+   "id": "P5-90",
+   "topic": "Fixture counts",
+   "trade": "plumb",
+   "state": null,
+   "source": "IPC 2021 403.1.1 Exceptions 2 and 3 (ICC 2021 Group A Public Comment Agenda, P25-21/P26-21)",
+   "fact": "IPC 2021 403.1.1 Exception 2: for multiple-user toilet facilities serving all genders, the fixture count is figured on 100% of the total occupant load (not split 50/50), and any urinal must be in a stall. Exception 3: no split by sex is needed where single-user water closets and bathing fixtures are provided per 403.1.2.",
+   "status": "verified",
+   "note": "",
+   "keywords": [
+    "all-gender",
+    "100 percent occupant load",
+    "403.1.1",
+    "urinal stall",
+    "single-user"
+   ]
+  },
+  {
+   "id": "P5-91",
+   "topic": "Fixtures",
+   "trade": "plumb",
+   "state": null,
+   "source": "IPC 2021 405.3.4 Exceptions (ICC 2021 Group A Public Comment Agenda, P39-21)",
+   "fact": "Exceptions to the IPC 2021 405.3.4 water closet compartment rule: a single-occupant toilet room with a lockable door; a child day care toilet room with two or more water closets may have one without a compartment; and toilet areas in Group I-3 (jail) housing areas.",
+   "status": "verified",
+   "note": "",
+   "keywords": [
+    "water closet compartment",
+    "day care",
+    "I-3",
+    "single-occupant",
+    "405.3.4"
+   ]
+  },
+  {
+   "id": "P5-92",
+   "topic": "Fixtures",
+   "trade": "plumb",
+   "state": null,
+   "source": "IPC 2021 405.3.5 Exceptions (ICC 2021 Group A Public Comment Agenda, P39-21)",
+   "fact": "Urinal privacy partitions (IPC 2021 405.3.5) are not required in a single-occupant or family/assisted-use toilet room with a lockable door. A child day care toilet room with two or more urinals may have one urinal without partitions.",
+   "status": "verified",
+   "note": "",
+   "keywords": [
+    "urinal partition",
+    "exception",
+    "day care",
+    "family toilet room",
+    "405.3.5"
+   ]
+  },
+  {
+   "id": "P5-93",
+   "topic": "Fixture counts",
+   "trade": "plumb",
+   "state": null,
+   "source": "IPC 2021 410.3 (ICC 2021 IPC/UPC Essentials, Session 54)",
+   "fact": "Where drinking fountains are required, the IPC requires at least two: one at wheelchair height and one for standing persons.",
+   "status": "verified",
+   "note": "Check the 410.3 exceptions, such as a single unit that serves both heights.",
+   "keywords": [
+    "drinking fountain",
+    "two required",
+    "wheelchair",
+    "standing",
+    "410.3"
+   ]
+  },
+  {
+   "id": "P5-94",
+   "topic": "UPC differences",
+   "trade": "plumb",
+   "state": null,
+   "source": "UPC 2021 402.5 (ICC 2021 IPC/UPC Essentials, Session 54); IPC 2021 405.3.1",
+   "fact": "The UPC lets urinals be closer together than the IPC: at least 12 in from the urinal centerline to a side wall or partition and 24 in center to center. The IPC uses 15 in to a side wall and 30 in center to center for urinals.",
+   "status": "verified",
+   "note": "",
+   "keywords": [
+    "UPC",
+    "urinal spacing",
+    "12 in",
+    "24 in",
+    "clearance"
+   ]
+  },
+  {
+   "id": "P5-95",
+   "topic": "Backflow",
+   "trade": "plumb",
+   "state": null,
+   "source": "IPC 2021 608.14, 608.15.2.1 (ICC PMG CodeNotes: Backflow Preventers, 2021)",
+   "fact": "A reduced pressure principle backflow preventer may be under continuous pressure, but it must be accessible for testing and may not be installed below grade (such as in a pit) where it could be submerged. Its relief port must discharge through an air gap.",
+   "status": "verified",
+   "note": "",
+   "keywords": [
+    "RPZ",
+    "below grade",
+    "pit",
+    "submerged",
+    "relief port"
+   ]
+  },
+  {
+   "id": "P5-96",
+   "topic": "Plumbing math",
+   "trade": "plumb",
+   "state": null,
+   "source": "IPC 2021 Table 909.1, 909.2; plumbing math",
+   "fact": "The Table 909.1 trap arm limits for small pipes equal the distance at which the fall reaches one pipe diameter: 1-1/4 in x 5 ft, 1-1/2 in x 6 ft and 2 in x 8 ft at 1/4 in per ft each fall exactly their own diameter. This matches 909.2, which says the total fall may not exceed the fixture drain diameter.",
+   "status": "verified",
+   "note": "Derived from Table 909.1 values (1-1/4: 5 ft, 1-1/2: 6 ft, 2: 8 ft at 1/4 in per ft).",
+   "keywords": [
+    "trap arm",
+    "fall",
+    "pipe diameter",
+    "909.2",
+    "Table 909.1"
+   ]
+  },
+  {
+   "id": "P5-97",
+   "topic": "Plumbing math",
+   "trade": "plumb",
+   "state": null,
+   "source": "Plumbing math (offsets): 22-1/2 degree constants 2.613 / 2.414",
+   "fact": "Worked example: a 10 in offset made with 22-1/2 degree fittings needs a travel of 10 x 2.613 = 26.1 in and a run (setback) of 10 x 2.414 = 24.1 in, center to center.",
+   "status": "verified",
+   "note": "Derived calculation.",
+   "keywords": [
+    "22-1/2 degree offset",
+    "travel",
+    "run",
+    "2.613",
+    "offset math"
+   ]
+  },
+  {
+   "id": "P5-98",
+   "topic": "Plumbing math",
+   "trade": "plumb",
+   "state": null,
+   "source": "Plumbing math (offsets): 60 degree constants 1.155 / 0.577",
+   "fact": "Worked example: a 12 in offset made with 60 degree fittings needs a travel of 12 x 1.155 = 13.9 in and a run of 12 x 0.577 = 6.9 in.",
+   "status": "verified",
+   "note": "Derived calculation.",
+   "keywords": [
+    "60 degree offset",
+    "travel",
+    "1.155",
+    "run",
+    "offset math"
+   ]
+  },
+  {
+   "id": "P5-99",
+   "topic": "Plumbing math",
+   "trade": "plumb",
+   "state": null,
+   "source": "Plumbing math (disinfection dosing); IPC 2021 610.1",
+   "fact": "Worked example: 200 ft of 2 in pipe holds 200 x 0.163 = 32.6 gal. Household bleach at 5.25% is 52,500 ppm, so a 50 ppm dose needs 32.6 x 50 / 52,500 = 0.031 gal of bleach, about 4 fluid ounces.",
+   "status": "verified",
+   "note": "Derived calculation.",
+   "keywords": [
+    "disinfection",
+    "bleach",
+    "50 ppm",
+    "dosing",
+    "pipe volume"
+   ]
+  },
+  {
+   "id": "P5-100",
+   "topic": "Plumbing math",
+   "trade": "plumb",
+   "state": null,
+   "source": "IPC 2021 Table 710.1(1); plumbing math",
+   "fact": "Building drain sizing examples from Table 710.1(1): 200 DFU at 1/4 in per ft fits a 4 in drain (216 max), but at 1/8 in per ft it needs a 5 in drain (4 in is only 180). 40 DFU at 1/8 in per ft needs a 4 in drain (3 in is only 36).",
+   "status": "verified",
+   "note": "Derived from Table 710.1(1) values.",
+   "keywords": [
+    "building drain sizing",
+    "Table 710.1(1)",
+    "200 DFU",
+    "slope",
+    "worked example"
+   ]
+  },
+  {
+   "id": "P5-101",
+   "topic": "Plumbing math",
+   "trade": "plumb",
+   "state": null,
+   "source": "IPC 2021 Table 710.1(2); plumbing math",
+   "fact": "Horizontal branch sizing examples from Table 710.1(2): four lavatories (4 DFU) fit a 2 in branch (6 max); 10 DFU of sinks needs 2-1/2 in (12 max); 18 DFU needs 3 in (20 max). Any branch serving a water closet must still be at least 3 in.",
+   "status": "verified",
+   "note": "Derived from Table 710.1(2) values.",
+   "keywords": [
+    "horizontal branch",
+    "Table 710.1(2)",
+    "sizing example",
+    "2-1/2 in",
+    "water closet 3 in"
+   ]
+  },
+  {
+   "id": "P5-102",
+   "topic": "Plumbing math",
+   "trade": "plumb",
+   "state": null,
+   "source": "IPC 2021 Table 710.1(2); plumbing math",
+   "fact": "Stack sizing example: a 3 in stack with four branch intervals may carry up to 72 DFU total, but no single branch interval may put more than 20 DFU into it. A 3 in stack with only three branch intervals is limited to 48 DFU.",
+   "status": "verified",
+   "note": "Derived from Table 710.1(2) values.",
+   "keywords": [
+    "stack sizing",
+    "3 in stack",
+    "branch interval",
+    "72 DFU",
+    "48 DFU"
+   ]
+  },
+  {
+   "id": "P5-103",
+   "topic": "Plumbing math",
+   "trade": "plumb",
+   "state": null,
+   "source": "Plumbing math (hydrostatics)",
+   "fact": "Static pressure limits how high water can go: a 60 psi main can lift water at most 60 x 2.31 = 138.6 ft with no flow. To have 15 psi at a fixture 80 ft above the meter, you need at least 80 x 0.433 + 15 = 49.6 psi at the meter, plus friction loss.",
+   "status": "verified",
+   "note": "Derived calculation.",
+   "keywords": [
+    "static pressure",
+    "elevation",
+    "booster pump",
+    "2.31",
+    "0.433"
+   ]
+  },
+  {
+   "id": "P5-104",
+   "topic": "Plumbing math",
+   "trade": "plumb",
+   "state": null,
+   "source": "IPC 2021 Table 1106.3, 1106.2.1; plumbing math",
+   "fact": "Worked example: a 4 in vertical leader rated 192 gpm can serve 192 / (4 x 0.0104) = about 4,615 sq ft of roof at a 4 in/hr design rainfall.",
+   "status": "verified",
+   "note": "Derived from the Table 1106.3 rating and the 1106.2.1 formula.",
+   "keywords": [
+    "roof drain",
+    "leader",
+    "192 gpm",
+    "rainfall",
+    "storm math"
+   ]
+  },
+  {
+   "id": "P5-105",
+   "topic": "Venting",
+   "trade": "plumb",
+   "state": null,
+   "source": "IPC 2021 Table 917.2 (ICC 2021 Plumbing Venting brochure)",
+   "fact": "IPC 2021 Table 917.2 (single stack vent), maximum DFU by stack size for stacks under 75 ft / 75 to under 160 ft / 160 ft and over: 3 in = 24 / not permitted / not permitted; 4 in = 225 / 24 / NP; 5 in = 480 / 225 / 24; 6 in = 1,015 / 480 / 225; 8 in = 2,320 / 1,015 / 480.",
+   "status": "verified",
+   "note": "",
+   "keywords": [
+    "Table 917.2",
+    "single stack",
+    "stack height",
+    "DFU",
+    "75 ft"
+   ]
+  },
+  {
+   "id": "P5-106",
+   "topic": "Venting",
+   "trade": "plumb",
+   "state": null,
+   "source": "IPC 2021 917.5, 917.6, 917.7 (ICC 2021 Plumbing Venting brochure)",
+   "fact": "Single stack vent details (IPC 2021 917): vertical fixture drain sections must be at least 2 in (3 in for standpipes and water-supplied urinals) and no more than 4 ft tall. A water closet on a 3 in branch may be no more than 4 ft (developed length) from the stack with a wye connection, or 8 ft with a sanitary tee. The stack vent is the same size as the stack.",
+   "status": "verified",
+   "note": "",
+   "keywords": [
+    "single stack",
+    "vertical fixture drain",
+    "4 ft",
+    "water closet",
+    "sanitary tee"
+   ]
+  },
+  {
+   "id": "P5-107",
+   "topic": "Venting",
+   "trade": "plumb",
+   "state": null,
+   "source": "IPC 2021 906.2 (ICC 2021 Plumbing Venting brochure)",
+   "fact": "Vent sizing examples under IPC 2021 906.2 (one-half the drain size, never less than 1-1/4 in): a 4 in drain needs at least a 2 in vent, a 3 in drain at least a 1-1/2 in vent, and 2 in or smaller drains at least a 1-1/4 in vent. If the vent runs more than 40 ft, go up one pipe size for the whole length.",
+   "status": "verified",
+   "note": "",
+   "keywords": [
+    "vent size",
+    "one-half",
+    "906.2",
+    "1-1/4 in",
+    "40 ft"
+   ]
+  },
+  {
+   "id": "P5-108",
+   "topic": "Venting",
+   "trade": "plumb",
+   "state": null,
+   "source": "IPC 2021 912.1 (ICC 2021 Plumbing Venting brochure)",
+   "fact": "Because a horizontal wet vent is limited to fixtures within two bathroom groups, ICC explains it can serve from 2 up to 10 fixtures, with no more than two fixtures of any one type. The wet vent pipe is sized larger than Chapter 7 would normally require so its upper part stays open for air.",
+   "status": "verified",
+   "note": "",
+   "keywords": [
+    "horizontal wet vent",
+    "two bathroom groups",
+    "10 fixtures",
+    "912.1",
+    "wet vent sizing"
+   ]
+  },
+  {
+   "id": "P5-109",
+   "topic": "Venting",
+   "trade": "plumb",
+   "state": null,
+   "source": "IPC 2021 919, Table 919.2 (ICC 2021 Plumbing Venting brochure)",
+   "fact": "Engineered vent systems (IPC 2021 Section 919) must be designed by a registered design professional and submitted for approval. Using the airflow method of 919.2 and Table 919.2, individual vents may be as small as 1/2 in.",
+   "status": "verified",
+   "note": "",
+   "keywords": [
+    "engineered vent",
+    "919",
+    "registered design professional",
+    "1/2 in vent",
+    "Table 919.2"
+   ]
+  },
+  {
+   "id": "P5-110",
+   "topic": "Backflow",
+   "trade": "plumb",
+   "state": null,
+   "source": "IPC 2021 608.15.4.2 (ICC PMG CodeNotes: Backflow Preventers, 2021)",
+   "fact": "Every hose-threaded outlet must be protected by an atmospheric vacuum breaker, a pressure vacuum breaker, or a permanently attached hose connection vacuum breaker. Exceptions: water heater and boiler drain valves, and hose bibbs that serve clothes washing machines.",
+   "status": "verified",
+   "note": "",
+   "keywords": [
+    "hose bibb",
+    "vacuum breaker",
+    "exception",
+    "water heater drain",
+    "clothes washer"
+   ]
+  },
+  {
+   "id": "P5-111",
+   "topic": "Backflow",
+   "trade": "plumb",
+   "state": null,
+   "source": "IPC 2021 608.14 vacuum breakers; IRC 2021 P2902 (ICC PMG CodeNotes: Backflow Preventers, 2021)",
+   "fact": "The IPC sets the critical level of vacuum breakers, including pressure vacuum breakers, at least 6 in above the flood level rim. The IRC requires PVBs and spill-resistant VBs to be at least 12 in above the highest downstream piping and the flood level rim.",
+   "status": "verified",
+   "note": "The UPC also uses 12 in for PVBs. Use the code your exam is based on.",
+   "keywords": [
+    "PVB height",
+    "critical level",
+    "6 in",
+    "12 in",
+    "IRC"
+   ]
+  },
+  {
+   "id": "P5-112",
+   "topic": "Nonpotable water",
+   "trade": "plumb",
+   "state": null,
+   "source": "IPC 2021 608.8 (ICC PMG CodeNotes: Backflow Preventers, 2021)",
+   "fact": "Nonpotable outlets (hose connections, open-ended pipes, faucets) must carry a sign reading 'Nonpotable water is utilized for [application]. CAUTION: NONPOTABLE WATER - DO NOT DRINK.' along with the 'Do Not Drink' pictograph. Reclaimed, rain and gray water piping is identified in purple (608.8.2.1).",
+   "status": "verified",
+   "note": "",
+   "keywords": [
+    "nonpotable signage",
+    "do not drink",
+    "pictograph",
+    "purple",
+    "608.8"
+   ]
+  },
+  {
+   "id": "P5-113",
+   "topic": "Testing",
+   "trade": "plumb",
+   "state": null,
+   "source": "IPC 2021 312.10 (ICC PMG CodeNotes: Backflow Preventers, 2021)",
+   "fact": "The IPC's annual inspection covers more than testable assemblies: air gaps must also be inspected each year to confirm the required clearances are still in place.",
+   "status": "verified",
+   "note": "",
+   "keywords": [
+    "annual inspection",
+    "air gap",
+    "backflow",
+    "312.10",
+    "clearance"
+   ]
+  },
+  {
+   "id": "P5-114",
+   "topic": "Plumbing math",
+   "trade": "plumb",
+   "state": null,
+   "source": "IPC 2021 Tables 709.1, 710.1(2); plumbing math",
+   "fact": "Worked example: a public restroom branch with three 1.6 gpf public water closets (4 DFU each), two urinals flushing 1 gallon or less (2 each) and three lavatories (1 each) carries 12 + 4 + 3 = 19 DFU. A 3 in horizontal branch (20 DFU max) is adequate.",
+   "status": "verified",
+   "note": "Derived from Table 709.1 and Table 710.1(2) values.",
+   "keywords": [
+    "DFU tally",
+    "public restroom",
+    "3 in branch",
+    "worked example",
+    "19 DFU"
+   ]
+  },
+  {
+   "id": "P5-115",
+   "topic": "Plumbing math",
+   "trade": "plumb",
+   "state": null,
+   "source": "IPC 2021 Table 906.1; plumbing math",
+   "fact": "Vent stack example (Table 906.1): a 4 in stack carrying 320 DFU needs a vent 100 ft long. A 2-1/2 in vent is good for only 55 ft, but a 3 in vent is good for 170 ft, so use 3 in.",
+   "status": "verified",
+   "note": "Derived from Table 906.1 values.",
+   "keywords": [
+    "vent stack sizing",
+    "Table 906.1",
+    "320 DFU",
+    "100 ft",
+    "worked example"
+   ]
+  },
+  {
+   "id": "P5-116",
+   "topic": "Plumbing math",
+   "trade": "plumb",
+   "state": null,
+   "source": "IPC 2021 Table 906.1; plumbing math",
+   "fact": "Vent stack example (Table 906.1): a 3 in stack with 53 DFU and a 120 ft vent. A 2 in vent allows only 94 ft, so a 2-1/2 in vent (230 ft) is required.",
+   "status": "verified",
+   "note": "Derived from Table 906.1 values.",
+   "keywords": [
+    "vent sizing",
+    "3 in stack",
+    "53 DFU",
+    "120 ft",
+    "2-1/2 in vent"
+   ]
+  },
+  {
+   "id": "P5-117",
+   "topic": "Plumbing math",
+   "trade": "plumb",
+   "state": null,
+   "source": "IPC 2021 Tables 709.1, 912.3; plumbing math",
+   "fact": "Wet vent example: a lavatory (1 DFU) and a bathtub (2 DFU) wet-vented through one pipe put 3 DFU on the wet vent. Table 912.3 allows 4 DFU on a 2 in wet vent, so 2 in works; 1-1/2 in would allow only 1 DFU.",
+   "status": "verified",
+   "note": "Derived from Table 912.3 values.",
+   "keywords": [
+    "wet vent",
+    "Table 912.3",
+    "2 in",
+    "3 DFU",
+    "worked example"
+   ]
+  },
+  {
+   "id": "P5-118",
+   "topic": "Plumbing math",
+   "trade": "plumb",
+   "state": null,
+   "source": "IPC 2021 Table 915.2.2; plumbing math",
+   "fact": "Combination waste and vent example: three floor drains (2 DFU each, 6 DFU total) on a horizontal combination waste and vent branch need at least 2-1/2 in pipe, since Table 915.2.2 allows only 3 DFU on 2 in and 6 DFU on 2-1/2 in.",
+   "status": "verified",
+   "note": "Derived from Table 915.2.2 values.",
+   "keywords": [
+    "combination waste and vent",
+    "floor drains",
+    "2-1/2 in",
+    "Table 915.2.2",
+    "worked example"
+   ]
+  },
+  {
+   "id": "P5-119",
+   "topic": "Plumbing math",
+   "trade": "plumb",
+   "state": null,
+   "source": "IPC 2021 Appendix E, Table E103.3(2); plumbing math",
+   "fact": "WSFU example for a public restroom: four flush valve water closets (10 each) + two urinals with 3/4 in flush valves (5 each) + four public lavatories (2 each) = 40 + 10 + 8 = 58 WSFU.",
+   "status": "verified",
+   "note": "Derived from Table E103.3(2) values.",
+   "keywords": [
+    "WSFU",
+    "public restroom",
+    "flush valve",
+    "58 WSFU",
+    "worked example"
+   ]
+  },
+  {
+   "id": "P5-120",
+   "topic": "Plumbing math",
+   "trade": "plumb",
+   "state": null,
+   "source": "IPC 2021 Table 403.1; plumbing math",
+   "fact": "Fixture count example, restaurant (A-2) with 300 occupants: 150 per sex. Water closets 150/75 = 2 per sex; lavatories 150/200 = 0.75, round up to 1 per sex; drinking fountains by ratio 300/500 = 0.6, round up to 1 (provided at both wheelchair and standing heights per 410.3), or none if the restaurant serves free water in containers (410.4); 1 service sink.",
+   "status": "verified",
+   "note": "Derived from Table 403.1 ratios.",
+   "keywords": [
+    "restaurant",
+    "fixture count",
+    "A-2",
+    "worked example",
+    "Table 403.1"
+   ]
+  },
+  {
+   "id": "P5-121",
+   "topic": "Plumbing math",
+   "trade": "plumb",
+   "state": null,
+   "source": "IPC 2021 Table 403.1; plumbing math",
+   "fact": "Fixture count example, retail store (M) with 1,600 occupants: 800 per sex. Water closets 800/500 = 1.6, round up to 2 per sex; lavatories 800/750 = 1.07, round up to 2 per sex; drinking fountains 1,600/1,000 = 1.6, round up to 2.",
+   "status": "verified",
+   "note": "Derived from Table 403.1 ratios.",
+   "keywords": [
+    "mercantile",
+    "fixture count",
+    "retail",
+    "worked example",
+    "1 per 500"
+   ]
+  },
+  {
+   "id": "P5-122",
+   "topic": "Plumbing math",
+   "trade": "plumb",
+   "state": null,
+   "source": "IPC 2021 Table 403.1; plumbing math",
+   "fact": "Fixture count example, school (E) with 500 occupants: 250 per sex. Water closets 250/50 = 5 per sex; lavatories 250/50 = 5 per sex; drinking fountains 500/100 = 5; 1 service sink.",
+   "status": "verified",
+   "note": "Derived from Table 403.1 ratios.",
+   "keywords": [
+    "school",
+    "educational",
+    "fixture count",
+    "worked example",
+    "1 per 50"
+   ]
+  },
+  {
+   "id": "P5-123",
+   "topic": "Plumbing math",
+   "trade": "plumb",
+   "state": null,
+   "source": "IPC 2021 Table 1106.3, 1106.2.1; plumbing math",
+   "fact": "Leader sizing example: a 15,000 sq ft roof at 2 in/hr produces 15,000 x 2 x 0.0104 = 312 gpm. A 4 in leader (192 gpm) is too small; a 5 in leader (360 gpm) works.",
+   "status": "verified",
+   "note": "Derived from Table 1106.3 values and the 1106.2.1 formula.",
+   "keywords": [
+    "leader sizing",
+    "312 gpm",
+    "5 in leader",
+    "storm",
+    "worked example"
+   ]
+  },
+  {
+   "id": "P5-124",
+   "topic": "Plumbing math",
+   "trade": "plumb",
+   "state": null,
+   "source": "IPC 2021 1003.4.2.2; plumbing math",
+   "fact": "Oil separator example: a repair garage draining 2,500 sq ft needs 6 cu ft for the first 100 sq ft plus 24 cu ft for the remaining 2,400 sq ft (1 cu ft per 100 sq ft) = 30 cu ft.",
+   "status": "verified",
+   "note": "Derived from the 1003.4.2.2 sizing rule.",
+   "keywords": [
+    "oil separator",
+    "2,500 sq ft",
+    "30 cu ft",
+    "repair garage",
+    "worked example"
+   ]
+  },
+  {
+   "id": "P5-125",
+   "topic": "Plumbing math",
+   "trade": "plumb",
+   "state": null,
+   "source": "Plumbing math (volume and weight)",
+   "fact": "Worked example: 50 ft of 3 in pipe holds 50 x 0.367 = 18.4 gal of water, which weighs about 18.4 x 8.34 = 153 lb. Supports must carry the pipe plus this water weight.",
+   "status": "verified",
+   "note": "Derived calculation.",
+   "keywords": [
+    "pipe volume",
+    "3 in pipe",
+    "water weight",
+    "0.367",
+    "worked example"
+   ]
+  },
+  {
+   "id": "P5-126",
+   "topic": "Plumbing math",
+   "trade": "plumb",
+   "state": null,
+   "source": "Plumbing math (hydrostatics); IPC 2021 312.2",
+   "fact": "During a water test of a 30 ft tall stack filled to the top, the base fittings see 30 x 0.433 = 13 psi. That is why each test section is limited, and why the code asks only for a 10 ft head (4.33 psi) on each joint.",
+   "status": "verified",
+   "note": "Derived calculation.",
+   "keywords": [
+    "water test",
+    "stack",
+    "13 psi",
+    "head pressure",
+    "0.433"
+   ]
+  },
+  {
+   "id": "P5-127",
+   "topic": "Plumbing math",
+   "trade": "plumb",
+   "state": null,
+   "source": "Plumbing math (grade)",
+   "fact": "A 1% slope equals 0.12 in per ft (1% of 12 in), which is just under 1/8 in per ft (0.125). A 2% slope is 0.24 in per ft, just under 1/4 in per ft.",
+   "status": "verified",
+   "note": "Derived calculation.",
+   "keywords": [
+    "percent slope",
+    "1 percent",
+    "0.12 in per ft",
+    "grade",
+    "conversion"
+   ]
+  },
+  {
+   "id": "P5-128",
+   "topic": "Plumbing math",
+   "trade": "plumb",
+   "state": null,
+   "source": "IPC 2021 608.15.1 air gap rule; plumbing math",
+   "fact": "Air gap example for an opening larger than 1 in: a 1-1/4 in effective opening needs an air gap of 2 x 1.25 = 2.5 in away from walls, or 3 x 1.25 = 3.75 in where walls are close to the outlet.",
+   "status": "verified",
+   "note": "Derived from the air gap table rule for openings over 1 in.",
+   "keywords": [
+    "air gap",
+    "effective opening",
+    "2x diameter",
+    "3x diameter",
+    "worked example"
+   ]
+  },
+  {
+   "id": "P5-129",
+   "topic": "Plumbing math",
+   "trade": "plumb",
+   "state": null,
+   "source": "IPC 2021 802.2.1; plumbing math",
+   "fact": "Indirect waste air gap example: a 1 in indirect waste pipe must end at least 2 in (twice its effective opening) above the flood level rim of the receptor; a 1-1/2 in pipe needs at least 3 in.",
+   "status": "verified",
+   "note": "Derived from the 802.2.1 twice-the-opening rule.",
+   "keywords": [
+    "indirect waste",
+    "air gap",
+    "2 in",
+    "receptor",
+    "worked example"
+   ]
+  },
+  {
+   "id": "P5-130",
+   "topic": "Venting",
+   "trade": "plumb",
+   "state": null,
+   "source": "IPC 2021 909.1 Exception",
+   "fact": "The Table 909.1 trap-to-vent distance limits do not apply to self-siphoning fixtures such as water closets. The developed length from a water closet's trap weir to its vent is not limited by that table.",
+   "status": "unverified",
+   "note": "Could not reach the IPC 2021 code text during research (ICC Digital Codes and UpCodes pages were not readable); stated from the published 909.1 exception. Confirm in the code book.",
+   "keywords": [
+    "trap arm",
+    "water closet",
+    "self-siphoning",
+    "909.1 exception",
+    "vent distance"
+   ]
+  },
+  {
+   "id": "P5-131",
+   "topic": "Water supply",
+   "trade": "plumb",
+   "state": null,
+   "source": "IPC 2021 604.8",
+   "fact": "The pressure-reducing valve required when static pressure exceeds 80 psi must conform to ASSE 1003 or CSA B356 and must include a strainer.",
+   "status": "unverified",
+   "note": "Code text not reachable during research; standard numbers stated from the published 604.8. Confirm in the code book.",
+   "keywords": [
+    "PRV",
+    "ASSE 1003",
+    "strainer",
+    "80 psi",
+    "604.8"
+   ]
+  },
+  {
+   "id": "P5-132",
+   "topic": "Water heaters",
+   "trade": "plumb",
+   "state": null,
+   "source": "IPC 2021 505.1",
+   "fact": "Unfired hot water storage tanks must be insulated to at least R-12.5.",
+   "status": "unverified",
+   "note": "Code text not reachable during research; confirm in the code book.",
+   "keywords": [
+    "storage tank insulation",
+    "R-12.5",
+    "unfired vessel",
+    "505.1",
+    "hot water tank"
+   ]
+  },
+  {
+   "id": "P5-133",
+   "topic": "Water heaters",
+   "trade": "plumb",
+   "state": null,
+   "source": "IPC 2021 501.3",
+   "fact": "A drain valve must be installed at the bottom of every tank-type water heater and hot water storage tank. Its inlet must be at least 3/4 in nominal iron pipe size, and its outlet must have hose threads.",
+   "status": "unverified",
+   "note": "Code text not reachable during research; confirm in the code book.",
+   "keywords": [
+    "drain valve",
+    "3/4 in",
+    "water heater",
+    "hose thread",
+    "501.3"
+   ]
+  },
+  {
+   "id": "P5-134",
+   "topic": "Storm drainage",
+   "trade": "plumb",
+   "state": null,
+   "source": "IPC 2021 Chapter 11 (roof drains, Section 1105)",
+   "fact": "Roof drain strainers must extend at least 4 in above the roof surface around the drain. On roof decks, sun decks and similar areas, flat-surface strainers are allowed if their inlet area is at least twice the area of the leader or conductor they serve.",
+   "status": "unverified",
+   "note": "Code text not reachable during research; subsection numbers not confirmed. Confirm in the code book.",
+   "keywords": [
+    "roof drain",
+    "strainer",
+    "4 in",
+    "flat strainer",
+    "twice the area"
+   ]
+  },
+  {
+   "id": "P5-135",
+   "topic": "Storm drainage",
+   "trade": "plumb",
+   "state": null,
+   "source": "IPC 2021 Chapter 11 (conductors and connections, Section 1104)",
+   "fact": "Storm leaders and conductors may not be used as soil, waste or vent pipes, and soil, waste or vent pipes may not be used as storm conductors.",
+   "status": "unverified",
+   "note": "Code text not reachable during research; subsection number not confirmed.",
+   "keywords": [
+    "conductor",
+    "leader",
+    "storm",
+    "soil pipe",
+    "vent pipe"
+   ]
+  },
+  {
+   "id": "P5-136",
+   "topic": "General regulations",
+   "trade": "plumb",
+   "state": null,
+   "source": "IPC 2021 303 (materials, third-party certification)",
+   "fact": "Plastic pipe, fittings and plastic pipe-related components must be third-party certified as conforming to NSF 14. Pipe and fittings that carry potable water must also meet NSF 61.",
+   "status": "unverified",
+   "note": "Code text not reachable during research; subsection number not confirmed.",
+   "keywords": [
+    "NSF 14",
+    "NSF 61",
+    "plastic pipe",
+    "third-party certified",
+    "materials"
+   ]
+  },
+  {
+   "id": "P5-137",
+   "topic": "General regulations",
+   "trade": "plumb",
+   "state": null,
+   "source": "IPC 2021 107.2",
+   "fact": "Required plumbing inspections include an underground inspection (after trenches are dug and bedded and pipe is installed, before backfill), a rough-in inspection (after the roof, framing, firestopping and bracing are in place, before covering), and a final inspection after the work is complete.",
+   "status": "unverified",
+   "note": "Code text not reachable during research; confirm wording in the code book.",
+   "keywords": [
+    "inspections",
+    "underground",
+    "rough-in",
+    "final inspection",
+    "107.2"
+   ]
+  },
+  {
+   "id": "P5-138",
+   "topic": "Drainage",
+   "trade": "plumb",
+   "state": null,
+   "source": "IPC 2021 Section 705 (cast-iron joints)",
+   "fact": "Hub-and-spigot cast-iron soil pipe joints use compression gaskets meeting ASTM C564. Hubless cast-iron joints use shielded couplings meeting CISPI 310, ASTM C1277 or ASTM C1540.",
+   "status": "unverified",
+   "note": "Code text not reachable during research; subsection numbers not confirmed.",
+   "keywords": [
+    "cast iron",
+    "ASTM C564",
+    "hubless coupling",
+    "CISPI 310",
+    "joints"
+   ]
+  },
+  {
+   "id": "P5-139",
+   "topic": "Water supply",
+   "trade": "plumb",
+   "state": null,
+   "source": "IPC 2021 Section 605 (soldered joints)",
+   "fact": "Soldered copper water joints must use flux meeting ASTM B813 and lead-free solder meeting ASTM B32, and must be made following ASTM B828.",
+   "status": "unverified",
+   "note": "Code text not reachable during research; subsection numbers not confirmed.",
+   "keywords": [
+    "soldered joint",
+    "ASTM B813",
+    "ASTM B32",
+    "ASTM B828",
+    "copper"
+   ]
+  },
+  {
+   "id": "P5-140",
+   "topic": "Water supply",
+   "trade": "plumb",
+   "state": null,
+   "source": "IPC 2021 Sections 605 and 705 (solvent-cemented joints)",
+   "fact": "Each plastic has its own solvent cement standard: PVC cement meets ASTM D2564 (with ASTM F656 primer), CPVC cement meets ASTM F493, and ABS cement meets ASTM D2235. Solvent-cement joints between different types of plastic are prohibited.",
+   "status": "unverified",
+   "note": "Code text not reachable during research; PVC standards and the mixed-plastic prohibition are already in the existing knowledge base.",
+   "keywords": [
+    "solvent cement",
+    "ASTM F493",
+    "ASTM D2235",
+    "CPVC",
+    "ABS"
+   ]
+  },
+  {
+   "id": "P5-141",
+   "topic": "Water supply",
+   "trade": "plumb",
+   "state": null,
+   "source": "IPC 2021 Section 605 (joints between different materials)",
+   "fact": "Joints between copper or copper-alloy tubing and galvanized steel pipe must be made with a copper-alloy (brass) fitting or a dielectric fitting or union meeting ASSE 1079, to limit galvanic corrosion.",
+   "status": "unverified",
+   "note": "Code text not reachable during research; subsection number not confirmed.",
+   "keywords": [
+    "dielectric union",
+    "ASSE 1079",
+    "copper to galvanized",
+    "brass fitting",
+    "galvanic corrosion"
+   ]
+  },
+  {
+   "id": "P5-142",
+   "topic": "Venting",
+   "trade": "plumb",
+   "state": null,
+   "source": "IPC 2021 905.6",
+   "fact": "Where drainage piping is roughed in for future fixtures, a vent rough-in must also be installed. It must be at least one-half the diameter of the rough-in drain it will serve and be marked to show it is a vent.",
+   "status": "unverified",
+   "note": "Code text not reachable during research; section number recalled from the 2018/2021 IPC. Confirm in the code book.",
+   "keywords": [
+    "future fixtures",
+    "vent rough-in",
+    "one-half diameter",
+    "905.6",
+    "identified"
+   ]
+  },
+  {
+   "id": "P5-143",
+   "topic": "Plumbing math",
+   "trade": "plumb",
+   "state": null,
+   "source": "IPC 2021 708.1; plumbing math",
+   "fact": "Cleanout spacing example: a straight 230 ft horizontal building drain needs cleanouts no more than 100 ft apart, so at least two intermediate cleanouts are needed in addition to the one near the building drain and sewer junction.",
+   "status": "verified",
+   "note": "Derived from the 100 ft cleanout spacing rule.",
+   "keywords": [
+    "cleanout spacing",
+    "100 ft",
+    "building drain",
+    "worked example",
+    "708.1"
+   ]
+  },
+  {
+   "id": "P5-144",
+   "topic": "Plumbing math",
+   "trade": "plumb",
+   "state": null,
+   "source": "IPC 2021 607.2; plumbing math",
+   "fact": "Hot water distance example: a lavatory 65 ft (developed length) from the water heater exceeds the 50 ft limit, so a recirculating loop or heat-traced pipe must bring the hot water source to within 50 ft of the fixture.",
+   "status": "verified",
+   "note": "Derived from the 607.2 rule.",
+   "keywords": [
+    "hot water",
+    "50 ft",
+    "recirculation",
+    "heat trace",
+    "worked example"
+   ]
+  },
+  {
+   "id": "P5-145",
+   "topic": "Plumbing math",
+   "trade": "plumb",
+   "state": null,
+   "source": "IPC 2021 Table 403.1, A-4; plumbing math",
+   "fact": "Fixture count example: an indoor arena (A-4) with 3,000 occupants has 1,500 men. Water closets for men = 1,500/75 = 20 (the 1 per 120 rate applies only above 1,500).",
+   "status": "verified",
+   "note": "Derived from Table 403.1 ratios.",
+   "keywords": [
+    "arena",
+    "A-4",
+    "men",
+    "fixture count",
+    "worked example"
+   ]
+  },
+  {
+   "id": "P5-146",
+   "topic": "Plumbing math",
+   "trade": "plumb",
+   "state": null,
+   "source": "IPC 2021 904.2, 202 (branch interval); plumbing math",
+   "fact": "Branch interval example: a drainage stack with a horizontal branch on each of six floors, about 10 ft apart, has six branch intervals. Because that is five or more, the stack needs a vent stack.",
+   "status": "verified",
+   "note": "Derived from the 904.2 rule and branch interval definition.",
+   "keywords": [
+    "branch interval",
+    "vent stack",
+    "five or more",
+    "904.2",
+    "worked example"
+   ]
+  },
+  {
+   "id": "P5-147",
+   "topic": "Plumbing math",
+   "trade": "plumb",
+   "state": null,
+   "source": "IPC 2021 Table 403.1, Group B; plumbing math",
+   "fact": "Fixture count example, office (B) with 300 occupants: 150 per sex. Water closets per sex = 50/25 + 100/50 = 2 + 2 = 4. Lavatories per sex = 80/40 + 70/80 = 2 + 0.875 = 2.875, round up to 3. Drinking fountains = 300/100 = 3.",
+   "status": "verified",
+   "note": "Derived from Table 403.1 ratios (B: water closets 1 per 25 for first 50, then 1 per 50; lavatories 1 per 40 for first 80, then 1 per 80).",
+   "keywords": [
+    "business occupancy",
+    "office",
+    "fixture count",
+    "worked example",
+    "300 occupants"
+   ]
+  },
+  {
+   "id": "P5-148",
+   "topic": "Plumbing math",
+   "trade": "plumb",
+   "state": null,
+   "source": "IPC 2021 424.2; plumbing math",
+   "fact": "Urinal substitution example: if an office needs 4 water closets for men, urinals may replace up to 50% of them (2). In an assembly or educational occupancy needing 6 water closets for men, urinals may replace up to 67%, which is 4.",
+   "status": "verified",
+   "note": "Derived from the 424.2 substitution limits (67% assembly/educational, 50% others).",
+   "keywords": [
+    "urinal substitution",
+    "50 percent",
+    "67 percent",
+    "water closets",
+    "worked example"
+   ]
+  },
+  {
+   "id": "P5-149",
+   "topic": "Plumbing math",
+   "trade": "plumb",
+   "state": null,
+   "source": "IPC 2021 1106.4; plumbing math",
+   "fact": "Wall runoff example: a 2,000 sq ft roof has a 20 ft high by 50 ft long wall that drains onto it. Half the wall area (1,000 / 2 = 500 sq ft) is added, so drains and leaders are sized for 2,500 sq ft.",
+   "status": "verified",
+   "note": "Derived from the 1106.4 one-half wall area rule.",
+   "keywords": [
+    "vertical wall",
+    "one-half",
+    "roof area",
+    "storm sizing",
+    "worked example"
+   ]
+  },
+  {
+   "id": "P5-150",
+   "topic": "Plumbing math",
+   "trade": "plumb",
+   "state": null,
+   "source": "IPC 2021 Tables 709.1, 710.1(1); plumbing math",
+   "fact": "Residential DFU example: three bathroom groups with 1.6 gpf water closets (5 each = 15), a kitchen sink (2), a dishwasher (2) and a clothes washer (2) total 21 DFU. A 3 in building drain at 1/8 in per ft is limited to 36 DFU, so 3 in works even at the flatter slope.",
+   "status": "verified",
+   "note": "Derived from Table 709.1 and Table 710.1(1) values.",
+   "keywords": [
+    "residential DFU",
+    "building drain",
+    "3 in",
+    "worked example",
+    "21 DFU"
+   ]
   }
  ],
  "questions": [
@@ -1728,6 +3005,328 @@
    "a": 1,
    "ref": "IPC 2021 708.1.5",
    "why": "A removable P-trap counts as cleanout access only for pipe of the same size or one size larger."
+  },
+  {
+   "t": "plumb",
+   "topic": "Drainage",
+   "q": "Per IPC 2021 Table 709.1, a dental unit or cuspidor is rated at:",
+   "c": [
+    "1/2 DFU",
+    "1 DFU",
+    "2 DFU",
+    "3 DFU"
+   ],
+   "a": 1,
+   "ref": "IPC 2021 Table 709.1",
+   "why": "Dental units, cuspidors and dental lavatories are each 1 DFU."
+  },
+  {
+   "t": "plumb",
+   "topic": "Drainage",
+   "q": "A bathtub with a showerhead over it has what DFU value under IPC 2021 Table 709.1?",
+   "c": [
+    "2",
+    "3",
+    "4",
+    "5"
+   ],
+   "a": 0,
+   "ref": "IPC 2021 Table 709.1 note b",
+   "why": "A showerhead over a tub does not raise the tub's 2 DFU value."
+  },
+  {
+   "t": "plumb",
+   "topic": "Fixture counts",
+   "q": "For an apartment building (R-2), IPC 2021 Table 403.1 requires automatic clothes washer connections at a rate of:",
+   "c": [
+    "1 per dwelling unit",
+    "1 per 10 dwelling units",
+    "1 per 20 dwelling units",
+    "1 per 50 dwelling units"
+   ],
+   "a": 2,
+   "ref": "IPC 2021 Table 403.1",
+   "why": "R-2 apartment houses need 1 automatic clothes washer connection per 20 dwelling units."
+  },
+  {
+   "t": "plumb",
+   "topic": "Fixture counts",
+   "q": "In a factory (F-1), IPC 2021 Table 403.1 requires drinking fountains at:",
+   "c": [
+    "1 per 100",
+    "1 per 250",
+    "1 per 400",
+    "1 per 1,000"
+   ],
+   "a": 2,
+   "ref": "IPC 2021 Table 403.1",
+   "why": "Factories need 1 drinking fountain per 400 occupants, with water closets and lavatories at 1 per 100."
+  },
+  {
+   "t": "plumb",
+   "topic": "Fixture counts",
+   "q": "In a dormitory, IPC 2021 Table 403.1 requires bathtubs or showers at a rate of:",
+   "c": [
+    "1 per 8",
+    "1 per 10",
+    "1 per 15",
+    "1 per 25"
+   ],
+   "a": 0,
+   "ref": "IPC 2021 Table 403.1",
+   "why": "Dormitories need 1 bathtub or shower per 8 occupants, and water closets and lavatories at 1 per 10."
+  },
+  {
+   "t": "plumb",
+   "topic": "Fixture counts",
+   "q": "An outdoor stadium has 2,000 women. Using IPC Table 403.1 (1 per 40 for the first 1,520, then 1 per 60), how many water closets are needed for women?",
+   "c": [
+    "34",
+    "40",
+    "46",
+    "50"
+   ],
+   "a": 2,
+   "ref": "IPC 2021 Table 403.1",
+   "why": "1,520/40 = 38 plus 480/60 = 8, for 46 water closets."
+  },
+  {
+   "t": "plumb",
+   "topic": "Fixture counts",
+   "q": "Under IPC 2021 403.1.1, a multiple-user toilet room serving all genders has its fixture count based on:",
+   "c": [
+    "50% of the occupant load",
+    "75% of the occupant load",
+    "100% of the occupant load",
+    "The male half only"
+   ],
+   "a": 2,
+   "ref": "IPC 2021 403.1.1 Exc. 2",
+   "why": "All-gender multiple-user facilities are figured at 100% of the total occupant load, with urinals in stalls."
+  },
+  {
+   "t": "plumb",
+   "topic": "UPC differences",
+   "q": "Under the UPC, the minimum center-to-center spacing between urinals is:",
+   "c": [
+    "15 in",
+    "24 in",
+    "30 in",
+    "36 in"
+   ],
+   "a": 1,
+   "ref": "UPC 2021 402.5",
+   "why": "The UPC allows 24 in center to center for urinals; the IPC requires 30 in."
+  },
+  {
+   "t": "plumb",
+   "topic": "Backflow",
+   "q": "Where may a reduced pressure principle backflow preventer NOT be installed?",
+   "c": [
+    "Above grade in a heated room",
+    "Below grade in a pit where it could be submerged",
+    "Outdoors in an insulated enclosure",
+    "On a line under continuous pressure"
+   ],
+   "a": 1,
+   "ref": "IPC 2021 608.14",
+   "why": "An RPZ can be under continuous pressure but must not be installed below grade where it could flood."
+  },
+  {
+   "t": "plumb",
+   "topic": "Plumbing math",
+   "q": "A 10 in offset is made with 22-1/2 degree fittings. What is the travel (constant 2.613)?",
+   "c": [
+    "14.1 in",
+    "24.1 in",
+    "26.1 in",
+    "28.3 in"
+   ],
+   "a": 2,
+   "ref": "Offset constants",
+   "why": "10 x 2.613 = 26.1 in; 24.1 in is the run."
+  },
+  {
+   "t": "plumb",
+   "topic": "Plumbing math",
+   "q": "A building drain carries 200 DFU at 1/8 in per ft. Per Table 710.1(1), the minimum size is:",
+   "c": [
+    "3 in",
+    "4 in",
+    "5 in",
+    "6 in"
+   ],
+   "a": 2,
+   "ref": "IPC 2021 Table 710.1(1)",
+   "why": "A 4 in drain at 1/8 in per ft carries only 180 DFU, so 5 in (390 DFU) is needed."
+  },
+  {
+   "t": "plumb",
+   "topic": "Plumbing math",
+   "q": "About how much 5.25% bleach gives a 50 ppm dose in 32.6 gallons of water?",
+   "c": [
+    "About 1 oz",
+    "About 4 oz",
+    "About 16 oz",
+    "About 1 gallon"
+   ],
+   "a": 1,
+   "ref": "Dosing math (IPC 610.1)",
+   "why": "32.6 x 50 / 52,500 = 0.031 gal, which is about 4 fluid ounces."
+  },
+  {
+   "t": "plumb",
+   "topic": "Plumbing math",
+   "q": "A 3 in stack has four branch intervals. Per Table 710.1(2), what is the most DFU it may carry in total?",
+   "c": [
+    "20 DFU",
+    "48 DFU",
+    "72 DFU",
+    "90 DFU"
+   ],
+   "a": 2,
+   "ref": "IPC 2021 Table 710.1(2)",
+   "why": "Over three branch intervals a 3 in stack carries 72 DFU, with no more than 20 DFU per interval."
+  },
+  {
+   "t": "plumb",
+   "topic": "Venting",
+   "q": "Per IPC 2021 Table 917.2, a 3 in single stack under 75 ft tall may carry a maximum of:",
+   "c": [
+    "24 DFU",
+    "48 DFU",
+    "72 DFU",
+    "225 DFU"
+   ],
+   "a": 0,
+   "ref": "IPC 2021 Table 917.2",
+   "why": "A 3 in single stack is limited to 24 DFU and is not permitted at 75 ft or taller."
+  },
+  {
+   "t": "plumb",
+   "topic": "Venting",
+   "q": "What is the minimum vent size for a 4 in drain under IPC 2021 906.2 (vent under 40 ft)?",
+   "c": [
+    "1-1/4 in",
+    "1-1/2 in",
+    "2 in",
+    "3 in"
+   ],
+   "a": 2,
+   "ref": "IPC 2021 906.2",
+   "why": "Vents must be at least half the drain diameter, so a 4 in drain needs a 2 in vent."
+  },
+  {
+   "t": "plumb",
+   "topic": "Backflow",
+   "q": "Which hose-threaded outlet is exempt from the vacuum breaker requirement in IPC 2021 608.15.4.2?",
+   "c": [
+    "An exterior sillcock",
+    "A laundry sink faucet with hose threads",
+    "A water heater drain valve",
+    "A wall hydrant"
+   ],
+   "a": 2,
+   "ref": "IPC 2021 608.15.4.2",
+   "why": "Water heater and boiler drain valves, and clothes washer hose bibbs, are exempt."
+  },
+  {
+   "t": "plumb",
+   "topic": "Plumbing math",
+   "q": "A 4 in stack carries 320 DFU and needs a 100 ft vent stack. Using Table 906.1 (2-1/2 in = 55 ft, 3 in = 170 ft), the minimum vent size is:",
+   "c": [
+    "2 in",
+    "2-1/2 in",
+    "3 in",
+    "4 in"
+   ],
+   "a": 2,
+   "ref": "IPC 2021 Table 906.1",
+   "why": "2-1/2 in is good for only 55 ft, so the 3 in vent (170 ft) is the smallest that works."
+  },
+  {
+   "t": "plumb",
+   "topic": "Plumbing math",
+   "q": "A 15,000 sq ft roof has a 2 in/hr design rainfall. What is the storm flow?",
+   "c": [
+    "156 gpm",
+    "312 gpm",
+    "360 gpm",
+    "624 gpm"
+   ],
+   "a": 1,
+   "ref": "IPC 2021 1106.2.1",
+   "why": "15,000 x 2 x 0.0104 = 312 gpm."
+  },
+  {
+   "t": "plumb",
+   "topic": "Plumbing math",
+   "q": "A 1 in indirect waste pipe discharges to a floor sink. The air gap above the flood level rim must be at least:",
+   "c": [
+    "1/2 in",
+    "1 in",
+    "2 in",
+    "4 in"
+   ],
+   "a": 2,
+   "ref": "IPC 2021 802.2.1",
+   "why": "The indirect waste air gap must be at least twice the effective opening: 2 x 1 in = 2 in."
+  },
+  {
+   "t": "plumb",
+   "topic": "Plumbing math",
+   "q": "A straight horizontal building drain is 230 ft long. How many intermediate cleanouts (beyond the one at the building drain/sewer junction) are needed at 100 ft maximum spacing?",
+   "c": [
+    "None",
+    "One",
+    "Two",
+    "Three"
+   ],
+   "a": 2,
+   "ref": "IPC 2021 708.1",
+   "why": "Cleanouts may be no more than 100 ft apart, so a 230 ft run needs at least two in between."
+  },
+  {
+   "t": "plumb",
+   "topic": "Plumbing math",
+   "q": "An indoor arena (A-4) has 3,000 occupants. How many water closets are required for men (1 per 75 for the first 1,500)?",
+   "c": [
+    "13",
+    "20",
+    "25",
+    "40"
+   ],
+   "a": 1,
+   "ref": "IPC 2021 Table 403.1",
+   "why": "Half the load is 1,500 men; 1,500/75 = 20 water closets."
+  },
+  {
+   "t": "plumb",
+   "topic": "Plumbing math",
+   "q": "An office (Group B) has 300 occupants. How many water closets are required for each sex?",
+   "c": [
+    "3",
+    "4",
+    "6",
+    "12"
+   ],
+   "a": 1,
+   "ref": "IPC 2021 Table 403.1",
+   "why": "150 per sex: first 50 at 1 per 25 = 2, remaining 100 at 1 per 50 = 2, total 4."
+  },
+  {
+   "t": "plumb",
+   "topic": "Plumbing math",
+   "q": "A 2,000 sq ft roof receives runoff from a 1,000 sq ft vertical wall. What area is used to size the roof drains?",
+   "c": [
+    "2,000 sq ft",
+    "2,500 sq ft",
+    "3,000 sq ft",
+    "4,000 sq ft"
+   ],
+   "a": 1,
+   "ref": "IPC 2021 1106.4",
+   "why": "Half the wall area (500 sq ft) is added to the 2,000 sq ft roof."
   }
  ]
 }

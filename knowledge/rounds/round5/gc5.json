@@ -546,7 +546,7 @@
    "source": "IRC 2021 Table R302.1(1)",
    "fact": "For homes without sprinklers (2021 IRC), an exterior wall with a fire separation distance of less than 5 ft must be 1-hour fire-resistance rated with exposure from both sides; at 5 ft or more no rating is required. Projections such as eaves are not allowed closer than 2 ft and need 1-hour protection on the underside from 2 ft to under 5 ft.",
    "status": "verified",
-   "note": "Confirmed by Pierce County WA 2021 code bulletin and the Michigan Residential Code table (Mich. Admin. Code R 408.30544b).",
+   "note": "Confirmed by Pierce County WA 2021 code bulletin and the Michigan Residential Code table (Mich. Admin. Code R 408.30544b). Table footnotes allow some alternatives for projections (such as heavy timber or fire-retardant-treated wood); check the adopted table.",
    "keywords": [
     "fire separation distance",
     "5 feet",
@@ -617,9 +617,9 @@
    "trade": "gc",
    "state": null,
    "source": "IRC 2021 R404.1.6",
-   "fact": "IRC concrete and masonry foundation walls must extend at least 6 in above the finished grade next to the foundation (4 in where masonry veneer is used).",
+   "fact": "IRC concrete and masonry foundation walls must extend at least 6 in above the finished grade next to the foundation.",
    "status": "verified",
-   "note": "6 in confirmed by a 2021 IRC inspection guide; the 4 in masonry-veneer allowance is from the code text as commonly published.",
+   "note": "6 in confirmed by a 2021 IRC inspection guide. The code text also allows 4 in where masonry veneer is used (not separately confirmed).",
    "keywords": [
     "foundation height above grade",
     "6 inches",
@@ -1949,7 +1949,1423 @@
     "Table 707.3.10",
     "IBC"
    ]
+  },
+  {
+   "id": "G5-110",
+   "topic": "Bonds & insurance",
+   "trade": "law",
+   "state": null,
+   "source": "FAR 28.102-1(b)(1)",
+   "fact": "On federal construction contracts over $35,000 but not over $150,000 (below the Miller Act bond threshold), the contracting officer must require two or more payment protections, such as a payment bond, an irrevocable letter of credit, a tripartite escrow agreement, certificates of deposit, or a deposit of approved securities.",
+   "status": "verified",
+   "note": "Confirmed on acquisition.gov (FAR 28.102-1, current version).",
+   "keywords": [
+    "alternative payment protection",
+    "$35,000",
+    "$150,000",
+    "federal contract",
+    "letter of credit",
+    "Miller Act"
+   ]
+  },
+  {
+   "id": "G5-111",
+   "topic": "Bonds & insurance",
+   "trade": "law",
+   "state": null,
+   "source": "40 U.S.C. 3133(b)(1)",
+   "fact": "Under the Miller Act, a subcontractor or supplier who has not been paid in full within 90 days after the last day it performed labor or furnished material may sue on the prime contractor's payment bond for the unpaid amount.",
+   "status": "verified",
+   "note": "Confirmed against the statute text (Cornell LII, 40 U.S.C. 3133).",
+   "keywords": [
+    "Miller Act claim",
+    "90 days",
+    "payment bond",
+    "federal project",
+    "unpaid subcontractor"
+   ]
+  },
+  {
+   "id": "G5-112",
+   "topic": "Bonds & insurance",
+   "trade": "law",
+   "state": null,
+   "source": "40 U.S.C. 3133(b)(2)",
+   "fact": "A Miller Act claimant who contracted with a subcontractor but not with the prime contractor (a second-tier sub or supplier) must give the prime contractor written notice of the claim within 90 days after its last labor or material, using a method that gives third-party proof of delivery. Only first-tier and second-tier claimants are protected by the bond.",
+   "status": "verified",
+   "note": "Notice rule confirmed against the statute text (Cornell LII). The statute gives rights only to those with a direct contract with the prime or with a subcontractor.",
+   "keywords": [
+    "Miller Act notice",
+    "90 days",
+    "second tier",
+    "written notice",
+    "proof of delivery",
+    "payment bond"
+   ]
+  },
+  {
+   "id": "G5-113",
+   "topic": "Bonds & insurance",
+   "trade": "law",
+   "state": null,
+   "source": "40 U.S.C. 3133(b)(3)-(4)",
+   "fact": "A Miller Act payment bond lawsuit must be filed no later than one year after the claimant's last labor or material, in the name of the United States, in the federal district court for the district where the contract was performed.",
+   "status": "verified",
+   "note": "Confirmed against the statute text (Cornell LII, 40 U.S.C. 3133).",
+   "keywords": [
+    "Miller Act lawsuit",
+    "one year",
+    "federal district court",
+    "statute of limitations",
+    "payment bond"
+   ]
+  },
+  {
+   "id": "G5-114",
+   "topic": "Contracts & liens",
+   "trade": "law",
+   "state": null,
+   "source": "FAR 52.232-5(e)",
+   "fact": "On federal fixed-price construction contracts, the contracting officer must pay progress payments in full when progress is satisfactory. Retainage of up to 10 percent of a payment may be withheld only when satisfactory progress has not been made.",
+   "status": "verified",
+   "note": "Confirmed on acquisition.gov (FAR 52.232-5).",
+   "keywords": [
+    "federal retainage",
+    "10 percent",
+    "satisfactory progress",
+    "progress payment",
+    "FAR"
+   ]
+  },
+  {
+   "id": "G5-115",
+   "topic": "Contracts & liens",
+   "trade": "law",
+   "state": null,
+   "source": "FAR 52.232-5(c)",
+   "fact": "With each progress payment request on a federal fixed-price construction contract, the prime contractor must certify that subcontractors and suppliers have been paid from previous payments and will be paid on time from this one; without the certification, no payment is made.",
+   "status": "verified",
+   "note": "Confirmed on acquisition.gov (FAR 52.232-5).",
+   "keywords": [
+    "payment certification",
+    "subcontractors paid",
+    "pay request",
+    "federal contract",
+    "FAR"
+   ]
+  },
+  {
+   "id": "G5-116",
+   "topic": "Contracts & liens",
+   "trade": "law",
+   "state": null,
+   "source": "FAR 52.243-4(b)",
+   "fact": "A constructive change happens when the owner's representative orders extra or different work without a formal change order. Under the federal Changes clause, any written or oral order from the contracting officer that causes a change is treated as a change order if the contractor gives written notice stating the date, circumstances and source of the order and that it considers it a change.",
+   "status": "verified",
+   "note": "Confirmed on acquisition.gov (FAR 52.243-4).",
+   "keywords": [
+    "constructive change",
+    "oral order",
+    "written notice",
+    "change order",
+    "FAR"
+   ]
+  },
+  {
+   "id": "G5-117",
+   "topic": "Contracts & liens",
+   "trade": "law",
+   "state": null,
+   "source": "FAR 52.243-4(d)-(e)",
+   "fact": "Under the federal Changes clause, the contractor cannot recover costs incurred more than 20 days before it gives written notice of a constructive change (defective specifications are an exception), and it must assert its right to an adjustment within 30 days after receiving a written change order or giving its notice.",
+   "status": "verified",
+   "note": "Confirmed on acquisition.gov (FAR 52.243-4).",
+   "keywords": [
+    "20 days",
+    "30 days",
+    "change notice",
+    "equitable adjustment",
+    "FAR"
+   ]
+  },
+  {
+   "id": "G5-118",
+   "topic": "Contracts & liens",
+   "trade": "law",
+   "state": null,
+   "source": "FAR 52.236-2(a), (c)",
+   "fact": "Federal contracts recognize two kinds of differing site conditions: Type I, subsurface or hidden conditions that differ materially from what the contract shows, and Type II, unknown unusual conditions that differ materially from what is normally found in that kind of work. The contractor must give written notice promptly and before disturbing the conditions, or the claim may be denied.",
+   "status": "verified",
+   "note": "Confirmed on acquisition.gov (FAR 52.236-2).",
+   "keywords": [
+    "differing site conditions",
+    "Type I",
+    "Type II",
+    "unforeseen conditions",
+    "notice before disturbing",
+    "FAR"
+   ]
+  },
+  {
+   "id": "G5-119",
+   "topic": "Contracts & liens",
+   "trade": "law",
+   "state": null,
+   "source": "AIA Contract Documents series (aiacontracts.com)",
+   "fact": "AIA contract documents are grouped by letter: A-series are owner/contractor agreements, B-series owner/architect agreements, C-series other agreements, D-series miscellaneous documents, E-series exhibits, and G-series contract administration and project management forms.",
+   "status": "verified",
+   "note": "Confirmed on AIA Contract Documents' list of current documents.",
+   "keywords": [
+    "AIA documents",
+    "A-series",
+    "B-series",
+    "G-series",
+    "contract forms"
+   ]
+  },
+  {
+   "id": "G5-120",
+   "topic": "Contracts & liens",
+   "trade": "law",
+   "state": null,
+   "source": "AIA A101-2017, A102-2017, A103-2017, A201-2017, A312-2010, B101-2017",
+   "fact": "Key AIA documents: A101 is the owner-contractor agreement for a stipulated sum; A102 is cost of the work plus a fee with a guaranteed maximum price; A103 is cost plus a fee without a GMP; A201 is the General Conditions of the Contract for Construction; A312 is the performance bond and payment bond; and B101 is the standard owner-architect agreement.",
+   "status": "verified",
+   "note": "Titles confirmed on AIA Contract Documents' list of current documents.",
+   "keywords": [
+    "A101",
+    "A102",
+    "A201",
+    "A312",
+    "B101",
+    "AIA"
+   ]
+  },
+  {
+   "id": "G5-121",
+   "topic": "Contracts & liens",
+   "trade": "law",
+   "state": null,
+   "source": "AIA G-series forms (aiacontracts.com)",
+   "fact": "Common AIA G-series forms: G701 change order, G704 certificate of substantial completion, G706 contractor's affidavit of payment of debts and claims, G706A affidavit of release of liens, G707 consent of surety to final payment, G710 architect's supplemental instructions, G714 construction change directive, and G716 request for information.",
+   "status": "verified",
+   "note": "Confirmed on AIA Contract Documents' G-series page.",
+   "keywords": [
+    "G701",
+    "G704",
+    "G706",
+    "G707",
+    "G714",
+    "construction change directive",
+    "AIA"
+   ]
+  },
+  {
+   "id": "G5-122",
+   "topic": "Contracts & liens",
+   "trade": "law",
+   "state": null,
+   "source": "AIA A201-2017 Section 9.7",
+   "fact": "Under AIA A201-2017, if the architect does not issue a certificate for payment within seven days after receiving the application (through no fault of the contractor), or the owner does not pay within seven days after the payment due date, the contractor may stop work after giving seven additional days' written notice. Contract time and sum are then adjusted for reasonable shutdown, delay and start-up costs.",
+   "status": "verified",
+   "note": "Confirmed by AIA Contract Documents article quoting Section 9.7.",
+   "keywords": [
+    "stop work",
+    "nonpayment",
+    "seven days",
+    "A201",
+    "failure of payment",
+    "AIA"
+   ]
+  },
+  {
+   "id": "G5-123",
+   "topic": "Contracts & liens",
+   "trade": "law",
+   "state": null,
+   "source": "AIA A201-2017 Section 3.7.4",
+   "fact": "Under AIA A201-2017, when the contractor finds concealed or unknown site conditions that differ materially from the contract documents or from what is normally found, it must notify the owner and architect promptly, before the conditions are disturbed, and no later than 14 days after first observing them.",
+   "status": "verified",
+   "note": "14-day language confirmed in a public project copy of A201-2017 (State of Tennessee version).",
+   "keywords": [
+    "concealed conditions",
+    "14 days",
+    "A201",
+    "unknown conditions",
+    "notice",
+    "AIA"
+   ]
+  },
+  {
+   "id": "G5-124",
+   "topic": "Contracts & liens",
+   "trade": "law",
+   "state": null,
+   "source": "AIA A201-2017 Article 15 (Section 15.1.3)",
+   "fact": "Under AIA A201-2017, a claim must be started by written notice within 21 days after the event giving rise to it, or within 21 days after the claimant first recognizes the condition, whichever is later.",
+   "status": "verified",
+   "note": "Confirmed by a construction claims presentation summarizing A201-2017 Article 15; matches the A201 text.",
+   "keywords": [
+    "claim notice",
+    "21 days",
+    "A201",
+    "claims",
+    "AIA"
+   ]
+  },
+  {
+   "id": "G5-125",
+   "topic": "Contracts & liens",
+   "trade": "law",
+   "state": null,
+   "source": "AIA A201-2017 Section 15.1.7",
+   "fact": "AIA A201-2017 contains a mutual waiver of consequential damages: the owner and contractor waive claims against each other for consequential damages such as the owner's lost rental income and the contractor's home office overhead and lost profit. The waiver does not prevent the owner from assessing liquidated damages.",
+   "status": "verified",
+   "note": "Confirmed by AIA Contract Documents article quoting Section 15.1.7.",
+   "keywords": [
+    "consequential damages",
+    "mutual waiver",
+    "liquidated damages",
+    "A201",
+    "AIA"
+   ]
+  },
+  {
+   "id": "G5-126",
+   "topic": "Contracts & liens",
+   "trade": "law",
+   "state": null,
+   "source": "Cal. Civ. Code 8132, 8134, 8136, 8138 (statutory lien waiver forms)",
+   "fact": "Lien waivers come in four basic types: conditional progress, unconditional progress, conditional final and unconditional final. California's statutory forms are a common model: a progress waiver covers work through a stated date, a final waiver covers the whole job, a conditional waiver works only if the payment is actually received, and an unconditional waiver is signed after the claimant has been paid.",
+   "status": "verified",
+   "note": "Confirmed on the California CSLB waiver and release forms page. Forms and rules vary by state; many states have no required form.",
+   "keywords": [
+    "lien waiver types",
+    "conditional",
+    "unconditional",
+    "progress payment",
+    "final payment",
+    "lien release"
+   ]
+  },
+  {
+   "id": "G5-127",
+   "topic": "Contracts & liens",
+   "trade": "law",
+   "state": null,
+   "source": "Cal. Civ. Code 8136; CSLB guidance",
+   "fact": "A conditional final lien waiver binds the claimant only when there is proof of payment, such as the claimant's endorsed check that the bank has paid. Getting a lien release from the general contractor does not by itself prove that its subcontractors and suppliers were paid.",
+   "status": "verified",
+   "note": "Confirmed on the California CSLB waiver and release forms page (California rule; other states differ).",
+   "keywords": [
+    "conditional final waiver",
+    "proof of payment",
+    "lien waiver",
+    "subcontractors",
+    "California"
+   ]
+  },
+  {
+   "id": "G5-128",
+   "topic": "Labor law",
+   "trade": "law",
+   "state": null,
+   "source": "29 CFR 516.5; 516.6; DOL WHD Fact Sheet #21",
+   "fact": "Under the FLSA, employers must keep payroll records for at least 3 years, and supplementary records that wages are figured from (time cards, wage rate tables, work schedules, records of additions and deductions) for 2 years.",
+   "status": "verified",
+   "note": "Confirmed by DOL Wage and Hour Fact Sheet #21.",
+   "keywords": [
+    "FLSA records",
+    "3 years",
+    "2 years",
+    "time cards",
+    "payroll records",
+    "recordkeeping"
+   ]
+  },
+  {
+   "id": "G5-129",
+   "topic": "Labor law",
+   "trade": "law",
+   "state": null,
+   "source": "29 CFR Part 785; DOL WHD Fact Sheet #22",
+   "fact": "Under the FLSA, a normal home-to-work commute is not work time, but travel from job site to job site during the workday is paid work time. Short rest breaks (usually 20 minutes or less) must be counted as hours worked, and on-call time spent on the employer's premises is work time.",
+   "status": "verified",
+   "note": "Confirmed by DOL Wage and Hour Fact Sheet #22.",
+   "keywords": [
+    "travel time",
+    "commute",
+    "job site to job site",
+    "rest breaks",
+    "hours worked",
+    "FLSA"
+   ]
+  },
+  {
+   "id": "G5-130",
+   "topic": "Labor law",
+   "trade": "law",
+   "state": null,
+   "source": "29 CFR 541.600; DOL final rule issued May 15, 2026",
+   "fact": "To be exempt from FLSA overtime as an executive, administrative or professional employee, a worker must pass the duties test and be paid a salary of at least $684 per week ($35,568 a year); the highly compensated employee threshold is $107,432 a year. A 2026 DOL rule rescinded the 2024 increases and kept these 2019 levels.",
+   "status": "verified",
+   "note": "Confirmed by L&E Global summary of the May 2026 DOL final rule. Some states set higher salary thresholds.",
+   "keywords": [
+    "overtime exemption",
+    "$684 per week",
+    "salary threshold",
+    "exempt employee",
+    "FLSA"
+   ]
+  },
+  {
+   "id": "G5-131",
+   "topic": "Labor law",
+   "trade": "law",
+   "state": null,
+   "source": "E-Verify User Manual 2.2 (e-verify.gov)",
+   "fact": "An employer enrolled in E-Verify must complete Form I-9 first and then create the E-Verify case no later than the third business day after the new employee starts work for pay.",
+   "status": "verified",
+   "note": "Confirmed on e-verify.gov (User Manual section 2.2).",
+   "keywords": [
+    "E-Verify",
+    "third business day",
+    "Form I-9",
+    "new hire",
+    "employment verification"
+   ]
+  },
+  {
+   "id": "G5-132",
+   "topic": "Labor law",
+   "trade": "law",
+   "state": null,
+   "source": "E-Verify FAQ: tentative nonconfirmation (mismatch)",
+   "fact": "When E-Verify returns a mismatch (tentative nonconfirmation) and the employee chooses to take action, the employee has 8 federal government working days to contact SSA or DHS. The employer may not fire, suspend or take other adverse action because of the mismatch while it is being resolved.",
+   "status": "verified",
+   "note": "Confirmed on e-verify.gov.",
+   "keywords": [
+    "E-Verify mismatch",
+    "tentative nonconfirmation",
+    "8 working days",
+    "adverse action",
+    "employment verification"
+   ]
+  },
+  {
+   "id": "G5-133",
+   "topic": "Labor law",
+   "trade": "law",
+   "state": null,
+   "source": "DOL WHD proposed rule (Feb. 26, 2026); Field Assistance Bulletin 2025-1",
+   "fact": "Under the FLSA, worker status is decided by an 'economic reality' test that asks whether the worker is really in business for themselves. The two core factors are the business's control over the work and the worker's opportunity for profit or loss; skill, permanence and whether the work is part of an integrated unit also count, and actual practice matters more than the contract wording.",
+   "status": "verified",
+   "note": "Confirmed by DLA Piper summary of DOL's 2026 proposed rule and 2025 enforcement guidance. The federal rule is in flux, and some states (such as California's ABC test) are stricter.",
+   "keywords": [
+    "independent contractor",
+    "economic reality test",
+    "control",
+    "profit or loss",
+    "misclassification",
+    "FLSA"
+   ]
+  },
+  {
+   "id": "G5-134",
+   "topic": "Labor law",
+   "trade": "law",
+   "state": null,
+   "source": "EEOC coverage of private employers; 42 U.S.C. 2000e(b)",
+   "fact": "Title VII, the ADA and GINA cover private employers with 15 or more employees, and the Age Discrimination in Employment Act covers employers with 20 or more, counting employees who worked at least 20 calendar weeks in the current or preceding year. The Equal Pay Act covers virtually all employers.",
+   "status": "verified",
+   "note": "Confirmed on the EEOC coverage page for private employers.",
+   "keywords": [
+    "Title VII",
+    "15 employees",
+    "ADEA",
+    "20 employees",
+    "Equal Pay Act",
+    "EEOC"
+   ]
+  },
+  {
+   "id": "G5-135",
+   "topic": "Labor law",
+   "trade": "law",
+   "state": null,
+   "source": "29 U.S.C. 631(a)",
+   "fact": "The Age Discrimination in Employment Act protects workers who are at least 40 years old.",
+   "status": "verified",
+   "note": "Confirmed against the statute text (Cornell LII).",
+   "keywords": [
+    "ADEA",
+    "age 40",
+    "age discrimination",
+    "protected class",
+    "EEO"
+   ]
+  },
+  {
+   "id": "G5-136",
+   "topic": "Labor law",
+   "trade": "law",
+   "state": null,
+   "source": "EEOC: Time Limits for Filing a Charge",
+   "fact": "A discrimination charge generally must be filed with the EEOC within 180 calendar days of the discrimination, extended to 300 days where a state or local agency enforces a law against the same discrimination. Equal Pay Act claims can go straight to court within 2 years of the last discriminatory paycheck (3 years if willful).",
+   "status": "verified",
+   "note": "Confirmed on eeoc.gov. For age claims, only a state law (not a local one) extends the deadline to 300 days.",
+   "keywords": [
+    "EEOC charge",
+    "180 days",
+    "300 days",
+    "Equal Pay Act",
+    "filing deadline"
+   ]
+  },
+  {
+   "id": "G5-137",
+   "topic": "Labor law",
+   "trade": "law",
+   "state": null,
+   "source": "EEOC EEO data collections (EEO-1 Component 1)",
+   "fact": "The annual EEO-1 report of workforce demographics is required of private employers with 100 or more employees and of federal contractors with 50 or more employees that meet certain criteria.",
+   "status": "verified",
+   "note": "Confirmed on eeoc.gov EEO data collections page.",
+   "keywords": [
+    "EEO-1 report",
+    "100 employees",
+    "federal contractor",
+    "50 employees",
+    "EEOC"
+   ]
+  },
+  {
+   "id": "G5-138",
+   "topic": "Payroll & tax",
+   "trade": "law",
+   "state": null,
+   "source": "IRS Employment Tax Due Dates; Form 941 instructions",
+   "fact": "Form 941 is due by the last day of the month after each quarter: April 30, July 31, October 31 and January 31. An employer that deposited all its taxes on time gets 10 more calendar days to file.",
+   "status": "verified",
+   "note": "Confirmed on irs.gov Employment Tax Due Dates page.",
+   "keywords": [
+    "Form 941 due date",
+    "April 30",
+    "July 31",
+    "October 31",
+    "January 31",
+    "quarterly return"
+   ]
+  },
+  {
+   "id": "G5-139",
+   "topic": "Payroll & tax",
+   "trade": "law",
+   "state": null,
+   "source": "IRS Employment Tax Due Dates; IRS Pub 15",
+   "fact": "Monthly depositors deposit a month's employment taxes by the 15th of the following month. Semiweekly depositors deposit taxes on Wednesday, Thursday or Friday paydays by the following Wednesday, and on Saturday through Tuesday paydays by the following Friday.",
+   "status": "verified",
+   "note": "Confirmed on irs.gov Employment Tax Due Dates page.",
+   "keywords": [
+    "deposit schedule",
+    "monthly depositor",
+    "15th",
+    "semiweekly",
+    "payroll tax deposit"
+   ]
+  },
+  {
+   "id": "G5-140",
+   "topic": "Payroll & tax",
+   "trade": "law",
+   "state": null,
+   "source": "IRS Backup Withholding; Form W-9; Employment Tax Due Dates",
+   "fact": "Before paying a subcontractor, get a signed Form W-9 with its taxpayer identification number. If a payee does not provide a correct TIN, the payer must apply backup withholding at 24 percent. Form 1099-NEC is due to both the recipient and the IRS by January 31.",
+   "status": "verified",
+   "note": "Confirmed on irs.gov backup withholding and employment tax due dates pages.",
+   "keywords": [
+    "Form W-9",
+    "backup withholding",
+    "24 percent",
+    "1099-NEC",
+    "January 31",
+    "TIN"
+   ]
+  },
+  {
+   "id": "G5-141",
+   "topic": "Payroll & tax",
+   "trade": "law",
+   "state": null,
+   "source": "IRC 6672; IRM 8.25.1",
+   "fact": "Withheld income tax and the employee's share of Social Security and Medicare are 'trust fund' taxes. Any responsible person (such as an owner, officer or bookkeeper with authority) who willfully fails to collect or pay them over can be held personally liable for a Trust Fund Recovery Penalty equal to the full unpaid trust fund amount.",
+   "status": "verified",
+   "note": "Confirmed in the IRS Internal Revenue Manual 8.25.1.",
+   "keywords": [
+    "trust fund recovery penalty",
+    "IRC 6672",
+    "responsible person",
+    "personal liability",
+    "payroll taxes"
+   ]
+  },
+  {
+   "id": "G5-142",
+   "topic": "Payroll & tax",
+   "trade": "law",
+   "state": null,
+   "source": "IRS Instructions for Form 4562",
+   "fact": "Under MACRS, automobiles and light general-purpose trucks are 5-year property, office furniture and equipment are 7-year property, residential rental buildings (80 percent or more of rent from dwelling units) are 27.5-year property, and nonresidential real property is 39-year property. Land is never depreciated.",
+   "status": "verified",
+   "note": "Confirmed in IRS Form 4562 instructions and IRS Pub 946 (land).",
+   "keywords": [
+    "MACRS",
+    "5-year property",
+    "7-year property",
+    "39-year",
+    "27.5-year",
+    "depreciation"
+   ]
+  },
+  {
+   "id": "G5-143",
+   "topic": "Payroll & tax",
+   "trade": "law",
+   "state": null,
+   "source": "IRS Instructions for Form 4562",
+   "fact": "MACRS normally uses the half-year convention, which treats property as placed in service in the middle of the year. The mid-quarter convention applies instead when more than 40 percent of the year's depreciable property is placed in service in the last 3 months of the tax year.",
+   "status": "verified",
+   "note": "Confirmed in IRS Form 4562 instructions.",
+   "keywords": [
+    "half-year convention",
+    "mid-quarter convention",
+    "40 percent",
+    "MACRS",
+    "depreciation"
+   ]
+  },
+  {
+   "id": "G5-144",
+   "topic": "Payroll & tax",
+   "trade": "law",
+   "state": null,
+   "source": "IRC 179; IRS Pub 946 (2026 limits); One Big Beautiful Bill Act (2025)",
+   "fact": "Section 179 lets a business expense the cost of qualifying equipment in the year it is placed in service. For tax years beginning in 2026 the limit is $2,560,000, reduced dollar for dollar once qualifying property placed in service exceeds $4,090,000 (the 2025 figures were $2.5 million and $4 million).",
+   "status": "verified",
+   "note": "2026 figures confirmed in IRS Pub 946; 2025 figures confirmed by Sikich summary of the 2025 law. Limits are indexed for inflation each year.",
+   "keywords": [
+    "Section 179",
+    "expensing",
+    "$2,560,000",
+    "phase-out",
+    "equipment purchase",
+    "depreciation"
+   ]
+  },
+  {
+   "id": "G5-145",
+   "topic": "Payroll & tax",
+   "trade": "law",
+   "state": null,
+   "source": "IRC 168(k) as amended by the One Big Beautiful Bill Act (2025)",
+   "fact": "Bonus depreciation is permanently set at 100 percent for qualifying property acquired after January 19, 2025, so the full cost of eligible equipment can be deducted in the first year. Property acquired earlier (based on the written binding contract date) gets the lower phase-down rate.",
+   "status": "verified",
+   "note": "Confirmed by Sikich summary of the 2025 law.",
+   "keywords": [
+    "bonus depreciation",
+    "100 percent",
+    "January 19 2025",
+    "first-year deduction",
+    "equipment"
+   ]
+  },
+  {
+   "id": "G5-146",
+   "topic": "Financial management",
+   "trade": "law",
+   "state": null,
+   "source": "Financial ratio analysis fundamentals",
+   "fact": "Debt-to-equity ratio = total liabilities divided by owner's equity. A contractor with $300,000 of liabilities and $200,000 of equity has a ratio of 1.5, meaning creditors have put in $1.50 for every $1 the owners have; sureties and lenders prefer lower ratios.",
+   "status": "verified",
+   "note": "Standard accounting formula (consistent with the debt ratio and accounting equation facts already in the knowledge base).",
+   "keywords": [
+    "debt to equity",
+    "leverage ratio",
+    "total liabilities",
+    "owner's equity",
+    "financial ratios"
+   ]
+  },
+  {
+   "id": "G5-147",
+   "topic": "Financial management",
+   "trade": "law",
+   "state": null,
+   "source": "Percentage-of-completion (cost-to-cost) method; construction WIP schedule practice",
+   "fact": "On a work-in-progress (WIP) schedule, percent complete = costs to date divided by total estimated costs, and earned revenue = percent complete times the contract value. Example: $750,000 of cost on a job estimated at $1,000,000 is 75 percent complete, so on a $1,200,000 contract the earned revenue is $900,000.",
+   "status": "verified",
+   "note": "Method confirmed by Corpay's construction WIP report guide.",
+   "keywords": [
+    "percent complete",
+    "cost to cost",
+    "earned revenue",
+    "WIP schedule",
+    "percentage of completion"
+   ]
+  },
+  {
+   "id": "G5-148",
+   "topic": "Financial management",
+   "trade": "law",
+   "state": null,
+   "source": "Construction WIP schedule practice (balance sheet presentation)",
+   "fact": "If a contractor has billed more than it has earned, the overbilling is a current liability called 'billings in excess of costs and estimated earnings.' If it has earned more than it has billed, the underbilling is a current asset called 'costs and estimated earnings in excess of billings.'",
+   "status": "verified",
+   "note": "Confirmed by Corpay's construction WIP report guide.",
+   "keywords": [
+    "overbilling",
+    "underbilling",
+    "billings in excess",
+    "current liability",
+    "WIP"
+   ]
+  },
+  {
+   "id": "G5-149",
+   "topic": "Safety recordkeeping",
+   "trade": "law",
+   "state": null,
+   "source": "29 CFR 1904.7(a)",
+   "fact": "A work-related injury or illness is recordable on the OSHA 300 log if it results in death, days away from work, restricted work or job transfer, medical treatment beyond first aid, or loss of consciousness, or if it is a significant injury or illness diagnosed by a physician or other licensed health care professional.",
+   "status": "verified",
+   "note": "Confirmed on eCFR (29 CFR 1904.7).",
+   "keywords": [
+    "recordable injury",
+    "OSHA 300",
+    "medical treatment",
+    "days away",
+    "restricted work",
+    "recordkeeping"
+   ]
+  },
+  {
+   "id": "G5-150",
+   "topic": "Safety recordkeeping",
+   "trade": "law",
+   "state": null,
+   "source": "29 CFR 1904.7(b)(5)(ii)",
+   "fact": "OSHA's list of first aid treatments is complete; anything not on it is medical treatment. First aid includes nonprescription medicine at nonprescription strength, tetanus shots, cleaning wounds, bandages, hot or cold therapy, non-rigid supports like elastic wraps, temporary splints for transport, eye patches, removing splinters by simple means, and drinking fluids for heat stress.",
+   "status": "verified",
+   "note": "Confirmed on eCFR (29 CFR 1904.7).",
+   "keywords": [
+    "first aid",
+    "medical treatment",
+    "tetanus",
+    "elastic bandage",
+    "OSHA recordkeeping"
+   ]
+  },
+  {
+   "id": "G5-151",
+   "topic": "Safety recordkeeping",
+   "trade": "law",
+   "state": null,
+   "source": "29 CFR 1904.7(b)(3)",
+   "fact": "When counting days away from work or restricted days for the OSHA 300 log, start counting the day after the injury, count calendar days (not just scheduled workdays), and stop at 180 days.",
+   "status": "verified",
+   "note": "Confirmed on eCFR (29 CFR 1904.7).",
+   "keywords": [
+    "days away count",
+    "180 days",
+    "calendar days",
+    "OSHA 300 log",
+    "recordkeeping"
+   ]
+  },
+  {
+   "id": "G5-152",
+   "topic": "Safety recordkeeping",
+   "trade": "law",
+   "state": null,
+   "source": "29 CFR 1904.32(b)(3)-(4)",
+   "fact": "The annual OSHA 300A summary must be certified by a company executive: an owner (sole proprietorship or partnership only), a corporate officer, the highest-ranking company official at the establishment, or that official's immediate supervisor.",
+   "status": "verified",
+   "note": "Confirmed on eCFR (29 CFR 1904.32).",
+   "keywords": [
+    "300A certification",
+    "company executive",
+    "OSHA summary",
+    "recordkeeping",
+    "corporate officer"
+   ]
+  },
+  {
+   "id": "G5-153",
+   "topic": "Safety recordkeeping",
+   "trade": "law",
+   "state": null,
+   "source": "29 CFR 1904.41; Appendices A and B to Subpart E",
+   "fact": "Construction establishments with 20 to 249 employees (and all record-keeping establishments with 250 or more) must submit their OSHA 300A data electronically by March 2 each year. Establishments with 100 or more employees in an Appendix B industry, which includes NAICS 2381 foundation, structure and building exterior contractors, must also submit their 300 and 301 data.",
+   "status": "verified",
+   "note": "Confirmed on eCFR (29 CFR 1904.41 and Appendices A and B; Appendix A lists NAICS 23 Construction).",
+   "keywords": [
+    "electronic submission",
+    "Injury Tracking Application",
+    "March 2",
+    "20 to 249 employees",
+    "300A",
+    "recordkeeping"
+   ]
+  },
+  {
+   "id": "G5-154",
+   "topic": "Safety recordkeeping",
+   "trade": "law",
+   "state": null,
+   "source": "29 CFR 1904.39(b)(3)-(b)(10)",
+   "fact": "A work-related death must be reported to OSHA only if it occurs within 30 days of the incident, and an in-patient hospitalization, amputation or loss of an eye only if it occurs within 24 hours of the incident. In-patient hospitalization means formal admission, not just observation or tests, and a motor vehicle crash on a public road is reportable only if it happened in a construction work zone.",
+   "status": "verified",
+   "note": "Confirmed on eCFR (29 CFR 1904.39).",
+   "keywords": [
+    "OSHA reporting",
+    "30 days",
+    "24 hours",
+    "hospitalization",
+    "work zone",
+    "fatality"
+   ]
   }
  ],
- "questions": []
+ "questions": [
+  {
+   "t": "gc",
+   "topic": "Residential code",
+   "q": "Under the 2021 IRC, what is the minimum clear width of a stairway above the permitted handrail height?",
+   "c": [
+    "36 in",
+    "44 in",
+    "32 in",
+    "34 in"
+   ],
+   "a": 0,
+   "ref": "IRC 2021 R311.7.1",
+   "why": "R311.7.1 requires stairways to be at least 36 in clear above the handrail height; 44 in is the common IBC egress stair width."
+  },
+  {
+   "t": "gc",
+   "topic": "Residential code",
+   "q": "Under the 2021 IRC, a nosing is not required on a stair when the tread depth is at least:",
+   "c": [
+    "10-1/2 in",
+    "11 in",
+    "12 in",
+    "10 in"
+   ],
+   "a": 1,
+   "ref": "IRC 2021 R311.7.5.3",
+   "why": "Nosings of 3/4 to 1-1/4 in are required on solid-riser stairs unless the tread depth is 11 in or more."
+  },
+  {
+   "t": "gc",
+   "topic": "Residential code",
+   "q": "Under the 2021 IRC, a guard is required where an open-sided deck is more than how high above the grade below (measured within 36 in of the edge)?",
+   "c": [
+    "42 in",
+    "24 in",
+    "30 in",
+    "36 in"
+   ],
+   "a": 2,
+   "ref": "IRC 2021 R312.1.1",
+   "why": "Guards are required where the walking surface is more than 30 in above the floor or grade within 36 in horizontally of the open side."
+  },
+  {
+   "t": "gc",
+   "topic": "Residential code",
+   "q": "What is the minimum required guard height for a deck in a one-family dwelling under the model 2021 IRC?",
+   "c": [
+    "34 in",
+    "42 in",
+    "38 in",
+    "36 in"
+   ],
+   "a": 3,
+   "ref": "IRC 2021 R312.1.2",
+   "why": "R312.1.2 requires 36 in guards; 34 in applies to guards along the open sides of stairs, and 42 in is the IBC (and some state) requirement."
+  },
+  {
+   "t": "gc",
+   "topic": "Residential code",
+   "q": "Guards on the open side of an IRC stairway may not have openings that pass a sphere of what diameter?",
+   "c": [
+    "4-3/8 in",
+    "6 in",
+    "21 in",
+    "4 in"
+   ],
+   "a": 0,
+   "ref": "IRC 2021 R312.1.3 Exc. 2",
+   "why": "The general guard limit is a 4 in sphere, but the open side of stairs is allowed 4-3/8 in; the 6 in sphere applies only to the riser/tread/bottom rail triangle."
+  },
+  {
+   "t": "gc",
+   "topic": "Residential code",
+   "q": "Window fall protection is required when an operable window's sill is less than 24 in above the floor and the opening is more than how high above the grade outside?",
+   "c": [
+    "60 in",
+    "72 in",
+    "96 in",
+    "44 in"
+   ],
+   "a": 1,
+   "ref": "IRC 2021 R312.2.1",
+   "why": "R312.2.1 applies where the sill is under 24 in above the finished floor and the opening is more than 72 in above the grade below."
+  },
+  {
+   "t": "gc",
+   "topic": "Residential code",
+   "q": "What is the minimum net clear opening for an emergency escape window on a second-floor bedroom under the 2021 IRC?",
+   "c": [
+    "9.0 sq ft",
+    "5.0 sq ft",
+    "5.7 sq ft",
+    "6.0 sq ft"
+   ],
+   "a": 2,
+   "ref": "IRC 2021 R310.2.1",
+   "why": "Escape openings need at least 5.7 sq ft; the 5.0 sq ft allowance is only for grade-floor openings."
+  },
+  {
+   "t": "gc",
+   "topic": "Residential code",
+   "q": "A window well serving a basement escape window needs a permanently attached ladder or steps when the well is deeper than:",
+   "c": [
+    "48 in",
+    "36 in",
+    "42 in",
+    "44 in"
+   ],
+   "a": 3,
+   "ref": "IRC 2021 R310.4.2",
+   "why": "Area wells deeper than 44 in require a permanent ladder or steps that can be used with the window fully open."
+  },
+  {
+   "t": "gc",
+   "topic": "Doors, windows & glazing",
+   "q": "Which window pane requires safety glazing under IRC R308.4.3?",
+   "c": [
+    "10 sq ft pane, bottom edge 16 in above floor, top edge 70 in, walkway 24 in away",
+    "8 sq ft pane, bottom edge 12 in above floor, top edge 60 in, walkway 24 in away",
+    "12 sq ft pane, bottom edge 20 in above floor, top edge 80 in, walkway 24 in away",
+    "12 sq ft pane, bottom edge 12 in above floor, top edge 80 in, walkway 48 in away"
+   ],
+   "a": 0,
+   "ref": "IRC 2021 R308.4.3",
+   "why": "All four conditions must be met: over 9 sq ft, bottom under 18 in, top over 36 in, and a walking surface within 36 in. Each wrong choice misses one condition."
+  },
+  {
+   "t": "gc",
+   "topic": "Fire protection",
+   "q": "What is the minimum horizontal distance between an ionization smoke alarm without a silencing switch and a permanently installed cooking appliance?",
+   "c": [
+    "10 ft",
+    "20 ft",
+    "3 ft",
+    "6 ft"
+   ],
+   "a": 1,
+   "ref": "IRC 2021 R314.3; NFPA 72 29.11.3.4",
+   "why": "Ionization alarms must be at least 20 ft away (10 ft with a silencing switch); photoelectric alarms need 6 ft."
+  },
+  {
+   "t": "gc",
+   "topic": "Fire protection",
+   "q": "Under the 2021 IRC, which new all-electric home is required to have carbon monoxide alarms?",
+   "c": [
+    "One heated by an electric heat pump",
+    "One with a detached garage",
+    "One with an attached garage that has a door into the house",
+    "One with an open carport"
+   ],
+   "a": 2,
+   "ref": "IRC 2021 R315.2.1",
+   "why": "CO alarms are required where there is a fuel-fired appliance or an attached garage with an opening into the dwelling."
+  },
+  {
+   "t": "gc",
+   "topic": "Residential code",
+   "q": "Under the IRC, what must separate a garage from a habitable room located above it?",
+   "c": [
+    "1/2 in Type X gypsum board",
+    "3/8 in gypsum board",
+    "1/2 in regular gypsum board on the garage side",
+    "5/8 in Type X gypsum board"
+   ],
+   "a": 3,
+   "ref": "IRC 2021 Table R302.6",
+   "why": "Table R302.6 requires at least 5/8 in Type X gypsum board between a garage and habitable rooms above; 1/2 in board is enough for walls between the garage and the house."
+  },
+  {
+   "t": "gc",
+   "topic": "Residential code",
+   "q": "A house without sprinklers has an exterior wall 4 ft from the lot line. Under Table R302.1(1), how much of that wall may be openings?",
+   "c": [
+    "25 percent",
+    "Unlimited",
+    "None",
+    "10 percent"
+   ],
+   "a": 0,
+   "ref": "IRC 2021 Table R302.1(1)",
+   "why": "Openings are not allowed under 3 ft, limited to 25 percent of the wall area from 3 ft to under 5 ft, and unlimited at 5 ft or more."
+  },
+  {
+   "t": "gc",
+   "topic": "Residential code",
+   "q": "What is the minimum thickness of a concrete spread footing under IRC R403.1.1?",
+   "c": [
+    "4 in",
+    "6 in",
+    "8 in",
+    "12 in"
+   ],
+   "a": 1,
+   "ref": "IRC 2021 R403.1.1",
+   "why": "Footings must be at least 6 in thick and 12 in wide, with a projection of at least 2 in but not more than the footing thickness."
+  },
+  {
+   "t": "gc",
+   "topic": "Wood framing",
+   "q": "A stud in an exterior bearing wall may be notched to a maximum depth of what percent of its width?",
+   "c": [
+    "40 percent",
+    "60 percent",
+    "25 percent",
+    "33 percent"
+   ],
+   "a": 2,
+   "ref": "IRC 2021 R602.6",
+   "why": "Bearing studs may be notched 25 percent; nonbearing studs 40 percent; bored holes may be up to 60 percent of the width."
+  },
+  {
+   "t": "gc",
+   "topic": "Building code (IBC)",
+   "q": "An office floor of 15,000 gross sq ft is used as business space. What is its occupant load under 2021 IBC Table 1004.5?",
+   "c": [
+    "150",
+    "300",
+    "75",
+    "100"
+   ],
+   "a": 3,
+   "ref": "IBC 2021 Table 1004.5",
+   "why": "Business areas use 150 gross sq ft per occupant: 15,000 / 150 = 100 occupants."
+  },
+  {
+   "t": "gc",
+   "topic": "Building code (IBC)",
+   "q": "A banquet hall has 3,000 net sq ft set with tables and chairs. What is its occupant load?",
+   "c": [
+    "200",
+    "429",
+    "600",
+    "100"
+   ],
+   "a": 0,
+   "ref": "IBC 2021 Table 1004.5",
+   "why": "Unconcentrated assembly (tables and chairs) uses 15 net sq ft per person: 3,000 / 15 = 200. 429 would be the chairs-only factor of 7, and 600 the standing factor of 5."
+  },
+  {
+   "t": "gc",
+   "topic": "Building code (IBC)",
+   "q": "What is the maximum exit access travel distance in a fully sprinklered Group B building under the 2021 IBC?",
+   "c": [
+    "250 ft",
+    "300 ft",
+    "400 ft",
+    "200 ft"
+   ],
+   "a": 1,
+   "ref": "IBC 2021 Table 1017.2",
+   "why": "Group B allows 200 ft without sprinklers and 300 ft with sprinklers; 250 ft applies to sprinklered A, E, F-1, M, R and S-1."
+  },
+  {
+   "t": "gc",
+   "topic": "Building code (IBC)",
+   "q": "A story has an occupant load of 750. What is the minimum number of exits required from that story?",
+   "c": [
+    "5",
+    "2",
+    "3",
+    "4"
+   ],
+   "a": 2,
+   "ref": "IBC 2021 Table 1006.3.3",
+   "why": "Two exits serve 1-500 occupants, three serve 501-1,000, and four are needed above 1,000."
+  },
+  {
+   "t": "gc",
+   "topic": "Building code (IBC)",
+   "q": "What is the minimum corridor width for a corridor serving 120 occupants in an office building under the 2021 IBC?",
+   "c": [
+    "60 in",
+    "72 in",
+    "36 in",
+    "44 in"
+   ],
+   "a": 3,
+   "ref": "IBC 2021 Table 1020.3",
+   "why": "The general minimum is 44 in; 36 in applies only with fewer than 50 occupants, and 72 in is for Group E corridors serving 100 or more."
+  },
+  {
+   "t": "gc",
+   "topic": "Building code (IBC)",
+   "q": "Under IBC Table 601, what fire-resistance rating is required for the primary structural frame of Type IA construction?",
+   "c": [
+    "3 hours",
+    "4 hours",
+    "1 hour",
+    "2 hours"
+   ],
+   "a": 0,
+   "ref": "IBC 2021 Table 601",
+   "why": "Type IA requires a 3-hour primary structural frame; Type IB requires 2 hours."
+  },
+  {
+   "t": "gc",
+   "topic": "Fire protection",
+   "q": "Under the 2021 IBC, a Group A-2 restaurant must be sprinklered when its fire area exceeds:",
+   "c": [
+    "2,500 sq ft",
+    "5,000 sq ft",
+    "12,000 sq ft",
+    "24,000 sq ft"
+   ],
+   "a": 1,
+   "ref": "IBC 2021 903.2.1.2",
+   "why": "A-2 occupancies need sprinklers over 5,000 sq ft, with 100 or more occupants, or on a floor other than the exit discharge level."
+  },
+  {
+   "t": "gc",
+   "topic": "Building code (IBC)",
+   "q": "An assisted living facility provides 24-hour custodial care to 20 residents. What is its IBC occupancy classification?",
+   "c": [
+    "R-3",
+    "R-4",
+    "I-1",
+    "R-2"
+   ],
+   "a": 2,
+   "ref": "IBC 2021 308.2; 310.5",
+   "why": "R-4 covers more than 5 but not more than 16 residents; more than 16 residents in custodial care is Group I-1."
+  },
+  {
+   "t": "gc",
+   "topic": "Fire protection",
+   "q": "What minimum fire protection rating is required for a door in a 2-hour fire barrier?",
+   "c": [
+    "2 hours",
+    "3/4 hour",
+    "1 hour",
+    "1-1/2 hours"
+   ],
+   "a": 3,
+   "ref": "IBC Table 716.1(2)",
+   "why": "Table 716.1(2) requires 1-1/2-hour doors in 2-hour fire walls and fire barriers; 1-hour shaft and exit enclosures need 1-hour doors."
+  },
+  {
+   "t": "gc",
+   "topic": "Accessibility",
+   "q": "A parking lot has 120 total spaces. How many accessible spaces does the 2010 ADA Standards require?",
+   "c": [
+    "5",
+    "6",
+    "3",
+    "4"
+   ],
+   "a": 0,
+   "ref": "2010 ADA Standards Table 208.2",
+   "why": "101-150 total spaces require 5 accessible spaces, and at least one of them must be van accessible."
+  },
+  {
+   "t": "gc",
+   "topic": "Site work & concrete",
+   "q": "Under ACI 318, when f'c is 4,000 psi, no individual strength test may fall below f'c by more than:",
+   "c": [
+    "300 psi",
+    "500 psi",
+    "750 psi",
+    "1,000 psi"
+   ],
+   "a": 1,
+   "ref": "ACI 318-19 26.12.3.1",
+   "why": "For f'c of 5,000 psi or less, no single test may be more than 500 psi low, and every average of three consecutive tests must reach f'c."
+  },
+  {
+   "t": "gc",
+   "topic": "Masonry",
+   "q": "Which ASTM C270 mortar type has a minimum compressive strength of 1,800 psi?",
+   "c": [
+    "Type O",
+    "Type M",
+    "Type S",
+    "Type N"
+   ],
+   "a": 2,
+   "ref": "ASTM C270",
+   "why": "Type M is 2,500 psi, Type S 1,800 psi, Type N 750 psi and Type O 350 psi."
+  },
+  {
+   "t": "gc",
+   "topic": "Roofing",
+   "q": "Where an ice barrier is required by the IRC, it must extend from the lowest roof edge to a point at least how far inside the exterior wall line?",
+   "c": [
+    "36 in",
+    "12 in",
+    "18 in",
+    "24 in"
+   ],
+   "a": 3,
+   "ref": "IRC 2021 R905.1.2",
+   "why": "The ice barrier extends at least 24 in inside the exterior wall line; on roofs 8:12 or steeper it must also run at least 36 in up the slope."
+  },
+  {
+   "t": "gc",
+   "topic": "Estimating",
+   "q": "About how many modular brick are needed for 400 sq ft of wall with 3/8-in joints, before waste?",
+   "c": [
+    "2,700",
+    "3,000",
+    "4,500",
+    "2,250"
+   ],
+   "a": 0,
+   "ref": "BIA Technical Note 10",
+   "why": "Modular brick runs about 6.75 per sq ft: 400 x 6.75 = 2,700 brick."
+  },
+  {
+   "t": "gc",
+   "topic": "Estimating",
+   "q": "A roof has 2,000 sq ft of plan area and a 6:12 slope (slope factor 1.118). About how many squares of roofing does it need before waste?",
+   "c": [
+    "20.0",
+    "22.4",
+    "24.5",
+    "26.8"
+   ],
+   "a": 1,
+   "ref": "Roofing estimating practice",
+   "why": "Roof area = 2,000 x 1.118 = 2,236 sq ft, and one square is 100 sq ft, so about 22.4 squares."
+  },
+  {
+   "t": "law",
+   "topic": "Bonds & insurance",
+   "q": "Under the Miller Act, a supplier to a subcontractor must give the prime contractor written notice of its claim within how many days after its last delivery?",
+   "c": [
+    "30 days",
+    "60 days",
+    "90 days",
+    "120 days"
+   ],
+   "a": 2,
+   "ref": "40 U.S.C. 3133(b)(2)",
+   "why": "Second-tier claimants must give written notice to the prime within 90 days of their last labor or material."
+  },
+  {
+   "t": "law",
+   "topic": "Bonds & insurance",
+   "q": "What is the deadline to file a Miller Act payment bond lawsuit?",
+   "c": [
+    "2 years after final payment",
+    "90 days after last labor or material",
+    "6 months after project completion",
+    "1 year after last labor or material"
+   ],
+   "a": 3,
+   "ref": "40 U.S.C. 3133(b)(4)",
+   "why": "Suit must be filed no later than one year after the claimant last performed labor or supplied material, in federal district court."
+  },
+  {
+   "t": "law",
+   "topic": "Contracts & liens",
+   "q": "On a federal fixed-price construction contract, when may the contracting officer hold back retainage, and how much?",
+   "c": [
+    "Only if progress is unsatisfactory, up to 10 percent",
+    "Always, 10 percent",
+    "Only on the final payment, up to 20 percent",
+    "Always, 5 percent"
+   ],
+   "a": 0,
+   "ref": "FAR 52.232-5(e)",
+   "why": "FAR 52.232-5(e) requires full payment when progress is satisfactory; up to 10 percent may be retained only when it is not."
+  },
+  {
+   "t": "law",
+   "topic": "Contracts & liens",
+   "q": "Under the federal Changes clause, a contractor cannot recover costs of a constructive change incurred more than how many days before it gave written notice?",
+   "c": [
+    "14 days",
+    "20 days",
+    "30 days",
+    "7 days"
+   ],
+   "a": 1,
+   "ref": "FAR 52.243-4(d)",
+   "why": "Costs incurred more than 20 days before written notice are not recoverable (except for defective specifications); the 30-day rule is for asserting the adjustment."
+  },
+  {
+   "t": "law",
+   "topic": "Contracts & liens",
+   "q": "Which describes a Type I differing site condition?",
+   "c": [
+    "Unusually severe weather",
+    "Extra work ordered orally by the owner",
+    "Subsurface or hidden conditions that differ materially from those shown in the contract",
+    "Unknown unusual conditions that differ from those ordinarily encountered"
+   ],
+   "a": 2,
+   "ref": "FAR 52.236-2(a)",
+   "why": "Type I is a material difference from what the contract indicates; Type II is an unusual condition that differs from what is normally encountered."
+  },
+  {
+   "t": "law",
+   "topic": "Contracts & liens",
+   "q": "Which AIA document is the owner-contractor agreement for the cost of the work plus a fee with a guaranteed maximum price?",
+   "c": [
+    "A103",
+    "A201",
+    "A101",
+    "A102"
+   ],
+   "a": 3,
+   "ref": "AIA A102-2017",
+   "why": "A101 is stipulated sum, A102 is cost plus fee with a GMP, A103 is cost plus fee without a GMP, and A201 is the general conditions."
+  },
+  {
+   "t": "law",
+   "topic": "Contracts & liens",
+   "q": "Under AIA A201-2017, if the owner fails to pay within seven days after the payment due date, the contractor may stop work after giving how many additional days' written notice?",
+   "c": [
+    "7 days",
+    "10 days",
+    "30 days",
+    "3 days"
+   ],
+   "a": 0,
+   "ref": "AIA A201-2017 9.7",
+   "why": "Section 9.7 lets the contractor stop work on seven additional days' notice and recover reasonable shutdown, delay and start-up costs."
+  },
+  {
+   "t": "law",
+   "topic": "Contracts & liens",
+   "q": "A subcontractor is about to receive a progress check it has not yet been paid. Which lien waiver should it sign?",
+   "c": [
+    "Conditional waiver on final payment",
+    "Conditional waiver on progress payment",
+    "Unconditional waiver on progress payment",
+    "Unconditional waiver on final payment"
+   ],
+   "a": 1,
+   "ref": "Cal. Civ. Code 8132",
+   "why": "A conditional progress waiver takes effect only if the progress payment is actually received; unconditional waivers are for payments already received."
+  },
+  {
+   "t": "law",
+   "topic": "Labor law",
+   "q": "To be exempt from overtime under the FLSA white-collar exemptions, an employee must pass the duties test and be paid a salary of at least:",
+   "c": [
+    "$1,128 per week",
+    "$455 per week",
+    "$684 per week",
+    "$844 per week"
+   ],
+   "a": 2,
+   "ref": "29 CFR 541.600 (2026 DOL rule)",
+   "why": "The 2026 DOL rule rescinded the 2024 increases, leaving the threshold at $684 per week ($35,568 a year)."
+  },
+  {
+   "t": "law",
+   "topic": "Labor law",
+   "q": "An employer enrolled in E-Verify must create the E-Verify case for a new hire no later than:",
+   "c": [
+    "30 days after hire",
+    "Before the job offer is made",
+    "The employee's first day of work",
+    "The third business day after the employee starts work for pay"
+   ],
+   "a": 3,
+   "ref": "E-Verify User Manual 2.2",
+   "why": "Form I-9 is completed first, and the E-Verify case must be created by the third business day after the employee starts work for pay."
+  },
+  {
+   "t": "law",
+   "topic": "Payroll & tax",
+   "q": "When is Form 941 for January through March due?",
+   "c": [
+    "April 30",
+    "May 15",
+    "March 31",
+    "April 15"
+   ],
+   "a": 0,
+   "ref": "IRS Employment Tax Due Dates",
+   "why": "Form 941 is due the last day of the month after the quarter ends (April 30, July 31, October 31, January 31), with 10 extra days if all deposits were on time."
+  },
+  {
+   "t": "law",
+   "topic": "Payroll & tax",
+   "q": "A subcontractor refuses to provide its taxpayer identification number on Form W-9. At what rate must the payer apply backup withholding?",
+   "c": [
+    "22 percent",
+    "24 percent",
+    "28 percent",
+    "10 percent"
+   ],
+   "a": 1,
+   "ref": "IRS Backup Withholding",
+   "why": "The current backup withholding rate is 24 percent."
+  },
+  {
+   "t": "law",
+   "topic": "Financial management",
+   "q": "A contractor has total liabilities of $450,000 and owner's equity of $300,000. What is its debt-to-equity ratio?",
+   "c": [
+    "0.60",
+    "0.67",
+    "1.50",
+    "2.50"
+   ],
+   "a": 2,
+   "ref": "Financial ratio fundamentals",
+   "why": "Debt-to-equity = total liabilities / owner's equity = $450,000 / $300,000 = 1.5."
+  },
+  {
+   "t": "law",
+   "topic": "Financial management",
+   "q": "A $1,000,000 contract has $600,000 of costs to date and $800,000 of total estimated costs. Using cost-to-cost percentage of completion, what is the earned revenue?",
+   "c": [
+    "$800,000",
+    "$1,000,000",
+    "$600,000",
+    "$750,000"
+   ],
+   "a": 3,
+   "ref": "Percentage-of-completion (cost-to-cost)",
+   "why": "Percent complete = $600,000 / $800,000 = 75 percent, and 75 percent of $1,000,000 = $750,000 earned."
+  },
+  {
+   "t": "law",
+   "topic": "Safety recordkeeping",
+   "q": "A worker dies from injuries 45 days after a work-related incident. Must the employer report the death to OSHA?",
+   "c": [
+    "No, a fatality is reportable only if it occurs within 30 days of the incident",
+    "No, fatalities are only recorded on the 300 log after 7 days",
+    "Yes, within 8 hours of learning of it",
+    "Yes, within 24 hours"
+   ],
+   "a": 0,
+   "ref": "29 CFR 1904.39(b)(6)",
+   "why": "Fatalities must be reported within 8 hours only if the death occurs within 30 days of the work-related incident; the case is still recorded on the 300 log."
+  }
+ ]
 }

@@ -1331,6 +1331,672 @@
     "Residential Builders Commission",
     "exam waiver"
    ]
+  },
+  {
+   "id": "S5B-75",
+   "topic": "State code adoption",
+   "trade": "elec",
+   "state": "South Dakota",
+   "source": "ARSD 20:44:14:01(11) (definition of National Electrical Code), https://sdlegislature.gov/api/Rules/20:44:14:01.html",
+   "fact": "South Dakota's State Electrical Commission rules define the National Electrical Code as the 2023 edition, including tentative interim amendments 23-1 through 23-15, with a few state exceptions. This definition took effect November 12, 2024.",
+   "status": "verified",
+   "note": "Electrical exams moved to the 2023 NEC on December 2, 2024 (see STAT-368).",
+   "keywords": [
+    "South Dakota NEC",
+    "2023 NEC",
+    "State Electrical Commission",
+    "ARSD 20:44:14:01",
+    "November 12 2024",
+    "code adoption"
+   ]
+  },
+  {
+   "id": "S5B-76",
+   "topic": "State code adoption",
+   "trade": "plumb",
+   "state": "South Dakota",
+   "source": "SDCL 36-25-15 and 36-25-16, https://sdlegislature.gov/api/Statutes/36-25-15.html ; SB 25 (2025), SL 2025 ch 162",
+   "fact": "South Dakota law (SDCL 36-25-15) requires all plumbing to be installed in substantial conformity with the 2024 Uniform Plumbing Code, plus amendments adopted by the State Plumbing Commission. SB 25 (2025) moved the state from the 2015 UPC to the 2024 UPC. Cities may not substitute any other plumbing code for the UPC.",
+   "status": "verified",
+   "note": "The ban on cities using another code is in the SB 25 amendment to SDCL 36-25-16. South Dakota session laws normally take effect July 1, so July 1, 2025 is likely but was not confirmed.",
+   "keywords": [
+    "South Dakota plumbing code",
+    "UPC 2024",
+    "Uniform Plumbing Code",
+    "SDCL 36-25-15",
+    "SB 25",
+    "State Plumbing Commission"
+   ]
+  },
+  {
+   "id": "S5B-77",
+   "topic": "State code adoption",
+   "trade": "hvac",
+   "state": "South Dakota",
+   "source": "SDCL 11-10-5, https://sdlegislature.gov/api/Statutes/11-10-5.html",
+   "fact": "South Dakota has no statewide mechanical code or HVAC license. State law (SDCL 11-10-5) only says that a local non-residential building ordinance must follow the 2024 International Building Code, so mechanical codes and HVAC licensing are left to cities and counties.",
+   "status": "verified",
+   "note": "SDCL 11-10-5 was most recently amended by SL 2026 ch 59. No statewide HVAC license matches existing fact STAT-365.",
+   "keywords": [
+    "South Dakota HVAC",
+    "no state HVAC license",
+    "mechanical code",
+    "local",
+    "SDCL 11-10-5",
+    "IBC 2024"
+   ]
+  },
+  {
+   "id": "S5B-78",
+   "topic": "State code adoption",
+   "trade": "elec",
+   "state": "Tennessee",
+   "source": "Tennessee State Fire Marshal's Office, Currently Adopted Codes, https://www.tn.gov/commerce/fire/codes-enforcement/history.html ; Tenn. Comp. R. & Regs. 0780-02-01-.02",
+   "fact": "Tennessee's statewide electrical code is still the 2017 National Electrical Code (with state exceptions). It was adopted by State Fire Marshal rule 0780-02-01-.02 in 2018 and applies where the state does electrical inspections.",
+   "status": "verified",
+   "note": "Local governments with their own inspection programs may adopt other editions. The CE contractor exam also uses the 2017 NEC (STAT-390).",
+   "keywords": [
+    "Tennessee NEC",
+    "2017 NEC",
+    "State Fire Marshal",
+    "0780-02-01",
+    "electrical code",
+    "code adoption"
+   ]
+  },
+  {
+   "id": "S5B-79",
+   "topic": "State code adoption",
+   "trade": "plumb",
+   "state": "Tennessee",
+   "source": "Tennessee State Fire Marshal's Office, Currently Adopted Codes, https://www.tn.gov/commerce/fire/codes-enforcement/history.html",
+   "fact": "The Tennessee State Fire Marshal's Office adopts the 2021 International Plumbing Code as the state minimum plumbing code, effective April 17, 2025.",
+   "status": "verified",
+   "note": "The 2021 IBC took effect the same day. The state residential code is still the 2018 IRC with amendments. Local jurisdictions may adopt their own editions.",
+   "keywords": [
+    "Tennessee plumbing code",
+    "IPC 2021",
+    "International Plumbing Code",
+    "April 17 2025",
+    "State Fire Marshal",
+    "code adoption"
+   ]
+  },
+  {
+   "id": "S5B-80",
+   "topic": "State code adoption",
+   "trade": "hvac",
+   "state": "Tennessee",
+   "source": "Tennessee State Fire Marshal's Office, Currently Adopted Codes, https://www.tn.gov/commerce/fire/codes-enforcement/history.html",
+   "fact": "Tennessee's State Fire Marshal's Office adopts the 2021 International Mechanical Code and 2021 International Fuel Gas Code as state minimum codes, effective April 17, 2025.",
+   "status": "verified",
+   "note": "Mechanical trade exams reference the 2021 IMC and IFGC (see STAT-389).",
+   "keywords": [
+    "Tennessee mechanical code",
+    "IMC 2021",
+    "IFGC 2021",
+    "April 17 2025",
+    "State Fire Marshal",
+    "HVAC code"
+   ]
+  },
+  {
+   "id": "S5B-81",
+   "topic": "State code adoption",
+   "trade": "elec",
+   "state": "Texas",
+   "source": "TDLR news, Commission Adopts Rules (16 TAC 73.100), Sept. 1, 2026, https://www.tdlr.texas.gov/news/rulemaking/2026/09/01/commission-adopts-rules-12/ ; TDLR Electricians Compliance Guide, https://www.tdlr.texas.gov/ELECTRICIANS/compliance-guide.htm",
+   "fact": "TDLR adopted the 2026 National Electrical Code as the Texas state electrical code (16 TAC 73.100), effective September 1, 2026, with a limited exception to the GFCI requirements for certain outdoor outlets. Before that, Texas used the 2023 NEC, effective September 1, 2023.",
+   "status": "verified",
+   "note": "TDLR's compliance guide still showed the 2023 NEC when checked. Check the TDLR exam bulletin for when exams switch editions.",
+   "keywords": [
+    "Texas NEC",
+    "2026 NEC",
+    "TDLR",
+    "16 TAC 73.100",
+    "September 1 2026",
+    "state electrical code"
+   ]
+  },
+  {
+   "id": "S5B-82",
+   "topic": "State code adoption",
+   "trade": "hvac",
+   "state": "Texas",
+   "source": "TDLR news, Commission Adopts Rules (16 TAC Chapter 75), Aug. 31, 2026, https://www.tdlr.texas.gov/news/rulemaking/2026/08/31/commission-adopts-rules-11/",
+   "fact": "Texas air conditioning and refrigeration contractors must follow the codes adopted in TDLR's ACR rules (16 TAC 75.110). Effective September 1, 2026, TDLR updated them from the 2021 to the 2024 editions of the International Residential Code, International Mechanical Code, International Fuel Gas Code and Uniform Mechanical Code.",
+   "status": "verified",
+   "note": "The same rule package removed the outdated certified technician legacy provisions.",
+   "keywords": [
+    "Texas mechanical code",
+    "TDLR ACR",
+    "IMC 2024",
+    "UMC 2024",
+    "16 TAC 75.110",
+    "September 1 2026"
+   ]
+  },
+  {
+   "id": "S5B-83",
+   "topic": "State code adoption",
+   "trade": "plumb",
+   "state": "Texas",
+   "source": "22 Tex. Admin. Code 367.2, Code Requirements (via Cornell LII), https://www.law.cornell.edu/regulations/texas/22-Tex-Admin-Code-SS-367-2 ; Texas Register, Aug. 14, 2026, TSBPE proposed rule",
+   "fact": "The Texas State Board of Plumbing Examiners adopts both the Uniform Plumbing Code and the International Plumbing Code (2018 editions, with the IPC's incorporated 2018 IFGC and IRC) in 22 TAC 367.2. In unincorporated areas or other places with no local plumbing code, licensed plumbing work must follow one of these state-adopted codes.",
+   "status": "verified",
+   "note": "In July 2026 TSBPE proposed moving to the 2021 UPC and IPC, with the earliest possible adoption date September 13, 2026. Check whether the update has taken effect.",
+   "keywords": [
+    "Texas plumbing code",
+    "TSBPE",
+    "UPC",
+    "IPC",
+    "22 TAC 367.2",
+    "unincorporated area"
+   ]
+  },
+  {
+   "id": "S5B-84",
+   "topic": "State code adoption",
+   "trade": "elec",
+   "state": "Utah",
+   "source": "Utah Code 15A-2-103 (version effective July 1, 2026), https://le.utah.gov/xcode/Title15A/Chapter2/C15A-2-S103_2026050620260701.pdf",
+   "fact": "Utah's State Construction Code (Utah Code 15A-2-103) adopts the 2023 National Electrical Code. The same section adopts the 2024 IBC, IPC, IMC, IFGC and IECC, but the residential code stays at the 2021 IRC.",
+   "status": "verified",
+   "note": "The version that took effect July 1, 2026 and the version set for January 1, 2027 both list the 2023 NEC. The date the 2023 NEC first took effect in Utah was not confirmed.",
+   "keywords": [
+    "Utah NEC",
+    "2023 NEC",
+    "State Construction Code",
+    "15A-2-103",
+    "code adoption",
+    "electrical code"
+   ]
+  },
+  {
+   "id": "S5B-85",
+   "topic": "State code adoption",
+   "trade": "plumb",
+   "state": "Utah",
+   "source": "Utah Code 15A-2-103 (version effective July 1, 2026), https://le.utah.gov/xcode/Title15A/Chapter2/C15A-2-S103_2026050620260701.pdf",
+   "fact": "Utah uses the International Plumbing Code statewide. Utah Code 15A-2-103 (version effective July 1, 2026) adopts the 2024 IPC as part of the State Construction Code.",
+   "status": "verified",
+   "note": "Homes built under the 2021 IRC follow its plumbing chapters as amended by Utah.",
+   "keywords": [
+    "Utah plumbing code",
+    "IPC 2024",
+    "International Plumbing Code",
+    "15A-2-103",
+    "State Construction Code",
+    "code adoption"
+   ]
+  },
+  {
+   "id": "S5B-86",
+   "topic": "State code adoption",
+   "trade": "hvac",
+   "state": "Utah",
+   "source": "Utah Code 15A-2-103 (version effective July 1, 2026), https://le.utah.gov/xcode/Title15A/Chapter2/C15A-2-S103_2026050620260701.pdf",
+   "fact": "Utah's State Construction Code adopts the 2024 International Mechanical Code and the 2024 International Fuel Gas Code (Utah Code 15A-2-103, version effective July 1, 2026).",
+   "status": "verified",
+   "note": "",
+   "keywords": [
+    "Utah mechanical code",
+    "IMC 2024",
+    "IFGC 2024",
+    "15A-2-103",
+    "HVAC code",
+    "State Construction Code"
+   ]
+  },
+  {
+   "id": "S5B-87",
+   "topic": "State licensing",
+   "trade": "elec",
+   "state": "Utah",
+   "source": "Utah Code 58-55-302(3) (version effective May 7, 2025), https://le.utah.gov/xcode/Title58/Chapter55/C58-55-S302_2025050720250507.html",
+   "fact": "A Utah journeyman electrician needs at least four years of full-time training as a licensed apprentice under an approved plan, or at least eight years of approved full-time experience. A master electrician needs four years as a journeyman, an electrical engineering degree plus one year as a licensed apprentice, or an associate of applied science degree plus two years as a journeyman. A residential master needs two years as a residential journeyman.",
+   "status": "verified",
+   "note": "A residential journeyman needs two years of approved training plus four years of supervised practical experience. Expedited licensure under DOPL rules is also possible.",
+   "keywords": [
+    "Utah journeyman electrician",
+    "master electrician",
+    "four years",
+    "apprentice",
+    "residential electrician",
+    "DOPL"
+   ]
+  },
+  {
+   "id": "S5B-88",
+   "topic": "State licensing",
+   "trade": "plumb",
+   "state": "Utah",
+   "source": "Utah Code 58-55-302(3) (version effective May 7, 2025), https://le.utah.gov/xcode/Title58/Chapter55/C58-55-S302_2025050720250507.html",
+   "fact": "A Utah journeyman plumber needs at least four years of full-time training as a licensed apprentice plumber under an approved plan, or eight years of approved full-time experience. A master plumber must have been a licensed journeyman for at least two years with two years of supervisory experience, or have an approved associate degree plus one year of supervisory experience as a journeyman.",
+   "status": "verified",
+   "note": "",
+   "keywords": [
+    "Utah journeyman plumber",
+    "master plumber",
+    "four years",
+    "apprentice plumber",
+    "supervisory experience",
+    "DOPL"
+   ]
+  },
+  {
+   "id": "S5B-89",
+   "topic": "State licensing",
+   "trade": "hvac",
+   "state": "Utah",
+   "source": "Utah Admin. Code R156-55a-301 (via Cornell LII), https://www.law.cornell.edu/regulations/utah/Utah-Admin-Code-R156-55a-301",
+   "fact": "Utah licenses HVAC work at the contractor level under specialty classification S350 (HVAC Contractor), which covers complete warm-air heating, air conditioning and ventilating systems and refrigeration equipment. An S350 contractor may not do electrical, plumbing or natural gas work itself; it must hire or subcontract a licensed E200/E201 electrical, P200/P201 plumbing or RMGA-certified gas contractor.",
+   "status": "verified",
+   "note": "The old S351, S352 and S353 classes were converted into S350 effective July 22, 2019. Utah has no separate individual HVAC technician license (not confirmed on a DOPL page).",
+   "keywords": [
+    "Utah HVAC license",
+    "S350",
+    "HVAC contractor",
+    "DOPL",
+    "subcontract",
+    "classification"
+   ]
+  },
+  {
+   "id": "S5B-90",
+   "topic": "State code adoption",
+   "trade": "elec",
+   "state": "Vermont",
+   "source": "Vermont Division of Fire Safety, Codes and Standards, https://firesafety.vermont.gov/node/149 ; Electricians page, https://firesafety.vermont.gov/node/141",
+   "fact": "Vermont's electrical code is the 2023 National Electrical Code (NFPA 70) together with the 2025 Vermont Electrical Safety Rules, which took effect November 5, 2025. Vermont electrical license exams now test on the 2023 NEC.",
+   "status": "verified",
+   "note": "The 2025 rules replaced the 2020 Vermont Electrical Safety Rules.",
+   "keywords": [
+    "Vermont NEC",
+    "2023 NEC",
+    "Vermont Electrical Safety Rules",
+    "Division of Fire Safety",
+    "November 5 2025",
+    "code adoption"
+   ]
+  },
+  {
+   "id": "S5B-91",
+   "topic": "State code adoption",
+   "trade": "plumb",
+   "state": "Vermont",
+   "source": "Vermont Division of Fire Safety, Codes and Standards, https://firesafety.vermont.gov/node/149 ; Vermont SOS rule 25P024, https://secure.vermont.gov/SOS/rules/display.php?r=1016",
+   "fact": "Vermont's plumbing code is the 2024 International Plumbing Code with the 2025 Vermont Plumbing Rules, adopted by the Plumbers' Examination Board (rule 25P024).",
+   "status": "verified",
+   "note": "The exact effective date of the 2025 Vermont Plumbing Rules was not shown on the pages checked. The previous rules were based on the 2021 IPC.",
+   "keywords": [
+    "Vermont plumbing code",
+    "IPC 2024",
+    "Vermont Plumbing Rules",
+    "Plumbers' Examination Board",
+    "Division of Fire Safety",
+    "code adoption"
+   ]
+  },
+  {
+   "id": "S5B-92",
+   "topic": "State licensing",
+   "trade": "hvac",
+   "state": "Vermont",
+   "source": "Vermont Division of Fire Safety, Trade Licensing and Certifications, https://firesafety.vermont.gov/node/80",
+   "fact": "Vermont has no general HVAC license. Instead, the Division of Fire Safety runs separate Gas Certification and Oil Burner Installer programs, and its license list includes classes such as A1 Automatic Gas/Oil Heating and P2 Heating System Specialist.",
+   "status": "verified",
+   "note": "The Codes and Standards page does not list a separate state mechanical code.",
+   "keywords": [
+    "Vermont HVAC",
+    "gas certification",
+    "oil burner installer",
+    "heating system specialist",
+    "Division of Fire Safety",
+    "no HVAC license"
+   ]
+  },
+  {
+   "id": "S5B-93",
+   "topic": "State code adoption",
+   "trade": "elec",
+   "state": "Virginia",
+   "source": "Virginia DHCD, Building and Fire Codes, https://dhcd.virginia.gov/codes",
+   "fact": "Virginia's Uniform Statewide Building Code uses the 2020 National Electrical Code. The 2021 Virginia codes, including the 2020 NEC, took effect January 18, 2024.",
+   "status": "verified",
+   "note": "Arlington County's code page (https://www.arlingtonva.us/Government/Programs/Building/Codes-Ordinances/Building/Standards) says permit applicants could choose the 2018 or 2021 codes until January 17, 2025.",
+   "keywords": [
+    "Virginia NEC",
+    "2020 NEC",
+    "USBC",
+    "Uniform Statewide Building Code",
+    "January 18 2024",
+    "DHCD"
+   ]
+  },
+  {
+   "id": "S5B-94",
+   "topic": "State code adoption",
+   "trade": "plumb",
+   "state": "Virginia",
+   "source": "Virginia DHCD, Building and Fire Codes, https://dhcd.virginia.gov/codes ; Arlington County VUSBC Codes & Standards",
+   "fact": "Virginia uses the International Plumbing Code statewide. The 2021 Virginia Plumbing Code, based on the 2021 IPC and part of the Uniform Statewide Building Code, took effect January 18, 2024.",
+   "status": "verified",
+   "note": "There was a one-year option to use the 2018 codes until January 17, 2025. No 2024-cycle effective date was posted when checked.",
+   "keywords": [
+    "Virginia plumbing code",
+    "IPC 2021",
+    "Virginia Plumbing Code",
+    "USBC",
+    "January 18 2024",
+    "code adoption"
+   ]
+  },
+  {
+   "id": "S5B-95",
+   "topic": "State code adoption",
+   "trade": "hvac",
+   "state": "Virginia",
+   "source": "Virginia DHCD, Building and Fire Codes, https://dhcd.virginia.gov/codes ; Arlington County VUSBC Codes & Standards",
+   "fact": "Virginia's 2021 Mechanical Code and 2021 Fuel Gas Code, based on the 2021 IMC and IFGC, have been part of the Uniform Statewide Building Code since January 18, 2024.",
+   "status": "verified",
+   "note": "",
+   "keywords": [
+    "Virginia mechanical code",
+    "IMC 2021",
+    "IFGC 2021",
+    "USBC",
+    "January 18 2024",
+    "HVAC code"
+   ]
+  },
+  {
+   "id": "S5B-96",
+   "topic": "State licensing",
+   "trade": "elec",
+   "state": "Virginia",
+   "source": "18VAC50-30-39 (Board for Contractors tradesman exam qualifications), https://law.lis.virginia.gov/admincode/title18/agency50/chapter30/section39/",
+   "fact": "To take a Virginia journeyman exam for electrician, plumber or HVAC tradesman, an applicant needs matching education and experience: a related engineering bachelor's degree plus 1 year, an associate degree or 2-year certificate plus 2 years, 240 hours of vocational training plus 4 years, 160 hours plus 5 years, 80 hours plus 6 years, 40 hours plus 7 years, or 8 years with no training.",
+   "status": "verified",
+   "note": "Gas fitter journeyman options use smaller training-hour figures (e.g., 120 hours plus 4 years).",
+   "keywords": [
+    "Virginia journeyman",
+    "tradesman license",
+    "240 hours",
+    "four years",
+    "Board for Contractors",
+    "18VAC50-30-39"
+   ]
+  },
+  {
+   "id": "S5B-97",
+   "topic": "State licensing",
+   "trade": "hvac",
+   "state": "Virginia",
+   "source": "18VAC50-30-39(D), https://law.lis.virginia.gov/admincode/title18/agency50/chapter30/section39/",
+   "fact": "To take a Virginia master tradesman exam (such as master HVAC, plumber or electrician), an applicant needs at least one year holding a journeyman license in that trade, three years holding a residential HVAC or residential plumber license in that trade, or nine years of practical experience in the trade.",
+   "status": "verified",
+   "note": "",
+   "keywords": [
+    "Virginia master tradesman",
+    "master HVAC",
+    "one year journeyman",
+    "nine years",
+    "Board for Contractors",
+    "18VAC50-30-39"
+   ]
+  },
+  {
+   "id": "S5B-98",
+   "topic": "State code adoption",
+   "trade": "elec",
+   "state": "Washington",
+   "source": "WA L&I CR-103 (AO23-09), https://www.lni.wa.gov/rulemaking-activity/AO23-09/2309CR103.pdf ; WSR 25-23-069, https://lawfilesext.leg.wa.gov/law/wsrpdf/2025/23/25-23-069.pdf",
+   "fact": "Washington's electrical rules (chapter 296-46B WAC) adopted the 2023 National Electrical Code effective April 1, 2024. L&I has since adopted the 2026 NEC with a delayed effective date of December 31, 2026.",
+   "status": "verified",
+   "note": "WSR 25-23-069 was filed November 18, 2025; the 2026 NEC part takes effect December 31, 2026.",
+   "keywords": [
+    "Washington NEC",
+    "2023 NEC",
+    "2026 NEC",
+    "WAC 296-46B",
+    "L&I",
+    "December 31 2026"
+   ]
+  },
+  {
+   "id": "S5B-99",
+   "topic": "State code adoption",
+   "trade": "plumb",
+   "state": "Washington",
+   "source": "WAC 51-56-003, https://app.leg.wa.gov/wac/default.aspx?cite=51-56-003 ; WA State Building Code Council, https://sbcc.wa.gov/",
+   "fact": "Washington's state plumbing code is the Uniform Plumbing Code. WAC 51-56-003 adopts the 2021 UPC (with Appendices A, B, I and M), effective March 15, 2024. The State Building Code Council says the 2024 codes will take effect May 3, 2027.",
+   "status": "verified",
+   "note": "SBCC targeted final adoption of the 2024 IMC, IFC and UPC for October 16, 2026.",
+   "keywords": [
+    "Washington plumbing code",
+    "UPC 2021",
+    "Uniform Plumbing Code",
+    "WAC 51-56",
+    "March 15 2024",
+    "State Building Code Council"
+   ]
+  },
+  {
+   "id": "S5B-100",
+   "topic": "State code adoption",
+   "trade": "hvac",
+   "state": "Washington",
+   "source": "WAC 51-52-003, https://app.leg.wa.gov/wac/default.aspx?cite=51-52-003 ; WA State Building Code Council, https://sbcc.wa.gov/",
+   "fact": "Washington's state mechanical code (WAC 51-52) adopts the 2021 International Mechanical Code, with the current version effective March 2024. The 2024 code editions are scheduled to take effect May 3, 2027.",
+   "status": "verified",
+   "note": "The rule history shows amendments effective March 15 and March 16, 2024.",
+   "keywords": [
+    "Washington mechanical code",
+    "IMC 2021",
+    "WAC 51-52",
+    "State Building Code Council",
+    "May 3 2027",
+    "HVAC code"
+   ]
+  },
+  {
+   "id": "S5B-101",
+   "topic": "State licensing",
+   "trade": "hvac",
+   "state": "Washington",
+   "source": "WAC 296-46B-945 (via Cornell LII), https://www.law.cornell.edu/regulations/washington/WAC-296-46B-945",
+   "fact": "Washington has no separate state HVAC mechanical license, but electrical work on HVAC/refrigeration systems needs an L&I specialty electrician certificate. The 06A HVAC/refrigeration certificate requires 4,000 hours of experience. The 06B HVAC/refrigeration restricted certificate allows the exam after 1,000 hours and requires 2,000 hours for certification.",
+   "status": "verified",
+   "note": "Up to 2,000 hours credited toward 06B may count toward 06A, but they do not count toward the general electrician exam. That Washington has no separate HVAC mechanical license was not confirmed on an L&I page.",
+   "keywords": [
+    "Washington HVAC",
+    "06A",
+    "06B",
+    "specialty electrician",
+    "4,000 hours",
+    "L&I"
+   ]
+  },
+  {
+   "id": "S5B-102",
+   "topic": "State exams",
+   "trade": "elec",
+   "state": "West Virginia",
+   "source": "WV State Fire Marshal, Electrical Licensing, https://firemarshal.wv.gov/Divisions/Fire Services/Pages/Electrical-Licensing.aspx",
+   "fact": "West Virginia electricians are licensed by the State Fire Marshal. A journeyman needs at least 1 year (2,000 hours) of hands-on electrical work, a U.S. DOL apprenticeship, or a 1,080-hour vocational course. A master needs 2 years (4,000 hours) of hands-on work, and vocational training does not count. All electrical exams are open book and based only on the 2020 NEC.",
+   "status": "verified",
+   "note": "Specialty licenses cover electric signs, HVAC, low voltage and single-family dwellings.",
+   "keywords": [
+    "West Virginia electrician",
+    "journeyman",
+    "master electrician",
+    "2,000 hours",
+    "2020 NEC",
+    "State Fire Marshal"
+   ]
+  },
+  {
+   "id": "S5B-103",
+   "topic": "State code adoption",
+   "trade": "elec",
+   "state": "West Virginia",
+   "source": "ICC-NTA, West Virginia State Fire Commission Has Adopted New Codes (May 16, 2022), https://www.icc-nta.org/code-update/west-virginia-state-fire-commission-adopted-new-codes/ ; W. Va. Code R. 87-4 (series effective 8/1/2022)",
+   "fact": "West Virginia's State Building Code (87 CSR 4), last updated effective August 1, 2022, adopts the 2020 NEC along with the 2018 IBC, IRC, IPC and IMC.",
+   "status": "unverified",
+   "note": "Not confirmed on an official state code page. Some 2026 local ordinances (e.g., Buckhannon) cite a 2024-edition update of 87 CSR 4 with the 2023 NEC, but the state effective date could not be confirmed. Electrical exams still use the 2020 NEC.",
+   "keywords": [
+    "West Virginia NEC",
+    "2020 NEC",
+    "State Building Code",
+    "87 CSR 4",
+    "Fire Commission",
+    "code adoption"
+   ]
+  },
+  {
+   "id": "S5B-104",
+   "topic": "State code adoption",
+   "trade": "plumb",
+   "state": "West Virginia",
+   "source": "ICC-NTA, West Virginia State Fire Commission Has Adopted New Codes (May 16, 2022), https://www.icc-nta.org/code-update/west-virginia-state-fire-commission-adopted-new-codes/",
+   "fact": "West Virginia's State Building Code (87 CSR 4) adopted the 2018 International Plumbing Code and 2018 International Mechanical Code, effective August 1, 2022.",
+   "status": "unverified",
+   "note": "Not confirmed on an official state code page. A 2024-edition update (2024 IPC and IMC) appears in some 2026 local ordinances, but the state effective date was not confirmed. The plumbing contractor exam references the IPC (STAT-462).",
+   "keywords": [
+    "West Virginia plumbing code",
+    "IPC",
+    "State Building Code",
+    "87 CSR 4",
+    "IMC",
+    "code adoption"
+   ]
+  },
+  {
+   "id": "S5B-105",
+   "topic": "State licensing",
+   "trade": "hvac",
+   "state": "West Virginia",
+   "source": "WV Division of Labor, HVAC Technician Certification, https://labor.wv.gov/licensing/hvac-technician-certification",
+   "fact": "Since January 1, 2016, anyone who performs or offers to perform HVAC work in West Virginia needs a certification from the Division of Labor. An HVAC Technician needs at least 2,000 hours of HVAC work, training and experience and may work on residential and nonresidential systems. An HVAC Residential Technician works on residential systems, and a Technician in Training must be directly supervised by an HVAC Technician.",
+   "status": "verified",
+   "note": "Some work is exempt under W. Va. Code 21-16-3(d).",
+   "keywords": [
+    "West Virginia HVAC license",
+    "HVAC technician",
+    "2,000 hours",
+    "Division of Labor",
+    "technician in training",
+    "21-16"
+   ]
+  },
+  {
+   "id": "S5B-106",
+   "topic": "State code adoption",
+   "trade": "elec",
+   "state": "Wisconsin",
+   "source": "Wisconsin DSPS news release, New Electrical Code (Sept. 1, 2026), https://dsps.wi.gov/Documents/NewsMedia/20260901NewElectricalCodeNewsRelease.pdf",
+   "fact": "Wisconsin adopted the 2023 National Electrical Code, with state changes, effective September 1, 2026. Before that, Wisconsin's electrical code was based on the 2017 NEC. The new code requires whole-home surge protection and permits and inspections for services on vacant land.",
+   "status": "verified",
+   "note": "DSPS's June 2026 release says trade exam questions from DSPS and Pearson VUE reflect the changes starting October 1, 2026.",
+   "keywords": [
+    "Wisconsin NEC",
+    "2023 NEC",
+    "DSPS",
+    "September 1 2026",
+    "surge protection",
+    "electrical code"
+   ]
+  },
+  {
+   "id": "S5B-107",
+   "topic": "State code adoption",
+   "trade": "plumb",
+   "state": "Wisconsin",
+   "source": "Wisconsin DSPS, Plumbing program, https://dsps.wi.gov/Pages/Programs/Plumbing/Default.aspx ; DSPS news release (June 1, 2026), https://dsps.wi.gov/Documents/NewsMedia/20260601Electrical_and_PlumbingCodeUpdatesNewsRelease.pdf",
+   "fact": "Wisconsin writes its own plumbing code as part of the Wisconsin Administrative Code (chapters SPS 381-387, with Chapter 145 of the statutes). An interim update to fix conflicts with other rules and national standards took effect September 1, 2026.",
+   "status": "verified",
+   "note": "Plans submitted for review after September 1, 2026 must meet the updated code.",
+   "keywords": [
+    "Wisconsin plumbing code",
+    "SPS 382",
+    "state plumbing code",
+    "DSPS",
+    "Chapter 145",
+    "September 1 2026"
+   ]
+  },
+  {
+   "id": "S5B-108",
+   "topic": "State licensing",
+   "trade": "hvac",
+   "state": "Wisconsin",
+   "source": "Wisconsin DSPS, HVAC Qualifier Certification application (Form 3122, SPS 305.71), https://dsps.wi.gov/Credentialing/Trades/fm3122.pdf",
+   "fact": "Wisconsin's HVAC Qualifier certification (SPS 305.71) requires 4 years (at least 1,000 hours per year) of supervising or doing HVAC design, installation or service, 4 years of approved HVAC schooling, or a mix of both, plus a DSPS exam. A business that uses a certified HVAC qualifier counts as a certified HVAC business.",
+   "status": "verified",
+   "note": "Under Wis. Stat. 101.178(3)(c), such a business may not need a separate local HVAC license.",
+   "keywords": [
+    "Wisconsin HVAC qualifier",
+    "HVAC license",
+    "1,000 hours per year",
+    "four years",
+    "DSPS",
+    "SPS 305.71"
+   ]
+  },
+  {
+   "id": "S5B-109",
+   "topic": "State code adoption",
+   "trade": "elec",
+   "state": "Wyoming",
+   "source": "Wyoming State Fire Marshal, Electrical Safety: Rules and Statutes, https://wsfm.wyo.gov/electrical-safety/rules-statutes-and-jurisdictions",
+   "fact": "The Wyoming State Fire Marshal's electrical safety page lists the 2026 National Electrical Code as the electrical code that applies in Wyoming. Before that, Wyoming used the 2023 NEC, effective July 1, 2023.",
+   "status": "unverified",
+   "note": "The official page lists the 2026 NEC but gives no effective date. The July 1, 2023 date for the 2023 NEC is from IAEI (https://www.iaei.org/wyoming-electrical-ceus). Check the current exam edition with the State Fire Marshal or PSI.",
+   "keywords": [
+    "Wyoming NEC",
+    "2026 NEC",
+    "State Fire Marshal",
+    "electrical code",
+    "code adoption",
+    "electrical safety"
+   ]
+  },
+  {
+   "id": "S5B-110",
+   "topic": "State code adoption",
+   "trade": "hvac",
+   "state": "Wyoming",
+   "source": "Wyoming State Fire Marshal, Rules and Statutes, https://wsfm.wyo.gov/electrical-safety/rules-statutes-and-jurisdictions",
+   "fact": "On June 28, 2024, Wyoming adopted the 2024 International Codes. The state's adopted list includes the 2024 International Mechanical Code and 2024 International Fuel Gas Code, along with the 2024 IBC, IFC and IEBC.",
+   "status": "verified",
+   "note": "Wyoming has no statewide HVAC license; mechanical contractors are licensed locally (see STAT-476).",
+   "keywords": [
+    "Wyoming mechanical code",
+    "IMC 2024",
+    "IFGC 2024",
+    "State Fire Marshal",
+    "June 28 2024",
+    "HVAC code"
+   ]
+  },
+  {
+   "id": "S5B-111",
+   "topic": "State code adoption",
+   "trade": "plumb",
+   "state": "Wyoming",
+   "source": "Wyoming State Fire Marshal, Rules and Statutes, https://wsfm.wyo.gov/electrical-safety/rules-statutes-and-jurisdictions",
+   "fact": "Wyoming's state-adopted code list (2024 IFC, IBC, IFGC, IMC, IEBC and the NEC) includes no plumbing code. Plumbing codes and plumber licensing in Wyoming are handled by cities and counties.",
+   "status": "verified",
+   "note": "That plumbing licensing is local only matches existing fact STAT-476.",
+   "keywords": [
+    "Wyoming plumbing",
+    "no state plumbing code",
+    "local license",
+    "plumber",
+    "State Fire Marshal",
+    "code adoption"
+   ]
   }
  ],
  "questions": [
@@ -1767,6 +2433,286 @@
    "a": 1,
    "ref": "SC LLR Residential HVAC License page",
    "why": "Residential HVAC work over $500 needs the license. Commercial HVAC work over $10,000 falls under the Contractor's Licensing Board."
+  },
+  {
+   "t": "plumb",
+   "topic": "State code adoption",
+   "q": "Under SDCL 36-25-15, plumbing in South Dakota must substantially conform to which code?",
+   "c": [
+    "2015 Uniform Plumbing Code",
+    "2021 International Plumbing Code",
+    "2024 Uniform Plumbing Code",
+    "2024 International Plumbing Code"
+   ],
+   "a": 2,
+   "ref": "SDCL 36-25-15; SB 25 (2025)",
+   "why": "SB 25 (2025) moved South Dakota from the 2015 UPC to the 2024 UPC, and cities may not substitute another plumbing code."
+  },
+  {
+   "t": "elec",
+   "topic": "State code adoption",
+   "q": "Which NEC edition is Tennessee's statewide electrical code under State Fire Marshal rule 0780-02-01-.02?",
+   "c": [
+    "2014 NEC",
+    "2017 NEC",
+    "2020 NEC",
+    "2023 NEC"
+   ],
+   "a": 1,
+   "ref": "TN SFMO Currently Adopted Codes",
+   "why": "Tennessee still uses the 2017 NEC (adopted in 2018). Its plumbing, mechanical and fuel gas codes moved to 2021 editions in April 2025."
+  },
+  {
+   "t": "plumb",
+   "topic": "State code adoption",
+   "q": "Which plumbing code edition did Tennessee's State Fire Marshal's Office adopt effective April 17, 2025?",
+   "c": [
+    "2018 IPC",
+    "2021 IPC",
+    "2021 UPC",
+    "2024 IPC"
+   ],
+   "a": 1,
+   "ref": "TN SFMO Currently Adopted Codes",
+   "why": "The SFMO adopted the 2021 IPC (along with the 2021 IMC, IFGC and IBC) effective April 17, 2025."
+  },
+  {
+   "t": "elec",
+   "topic": "State code adoption",
+   "q": "Effective September 1, 2026, which NEC edition did TDLR adopt as the Texas state electrical code?",
+   "c": [
+    "2020 NEC",
+    "2023 NEC",
+    "2026 NEC",
+    "2017 NEC"
+   ],
+   "a": 2,
+   "ref": "TDLR rule adoption, 16 TAC 73.100",
+   "why": "TDLR adopted the 2026 NEC effective September 1, 2026, replacing the 2023 NEC that took effect September 1, 2023."
+  },
+  {
+   "t": "plumb",
+   "topic": "State code adoption",
+   "q": "Which plumbing codes does the Texas State Board of Plumbing Examiners adopt by rule (22 TAC 367.2)?",
+   "c": [
+    "Only the International Plumbing Code",
+    "Only the Uniform Plumbing Code",
+    "Both the Uniform Plumbing Code and the International Plumbing Code",
+    "The National Standard Plumbing Code"
+   ],
+   "a": 2,
+   "ref": "22 TAC 367.2",
+   "why": "TSBPE adopts both the UPC and the IPC (currently 2018 editions). Unregulated areas must follow one of these."
+  },
+  {
+   "t": "hvac",
+   "topic": "State code adoption",
+   "q": "Effective September 1, 2026, TDLR's air conditioning and refrigeration rules reference which editions of the IMC and UMC?",
+   "c": [
+    "2018",
+    "2021",
+    "2024",
+    "2027"
+   ],
+   "a": 2,
+   "ref": "TDLR rule adoption, 16 TAC Chapter 75",
+   "why": "TDLR updated the ACR rules from the 2021 to the 2024 IRC, IMC, IFGC and UMC effective September 1, 2026."
+  },
+  {
+   "t": "elec",
+   "topic": "State code adoption",
+   "q": "Which NEC edition does Utah's State Construction Code (Utah Code 15A-2-103) adopt?",
+   "c": [
+    "2017 NEC",
+    "2020 NEC",
+    "2023 NEC",
+    "2026 NEC"
+   ],
+   "a": 2,
+   "ref": "Utah Code 15A-2-103",
+   "why": "Utah Code 15A-2-103 adopts the 2023 NEC, along with the 2024 IBC, IPC, IMC and IFGC and the 2021 IRC."
+  },
+  {
+   "t": "plumb",
+   "topic": "State licensing",
+   "q": "Under Utah Code 58-55-302, a master plumber who qualifies through the journeyman path must have been a licensed journeyman plumber for at least:",
+   "c": [
+    "One year",
+    "Two years",
+    "Four years",
+    "Eight years"
+   ],
+   "a": 1,
+   "ref": "Utah Code 58-55-302(3)(a)",
+   "why": "The journeyman path requires at least two years as a licensed journeyman plus two years of supervisory experience."
+  },
+  {
+   "t": "hvac",
+   "topic": "State licensing",
+   "q": "Which Utah contractor classification covers complete warm-air heating, air conditioning and ventilating systems?",
+   "c": [
+    "E200",
+    "P200",
+    "S350",
+    "B100"
+   ],
+   "a": 2,
+   "ref": "Utah Admin. Code R156-55a-301",
+   "why": "S350 is the HVAC Contractor classification. E200 is general electrical, P200 is general plumbing, and B100 is general building."
+  },
+  {
+   "t": "plumb",
+   "topic": "State code adoption",
+   "q": "Which model plumbing code is the base for Vermont's plumbing code, together with the 2025 Vermont Plumbing Rules?",
+   "c": [
+    "2024 International Plumbing Code",
+    "2024 Uniform Plumbing Code",
+    "National Standard Plumbing Code",
+    "2018 International Plumbing Code"
+   ],
+   "a": 0,
+   "ref": "Vermont DFS Codes and Standards",
+   "why": "Vermont DFS lists the 2024 IPC with the 2025 Vermont Plumbing Rules as the state plumbing code."
+  },
+  {
+   "t": "elec",
+   "topic": "State code adoption",
+   "q": "Which NEC edition is part of Virginia's 2021 Uniform Statewide Building Code (effective January 18, 2024)?",
+   "c": [
+    "2017 NEC",
+    "2020 NEC",
+    "2023 NEC",
+    "2026 NEC"
+   ],
+   "a": 1,
+   "ref": "Virginia DHCD Building and Fire Codes",
+   "why": "DHCD says Virginia adopted the 2020 NEC with the 2021 codes, effective January 18, 2024."
+  },
+  {
+   "t": "elec",
+   "topic": "State licensing",
+   "q": "In Virginia, an applicant with 240 hours of vocational training needs how many years of experience for a journeyman tradesman exam?",
+   "c": [
+    "2 years",
+    "4 years",
+    "6 years",
+    "8 years"
+   ],
+   "a": 1,
+   "ref": "18VAC50-30-39(B)",
+   "why": "240 hours of vocational training pairs with 4 years of experience. With no training, 8 years is required."
+  },
+  {
+   "t": "plumb",
+   "topic": "State code adoption",
+   "q": "Which plumbing code does Washington State adopt in WAC 51-56?",
+   "c": [
+    "International Plumbing Code",
+    "Uniform Plumbing Code",
+    "National Standard Plumbing Code",
+    "Washington Plumbing Code with no model base"
+   ],
+   "a": 1,
+   "ref": "WAC 51-56-003",
+   "why": "Washington adopts the 2021 Uniform Plumbing Code as its state plumbing code, effective March 15, 2024."
+  },
+  {
+   "t": "elec",
+   "topic": "State code adoption",
+   "q": "When does the 2026 NEC take effect under Washington's electrical rules (WAC 296-46B)?",
+   "c": [
+    "April 1, 2024",
+    "December 19, 2025",
+    "July 1, 2026",
+    "December 31, 2026"
+   ],
+   "a": 3,
+   "ref": "WSR 25-23-069",
+   "why": "L&I adopted the 2026 NEC with a delayed effective date of December 31, 2026. The 2023 NEC took effect April 1, 2024."
+  },
+  {
+   "t": "hvac",
+   "topic": "State licensing",
+   "q": "How many hours of experience are required for Washington's 06A HVAC/refrigeration specialty electrician certificate?",
+   "c": [
+    "1,000 hours",
+    "2,000 hours",
+    "4,000 hours",
+    "8,000 hours"
+   ],
+   "a": 2,
+   "ref": "WAC 296-46B-945",
+   "why": "The 06A certificate requires 4,000 hours. The 06B restricted certificate requires 2,000 hours."
+  },
+  {
+   "t": "elec",
+   "topic": "State exams",
+   "q": "West Virginia electrical license exams are open book and based on which NEC edition?",
+   "c": [
+    "2017 NEC",
+    "2020 NEC",
+    "2023 NEC",
+    "2026 NEC"
+   ],
+   "a": 1,
+   "ref": "WV State Fire Marshal Electrical Licensing",
+   "why": "The WV State Fire Marshal says all electrical exams are based solely on the 2020 NEC."
+  },
+  {
+   "t": "hvac",
+   "topic": "State licensing",
+   "q": "How many hours of HVAC work, training and experience does West Virginia require for an HVAC Technician certification?",
+   "c": [
+    "500 hours",
+    "1,000 hours",
+    "2,000 hours",
+    "4,000 hours"
+   ],
+   "a": 2,
+   "ref": "WV Division of Labor HVAC Certification",
+   "why": "An HVAC Technician needs at least 2,000 hours. A Technician in Training must work under an HVAC Technician's direct supervision."
+  },
+  {
+   "t": "elec",
+   "topic": "State code adoption",
+   "q": "Effective September 1, 2026, Wisconsin's electrical code is based on which NEC edition?",
+   "c": [
+    "2017 NEC",
+    "2020 NEC",
+    "2023 NEC",
+    "2026 NEC"
+   ],
+   "a": 2,
+   "ref": "Wisconsin DSPS news release, Sept. 2026",
+   "why": "Wisconsin moved from the 2017 NEC to the 2023 NEC (with state changes) on September 1, 2026."
+  },
+  {
+   "t": "hvac",
+   "topic": "State licensing",
+   "q": "Wisconsin's HVAC Qualifier certification requires 4 years of HVAC experience with at least how many hours per year?",
+   "c": [
+    "500 hours",
+    "1,000 hours",
+    "1,500 hours",
+    "2,000 hours"
+   ],
+   "a": 1,
+   "ref": "Wisconsin DSPS Form 3122 (SPS 305.71)",
+   "why": "The experience route requires at least 4 years at 1,000 hours per year, or 4 years of approved schooling, or a mix."
+  },
+  {
+   "t": "hvac",
+   "topic": "State code adoption",
+   "q": "Which mechanical code edition did Wyoming adopt on June 28, 2024?",
+   "c": [
+    "2018 IMC",
+    "2021 IMC",
+    "2024 IMC",
+    "2024 UMC"
+   ],
+   "a": 2,
+   "ref": "Wyoming State Fire Marshal Rules and Statutes",
+   "why": "Wyoming adopted the 2024 International Codes, including the 2024 IMC and IFGC, on June 28, 2024."
   }
  ]
 }

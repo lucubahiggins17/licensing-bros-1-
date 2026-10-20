@@ -1026,6 +1026,276 @@
     "georgia hvac license",
     "121-3-.04"
    ]
+  },
+  {
+   "id": "S5A-58",
+   "topic": "State code adoption",
+   "trade": "elec",
+   "state": "Hawaii",
+   "source": "Hawaii State Building Code Council, State Electrical Code (proposed rule text) - https://ags.hawaii.gov/wp-content/uploads/2021/11/StateElectricalCode_PROPOSED.pdf; IAEI and Mike Holt NEC adoption lists",
+   "fact": "Hawaii's State Building Code Council adopts a State Electrical Code based on the 2020 NEC (listed as effective March 14, 2023). Permits and enforcement are handled by the counties, which adopt the state codes by ordinance.",
+   "status": "verified",
+   "note": "Council rule text names the 2020 NEC; IAEI and Mike Holt both list 2020 NEC effective 3/14/2023. County adoption dates vary.",
+   "keywords": [
+    "hawaii NEC edition",
+    "2020 NEC hawaii",
+    "state building code council",
+    "state electrical code",
+    "county adoption",
+    "hawaii electrical code"
+   ]
+  },
+  {
+   "id": "S5A-59",
+   "topic": "State code adoption",
+   "trade": "plumb",
+   "state": "Hawaii",
+   "source": "Hawaii Administrative Rules, State Plumbing Code, Adoption of the Uniform Plumbing Code - https://regulations.justia.com/states/hawaii/title-3/building-code-council/state-plumbing-code/adoption-of-the-uniform-plumbing-code",
+   "fact": "Hawaii's State Plumbing Code, adopted by the State Building Code Council, is based on the 2018 Uniform Plumbing Code (UPC) with appendices. As with other state codes, the counties adopt and enforce it locally.",
+   "status": "verified",
+   "note": "Rule text current through April 2025; check for a newer UPC adoption.",
+   "keywords": [
+    "hawaii plumbing code",
+    "2018 UPC hawaii",
+    "uniform plumbing code",
+    "state building code council",
+    "county enforcement",
+    "hawaii"
+   ]
+  },
+  {
+   "id": "S5A-60",
+   "topic": "State licensing",
+   "trade": "elec",
+   "state": "Hawaii",
+   "source": "HRS 448E-5(b) - https://data.capitol.hawaii.gov/hrscurrent/Vol10_Ch0436-0474/HRS0448E/HRS_0448E-0005.htm",
+   "fact": "Under HRS 448E-5, a Hawaii journey worker electrician needs 5 years (at least 10,000 hours) of supervised wiring experience plus 240 hours of electrical coursework accepted by a University of Hawaii community college. A supervising electrician must have been a journey worker electrician for 4 years. Specialty (3 years/6,000 hours), industrial (4 years/8,000 hours) and maintenance electrician licenses also exist.",
+   "status": "verified",
+   "note": "Requirements in subsection (b), effective July 1, 2013.",
+   "keywords": [
+    "hawaii electrician license",
+    "journey worker electrician",
+    "10000 hours",
+    "supervising electrician",
+    "448E-5",
+    "240 hours coursework"
+   ]
+  },
+  {
+   "id": "S5A-61",
+   "topic": "State licensing",
+   "trade": "plumb",
+   "state": "Hawaii",
+   "source": "HRS 448E-5(b) - https://data.capitol.hawaii.gov/hrscurrent/Vol10_Ch0436-0474/HRS0448E/HRS_0448E-0005.htm",
+   "fact": "In Hawaii, a journey worker plumber needs 5 years (at least 10,000 hours) of experience as a helper to a journey worker or master plumber. A master plumber must have been registered as a journey worker plumber for 2 years (or have equivalent experience).",
+   "status": "verified",
+   "note": "",
+   "keywords": [
+    "hawaii plumber license",
+    "journey worker plumber",
+    "10000 hours",
+    "master plumber 2 years",
+    "448E-5",
+    "board of electricians and plumbers"
+   ]
+  },
+  {
+   "id": "S5A-62",
+   "topic": "State licensing",
+   "trade": "hvac",
+   "state": "Hawaii",
+   "source": "Haw. Code R. tit. 16, ch. 77, subch. 19, exh. A (Specialty Contractor Classifications) - https://www.law.cornell.edu/regulations/hawaii/Haw-Code-R-tit-16-ch-77-subch-19-exh-A",
+   "fact": "Hawaii licenses HVAC businesses through the Contractors License Board as C-52 Ventilating and Air Conditioning contractors (warm-air heating, air cooling and complete ventilating and AC systems). Refrigeration work is the separate C-40 Refrigeration classification, while electrical and plumbing contractors are C-13 and C-37.",
+   "status": "verified",
+   "note": "",
+   "keywords": [
+    "hawaii hvac license",
+    "C-52",
+    "ventilating air conditioning contractor",
+    "C-40 refrigeration",
+    "contractors license board",
+    "specialty classification"
+   ]
+  },
+  {
+   "id": "S5A-63",
+   "topic": "State code adoption",
+   "trade": "elec",
+   "state": "Idaho",
+   "source": "Idaho DOPL communication, 2023 Code Enforcement Implementation (June 2024) - https://admws.idaho.gov/pipermail/dopl-communication/2024-June/000027.html",
+   "fact": "Idaho's Division of Occupational and Professional Licenses moved to the 2023 NEC effective April 19, 2024 (with exceptions set by rule), with full enforcement no later than January 1, 2025. Permits issued before April 19, 2024 are inspected under the 2017 NEC.",
+   "status": "verified",
+   "note": "IAEI and Mike Holt list different dates (7/1/2023 and 7/1/2024); the DOPL notice is the official source.",
+   "keywords": [
+    "idaho NEC edition",
+    "2023 NEC idaho",
+    "DOPL",
+    "april 19 2024",
+    "2017 NEC",
+    "idaho electrical code"
+   ]
+  },
+  {
+   "id": "S5A-64",
+   "topic": "State code adoption",
+   "trade": "plumb",
+   "state": "Idaho",
+   "source": "Idaho Code 54-2601 - https://legislature.idaho.gov/statutesrules/idstat/Title54/T54CH26/SECT54-2601; IDAPA 24.39.20.600",
+   "fact": "Idaho law requires plumbing to follow the Uniform Plumbing Code (UPC) published by IAPMO, adopted with amendments by the Idaho Plumbing Board as the Idaho State Plumbing Code. A newly adopted edition takes effect January 1 of the year after the board adopts it.",
+   "status": "verified",
+   "note": "Edition caveat: IDAPA 24.39.20.600 (eff. 3/28/2023) adopted the 2015 UPC, and board minutes from Oct. 2023 show it discussing a 2024 UPC-based code. Confirm the edition in force.",
+   "keywords": [
+    "idaho plumbing code",
+    "uniform plumbing code idaho",
+    "UPC",
+    "idaho plumbing board",
+    "54-2601",
+    "january 1 effective"
+   ]
+  },
+  {
+   "id": "S5A-65",
+   "topic": "State code adoption",
+   "trade": "hvac",
+   "state": "Idaho",
+   "source": "IDAPA 24.39.70.600 (Idaho HVAC Board, adopted codes) - https://regulations.justia.com/states/idaho/24/24-39-70/section-24-39-70-600",
+   "fact": "The Idaho HVAC Board adopts the 2018 International Mechanical Code and 2018 International Fuel Gas Code with Idaho amendments, plus Parts V (Mechanical) and VI (Fuel Gas) of the 2018 IRC for one- and two-family dwellings (rule effective March 28, 2023).",
+   "status": "verified",
+   "note": "Rule text current through June 2025; check for a newer adoption.",
+   "keywords": [
+    "idaho mechanical code",
+    "2018 IMC idaho",
+    "2018 IFGC",
+    "idaho HVAC board",
+    "IDAPA 24.39.70",
+    "IRC mechanical"
+   ]
+  },
+  {
+   "id": "S5A-66",
+   "topic": "State licensing",
+   "trade": "elec",
+   "state": "Illinois",
+   "source": "Mike Holt NEC Adoption List - https://www.mikeholt.com/necadoptionlist.php; IAEI Code Adoption by State - https://www.iaei.org/page/nec-code-adoption; 65 ILCS 5/11-33-1",
+   "fact": "Illinois has no statewide electrician license and no statewide NEC adoption. Electrical contractor registration or licensing and the NEC edition in use are set by each municipality or county (for example, Chicago runs its own electrical licensing and code).",
+   "status": "verified",
+   "note": "Mike Holt and IAEI agree there is no statewide adoption; both mention a 2008 NEC rule for commercial buildings outside local code areas, which was not confirmed on a state page.",
+   "keywords": [
+    "illinois electrician license",
+    "no state license",
+    "local licensing",
+    "illinois NEC",
+    "municipal code",
+    "chicago electrical"
+   ]
+  },
+  {
+   "id": "S5A-67",
+   "topic": "State code adoption",
+   "trade": "plumb",
+   "state": "Illinois",
+   "source": "77 Ill. Adm. Code 890 (Illinois Plumbing Code) - https://ilga.gov/ftp/JCAR/AdminCode/077/077008900A01300R.html; IDPH local ordinance review letter quoting Illinois Plumbing License Law Sec. 42",
+   "fact": "Illinois has a statewide minimum plumbing code written by the Illinois Department of Public Health: the Illinois Plumbing Code (77 Ill. Adm. Code 890), last broadly amended in 2014. It is a state-written code, not the IPC or UPC. The power to set the minimum plumbing code belongs to IDPH and cannot be taken over by local governments, including home-rule units.",
+   "status": "verified",
+   "note": "",
+   "keywords": [
+    "illinois plumbing code",
+    "77 ill adm code 890",
+    "IDPH",
+    "2014 illinois plumbing code",
+    "home rule",
+    "minimum plumbing code"
+   ]
+  },
+  {
+   "id": "S5A-68",
+   "topic": "State licensing",
+   "trade": "hvac",
+   "state": "Illinois",
+   "source": "No state HVAC licensing agency identified; local building departments",
+   "fact": "Illinois does not issue a statewide HVAC or mechanical contractor license, and there is no statewide mechanical code for private buildings. HVAC licensing and mechanical code adoption are handled by cities and counties.",
+   "status": "unverified",
+   "note": "Not confirmed on an official state page; based on the absence of a state HVAC board. EPA 608 certification still applies to refrigerant work.",
+   "keywords": [
+    "illinois hvac license",
+    "no state hvac license",
+    "local mechanical code",
+    "illinois mechanical",
+    "city license",
+    "EPA 608"
+   ]
+  },
+  {
+   "id": "S5A-69",
+   "topic": "State licensing",
+   "trade": "elec",
+   "state": "Indiana",
+   "source": "IAEI Indiana page - https://www.iaei.org/page/indiana-electrical-ceus; Mike Holt state license page (IN) - https://www.mikeholt.com/statelicense.php?id=IN",
+   "fact": "Indiana does not license electricians at the state level; electrical licensing is handled by cities and counties (for example, Indianapolis). However, local jurisdictions may not adopt or enforce their own electrical code unless the state Fire Prevention and Building Safety Commission approves it.",
+   "status": "verified",
+   "note": "Two trade references (IAEI and Mike Holt) agree.",
+   "keywords": [
+    "indiana electrician license",
+    "no state license",
+    "local licensing",
+    "indianapolis",
+    "fire prevention and building safety commission",
+    "indiana electrical"
+   ]
+  },
+  {
+   "id": "S5A-70",
+   "topic": "State code adoption",
+   "trade": "elec",
+   "state": "Indiana",
+   "source": "Indiana DHS, Electrical Code Regulatory Analysis (draft) - https://www.in.gov/dhs/files/Electrical-Code-Regulatory-Analysis-DRAFT.pdf; IAEI Indiana page",
+   "fact": "Indiana's statewide Indiana Electrical Code (675 IAC 17-1.8) is the 2009 edition, based on the 2008 NEC and effective August 26, 2009, for commercial buildings; homes built under the Indiana Residential Code use 2017 NEC-based rules (effective December 26, 2019). A 2026 Indiana Electrical Code based on the 2023 NEC was in rulemaking in 2026.",
+   "status": "unverified",
+   "note": "DHS analysis confirms the 2009 code is current and proposes a 2026 code (proposed effective Jan. 1, 2026), but no page read confirms whether the new code has taken effect. Mike Holt lists it as underway.",
+   "keywords": [
+    "indiana NEC edition",
+    "2009 indiana electrical code",
+    "2008 NEC",
+    "675 IAC 17",
+    "2023 NEC indiana",
+    "indiana residential code"
+   ]
+  },
+  {
+   "id": "S5A-71",
+   "topic": "State code adoption",
+   "trade": "plumb",
+   "state": "Indiana",
+   "source": "Indiana DHS, Rulemaking Docket - Plumbing Code (updated Aug. 17, 2026) - https://www.in.gov/dhs/files/Rulemaking%20Docket - Plumbing Code.pdf; IDHS code list as published by City of Decatur",
+   "fact": "Indiana's statewide plumbing code is the 2012 Indiana Plumbing Code (675 IAC 16), based on the 2006 International Plumbing Code and effective December 24, 2012. In 2026 the state proposed amendments to it (public hearing June 25, 2026); adoption and effective date were still pending in August 2026.",
+   "status": "verified",
+   "note": "Model-code basis and effective date from the IDHS code list (city copy); DHS docket confirms the 2012 code is the existing code.",
+   "keywords": [
+    "indiana plumbing code",
+    "2012 indiana plumbing code",
+    "675 IAC 16",
+    "2006 IPC",
+    "IDHS",
+    "plumbing code update"
+   ]
+  },
+  {
+   "id": "S5A-72",
+   "topic": "State code adoption",
+   "trade": "hvac",
+   "state": "Indiana",
+   "source": "IDHS code list as published by City of Decatur - https://www.cityofdecatur.in.gov/Documents/Building Codes per IDHS (002).pdf",
+   "fact": "Indiana's statewide mechanical and fuel gas codes are the 2014 Indiana Mechanical Code (675 IAC 18, based on the 2012 IMC) and the 2014 Indiana Fuel Gas Code (675 IAC 25, based on the 2012 IFGC), effective December 1, 2014. Indiana has no state HVAC license; HVAC contractors are licensed locally.",
+   "status": "unverified",
+   "note": "Single undated local copy of the IDHS list; the state DHS code page could not be loaded to confirm no newer edition. No-state-license point not confirmed on a state page.",
+   "keywords": [
+    "indiana mechanical code",
+    "2014 indiana mechanical code",
+    "2012 IMC",
+    "indiana fuel gas code",
+    "675 IAC 18",
+    "local hvac license"
+   ]
   }
  ],
  "questions": [
@@ -1238,6 +1508,62 @@
    "a": 1,
    "ref": "Ga. Comp. R. & Regs. r. 121-3-.04",
    "why": "The restricted Class I limit is 175,000 BTU heating and 60,000 BTU (5 tons) cooling."
+  },
+  {
+   "t": "elec",
+   "topic": "State licensing",
+   "q": "Under HRS 448E-5, how many hours of experience does a Hawaii journey worker electrician applicant need?",
+   "c": [
+    "6,000 hours",
+    "8,000 hours",
+    "10,000 hours",
+    "12,000 hours"
+   ],
+   "a": 2,
+   "ref": "HRS 448E-5(b)",
+   "why": "Hawaii requires 5 years and at least 10,000 hours of supervised wiring experience, plus 240 hours of coursework."
+  },
+  {
+   "t": "elec",
+   "topic": "State code adoption",
+   "q": "Idaho's DOPL moved to which NEC edition effective April 19, 2024?",
+   "c": [
+    "2017 NEC",
+    "2020 NEC",
+    "2023 NEC",
+    "2026 NEC"
+   ],
+   "a": 2,
+   "ref": "Idaho DOPL notice, June 2024",
+   "why": "DOPL transitioned to the 2023 NEC on April 19, 2024; permits issued earlier are inspected under the 2017 NEC."
+  },
+  {
+   "t": "plumb",
+   "topic": "State code adoption",
+   "q": "Who has the power to set Illinois's minimum statewide plumbing code?",
+   "c": [
+    "Each home-rule city",
+    "The Illinois Department of Public Health",
+    "The Illinois Capital Development Board",
+    "The International Association of Plumbing and Mechanical Officials"
+   ],
+   "a": 1,
+   "ref": "77 Ill. Adm. Code 890; 225 ILCS 320/42",
+   "why": "IDPH writes the Illinois Plumbing Code, and that power cannot be taken over by local governments, even home-rule units."
+  },
+  {
+   "t": "elec",
+   "topic": "State licensing",
+   "q": "How are electricians licensed in Indiana?",
+   "c": [
+    "By a state electrical licensing board",
+    "Only by cities and counties; there is no statewide electrician license",
+    "By the Indiana Plumbing Commission",
+    "By the Indiana Department of Health"
+   ],
+   "a": 1,
+   "ref": "IAEI Indiana page; Mike Holt (IN)",
+   "why": "Indiana has no statewide electrician license; local jurisdictions such as Indianapolis handle licensing."
   }
  ]
 }
