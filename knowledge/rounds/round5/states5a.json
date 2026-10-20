@@ -223,9 +223,9 @@
    "trade": "elec",
    "state": "Arizona",
    "source": "Arizona Registrar of Contractors, License Classification Requirements - https://www.azroc.gov/sites/default/files/2023-11/License%20Classification%20Requirements_6.8.20_0.pdf",
-   "fact": "Arizona ROC electrical licenses R-11 (residential), C-11 (commercial) and CR-11 (dual) each require a qualifying party with 4 years of hands-on and/or managerial experience who passes the Statutes and Rules Exam (SRE) and the trade exam. Arizona has no state journeyman electrician card; the license belongs to the contracting business.",
+   "fact": "Arizona ROC electrical licenses R-11 (residential), C-11 (commercial) and CR-11 (dual) each require a qualifying party with 4 years of hands-on and/or managerial experience who passes the Statutes and Rules Exam (SRE) and the trade exam.",
    "status": "verified",
-   "note": "Experience and exams read on the ROC classification table; the document says nothing about any statewide journeyman license.",
+   "note": "Experience and exams read on the ROC classification table. Existing KB fact STAT-022 (unverified) covers the lack of a statewide journeyman card.",
    "keywords": [
     "arizona electrical license",
     "C-11",
@@ -331,7 +331,7 @@
    "trade": "plumb",
    "state": "Arkansas",
    "source": "Arkansas Building Authority, Current Codes (rev. Jan. 2023) - https://sas.arkansas.gov/wp-content/uploads/CurrentCodes072023.pdf; Arkansas Dept. of Health, Plumbing and Natural Gas - https://healthy.arkansas.gov/programs-services/licensing-military-member-licensure-permits-plan-reviews/plumbing-natural-gas-health-code/",
-   "fact": "Arkansas plumbing and gas work follows state codes administered by the Arkansas Department of Health: the 2018 Arkansas Plumbing Code (an ICC-published code based on the IPC) and the 2018 Arkansas Fuel Gas Code. Plumbers are licensed by the Health Department's State Committee of Plumbing Examiners.",
+   "fact": "Arkansas plumbing and gas work follows state codes administered by the Arkansas Department of Health: the 2018 Arkansas Plumbing Code (a state code published by ICC) and the 2018 Arkansas Fuel Gas Code. Plumbers are licensed by the Health Department's State Committee of Plumbing Examiners.",
    "status": "verified",
    "note": "Editions from the state's 2023 current-codes list; ADH page confirms the codes are ICC-published but gives no edition, so check for a newer adoption.",
    "keywords": [
@@ -475,9 +475,9 @@
    "trade": "plumb",
    "state": "California",
    "source": "CSLB, Acceptable documentation of journey-level experience - https://www.cslb.ca.gov/Resources/Contractors/Journeymen/AcceptableDocs.pdf",
-   "fact": "California licenses plumbing businesses as CSLB C-36 Plumbing contractors. The qualifying individual must show at least 4 years of journey-level experience in that classification within the last 10 years and pass the exams. California does not issue a statewide journeyman plumber card.",
+   "fact": "California licenses plumbing businesses as CSLB C-36 Plumbing contractors. The qualifying individual must show at least 4 years of journey-level experience in that classification within the last 10 years and pass the exams.",
    "status": "verified",
-   "note": "Experience rule read on the CSLB document; the no-journeyman-card point matches existing KB fact STAT-046.",
+   "note": "Experience rule read on the CSLB document.",
    "keywords": [
     "california plumbing license",
     "C-36",
@@ -493,7 +493,7 @@
    "trade": "hvac",
    "state": "California",
    "source": "CSLB, Acceptable documentation of journey-level experience - https://www.cslb.ca.gov/Resources/Contractors/Journeymen/AcceptableDocs.pdf",
-   "fact": "California HVAC businesses are licensed by CSLB as C-20 Warm-Air Heating, Ventilating and Air-Conditioning contractors. As with every CSLB classification, the qualifier needs at least 4 years of journey-level experience in the trade within the last 10 years and must pass the exams; there is no separate state HVAC technician license (EPA 608 still applies to refrigerant work).",
+   "fact": "California HVAC businesses are licensed by CSLB as C-20 Warm-Air Heating, Ventilating and Air-Conditioning contractors. As with every CSLB classification, the qualifier needs at least 4 years of journey-level experience in the trade within the last 10 years and must pass the exams.",
    "status": "verified",
    "note": "",
    "keywords": [
@@ -673,9 +673,9 @@
    "trade": "elec",
    "state": "Delaware",
    "source": "Delaware State Fire Marshal, 2026 DSFPR update (Regulation 701) - https://statefiremarshal.delaware.gov/wp-content/uploads/sites/110/2025/12/2026-DSFPR-update.pdf; IAEI Delaware page",
-   "fact": "Delaware's 2026 State Fire Prevention Regulations (Regulation 701), effective January 1, 2026, list NFPA 70, the 2023 NEC, as the electrical code. Local jurisdictions in Delaware must use the NEC edition enacted by the State Fire Prevention Commission.",
+   "fact": "Delaware's 2026 State Fire Prevention Regulations (Regulation 701), effective January 1, 2026, list NFPA 70, the 2023 NEC, as the electrical code.",
    "status": "verified",
-   "note": "Effective date and edition read on the State Fire Marshal's 2026 DSFPR update; the local-adoption rule is from IAEI.",
+   "note": "Effective date and edition read on the State Fire Marshal's 2026 DSFPR update. IAEI adds that local jurisdictions must adopt the NEC enacted by the Fire Prevention Commission.",
    "keywords": [
     "delaware NEC edition",
     "2023 NEC delaware",
@@ -1177,7 +1177,7 @@
    "trade": "elec",
    "state": "Illinois",
    "source": "Mike Holt NEC Adoption List - https://www.mikeholt.com/necadoptionlist.php; IAEI Code Adoption by State - https://www.iaei.org/page/nec-code-adoption; 65 ILCS 5/11-33-1",
-   "fact": "Illinois has no statewide electrician license and no statewide NEC adoption. Electrical contractor registration or licensing and the NEC edition in use are set by each municipality or county (for example, Chicago runs its own electrical licensing and code).",
+   "fact": "Illinois has no statewide electrician license and no statewide NEC adoption. Electrical contractor registration or licensing and the NEC edition in use are set by each municipality or county.",
    "status": "verified",
    "note": "Mike Holt and IAEI agree there is no statewide adoption; both mention a 2008 NEC rule for commercial buildings outside local code areas, which was not confirmed on a state page.",
    "keywords": [
@@ -1566,6 +1566,582 @@
     "ICC certification",
     "local licensing"
    ]
+  },
+  {
+   "id": "S5A-88",
+   "topic": "State code adoption",
+   "trade": "elec",
+   "state": "Maine",
+   "source": "02-318 CMR ch. 120 (Electricians' Examining Board, Electrical Installation Standards) - https://regulations.justia.com/states/maine/02/318/chapter-120/; IAEI Maine page",
+   "fact": "The Maine Electricians' Examining Board adopts the NEC statewide by rule (Chapter 120). Under that rule, electrical installations begun on or after July 1, 2024 must follow the 2023 NEC with Maine amendments, such as changes to GFCI rules in 210.8 and to NM cable use in 334.10.",
+   "status": "unverified",
+   "note": "Rule text read is current only through June 2025. Mike Holt's list shows Maine on the 2026 NEC effective 7/1/2026, which no official page read confirms. Check the board for the edition in force.",
+   "keywords": [
+    "maine NEC edition",
+    "2023 NEC maine",
+    "electricians examining board",
+    "chapter 120",
+    "july 1 2024",
+    "2026 NEC maine"
+   ]
+  },
+  {
+   "id": "S5A-89",
+   "topic": "State code adoption",
+   "trade": "plumb",
+   "state": "Maine",
+   "source": "02-395 CMR ch. 4, sec. 1 (Plumbers' Examining Board, Installation Standards) - https://regulations.justia.com/states/maine/02/395/chapter-4/section-395-4-1/",
+   "fact": "Maine's plumbing installation standard is the 2021 Uniform Plumbing Code (UPC), adopted by the Plumbers' Examining Board with exclusions. The board does not adopt the UPC appendices, Chapter 12 (Fuel Gas Piping) or Chapter 13 (Health Care Facilities and Medical Gas), and adopts only listed parts of Chapter 5 (Water Heaters); fuel gas work falls under the Maine Fuel Board.",
+   "status": "verified",
+   "note": "Rule text current through June 2025.",
+   "keywords": [
+    "maine plumbing code",
+    "2021 UPC maine",
+    "plumbers examining board",
+    "fuel gas excluded",
+    "chapter 4",
+    "uniform plumbing code"
+   ]
+  },
+  {
+   "id": "S5A-90",
+   "topic": "State code adoption",
+   "trade": "elec",
+   "state": "Maryland",
+   "source": "IAEI Maryland page - https://www.iaei.org/page/maryland-electrical-ceus; Mike Holt NEC Adoption List",
+   "fact": "Maryland's statewide NEC edition could not be confirmed from an official state page. IAEI lists the 2023 NEC effective March 1, 2025, while Mike Holt lists the 2020 NEC effective May 29, 2023; many Maryland counties also adopt and enforce the NEC locally.",
+   "status": "unverified",
+   "note": "The two trade references disagree, and the State Fire Prevention Code (COMAR 29.06.01.06) incorporates only NFPA 1 and NFPA 101, not NFPA 70. Ask the local jurisdiction which edition it enforces.",
+   "keywords": [
+    "maryland NEC edition",
+    "2023 NEC maryland",
+    "2020 NEC",
+    "local adoption",
+    "maryland electrical code",
+    "county"
+   ]
+  },
+  {
+   "id": "S5A-91",
+   "topic": "State code adoption",
+   "trade": "plumb",
+   "state": "Maryland",
+   "source": "COMAR 09.20.01.01 (State Board of Plumbing, State Plumbing Code - Incorporation by Reference) - https://regulations.justia.com/states/maryland/title-09/subtitle-20/chapter-09-20-01/section-09-20-01-01/",
+   "fact": "The Maryland State Plumbing Code (COMAR 09.20.01) incorporates the 2018 International Plumbing Code, the plumbing and fuel gas chapters of the 2018 International Residential Code, the 2018 International Fuel Gas Code and the 2017 edition of NFPA 58, each with Maryland modifications.",
+   "status": "verified",
+   "note": "Rule text current through June 13, 2025; check for a newer adoption.",
+   "keywords": [
+    "maryland plumbing code",
+    "2018 IPC maryland",
+    "COMAR 09.20.01",
+    "state board of plumbing",
+    "2018 IFGC",
+    "NFPA 58"
+   ]
+  },
+  {
+   "id": "S5A-92",
+   "topic": "State licensing",
+   "trade": "hvac",
+   "state": "Maryland",
+   "source": "Maryland State Board of HVACR Contractors, Licensing Requirements - https://dllr.state.md.us/license/hvacr/hvacrlicreq.shtml",
+   "fact": "Maryland's HVACR Limited license requires a journeyman license plus at least 2 years working under a licensed HVACR master, with 1,000 hours in the year before applying, and a 70% score on the limited contractor exam. Master and master restricted licenses instead need 3 years as a journeyman under a master and 1,875 hours in the prior year.",
+   "status": "verified",
+   "note": "",
+   "keywords": [
+    "maryland hvac limited license",
+    "HVACR limited",
+    "1000 hours",
+    "journeyman",
+    "master restricted",
+    "70 percent"
+   ]
+  },
+  {
+   "id": "S5A-93",
+   "topic": "State code adoption",
+   "trade": "elec",
+   "state": "Massachusetts",
+   "source": "IAEI Massachusetts page - https://www.iaei.org/page/massachusetts-electrical-ceus; Mike Holt NEC Adoption List",
+   "fact": "Massachusetts adopts the NEC statewide as the Massachusetts Electrical Code (527 CMR 12.00), issued by the Board of Fire Prevention Regulations with state amendments. The 2023 NEC took effect February 17, 2023, and a trade reference reports the 2026 NEC took effect April 24, 2026.",
+   "status": "unverified",
+   "note": "Mass.gov pages could not be loaded to confirm the edition in force; IAEI shows the 2023 date and Mike Holt shows the 2026 date.",
+   "keywords": [
+    "massachusetts electrical code",
+    "527 CMR 12.00",
+    "2023 NEC massachusetts",
+    "2026 NEC",
+    "board of fire prevention regulations",
+    "MA amendments"
+   ]
+  },
+  {
+   "id": "S5A-94",
+   "topic": "State code adoption",
+   "trade": "plumb",
+   "state": "Massachusetts",
+   "source": "248 CMR chapter list - https://regulations.justia.com/states/massachusetts/248-cmr/; M.G.L. c. 142, sec. 13 - https://malegislature.gov/Laws/GeneralLaws/PartI/TitleXX/Chapter142/Section13",
+   "fact": "Massachusetts uses its own state-written Uniform State Plumbing Code (248 CMR 10.00), not the IPC or UPC. The Board of State Examiners of Plumbers and Gas Fitters writes the rules, which apply in all cities and towns; a town's board of health can petition to vary how a rule applies locally. Licensing education and experience standards are in 248 CMR 11.00.",
+   "status": "verified",
+   "note": "",
+   "keywords": [
+    "massachusetts plumbing code",
+    "248 CMR 10.00",
+    "uniform state plumbing code",
+    "board of state examiners",
+    "c. 142",
+    "state-written code"
+   ]
+  },
+  {
+   "id": "S5A-95",
+   "topic": "State code adoption",
+   "trade": "hvac",
+   "state": "Massachusetts",
+   "source": "248 CMR chapter list - https://regulations.justia.com/states/massachusetts/248-cmr/",
+   "fact": "Massachusetts gas fitting follows the Massachusetts Fuel Gas Code in 248 CMR 4.00, with state amendments to NFPA 54 (National Fuel Gas Code) in 248 CMR 5.00 and amendments to NFPA 58 (LP-Gas) in 248 CMR 8.00, all issued by the plumbers and gas fitters board.",
+   "status": "verified",
+   "note": "Chapter titles read; NFPA edition years not confirmed.",
+   "keywords": [
+    "massachusetts fuel gas code",
+    "248 CMR 4.00",
+    "NFPA 54 amendments",
+    "NFPA 58",
+    "gas fitter",
+    "massachusetts"
+   ]
+  },
+  {
+   "id": "S5A-96",
+   "topic": "State code adoption",
+   "trade": "elec",
+   "state": "Michigan",
+   "source": "Mich. Admin. Code R 408.30801 (Part 8 Electrical Code) - https://regulations.justia.com/states/michigan/licensing-and-regulatory-affairs/bureau-of-construction-codes/construction-code-commission-general-rules/construction-code/part-8/section-r-408-30801/; IAEI Michigan page",
+   "fact": "Michigan's Part 8 Electrical Code (R 408.30801) adopts the 2023 NEC (second printing, with TIAs) with some sections excluded. It took effect March 12, 2024 for buildings other than one- and two-family dwellings, which are covered by the Michigan Residential Code.",
+   "status": "verified",
+   "note": "Rule text current through June 2025; effective date from IAEI and Mike Holt, which also say the residential code moved to the 2023 NEC on Aug. 29, 2025.",
+   "keywords": [
+    "michigan NEC edition",
+    "2023 NEC michigan",
+    "part 8 electrical code",
+    "R 408.30801",
+    "march 12 2024",
+    "michigan residential code"
+   ]
+  },
+  {
+   "id": "S5A-97",
+   "topic": "State code adoption",
+   "trade": "plumb",
+   "state": "Michigan",
+   "source": "Mich. Admin. Code R 408.30701 (Part 7 Plumbing Code, Applicable code) - https://regulations.justia.com/states/michigan/licensing-and-regulatory-affairs/bureau-of-construction-codes/construction-code-commission-general-rules/construction-code/part-7/amendments-and-additions-to-basic-plumbing-code/section-r-408-30701/",
+   "fact": "Michigan's statewide plumbing code (Part 7, R 408.30701) adopts the 2021 International Plumbing Code (second printing) with Michigan exceptions and amendments, including appendices B, C, D and E.",
+   "status": "verified",
+   "note": "Rule text current through June 2025.",
+   "keywords": [
+    "michigan plumbing code",
+    "2021 IPC michigan",
+    "R 408.30701",
+    "part 7",
+    "bureau of construction codes",
+    "michigan"
+   ]
+  },
+  {
+   "id": "S5A-98",
+   "topic": "State code adoption",
+   "trade": "hvac",
+   "state": "Michigan",
+   "source": "Mich. Admin. Code R 408.30901a (Part 9A Mechanical Code) - https://regulations.justia.com/states/michigan/licensing-and-regulatory-affairs/bureau-of-construction-codes/construction-code-commission-general-rules/construction-code/part-9a/amendments-and-additions-to-basic-mechanical-code/section-r-408-30901a/",
+   "fact": "Michigan's statewide mechanical code (Part 9A, R 408.30901a) adopts the 2021 International Mechanical Code by reference, with listed exceptions and Michigan amendments.",
+   "status": "verified",
+   "note": "Rule text current through June 2025.",
+   "keywords": [
+    "michigan mechanical code",
+    "2021 IMC michigan",
+    "R 408.30901a",
+    "part 9A",
+    "mechanical code",
+    "michigan hvac"
+   ]
+  },
+  {
+   "id": "S5A-99",
+   "topic": "State code adoption",
+   "trade": "elec",
+   "state": "Minnesota",
+   "source": "Minnesota DLI, Electrical codes and standards - https://www.dli.mn.gov/business/electrical-contractors/electrical-codes-and-standards",
+   "fact": "Minnesota's Board of Electricity adopted the 2026 NEC. Electrical permits filed on or after August 17, 2026 must comply with the 2026 NEC, and permits filed before that date follow the 2023 NEC. State electrical licensing exams moved to the 2026 NEC beginning September 8, 2026.",
+   "status": "verified",
+   "note": "",
+   "keywords": [
+    "minnesota NEC edition",
+    "2026 NEC minnesota",
+    "august 17 2026",
+    "board of electricity",
+    "DLI",
+    "exam 2026 NEC"
+   ]
+  },
+  {
+   "id": "S5A-100",
+   "topic": "State code adoption",
+   "trade": "plumb",
+   "state": "Minnesota",
+   "source": "Minn. R. 4714.0050 (Minnesota Plumbing Code) - https://www.revisor.mn.gov/rules/4714.0050/",
+   "fact": "The Minnesota Plumbing Code (Minn. R. chapter 4714) is based on the 2018 Uniform Plumbing Code (UPC), adopting chapters 2 to 11, 16 and 17 and appendices A, B and I with Minnesota amendments.",
+   "status": "verified",
+   "note": "Rule as published by the Revisor (2021); check DLI for a newer UPC adoption.",
+   "keywords": [
+    "minnesota plumbing code",
+    "2018 UPC minnesota",
+    "4714",
+    "uniform plumbing code",
+    "DLI",
+    "minnesota"
+   ]
+  },
+  {
+   "id": "S5A-101",
+   "topic": "State code adoption",
+   "trade": "hvac",
+   "state": "Minnesota",
+   "source": "Minn. R. 1346.0050 (Minnesota Mechanical Code) - https://www.revisor.mn.gov/rules/1346.0050/",
+   "fact": "The Minnesota Mechanical Code (Minn. R. chapter 1346) adopts chapters 2 to 15 of the 2018 International Mechanical Code, subject to Minnesota Rules chapter 1300 and state amendments.",
+   "status": "verified",
+   "note": "Rule as published by the Revisor (April 2020); check DLI for a newer edition.",
+   "keywords": [
+    "minnesota mechanical code",
+    "2018 IMC minnesota",
+    "1346",
+    "state building code",
+    "DLI",
+    "minnesota hvac"
+   ]
+  },
+  {
+   "id": "S5A-102",
+   "topic": "State code adoption",
+   "trade": "elec",
+   "state": "Mississippi",
+   "source": "IAEI Mississippi page - https://www.iaei.org/page/mississippi-electrical-ceus; Mike Holt NEC Adoption List",
+   "fact": "Mississippi has no statewide NEC adoption; electrical codes are adopted locally, so the edition depends on the city or county (for example, Biloxi adopted a 2026 code effective June 1, 2026).",
+   "status": "verified",
+   "note": "IAEI and Mike Holt agree: local adoption only.",
+   "keywords": [
+    "mississippi NEC",
+    "local adoption",
+    "no statewide electrical code",
+    "biloxi",
+    "mississippi electrical code",
+    "city county"
+   ]
+  },
+  {
+   "id": "S5A-103",
+   "topic": "State licensing",
+   "trade": "elec",
+   "state": "Mississippi",
+   "source": "Miss. Code 31-3-1 - https://law.justia.com/codes/mississippi/title-31/chapter-3/section-31-3-1/; Mississippi State Board of Contractors - https://www.msboc.us/",
+   "fact": "Mississippi does not license journeyman or master electricians, plumbers or HVAC technicians statewide. The Mississippi State Board of Contractors licenses commercial and residential contractors, and its commercial licensing law generally does not apply to contracts under $50,000. Individual trade licenses, where required, come from cities and counties.",
+   "status": "unverified",
+   "note": "The $50,000 threshold and board scope were read on official pages; the no-statewide-trade-license point and any separate dollar threshold for electrical, plumbing or mechanical subcontractors were not confirmed.",
+   "keywords": [
+    "mississippi electrician license",
+    "MSBOC",
+    "50000 threshold",
+    "no state journeyman",
+    "local licensing",
+    "mississippi contractor"
+   ]
+  },
+  {
+   "id": "S5A-104",
+   "topic": "State code adoption",
+   "trade": "elec",
+   "state": "Missouri",
+   "source": "Mike Holt NEC Adoption List - https://www.mikeholt.com/necadoptionlist.php; IAEI Code Adoption by State - https://www.iaei.org/page/nec-code-adoption",
+   "fact": "Missouri has no statewide NEC adoption; cities and counties adopt and enforce their own electrical code editions. The optional statewide electrical contractor license does not change which code edition applies locally.",
+   "status": "verified",
+   "note": "Mike Holt and IAEI agree: local adoption only.",
+   "keywords": [
+    "missouri NEC",
+    "local adoption",
+    "no statewide electrical code",
+    "missouri electrical code",
+    "city county",
+    "statewide contractor license"
+   ]
+  },
+  {
+   "id": "S5A-105",
+   "topic": "State code adoption",
+   "trade": "elec",
+   "state": "Montana",
+   "source": "Montana DLI Building and Commercial Measurements Bureau, Current Codes - https://bsd.dli.mt.gov/building-codes-permits/current-codes",
+   "fact": "Montana's state building codes, adopted in ARM Title 24, Chapter 301, include the 2023 NEC, effective September 26, 2026 (replacing the 2020 NEC, which had been in effect since June 10, 2022).",
+   "status": "verified",
+   "note": "Current-codes page read October 2026; the earlier 2020 date is from IAEI and Mike Holt.",
+   "keywords": [
+    "montana NEC edition",
+    "2023 NEC montana",
+    "september 26 2026",
+    "ARM 24.301",
+    "building codes bureau",
+    "montana electrical code"
+   ]
+  },
+  {
+   "id": "S5A-106",
+   "topic": "State code adoption",
+   "trade": "plumb",
+   "state": "Montana",
+   "source": "Montana DLI Building and Commercial Measurements Bureau, Current Codes - https://bsd.dli.mt.gov/building-codes-permits/current-codes",
+   "fact": "Montana's state plumbing code is the 2024 Uniform Plumbing Code (UPC), adopted with amendments in ARM Title 24, Chapter 301 and effective September 26, 2026.",
+   "status": "verified",
+   "note": "",
+   "keywords": [
+    "montana plumbing code",
+    "2024 UPC montana",
+    "uniform plumbing code",
+    "september 26 2026",
+    "ARM 24.301",
+    "montana"
+   ]
+  },
+  {
+   "id": "S5A-107",
+   "topic": "State code adoption",
+   "trade": "hvac",
+   "state": "Montana",
+   "source": "Montana DLI Building and Commercial Measurements Bureau, Current Codes - https://bsd.dli.mt.gov/building-codes-permits/current-codes",
+   "fact": "Montana's state mechanical and fuel gas codes are the 2024 International Mechanical Code and 2024 International Fuel Gas Code, effective September 26, 2026, along with the 2024 IBC and IRC.",
+   "status": "verified",
+   "note": "",
+   "keywords": [
+    "montana mechanical code",
+    "2024 IMC montana",
+    "2024 IFGC",
+    "september 26 2026",
+    "ARM 24.301",
+    "montana hvac"
+   ]
+  },
+  {
+   "id": "S5A-108",
+   "topic": "State licensing",
+   "trade": "plumb",
+   "state": "Alabama",
+   "source": "Ala. Admin. Code r. 720-X-4-.01(2) (amended eff. Oct. 13, 2025, operative Jan. 1, 2026) - https://admincode.legislature.state.al.us/api/chapter/720-X-4; r. 720-X-5-.01",
+   "fact": "In Alabama, a journeyman plumber or journeyman gas fitter needs 2 years of current work experience as an apprentice (or completion of a board-approved apprentice program), and a master plumber or master gas fitter needs 1 year of current experience as a journeyman, with verifiable proof. A journeyman plumber works under the general supervision of a certified master plumber.",
+   "status": "verified",
+   "note": "",
+   "keywords": [
+    "alabama plumber license",
+    "journeyman plumber 2 years",
+    "master plumber 1 year",
+    "gas fitter alabama",
+    "apprentice",
+    "PGFB"
+   ]
+  },
+  {
+   "id": "S5A-109",
+   "topic": "State renewal & CE",
+   "trade": "elec",
+   "state": "Alabama",
+   "source": "Ala. Admin. Code r. 303-X-4-.02 and -.08 (eff. Feb. 14, 2026) - https://admincode.legislature.state.al.us/api/chapter/303-X-4",
+   "fact": "Alabama certified electrical contractors must earn 14 hours of continuing education in each two-year cycle. Hours are credited in 2-hour blocks (one hour = at least 50 minutes), up to 7 hours can roll over, and a contractor is exempt from the 14 hours for the first renewal after initial licensing.",
+   "status": "verified",
+   "note": "The rule also refers to completing requirements 'annually' in one paragraph; check the board's CE calendar (existing KB fact STAT-011 notes 2027 is a CE year).",
+   "keywords": [
+    "alabama electrical CE",
+    "14 hours",
+    "continuing education alabama",
+    "rollover 7 hours",
+    "first year exemption",
+    "AECB"
+   ]
+  },
+  {
+   "id": "S5A-110",
+   "topic": "State licensing",
+   "trade": "elec",
+   "state": "Alabama",
+   "source": "Ala. Admin. Code r. 303-X-1-.01 (eff. Feb. 14, 2026) - https://admincode.legislature.state.al.us/api/chapter/303-X-1",
+   "fact": "Alabama Electrical Contractors Board rules treat the term 'electrical contractor' as interchangeable with 'master electrician.' A journeyman electrician must work under a master or state-certified electrical contractor, and an inactive contractor or journeyman cannot buy local licenses or pull permits.",
+   "status": "verified",
+   "note": "",
+   "keywords": [
+    "alabama master electrician",
+    "electrical contractor alabama",
+    "journeyman supervision",
+    "inactive license",
+    "AECB definitions",
+    "permits"
+   ]
+  },
+  {
+   "id": "S5A-111",
+   "topic": "State exams",
+   "trade": "hvac",
+   "state": "Alabama",
+   "source": "Alabama HACR Board rule 440-X-3-.04 - https://admincode.legislature.state.al.us/api/chapter/440-X-3",
+   "fact": "Alabama HVACR certification can be earned by exam or by reciprocity (for licensees from reciprocal states with no past or pending discipline). An applicant who fails the exam the first time may retake it, or request a practical exam, within six months of the failed attempt.",
+   "status": "verified",
+   "note": "",
+   "keywords": [
+    "alabama hvac exam retake",
+    "practical exam",
+    "reciprocity alabama hvac",
+    "six months",
+    "HACR board",
+    "440-X-3"
+   ]
+  },
+  {
+   "id": "S5A-112",
+   "topic": "State exams",
+   "trade": "plumb",
+   "state": "Georgia",
+   "source": "Georgia SOS, Division of Master and Journeyman Plumbers FAQ - https://sos.ga.gov/page/division-master-and-journeyman-plumbers-faq",
+   "fact": "Georgia plumbing license exams are given by PSI on a continuous basis at various locations. A candidate who fails twice must submit a certificate of completion from a board-approved review course before testing again.",
+   "status": "verified",
+   "note": "",
+   "keywords": [
+    "georgia plumbing exam",
+    "PSI",
+    "failed twice",
+    "review course",
+    "retake rule",
+    "journeyman master exam"
+   ]
+  },
+  {
+   "id": "S5A-113",
+   "topic": "State licensing",
+   "trade": "elec",
+   "state": "Georgia",
+   "source": "Ga. Comp. R. & Regs. r. 121-3-.01 - https://www.law.cornell.edu/regulations/georgia/Ga-Comp-R-Regs-R-121-3-.01",
+   "fact": "Georgia electrical contractor applicants must submit three references, at least one from a licensed electrical contractor. Instead of documenting primary experience, an applicant with 6 years of electrical contracting experience may qualify with a reference from a licensed architect, professional engineer or electrical engineer; up to 1 year of secondary experience counts at 50%.",
+   "status": "verified",
+   "note": "",
+   "keywords": [
+    "georgia electrical license references",
+    "6 years contracting",
+    "secondary experience 50 percent",
+    "electrical contractor application",
+    "121-3-.01",
+    "georgia"
+   ]
+  },
+  {
+   "id": "S5A-114",
+   "topic": "State code adoption",
+   "trade": "hvac",
+   "state": "Maine",
+   "source": "02-658 CMR ch. 6, sec. 1 (Maine Fuel Board, Adopted Standards) - https://regulations.justia.com/states/maine/02/658/chapter-6/section-658-6-1/",
+   "fact": "The Maine Fuel Board adopts NFPA standards for fuel-burning equipment, including NFPA 31 (oil-burning equipment, 2020 edition), NFPA 54 National Fuel Gas Code (2021), NFPA 58 LP-Gas Code (2020), NFPA 211 chimneys and vents (2019) and NFPA 90B warm-air heating and AC systems (2021), each with Maine exclusions and amendments where listed.",
+   "status": "verified",
+   "note": "Rule text current through June 2025.",
+   "keywords": [
+    "maine fuel board",
+    "NFPA 54 2021",
+    "NFPA 31 oil burner",
+    "NFPA 58",
+    "NFPA 211",
+    "maine hvac code"
+   ]
+  },
+  {
+   "id": "S5A-115",
+   "topic": "State code adoption",
+   "trade": "hvac",
+   "state": "Minnesota",
+   "source": "Minn. R. 1346.5050 (Minnesota Fuel Gas Code) - https://www.revisor.mn.gov/rules/1346.5050/",
+   "fact": "The Minnesota Fuel Gas Code incorporates Chapters 2 to 8 of the 2018 International Fuel Gas Code by reference, as part of the Minnesota Mechanical and Fuel Gas Code (Minn. R. chapter 1346).",
+   "status": "verified",
+   "note": "Rule as published by the Revisor (April 2020).",
+   "keywords": [
+    "minnesota fuel gas code",
+    "2018 IFGC minnesota",
+    "1346.5050",
+    "gas piping minnesota",
+    "mechanical code",
+    "DLI"
+   ]
+  },
+  {
+   "id": "S5A-116",
+   "topic": "State code adoption",
+   "trade": "elec",
+   "state": "Idaho",
+   "source": "Idaho H0478 (2024), Session Law Chapter 54, signed March 18, 2024 - https://legiscan.com/ID/bill/H0478/2024; Idaho Code 54-2601",
+   "fact": "A 2024 Idaho law (H0478, signed March 18, 2024) amended state law to provide for local enforcement of the Idaho electrical code and the Idaho plumbing code, so a city or county can run its own electrical and plumbing permits and inspections instead of the state DOPL.",
+   "status": "verified",
+   "note": "Based on the bill summary and status as recorded on LegiScan; full bill text not read.",
+   "keywords": [
+    "idaho local enforcement",
+    "H0478",
+    "electrical permits idaho",
+    "plumbing inspection",
+    "DOPL",
+    "city county"
+   ]
+  },
+  {
+   "id": "S5A-117",
+   "topic": "State code adoption",
+   "trade": "elec",
+   "state": "Montana",
+   "source": "Montana DLI Building Codes Program - https://bsd.dli.mt.gov/building-codes-permits/",
+   "fact": "In Montana, cities, counties and towns may choose to enforce building, electrical, plumbing and mechanical codes, but their programs must be certified by the state Building Codes Program. Areas that do not enforce codes fall under state jurisdiction, and state agencies' projects are always permitted through the state.",
+   "status": "verified",
+   "note": "",
+   "keywords": [
+    "montana electrical permit",
+    "state building codes program",
+    "certified local jurisdiction",
+    "state jurisdiction",
+    "montana plumbing permit",
+    "inspections"
+   ]
+  },
+  {
+   "id": "S5A-118",
+   "topic": "State licensing",
+   "trade": "hvac",
+   "state": "Arkansas",
+   "source": "17 CAR 261-103(e) and 261-104(b)(1) - https://labor.arkansas.gov/wp-content/uploads/17CARpt.261-Clean.pdf",
+   "fact": "Arkansas offers a Class L lifetime HVACR license for service and maintenance only, on air conditioning of 15 tons or less per unit and refrigeration of 15 hp or less per unit. To get it, a licensee must be at least 65 and have held a board license for 10 consecutive years.",
+   "status": "verified",
+   "note": "Read in the DOLL-posted 17 CAR Part 261 rule text (clean copy).",
+   "keywords": [
+    "arkansas class L",
+    "lifetime HVACR license",
+    "age 65",
+    "15 tons",
+    "service and maintenance",
+    "arkansas hvac"
+   ]
+  },
+  {
+   "id": "S5A-119",
+   "topic": "State code adoption",
+   "trade": "elec",
+   "state": "Michigan",
+   "source": "Mich. Admin. Code R 408.30536 (Part 5 Residential Code, electrical) - https://regulations.justia.com/states/michigan/licensing-and-regulatory-affairs/bureau-of-construction-codes/construction-code-commission-general-rules/construction-code/part-5/section-r-408-30536/",
+   "fact": "For one- and two-family dwellings, the Michigan Residential Code uses the IRC electrical chapters (34 to 43) with Michigan amendments, and any electrical item not covered there must comply with the Michigan Electrical Code (R 408.30801 to R 408.30880). Solar PV systems must follow NFPA 70.",
+   "status": "verified",
+   "note": "Rule text current through June 2025.",
+   "keywords": [
+    "michigan residential electrical",
+    "IRC chapters 34-43",
+    "R 408.30536",
+    "michigan electrical code",
+    "one and two family",
+    "solar PV"
+   ]
   }
  ],
  "questions": [
@@ -1818,7 +2394,7 @@
     "The International Association of Plumbing and Mechanical Officials"
    ],
    "a": 1,
-   "ref": "77 Ill. Adm. Code 890; 225 ILCS 320/42",
+   "ref": "77 Ill. Adm. Code 890; Plumbing License Law Sec. 42",
    "why": "IDPH writes the Illinois Plumbing Code, and that power cannot be taken over by local governments, even home-rule units."
   },
   {
@@ -1890,6 +2466,146 @@
    "a": 1,
    "ref": "LUCCC Louisiana Construction Code Info",
    "why": "The LUCCC states that on January 1, 2016 the ICC's IPC replaced the Louisiana State Plumbing Code."
+  },
+  {
+   "t": "plumb",
+   "topic": "State code adoption",
+   "q": "Which chapter of the 2021 UPC does Maine's Plumbers' Examining Board NOT adopt?",
+   "c": [
+    "Chapter 7, Sanitary Drainage",
+    "Chapter 9, Vents",
+    "Chapter 12, Fuel Gas Piping",
+    "Chapter 10, Traps and Interceptors"
+   ],
+   "a": 2,
+   "ref": "02-395 CMR ch. 4, sec. 1",
+   "why": "Maine adopts the 2021 UPC but excludes Chapter 12 (Fuel Gas Piping), Chapter 13 and the appendices."
+  },
+  {
+   "t": "plumb",
+   "topic": "State code adoption",
+   "q": "Which model plumbing code does the Maryland State Plumbing Code (COMAR 09.20.01) incorporate?",
+   "c": [
+    "2018 International Plumbing Code",
+    "2021 Uniform Plumbing Code",
+    "2018 National Standard Plumbing Code",
+    "2024 International Plumbing Code"
+   ],
+   "a": 0,
+   "ref": "COMAR 09.20.01.01",
+   "why": "Maryland incorporates the 2018 IPC (plus parts of the 2018 IRC, the 2018 IFGC and NFPA 58) with state modifications."
+  },
+  {
+   "t": "plumb",
+   "topic": "State code adoption",
+   "q": "What is Massachusetts's plumbing code based on?",
+   "c": [
+    "The 2021 International Plumbing Code",
+    "The 2024 Uniform Plumbing Code",
+    "Its own state-written Uniform State Plumbing Code (248 CMR 10.00)",
+    "Each town's own plumbing bylaw"
+   ],
+   "a": 2,
+   "ref": "248 CMR 10.00; M.G.L. c. 142 sec. 13",
+   "why": "Massachusetts writes its own Uniform State Plumbing Code through the Board of State Examiners of Plumbers and Gas Fitters."
+  },
+  {
+   "t": "plumb",
+   "topic": "State code adoption",
+   "q": "Michigan's Part 7 Plumbing Code (R 408.30701) adopts which model code?",
+   "c": [
+    "2018 International Plumbing Code",
+    "2021 International Plumbing Code",
+    "2021 Uniform Plumbing Code",
+    "2024 Uniform Plumbing Code"
+   ],
+   "a": 1,
+   "ref": "Mich. Admin. Code R 408.30701",
+   "why": "Michigan adopts the 2021 IPC (second printing) with state exceptions and amendments."
+  },
+  {
+   "t": "elec",
+   "topic": "State code adoption",
+   "q": "In Minnesota, electrical permits filed on or after August 17, 2026 must comply with which NEC edition?",
+   "c": [
+    "2020 NEC",
+    "2023 NEC",
+    "2026 NEC",
+    "2017 NEC"
+   ],
+   "a": 2,
+   "ref": "MN DLI Electrical codes and standards",
+   "why": "Minnesota's Board of Electricity adopted the 2026 NEC for permits filed on or after August 17, 2026; earlier permits follow the 2023 NEC."
+  },
+  {
+   "t": "elec",
+   "topic": "State code adoption",
+   "q": "How is the NEC adopted in Mississippi?",
+   "c": [
+    "Statewide by the State Fire Marshal",
+    "Statewide by the State Board of Contractors",
+    "Locally, by each city or county",
+    "Statewide by the Department of Health"
+   ],
+   "a": 2,
+   "ref": "IAEI Mississippi; Mike Holt NEC list",
+   "why": "Mississippi has no statewide NEC adoption; cities and counties adopt their own editions."
+  },
+  {
+   "t": "plumb",
+   "topic": "State code adoption",
+   "q": "Which plumbing code took effect statewide in Montana on September 26, 2026?",
+   "c": [
+    "2021 International Plumbing Code",
+    "2024 International Plumbing Code",
+    "2021 Uniform Plumbing Code",
+    "2024 Uniform Plumbing Code"
+   ],
+   "a": 3,
+   "ref": "Montana DLI Current Codes",
+   "why": "Montana adopted the 2024 UPC (with the 2023 NEC and 2024 IMC/IFGC), effective September 26, 2026."
+  },
+  {
+   "t": "hvac",
+   "topic": "State code adoption",
+   "q": "Which mechanical code did Iowa adopt as its state mechanical code effective March 26, 2025?",
+   "c": [
+    "2018 International Mechanical Code",
+    "2021 International Mechanical Code",
+    "2024 International Mechanical Code",
+    "2024 Uniform Mechanical Code"
+   ],
+   "a": 2,
+   "ref": "Iowa Admin. Code r. 641-61.2",
+   "why": "Iowa adopted Sections 101-102 and Chapters 2-15 of the 2024 IMC, effective March 26, 2025."
+  },
+  {
+   "t": "plumb",
+   "topic": "State licensing",
+   "q": "In Alabama, how much current experience as a journeyman plumber does a master plumber applicant need?",
+   "c": [
+    "6 months",
+    "1 year",
+    "2 years",
+    "4 years"
+   ],
+   "a": 1,
+   "ref": "Ala. Admin. Code r. 720-X-4-.01(2)(d)",
+   "why": "Alabama requires 1 year of current work experience as a journeyman plumber; journeyman applicants need 2 years as an apprentice."
+  },
+  {
+   "t": "hvac",
+   "topic": "State code adoption",
+   "q": "Which edition of NFPA 54, the National Fuel Gas Code, has the Maine Fuel Board adopted?",
+   "c": [
+    "2015",
+    "2018",
+    "2021",
+    "2024"
+   ],
+   "a": 2,
+   "ref": "02-658 CMR ch. 6, sec. 1",
+   "why": "The Maine Fuel Board's adopted standards list NFPA 54 (2021 edition), with Maine exclusions and amendments."
   }
  ]
 }

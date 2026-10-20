@@ -41,7 +41,94 @@
       "fixed": {
         "fact": "NEC 2023 230.70(A)(2): the service disconnect may not be installed in a bathroom. 230.90(A): each ungrounded service conductor needs overload protection rated no higher than the conductor ampacity, except that a rating complying with 240.4(B) or (C) and 240.6 (such as the next higher standard size up to 800 A) is allowed, and the sum of two to six breakers or sets of fuses may exceed the conductor ampacity provided the calculated load does not exceed the conductor ampacity."
       }
+    },
+    {
+      "id": "E5-29",
+      "action": "fix",
+      "reason": "HDPE is not in the list. 310.15(C)(1)(c) names only rigid metal conduit, intermediate metal conduit, rigid PVC conduit and RTRC (not over 10 ft, not more than four conductors). Checked against the 2023 baseline text reproduced in NFPA's 2026 NEC Panel 6 First Draft report (docinfofiles.nfpa.org, 70_A2025_NEC_P06_FD).",
+      "fixed": {
+        "fact": "NEC 2023 310.15(C)(1)(c): adjustment factors do not apply to underground conductors entering or leaving an outdoor trench if they are protected by rigid metal conduit, intermediate metal conduit, rigid PVC conduit or RTRC no longer than 10 ft and there are no more than four conductors."
+      }
+    },
+    {
+      "id": "E5-107",
+      "action": "fix",
+      "reason": "Outdated occupancy list (this is the old 2008-era wording). NEC 2023 700.10(D)(1) applies to (1) assembly occupancies for not less than 1000 persons, (2) buildings above 75 ft in height (any occupancy), and (3) educational occupancies with more than 300 occupants. 700.10(D)(2) feeder-circuit wiring must be in spaces fully protected by an approved automatic fire protection system, or a listed electrical circuit protective system (2-hour), a listed fire-resistive cable system (2-hour), a listed 2-hour fire-rated assembly containing only emergency circuits, or encased in at least 2 in of concrete. Checked against ICC Session 95 Emergency Systems slides quoting the 2023 NEC.",
+      "fixed": {
+        "fact": "NEC 2023 700.10(D): in assembly occupancies for not less than 1000 persons, buildings above 75 ft in height, and educational occupancies with more than 300 occupants, emergency feeder-circuit wiring must be in spaces fully protected by an approved automatic fire protection system (sprinklers), or be a listed 2-hour electrical circuit protective system, a listed 2-hour fire-resistive cable system, inside a listed 2-hour fire-rated assembly containing only emergency circuits, or encased in at least 2 in of concrete.",
+        "keywords": ["emergency feeder", "2 hour", "700.10", "fire rating", "high rise", "assembly", "educational 300"]
+      }
+    },
+    {
+      "id": "E5-60",
+      "action": "fix",
+      "reason": "Table renumbered in the 2023 edition: Table 430.52 became Table 430.52(C)(1) (EC&M 'NEC Requirements for Motors - Part 2 of 2', 2023 NEC: 'you now use Table 430.52(C)(1) instead of Table 430.52'). Percentages are correct.",
+      "fixed": {
+        "fact": "NEC 2023 Table 430.52(C)(1) (called Table 430.52 in NEC 2020) for wound-rotor motors: nontime-delay fuse 150%, dual-element fuse 150%, instantaneous-trip breaker 800%, inverse-time breaker 150%. For DC (constant-voltage) motors: 150%, 150%, 250% and 150%.",
+        "source": "NEC 2023 Table 430.52(C)(1)",
+        "keywords": ["430.52(C)(1)", "Table 430.52", "wound rotor", "DC motor", "fuse sizing", "breaker sizing", "percent of FLC"]
+      }
+    },
+    {
+      "id": "E5-61",
+      "action": "fix",
+      "reason": "Table renumbered in the 2023 edition: Table 430.52 is now Table 430.52(C)(1) (EC&M, 2023 NEC motors article). Values are correct.",
+      "fixed": {
+        "fact": "In NEC 2023 Table 430.52(C)(1) (Table 430.52 in NEC 2020), polyphase Design B energy-efficient premium motors get an 1100% maximum for instantaneous-trip breakers (other columns are the same as standard motors: 300%, 175% and 250%).",
+        "source": "NEC 2023 Table 430.52(C)(1)",
+        "keywords": ["instantaneous trip", "1100 percent", "design B energy efficient", "430.52(C)(1)", "premium efficiency", "motor"]
+      }
+    },
+    {
+      "id": "E5-63",
+      "action": "fix",
+      "reason": "Citation only: in NEC 2023 the motor short-circuit/ground-fault table is Table 430.52(C)(1), and the next-size-up permission is 430.52(C)(1) Exception No. 1. Math is correct.",
+      "fixed": {
+        "source": "NEC 2023 240.4(G); 430.22; Table 430.52(C)(1) and 430.52(C)(1) Exc. 1; Table 430.250"
+      }
+    },
+    {
+      "id": "E5-64",
+      "action": "fix",
+      "reason": "Citation only: in NEC 2023 the table is Table 430.52(C)(1) (renumbered from Table 430.52), with the next-size-up rule in 430.52(C)(1) Exception No. 1. Math is correct.",
+      "fixed": {
+        "source": "NEC 2023 430.22; Table 430.52(C)(1) and 430.52(C)(1) Exc. 1; Table 430.250"
+      }
     }
   ],
-  "questions": []
+  "questions": [
+    {
+      "i": 15,
+      "action": "fix",
+      "reason": "Ref only: the NEC 2023 table is Table 430.52(C)(1) (renumbered from Table 430.52); the next-size-up permission is 430.52(C)(1) Exception No. 1. Answer (90 A) confirmed: 34 x 2.5 = 85 A, next standard size 90 A.",
+      "fixed": {
+        "ref": "NEC 2023 Table 430.250; Table 430.52(C)(1); 430.52(C)(1) Exc. 1"
+      }
+    },
+    {
+      "i": 16,
+      "action": "fix",
+      "reason": "Ref and why cite the old table number; in NEC 2023 it is Table 430.52(C)(1). Answer (150%) confirmed.",
+      "fixed": {
+        "ref": "NEC 2023 Table 430.52(C)(1)",
+        "why": "Table 430.52(C)(1) (Table 430.52 in NEC 2020) limits inverse-time breakers to 150% for wound-rotor motors; 250% applies to standard squirrel-cage motors."
+      }
+    },
+    {
+      "i": 17,
+      "action": "fix",
+      "reason": "Ref only: NEC 2023 table is Table 430.52(C)(1). Answer (30 A) confirmed: 10.6 x 2.5 = 26.5 A, next standard size 30 A.",
+      "fixed": {
+        "ref": "NEC 2023 240.4(G); Table 430.52(C)(1); 430.52(C)(1) Exc. 1"
+      }
+    },
+    {
+      "i": 38,
+      "action": "fix",
+      "reason": "Ref only: NEC 2023 table is Table 430.52(C)(1). Answer (80 A) confirmed: 30.8 x 2.5 = 77 A, next standard size 80 A.",
+      "fixed": {
+        "ref": "NEC 2023 Table 430.250; Table 430.52(C)(1); 430.52(C)(1) Exc. 1"
+      }
+    }
+  ]
 }

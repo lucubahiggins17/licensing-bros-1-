@@ -1,7 +1,8 @@
 // Appends a reviewed batch round to the knowledge base without disturbing existing IDs.
 // Usage: node scripts/append-kb.mjs <round.json> [<audit-result.json>]
 //   round.json   {facts:[{id(temp), topic, trade, state, source, fact, status, note, keywords}], questions:[...]}
-//   audit-result {questions:[{i, action, fixed}], facts:[{id, action, fixed}]}  (same shape as knowledge/audits)
+//   audit-result {questions:[{i, action, fixed}], facts:[{id, action, fixed}], existing?:[{id, action, fixed}]}  (same shape as knowledge/audits;
+//                "existing" corrects facts already in the knowledge base)
 import fs from "node:fs";
 import path from "node:path";
 
@@ -27,6 +28,20 @@ for (const it of audit.facts || []) {
   Object.assign(f, it.fixed || {});
   if (it.action === "unverify") { f.status = "unverified"; f.note = f.note || it.reason; }
   f.reviewed = it.reason || "fixed in review";
+}
+
+// 1b) corrections the auditor found in facts already in the knowledge base
+let fixedExisting = 0;
+for (const it of audit.existing || []) {
+  const f = kb.facts.find((x) => x.id === it.id);
+  if (!f || it.action === "keep") continue;
+  if (it.action === "fix" && it.fixed) {
+    for (const k of ["fact", "source", "keywords", "topic"]) if (it.fixed[k] !== undefined) f[k] = it.fixed[k];
+    f.status = "verified";
+  }
+  if (it.action === "unverify") { f.status = "unverified"; f.note = String(it.reason || f.note || "").slice(0, 400); }
+  f.reviewed = String(it.reason || "corrected in review").slice(0, 400);
+  fixedExisting++;
 }
 
 // 2) dedupe against the existing knowledge base
@@ -63,4 +78,4 @@ round.questions.forEach((q, i) => {
 kb.generated = new Date().toISOString().slice(0, 10);
 fs.writeFileSync(KB, JSON.stringify(kb));
 fs.writeFileSync(QF, JSON.stringify(qs));
-console.log(JSON.stringify({ addedFacts: addedF, skippedDuplicateFacts: skippedF, addedQuestions: addedQ, totalFacts: kb.facts.length, totalQuestions: qs.length }));
+console.log(JSON.stringify({ addedFacts: addedF, skippedDuplicateFacts: skippedF, fixedExistingFacts: fixedExisting, addedQuestions: addedQ, totalFacts: kb.facts.length, totalQuestions: qs.length }));
