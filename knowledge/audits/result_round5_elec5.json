@@ -94,6 +94,67 @@
       "fixed": {
         "source": "NEC 2023 430.22; Table 430.52(C)(1) and 430.52(C)(1) Exc. 1; Table 430.250"
       }
+    },
+    {
+      "id": "E5-41",
+      "action": "fix",
+      "reason": "Imprecise on the key rule. 220.83(B) takes 100% of the LARGER connected load of air conditioning or space heating (not both), covering air-conditioning equipment, central electric space heating, or fewer than four separately controlled space-heating units, for existing plus new loads, then 100% of the first 8 kVA of all other loads and 40% of the remainder. 'The new AC or space heating load' wrongly suggests only the added unit counts at 100%. Checked against EC&M 220.83(B) commentary; NEC 2023 still uses the (A)/(B) structure (it was rewritten only in NEC 2026 as Table 120.83).",
+      "fixed": {
+        "fact": "NEC 2023 220.83(B): for an existing dwelling where air conditioning or electric space heating is being added, use 100% of the larger of the air-conditioning load or the space-heating load (central electric heat, or fewer than four separately controlled space-heating units), not both, counting existing and new equipment; then add 100% of the first 8 kVA of all other loads and 40% of the remainder."
+      }
+    },
+    {
+      "id": "E5-43",
+      "action": "fix",
+      "reason": "Wrong subsection letter for NEC 2023. The dwelling-occupancy subsection was removed from 220.14 in 2023 (dwelling unit loads moved to 220.41), so 220.14(J) is now Office Buildings and Other Outlets became 220.14(K) (it was 220.14(L) in NEC 2020). A 2023 NEC quote on Mike Holt's forum shows 220.14(J) as the office-building receptacle rule. The 180 VA and luminaire rules themselves are correct.",
+      "fixed": {
+        "fact": "NEC 2023 220.14(D): a luminaire outlet is calculated at the maximum VA rating of the equipment and lamps it is rated for. 220.14(K) (220.14(L) in NEC 2020): other outlets not covered elsewhere in 220.14 are calculated at 180 VA per outlet.",
+        "source": "NEC 2023 220.14(D), (K)"
+      }
+    },
+    {
+      "id": "E5-66",
+      "action": "fix",
+      "reason": "Misstates the formula and mixes in 440.34. 440.33 is the sum of (1) the rated-load current or branch-circuit selection current, whichever is larger, of ALL motor-compressors, (2) the full-load currents of all other motors, and (3) 25% of the highest motor-compressor OR motor current in the group (which may be a fan motor, not necessarily a compressor). Other non-motor loads are added under 440.34, not 440.33. Checked against EC&M 'NEC: Air Conditioning and Refrigerating Equipment, Part 4'.",
+      "fixed": {
+        "fact": "NEC 2023 440.33: conductors supplying more than one motor-compressor (with or without other motors) must have an ampacity of at least the sum of the rated-load or branch-circuit selection currents (whichever is larger) of all motor-compressors, plus the full-load currents of all other motors, plus 25% of the highest motor-compressor or motor current in the group. Other non-motor loads are added under 440.34.",
+        "keywords": ["multiple compressors", "440.33", "440.34", "feeder", "rated load current", "25 percent", "HVAC"]
+      }
+    },
+    {
+      "id": "E5-77",
+      "action": "fix",
+      "reason": "Incomplete in a commonly tested way: the 1-hour allowance for sprinkler, water spray, CO2 or halon protection applies to vault DOORS too (450.43(A) Exception), not only walls, roofs and floors. Also 450.42 requires floors in contact with the earth to be concrete at least 4 in thick, and stud-and-wallboard construction is not permitted.",
+      "fixed": {
+        "fact": "NEC 2023 450.42 and 450.43: transformer vault walls and roofs (and floors not on earth) must have a 3-hour fire rating, floors on earth must be concrete at least 4 in thick, and stud-and-wallboard construction is not allowed. Each doorway from the building interior needs a tight-fitting door with a 3-hour rating and a sill or curb at least 4 in high. Where the transformers are protected by automatic sprinkler, water spray, CO2 or halon, 1-hour construction and a 1-hour door are permitted."
+      }
+    },
+    {
+      "id": "E5-129",
+      "action": "fix",
+      "reason": "Wrong subsection for NEC 2023: controlled receptacle marking is 406.3(F) (406.3(E) is isolated ground receptacles). NFPA's 2026 NEC Panel 18 First Draft shows the 2023 lettering being changed from (F) to (D). The 2023 text also requires the marking on the receptacle face, visible after installation, and exempts wall-switched receptacles that provide the required room lighting outlet under 210.70.",
+      "fixed": {
+        "fact": "NEC 2023 406.3(F): 125 V, 15 A and 20 A nonlocking receptacles controlled by an automatic control device (for energy management or building automation) must be permanently marked with the controlled-receptacle (power) symbol and the word 'controlled', on the receptacle face and visible after installation. Receptacles controlled by a wall switch to provide the required room lighting outlet (210.70) are exempt.",
+        "source": "NEC 2023 406.3(F)",
+        "keywords": ["controlled receptacle", "406.3(F)", "energy management", "marking", "automatic control", "receptacle"]
+      }
+    },
+    {
+      "id": "E5-135",
+      "action": "fix",
+      "reason": "590.4(J) contains no 10 ft support interval: cables and cords must be supported at intervals that protect them from physical damage, using staples, cable ties, straps or similar fittings. The floor/ground ban applies to cable assemblies and cords installed as branch circuits or feeders; extension cords are exempt from 590.4(J). Checked against EC&M 'Temporary Installations' (Mike Holt) and 590.4(J) text quoted on Mike Holt's forum.",
+      "fixed": {
+        "fact": "NEC 2023 590.4: temporary branch circuits and feeders may use NM, NMC and SE cable (no height or construction-type limits) and hard- or extra-hard-usage cords. Under 590.4(J), cables and cords must be supported at intervals that protect them from physical damage (staples, cable ties, straps or similar fittings; no fixed spacing is given) and, when used as branch circuits or feeders, may not lie on the floor or ground (extension cords are exempt). Receptacles may not be on branch circuits that supply temporary lighting (590.4(D)).",
+        "keywords": ["temporary wiring", "590.4", "cable support", "extension cord", "temporary lighting", "construction"]
+      }
+    },
+    {
+      "id": "E5-137",
+      "action": "fix",
+      "reason": "Scope is wrong: the 125 V and 125/250 V, 15/20/30 A wording is 590.6(A)(3) (temporary installations), not 445.20. 445.20 requires listed GFCI protection, integral to the generator or receptacle, on the 125 V, 15 A and 20 A receptacle outlets of 15 kW or smaller portable generators; on unbonded (floating-neutral) generators it is not required if those 125 V receptacles are interlocked so they cannot be used while any 125/250 V receptacle is in use. Checked against EC&M code quiz on unbonded generators and FOH Online's quotes of 445.20 and 590.6(A)(3).",
+      "fixed": {
+        "fact": "NEC 2023 445.20: the 125 V, single-phase, 15 A and 20 A receptacle outlets on a portable generator rated 15 kW or less must have listed GFCI protection built into the generator or the receptacle. On an unbonded (floating-neutral) generator, GFCI is not required if those 125 V receptacles are interlocked so they cannot be used while any 125/250 V receptacle is in use. For temporary installations, 590.6(A)(3) goes further and requires GFCI on all 125 V and 125/250 V, 15, 20 and 30 A receptacles on such generators."
+      }
     }
   ],
   "questions": [
